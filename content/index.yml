@@ -1,0 +1,83 @@
+card:
+  user:
+    title: It's YOUR Data
+    subtitle: >-
+              Your data is worth thousands. Why aren’t you getting your fair share? Take back control. Get paid.
+              Tiki’s got your back.
+    youtubeId: 9rSBmOgpcDE
+    cta: Join the Revolution
+
+  buyer:
+    title: Buy Data Access
+    subtitle: >-
+              Get access to the unique data your business needs, ethically. Stop wasting time and money buying messy
+              user data in bulk. Get only what you need, straight from the source.
+    story:
+      heading: Use Cases
+      one:
+        text: 'See Competitor Data'
+        url: 'https://mytiki.com/use-case/compete'
+      two:
+        text: 'Attack Churn in Realtime'
+        url: 'https://mytiki.com/use-case/churn'
+      three:
+        text: 'Actually Good Cross-sell/Upsells'
+        url: 'https://mytiki.com/use-case/sales'
+    cta: Join the Waitlist
+
+  learn:
+    title: Learn More
+    subtitle: >-
+              We believe users deserve to be in control of their data.
+    meet:
+      text: Meet Tiki
+      url: 'https://mytiki.com/meet'
+    join:
+      text: Join Us
+      url: 'https://angel.co/company/mytiki/jobs'
+    follow:
+      title: Follow Along
+      subtitle: >-
+                We’re all users and in it together. No secrets, real transparency. Follow us, tweet us, hit us up.
+                It's going to take a revolution.
+      button:
+        one:
+          icon: medium
+          url: 'https://medium.com'
+        two:
+          icon: instagram
+          url: 'https://instagram.com'
+        three:
+          icon: twitter
+          url: 'https://twitter.com'
+    tech:
+      title: Get Technical
+      subtitle:
+      button:
+        one:
+          icon: github
+          url: 'https://github.com/tiki'
+          text: code
+        two:
+          icon: canny
+          url: 'https://tiki.canny.io'
+          text: roadmap
+        three:
+          icon:
+          url:
+          text:
+
+success:
+  text: "Thanks!!! We'll be in touch."
+  icon: icon-solid
+  follow:
+    button:
+      one:
+        icon: medium
+        url: 'https://medium.com'
+      two:
+        icon: instagram
+        url: 'https://instagram.com'
+      three:
+        icon: twitter
+        url: 'https://twitter.com'

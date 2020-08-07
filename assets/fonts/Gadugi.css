@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Gadugi';
+    src: url('Gadugi.eot');
+    src: url('Gadugi.eot?#iefix') format('embedded-opentype'),
+        url('Gadugi.woff2') format('woff2'),
+        url('Gadugi.woff') format('woff'),
+        url('Gadugi.ttf') format('truetype'),
+        url('Gadugi.svg#Gadugi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gadugi';
+  src: url('Gadugi-Bold.eot');
+  src: url('Gadugi-Bold.eot?#iefix') format('embedded-opentype'),
+  url('Gadugi-Bold.woff2') format('woff2'),
+  url('Gadugi-Bold.woff') format('woff'),
+  url('Gadugi-Bold.ttf') format('truetype'),
+  url('Gadugi-Bold.svg#Gadugi-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
