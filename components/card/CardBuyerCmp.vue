@@ -1,38 +1,32 @@
 <template>
   <div class="box">
     <card-title-cmp
-      v-if="title != null"
-      :title="title"
-      :subtitle="subtitle"
+      v-if="cms.title != null"
+      :title="cms.title"
+      :subtitle="cms.subtitle"
       class="title"
     />
     <div class="buttons">
-      <div v-if="storyHeading != null" class="buttonHeader">
-        {{ storyHeading }}
+      <div v-if="cms.story.heading != null" class="buttonHeader">
+        {{ cms.story.heading }}
       </div>
       <card-button-h-cmp
-        v-if="story1Text != null && story1Url != null"
-        :url="story1Url"
-        :text="story1Text"
+        v-if="cms.story.one != null"
+        :cms="cms.story.one"
         class="button"
-        button-color="#52ffb8"
       />
       <card-button-h-cmp
-        v-if="story2Text != null && story2Url != null"
-        :url="story2Url"
-        :text="story2Text"
+        v-if="cms.story.two != null"
+        :cms="cms.story.two"
         class="button"
-        button-color="#52ffb8"
       />
       <card-button-h-cmp
-        v-if="story3Text != null && story3Url != null"
-        :url="story3Url"
-        :text="story3Text"
+        v-if="cms.story.three != null"
+        :cms="cms.story.three"
         class="button"
-        button-color="#52ffb8"
       />
     </div>
-    <card-signup-cmp v-if="cta != null" :title="cta" />
+    <card-signup-cmp v-if="cms.cta != null" :title="cms.cta" />
   </div>
 </template>
 
@@ -40,59 +34,14 @@
 import CardTitleCmp from '~/components/card/CardTitleCmp'
 import CardButtonHCmp from '~/components/card/CardButtonHCmp'
 import CardSignupCmp from '~/components/card/CardSignupCmp'
+
 export default {
   name: 'CardUserCmp',
   components: { CardTitleCmp, CardButtonHCmp, CardSignupCmp },
   props: {
-    title: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    subtitle: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    storyHeading: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    story1Text: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    story1Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    story2Text: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    story2Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    story3Text: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    story3Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    cta: {
-      type: String,
-      required: false,
-      default: null,
+    cms: {
+      type: Object,
+      required: true,
     },
   },
 }

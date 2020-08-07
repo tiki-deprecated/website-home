@@ -1,15 +1,15 @@
 <template>
   <div class="box">
     <card-title-cmp
-      v-if="title != null"
-      :title="title"
-      :subtitle="subtitle"
+      v-if="cms.title != null"
+      :title="cms.title"
+      :subtitle="cms.subtitle"
       class="title"
     />
-    <card-video-cmp v-if="youtubeId != null" :id="youtubeId" class="vid" />
+    <card-video-cmp v-if="cms.youtube != null" :id="cms.youtube" class="vid" />
     <card-signup-cmp
-      v-if="cta != null"
-      :title="cta"
+      v-if="cms.cta != null"
+      :title="cms.cta"
       @CardSignupCmpSubmit="cardSignupCmpSubmit"
     />
   </div>
@@ -19,29 +19,14 @@
 import CardTitleCmp from '~/components/card/CardTitleCmp'
 import CardVideoCmp from '~/components/card/CardVideoCmp'
 import CardSignupCmp from '~/components/card/CardSignupCmp'
+
 export default {
   name: 'CardUserCmp',
   components: { CardTitleCmp, CardVideoCmp, CardSignupCmp },
   props: {
-    title: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    subtitle: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    youtubeId: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    cta: {
-      type: String,
-      required: false,
-      default: null,
+    cms: {
+      type: Object,
+      required: true,
     },
   },
   methods: {

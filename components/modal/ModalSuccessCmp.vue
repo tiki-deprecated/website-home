@@ -2,23 +2,24 @@
   <transition name="modalFade">
     <div class="backdrop" @click="close">
       <div class="window">
-        <div v-show="text != null" class="text">{{ text }}</div>
-        <header-icon-cmp v-show="icon != null" class="icon" :name="icon" />
+        <div v-show="cms.text != null" class="text">{{ cms.text }}</div>
+        <header-icon-cmp
+          v-show="cms.icon != null"
+          class="icon"
+          :name="cms.icon"
+        />
         <div class="buttons">
           <card-button-v-cmp
-            v-if="followButton1Icon != null && followButton1Url != null"
-            :icon="followButton1Icon"
-            :url="followButton1Url"
+            v-if="cms.follow.button.one != null"
+            :cms="cms.follow.button.one"
           />
           <card-button-v-cmp
-            v-if="followButton2Icon != null && followButton2Url != null"
-            :icon="followButton2Icon"
-            :url="followButton2Url"
+            v-if="cms.follow.button.two != null"
+            :cms="cms.follow.button.two"
           />
           <card-button-v-cmp
-            v-if="followButton3Icon != null && followButton3Url != null"
-            :icon="followButton3Icon"
-            :url="followButton3Url"
+            v-if="cms.follow.button.three != null"
+            :cms="cms.follow.button.three"
           />
         </div>
       </div>
@@ -34,45 +35,9 @@ export default {
   name: 'ModalSuccessCmp',
   components: { HeaderIconCmp, CardButtonVCmp },
   props: {
-    text: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton1Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton1Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton2Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton2Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton3Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton3Icon: {
-      type: String,
-      required: false,
-      default: null,
+    cms: {
+      type: Object,
+      required: true,
     },
   },
   methods: {

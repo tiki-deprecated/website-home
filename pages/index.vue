@@ -4,54 +4,21 @@
     <div class="cards">
       <div class="row1">
         <card-user-cmp
-          :title="cms.card.user.title"
-          :subtitle="cms.card.user.subtitle"
-          :youtube-id="cms.card.user.youtubeId"
-          :cta="cms.card.user.cta"
+          v-if="cms.card.user != null"
+          :cms="cms.card.user"
           class="user"
           @CardSignupCmpSubmit="showModal"
         />
       </div>
       <div class="row2">
         <card-buyer-cmp
-          :title="cms.card.buyer.title"
-          :subtitle="cms.card.buyer.subtitle"
-          :story-heading="cms.card.buyer.story.heading"
-          :story1-url="cms.card.buyer.story.one.url"
-          :story1-text="cms.card.buyer.story.one.text"
-          :story2-url="cms.card.buyer.story.two.url"
-          :story2-text="cms.card.buyer.story.two.text"
-          :story3-url="cms.card.buyer.story.three.url"
-          :story3-text="cms.card.buyer.story.three.text"
-          :cta="cms.card.buyer.cta"
+          v-if="cms.card.buyer != null"
+          :cms="cms.card.buyer"
           class="buyer"
         />
         <card-learn-cmp
-          :title="cms.card.learn.title"
-          :subtitle="cms.card.learn.subtitle"
-          :meet-text="cms.card.learn.meet.text"
-          :meet-url="cms.card.learn.meet.url"
-          :join-text="cms.card.learn.join.text"
-          :join-url="cms.card.learn.join.url"
-          :follow-title="cms.card.learn.follow.title"
-          :follow-subtitle="cms.card.learn.follow.subtitle"
-          :follow-button1-icon="cms.card.learn.follow.button.one.icon"
-          :follow-button1-url="cms.card.learn.follow.button.one.url"
-          :follow-button2-icon="cms.card.learn.follow.button.two.icon"
-          :follow-button2-url="cms.card.learn.follow.button.two.url"
-          :follow-button3-icon="cms.card.learn.follow.button.three.icon"
-          :follow-button3-url="cms.card.learn.follow.button.three.url"
-          :tech-title="cms.card.learn.tech.title"
-          :tech-subtitle="cms.card.learn.tech.subtitle"
-          :tech-button1-icon="cms.card.learn.tech.button.one.icon"
-          :tech-button1-url="cms.card.learn.tech.button.one.url"
-          :tech-button1-text="cms.card.learn.tech.button.one.text"
-          :tech-button2-icon="cms.card.learn.tech.button.two.icon"
-          :tech-button2-url="cms.card.learn.tech.button.two.url"
-          :tech-button2-text="cms.card.learn.tech.button.two.text"
-          :tech-button3-icon="cms.card.learn.tech.button.three.icon"
-          :tech-button3-url="cms.card.learn.tech.button.three.url"
-          :tech-button3-text="cms.card.learn.tech.button.three.text"
+          v-if="cms.card.learn != null"
+          :cms="cms.card.learn"
           class="learn"
         />
       </div>
@@ -59,14 +26,8 @@
     <footer-cmp class="footer" />
     <modal-success-cmp
       v-show="isModalVisible"
-      :text="cms.success.text"
-      :icon="cms.success.icon"
-      :follow-button1-icon="cms.success.follow.button.one.icon"
-      :follow-button1-url="cms.success.follow.button.one.url"
-      :follow-button2-icon="cms.success.follow.button.two.icon"
-      :follow-button2-url="cms.success.follow.button.two.url"
-      :follow-button3-icon="cms.success.follow.button.three.icon"
-      :follow-button3-url="cms.success.follow.button.three.url"
+      v-if="cms.success != null"
+      :cms="cms.success"
       class="modal"
       @close="closeModal"
     />

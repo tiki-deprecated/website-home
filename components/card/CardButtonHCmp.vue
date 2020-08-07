@@ -1,24 +1,26 @@
 <template>
-  <a :href="url" class="link">
+  <a :href="cms.url" class="link">
     <div
       class="button"
       :style="{
-        'background-color': `${buttonColor}`,
-        'box-shadow': `0 0 .5em ${buttonColor}0f`,
+        'background-color': `${cms.style.color.background}`,
+        'box-shadow': `0 0 .5em ${cms.style.color.background}0f`,
       }"
     >
       <div class="cnt">
         <utils-svg-cmp
-          v-if="icon != null"
-          :name="icon"
-          :style="{ fill: `${textColor}` }"
+          v-if="cms.icon != null"
+          :name="cms.icon"
+          :style="{ fill: `${cms.style.color.text}` }"
         />
-        <div class="text" :style="{ color: `${textColor}` }">{{ text }}</div>
+        <div class="text" :style="{ color: `${cms.style.color.text}` }">
+          {{ cms.text }}
+        </div>
       </div>
       <utils-svg-cmp
         name="right-arrow"
         class="arrow"
-        :style="{ fill: `${textColor}` }"
+        :style="{ fill: `${cms.style.color.text}` }"
       />
     </div>
   </a>
@@ -31,28 +33,9 @@ export default {
   name: 'CardHorizButtonCmp',
   components: { UtilsSvgCmp },
   props: {
-    url: {
-      type: String,
+    cms: {
+      type: Object,
       required: true,
-    },
-    icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    text: {
-      type: String,
-      required: true,
-    },
-    textColor: {
-      type: String,
-      required: false,
-      default: '#ffffff',
-    },
-    buttonColor: {
-      type: String,
-      required: false,
-      default: '#63e2ff',
     },
   },
 }

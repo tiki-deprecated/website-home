@@ -1,8 +1,8 @@
 <template>
-  <a :href="url" class="link">
+  <a :href="cms.url" class="link">
     <div class="button">
-      <utils-svg-cmp :name="icon" />
-      <div v-if="text != null" class="text">{{ text }}</div>
+      <utils-svg-cmp v-if="cms.icon != null" :name="cms.icon" />
+      <div v-if="cms.text != null" class="text">{{ cms.text }}</div>
     </div>
   </a>
 </template>
@@ -14,17 +14,8 @@ export default {
   name: 'CardButtonVCmp',
   components: { UtilsSvgCmp },
   props: {
-    icon: {
-      type: String,
-      required: true,
-    },
-    text: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    url: {
-      type: String,
+    cms: {
+      type: Object,
       required: true,
     },
   },

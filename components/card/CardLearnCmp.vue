@@ -1,79 +1,55 @@
 <template>
   <div class="box">
     <card-title-cmp
-      v-if="title != null"
-      :title="title"
-      :subtitle="subtitle"
+      v-if="cms.title != null"
+      :title="cms.title"
+      :subtitle="cms.subtitle"
       class="title"
     />
     <div class="meetButton">
-      <card-button-h-cmp
-        v-if="meetText != null && meetUrl != null"
-        :url="meetUrl"
-        :text="meetText"
-        button-color="#f3a12c"
-      />
+      <card-button-h-cmp v-if="cms.meet != null" :cms="cms.meet" />
     </div>
     <div class="joinButton">
-      <card-button-h-cmp
-        v-if="joinText != null && joinUrl != null"
-        :url="joinUrl"
-        :text="joinText"
-        button-color="#f3a12c"
-      />
+      <card-button-h-cmp v-if="cms.join != null" :cms="cms.join" />
     </div>
     <card-title-cmp
-      v-if="followTitle != null"
-      :title="followTitle"
-      :subtitle="followSubtitle"
+      v-if="cms.follow.title != null"
+      :title="cms.follow.title"
+      :subtitle="cms.follow.subtitle"
       class="title"
     />
     <div class="buttons">
       <card-button-v-cmp
-        v-if="followButton1Icon != null && followButton1Url != null"
-        :icon="followButton1Icon"
-        :url="followButton1Url"
+        v-if="cms.follow.button.one != null"
+        :cms="cms.follow.button.one"
         class="button"
       />
       <card-button-v-cmp
-        v-if="followButton2Icon != null && followButton2Url != null"
-        :icon="followButton2Icon"
-        :url="followButton2Url"
-        class="button"
-      />
-      <card-button-v-cmp
-        v-if="followButton3Icon != null && followButton3Url != null"
-        :icon="followButton3Icon"
-        :url="followButton3Url"
+        v-if="cms.follow.button.two != null"
+        :cms="cms.follow.button.two"
         class="button"
       />
     </div>
     <card-title-cmp
-      v-if="techTitle != null"
-      :title="techTitle"
-      :subtitle="techSubtitle"
+      v-if="cms.tech.title != null"
+      :title="cms.tech.title"
+      :subtitle="cms.tech.subtitle"
       class="title"
     />
     <div class="tech">
       <card-button-v-cmp
-        v-if="techButton1Icon != null && techButton1Url != null"
-        :icon="techButton1Icon"
-        :url="techButton1Url"
-        :text="techButton1Text"
+        v-if="cms.tech.button.one != null"
+        :cms="cms.tech.button.one"
         class="button"
       />
       <card-button-v-cmp
-        v-if="techButton2Icon != null && techButton2Url != null"
-        :icon="techButton2Icon"
-        :url="techButton2Url"
-        :text="techButton2Text"
+        v-if="cms.tech.button.two != null"
+        :cms="cms.tech.button.two"
         class="button"
       />
       <card-button-v-cmp
-        v-if="techButton3Icon != null && techButton3Url != null"
-        :icon="techButton3Icon"
-        :url="techButton3Url"
-        :text="techButton3Text"
+        v-if="cms.tech.button.three != null"
+        :cms="cms.tech.button.three"
         class="button"
       />
     </div>
@@ -89,130 +65,9 @@ export default {
   name: 'CardUserCmp',
   components: { CardTitleCmp, CardButtonVCmp, CardButtonHCmp },
   props: {
-    title: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    subtitle: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    meetText: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    meetUrl: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    joinText: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    joinUrl: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followTitle: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followSubtitle: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton1Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton1Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton2Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton2Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton3Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    followButton3Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techTitle: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techSubtitle: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton1Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton1Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton1Text: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton2Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton2Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton2Text: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton3Url: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton3Icon: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    techButton3Text: {
-      type: String,
-      required: false,
-      default: null,
+    cms: {
+      type: Object,
+      required: true,
     },
   },
 }

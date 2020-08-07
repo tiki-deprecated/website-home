@@ -4,7 +4,7 @@ card:
     subtitle: >-
               Your data is worth thousands. Why aren’t you getting your fair share? Take back control. Get paid.
               Tiki’s got your back.
-    youtubeId: 9rSBmOgpcDE
+    youtube: 9rSBmOgpcDE
     cta: Join the Revolution
 
   buyer:
@@ -17,12 +17,24 @@ card:
       one:
         text: 'See Competitor Data'
         url: 'https://mytiki.com/use-case/compete'
+        style:
+          color:
+            background: '#52ffb8'
+            text:
       two:
         text: 'Attack Churn in Realtime'
         url: 'https://mytiki.com/use-case/churn'
+        style:
+          color:
+            background: '#52ffb8'
+            text:
       three:
         text: 'Actually Good Cross-sell/Upsells'
         url: 'https://mytiki.com/use-case/sales'
+        style:
+          color:
+            background: '#52ffb8'
+            text:
     cta: Join the Waitlist
 
   learn:
@@ -32,9 +44,17 @@ card:
     meet:
       text: Meet Tiki
       url: 'https://mytiki.com/meet'
+      style:
+        color:
+          background: '#f3a12c'
+          text:
     join:
       text: Join Us
       url: 'https://angel.co/company/mytiki/jobs'
+      style:
+        color:
+          background: '#f3a12c'
+          text:
     follow:
       title: Follow Along
       subtitle: >-
@@ -44,12 +64,15 @@ card:
         one:
           icon: medium
           url: 'https://medium.com'
+          text:
         two:
           icon: instagram
           url: 'https://instagram.com'
+          text:
         three:
           icon: twitter
           url: 'https://twitter.com'
+          text:
     tech:
       title: Get Technical
       subtitle:
@@ -62,10 +85,6 @@ card:
           icon: canny
           url: 'https://tiki.canny.io'
           text: roadmap
-        three:
-          icon:
-          url:
-          text:
 
 success:
   text: "Thanks!!! We'll be in touch."
@@ -75,9 +94,13 @@ success:
       one:
         icon: medium
         url: 'https://medium.com'
+        text:
       two:
         icon: instagram
         url: 'https://instagram.com'
+        text:
       three:
         icon: twitter
         url: 'https://twitter.com'
+        text:
+
