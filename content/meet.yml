@@ -1,0 +1,114 @@
+header:
+  logo: logo
+  icon: icon-hacky
+  tick: '#EFB256'
+
+values:
+  title: User First
+  subtitle: >-
+            Users come first in all our decisions, their trust earned or lost everyday.
+  divider: '#AAAAAA'
+  values:
+    one:
+      value: transparency
+      description: >-
+                   is not optional within the walls of Tiki. At Tiki we represent all our users.
+      color: '#539987'
+    two:
+      value: community
+      description: >-
+        is not optional within the walls of Tiki. At Tiki we represent all our users.
+      color: '#F3A12C'
+    three:
+      value: diversity
+      description: >-
+        is not optional within the walls of Tiki. At Tiki we represent all our users.
+      color: '#D83831'
+    four:
+      value: sustainability
+      description: >-
+        is not optional within the walls of Tiki. At Tiki we represent all our users.
+      color: '#682F81'
+    five:
+      value: reliability
+      description: >-
+        is not optional within the walls of Tiki. At Tiki we represent all our users.
+      color: '#2F5A81'
+  tick: '#4DAAE9'
+
+team:
+  core:
+    one:
+      img: brian-gagnon.jpeg
+      name: Brian Gagnon
+      title: CEO + Founder
+      bio: >-
+           While Brian has spent most of his career in startups and leading large tech companies, he realized most of
+           the companies were focused on capturing user's data and providing very little to the users in return.
+           A Mainer through and through, you'd be as likely find him changing someone's tire on the side of the road
+           for them as you would staying up all night coding.
+      social:
+        linkedin: maudi
+        medium:
+        twitter: tiki_mike
+      fact:
+        one:
+          num: 2
+          fact: "# of co. quit because they didn't actually promote diversity"
+        two:
+          num: 10
+          fact: "years ago \"cut the cord\""
+        three:
+          num: 7
+          fact: "years ago ditched Facebook"
+        four:
+          num: 11
+          fact: "# of credit cards cancelled due to fraudulent activity"
+    two:
+      img: mike-audi.jpg
+      name: Mike Audi
+      title: CTO + Founder
+      bio: >-
+           Millennial and looks like it (aka belongs in a ’00s pop punk band). Annoyingly good at building things, a tad
+           crazy, and maybe a bit too type-a. Lover of coffee, hater of schedules; his sanity tied to dingy bars. We
+           can’t get him to stop talking about real transparency and no, not that bs buzzword thrown around Silicon Valley.
+      mantra: Don't be a dick
+      spotify: 6CLsY4z7bwWVDHf5mik1Ue
+      social:
+        linkedin: maudi
+        medium: tikimike
+        twitter: tiki_mike
+
+  contributors:
+    one:
+      img: bridget-shepherd.jpeg
+      fname: Bridget
+      lname: Shepherd
+      social:
+        linkedin: bridget-shepherd-52476588
+        medium:
+        twitter:
+
+  advisors:
+    one:
+      img: malinda-gagnon.jpeg
+      fname: Malinda
+      lname: Gagnon
+      social:
+        linkedin: malindagagnon
+        medium:
+        twitter: malinda_g
+    two:
+      img: ken-rapp.jpeg
+      fname: Ken
+      lname: Rapp
+      social:
+        linkedin: ken-rapp-b922766
+        medium:
+        twitter:
+
+  tick1: '#539987'
+  tick2: '#D83831'
+
+footer:
+  copyright: © 2020 Tiki Inc

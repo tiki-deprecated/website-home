@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Gadugi';
-    src: url('Gadugi.eot');
-    src: url('Gadugi.eot?#iefix') format('embedded-opentype'),
-        url('Gadugi.woff2') format('woff2'),
-        url('Gadugi.woff') format('woff'),
+    src: url('gadugi.eot');
+    src: url('gadugi.eot?#iefix') format('embedded-opentype'),
+        url('gadugi.woff2') format('woff2'),
+        url('gadugi.woff') format('woff'),
         url('Gadugi.ttf') format('truetype'),
-        url('Gadugi.svg#Gadugi') format('svg');
+        url('gadugi.svg#Gadugi') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -13,12 +13,12 @@
 
 @font-face {
   font-family: 'Gadugi';
-  src: url('Gadugi-Bold.eot');
-  src: url('Gadugi-Bold.eot?#iefix') format('embedded-opentype'),
-  url('Gadugi-Bold.woff2') format('woff2'),
-  url('Gadugi-Bold.woff') format('woff'),
-  url('Gadugi-Bold.ttf') format('truetype'),
-  url('Gadugi-Bold.svg#Gadugi-Bold') format('svg');
+  src: url('gadugi-bold.eot');
+  src: url('gadugi-bold.eot?#iefix') format('embedded-opentype'),
+  url('gadugi-bold.woff2') format('woff2'),
+  url('gadugi-bold.woff') format('woff'),
+  url('gadugi-bold.ttf') format('truetype'),
+  url('gadugi-bold.svg#Gadugi-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;

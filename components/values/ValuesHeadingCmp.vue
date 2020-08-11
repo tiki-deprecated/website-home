@@ -1,7 +1,7 @@
 <template>
-  <div class="cardTitleCmpCnt">
-    <div class="cardTitleCmpTitle">{{ title }}</div>
-    <div v-if="subtitle != null" class="cardTitleCmpSubtitle">
+  <div class="valuesHeadingCmpCnt">
+    <div class="valuesHeadingCmpTitle">{{ title }}</div>
+    <div v-if="subtitle != null" class="valuesHeadingCmpSubtitle">
       {{ subtitle }}
     </div>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'CardTitleCmp',
+  name: 'ValuesHeadingCmp',
   props: {
     title: {
       type: String,
@@ -25,11 +25,11 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.cardTitleCmpCnt
+.valuesHeadingCmpCnt
   width: unset
   margin-bottom: 1em
 
-.cardTitleCmpTitle
+.valuesHeadingCmpTitle
   color: $text
   width: fit-content
   font-size: large
@@ -38,7 +38,7 @@ export default {
   text-transform: uppercase
   letter-spacing: 0.2ch
 
-.cardTitleCmpSubtitle
+.valuesHeadingCmpSubtitle
   color: $text-light
   font-size: small
   word-break: break-word

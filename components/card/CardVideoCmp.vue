@@ -1,10 +1,12 @@
 <template>
-  <div class="cnt">
+  <div class="cardVideoCmpCnt">
     <iframe
+      width="560"
+      height="315"
       :src="'https://www.youtube.com/embed/' + id"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
-      class="vid"
+      class="cardVideoCmpIframe"
     />
   </div>
 </template>
@@ -24,14 +26,17 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.vid
-  border: 0
-  width: 100%
+.cardVideoCmpCnt
+  overflow: hidden
+  padding-bottom: 56.25%
+  position: relative
+  height: 0
 
-@include for-tablet
-  .vid
-    width: 560px
-    height: 315px
-    display: block
-    margin: 0 auto
+.cardVideoCmpCnt .cardVideoCmpIframe
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+  position: absolute
+  border: none
 </style>

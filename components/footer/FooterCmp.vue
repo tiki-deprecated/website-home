@@ -1,18 +1,24 @@
 <template>
-  <div class="footer">
-    © 2020 Tiki Inc
+  <div class="footerCmpCnt">
+    <div class="footerCmpCopyright">{{ cms.copyright }}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'FooterCmp',
+  props: {
+    cms: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 
 <style scoped lang="sass">
-.footer
-  color: $brown-light
+.footerCmpCopyright
+  color: $text
   font-size: smaller
   text-align: center
   padding: 1em 0

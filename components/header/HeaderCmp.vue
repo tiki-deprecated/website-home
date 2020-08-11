@@ -1,79 +1,70 @@
 <template>
-  <div class="header">
-    <div class="bkg">
-      <div class="overlay" />
-      <div class="blur" />
-      <header-hero-cmp name="hero-home" type="jpg" class="hero" />
+  <div>
+    <div class="headerCmpCnt">
+      <utils-svg-cmp
+        v-if="cms.logo != null"
+        :name="cms.logo"
+        class="utilsSvgCmp headerCmpLogo"
+      />
+      <utils-svg-cmp
+        v-if="cms.icon != null"
+        :name="cms.icon"
+        class="utilsSvgCmp headerCmpIcon"
+      />
     </div>
-    <div class="cnt">
-      <header-icon-cmp class="icon" name="icon-solid" />
-      <header-logo-cmp class="logo" />
-    </div>
+    <utils-svg-cmp
+      v-if="cms.tick != null"
+      name="tick-left"
+      class="utilsSvgCmp headerCmpTick"
+      :style="{ fill: `${cms.tick}` }"
+    />
   </div>
 </template>
 
 <script>
-import HeaderLogoCmp from '~/components/header/HeaderLogoCmp'
-import HeaderIconCmp from '~/components/header/HeaderIconCmp'
-import HeaderHeroCmp from '~/components/header/HeaderHeroCmp'
+import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp.vue'
 
 export default {
   name: 'HeaderCmp',
-  components: { HeaderLogoCmp, HeaderIconCmp, HeaderHeroCmp },
+  components: { UtilsSvgCmp },
+  props: {
+    cms: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.header
-  position: relative
-  box-shadow: 0px 1px 1px rgba($orange, 0.25)
-
-.header .hero .bkg
-  width: 100%
-
-.cnt
-  position: absolute
-  left: 0
-  top: 50%
-  transform: translateY(-50%)
+.headerCmpCnt
   display: flex
-  align-items: baseline
-  justify-content: left
+  justify-content: space-between
+  align-items: center
+  margin: 1.5em
 
-.icon
-  width: 2em
-  margin: 0 1em
+.headerCmpLogo
+  width: 5.75em
 
-.logo
-  width: 6em
+::v-deep .headerCmpLogo.svg
+  fill: $blue
 
-.bkg
-  position: relative
+.headerCmpIcon
+  width: 3.5em
 
-.overlay
-  background-color: white
-  opacity: 75%
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
+.headerCmpTick
+  width: 5.5em
 
-.blur
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  backdrop-filter: blur(0px)
+::v-deep .headerCmpTick.svg
+  fill: $orange
 
 @include for-tablet
-  .icon
+  .headerCmpIcon
     width: 5em
 
 @include for-tablet
-  .logo
+  .headerCmpLogo
     width: 16em
 </style>

@@ -1,7 +1,6 @@
 /*
  ** Screen Size Mixins
  */
-
 @mixin for-phone {
   @media (max-width: 576px){ @content }
 }

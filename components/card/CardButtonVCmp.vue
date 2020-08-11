@@ -1,10 +1,18 @@
 <template>
-  <a :href="cms.url" class="link">
-    <div class="button">
-      <utils-svg-cmp v-if="cms.icon != null" :name="cms.icon" />
-      <div v-if="cms.text != null" class="text">{{ cms.text }}</div>
-    </div>
-  </a>
+  <div>
+    <a :href="cms.url" class="cardButtonVCmpLink">
+      <div class="cardButtonVCmpButton">
+        <utils-svg-cmp
+          v-if="cms.icon != null"
+          :name="cms.icon"
+          class="cardButtonVCmpIcon"
+        />
+        <div v-if="cms.text != null" class="cardButtonVCmpText">
+          {{ cms.text }}
+        </div>
+      </div>
+    </a>
+  </div>
 </template>
 
 <script>
@@ -23,14 +31,18 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.link
+.cardButtonVCmpLink
   text-decoration: none
 
-::v-deep .icon
-  width: 3em
+.cardButtonVCmpIcon
+  height: 2.25em
+  margin: auto
 
-.text
-  font-size: small
-  color: $brown-light
+.cardButtonVCmpText
+  font-size: x-small
+  color: $text-light
   text-align: center
+  font-weight: normal
+  letter-spacing: 0.2ch
+  margin-top: 0.25em
 </style>

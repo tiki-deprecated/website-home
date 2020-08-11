@@ -21,6 +21,6 @@ export default {
 
 <style scoped lang="sass">
 .svg
-  display: inline-block
+  display: block
   font-size: inherit
 </style>

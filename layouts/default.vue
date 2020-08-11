@@ -11,5 +11,5 @@ html
 
 body
   margin: 0
-  background-color: rgba($blue, 0.2)
+  background-color: $white
 </style>
