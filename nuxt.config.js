@@ -19,12 +19,20 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
+        hid: 'tikisite',
+        name: 'mytiki.com',
+        content: "Tiki. It's Your Data",
       },
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        async: true,
+        defer: true,
+        'data-domain': 'mytiki.com',
+        src: 'https://plausible.io/js/plausible.js',
+      },
+    ],
   },
   /*
    ** Global CSS

@@ -31,4 +31,14 @@ export default {
 <style scoped lang="sass">
 .cardButtonHCmpLink
   text-decoration: none
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
+.cardButtonHCmpLink:focus
+  outline: none !important
 </style>

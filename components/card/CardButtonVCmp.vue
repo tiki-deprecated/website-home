@@ -33,6 +33,16 @@ export default {
 <style scoped lang="sass">
 .cardButtonVCmpLink
   text-decoration: none
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
+.cardButtonVCmpLink:focus
+  outline: none !important
 
 .cardButtonVCmpIcon
   height: 2.25em

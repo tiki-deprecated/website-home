@@ -35,6 +35,7 @@ export default {
   letter-spacing: 0.2ch
   word-break: break-word
   overflow: hidden
+  text-align: justify
 
 .valuesDetailCmpBold
   color: $blue

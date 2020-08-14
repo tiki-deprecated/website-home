@@ -57,9 +57,6 @@ export default {
   overflow: hidden
   padding-bottom: 0.3em
 
-.cardButtonHCmpLink
-  text-decoration: none
-
 ::v-deep .cardButtonHCmpArrow.svg
   fill: $white
   width: 1em
