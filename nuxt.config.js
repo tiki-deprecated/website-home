@@ -87,4 +87,11 @@ export default {
       }
     },
   },
+  /*
+   ** Generate configuration
+   ** See https://nuxtjs.org/api/configuration-generate/
+   */
+  generate: {
+    fallback: false,
+  },
 }
