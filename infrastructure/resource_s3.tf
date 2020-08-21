@@ -2,7 +2,20 @@ variable "aws_s3_bucket" { }
 
 resource "aws_s3_bucket" "static_site" {
   bucket = var.aws_s3_bucket
-  acl    = "public-read"
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Sid": "PublicReadGetObject",
+          "Effect": "Allow",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::${var.aws_s3_bucket}/*"
+      }
+  ]
+}
+EOF
 
   tags = {
     Environment = var.global_tag_environment
