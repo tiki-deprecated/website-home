@@ -1,9 +1,5 @@
 variable "aws_cloudtrail_log_bucket" { }
 
-data "aws_s3_bucket" "static-site" {
-  bucket = var.aws_s3_bucket
-}
-
 resource "aws_cloudtrail" "s3_object_log" {
   name                          = "ct-s3-${var.aws_s3_bucket}"
   s3_bucket_name                = var.aws_cloudtrail_log_bucket
