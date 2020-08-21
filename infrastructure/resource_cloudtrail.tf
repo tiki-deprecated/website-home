@@ -16,7 +16,7 @@ resource "aws_cloudtrail" "s3_object_log" {
 
     data_resource {
       type = "AWS::S3::Object"
-      values = ["${data.aws_s3_bucket.static-site.arn}/"]
+      values = ["${data.aws_s3_bucket.static_site_complete.arn}/"]
     }
   }
 }
