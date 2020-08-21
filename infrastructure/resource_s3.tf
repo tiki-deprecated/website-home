@@ -1,5 +1,12 @@
 variable "aws_s3_bucket" { }
 
+data "aws_s3_bucket" "static-site" {
+  bucket = var.aws_s3_bucket
+  depends_on = [
+    aws_s3_bucket.static_site,
+  ]
+}
+
 resource "aws_s3_bucket" "static_site" {
   bucket = var.aws_s3_bucket
   policy = <<EOF
@@ -37,10 +44,14 @@ EOF
 }
 
 resource "aws_s3_bucket_public_access_block" "static_site" {
-  bucket = var.aws_s3_bucket
-
+  bucket = data.aws_s3_bucket.static-site.bucket
   block_public_acls       = true
   ignore_public_acls      = true
+}
+
+resource "aws_s3_bucket_metric" "static-site" {
+  bucket = data.aws_s3_bucket.static-site.bucket
+  name   = "EntireBucket"
 }
 
 output "arn" {
