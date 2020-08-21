@@ -11,3 +11,7 @@ resource "aws_s3_bucket" "static_site" {
     Service     = "site"
   }
 }
+
+output "arn" {
+  value = aws_s3_bucket.static_site.arn
+}
