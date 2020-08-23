@@ -6,10 +6,12 @@ resource "aws_cloudfront_distribution" "website" {
     origin_id   = aws_s3_bucket.frontend.bucket
 
     custom_origin_config {
-      http_port = 80
-      https_port = 443
-      origin_protocol_policy = "https-only"
-      origin_ssl_protocols = "TLSv1.2"
+      http_port                = 80
+      https_port               = 443
+      origin_protocol_policy   = "http-only"
+      origin_ssl_protocols     = ["TLSv1.2"]
+      origin_keepalive_timeout = 5
+      origin_read_timeout      = 30
     }
   }
 
