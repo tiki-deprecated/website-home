@@ -2,7 +2,7 @@ variable "aws_acm_arn" { }
 
 resource "aws_cloudfront_distribution" "website" {
   origin {
-    domain_name = aws_s3_bucket.frontend.bucket_regional_domain_name
+    domain_name = aws_s3_bucket.frontend.website_endpoint
     origin_id   = aws_s3_bucket.frontend.bucket
   }
 
