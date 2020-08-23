@@ -1,5 +1,5 @@
 resource "aws_cloudtrail" "website_object_log" {
-  name                          = "ct-s3-${var.aws_s3_bucket}"
+  name                          = "ct-s3-${aws_s3_bucket.website.bucket}"
   s3_bucket_name                = var.global_log_bucket
   include_global_service_events = false
 
@@ -14,7 +14,7 @@ resource "aws_cloudtrail" "website_object_log" {
 
     data_resource {
       type = "AWS::S3::Object"
-      values = ["${data.aws_s3_bucket.website_complete.arn}/"]
+      values = ["${aws_s3_bucket.website.arn}/"]
     }
   }
 }

@@ -2,8 +2,8 @@ variable "aws_acm_arn" { }
 
 resource "aws_cloudfront_distribution" "website" {
   origin {
-    domain_name = data.aws_s3_bucket.website_complete.bucket_regional_domain_name
-    origin_id   = data.aws_s3_bucket.website_complete.bucket
+    domain_name = aws_s3_bucket.website.bucket_regional_domain_name
+    origin_id   = aws_s3_bucket.website.bucket
   }
 
   enabled             = true
@@ -20,7 +20,7 @@ resource "aws_cloudfront_distribution" "website" {
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = data.aws_s3_bucket.website_complete.bucket
+    target_origin_id = aws_s3_bucket.website.bucket
 
     forwarded_values {
       query_string = false

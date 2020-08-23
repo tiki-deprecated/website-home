@@ -22,15 +22,8 @@ resource "aws_s3_bucket" "website" {
   }
 }
 
-data "aws_s3_bucket" "website_complete" {
-  bucket = var.aws_s3_bucket
-  depends_on = [
-    aws_s3_bucket.website,
-  ]
-}
-
 resource "aws_s3_bucket_public_access_block" "off" {
-  bucket = data.aws_s3_bucket.website_complete.bucket
+  bucket = aws_s3_bucket.website.bucket
   block_public_acls       = false
   ignore_public_acls      = false
   block_public_policy     = false
@@ -38,7 +31,7 @@ resource "aws_s3_bucket_public_access_block" "off" {
 }
 
 resource "aws_s3_bucket_policy" "website" {
-  bucket = data.aws_s3_bucket.website_complete.bucket
+  bucket = aws_s3_bucket.website.bucket
   policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -59,7 +52,7 @@ EOF
 }
 
 resource "aws_s3_bucket_public_access_block" "on" {
-  bucket = data.aws_s3_bucket.website_complete.bucket
+  bucket = aws_s3_bucket.website.bucket
   block_public_acls       = true
   ignore_public_acls      = true
   block_public_policy     = true
@@ -70,7 +63,7 @@ resource "aws_s3_bucket_public_access_block" "on" {
 }
 
 resource "aws_s3_bucket_metric" "static-site" {
-  bucket = data.aws_s3_bucket.website_complete.bucket
+  bucket = aws_s3_bucket.website.bucket
   name   = "EntireBucket"
 }
 
