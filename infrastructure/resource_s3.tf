@@ -1,7 +1,12 @@
-variable "aws_s3_bucket" { }
+variable "aws_s3_bucket_prefix" { }
 
-resource "aws_s3_bucket" "website" {
-  bucket = var.aws_s3_bucket
+locals {
+  aws_s3_bucket_frontend  = "${var.aws_s3_bucket_prefix}-frontend"
+  aws_s3_bucket_backend   = "${var.aws_s3_bucket_prefix}-backend"
+}
+
+resource "aws_s3_bucket" "frontend" {
+  bucket = local.aws_s3_bucket_frontend
 
   tags = {
     Environment = local.global_tag_environment
@@ -22,16 +27,16 @@ resource "aws_s3_bucket" "website" {
   }
 }
 
-resource "aws_s3_bucket_public_access_block" "off" {
-  bucket = aws_s3_bucket.website.bucket
+resource "aws_s3_bucket_public_access_block" "frontend_off" {
+  bucket = aws_s3_bucket.frontend.bucket
   block_public_acls       = false
   ignore_public_acls      = false
   block_public_policy     = false
   restrict_public_buckets = false
 }
 
-resource "aws_s3_bucket_policy" "website" {
-  bucket = aws_s3_bucket.website.bucket
+resource "aws_s3_bucket_policy" "frontend" {
+  bucket = aws_s3_bucket_public_access_block.frontend_off.bucket
   policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -41,32 +46,43 @@ resource "aws_s3_bucket_policy" "website" {
           "Effect": "Allow",
           "Principal": "*",
           "Action": "s3:GetObject",
-          "Resource": "arn:aws:s3:::${var.aws_s3_bucket}/*"
+          "Resource": "arn:aws:s3:::${aws_s3_bucket.frontend.bucket}/*"
       }
   ]
 }
 EOF
-  depends_on = [
-    aws_s3_bucket_public_access_block.off,
-  ]
 }
 
-resource "aws_s3_bucket_public_access_block" "on" {
-  bucket = aws_s3_bucket.website.bucket
+resource "aws_s3_bucket_public_access_block" "frontend_on" {
+  bucket = aws_s3_bucket_policy.frontend.bucket
   block_public_acls       = true
   ignore_public_acls      = true
   block_public_policy     = true
   restrict_public_buckets = false
-  depends_on = [
-    aws_s3_bucket_policy.website,
-  ]
 }
 
-resource "aws_s3_bucket_metric" "website" {
-  bucket = aws_s3_bucket.website.bucket
+resource "aws_s3_bucket_metric" "frontend" {
+  bucket = aws_s3_bucket.frontend.bucket
   name   = "EntireBucket"
 }
 
+resource "aws_s3_bucket" "backend" {
+  bucket = local.aws_s3_bucket_backend
+
+  tags = {
+    Environment = local.global_tag_environment
+    Service     = local.global_tag_service
+  }
+
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+}
+
 output "s3_website" {
-  value = aws_s3_bucket.website.website_endpoint
+  value = aws_s3_bucket.frontend.website_endpoint
 }

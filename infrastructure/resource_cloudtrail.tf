@@ -1,5 +1,9 @@
+locals {
+  aws_cloudtrail_frontend_name = "ct-s3-${local.aws_s3_bucket_frontend}"
+}
+
 resource "aws_cloudtrail" "website_object_log" {
-  name                          = "ct-s3-${aws_s3_bucket.website.bucket}"
+  name                          = local.aws_cloudtrail_frontend_name
   s3_bucket_name                = var.global_log_bucket
   include_global_service_events = false
 
@@ -14,7 +18,7 @@ resource "aws_cloudtrail" "website_object_log" {
 
     data_resource {
       type = "AWS::S3::Object"
-      values = ["${aws_s3_bucket.website.arn}/"]
+      values = ["${aws_s3_bucket.frontend.arn}/"]
     }
   }
 }
