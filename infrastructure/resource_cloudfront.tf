@@ -56,6 +56,8 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   wait_for_deployment = false
+
+  depends_on = [ aws_s3_bucket.frontend ]
 }
 
 output "cloudfront_domain" {
