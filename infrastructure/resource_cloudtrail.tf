@@ -1,13 +1,11 @@
-variable "aws_cloudtrail_log_bucket" { }
-
-resource "aws_cloudtrail" "s3_object_log" {
+resource "aws_cloudtrail" "website_object_log" {
   name                          = "ct-s3-${var.aws_s3_bucket}"
-  s3_bucket_name                = var.aws_cloudtrail_log_bucket
+  s3_bucket_name                = var.global_log_bucket
   include_global_service_events = false
 
   tags = {
-    Environment = var.global_tag_environment
-    Service     = var.global_tag_service
+    Environment = local.global_tag_environment
+    Service     = local.global_tag_service
   }
 
   event_selector {
@@ -16,7 +14,7 @@ resource "aws_cloudtrail" "s3_object_log" {
 
     data_resource {
       type = "AWS::S3::Object"
-      values = ["${data.aws_s3_bucket.static_site_complete.arn}/"]
+      values = ["${data.aws_s3_bucket.website_complete.arn}/"]
     }
   }
 }
