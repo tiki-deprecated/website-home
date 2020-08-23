@@ -2,7 +2,7 @@ variable "aws_acm_arn" { }
 
 resource "aws_cloudfront_distribution" "website" {
   origin {
-    domain_name = aws_s3_bucket.website.bucket_regional_domain_name
+    domain_name = aws_s3_bucket.website.website_endpoint
     origin_id   = aws_s3_bucket.website.bucket
   }
 
@@ -56,4 +56,8 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   wait_for_deployment = false
+}
+
+output "cloudfront_domain" {
+  value = aws_cloudfront_distribution.website.domain_name
 }

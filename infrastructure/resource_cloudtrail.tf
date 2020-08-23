@@ -18,3 +18,7 @@ resource "aws_cloudtrail" "website_object_log" {
     }
   }
 }
+
+output "cloudtrail_name" {
+  value = aws_cloudtrail.website_object_log.name
+}

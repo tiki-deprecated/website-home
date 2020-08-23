@@ -62,11 +62,11 @@ resource "aws_s3_bucket_public_access_block" "on" {
   ]
 }
 
-resource "aws_s3_bucket_metric" "static-site" {
+resource "aws_s3_bucket_metric" "website" {
   bucket = aws_s3_bucket.website.bucket
   name   = "EntireBucket"
 }
 
-output "arn" {
+output "s3_website" {
   value = aws_s3_bucket.website.website_endpoint
 }
