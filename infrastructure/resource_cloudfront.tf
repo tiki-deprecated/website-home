@@ -4,6 +4,13 @@ resource "aws_cloudfront_distribution" "website" {
   origin {
     domain_name = aws_s3_bucket.frontend.website_endpoint
     origin_id   = aws_s3_bucket.frontend.bucket
+
+    custom_origin_config {
+      http_port = 80
+      https_port = 443
+      origin_protocol_policy = "https-only"
+      origin_ssl_protocols = "TLSv1.2"
+    }
   }
 
   enabled             = true
@@ -56,8 +63,6 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   wait_for_deployment = false
-
-  depends_on = [ aws_s3_bucket.frontend ]
 }
 
 output "cloudfront_domain" {
