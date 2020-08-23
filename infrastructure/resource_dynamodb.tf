@@ -7,8 +7,13 @@ resource "aws_dynamodb_table" "user_signup" {
   range_key      = "timestamp_utc"
 
   attribute {
-    name = "isEmail"
-    type = "B"
+    name = "contact_info"
+    type = "S"
+  }
+
+  attribute {
+    name = "timestamp_utc"
+    type = "S"
   }
 
   server_side_encryption {
