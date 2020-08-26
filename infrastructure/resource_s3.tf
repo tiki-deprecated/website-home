@@ -59,6 +59,8 @@ resource "aws_s3_bucket_public_access_block" "frontend_on" {
   ignore_public_acls      = true
   block_public_policy     = true
   restrict_public_buckets = false
+
+  depends_on = [ aws_s3_bucket_policy.frontend ]
 }
 
 resource "aws_s3_bucket_metric" "frontend" {
