@@ -6,10 +6,10 @@
   },
   "servers": [
     {
-      "url": "https://${var.servers_url}.execute-api.${var.region}.amazonaws.com",
+      "url": "https://${servers_url}.execute-api.${region}.amazonaws.com",
       "variables": {
         "basePath": {
-          "default": "/${var.env}"
+          "default": "/${env}"
         }
       }
     }
@@ -46,7 +46,7 @@
         },
         "x-amazon-apigateway-integration": {
           "type": "aws_proxy",
-          "uri": "${var.lambda_arn}/*/*",
+          "uri": "${lambda_arn}/*/*",
           "passthroughBehavior": "when_no_match",
           "httpMethod": "POST",
           "timeoutInMillis": 29000
@@ -79,7 +79,7 @@
         },
         "x-amazon-apigateway-integration": {
           "type": "aws_proxy",
-          "uri": "${var.lambda_arn}/*/*",
+          "uri": "${lambda_arn}/*/*",
           "passthroughBehavior": "when_no_match",
           "httpMethod": "POST",
           "timeoutInMillis": 29000
