@@ -1,48 +1,24 @@
 resource "aws_api_gateway_rest_api" "signup" {
   name = "Signup"
 
+  body = templatefile("../backend/oas.json",
+    {
+      lambda_arn  = aws_lambda_function.example.invoke_arn,
+      env         = lower(local.global_tag_environment),
+      servers_url = aws_api_gateway_rest_api.signup.root_resource_id,
+      region      = var.aws_region
+    }
+  )
+
   tags = {
     Environment = local.global_tag_environment
     Service     = local.global_tag_service
   }
 }
 
-resource "aws_api_gateway_resource" "signup" {
-  rest_api_id = aws_api_gateway_rest_api.signup.id
-  parent_id   = aws_api_gateway_rest_api.signup.root_resource_id
-  path_part   = "signup"
-}
-
-resource "aws_api_gateway_resource" "user" {
-  rest_api_id = aws_api_gateway_rest_api.signup.id
-  parent_id   = aws_api_gateway_resource.signup.id
-  path_part   = "user"
-}
-
-resource "aws_api_gateway_method" "post_user" {
-  rest_api_id   = aws_api_gateway_rest_api.signup.id
-  resource_id   = aws_api_gateway_resource.user.id
-  http_method   = "POST"
-  authorization = "NONE"
-}
-
-resource "aws_api_gateway_integration" "lambda" {
-  rest_api_id = aws_api_gateway_rest_api.signup.id
-  resource_id = aws_api_gateway_method.post_user.resource_id
-  http_method = aws_api_gateway_method.post_user.http_method
-
-  integration_http_method = "POST"
-  type                    = "AWS_PROXY"
-  uri                     = aws_lambda_function.example.invoke_arn
-}
-
 resource "aws_api_gateway_deployment" "signup" {
-  depends_on = [
-    aws_api_gateway_integration.lambda
-  ]
-
   rest_api_id = aws_api_gateway_rest_api.signup.id
-  stage_name  = local.global_tag_environment
+  stage_name  = lower(local.global_tag_environment)
 }
 
 output "api_url" {

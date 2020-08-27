@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Signup",
+    "version": "1-0-0"
+  },
+  "servers": [
+    {
+      "url": "https://${var.servers_url}.execute-api.${var.region}.amazonaws.com",
+      "variables": {
+        "basePath": {
+          "default": "/${var.env}"
+        }
+      }
+    }
+  ],
+  "components": {
+    "securitySchemes": {},
+    "schemas": {}
+  },
+  "security": [
+    {}
+  ],
+  "paths": {
+    "/1-0-0/signup/user": {
+      "post": {
+        "tags": [],
+        "summary": "Add User",
+        "description": "signup a new user",
+        "operationId": "getting-started-with-your-api",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "contact": {
+                    "type": "string",
+                    "description": "email or phone number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "type": "aws_proxy",
+          "uri": "${var.lambda_arn}/*/*",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "timeoutInMillis": 29000
+        },
+        "deprecated": false,
+        "security": []
+      }
+    },
+    "/1-0-0/signup/buyer": {
+      "post": {
+        "tags": [],
+        "summary": "Add Buyer",
+        "description": "signup a new user",
+        "operationId": "add-buyer",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "contact": {
+                    "type": "string",
+                    "description": "email address or phone number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "type": "aws_proxy",
+          "uri": "${var.lambda_arn}/*/*",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "timeoutInMillis": 29000
+        },
+        "deprecated": false,
+        "security": []
+      }
+    }
+  },
+  "x-headers": [],
+  "x-explorer-enabled": true,
+  "x-proxy-enabled": true,
+  "x-samples-enabled": true,
+  "x-samples-languages": [
+    "curl",
+    "javascript",
+    "python"
+  ]
+}
