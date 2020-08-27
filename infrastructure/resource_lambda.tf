@@ -10,7 +10,7 @@ resource "aws_lambda_function" "example" {
   s3_bucket = local.aws_s3_bucket_backend
   s3_key    = "v1.0.0/example.zip"
 
-  handler = "main.handler"
+  handler = "signup-user.handler"
   runtime = "nodejs12.x"
 
   tags = {

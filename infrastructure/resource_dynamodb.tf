@@ -1,4 +1,4 @@
-variable "aws_dynamodb_table_name" { }
+variable "aws_dynamodb_table_name" { default = "website_signup_user" }
 
 resource "aws_dynamodb_table" "user_signup" {
   name           = var.aws_dynamodb_table_name
