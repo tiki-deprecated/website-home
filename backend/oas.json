@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://${servers_url}.execute-api.${region}.amazonaws.com",
+      "url": "${servers_url}",
       "variables": {
         "basePath": {
           "default": "/${env}"

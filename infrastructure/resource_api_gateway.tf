@@ -1,3 +1,5 @@
+variable "aws_api_gateway_servers_url" { default = "" }
+
 resource "aws_api_gateway_rest_api" "signup" {
   name = "Signup"
 
@@ -5,7 +7,7 @@ resource "aws_api_gateway_rest_api" "signup" {
     {
       lambda_arn  = aws_lambda_function.example.invoke_arn,
       env         = lower(local.global_tag_environment),
-      servers_url = aws_api_gateway_rest_api.signup.root_resource_id,
+      servers_url = var.aws_api_gateway_servers_url,
       region      = var.aws_region
     }
   )
