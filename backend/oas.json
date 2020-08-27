@@ -46,7 +46,7 @@
         },
         "x-amazon-apigateway-integration": {
           "type": "aws_proxy",
-          "uri": "${lambda_arn}/*/*",
+          "uri": "${lambda_arn}",
           "passthroughBehavior": "when_no_match",
           "httpMethod": "POST",
           "timeoutInMillis": 29000
