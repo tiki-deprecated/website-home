@@ -15,7 +15,7 @@ exports.handler = function (event, context, callback) {
               S: body.contact,
             },
             timestamp_utc: {
-              S: Date.now(),
+              S: Date.now().toString(),
             },
           },
         },
