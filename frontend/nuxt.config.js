@@ -37,7 +37,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/styles/theme.sass'],
+  css: ['@/assets/styles/theme.sass', '@/assets/fonts/gadugi.css'],
   /*
    ** Style Resources
    */
