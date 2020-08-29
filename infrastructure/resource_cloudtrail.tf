@@ -1,9 +1,5 @@
-locals {
-  aws_cloudtrail_frontend_name = "ct-s3-${local.aws_s3_bucket_frontend}"
-}
-
 resource "aws_cloudtrail" "website_object_log" {
-  name                          = local.aws_cloudtrail_frontend_name
+  name                          = "ct-s3-${local.global_bucket_frontend}"
   s3_bucket_name                = var.global_log_bucket
   include_global_service_events = false
 

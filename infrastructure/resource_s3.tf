@@ -1,12 +1,5 @@
-variable "aws_s3_bucket_prefix" { }
-
-locals {
-  aws_s3_bucket_frontend  = "${var.aws_s3_bucket_prefix}-frontend"
-  aws_s3_bucket_backend   = "${var.aws_s3_bucket_prefix}-backend"
-}
-
 resource "aws_s3_bucket" "frontend" {
-  bucket = local.aws_s3_bucket_frontend
+  bucket = local.global_bucket_frontend
 
   tags = {
     Environment = local.global_tag_environment
@@ -69,7 +62,7 @@ resource "aws_s3_bucket_metric" "frontend" {
 }
 
 resource "aws_s3_bucket" "backend" {
-  bucket = local.aws_s3_bucket_backend
+  bucket = local.global_bucket_backend
 
   tags = {
     Environment = local.global_tag_environment

@@ -1,7 +1,5 @@
-variable "aws_dynamodb_table_name" { default = "website_signup_user" }
-
 resource "aws_dynamodb_table" "user_signup" {
-  name           = var.aws_dynamodb_table_name
+  name           = var.global_dynamodb_table_name
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "contact_info"
   range_key      = "timestamp_utc"

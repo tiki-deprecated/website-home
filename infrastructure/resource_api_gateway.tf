@@ -5,10 +5,11 @@ resource "aws_api_gateway_rest_api" "signup" {
 
   body = templatefile("../backend/oas.json",
     {
-      lambda_arn  = aws_lambda_function.example.invoke_arn,
+      lambda_arn  = aws_lambda_function.signup.invoke_arn,
       env         = lower(local.global_tag_environment),
       servers_url = var.aws_api_gateway_servers_url,
-      region      = var.aws_region
+      region      = var.aws_region,
+      version     = replace(file("../backend/api.version", ".", "-"))
     }
   )
 
