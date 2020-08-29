@@ -6,8 +6,12 @@ on:
       feature/stand_up
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: infrastructure
 
     steps:
       - uses: actions/checkout@v2.1.1
@@ -17,9 +21,6 @@ jobs:
 
       - name: Zip Functions
         run: ./.github/scripts/zip-functions.sh
-
-      - name: CD Infrastructure
-        run: cd infrastructure
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
