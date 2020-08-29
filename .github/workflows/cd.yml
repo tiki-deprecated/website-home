@@ -18,6 +18,9 @@ jobs:
       - name: Zip Functions
         run: ./.github/scripts/zip-functions.sh
 
+      - name: CD Infrastructure
+        run: cd infrastructure
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
