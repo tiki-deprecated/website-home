@@ -6,6 +6,7 @@
 # Used during continuous integration github workflow to move/copy
 # generated/config files into infrastructure package (infrastructure/files).
 
+mkdir ./infrastructure/files
 cp ./backend/oas.json ./infrastructure/files/oas.json
 cp ./backend/api.version ./infrastructure/files/api.version
 cp ./backend/functions/functions.version ./infrastructure/files/functions.version
