@@ -1,4 +1,4 @@
-variable "aws_acm_arn" { }
+variable "aws_acm_arn" {}
 
 resource "aws_cloudfront_distribution" "website" {
   origin {
@@ -15,8 +15,8 @@ resource "aws_cloudfront_distribution" "website" {
     }
   }
 
-  enabled             = true
-  is_ipv6_enabled     = true
+  enabled         = true
+  is_ipv6_enabled = true
 
   logging_config {
     include_cookies = false
@@ -59,9 +59,9 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   viewer_certificate {
-    acm_certificate_arn       = var.aws_acm_arn
-    minimum_protocol_version  = "TLSv1.2_2019"
-    ssl_support_method        = "sni-only"
+    acm_certificate_arn      = var.aws_acm_arn
+    minimum_protocol_version = "TLSv1.2_2019"
+    ssl_support_method       = "sni-only"
   }
 
   wait_for_deployment = false

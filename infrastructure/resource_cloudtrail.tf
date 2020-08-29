@@ -13,7 +13,7 @@ resource "aws_cloudtrail" "website_object_log" {
     include_management_events = false
 
     data_resource {
-      type = "AWS::S3::Object"
+      type   = "AWS::S3::Object"
       values = ["${aws_s3_bucket.frontend.arn}/"]
     }
   }

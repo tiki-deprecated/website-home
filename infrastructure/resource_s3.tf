@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "frontend" {
 }
 
 resource "aws_s3_bucket_public_access_block" "frontend_off" {
-  bucket = aws_s3_bucket.frontend.bucket
+  bucket                  = aws_s3_bucket.frontend.bucket
   block_public_acls       = false
   ignore_public_acls      = false
   block_public_policy     = false
@@ -47,13 +47,13 @@ EOF
 }
 
 resource "aws_s3_bucket_public_access_block" "frontend_on" {
-  bucket = aws_s3_bucket_policy.frontend.bucket
+  bucket                  = aws_s3_bucket_policy.frontend.bucket
   block_public_acls       = true
   ignore_public_acls      = true
   block_public_policy     = true
   restrict_public_buckets = false
 
-  depends_on = [ aws_s3_bucket_policy.frontend ]
+  depends_on = [aws_s3_bucket_policy.frontend]
 }
 
 resource "aws_s3_bucket_metric" "frontend" {
@@ -79,18 +79,18 @@ resource "aws_s3_bucket" "backend" {
 }
 
 resource "aws_s3_bucket_object" "backend_functions" {
-  bucket  = local.global_bucket_backend
-  key     = "${replace(file("../backend/functions/functions.version"),".","-")}/functions.zip"
-  source  = "../backend/functions/functions.zip"
-  etag    = filemd5("../backend/functions/functions.zip")
+  bucket = local.global_bucket_backend
+  key    = "${replace(file("../backend/functions/functions.version"), ".", "-")}/functions.zip"
+  source = "../backend/functions/functions.zip"
+  etag   = filemd5("../backend/functions/functions.zip")
 }
 
 resource "aws_s3_bucket_object" "frontend_dist" {
-  for_each  = fileset("../frontend/dist/", "*")
-  bucket    = local.global_bucket_frontend
-  key       = each.value
-  source    = "../frontend/dist/${each.value}"
-  etag      = filemd5("./frontend/dist/${each.value}")
+  for_each = fileset("../frontend/dist/", "*")
+  bucket   = local.global_bucket_frontend
+  key      = each.value
+  source   = "../frontend/dist/${each.value}"
+  etag     = filemd5("./frontend/dist/${each.value}")
 }
 
 output "s3_website" {
