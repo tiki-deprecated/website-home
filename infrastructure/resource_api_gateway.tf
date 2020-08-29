@@ -3,13 +3,13 @@ variable "aws_api_gateway_servers_url" { default = "" }
 resource "aws_api_gateway_rest_api" "signup" {
   name = "Signup"
 
-  body = templatefile("../backend/oas.json",
+  body = templatefile(local.global_api_path,
     {
       lambda_arn  = aws_lambda_function.signup.invoke_arn,
       env         = lower(local.global_tag_environment),
       servers_url = var.aws_api_gateway_servers_url,
       region      = var.aws_region,
-      version     = replace(file("../backend/api.version"), ".", "-")
+      version     = local.global_api_version
     }
   )
 

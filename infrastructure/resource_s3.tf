@@ -79,18 +79,20 @@ resource "aws_s3_bucket" "backend" {
 }
 
 resource "aws_s3_bucket_object" "backend_functions" {
-  bucket = local.global_bucket_backend
-  key    = "${replace(file("../backend/functions/functions.version"), ".", "-")}/functions.zip"
-  source = "../backend/functions/functions.zip"
-  etag   = filemd5("../backend/functions/functions.zip")
+  bucket = aws_s3_bucket.backend.bucket
+  key    = "${local.global_functions_version}/functions.zip"
+  source = local.global_functions_zip_path
+  etag   = filemd5(local.global_functions_zip_path)
+  server_side_encryption = "AES256"
 }
 
 resource "aws_s3_bucket_object" "frontend_dist" {
-  for_each = fileset("../frontend/dist/", "*")
-  bucket   = local.global_bucket_frontend
+  for_each = fileset(local.global_frontend_dist_path, "*")
+  bucket   = aws_s3_bucket.frontend.bucket
   key      = each.value
-  source   = "../frontend/dist/${each.value}"
-  etag     = filemd5("./frontend/dist/${each.value}")
+  source   = "${local.global_frontend_dist_path}${each.value}"
+  etag     = filemd5("${local.global_frontend_dist_path}${each.value}")
+  server_side_encryption = "AES256"
 }
 
 output "s3_website" {
