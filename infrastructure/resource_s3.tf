@@ -78,6 +78,21 @@ resource "aws_s3_bucket" "backend" {
   }
 }
 
+resource "aws_s3_bucket_object" "backend_functions" {
+  bucket  = local.global_bucket_backend
+  key     = "${replace(file("../backend/functions/functions.version"),".","-")}/functions.zip"
+  source  = "../backend/functions/functions.zip"
+  etag    = filemd5("../backend/functions/functions.zip")
+}
+
+resource "aws_s3_bucket_object" "frontend_dist" {
+  for_each  = fileset("../frontend/dist/", "*")
+  bucket    = local.global_bucket_frontend
+  key       = each.value
+  source    = "../frontend/dist/${each.value}"
+  etag      = filemd5("./frontend/dist/${each.value}")
+}
+
 output "s3_website" {
   value = aws_s3_bucket.frontend.website_endpoint
 }
