@@ -4,7 +4,7 @@
     src: url('gadugi.eot?#iefix') format('embedded-opentype'),
         url('gadugi.woff2') format('woff2'),
         url('gadugi.woff') format('woff'),
-        url('Gadugi.ttf') format('truetype'),
+        url('gadugi.ttf') format('truetype'),
         url('gadugi.svg#Gadugi') format('svg');
     font-weight: normal;
     font-style: normal;
