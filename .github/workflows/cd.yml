@@ -9,10 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: infrastructure
-
     steps:
       - uses: actions/checkout@v2.1.1
 
@@ -30,10 +26,13 @@ jobs:
       - name: Terraform Format
         id: fmt
         run: terraform fmt -check
+          working-directory: infrastructure
 
       - name: Terraform Init
         id: init
         run: terraform init
+          working-directory: infrastructure
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+          working-directory: infrastructure
