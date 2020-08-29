@@ -13,10 +13,10 @@ jobs:
       - uses: actions/checkout@v2.1.1
 
       - name: Generate Static Site
-          run: ./.github/scripts/static-site-generate.sh
+        run: ./.github/scripts/static-site-generate.sh
 
       - name: Zip Functions
-          run: ./.github/scripts/zip-functions.sh
+        run: ./.github/scripts/zip-functions.sh
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
