@@ -86,13 +86,13 @@ export default {
 
 .utilsSvgCmpDivider
   width: 4em
-  margin: 2em auto 0 auto
+  margin: 1.5em auto 0 auto
 
 .utilsSvgCmpDivider.svg
   fill: $grey
 
 .valuesCmpValues
-  margin-top: 0.5em
+  margin-top: 1.5em
 
 .valuesDetailCmp
   margin-top: 1.5em

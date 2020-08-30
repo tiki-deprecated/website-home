@@ -33,4 +33,14 @@ export default {
 .meetPage
   width: 100%
   position: relative
+
+@include for-tablet
+  .meetPage
+    max-width: 60%
+    margin: 0 auto 0 auto
+
+@include for-desktop
+  .meetPage
+    max-width: 40%
+    margin: 0 auto 0 auto
 </style>
