@@ -26,6 +26,10 @@ resource "aws_api_gateway_deployment" "signup" {
 }
 
 resource "null_resource" "gh_outputs" {
+  triggers = {
+    always_run = timestamp()
+  }
+
   provisioner "local-exec" {
     command = "echo ::set-output name=region::$REGION;"
     environment = {
