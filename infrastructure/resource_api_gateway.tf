@@ -25,33 +25,6 @@ resource "aws_api_gateway_deployment" "signup" {
   stage_name  = lower(local.global_tag_environment)
 }
 
-resource "null_resource" "gh_outputs" {
-  triggers = {
-    always_run = timestamp()
-  }
-
-  provisioner "local-exec" {
-    command = "echo ::set-output name=region::$REGION;"
-    environment = {
-      REGION    = var.aws_region
-    }
-  }
-
-  provisioner "local-exec" {
-    command = "echo ::set-output name=api_id::$API_ID"
-    environment = {
-      API_ID    = aws_api_gateway_deployment.signup.rest_api_id
-    }
-  }
-
-  provisioner "local-exec" {
-    command = "echo ::set-output name=api_stage::$API_STAGE"
-    environment = {
-      API_STAGE = aws_api_gateway_deployment.signup.stage_name
-    }
-  }
-}
-
 output "api_url" {
   value = aws_api_gateway_deployment.signup.invoke_url
 }
