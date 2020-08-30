@@ -3,16 +3,11 @@ variable "aws_api_gateway_servers_url" { default = "" }
 resource "aws_api_gateway_rest_api" "signup" {
   name = "Signup"
 
-  body = templatefile(local.global_oas_path,
-    {
-      lambda_arn   = aws_lambda_function.signup.invoke_arn,
-      env          = lower(local.global_tag_environment),
-      servers_url  = var.aws_api_gateway_servers_url,
-      region       = var.aws_region,
-      version      = local.global_api_version,
-      version_pipe = local.global_api_version_pipe
-    }
-  )
+  triggers = {
+    oas_change = md5(local.global_oas_file)
+  }
+
+  body = local.global_oas_file
 
   tags = {
     Environment = local.global_tag_environment

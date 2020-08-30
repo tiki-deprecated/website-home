@@ -20,4 +20,15 @@ locals {
   global_api_version_path   = "${path.module}/files/api.version"
   global_frontend_dist_path = "${path.module}/files/dist/"
   global_oas_path           = "${path.module}/files/oas.json"
+
+  global_oas_file = templatefile(local.global_oas_path,
+    {
+      lambda_arn   = aws_lambda_function.signup.invoke_arn,
+      env          = lower(local.global_tag_environment),
+      servers_url  = var.aws_api_gateway_servers_url,
+      region       = var.aws_region,
+      version      = local.global_api_version,
+      version_pipe = local.global_api_version_pipe
+    }
+  )
 }
