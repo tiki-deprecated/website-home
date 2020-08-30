@@ -24,7 +24,7 @@ resource "aws_lambda_function" "signup" {
     }
   }
 
-  source_code_hash = md5file(local.global_functions_zip_path)
+  source_code_hash = filemd5(local.global_functions_zip_path)
 
   role = data.aws_iam_role.lambda_exec.arn
 }
