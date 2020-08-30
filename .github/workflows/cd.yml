@@ -51,6 +51,8 @@ jobs:
     needs: deploy
 
     steps:
+      - uses: actions/checkout@v2.1.1
+
       - name: Get OAS
         run: ./.github/scripts/get-oas.sh ${{needs.apply.outputs.apiId}} ${{needs.apply.outputs.apiStage}}
 
