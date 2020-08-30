@@ -70,6 +70,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
+    '@nuxtjs/axios',
   ],
   /*
    ** Content module configuration
@@ -94,4 +95,9 @@ export default {
   generate: {
     fallback: false,
   },
+  /*
+   ** Axios configuration
+   ** See https://axios.nuxtjs.org/
+   */
+  axios: {},
 }

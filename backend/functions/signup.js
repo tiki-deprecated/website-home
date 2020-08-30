@@ -1,6 +1,6 @@
 'use strict'
 
-import { isUser, contactType, sanitize } from 'backend/functions/format-data'
+const { isUser, contactType, sanitize } = require('./format-data.js')
 const AWS = require('aws-sdk')
 const dynamodb = new AWS.DynamoDB({ apiVersion: '2012-08-10' })
 
@@ -8,12 +8,15 @@ exports.handler = function (event, context, callback) {
   if (event.body == null) callback(null, { statusCode: '400', })
 
   const isUserRes = isUser(event.path)
-  if (isUser === null) callback(null, { statusCode: '400' })
+  console.log("isUserRes:" + isUserRes)
+  if (isUserRes === null) callback(null, { statusCode: '400' })
 
   const body = JSON.parse(event.body)
   if (body.contact == null) callback(null, { statusCode: '200' })
   const contact = sanitize(body.contact)
+  console.log("contact:" + contact)
   const type = contactType(contact)
+  console.log("type:" + type)
 
   dynamodb.putItem(
     {
@@ -22,10 +25,11 @@ exports.handler = function (event, context, callback) {
         contact_info: { S: contact },
         timestamp_utc: { S: Date.now().toString() },
         contact_type: { S: type },
-        isUser: { B: isUserRes },
+        isUser: { BOOL: isUserRes },
       },
     },
     function (err, data) {
+      console.log(err)
       if (err) callback(null, { statusCode: '500', body: err })
       else callback(null, { statusCode: '200' })
     }

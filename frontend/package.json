@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.5.3",
+    "@nuxtjs/axios": "^5.12.2",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {

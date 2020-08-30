@@ -34,16 +34,50 @@ export default {
       type: String,
       required: true,
     },
+    isUser: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
   },
   data() {
     return {
       submitted: null,
+      submitError: null,
     }
   },
   methods: {
-    cardSignupCmpSubmit(submitEvent) {
-      this.submitted = submitEvent.target.elements.email.value
-      this.$emit('cardSignupCmpSubmit')
+    async cardSignupCmpSubmit(submitEvent) {
+      submitEvent.preventDefault()
+
+      const parent = this
+      const path =
+        'https://d5jdrqbhij.execute-api.us-east-1.amazonaws.com/production/0-0-1/signup/' +
+        (this.isUser ? 'user' : 'buyer')
+
+      // eslint-disable-next-line no-unused-vars
+      const res = await this.$axios
+        .$post(
+          path,
+          {
+            contact: submitEvent.target.elements.email.value,
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            validateStatus(status) {
+              return status === 200
+            },
+          }
+        )
+        .then(function (e) {
+          parent.submitted = submitEvent.target.elements.email.value
+          parent.$emit('cardSignupCmpSubmit')
+        })
+        .catch(function (e) {
+          parent.submitError = 'Uh oh. Double check your info and try again?'
+        })
     },
   },
 }
