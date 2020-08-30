@@ -26,8 +26,8 @@
       "post": {
         "tags": [],
         "summary": "Add User",
-        "description": "signup a new user",
-        "operationId": "getting-started-with-your-api",
+        "description": "Signup a new user",
+        "operationId": "signupUser",
         "parameters": [],
         "requestBody": {
           "content": {
@@ -64,8 +64,8 @@
       "post": {
         "tags": [],
         "summary": "Add Buyer",
-        "description": "signup a new user",
-        "operationId": "add-buyer",
+        "description": "Signup a new buyer",
+        "operationId": "signupBuyer",
         "parameters": [],
         "requestBody": {
           "content": {
