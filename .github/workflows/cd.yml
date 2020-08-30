@@ -11,8 +11,8 @@ jobs:
 
     outputs:
       region: ${{ steps.apply.outputs.region }}
-      apiId: ${{ steps.apply.outputs.api_id }}
-      apiStage: ${{ steps.apply.outputs.api_stage }}
+      api_id: ${{ steps.apply.outputs.api_id }}
+      api_stage: ${{ steps.apply.outputs.api_stage }}
 
     steps:
       - uses: actions/checkout@v2.1.1
@@ -62,7 +62,10 @@ jobs:
           aws-region: us-east-1
 
       - name: Get OAS
-        run: ./.github/scripts/get-oas.sh d5jdrqbhij production us-east-1
+        run: ./.github/scripts/get-oas.sh \
+        ${{needs.deploy.outputs.api_id}} \
+        ${{needs.deploy.outputs.api_stage}} \
+        ${{needs.deploy.outputs.region}}
 
       - uses: readmeio/github-readme-sync@2.0.0
         with:

@@ -25,12 +25,20 @@ resource "aws_api_gateway_deployment" "signup" {
   stage_name  = lower(local.global_tag_environment)
 }
 
-output "api_id" {
-  value = "::set-output name=api_id::${aws_api_gateway_deployment.signup.id}"
-}
+resource "null_resource" "gh_outputs" {
+  provisioner "local-exec" {
+    command = <<EOF
+echo ::set-output name=region::$REGION;
+echo ::set-output name=api_id::$API_ID;
+echo ::set-output name=api_stage::$API_STAGE;
+EOF
 
-output "api_stage" {
-  value = "::set-output name=api_stage::${aws_api_gateway_deployment.signup.stage_name}"
+    environment = {
+      REGION    = var.aws_region
+      API_ID    = aws_api_gateway_deployment.signup.id
+      API_STAGE = aws_api_gateway_deployment.signup.stage_name
+    }
+  }
 }
 
 output "api_url" {

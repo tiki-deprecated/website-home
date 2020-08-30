@@ -9,7 +9,7 @@
       "url": "${servers_url}",
       "variables": {
         "basePath": {
-          "default": "/${env}"
+          "default": "${env}"
         }
       }
     }
