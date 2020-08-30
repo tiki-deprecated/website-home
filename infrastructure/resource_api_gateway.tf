@@ -3,10 +3,6 @@ variable "aws_api_gateway_servers_url" { default = "" }
 resource "aws_api_gateway_rest_api" "signup" {
   name = "Signup"
 
-  triggers = {
-    oas_change = md5(local.global_oas_file)
-  }
-
   body = local.global_oas_file
 
   tags = {
@@ -18,6 +14,10 @@ resource "aws_api_gateway_rest_api" "signup" {
 resource "aws_api_gateway_deployment" "signup" {
   rest_api_id = aws_api_gateway_rest_api.signup.id
   stage_name  = lower(local.global_tag_environment)
+
+  triggers = {
+    oas_hash = md5(local.global_oas_file)
+  }
 }
 
 output "api_url" {
