@@ -61,10 +61,6 @@ export default {
   fill: $orange
 
 @include for-tablet
-  .headerCmpIcon
-    width: 5em
-
-@include for-tablet
-  .headerCmpLogo
-    width: 16em
+  .headerCmpCnt
+    margin: 1.5em 0
 </style>

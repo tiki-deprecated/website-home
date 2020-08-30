@@ -51,6 +51,19 @@ export default {
   width: 100%
   position: relative
 
+.cardCmps
+  margin: 0 auto 0 auto
+
 .cardUserCmp, .cardBuyerCmp, .cardLearnCmp
   margin-top: 1em
+
+@include for-tablet
+  .indexPage
+    max-width: 60%
+    margin: 0 auto 0 auto
+
+@include for-desktop
+  .indexPage
+    max-width: 40%
+    margin: 0 auto 0 auto
 </style>
