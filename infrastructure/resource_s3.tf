@@ -80,7 +80,7 @@ resource "aws_s3_bucket" "backend" {
 
 resource "aws_s3_bucket_object" "backend_functions" {
   bucket                 = aws_s3_bucket.backend.bucket
-  key                    = "${local.global_functions_version}/functions.zip"
+  key                    = "${local.global_functions_version_pipe}/functions.zip"
   source                 = local.global_functions_zip_path
   etag                   = filemd5(local.global_functions_zip_path)
   server_side_encryption = "AES256"

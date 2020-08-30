@@ -22,7 +22,7 @@
     {}
   ],
   "paths": {
-    "/${version}/signup/user": {
+    "/${version_pipe}/signup/user": {
       "post": {
         "tags": [],
         "summary": "Add User",
@@ -44,6 +44,11 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
         "x-amazon-apigateway-integration": {
           "type": "aws_proxy",
           "uri": "${lambda_arn}",
@@ -55,7 +60,7 @@
         "security": []
       }
     },
-    "/${version}/signup/buyer": {
+    "/${version_pipe}/signup/buyer": {
       "post": {
         "tags": [],
         "summary": "Add Buyer",
@@ -75,6 +80,11 @@
                 }
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         },
         "x-amazon-apigateway-integration": {

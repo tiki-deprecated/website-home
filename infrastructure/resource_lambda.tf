@@ -8,7 +8,7 @@ resource "aws_lambda_function" "signup" {
   function_name = "Signup"
 
   s3_bucket = aws_s3_bucket.backend.bucket
-  s3_key    = "${local.global_functions_version}/functions.zip"
+  s3_key    = "${local.global_functions_version_pipe}/functions.zip"
 
   handler = "signup.handler"
   runtime = "nodejs12.x"
