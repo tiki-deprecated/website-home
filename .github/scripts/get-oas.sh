@@ -6,9 +6,6 @@
 # Used during continuous integration github workflow to get the rendered
 # aws OAS3 documentation from API Gateway.
 
-echo $1
-echo $2
-
 aws apigateway get-export \
     --rest-api-id $1 \
     --stage-name $2 \
