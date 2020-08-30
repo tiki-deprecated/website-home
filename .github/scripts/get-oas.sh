@@ -6,9 +6,12 @@
 # Used during continuous integration github workflow to get the rendered
 # aws OAS3 documentation from API Gateway.
 
+echo $1
+echo $2
+
 aws apigateway get-export \
     --rest-api-id $1 \
     --stage-name $2 \
     --export-type oas30 \
-    --region us-east-1 \
+    --region $3 \
     ./infrastructure/files/oas-rendered.json
