@@ -54,7 +54,7 @@ jobs:
       - uses: actions/checkout@v2.1.1
 
       - name: Get OAS
-        run: ./.github/scripts/get-oas.sh ${{needs.apply.outputs.apiId}} ${{needs.apply.outputs.apiStage}}
+        run: ./.github/scripts/get-oas.sh d5jdrqbhij production
 
       - uses: readmeio/github-readme-sync@2.0.0
         with:
