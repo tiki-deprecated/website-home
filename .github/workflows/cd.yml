@@ -9,11 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    outputs:
-      region: ${{ steps.apply.outputs.region }}
-      api_id: ${{ steps.apply.outputs.api_id }}
-      api_stage: ${{ steps.apply.outputs.api_stage }}
-
     steps:
       - uses: actions/checkout@v2.1.1
 
@@ -59,10 +54,10 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Get OAS
-        run: ./.github/scripts/get-oas.sh ${{ needs.deploy.outputs.api_id }} ${{ needs.deploy.outputs.api_stage }} ${{ needs.deploy.outputs.region }}
+        run: ./.github/scripts/get-oas.sh ${{ secrets.API_ID }} ${{ secrets.API_STAGE }} ${{ secrets.AWS_REGION }}
 
       - uses: readmeio/github-readme-sync@2.0.0
         with:
