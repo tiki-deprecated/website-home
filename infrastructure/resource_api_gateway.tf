@@ -6,14 +6,14 @@ resource "aws_api_gateway_rest_api" "signup" {
   body = local.global_oas_file
 
   tags = {
-    Environment = local.global_tag_environment
-    Service     = local.global_tag_service
+    Environment = var.global_tag_environment
+    Service     = var.global_tag_service
   }
 }
 
 resource "aws_api_gateway_deployment" "signup" {
   rest_api_id = aws_api_gateway_rest_api.signup.id
-  stage_name  = lower(local.global_tag_environment)
+  stage_name  = lower(var.global_tag_environment)
 
   triggers = {
     oas_hash = md5(local.global_oas_file)

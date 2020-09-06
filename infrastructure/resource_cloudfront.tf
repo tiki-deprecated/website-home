@@ -1,5 +1,3 @@
-variable "aws_acm_arn" {}
-
 resource "aws_cloudfront_distribution" "website" {
   origin {
     domain_name = aws_s3_bucket.frontend.website_endpoint
@@ -24,7 +22,7 @@ resource "aws_cloudfront_distribution" "website" {
     prefix          = "CloudFront/"
   }
 
-  aliases = ["www.${local.global_website_domain}", local.global_website_domain]
+  aliases = ["www.${var.global_website_domain}", var.global_website_domain]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
@@ -54,12 +52,12 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   tags = {
-    Environment = local.global_tag_environment
-    Service     = local.global_tag_service
+    Environment = var.global_tag_environment
+    Service     = var.global_tag_service
   }
 
   viewer_certificate {
-    acm_certificate_arn      = var.aws_acm_arn
+    acm_certificate_arn      = aws_acm_certificate.ssl.arn
     minimum_protocol_version = "TLSv1.2_2019"
     ssl_support_method       = "sni-only"
   }

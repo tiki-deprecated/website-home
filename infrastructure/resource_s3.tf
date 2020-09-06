@@ -2,8 +2,8 @@ resource "aws_s3_bucket" "frontend" {
   bucket = local.global_bucket_frontend
 
   tags = {
-    Environment = local.global_tag_environment
-    Service     = local.global_tag_service
+    Environment = var.global_tag_environment
+    Service     = var.global_tag_service
   }
 
   website {
@@ -65,8 +65,8 @@ resource "aws_s3_bucket" "backend" {
   bucket = local.global_bucket_backend
 
   tags = {
-    Environment = local.global_tag_environment
-    Service     = local.global_tag_service
+    Environment = var.global_tag_environment
+    Service     = var.global_tag_service
   }
 
   server_side_encryption_configuration {

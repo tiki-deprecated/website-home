@@ -1,14 +1,13 @@
 variable "global_log_bucket" {}
 variable "global_dynamodb_table_name" {}
 variable "global_bucket_prefix" {}
+variable "global_tag_environment" { default = "Production" }
+variable "global_tag_service" { default = "Website" }
+variable "global_website_domain" { default = "mytiki.com" }
 
 locals {
-  global_tag_environment = "Production"
-  global_tag_service     = "Website"
-  global_website_domain  = "mytiki.com"
-
-  global_bucket_frontend = "${var.global_bucket_prefix}-frontend-${lower(local.global_tag_environment)}"
-  global_bucket_backend  = "${var.global_bucket_prefix}-backend-${lower(local.global_tag_environment)}"
+  global_bucket_frontend = "${var.global_bucket_prefix}-frontend-${lower(var.global_tag_environment)}"
+  global_bucket_backend  = "${var.global_bucket_prefix}-backend-${lower(var.global_tag_environment)}"
 
   global_functions_version      = file(local.global_functions_version_path)
   global_functions_version_pipe = replace(local.global_functions_version, ".", "-")
@@ -24,7 +23,7 @@ locals {
   global_oas_file = templatefile(local.global_oas_path,
     {
       lambda_arn   = aws_lambda_function.signup.invoke_arn,
-      env          = lower(local.global_tag_environment),
+      env          = lower(var.global_tag_environment),
       servers_url  = var.aws_api_gateway_servers_url,
       region       = var.aws_region,
       version      = local.global_api_version,

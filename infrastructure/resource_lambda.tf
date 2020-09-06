@@ -14,8 +14,8 @@ resource "aws_lambda_function" "signup" {
   runtime = "nodejs12.x"
 
   tags = {
-    Environment = local.global_tag_environment
-    Service     = local.global_tag_service
+    Environment = var.global_tag_environment
+    Service     = var.global_tag_service
   }
 
   environment {

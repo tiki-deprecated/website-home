@@ -4,8 +4,8 @@ resource "aws_cloudtrail" "website_object_log" {
   include_global_service_events = false
 
   tags = {
-    Environment = local.global_tag_environment
-    Service     = local.global_tag_service
+    Environment = var.global_tag_environment
+    Service     = var.global_tag_service
   }
 
   event_selector {
