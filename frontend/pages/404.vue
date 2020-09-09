@@ -3,7 +3,7 @@
     <div class="errorCode">404</div>
     <div class="errorCheekyText">You Outsmarted Us!</div>
     <nuxt-link to="/" class="errorLink">
-      <utils-svg-cmp class="errorHomeIcon" name="icon-hacky" />
+      <utils-svg-cmp class="errorHomeIcon" name="icon" />
       <div class="errorHomeText">Come Home</div>
     </nuxt-link>
   </div>

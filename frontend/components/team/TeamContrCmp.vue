@@ -1,25 +1,37 @@
 <template>
   <div class="teamContrCmpCnt">
     <div class="teamContrCmpHeading">Contributors</div>
-    <div class="teamContrCmpCol">
-      <div class="teamContrCmpCol1">
-        <team-member-simple-cmp
-          v-if="cms.one != null"
-          class="teamMemberSimpleCmp"
-          :cms="cms.one"
-        />
-      </div>
-      <div class="teamContrCmpCol2"></div>
+    <div class="teamContrCmpMembers">
+      <team-member-cmp
+        v-if="cms.one != null"
+        class="teamMemberCmp"
+        :cms="cms.one"
+      />
+      <team-member-cmp
+        v-if="cms.two != null"
+        class="teamMemberCmp"
+        :cms="cms.two"
+      />
+      <team-member-cmp
+        v-if="cms.three != null"
+        class="teamMemberCmp"
+        :cms="cms.three"
+      />
+      <team-member-cmp
+        v-if="cms.four != null"
+        class="teamMemberCmp"
+        :cms="cms.four"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import TeamMemberSimpleCmp from '~/components/team/TeamMemberSimpleCmp'
+import TeamMemberCmp from '~/components/team/TeamMemberCmp'
 
 export default {
   name: 'TeamContrCmp',
-  components: { TeamMemberSimpleCmp },
+  components: { TeamMemberCmp },
   props: {
     cms: {
       type: Object,
@@ -30,12 +42,6 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.teamContrCmpCol1
-  width: 45%
-
-.teamContrCmpCol2
-  width: 45%
-
 .teamContrCmpHeading
   color: $text
   font-size: large
@@ -44,7 +50,12 @@ export default {
   letter-spacing: 0.2ch
   margin-top: 1em
 
-.teamContrCmpCol
+.teamContrCmpMembers
   display: flex
-  justify-content: space-between
+  justify-content: space-around
+  flex-wrap: wrap
+
+.teamMemberCmp
+  width: 8em
+  margin-top: 1em
 </style>

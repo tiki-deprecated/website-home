@@ -5,6 +5,7 @@
         v-if="cms.title != null"
         :title="cms.title"
         :subtitle="cms.subtitle"
+        :extended="cms.extended"
         class="valuesHeadingCmp"
       />
       <UtilsSvgCmp
@@ -14,6 +15,7 @@
         :style="{ fill: `${cms.divider}` }"
       />
       <div class="valuesCmpValues">
+        <div class="valuesCmpValuesHeading">Values</div>
         <values-detail-cmp
           v-if="cms.values.one != null"
           :value="cms.values.one.value"
@@ -106,4 +108,12 @@ export default {
 
 ::v-deep .utilsSvgCmpTick.svg
   fill: $orange
+
+.valuesCmpValuesHeading
+  color: $text
+  width: fit-content
+  font-size: large
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: 0.2ch
 </style>

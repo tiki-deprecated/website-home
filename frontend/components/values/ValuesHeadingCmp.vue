@@ -4,6 +4,9 @@
     <div v-if="subtitle != null" class="valuesHeadingCmpSubtitle">
       {{ subtitle }}
     </div>
+    <div v-if="extended != null" class="valuesHeadingCmpExtended">
+      {{ extended }}
+    </div>
   </div>
 </template>
 
@@ -20,6 +23,11 @@ export default {
       required: false,
       default: null,
     },
+    extended: {
+      type: String,
+      required: false,
+      default: null,
+    },
   },
 }
 </script>
@@ -27,7 +35,6 @@ export default {
 <style scoped lang="sass">
 .valuesHeadingCmpCnt
   width: unset
-  margin-bottom: 1em
 
 .valuesHeadingCmpTitle
   color: $text
@@ -38,11 +45,14 @@ export default {
   text-transform: uppercase
   letter-spacing: 0.2ch
 
-.valuesHeadingCmpSubtitle
+.valuesHeadingCmpSubtitle, .valuesHeadingCmpExtended
   color: $text-light
   font-size: small
   word-break: break-word
   overflow: hidden
   font-weight: normal
   letter-spacing: 0.2ch
+
+.valuesHeadingCmpExtended
+  margin-top: 1.5em
 </style>

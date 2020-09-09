@@ -1,6 +1,6 @@
 header:
   logo: logo
-  icon: icon-hacky
+  icon: icon
   tick: '#EFB256'
 
 card:
@@ -9,7 +9,7 @@ card:
     subtitle: >-
               Your data is worth thousands. Why aren’t you getting your fair share? Take back control. Get paid.
               Tiki’s got your back.
-    youtube: 9rSBmOgpcDE
+    youtube: 824BHguQZ1E
     cta: Join the Revolution
     tick: '#4DAAE9'
 

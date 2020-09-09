@@ -1,13 +1,16 @@
 header:
   logo: logo
-  icon: icon-hacky
+  icon: icon
   tick: '#EFB256'
 
 values:
-  title: User First
-  subtitle: >-
-            It's your data. You should be in charge of it. Users always come first. Their trust earned or
-            lost every day.
+  title: Mission
+  subtitle: It’s your data. We’re giving you control of it.
+  extended: >-
+            We’re building a fair, user-centric, decentralized system giving users control of their data. It’s your
+            data, you deserve the right to see, control, and monetize it. Your data does not belong to corporations,
+            Tiki included! We build tools to protect users from exploit, greed, and carelessness. We build tools to
+            empower users.
   divider: '#AAAAAA'
   values:
     one:
@@ -40,78 +43,58 @@ values:
   tick: '#4DAAE9'
 
 team:
-  core:
+  contributors:
     one:
-      img: brian-gagnon.jpeg
-      name: Brian Gagnon
-      title: CEO + Founder
-      bio: >-
-           While Brian has spent most of his career in startups and leading large tech companies, he realized most of
-           the companies were focused on capturing user's data and providing very little to the users in return.
-           A Mainer through and through, you'd be as likely find him changing someone's tire on the side of the road
-           for them as you would staying up all night coding.
-      social:
-        linkedin: bmgagnon
-        medium:
-        twitter: BriVirtual
-      fact:
-        one:
-          num: 2
-          fact: "# of co. quit because they didn't actually promote diversity"
-        two:
-          num: 10
-          fact: "years ago \"cut the cord\""
-        three:
-          num: 7
-          fact: "years ago ditched Facebook"
-        four:
-          num: 11
-          fact: "# of credit cards cancelled due to fraudulent activity"
-    two:
       img: mike-audi.jpg
-      name: Mike Audi
-      title: CTO + Founder
-      bio: >-
-           Millennial and looks like it (aka belongs in a ’00s pop punk band). Annoyingly good at building things, a tad
-           crazy, and maybe a bit too type-a. Lover of coffee, hater of schedules; his sanity tied to dingy bars. We
-           can’t get him to stop talking about real transparency and no, not that bs buzzword thrown around Silicon Valley.
-      mantra: Don't be a dick
-      spotify: 6CLsY4z7bwWVDHf5mik1Ue
+      fname: Mike
+      lname: Audi
+      title: Founder
+      role: Architect
       social:
         linkedin: maudi
         medium: tikimike
         twitter: tiki_mike
-
-  contributors:
-    one:
-      img: bridget-shepherd.jpeg
-      fname: Bridget
-      lname: Shepherd
-      social:
-        linkedin: bridget-shepherd-52476588
-        medium:
-        twitter:
-
-  advisors:
-    one:
-      img: malinda-gagnon.jpeg
-      fname: Malinda
-      lname: Gagnon
-      social:
-        linkedin: malindagagnon
-        medium:
-        twitter: malinda_g
     two:
+      img: brian-gagnon.jpeg
+      fname: Brian
+      lname: Gagnon
+      title: Advisor
+      role: Data
+      social:
+        linkedin: bmgagnon
+        medium:
+        twitter: BriVirtual
+    three:
       img: ken-rapp.jpeg
       fname: Ken
       lname: Rapp
+      title: Advisor
+      role: Corporate
       social:
         linkedin: ken-rapp-b922766
         medium:
         twitter:
+    four:
+      img: malinda-gagnon.jpeg
+      fname: Malinda
+      lname: Gagnon
+      title: Advisor
+      role: Marketing
+      social:
+        linkedin: malindagagnon
+        medium:
+        twitter: malinda_g
 
-  tick1: '#539987'
-  tick2: '#D83831'
+  join:
+    text: Join Us
+    url: 'https://angel.co/company/mytiki/jobs'
+    local: false
+    style:
+      color:
+        background: '#f3a12c'
+        text:
+
+  tick: '#f3a12c'
 
 footer:
   copyright: © 2020 Tiki Inc
