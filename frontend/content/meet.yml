@@ -14,29 +14,29 @@ values:
   divider: '#AAAAAA'
   values:
     one:
-      value: transparency
+      highlight: transparency
       description: >-
                    helps build trust. Seeing is believing and nothing is off limits. No shadow bans or secret
                    algorithms at Tiki.
 
       color: '#539987'
     two:
-      value: community
+      highlight: community
       description: >-
                    is what connects us. Together, we're an unstoppable force. We expect better, we demand better.
       color: '#F3A12C'
     three:
-      value: diversity
+      highlight: diversity
       description: >-
                    is not optional within the walls of Tiki. We're here for our users; we represent our users.
       color: '#D83831'
     four:
-      value: sustainability
+      highlight: sustainability
       description: >-
                    comes before profit. We work tirelessly to bring lasting positive change to our users' lives.
       color: '#682F81'
     five:
-      value: reliability
+      highlight: reliability
       description: >-
                    is foundational to trust. We want our users to count on us and aim to never break that trust.
       color: '#2F5A81'
@@ -84,7 +84,6 @@ team:
         linkedin: malindagagnon
         medium:
         twitter: malinda_g
-
   join:
     text: Join Us
     url: 'https://angel.co/company/mytiki/jobs'
@@ -93,7 +92,6 @@ team:
       color:
         background: '#f3a12c'
         text:
-
   tick: '#f3a12c'
 
 footer:

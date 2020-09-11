@@ -6,9 +6,9 @@
         :cms="cms.contributors"
         class="teamContrCmp"
       />
-      <CardButtonHCmp
+      <UtilsButtonHCmp
         v-if="cms.join != null"
-        class="cardButtonHCmp"
+        class="utilsButtonHCmp"
         :cms="cms.join"
       />
     </div>
@@ -24,11 +24,11 @@
 <script>
 import TeamContrCmp from '~/components/team/TeamContrCmp'
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
-import CardButtonHCmp from '~/components/card/CardButtonHCmp'
+import UtilsButtonHCmp from '~/components/utils/UtilsButtonHCmp'
 
 export default {
   name: 'TeamCmp',
-  components: { TeamContrCmp, UtilsSvgCmp, CardButtonHCmp },
+  components: { TeamContrCmp, UtilsSvgCmp, UtilsButtonHCmp },
   props: {
     cms: {
       type: Object,
@@ -43,7 +43,7 @@ export default {
   padding: 1em
 
 .utilsSvgCmpTick
-  margin-top: 1.25em
+  margin-top: 2em
   width: 5.5em
   margin-left: 0
   margin-right: auto
@@ -51,6 +51,6 @@ export default {
 ::v-deep .utilsSvgCmpTick.svg
   fill: $red
 
-.cardButtonHCmp
+.utilsButtonHCmp
   margin-top: 3em
 </style>

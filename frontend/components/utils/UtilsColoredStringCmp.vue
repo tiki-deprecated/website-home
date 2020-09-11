@@ -1,7 +1,7 @@
 <template>
-  <div class="valuesDetailCmpCnt">
-    <b class="valuesDetailCmpBold" :style="{ color: `${color}` }">
-      {{ value }}
+  <div class="utilsColoredStringCmpCnt">
+    <b class="utilsColoredStringCmpBold" :style="{ color: `${color}` }">
+      {{ highlight }}
     </b>
     {{ desc }}
   </div>
@@ -9,9 +9,9 @@
 
 <script>
 export default {
-  name: 'ValuesDetailCmp',
+  name: 'UtilsColoredStringCmp',
   props: {
-    value: {
+    highlight: {
       type: String,
       required: true,
     },
@@ -28,18 +28,16 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.valuesDetailCmpCnt
+.utilsColoredStringCmpCnt
   color: $text-light
-  font-size: small
   font-weight: normal
   letter-spacing: 0.2ch
   word-break: break-word
   overflow: hidden
   text-align: justify
 
-.valuesDetailCmpBold
+.utilsColoredStringCmpBold
   color: $blue
-  font-size: small
   font-weight: bold
   text-transform: uppercase
   letter-spacing: 0.2ch

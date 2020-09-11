@@ -1,9 +1,9 @@
 <template>
   <div class="teamMemberCmpCnt">
-    <team-avatar-cmp
+    <utils-avatar-cmp
       v-if="cms.img != null"
       :name="cms.img"
-      class="teamAvatarCmp"
+      class="utilsAvatarCmp"
     />
     <div class="teamMemberCmpName">
       <div v-if="cms.fname" class="teamMemberCmpFname">{{ cms.fname }}</div>
@@ -40,12 +40,12 @@
 </template>
 
 <script>
-import TeamAvatarCmp from '~/components/team/TeamAvatarCmp'
+import UtilsAvatarCmp from '~/components/utils/UtilsAvatarCmp'
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
 
 export default {
   name: 'TeamMemberCmp',
-  components: { TeamAvatarCmp, UtilsSvgCmp },
+  components: { UtilsAvatarCmp, UtilsSvgCmp },
   props: {
     cms: {
       type: Object,
@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.teamAvatarCmp
+.utilsAvatarCmp
   width: 6em
   margin: 2em auto 0 auto
 

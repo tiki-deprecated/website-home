@@ -1,18 +1,15 @@
 <template>
-  <div class="valuesHeadingCmpCnt">
-    <div class="valuesHeadingCmpTitle">{{ title }}</div>
-    <div v-if="subtitle != null" class="valuesHeadingCmpSubtitle">
+  <div class="utilsTitleSubtitleCmpCnt">
+    <div class="utilsTitleSubtitleCmpTitle">{{ title }}</div>
+    <div v-if="subtitle != null" class="utilsTitleSubtitleCmpSubtitle">
       {{ subtitle }}
-    </div>
-    <div v-if="extended != null" class="valuesHeadingCmpExtended">
-      {{ extended }}
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ValuesHeadingCmp',
+  name: 'UtilsTitleSubtitleCmp',
   props: {
     title: {
       type: String,
@@ -23,20 +20,16 @@ export default {
       required: false,
       default: null,
     },
-    extended: {
-      type: String,
-      required: false,
-      default: null,
-    },
   },
 }
 </script>
 
 <style scoped lang="sass">
-.valuesHeadingCmpCnt
+.utilsTitleSubtitleCmpCnt
   width: unset
+  margin-bottom: 1em
 
-.valuesHeadingCmpTitle
+.utilsTitleSubtitleCmpTitle
   color: $text
   width: fit-content
   font-size: large
@@ -45,14 +38,11 @@ export default {
   text-transform: uppercase
   letter-spacing: 0.2ch
 
-.valuesHeadingCmpSubtitle, .valuesHeadingCmpExtended
+.utilsTitleSubtitleCmpSubtitle
   color: $text-light
   font-size: small
   word-break: break-word
   overflow: hidden
   font-weight: normal
   letter-spacing: 0.2ch
-
-.valuesHeadingCmpExtended
-  margin-top: 1.5em
 </style>

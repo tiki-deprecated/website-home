@@ -1,12 +1,12 @@
 <template>
-  <div class="teamAvatarCmpCnt">
-    <img :src="src" :alt="name" class="teamAvatarCmpImg" />
+  <div class="utilsAvatarCmpCnt">
+    <img :src="src" :alt="name" class="utilsAvatarCmpImg" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TeamAvatarCmp',
+  name: 'UtilsAvatarCmp',
   props: {
     name: {
       type: String,
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.teamAvatarCmpImg
+.utilsAvatarCmpImg
   border-radius: 50%
   max-width: 100%
   max-height: 100%

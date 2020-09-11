@@ -1,13 +1,13 @@
 <template>
   <div>
-    <a :href="cms.url" class="cardButtonVCmpLink">
-      <div class="cardButtonVCmpButton">
+    <a :href="cms.url" class="utilsButtonVCmpLink">
+      <div class="utilsButtonVCmpButton">
         <utils-svg-cmp
           v-if="cms.icon != null"
           :name="cms.icon"
-          class="cardButtonVCmpIcon"
+          class="utilsButtonVCmpIcon"
         />
-        <div v-if="cms.text != null" class="cardButtonVCmpText">
+        <div v-if="cms.text != null" class="utilsButtonVCmpText">
           {{ cms.text }}
         </div>
       </div>
@@ -19,7 +19,7 @@
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp.vue'
 
 export default {
-  name: 'CardButtonVCmp',
+  name: 'UtilsButtonVCmp',
   components: { UtilsSvgCmp },
   props: {
     cms: {
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.cardButtonVCmpLink
+.utilsButtonVCmpLink
   text-decoration: none
   -webkit-touch-callout: none
   -webkit-user-select: none
@@ -41,14 +41,14 @@ export default {
   user-select: none
   -webkit-tap-highlight-color: transparent
 
-.cardButtonVCmpLink:focus
+.utilsButtonVCmpLink:focus
   outline: none !important
 
-.cardButtonVCmpIcon
+.utilsButtonVCmpIcon
   height: 2.25em
   margin: auto
 
-.cardButtonVCmpText
+.utilsButtonVCmpText
   font-size: x-small
   color: $text-light
   text-align: center

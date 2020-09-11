@@ -1,23 +1,23 @@
 <template>
-  <div class="cardSignupCmpCnt">
-    <div class="cardSignupCmpTitle">{{ title }}</div>
-    <div class="cardSignupCmpFormWrapper">
+  <div class="utilsSignupCmpCnt">
+    <div class="utilsSignupCmpTitle">{{ title }}</div>
+    <div class="utilsSignupCmpFormWrapper">
       <form
         v-if="submitted == null"
-        class="cardSignupCmpForm"
-        @submit.stop.prevent="cardSignupCmpSubmit"
+        class="utilsSignupCmpForm"
+        @submit.stop.prevent="utilsSignupCmpSubmit"
       >
         <input
-          class="cardSignupCmpInput"
+          class="utilsSignupCmpInput"
           name="email"
           type="email"
           placeholder="user@email.com"
           required
         />
       </form>
-      <div v-if="submitted != null" class="cardSignupCmpSubmitted">
-        <utils-svg-cmp name="check" class="cardSignupCmpSubmittedIcon" />
-        <div class="cardSignupCmpSubmittedText">{{ submitted }}</div>
+      <div v-if="submitted != null" class="utilsSignupCmpSubmitted">
+        <utils-svg-cmp name="check" class="utilsSignupCmpSubmittedIcon" />
+        <div class="utilsSignupCmpSubmittedText">{{ submitted }}</div>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp.vue'
 
 export default {
-  name: 'CardSignupCmp',
+  name: 'UtilsSignupCmp',
   components: { UtilsSvgCmp },
   props: {
     title: {
@@ -47,7 +47,7 @@ export default {
     }
   },
   methods: {
-    async cardSignupCmpSubmit(submitEvent) {
+    async utilsSignupCmpSubmit(submitEvent) {
       submitEvent.preventDefault()
 
       const parent = this
@@ -73,7 +73,7 @@ export default {
         )
         .then(function (e) {
           parent.submitted = submitEvent.target.elements.email.value
-          parent.$emit('cardSignupCmpSubmit')
+          parent.$emit('utilsSignupCmpSubmit')
         })
         .catch(function (e) {
           parent.submitError = 'Uh oh. Double check your info and try again?'
@@ -84,11 +84,11 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.cardSignupCmpCnt
+.utilsSignupCmpCnt
   width: 100%
   text-align: center
 
-.cardSignupCmpTitle
+.utilsSignupCmpTitle
   font-size: large
   margin-bottom: 1.5em
   font-weight: bold
@@ -97,14 +97,14 @@ export default {
   text-transform: uppercase
   color: $text
 
-.cardSignupCmpFormWrapper
+.utilsSignupCmpFormWrapper
   display: inline-block
   width: 75%
 
-.cardSignupCmpForm, .cardSignupCmpInput
+.utilsSignupCmpForm, .utilsSignupCmpInput
   width: 100%
 
-.cardSignupCmpInput
+.utilsSignupCmpInput
   height: 2.5em
   text-align: center
   border: 0.1em solid rgba($blue, 0.25)
@@ -115,17 +115,17 @@ export default {
   font-size: small
   text-transform: lowercase
 
-.cardSignupCmpInput:focus
+.utilsSignupCmpInput:focus
   outline: none
   border: 0.1em solid rgba($orange, 0.25)
   box-shadow: 0 0 0.25em rgba($orange, 0.5)
   height: 2.5em
 
-.cardSignupCmpInput::placeholder
+.utilsSignupCmpInput::placeholder
   font-family: $font-family
   color: $grey
 
-.cardSignupCmpSubmitted
+.utilsSignupCmpSubmitted
   height: 2.5em
   background-color: $blue
   border: 0.1em solid $blue
@@ -138,14 +138,14 @@ export default {
   width: 100%
   font-size: small
 
-.cardSignupCmpSubmittedIcon
+.utilsSignupCmpSubmittedIcon
   width: 1.2em
   margin: 0 0.5em
 
-::v-deep .cardSignupCmpSubmittedIcon.svg
+::v-deep .utilsSignupCmpSubmittedIcon.svg
   fill: $white
 
-.cardSignupCmpSubmittedText
+.utilsSignupCmpSubmittedText
   color: $white
   letter-spacing: 0.2ch
   margin-right: 0.5em

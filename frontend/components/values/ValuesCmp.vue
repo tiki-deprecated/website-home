@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="valuesCmpCnt">
-      <values-heading-cmp
+      <utils-title-subtitle-extended-cmp
         v-if="cms.title != null"
         :title="cms.title"
         :subtitle="cms.subtitle"
         :extended="cms.extended"
-        class="valuesHeadingCmp"
+        class="utilsTitleSubtitleExtendedCmp"
       />
       <UtilsSvgCmp
         v-if="cms.divider != null"
@@ -16,40 +16,40 @@
       />
       <div class="valuesCmpValues">
         <div class="valuesCmpValuesHeading">Values</div>
-        <values-detail-cmp
+        <utils-colored-string-cmp
           v-if="cms.values.one != null"
-          :value="cms.values.one.value"
+          :highlight="cms.values.one.highlight"
           :desc="cms.values.one.description"
           :color="cms.values.one.color"
-          class="valuesDetailCmp"
+          class="utilsColoredStringCmp"
         />
-        <values-detail-cmp
+        <utils-colored-string-cmp
           v-if="cms.values.two != null"
-          :value="cms.values.two.value"
+          :highlight="cms.values.two.highlight"
           :desc="cms.values.two.description"
           :color="cms.values.two.color"
-          class="valuesDetailCmp"
+          class="utilsColoredStringCmp"
         />
-        <values-detail-cmp
+        <utils-colored-string-cmp
           v-if="cms.values.three != null"
-          :value="cms.values.three.value"
+          :highlight="cms.values.three.highlight"
           :desc="cms.values.three.description"
           :color="cms.values.three.color"
-          class="valuesDetailCmp"
+          class="utilsColoredStringCmp"
         />
-        <values-detail-cmp
+        <utils-colored-string-cmp
           v-if="cms.values.four != null"
-          :value="cms.values.four.value"
+          :highlight="cms.values.four.highlight"
           :desc="cms.values.four.description"
           :color="cms.values.four.color"
-          class="valuesDetailCmp"
+          class="utilsColoredStringCmp"
         />
-        <values-detail-cmp
+        <utils-colored-string-cmp
           v-if="cms.values.five != null"
-          :value="cms.values.five.value"
+          :highlight="cms.values.five.highlight"
           :desc="cms.values.five.description"
           :color="cms.values.five.color"
-          class="valuesDetailCmp"
+          class="utilsColoredStringCmp"
         />
       </div>
     </div>
@@ -63,13 +63,17 @@
 </template>
 
 <script>
-import ValuesHeadingCmp from '~/components/values/ValuesHeadingCmp'
+import UtilsTitleSubtitleExtendedCmp from '~/components/utils/UtilsTitleSubtitleExtendedCmp'
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
-import ValuesDetailCmp from '~/components/values/ValuesDetailCmp'
+import UtilsColoredStringCmp from '~/components/utils/UtilsColoredStringCmp'
 
 export default {
   name: 'ValuesCmp',
-  components: { ValuesHeadingCmp, ValuesDetailCmp, UtilsSvgCmp },
+  components: {
+    UtilsTitleSubtitleExtendedCmp,
+    UtilsColoredStringCmp,
+    UtilsSvgCmp,
+  },
   props: {
     cms: {
       type: Object,
@@ -83,12 +87,12 @@ export default {
 .valuesCmpCnt
   padding: 1em
 
-.valuesHeadingCmp
+.utilsTitleSubtitleExtendedCmp
   margin-top: 1em
 
 .utilsSvgCmpDivider
   width: 4em
-  margin: 1.5em auto 0 auto
+  margin: 2em auto 0 auto
 
 .utilsSvgCmpDivider.svg
   fill: $grey
@@ -96,8 +100,9 @@ export default {
 .valuesCmpValues
   margin-top: 1.5em
 
-.valuesDetailCmp
+.utilsColoredStringCmp
   margin-top: 1.5em
+  font-size: small
 
 .utilsSvgCmpTick
   margin-top: 1.25em

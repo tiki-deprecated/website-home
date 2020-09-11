@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style scoped lang="sass">
+.footerCmpCnt
+  margin-top: 1em
+
 .footerCmpCopyright
   color: $text
   font-size: smaller

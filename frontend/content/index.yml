@@ -3,101 +3,79 @@ header:
   icon: icon
   tick: '#EFB256'
 
-card:
-  user:
-    title: It’s YOUR Data
-    subtitle: >-
-              Your data is worth thousands. Why aren’t you getting your fair share? Take back control. Get paid.
-              Tiki’s got your back.
-    youtube: 824BHguQZ1E
-    cta: Join the Revolution
-    tick: '#4DAAE9'
+join:
+  title: It’s YOUR Data
+  subtitle: >-
+            Your data is worth thousands. Why aren’t you getting your fair share? Take back control. Get paid.
+            Tiki’s got your back.
+  youtube: 824BHguQZ1E
+  cta: Join the Revolution
+  tick: '#4DAAE9'
 
-  buyer:
-    title: Buy Data Access
+learn:
+  title: Learn More
+  subtitle: >-
+            We believe users deserve to be in control of their data.
+  meet:
+    text: Meet Tiki
+    url: 'meet'
+    local: true
+    style:
+      color:
+        background: '#f3a12c'
+        text:
+  join:
+    text: Join Us
+    url: 'https://angel.co/company/mytiki/jobs'
+    local: false
+    style:
+      color:
+        background: '#f3a12c'
+        text:
+  follow:
+    title: Follow Along
     subtitle: >-
-              Get access to the unique data your business needs, ethically. Stop wasting time and money buying messy
-              user data in bulk. Get only what you need, straight from the source.
-    story:
-      heading: Use Cases
+              We’re all users and in it together. No secrets, real transparency. Follow us, tweet us, hit us up.
+              Together we're a revolution.
+    button:
       one:
-        text: 'See Competitor Data'
-        url: 'https://mytiki.com/use-case/compete'
-        local: false
-        style:
-          color:
-            background: '#539987'
-            text:
+        icon: medium
+        url: 'https://medium.com'
+        text:
       two:
-        text: 'Attack Churn in Realtime'
-        url: 'https://mytiki.com/use-case/churn'
-        local: false
-        style:
-          color:
-            background: '#539987'
-            text:
+        icon: instagram
+        url: 'https://instagram.com'
+        text:
       three:
-        text: 'Actually Good Cross-sells'
-        url: 'https://mytiki.com/use-case/sales'
-        local: false
-        style:
-          color:
-            background: '#539987'
-            text:
-    cta: Join the Waitlist
-    tick: '#539987'
+        icon: twitter
+        url: 'https://twitter.com'
+        text:
+      four:
+        icon: github
+        url: 'https://github.com/tiki'
+        text:
+  tick: '#D83831'
 
-  learn:
-    title: Learn More
-    subtitle: >-
-              We believe users deserve to be in control of their data.
-    meet:
-      text: Meet Tiki
-      url: 'meet'
-      local: true
-      style:
-        color:
-          background: '#f3a12c'
-          text:
-    join:
-      text: Join Us
-      url: 'https://angel.co/company/mytiki/jobs'
-      local: false
-      style:
-        color:
-          background: '#f3a12c'
-          text:
-    follow:
-      title: Follow Along
-      subtitle: >-
-                We’re all users and in it together. No secrets, real transparency. Follow us, tweet us, hit us up.
-                Together we're a revolution.
-      button:
-        one:
-          icon: medium
-          url: 'https://medium.com'
-          text:
-        two:
-          icon: instagram
-          url: 'https://instagram.com'
-          text:
-        three:
-          icon: twitter
-          url: 'https://twitter.com'
-          text:
-    tech:
-      title: Get Technical
-      subtitle:
-      button:
-        one:
-          icon: github
-          url: 'https://github.com/tiki'
-          text: code
-        two:
-          icon: canny
-          url: 'https://tiki.canny.io'
-          text: roadmap
-    tick: '#D83831'
+product:
+  title: We're Building
+  features:
+    one:
+      highlight: 1. See
+      description: >-
+                   what data companies are collecting on you. Not in some garbled techy way, but actually see your data.
+      color: '#4DAAE9'
+    two:
+      highlight: 2. Control
+      description: >-
+                   who has access to your data and for what purpose. It’s your decision.
+      color: '#F3A12C'
+    three:
+      highlight: 3. Monetize
+      description: >-
+                   it. Get paid your fair share for granting buyers access to your data. No longer it sold, traded, or exploited
+                   without your consent and compensation.
+      color: '#539987'
+  tick: '#539987'
 
 footer:
   copyright: © 2020 Tiki Inc

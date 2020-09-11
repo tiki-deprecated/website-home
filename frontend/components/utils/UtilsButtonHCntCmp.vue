@@ -1,20 +1,20 @@
 <template>
   <div
-    class="cardButtonHCmpButton"
+    class="utilsButtonHCmpButton"
     :style="{
       'background-color': `${cms.style.color.background}`,
       'box-shadow': `0 0 .5em ${cms.style.color.background}0f`,
     }"
   >
     <div
-      class="cardButtonHCmpText"
+      class="utilsButtonHCmpText"
       :style="{ color: `${cms.style.color.text}` }"
     >
       {{ cms.text }}
     </div>
     <utils-svg-cmp
       name="right-arrow"
-      class="cardButtonHCmpArrow"
+      class="utilsButtonHCmpArrow"
       :style="{ fill: `${cms.style.color.text}` }"
     />
   </div>
@@ -24,7 +24,7 @@
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp.vue'
 
 export default {
-  name: 'CardButtonHCntCmp',
+  name: 'UtilsButtonHCntCmp',
   components: { UtilsSvgCmp },
   props: {
     cms: {
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.cardButtonHCmpButton
+.utilsButtonHCmpButton
   background-color: $blue
   height: 2.5em
   color: $white
@@ -46,7 +46,7 @@ export default {
   box-shadow: 0 0 .5em rgba($blue, 0.05)
   width: 100%
 
-.cardButtonHCmpText
+.utilsButtonHCmpText
   width: fit-content
   font-size: small
   margin-left: 0.5em
@@ -57,7 +57,7 @@ export default {
   overflow: hidden
   padding-bottom: 0.3em
 
-::v-deep .cardButtonHCmpArrow.svg
+::v-deep .utilsButtonHCmpArrow.svg
   fill: $white
   width: 1em
   margin-right: 0.5em

@@ -1,19 +1,19 @@
 <template>
-  <div class="cardVideoCmpCnt">
+  <div class="utilsVideoCmpCnt">
     <iframe
       width="560"
       height="315"
       :src="'https://www.youtube.com/embed/' + id"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
-      class="cardVideoCmpIframe"
+      class="utilsVideoCmpIframe"
     />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CardVideoCmp',
+  name: 'UtilsVideoCmp',
   props: {
     id: {
       type: String,
@@ -24,15 +24,15 @@ export default {
 </script>
 
 <style scoped lang="sass">
-@import "assets/styles/mixins"
+@import "../../assets/styles/mixins"
 
-.cardVideoCmpCnt
+.utilsVideoCmpCnt
   overflow: hidden
   padding-bottom: 56.25%
   position: relative
   height: 0
 
-.cardVideoCmpCnt .cardVideoCmpIframe
+.utilsVideoCmpCnt .utilsVideoCmpIframe
   left: 0
   top: 0
   height: 100%

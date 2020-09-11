@@ -3,22 +3,22 @@
     <nuxt-link
       v-if="cms.local === true"
       :to="cms.url"
-      class="cardButtonHCmpLink"
+      class="utilsButtonHCmpLink"
     >
-      <card-button-h-cnt-cmp :cms="cms" />
+      <utils-button-h-cnt-cmp :cms="cms" />
     </nuxt-link>
-    <a v-if="cms.local !== true" :href="cms.url" class="cardButtonHCmpLink">
-      <card-button-h-cnt-cmp :cms="cms" />
+    <a v-if="cms.local !== true" :href="cms.url" class="utilsButtonHCmpLink">
+      <utils-button-h-cnt-cmp :cms="cms" />
     </a>
   </div>
 </template>
 
 <script>
-import CardButtonHCntCmp from '~/components/card/CardButtonHCntCmp.vue'
+import UtilsButtonHCntCmp from '~/components/utils/UtilsButtonHCntCmp.vue'
 
 export default {
-  name: 'CardButtonHCmp',
-  components: { CardButtonHCntCmp },
+  name: 'UtilsButtonHCmp',
+  components: { UtilsButtonHCntCmp },
   props: {
     cms: {
       type: Object,
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.cardButtonHCmpLink
+.utilsButtonHCmpLink
   text-decoration: none
   -webkit-touch-callout: none
   -webkit-user-select: none
@@ -39,6 +39,6 @@ export default {
   user-select: none
   -webkit-tap-highlight-color: transparent
 
-.cardButtonHCmpLink:focus
+.utilsButtonHCmpLink:focus
   outline: none !important
 </style>
