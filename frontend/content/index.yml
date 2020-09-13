@@ -10,6 +10,10 @@ join:
             Tiki’s got your back.
   youtube: 824BHguQZ1E
   cta: Join the Revolution
+  disclaimer:
+    text: No marketing spam ever. Never shared. Never sold.
+    github: 'https://github.com/tiki'
+    privacy: '/privacy'
   tick: '#4DAAE9'
 
 learn:

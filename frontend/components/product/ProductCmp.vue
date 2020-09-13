@@ -59,15 +59,15 @@ export default {
   padding: 1em 1em
 
 .productTitleCmp
-  margin-bottom: 2em
+  margin-top: 1em
 
 .productCmpTick
-  margin-top: 1.25em
+  margin-top: 2.25em
   width: 5.5em
 
 .utilsColoredStringCmp
-  margin-top: 2em
-  font-size: normal
+  margin-top: 2.5em
+  font-size: medium
 
 ::v-deep .productCmpTick.svg
   fill: $green-dark

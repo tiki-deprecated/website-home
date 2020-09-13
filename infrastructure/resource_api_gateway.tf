@@ -1,5 +1,10 @@
 variable "aws_api_gateway_servers_url" { default = "" }
 
+resource "aws_api_gateway_domain_name" "api" {
+  certificate_arn = aws_acm_certificate_validation.acm_validate.certificate_arn
+  domain_name     = "api.${data.aws_route53_zone.website.name}"
+}
+
 resource "aws_api_gateway_rest_api" "signup" {
   name = "Signup"
 
@@ -18,6 +23,12 @@ resource "aws_api_gateway_deployment" "signup" {
   triggers = {
     oas_hash = md5(local.global_oas_file)
   }
+}
+
+resource "aws_api_gateway_base_path_mapping" "signup" {
+  api_id      = aws_api_gateway_rest_api.signup.id
+  stage_name  = aws_api_gateway_deployment.signup.stage_name
+  domain_name = aws_api_gateway_domain_name.api.domain_name
 }
 
 output "api_url" {

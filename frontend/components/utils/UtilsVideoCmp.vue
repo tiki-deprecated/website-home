@@ -39,4 +39,5 @@ export default {
   width: 100%
   position: absolute
   border: none
+  clip-path: inset(1px 1px)
 </style>

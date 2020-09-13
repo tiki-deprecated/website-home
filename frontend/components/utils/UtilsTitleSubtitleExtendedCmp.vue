@@ -40,10 +40,11 @@ export default {
 <style scoped lang="sass">
 .utilsTitleSubtitleExtendedCmpExtended
   color: $text-light
-  font-size: small
+  font-size: medium
   word-break: break-word
   overflow: hidden
   font-weight: normal
   letter-spacing: 0.2ch
   margin-top: 1.5em
+  text-align: justify
 </style>

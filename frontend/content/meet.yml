@@ -84,6 +84,16 @@ team:
         linkedin: malindagagnon
         medium:
         twitter: malinda_g
+    five:
+      img: jon-morgan.jpeg
+      fname: Jon
+      lname: Morgan
+      title: Advisor
+      role: Product
+      social:
+        linkedin: jonmorganpm
+        medium:
+        twitter: jonmorganpm
   join:
     text: Join Us
     url: 'https://angel.co/company/mytiki/jobs'

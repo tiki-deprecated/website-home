@@ -15,6 +15,7 @@
       <utils-signup-cmp
         v-if="cms.cta != null"
         :title="cms.cta"
+        :disclaimer="cms.disclaimer"
         class="utilsSignupCmp"
         @utilsSignupCmpSubmit="utilsSignupCmpSubmit"
       />
@@ -29,10 +30,10 @@
 </template>
 
 <script>
-import UtilsTitleSubtitleCmp from '@/components/utils/UtilsTitleSubtitleCmp'
-import UtilsVideoCmp from '@/components/utils/UtilsVideoCmp'
-import UtilsSignupCmp from '@/components/utils/UtilsSignupCmp'
-import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import UtilsTitleSubtitleCmp from '~/components/utils/UtilsTitleSubtitleCmp'
+import UtilsVideoCmp from '~/components/utils/UtilsVideoCmp'
+import UtilsSignupCmp from '~/components/utils/UtilsSignupCmp'
+import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
 
 export default {
   name: 'JoinCmp',
@@ -60,14 +61,14 @@ export default {
 .joinCmpCnt
   padding: 1em 1em
 
-.utilsTitleSubtitleCmp
-  margin-bottom: 2em
+.utilsSignupCmp
+  margin-top: 3em
 
 .utilsVidCmp
-  margin-bottom: 2em
+  margin-top: 3em
 
 .joinCmpTick
-  margin-top: 1.25em
+  margin-top: 2.25em
   width: 5.5em
   transform: rotate(180deg)
   margin-right: 0

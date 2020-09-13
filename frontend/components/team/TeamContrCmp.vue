@@ -22,6 +22,11 @@
         class="teamMemberCmp"
         :cms="cms.four"
       />
+      <team-member-cmp
+        v-if="cms.five != null"
+        class="teamMemberCmp"
+        :cms="cms.five"
+      />
     </div>
   </div>
 </template>
@@ -57,5 +62,5 @@ export default {
 
 .teamMemberCmp
   width: 8em
-  margin-top: 1em
+  margin: 1em 0
 </style>

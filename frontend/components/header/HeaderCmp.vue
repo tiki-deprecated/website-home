@@ -1,16 +1,20 @@
 <template>
   <div>
     <div class="headerCmpCnt">
-      <utils-svg-cmp
-        v-if="cms.logo != null"
-        :name="cms.logo"
-        class="utilsSvgCmp headerCmpLogo"
-      />
-      <utils-svg-cmp
-        v-if="cms.icon != null"
-        :name="cms.icon"
-        class="utilsSvgCmp headerCmpIcon"
-      />
+      <nuxt-link to="/">
+        <utils-svg-cmp
+          v-if="cms.logo != null"
+          :name="cms.logo"
+          class="utilsSvgCmp headerCmpLogo"
+        />
+      </nuxt-link>
+      <nuxt-link to="/">
+        <utils-svg-cmp
+          v-if="cms.icon != null"
+          :name="cms.icon"
+          class="utilsSvgCmp headerCmpIcon"
+        />
+      </nuxt-link>
     </div>
     <utils-svg-cmp
       v-if="cms.tick != null"

@@ -34,6 +34,9 @@ export default {
   width: 100%
   position: relative
 
+.teamCmp
+  margin-top: 1em
+
 @include for-tablet
   .meetPage
     max-width: 60%

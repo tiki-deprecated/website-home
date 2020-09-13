@@ -82,20 +82,25 @@ export default {
 .learnCmpCnt
   padding: 1em 1em
 
-.utilsTitleSubtitleCmp, .utilsTitleSubtitleCmpFollow
-  margin-bottom: 1.5em
+.utilsTitleSubtitleCmp
+  margin-top: 1em
+
+.utilsTitleSubtitleCmpFollow
+  margin-top: 3em
 
 .learnCmpFollowButtons
   display: flex
+  margin-top: 2em
+  justify-content: center
 
 .utilsButtonVCmp
   margin-right: 1.5em
 
 .utilsButtonHCmpMeet
-  margin-bottom: 1em
+  margin-top: 2.5em
 
 .utilsButtonHCmpJoin
-  margin-bottom: 2em
+  margin-top: 1em
 
 .learnCmpTick
   margin-top: 2em

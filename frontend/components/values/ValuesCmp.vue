@@ -92,20 +92,20 @@ export default {
 
 .utilsSvgCmpDivider
   width: 4em
-  margin: 2em auto 0 auto
+  margin: 3em auto 0 auto
 
 .utilsSvgCmpDivider.svg
   fill: $grey
 
 .valuesCmpValues
-  margin-top: 1.5em
+  margin-top: 3em
 
 .utilsColoredStringCmp
-  margin-top: 1.5em
-  font-size: small
+  margin-top: 2em
+  font-size: medium
 
 .utilsSvgCmpTick
-  margin-top: 1.25em
+  margin-top: 2.25em
   width: 5.5em
   transform: rotate(180deg)
   margin-right: 0

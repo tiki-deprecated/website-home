@@ -27,7 +27,6 @@ export default {
 <style scoped lang="sass">
 .utilsTitleSubtitleCmpCnt
   width: unset
-  margin-bottom: 1em
 
 .utilsTitleSubtitleCmpTitle
   color: $text
@@ -40,9 +39,11 @@ export default {
 
 .utilsTitleSubtitleCmpSubtitle
   color: $text-light
-  font-size: small
+  font-size: medium
   word-break: break-word
   overflow: hidden
   font-weight: normal
   letter-spacing: 0.2ch
+  text-align: justify
+  margin-top: 0.5em
 </style>
