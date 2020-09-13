@@ -6,12 +6,7 @@
   },
   "servers": [
     {
-      "url": "${servers_url}",
-      "variables": {
-        "basePath": {
-          "default": "${env}"
-        }
-      }
+      "url": "${servers_url}"
     }
   ],
   "components": {

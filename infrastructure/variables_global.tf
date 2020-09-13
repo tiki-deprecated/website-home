@@ -23,8 +23,7 @@ locals {
   global_oas_file = templatefile(local.global_oas_path,
     {
       lambda_arn   = aws_lambda_function.signup.invoke_arn,
-      env          = lower(var.global_tag_environment),
-      servers_url  = var.aws_api_gateway_servers_url,
+      servers_url  = "api.${var.global_website_domain}",
       region       = var.aws_region,
       version      = local.global_api_version,
       version_pipe = local.global_api_version_pipe
