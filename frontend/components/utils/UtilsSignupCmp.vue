@@ -141,7 +141,7 @@ export default {
           this.apiVersion +
           '/signup/' +
           (this.isUser ? 'user' : 'buyer')
-        
+
         // eslint-disable-next-line no-unused-vars
         const res = await this.$axios
           .$post(
