@@ -30,8 +30,23 @@ exports.handler = function (event, context, callback) {
     },
     function (err, data) {
       console.log(err)
-      if (err) callback(null, { statusCode: '500', body: err })
-      else callback(null, { statusCode: '200' })
+      if (err) callback(null, {
+        statusCode: '500',
+        headers: {
+          "Access-Control-Allow-Headers" : "Content-Type",
+          "Access-Control-Allow-Origin": "https://mytiki.com, https://www.mytiki.com",
+          "Access-Control-Allow-Methods": "OPTIONS,POST"
+        },
+        body: err
+      })
+      else callback(null, {
+        statusCode: '200',
+        headers: {
+          "Access-Control-Allow-Headers" : "Content-Type",
+          "Access-Control-Allow-Origin": "https://mytiki.com, https://www.mytiki.com",
+          "Access-Control-Allow-Methods": "OPTIONS,POST"
+        }
+      })
     }
   )
 }
