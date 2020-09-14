@@ -141,7 +141,7 @@ export default {
           this.apiVersion +
           '/signup/' +
           (this.isUser ? 'user' : 'buyer')
-
+        
         // eslint-disable-next-line no-unused-vars
         const res = await this.$axios
           .$post(
@@ -159,7 +159,7 @@ export default {
             }
           )
           .then(function (e) {
-            parent.submitted = this.ready
+            parent.submitted = parent.ready
             parent.isError = false
             parent.$emit('utilsSignupCmpSubmit')
           })
@@ -176,7 +176,8 @@ export default {
 <style scoped lang="sass">
 .utilsSignupCmpCnt
   width: 75%
-  margin: 1em auto 0 auto
+  margin-left: auto
+  margin-right: auto
 
 .utilsSignupCmpTitle
   font-size: large

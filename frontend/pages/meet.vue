@@ -14,6 +14,7 @@ import ValuesCmp from '~/components/values/ValuesCmp'
 import TeamCmp from '~/components/team/TeamCmp'
 
 export default {
+  name: 'MeetPage',
   components: {
     HeaderCmp,
     FooterCmp,

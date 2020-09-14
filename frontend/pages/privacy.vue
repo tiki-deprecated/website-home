@@ -3,7 +3,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'PrivacyPage',
+}
 </script>
 
 <style scoped lang="sass"></style>
