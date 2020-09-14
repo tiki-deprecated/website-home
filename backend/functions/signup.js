@@ -34,7 +34,7 @@ exports.handler = function (event, context, callback) {
         statusCode: '500',
         headers: {
           "Access-Control-Allow-Headers" : "Content-Type",
-          "Access-Control-Allow-Origin": "https://mytiki.com, https://www.mytiki.com",
+          "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "OPTIONS,POST"
         },
         body: err
@@ -43,7 +43,7 @@ exports.handler = function (event, context, callback) {
         statusCode: '200',
         headers: {
           "Access-Control-Allow-Headers" : "Content-Type",
-          "Access-Control-Allow-Origin": "https://mytiki.com, https://www.mytiki.com",
+          "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "OPTIONS,POST"
         }
       })

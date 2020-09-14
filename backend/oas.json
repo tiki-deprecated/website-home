@@ -85,7 +85,7 @@
               "responseParameters": {
                 "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'",
                 "method.response.header.Access-Control-Allow-Headers": "'Content-Type'",
-                "method.response.header.Access-Control-Allow-Origin": "'https://mytiki.com, https://www.mytiki.com'"
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
               }
             }
           },
@@ -163,9 +163,9 @@
             "default": {
               "statusCode": "200",
               "responseParameters": {
-                "method.response.header.Access-Control-Allow-Methods": "'https://mytiki.com, https://www.mytiki.com'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'",
                 "method.response.header.Access-Control-Allow-Headers": "'Content-Type'",
-                "method.response.header.Access-Control-Allow-Origin": "'OPTIONS,POST'"
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
               }
             }
           },
