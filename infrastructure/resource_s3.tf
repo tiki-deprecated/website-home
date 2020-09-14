@@ -87,7 +87,7 @@ resource "aws_s3_bucket_object" "backend_functions" {
 }
 
 resource "aws_s3_bucket_object" "frontend_dist" {
-  for_each               = fileset(local.global_frontend_dist_path, "*")
+  for_each               = fileset(local.global_frontend_dist_path, "**")
   bucket                 = aws_s3_bucket.frontend.bucket
   key                    = each.value
   source                 = "${local.global_frontend_dist_path}${each.value}"
