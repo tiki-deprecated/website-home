@@ -22,6 +22,7 @@ import LearnCmp from '~/components/learn/LearnCmp'
 import FooterCmp from '~/components/footer/FooterCmp'
 
 export default {
+  name: 'IndexPage',
   components: {
     HeaderCmp,
     JoinCmp,

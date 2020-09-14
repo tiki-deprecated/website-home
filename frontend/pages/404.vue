@@ -13,7 +13,7 @@
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
 
 export default {
-  name: '404',
+  name: '404Page',
   components: { UtilsSvgCmp },
 }
 </script>
