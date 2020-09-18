@@ -6,9 +6,9 @@ header:
 join:
   title: It’s YOUR Data
   subtitle: >-
-            Your data is worth thousands. Why aren’t you getting your fair share? Take back control. Get paid.
-            Tiki’s got your back.
-  youtube: 824BHguQZ1E
+            Your data is worth thousands a year. Why aren’t you getting your fair share? Take back control.
+            Get paid. Tiki’s got your back.
+  youtube: IP4UeduStUI
   cta: Join the Revolution
   disclaimer:
     text: No marketing spam ever. Never shared. Never sold.
@@ -61,12 +61,13 @@ learn:
   tick: '#D83831'
 
 product:
-  title: We're Building
+  title: With Tiki, you can
   features:
     one:
       highlight: 1. See
       description: >-
-                   what data companies are collecting on you. Not in some garbled techy way, but actually see your data.
+                   what data companies are collecting on you, how its used, and how secure it really is. Not in some
+                   garbled techy way, but actually see your data.
       color: '#4DAAE9'
     two:
       highlight: 2. Control
@@ -76,8 +77,8 @@ product:
     three:
       highlight: 3. Monetize
       description: >-
-                   it. Get paid your fair share for granting buyers access to your data. No longer it sold, traded, or exploited
-                   without your consent and compensation.
+                   it. Get paid your fair share for granting buyers access to your data. No longer is your data sold,
+                   traded, or exploited without your consent and compensation.
       color: '#539987'
   tick: '#539987'
 
