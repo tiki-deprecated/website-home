@@ -44,15 +44,11 @@ learn:
     button:
       one:
         icon: medium
-        url: 'https://medium.com'
-        text:
-      two:
-        icon: instagram
-        url: 'https://instagram.com'
+        url: 'https://medium.com/@mytiki'
         text:
       three:
         icon: twitter
-        url: 'https://twitter.com'
+        url: 'https://twitter.com/my_tiki_'
         text:
       four:
         icon: github
