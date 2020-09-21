@@ -23,6 +23,15 @@ export default {
         name: 'mytiki.com',
         content: "Tiki. It's Your Data",
       },
+      { name: 'og:title', content: 'Tiki' },
+      {
+        name: 'og:description',
+        content:
+          "It's your data, and its worth thousands. Take back control and get paid.",
+      },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://mytiki.com' },
+      { name: 'og:video', content: 'https://youtu.be/IP4UeduStUI' },
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
     script: [
@@ -71,6 +80,8 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     '@nuxtjs/axios',
+    'vue-social-sharing/nuxt',
+    '@nuxtjs/toast',
   ],
   /*
    ** Content module configuration

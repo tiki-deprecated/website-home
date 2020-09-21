@@ -202,15 +202,21 @@ export default {
 
 .utilsSignupCmpBorder
   border: 0.1em solid rgba($blue, 0.5)
+  -moz-box-shadow: 0 0 0.25em rgba($blue, 1)
+  -webkit-box-shadow: 0 0 0.25em rgba($blue, 1)
   box-shadow: 0 0 0.25em rgba($blue, 1)
   border-radius: 0.5em
 
 .utilsSignupCmpBorderFocus
   border: 0.1em solid rgba($orange, 0.5)
+  -moz-box-shadow: 0 0 0.25em rgba($orange, 1)
+  -webkit-box-shadow: 0 0 0.25em rgba($orange, 1)
   box-shadow: 0 0 0.25em rgba($orange, 1)
 
 .utilsSignupCmpBorderFocusError
   border: 0.1em solid rgba($red, 0.5)
+  -moz-box-shadow: 0 0 0.25em rgba($red, 1)
+  -webkit-box-shadow: 0 0 0.25em rgba($red, 1)
   box-shadow: 0 0 0.25em rgba($red, 1)
 
 .utilsSignupCmpInput
@@ -277,6 +283,8 @@ export default {
   justify-content: center
   background-color: $blue
   border: 0.1em solid $blue
+  -moz-box-shadow: 0 0 0.25em rgba($blue, 0.5)
+  -webkit-box-shadow: 0 0 0.25em rgba($blue, 0.5)
   box-shadow: 0 0 0.25em rgba($blue, 0.5)
 
 .utilsSignupCmpSubmittedIcon

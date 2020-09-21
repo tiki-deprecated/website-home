@@ -7,38 +7,38 @@ values:
   title: Mission
   subtitle: It’s your data. We’re giving you control of it.
   extended: >-
-            We’re building a fair, user-centric, decentralized system giving users control of their data. It’s your
-            data, you deserve the right to see, control, and monetize it. Your data does not belong to corporations,
-            Tiki included! We build tools to protect users from exploit, greed, and carelessness. We build tools to
-            empower users.
+              We’re building a fair, user-centric, decentralized system giving users control of their data.
+              It’s your data; you deserve the right to see, control, and monetize it. Your data does not belong to
+              corporations, Tiki included! We build tools to protect users from exploitation, greed, and carelessness.
+              We build tools to empower users.
   divider: '#AAAAAA'
   values:
     one:
       highlight: transparency
       description: >-
-                   helps build trust. Seeing is believing and nothing is off limits. No shadow bans or secret
-                   algorithms at Tiki.
+                    helps build trust. Seeing is believing, and nothing is off-limits. No shadowbans or secret
+                    algorithms at Tiki.
 
       color: '#539987'
     two:
       highlight: community
       description: >-
-                   is what connects us. Together, we're an unstoppable force. We expect better, we demand better.
+                    is what connects us. Together, we're an unstoppable force. We expect better. We demand better.
       color: '#F3A12C'
     three:
       highlight: diversity
       description: >-
-                   is not optional within the walls of Tiki. We're here for our users; we represent our users.
+                    is not optional within the walls of Tiki. We're here for our users; we represent our users
       color: '#D83831'
     four:
       highlight: sustainability
       description: >-
-                   comes before profit. We work tirelessly to bring lasting positive change to our users' lives.
+                    comes before profit. We work tirelessly to bring lasting positive change to our users' lives.
       color: '#682F81'
     five:
       highlight: reliability
       description: >-
-                   is foundational to trust. We want our users to count on us and aim to never break that trust.
+                    is foundational to trust. We want our users to count on us and aim never to break that trust.
       color: '#2F5A81'
   tick: '#4DAAE9'
 
