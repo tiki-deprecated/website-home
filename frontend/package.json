@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -14,7 +14,9 @@
   "dependencies": {
     "@nuxt/content": "^1.5.3",
     "@nuxtjs/axios": "^5.12.2",
-    "nuxt": "^2.14.0"
+    "@nuxtjs/toast": "^3.3.1",
+    "nuxt": "^2.14.0",
+    "vue-social-sharing": "^3.0.0-beta.11"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

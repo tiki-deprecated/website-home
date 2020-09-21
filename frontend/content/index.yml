@@ -9,6 +9,13 @@ join:
             Your data is worth thousands a year. Why aren’t you getting your fair share? Take back control.
             Get paid. Tiki’s got your back.
   youtube: IP4UeduStUI
+  share:
+    url: 'https://mytiki.com'
+    title: "Tiki. It's Your Data"
+    description: >-
+      Your data is worth thousands a year. Why aren’t you getting your fair share? Take back control.
+      Get paid. Tiki’s got your back.
+    hashtags: 'mytiki, mydata'
   cta: Join the Revolution
   disclaimer:
     text: No marketing spam ever. Never shared. Never sold.
@@ -44,15 +51,11 @@ learn:
     button:
       one:
         icon: medium
-        url: 'https://medium.com'
-        text:
-      two:
-        icon: instagram
-        url: 'https://instagram.com'
+        url: 'https://medium.com/@mytiki'
         text:
       three:
         icon: twitter
-        url: 'https://twitter.com'
+        url: 'https://twitter.com/my_tiki_'
         text:
       four:
         icon: github

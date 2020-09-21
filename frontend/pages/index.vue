@@ -52,11 +52,11 @@ export default {
 
 @include for-tablet
   .indexPage
-    max-width: 60%
-    margin: 0 auto 0 auto
+    max-width: 50%
+    margin: 0 auto
 
 @include for-desktop
   .indexPage
-    max-width: 40%
-    margin: 0 auto 0 auto
+    max-width: 35%
+    margin: 0 auto
 </style>

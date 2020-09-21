@@ -47,16 +47,16 @@ export default {
   display: flex
   justify-content: space-between
   align-items: center
-  margin: 1.5em
+  margin: 1em
 
 .headerCmpLogo
-  width: 5.75em
+  width: 4.75em
 
 ::v-deep .headerCmpLogo.svg
   fill: $blue
 
 .headerCmpIcon
-  width: 3.5em
+  width: 3em
 
 .headerCmpTick
   width: 5.5em
@@ -67,4 +67,12 @@ export default {
 @include for-tablet
   .headerCmpCnt
     margin: 1.5em 0
+
+@include for-tablet
+  .headerCmpLogo
+    width: 5.25em
+
+@include for-tablet
+  .headerCmpIcon
+    width: 3.25em
 </style>

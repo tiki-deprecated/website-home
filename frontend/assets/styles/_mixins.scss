@@ -2,11 +2,11 @@
  ** Screen Size Mixins
  */
 @mixin for-phone {
-  @media (max-width: 576px){ @content }
+  @media (max-width: 575.98px){ @content }
 }
 
 @mixin for-tablet {
-  @media (min-width: 768px) { @content }
+  @media (min-width: 576px) { @content }
 }
 
 @mixin for-desktop {
