@@ -31,6 +31,7 @@ export default {
       },
       { name: 'og:type', content: 'website' },
       { name: 'og:url', content: 'https://mytiki.com' },
+      { name: 'og:image', content: 'https://mytiki.com/og-image.png' },
       { name: 'og:video', content: 'https://youtu.be/IP4UeduStUI' },
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
