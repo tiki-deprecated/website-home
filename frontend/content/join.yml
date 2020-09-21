@@ -1,0 +1,27 @@
+header:
+  logo: logo
+  icon: icon
+  tick: '#EFB256'
+
+join:
+  title: It’s YOUR Data
+  subtitle: >-
+    Your data is worth thousands a year. Why aren’t you getting your fair share? Take back control.
+    Get paid. Tiki’s got your back.
+  youtube: IP4UeduStUI
+  share:
+    url: 'https://mytiki.com/join'
+    title: "Tiki. It's Your Data"
+    description: >-
+                  Your data is worth thousands a year. Why aren’t you getting your fair share? Take back control.
+                  Get paid. Tiki’s got your back.
+    hashtags: 'mytiki, mydata'
+  cta: Join the Revolution
+  disclaimer:
+    text: No marketing spam ever. Never shared. Never sold.
+    github: 'https://github.com/tiki'
+    privacy: '/privacy'
+  tick: '#4DAAE9'
+
+footer:
+  copyright: © 2020 Tiki Inc

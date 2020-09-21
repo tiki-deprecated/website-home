@@ -94,7 +94,7 @@ export default {
   justify-content: center
 
 .utilsButtonVCmp
-  margin-right: 1.5em
+  margin: 0 0.75em
 
 .utilsButtonHCmpMeet
   margin-top: 2.5em

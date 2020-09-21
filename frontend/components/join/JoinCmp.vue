@@ -7,11 +7,18 @@
         :subtitle="cms.subtitle"
         class="utilsTitleSubtitleCmp"
       />
-      <utils-video-cmp
-        v-if="cms.youtube != null"
-        :id="cms.youtube"
-        class="utilsVidCmp"
-      />
+      <div class="joinCmpVid">
+        <utils-video-cmp
+          v-if="cms.youtube != null"
+          :id="cms.youtube"
+          class="utilsVidCmp"
+        />
+        <utils-share-cmp
+          v-if="cms.share != null"
+          class="utilsShareCmp"
+          :cms="cms.share"
+        />
+      </div>
       <utils-signup-cmp
         v-if="cms.cta != null"
         :title="cms.cta"
@@ -34,6 +41,7 @@ import UtilsTitleSubtitleCmp from '~/components/utils/UtilsTitleSubtitleCmp'
 import UtilsVideoCmp from '~/components/utils/UtilsVideoCmp'
 import UtilsSignupCmp from '~/components/utils/UtilsSignupCmp'
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
+import UtilsShareCmp from '~/components/utils/UtilsShareCmp'
 
 export default {
   name: 'JoinCmp',
@@ -42,6 +50,7 @@ export default {
     UtilsVideoCmp,
     UtilsSignupCmp,
     UtilsSvgCmp,
+    UtilsShareCmp,
   },
   props: {
     cms: {
@@ -58,6 +67,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "assets/styles/mixins"
+
 .joinCmpCnt
   padding: 1em 1em
 
@@ -76,4 +87,11 @@ export default {
 
 ::v-deep .joinCmpTick.svg
   fill: $blue
+
+.utilsShareCmp
+  margin-top: 0.5em
+
+.joinCmpVid
+  width: 100%
+  margin: 0 auto
 </style>
