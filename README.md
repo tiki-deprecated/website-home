@@ -12,8 +12,6 @@ infrastructure scripts
 
 ## Additional Links
 - [Docs](https://mytiki.readme.io)
-- [JIRA](https://mytiki.atlassian.net/jira/software/projects/WEB/boards/7)
-- [Roadmap](https://tiki.canny.io/)
 
 ## Authors
 - Mike Audi - [mike-audi](https://github.com/mike-audi)
