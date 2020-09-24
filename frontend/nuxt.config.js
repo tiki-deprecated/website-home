@@ -15,6 +15,9 @@ export default {
    */
   head: {
     title: 'Tiki',
+    htmlAttrs: {
+      prefix: 'og: http://ogp.me/ns#',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,16 +26,26 @@ export default {
         name: 'mytiki.com',
         content: "Tiki. It's Your Data",
       },
-      { name: 'og:title', content: 'Tiki' },
+      { name: 'title', property: 'og:title', content: 'Tiki' },
       {
-        name: 'og:description',
+        property: 'og:description',
         content:
           "It's your data, and its worth thousands. Take back control and get paid.",
       },
-      { name: 'og:type', content: 'website' },
-      { name: 'og:url', content: 'https://mytiki.com' },
-      { name: 'og:image', content: 'https://mytiki.com/og-image.png' },
-      { name: 'og:video', content: 'https://youtu.be/IP4UeduStUI' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://mytiki.com' },
+      { property: 'og:image', content: 'https://mytiki.com/og-image.png' },
+      { property: 'og:video', content: 'https://youtu.be/IP4UeduStUI' },
+      { property: 'twitter:title', content: 'Tiki' },
+      {
+        property: 'twitter:description',
+        content:
+          "It's your data, and its worth thousands. Take back control and get paid.",
+      },
+      { property: 'twitter:url', content: 'https://mytiki.com' },
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:image', content: 'https://mytiki.com/og-image.png' },
+      { property: 'twitter:site', content: '@my_tiki_' },
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
     script: [
