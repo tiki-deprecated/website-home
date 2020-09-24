@@ -64,12 +64,10 @@ export default {
   data() {
     return {
       sharing: {
-        url: 'https://mytiki.com/join',
-        title: "Tiki. It's Your Data",
-        description:
-          'Your data is worth thousands a year. Why aren’t you getting your fair share? Take back control. ' +
-          'Get paid. Tiki’s got your back.',
-        hashtags: 'mytiki,mydata',
+        url: this.cms.url,
+        title: this.cms.title,
+        description: this.cms.description,
+        hashtags: this.cms.hashtags,
       },
       showOther: false,
     }
