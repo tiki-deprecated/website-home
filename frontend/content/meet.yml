@@ -58,8 +58,8 @@ team:
       img: brian-gagnon.jpeg
       fname: Brian
       lname: Gagnon
-      title: Advisor
-      role: Data
+      title: Founder
+      role: Advisor
       social:
         linkedin: bmgagnon
         medium:
@@ -94,6 +94,26 @@ team:
         linkedin: jonmorganpm
         medium:
         twitter: jonmorganpm
+    six:
+      img: derek-canton.jpeg
+      fname: Derek
+      lname: Canton
+      title: Advisor
+      role: Experience
+      social:
+        linkedin: derekecanton
+        medium:
+        twitter: derekcanton
+    seven:
+      img: brandon-sanders.jpeg
+      fname: Brandon
+      lname: Sanders
+      title: Advisor
+      role: Blockchain
+      social:
+        linkedin: brsanders
+        medium:
+        twitter: crahda
   join:
     text: Join Us
     url: 'https://angel.co/company/mytiki/jobs'
