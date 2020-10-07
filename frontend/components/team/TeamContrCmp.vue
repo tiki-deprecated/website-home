@@ -27,6 +27,16 @@
         class="teamMemberCmp"
         :cms="cms.five"
       />
+      <team-member-cmp
+        v-if="cms.six != null"
+        class="teamMemberCmp"
+        :cms="cms.six"
+      />
+      <team-member-cmp
+        v-if="cms.seven != null"
+        class="teamMemberCmp"
+        :cms="cms.seven"
+      />
     </div>
   </div>
 </template>
