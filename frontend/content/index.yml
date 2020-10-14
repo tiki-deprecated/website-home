@@ -50,14 +50,26 @@ learn:
               Together we're a revolution.
     button:
       one:
-        icon: medium
-        url: 'https://medium.com/@mytiki'
-        text:
-      three:
         icon: twitter
         url: 'https://twitter.com/my_tiki_'
         text:
+      two:
+        icon: instagram
+        url: 'https://instagram.com/my.tiki'
+        text:
+      three:
+        icon: tiktok
+        url: 'https://tiktok.com/@my.tiki'
+        text:
       four:
+        icon: linkedin
+        url: 'https://linkedin.com/company/mytiki'
+        text:
+      five:
+        icon: medium
+        url: 'https://medium.com/@mytiki'
+        text:
+      six:
         icon: github
         url: 'https://github.com/tiki'
         text:
