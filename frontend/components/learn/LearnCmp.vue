@@ -44,6 +44,16 @@
           :cms="cms.follow.button.four"
           class="utilsButtonVCmp"
         />
+        <utils-button-v-cmp
+          v-if="cms.follow.button.five != null"
+          :cms="cms.follow.button.five"
+          class="utilsButtonVCmp"
+        />
+        <utils-button-v-cmp
+          v-if="cms.follow.button.six != null"
+          :cms="cms.follow.button.six"
+          class="utilsButtonVCmp"
+        />
       </div>
     </div>
     <utils-svg-cmp
@@ -90,11 +100,12 @@ export default {
 
 .learnCmpFollowButtons
   display: flex
-  margin-top: 2em
+  margin-top: 1.25em
   justify-content: center
+  flex-wrap: wrap
 
 .utilsButtonVCmp
-  margin: 0 0.75em
+  margin: 0.75em 0.75em
 
 .utilsButtonHCmpMeet
   margin-top: 2.5em
@@ -103,7 +114,7 @@ export default {
   margin-top: 1em
 
 .learnCmpTick
-  margin-top: 2em
+  margin-top: 1.25em
   width: 5.5em
   transform: rotate(180deg)
   margin-right: 0

@@ -45,7 +45,7 @@ export default {
   outline: none !important
 
 .utilsButtonVCmpIcon
-  height: 2.25em
+  height: 2em
   margin: auto
 
 .utilsButtonVCmpText
