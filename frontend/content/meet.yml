@@ -49,22 +49,42 @@ team:
       fname: Mike
       lname: Audi
       title: Founder
-      role: Architect
+      role: CEO
       social:
         linkedin: maudi
         medium: tikimike
         twitter: tiki_mike
     two:
+      img: anna-stoilova.jpeg
+      fname: Anna
+      lname: Stoilova
+      title: Co-founder
+      role: Product
+      social:
+        linkedin: annastoilova
+        medium:
+        twitter: nomorewhite
+    three:
+      img: shane-faria.jpeg
+      fname: Shane
+      lname: Faria
+      title: Co-founder
+      role: User Champion
+      social:
+        linkedin: shane-faria-263a0b178
+        medium:
+        twitter: shane_faria
+    four:
       img: brian-gagnon.jpeg
       fname: Brian
       lname: Gagnon
-      title: Founder
+      title: Co-founder
       role: Advisor
       social:
         linkedin: bmgagnon
         medium:
         twitter: BriVirtual
-    three:
+    five:
       img: ken-rapp.jpeg
       fname: Ken
       lname: Rapp
@@ -74,7 +94,7 @@ team:
         linkedin: ken-rapp-b922766
         medium:
         twitter:
-    four:
+    six:
       img: malinda-gagnon.jpeg
       fname: Malinda
       lname: Gagnon
@@ -84,7 +104,7 @@ team:
         linkedin: malindagagnon
         medium:
         twitter: malinda_g
-    five:
+    seven:
       img: jon-morgan.jpeg
       fname: Jon
       lname: Morgan
@@ -94,7 +114,7 @@ team:
         linkedin: jonmorganpm
         medium:
         twitter: jonmorganpm
-    six:
+    eight:
       img: derek-canton.jpeg
       fname: Derek
       lname: Canton
@@ -104,7 +124,7 @@ team:
         linkedin: derekecanton
         medium:
         twitter: derekcanton
-    seven:
+    nine:
       img: brandon-sanders.jpeg
       fname: Brandon
       lname: Sanders
