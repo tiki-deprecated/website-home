@@ -37,6 +37,16 @@
         class="teamMemberCmp"
         :cms="cms.seven"
       />
+      <team-member-cmp
+        v-if="cms.eight != null"
+        class="teamMemberCmp"
+        :cms="cms.eight"
+      />
+      <team-member-cmp
+        v-if="cms.nine != null"
+        class="teamMemberCmp"
+        :cms="cms.nine"
+      />
     </div>
   </div>
 </template>
@@ -71,6 +81,6 @@ export default {
   flex-wrap: wrap
 
 .teamMemberCmp
-  width: 8em
+  width: 9em
   margin: 1em 0
 </style>
