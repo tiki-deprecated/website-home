@@ -193,7 +193,7 @@ export default {
   margin: 1.5em auto 0 auto
 
 .utilsSignupCmpText
-  font-family: $font-family
+  font-family: $font-family-gadugi
   letter-spacing: 0.2ch
   font-size: small
   text-transform: lowercase
@@ -300,7 +300,7 @@ export default {
   overflow: hidden
 
 .utilsSignupCmpDisclaimer
-  font-family: $font-family
+  font-family: $font-family-gadugi
   letter-spacing: 0.2ch
   font-size: small
   color: $grey

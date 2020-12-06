@@ -1,15 +1,17 @@
 <template>
-  <div>
+  <div class="defaultLayout">
     <Nuxt />
   </div>
 </template>
 
-<style lang="sass">
-html
-  font-family: $font-family
+<style scoped lang="sass">
+.defaultLayout
+  font-family: $font-family-gadugi
   font-size: 1rem
+  background-color: $white
+</style>
 
+<style lang="sass">
 body
   margin: 0
-  background-color: $white
 </style>
