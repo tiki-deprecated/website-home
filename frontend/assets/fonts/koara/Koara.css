@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Koara';
+  src: url('Koara-Bold.eot');
+  src: url('Koara-Bold.eot?#iefix') format('embedded-opentype'),
+  url('Koara-Bold.woff2') format('woff2'),
+  url('Koara-Bold.woff') format('woff'),
+  url('Koara-Bold.ttf') format('truetype'),
+  url('Koara-Bold.svg#Koara-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
