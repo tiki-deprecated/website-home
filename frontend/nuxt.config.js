@@ -60,7 +60,16 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/styles/theme.sass', '@/assets/fonts/gadugi.css'],
+  css: [
+    '@/assets/styles/theme.sass',
+    '@/assets/styles/theme-money.sass',
+    '@/assets/fonts/gadugi/Gadugi.css',
+    '@/assets/fonts/koara/Koara.css',
+    '@/assets/fonts/montserrat/Montserrat.css',
+    '@/assets/fonts/nunito/Nunito.css',
+    '@/assets/fonts/nunito-sans/NunitoSans.css',
+    '@/assets/fonts/marker-mark/MarkerMark.css',
+  ],
   /*
    ** Style Resources
    */
