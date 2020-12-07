@@ -62,7 +62,7 @@ export default {
    */
   css: [
     '@/assets/styles/theme.sass',
-    '@/assets/styles/tiki-theme.sass',
+    '@/assets/styles/theme-money.sass',
     '@/assets/fonts/gadugi/Gadugi.css',
     '@/assets/fonts/koara/Koara.css',
     '@/assets/fonts/montserrat/Montserrat.css',
