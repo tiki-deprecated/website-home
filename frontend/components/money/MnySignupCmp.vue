@@ -31,7 +31,6 @@ export default {
 
 <style scoped lang="sass">
 .mnySignupCnt
-  width: inherit
   background: $money-yellow-light
   border-radius: 5vw
   padding: 7vw 5vw

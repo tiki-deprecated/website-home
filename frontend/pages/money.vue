@@ -4,6 +4,7 @@
       <mny-header-cmp class="mnyHeaderCmp" />
       <mny-work-cmp class="mnyWorkCmp" />
       <mny-share-cmp class="mnyShareCmp" />
+      <mny-footer-cmp class="mnyFooterCmp" />
     </div>
     <mny-signup-cmp class="mnySignupCmp" />
   </div>
@@ -14,11 +15,18 @@ import MnyHeaderCmp from '@/components/money/MnyHeaderCmp'
 import MnyWorkCmp from '@/components/money/MnyWorkCmp'
 import MnyShareCmp from '@/components/money/MnyShareCmp'
 import MnySignupCmp from '@/components/money/MnySignupCmp'
+import MnyFooterCmp from '@/components/money/MnyFooterCmp'
 
 export default {
   name: 'Money',
   layout: 'tiki',
-  components: { MnySignupCmp, MnyShareCmp, MnyWorkCmp, MnyHeaderCmp },
+  components: {
+    MnyFooterCmp,
+    MnySignupCmp,
+    MnyShareCmp,
+    MnyWorkCmp,
+    MnyHeaderCmp,
+  },
 }
 </script>
 
