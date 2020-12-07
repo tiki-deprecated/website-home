@@ -2,11 +2,7 @@
   <div class="mnyHeaderAmtCnt">
     <div class="mnyHeaderAmtTop">Companies will make</div>
     <div class="mnyHeaderAmtMdl">
-      <utils-svg-cmp
-        name="money/paint-hlt"
-        class="mnyHeaderAmtPaintHlt"
-        :class="{ mnyHeaderAmtPaintHltDisplay: isSpalsh }"
-      />
+      <utils-svg-cmp name="money/paint-hlt" class="mnyHeaderAmtPaintHlt" />
       <div class="mnyHeaderAmtMdlText">$370 BILLION</div>
     </div>
     <div class="mnyHeaderAmtBtm">
@@ -21,14 +17,6 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 export default {
   name: 'MnyHeaderAmtCmp',
   components: { UtilsSvgCmp },
-  data() {
-    return {
-      isSpalsh: false,
-    }
-  },
-  mounted() {
-    this.isSpalsh = true
-  },
 }
 </script>
 
@@ -63,19 +51,10 @@ export default {
 .mnyHeaderAmtPaintHlt
   position: absolute
   top: 0
-  left: -80%
-  opacity: 0
-  z-index: 1
-  width: 70%
-  height: 100%
-  transition-property: opacity, left, width
-  transition-delay: 2s
-  transition-duration: .15s
-
-.mnyHeaderAmtPaintHltDisplay
   left: 0
-  opacity: 100%
+  z-index: 1
   width: 100%
+  height: 100%
 
 ::v-deep .mnyHeaderAmtPaintHlt.svg
   fill: $money-purple
