@@ -29,13 +29,13 @@ export default {
   font-family: $font-family-koara
   color: $money-blue-light
   font-size: 6vw
-  width: 31vw
-  margin-left: 13vw
+  width: 66%
+  text-align: right
 
 .MnyWorkLearnBtnArrow
-  margin-left: 5vw
+  margin-left: 10%
 
 ::v-deep .MnyWorkLearnBtnArrow.svg
-  height: 8vw
+  height: 50%
   fill: $money-blue-light
 </style>
