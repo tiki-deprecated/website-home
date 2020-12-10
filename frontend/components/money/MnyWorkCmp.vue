@@ -25,26 +25,22 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "assets/styles/mixins"
+
 .mnyWorkCnt
   position: relative
   background: $money-blue-xlight
   width: 100%
-  height: 215vw
 
 .mnyWorkTitle
   margin: 0 auto
   font-family: $font-family-koara
-  width: 56vw
-  font-size: 6.5vw
   text-align: center
   color: $money-purple
 
 .mnyWorkSubtitle
-  margin: 5vw auto 0 auto
   font-family: $font-family-montserrat
   font-weight: 600
-  width: 83vw
-  font-size: 5vw
   text-align: center
   color: $money-purple
 
@@ -53,7 +49,6 @@ export default {
   color: $money-orange
 
 .mnyWorkBetaCmp
-  margin-top: 7vw
   position: relative
 
 .mnyWorkCntStack
@@ -62,15 +57,56 @@ export default {
   left: 0
   z-index: 1
   width: 100%
-  padding-top: 80vw
 
 .mnyWorkLearnBtnCmp
   position: absolute
-  top: 58%
-  left: 50%
   z-index: 2
-  transform: translate(-50%, -58%)
 
 .mnyWorkHow
   position: relative
+
+@include for-phone
+  .mnyWorkCnt
+    height: 215vw
+
+  .mnyWorkTitle
+    width: 56vw
+    font-size: 6.5vw
+
+  .mnyWorkSubtitle
+    margin: 5vw auto 0 auto
+    width: 83vw
+    font-size: 5vw
+
+  .mnyWorkBetaCmp
+    margin-top: 7vw
+
+  .mnyWorkCntStack
+    padding-top: 80vw
+
+  .mnyWorkLearnBtnCmp
+    top: 58%
+    left: 50%
+    transform: translate(-50%, -58%)
+
+@include for-tablet
+  .mnyWorkCnt
+    height: 45vw
+
+  .mnyWorkTitle
+    width: 20vw
+    font-size: 2.25vw
+
+  .mnyWorkSubtitle
+    margin: 2vw auto 0 auto
+    width: 83vw
+    font-size: 1.25vw
+
+  .mnyWorkCntStack
+    padding-top: 20vw
+
+  .mnyWorkLearnBtnCmp
+    top: 68%
+    left: 50%
+    transform: translate(-50%, -68%)
 </style>

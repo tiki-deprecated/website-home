@@ -31,6 +31,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "assets/styles/mixins"
+
 .mnyPageCnt
   position: relative
 
@@ -39,12 +41,23 @@ export default {
   top: 0
   left: 0
   z-index: 1
+  width: 100%
 
 .mnySignupCmp
-  width: 70%
   position: absolute
   z-index: 2
-  top: 140%
-  left: 50%
-  transform: translate(-50%, 140%)
+
+@include for-phone
+  .mnySignupCmp
+    width: 70%
+    top: 140%
+    left: 50%
+    transform: translate(-50%, 140%)
+
+@include for-tablet
+  .mnySignupCmp
+    width: 50%
+    top: 155%
+    left: 50%
+    transform: translate(-50%, 155%)
 </style>
