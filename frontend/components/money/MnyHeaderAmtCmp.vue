@@ -21,31 +21,27 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "assets/styles/mixins"
+
 .mnyHeaderAmtCnt
-  width: 75%
-  margin: 5vw auto 0
   font-family: $font-family-nunito
   font-weight: bold
   color: $money-yellow-xlight
-  font-size: 5.1vw
   position: relative
 
 .mnyHeaderAmtTop
-  width: 68%
   margin: 0 auto
+  text-align: center
 
 .mnyHeaderAmtBtm
-  width: 74%
   margin: 0 auto
+  text-align: center
 
 .mnyHeaderAmtMdl
-  margin: 1.2vw auto
   font-family: $font-family-marker-mark
-  font-size: 8.7vw
   font-weight: normal
   position: relative
   width: 100%
-  height: 14vw
   overflow: hidden
 
 .mnyHeaderAmtPaintHlt
@@ -67,4 +63,38 @@ export default {
   transform: translate(-50%, -50%)
   width: inherit
   text-align: center
+
+@include for-phone
+  .mnyHeaderAmtCnt
+    width: 80%
+    margin: 5vw auto 0
+    font-size: 5.1vw
+
+  .mnyHeaderAmtTop
+    width: 68%
+
+  .mnyHeaderAmtBtm
+    width: 74%
+
+  .mnyHeaderAmtMdl
+    margin: 1.2vw auto
+    font-size: 10vw
+    height: 15vw
+
+@include for-tablet
+  .mnyHeaderAmtCnt
+    width: 80%
+    margin: 1vw auto 0
+    font-size: 1.7vw
+
+  .mnyHeaderAmtTop
+    width: 68%
+
+  .mnyHeaderAmtBtm
+    width: 74%
+
+  .mnyHeaderAmtMdl
+    margin: 0.6vw auto
+    font-size: 3.6vw
+    height: 5.5vw
 </style>

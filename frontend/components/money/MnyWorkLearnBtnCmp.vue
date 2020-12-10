@@ -15,11 +15,10 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "assets/styles/mixins"
+
 .MnyWorkLearnBtnCnt
   background: $money-blue-dark
-  height: 15vw
-  border-radius: 4vw
-  width: 70%
   margin: 0 auto
   display: flex
   align-items: center
@@ -28,14 +27,40 @@ export default {
 .MnyWorkLearnBtnText
   font-family: $font-family-koara
   color: $money-blue-light
-  font-size: 6vw
-  width: 31vw
-  margin-left: 13vw
-
-.MnyWorkLearnBtnArrow
-  margin-left: 5vw
+  text-align: right
 
 ::v-deep .MnyWorkLearnBtnArrow.svg
-  height: 8vw
   fill: $money-blue-light
+
+@include for-phone
+  .MnyWorkLearnBtnCnt
+    height: 15vw
+    border-radius: 4vw
+    width: 70%
+
+  .MnyWorkLearnBtnText
+    font-size: 6vw
+    width: 66%
+
+  .MnyWorkLearnBtnArrow
+    margin-left: 10%
+
+  ::v-deep .MnyWorkLearnBtnArrow.svg
+    height: 50%
+
+@include for-tablet
+  .MnyWorkLearnBtnCnt
+    height: 4vw
+    border-radius: 0.5vw
+    width: 20%
+
+  .MnyWorkLearnBtnText
+    font-size: 1.25vw
+    width: 55%
+
+  .MnyWorkLearnBtnArrow
+    margin-left: 15%
+
+  ::v-deep .MnyWorkLearnBtnArrow.svg
+    height: 50%
 </style>

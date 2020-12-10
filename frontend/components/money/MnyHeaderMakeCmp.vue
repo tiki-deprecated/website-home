@@ -15,7 +15,7 @@
     </div>
     <div class="mnyHeaderMakeSubtitle">
       Feel like your phone's listening to you? Might as well get
-      <b class="mnyHeaderMakeSubtitleHlt">paid for it</b>
+      <b class="mnyHeaderMakeSubtitleHlt">paid for it</b>.
     </div>
   </div>
 </template>
@@ -30,6 +30,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "assets/styles/mixins"
+
 .mnyHeaderMakeCnt
   width: 100%
   position: relative
@@ -37,52 +39,100 @@ export default {
 .mnyHeaderMakeTitle
   width: inherit
   position: relative
-  height: 23vw
 
 .mnyHeaderMakeTitleText
   font-family: $font-family-koara
   color: $money-purple
-  font-size: 7.5vw
-  width: 55vw
   display: inline
   position: absolute
-  top: 35%
-  left: 8%
 
 .mnyHeaderMakeQuote
   width: inherit
   position: absolute
   top: 0
   left: 0
-  height: 12vw
 
 .mnyHeaderMakeQuoteLeft
-  top: 0
-  left: 0
   position: absolute
 
 .mnyHeaderMakeQuoteRight
   position: absolute
-  top: 10%
-  right: 0
-
-::v-deep .mnyHeaderMakeQuoteLeft.svg
-  transform: rotate(23deg)
-  height: 13vw
-
-::v-deep .mnyHeaderMakeQuoteRight.svg
-  transform: rotate(135.5deg)
-  top: 25%
-  height: 13vw
 
 .mnyHeaderMakeSubtitle
-  margin: 2vw 0 0 5vw
   font-family: $font-family-montserrat
   font-weight: 600
-  font-size: 5vw
   color: $money-purple
 
 .mnyHeaderMakeSubtitleHlt
   color: $money-orange
   font-weight: 600
+
+@include for-phone
+  .mnyHeaderMakeTitle
+    height: 23vw
+
+  .mnyHeaderMakeTitleText
+    font-size: 7vw
+    width: 55vw
+    margin-left: 6vw
+    top: 35%
+
+  .mnyHeaderMakeQuote
+    height: 12vw
+
+  .mnyHeaderMakeQuoteLeft
+    top: 0
+    left: 0
+
+  .mnyHeaderMakeQuoteRight
+    right: 0
+    top: 25%
+
+  ::v-deep .mnyHeaderMakeQuoteLeft.svg
+    transform: rotate(23deg)
+    height: 13vw
+
+  ::v-deep .mnyHeaderMakeQuoteRight.svg
+    transform: rotate(135.5deg)
+    height: 13vw
+
+  .mnyHeaderMakeSubtitle
+    margin: 1vw 0 0 6vw
+    font-size: 4.5vw
+
+@include for-tablet
+  .mnyHeaderMakeTitle
+    height: 5vw
+    margin-top: 2vw
+
+  .mnyHeaderMakeTitleText
+    font-size: 2.25vw
+    width: 100%
+    top: 40%
+    text-align: center
+
+  .mnyHeaderMakeQuote
+    height: 4vw
+
+  .mnyHeaderMakeQuoteLeft
+    top: -20%
+    left: 32%
+
+  .mnyHeaderMakeQuoteRight
+    top: -20%
+    right: 32%
+
+  ::v-deep .mnyHeaderMakeQuoteLeft.svg
+    transform: rotate(23deg)
+    height: 4vw
+
+  ::v-deep .mnyHeaderMakeQuoteRight.svg
+    transform: rotate(123deg)
+    height: 4vw
+
+  .mnyHeaderMakeSubtitle
+    margin: 0 auto
+    font-size: 1.25vw
+    text-align: center
+    width: 23%
 </style>
