@@ -53,6 +53,7 @@ export default {
     top: 140%
     left: 50%
     transform: translate(-50%, 140%)
+    height: 65vw
 
 @include for-tablet
   .mnySignupCmp
@@ -60,4 +61,5 @@ export default {
     top: 155%
     left: 50%
     transform: translate(-50%, 155%)
+    height: 14.7vw
 </style>

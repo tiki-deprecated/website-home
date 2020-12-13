@@ -1,8 +1,8 @@
 <template>
-  <div class="MnyWorkLearnBtnCnt">
+  <nuxt-link to="/" class="MnyWorkLearnBtnCnt">
     <div class="MnyWorkLearnBtnText">Learn more</div>
     <utils-svg-cmp name="money/sketch-arrow" class="MnyWorkLearnBtnArrow" />
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -24,10 +24,20 @@ export default {
   align-items: center
   justify-content: center
 
+.MnyWorkLearnBtnCnt:hover
+  background: $money-blue-dark-hlt
+
+
+.MnyWorkLearnBtnCnt, .MnyWorkLearnBtnCnt:hover, .MnyWorkLearnBtnCnt:visited, .MnyWorkLearnBtnCntText:link, .MnyWorkLearnBtnCnt:active
+  text-decoration: none
+
 .MnyWorkLearnBtnText
   font-family: $font-family-koara
   color: $money-blue-light
   text-align: right
+
+.MnyWorkLearnBtnText, .MnyWorkLearnBtnText:hover, .MnyWorkLearnBtnText:visited, .MnyWorkLearnBtnText:link, .MnyWorkLearnBtnText:active
+  text-decoration: none
 
 ::v-deep .MnyWorkLearnBtnArrow.svg
   fill: $money-blue-light

@@ -6,27 +6,62 @@
     </div>
     <div class="mnyShareBtnGroup">
       <div class="mnyShareBtnRow1">
-        <utils-svg-cmp
-          name="money/btn-twt"
-          class="mnyShareBtn mnyShareBtnTwt"
-        />
-        <utils-svg-cmp name="money/btn-ig" class="mnyShareBtn mnyShareBtnIg" />
+        <share-network
+          network="twitter"
+          :url="twitter.url"
+          :title="twitter.title"
+          :description="twitter.description"
+          :hashtags="twitter.hashtags"
+        >
+          <utils-svg-cmp
+            name="money/btn-twt"
+            class="mnyShareBtn mnyShareBtnTwt"
+          />
+        </share-network>
+        <a class="mnyShareBtnIgShare" @click="igShare">
+          <utils-svg-cmp
+            name="money/btn-ig"
+            class="mnyShareBtn mnyShareBtnIg"
+          />
+        </a>
       </div>
-      <utils-svg-cmp
-        name="money/btn-fb"
-        class="mnyShareBtn mnyShareBtnFb mnyShareBtnRow2"
-      />
+      <share-network
+        network="facebook"
+        :url="facebook.url"
+        :title="facebook.title"
+        :description="facebook.description"
+        :hashtags="facebook.hashtags"
+        class="mnyShareBtnRow2"
+      >
+        <utils-svg-cmp name="money/btn-fb" class="mnyShareBtn mnyShareBtnFb" />
+      </share-network>
       <div class="mnyShareBtnRow3">
-        <utils-svg-cmp name="money/btn-sh" class="mnyShareBtn mnyShareBtnSh" />
-        <utils-svg-cmp
-          name="money/btn-sh-lg"
-          class="mnyShareBtn mnyShareBtnShLg"
-        />
-        <utils-svg-cmp name="money/btn-li" class="mnyShareBtn mnyShareBtnLi" />
-        <utils-svg-cmp
-          name="money/btn-li-lg"
-          class="mnyShareBtn mnyShareBtnLiLg"
-        />
+        <a class="mnyShareBtnIgShare" @click="webShare">
+          <utils-svg-cmp
+            name="money/btn-sh"
+            class="mnyShareBtn mnyShareBtnSh"
+          />
+          <utils-svg-cmp
+            name="money/btn-sh-lg"
+            class="mnyShareBtn mnyShareBtnShLg"
+          />
+        </a>
+        <share-network
+          network="linkedin"
+          :url="linkedin.url"
+          :title="linkedin.title"
+          :description="linkedin.description"
+          :hashtags="linkedin.hashtags"
+        >
+          <utils-svg-cmp
+            name="money/btn-li"
+            class="mnyShareBtn mnyShareBtnLi"
+          />
+          <utils-svg-cmp
+            name="money/btn-li-lg"
+            class="mnyShareBtn mnyShareBtnLiLg"
+          />
+        </share-network>
       </div>
     </div>
   </div>
@@ -34,9 +69,100 @@
 
 <script>
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+
+const URL = 'https://mytiki.com/money'
+const TITLE = 'title goes here'
+const DESCRIPTION = 'description goes here'
+const HASHTAGS = 'hashtag1 hashtag2'
+
 export default {
   name: 'MnyShareCmp',
   components: { UtilsSvgCmp },
+  data() {
+    return {
+      facebook: {
+        url: URL,
+        title: TITLE,
+        description: DESCRIPTION,
+        hashtags: HASHTAGS,
+      },
+      instagram: {
+        url: URL,
+        title: TITLE,
+        description: DESCRIPTION,
+        hashtags: HASHTAGS,
+        profile: 'https://instagram.com/my.tiki',
+      },
+      twitter: {
+        url: URL,
+        title: TITLE,
+        description: DESCRIPTION,
+        hashtags: HASHTAGS,
+      },
+      linkedin: {
+        url: URL,
+        title: TITLE,
+        description: DESCRIPTION,
+        hashtags: HASHTAGS,
+      },
+      web: {
+        url: URL,
+        title: TITLE,
+        description: DESCRIPTION,
+        hashtags: HASHTAGS,
+      },
+    }
+  },
+  methods: {
+    copy(url) {
+      this.$toast.clear()
+      const input = document.createElement('textarea')
+      input.innerHTML = url
+      document.body.appendChild(input)
+      input.select()
+      document.execCommand('copy')
+      document.body.removeChild(input)
+      this.shownToast = this.$toast
+        .show('Link copied, now share.', {
+          position: 'bottom-right',
+        })
+        .goAway(5000)
+    },
+    share(title, url, description, hashtags) {
+      let text = description
+      if (hashtags) text = description + ' #' + hashtags.replace(' ', ' #')
+      navigator.share({ title, url, text })
+    },
+    canShare() {
+      return !!(process.client && navigator && navigator.share)
+    },
+    webShare(clickEvent) {
+      clickEvent.preventDefault()
+      if (process.client) {
+        if (navigator && navigator.share)
+          this.share(
+            this.web.title,
+            this.web.url,
+            this.web.description,
+            this.web.hashtags
+          )
+        else this.copy(this.web.url)
+      }
+    },
+    igShare(clickEvent) {
+      clickEvent.preventDefault()
+      if (process.client) {
+        if (navigator && navigator.share)
+          this.share(
+            this.instagram.title,
+            this.instagram.url,
+            this.instagram.description,
+            this.instagram.hashtags
+          )
+        else window.location.href = this.instagram.profile
+      }
+    },
+  },
 }
 </script>
 
@@ -61,6 +187,27 @@ export default {
 
 ::v-deep .mnyShareBtn.svg > .bkg
   fill: $money-blue-light
+
+::v-deep .mnyShareBtn.svg > .ico
+  fill: $money-blue-dark
+
+.mnyShareBtn:hover
+  animation: wiggle 0.75s infinite
+
+::v-deep .mnyShareBtn:hover.svg > .bkg
+  fill: $money-yellow-light
+
+@keyframes wiggle
+  0%
+    transform: rotate(0deg)
+  80%
+    transform: rotate(0deg)
+  85%
+    transform: rotate(10deg)
+  95%
+    transform: rotate(-10deg)
+  100%
+    transform: rotate(0deg)
 
 .mnyShareBtnRow1
   display: flex
