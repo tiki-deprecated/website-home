@@ -23,7 +23,6 @@ export default {
   },
   methods: {
     onYes(inputEvent) {
-      console.log('clicked')
       this.opt = true
       this.submit(this.opt)
     },
@@ -32,7 +31,8 @@ export default {
       this.submit(this.opt)
     },
     submit(opt) {
-      this.$emit('signupOpt', opt)
+      this.$store.commit('signup/setOpt', opt)
+      this.$store.commit('signup/setPosDone')
     },
   },
 }

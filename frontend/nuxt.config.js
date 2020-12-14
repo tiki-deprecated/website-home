@@ -134,4 +134,7 @@ export default {
    ** See https://axios.nuxtjs.org/
    */
   axios: {},
+  router: {
+    middleware: 'affiliate',
+  },
 }

@@ -1,32 +1,37 @@
 <template>
-  <div class="mnySignupContact">
-    <input
-      type="text"
-      placeholder="email or phone"
-      autocomplete="off"
-      autocapitalize="none"
-      class="mnySignupContactInput"
-      @input="onInput"
-      @keypress.enter="onSubmit"
-    />
-    <div
-      class="mnySignupContactSend"
-      :class="{
-        mnySignupContactSendReady: isReady,
-        mnySignupContactSendNotReady: !isReady,
-      }"
-      @click="onSubmit"
-    >
-      <utils-svg-cmp name="money/ico-send" class="mnySignupContactSendIco" />
+  <div class="mnySignupContactCnt">
+    <div class="mnySignupContactField">
+      <input
+        type="text"
+        placeholder="email or phone"
+        autocomplete="off"
+        autocapitalize="none"
+        class="mnySignupContactInput"
+        @input="onInput"
+        @keypress.enter="onSubmit"
+      />
+      <div
+        class="mnySignupContactSend"
+        :class="{
+          mnySignupContactSendReady: isReady,
+          mnySignupContactSendNotReady: !isReady,
+        }"
+        @click="onSubmit"
+      >
+        <utils-svg-cmp name="money/ico-send" class="mnySignupContactSendIco" />
+      </div>
     </div>
+    <mny-signup-secure-cmp class="mnySignupSecureCmp" />
   </div>
 </template>
 
 <script>
+import MnySignupSecureCmp from '~/components/money/MnySignupSecureCmp'
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
+
 export default {
   name: 'MnySignupContactCmp',
-  components: { UtilsSvgCmp },
+  components: { UtilsSvgCmp, MnySignupSecureCmp },
   data() {
     return {
       contact: '',
@@ -48,7 +53,10 @@ export default {
     },
     onSubmit(submitEvent) {
       submitEvent.preventDefault()
-      if (this.isReady) this.$emit('signupContact', this.contact)
+      if (this.isReady) {
+        this.$store.commit('signup/setContact', this.contact)
+        this.$store.commit('signup/setPosOpt')
+      }
     },
   },
 }
@@ -57,7 +65,7 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.mnySignupContact
+.mnySignupContactField
   display: flex
   align-items: center
 
@@ -101,7 +109,7 @@ export default {
   fill: $money-white
 
 @include for-phone
-  .mnySignupContact
+  .mnySignupContactCnt
     margin-top: 8vw
     width: 100%
 
@@ -122,8 +130,11 @@ export default {
   .mnySignupContactSendIco
     width: 8vw
 
+  .mnySignupSecureCmp
+    margin-top: 6vw
+
 @include for-tablet
-  .mnySignupContact
+  .mnySignupContactCnt
     margin: 0 auto
     width: 50%
 
@@ -143,4 +154,7 @@ export default {
 
   .mnySignupContactSendIco
     width: 1.75vw
+
+  .mnySignupSecureCmp
+    margin-top: 1.25vw
 </style>

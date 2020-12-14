@@ -7,6 +7,7 @@
       <mny-footer-cmp class="mnyFooterCmp" />
     </div>
     <mny-signup-cmp class="mnySignupCmp" />
+    <mny-popup-data-cmp class="mnyPopupDataCmp" />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import MnyWorkCmp from '@/components/money/MnyWorkCmp'
 import MnyShareCmp from '@/components/money/MnyShareCmp'
 import MnySignupCmp from '@/components/money/MnySignupCmp'
 import MnyFooterCmp from '@/components/money/MnyFooterCmp'
+import MnyPopupDataCmp from '@/components/money/MnyPopupDataCmp'
 
 export default {
   name: 'Money',
@@ -26,6 +28,7 @@ export default {
     MnyShareCmp,
     MnyWorkCmp,
     MnyHeaderCmp,
+    MnyPopupDataCmp,
   },
 }
 </script>
@@ -46,6 +49,10 @@ export default {
 .mnySignupCmp
   position: absolute
   z-index: 2
+
+.mnyPopupDataCmp
+  position: fixed
+  z-index: 9
 
 @include for-phone
   .mnySignupCmp

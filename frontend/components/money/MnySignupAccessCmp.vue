@@ -50,7 +50,8 @@ export default {
       if (this.isReady) this.submit(this.code)
     },
     submit(code) {
-      this.$emit('signupAccessCode', code)
+      this.$store.commit('signup/setCode', code)
+      this.$store.commit('signup/setPosContact')
     },
   },
 }

@@ -2,19 +2,10 @@
   <div class="mnySignupCnt">
     <mny-signup-ltd-cmp :class="{ mnySignupHide: isOpt || isDone }" />
     <mny-signup-tribe-cmp :class="{ mnySignupHide: !isOpt }" />
-    <mny-signup-access-cmp
-      :class="{ mnySignupHide: !isAccess }"
-      @signupAccessCode="onSignupAccessCode($event)"
-    />
-    <mny-signup-contact-cmp
-      :class="{ mnySignupHide: !isContact }"
-      @signupContact="onSignupContact($event)"
-    />
-    <mny-signup-opt-cmp
-      :class="{ mnySignupHide: !isOpt }"
-      @signupOpt="onSignupOpt($event)"
-    />
-    <mny-signup-done-cmp :opt="opt" :class="{ mnySignupHide: !isDone }" />
+    <mny-signup-access-cmp :class="{ mnySignupHide: !isAccess }" />
+    <mny-signup-contact-cmp :class="{ mnySignupHide: !isContact }" />
+    <mny-signup-opt-cmp :class="{ mnySignupHide: !isOpt }" />
+    <mny-signup-done-cmp :class="{ mnySignupHide: !isDone }" />
   </div>
 </template>
 
@@ -26,11 +17,6 @@ import MnySignupTribeCmp from '~/components/money/MnySignupTribeCmp'
 import MnySignupOptCmp from '~/components/money/MnySignupOptCmp'
 import MnySignupDoneCmp from '~/components/money/MnySignupDoneCmp'
 
-const STATE_ACCESS = 'access'
-const STATE_CONTACT = 'contact'
-const STATE_OPT = 'opt'
-const STATE_DONE = 'done'
-
 export default {
   name: 'MnySignupCmp',
   components: {
@@ -41,43 +27,18 @@ export default {
     MnySignupOptCmp,
     MnySignupDoneCmp,
   },
-  data() {
-    return {
-      state: STATE_ACCESS,
-      code: '',
-      contact: '',
-      opt: '',
-    }
-  },
   computed: {
     isAccess() {
-      return this.state === STATE_ACCESS
+      return this.$store.getters['signup/isPosAccess']
     },
     isContact() {
-      return this.state === STATE_CONTACT
+      return this.$store.getters['signup/isPosContact']
     },
     isOpt() {
-      return this.state === STATE_OPT
+      return this.$store.getters['signup/isPosOpt']
     },
     isDone() {
-      return this.state === STATE_DONE
-    },
-  },
-  methods: {
-    onSignupAccessCode(code) {
-      console.log('emitted code: ' + code)
-      this.code = code
-      this.state = STATE_CONTACT
-    },
-    onSignupContact(contact) {
-      console.log('emitted contact: ' + contact)
-      this.contact = contact
-      this.state = STATE_OPT
-    },
-    onSignupOpt(opt) {
-      console.log('emitted opt: ' + opt)
-      this.opt = opt
-      this.state = STATE_DONE
+      return this.$store.getters['signup/isPosDone']
     },
   },
 }

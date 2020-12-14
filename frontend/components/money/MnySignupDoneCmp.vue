@@ -23,10 +23,9 @@
 <script>
 export default {
   name: 'MnySignupDoneCmp',
-  props: {
-    opt: {
-      type: Boolean,
-      required: true,
+  computed: {
+    opt() {
+      return this.$store.state.signup.opt
     },
   },
 }
