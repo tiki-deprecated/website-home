@@ -1,34 +1,34 @@
 <template>
   <div class="mnyPageCnt">
     <div class="mnyPageStack">
-      <mny-header-cmp class="mnyHeaderCmp" />
-      <mny-work-cmp class="mnyWorkCmp" />
-      <mny-share-cmp class="mnyShareCmp" />
-      <mny-footer-cmp class="mnyFooterCmp" />
+      <header-money-cmp class="mnyHeaderCmp" />
+      <how-beta-cmp class="mnyWorkCmp" />
+      <social-share-cmp class="mnyShareCmp" />
+      <footer-cmp class="mnyFooterCmp" />
     </div>
-    <mny-signup-cmp class="mnySignupCmp" />
-    <mny-popup-data-cmp class="mnyPopupDataCmp" />
+    <form-affiliate-cmp class="mnySignupCmp" />
+    <popup-privacy-cmp class="mnyPopupDataCmp" />
   </div>
 </template>
 
 <script>
-import MnyHeaderCmp from '@/components/money/MnyHeaderCmp'
-import MnyWorkCmp from '@/components/money/MnyWorkCmp'
-import MnyShareCmp from '@/components/money/MnyShareCmp'
-import MnySignupCmp from '@/components/money/MnySignupCmp'
-import MnyFooterCmp from '@/components/money/MnyFooterCmp'
-import MnyPopupDataCmp from '@/components/money/MnyPopupDataCmp'
+import HeaderMoneyCmp from '@/components/tmp/header_money/HeaderMoneyCmp'
+import HowBetaCmp from '@/components/tmp/how_beta/HowBetaCmp'
+import SocialShareCmp from '@/components/tmp/social/SocialShareCmp'
+import FormAffiliateCmp from '@/components/tmp/form_affiliate/FormAffiliateCmp'
+import FooterCmp from '@/components/tmp/footer/FooterCmp'
+import PopupPrivacyCmp from '@/components/tmp/popup/PopupPrivacyCmp'
 
 export default {
   name: 'Money',
   layout: 'tiki',
   components: {
-    MnyFooterCmp,
-    MnySignupCmp,
-    MnyShareCmp,
-    MnyWorkCmp,
-    MnyHeaderCmp,
-    MnyPopupDataCmp,
+    FooterCmp,
+    FormAffiliateCmp,
+    SocialShareCmp,
+    HowBetaCmp,
+    HeaderMoneyCmp,
+    PopupPrivacyCmp,
   },
 }
 </script>
