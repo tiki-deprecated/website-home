@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import HeaderMoneyCmp from '@/components/tmp/header_money/HeaderMoneyCmp'
-import HowBetaCmp from '@/components/tmp/how_beta/HowBetaCmp'
-import SocialShareCmp from '@/components/tmp/social/SocialShareCmp'
-import FormAffiliateCmp from '@/components/tmp/form_affiliate/FormAffiliateCmp'
-import FooterCmp from '@/components/tmp/footer/FooterCmp'
-import PopupPrivacyCmp from '@/components/tmp/popup/PopupPrivacyCmp'
+import HeaderMoneyCmp from '@/components/header_money/HeaderMoneyCmp'
+import HowBetaCmp from '@/components/how_beta/HowBetaCmp'
+import SocialShareCmp from '@/components/social/SocialShareCmp'
+import FormAffiliateCmp from '@/components/form_affiliate/FormAffiliateCmp'
+import FooterCmp from '@/components/footer/FooterCmp'
+import PopupPrivacyCmp from '@/components/popup/PopupPrivacyCmp'
 
 export default {
   name: 'Money',

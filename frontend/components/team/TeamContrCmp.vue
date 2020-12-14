@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import TeamMemberCmp from '~/components/team/TeamMemberCmp'
+import TeamMemberCmp from '@/components/team/TeamMemberCmp'
 
 export default {
   name: 'TeamContrCmp',

@@ -63,9 +63,9 @@
 </template>
 
 <script>
-import UtilsTitleSubtitleExtendedCmp from '~/components/utils/UtilsTitleSubtitleExtendedCmp'
-import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
-import UtilsColoredStringCmp from '~/components/utils/UtilsColoredStringCmp'
+import UtilsTitleSubtitleExtendedCmp from '@/components/utils/UtilsTitleSubtitleExtendedCmp'
+import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import UtilsColoredStringCmp from '@/components/utils/UtilsColoredStringCmp'
 
 export default {
   name: 'ValuesCmp',

@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import TeamContrCmp from '~/components/team/TeamContrCmp'
-import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
-import UtilsButtonHCmp from '~/components/utils/UtilsButtonHCmp'
+import TeamContrCmp from '@/components/team/TeamContrCmp'
+import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import UtilsButtonHCmp from '@/components/utils/UtilsButtonHCmp'
 
 export default {
   name: 'TeamCmp',

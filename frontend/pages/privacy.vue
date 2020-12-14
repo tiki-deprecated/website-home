@@ -1,6 +1,10 @@
 <template>
   <div class="privacyPage">
-    <header-cmp v-if="cms.header != null" class="headerCmp" :cms="cms.header" />
+    <header-home-cmp
+      v-if="cms.header != null"
+      class="headerCmp"
+      :cms="cms.header"
+    />
     <div class="privacyCnt">
       <utils-title-subtitle-cmp
         :title="cms.title"
@@ -16,13 +20,13 @@
 </template>
 
 <script>
-import HeaderCmp from '~/components/header/HeaderCmp'
+import HeaderHomeCmp from '~/components/header_home/HeaderHomeCmp'
 import FooterCmp from '~/components/footer/FooterCmp'
 import UtilsTitleSubtitleCmp from '~/components/utils/UtilsTitleSubtitleCmp'
 
 export default {
   name: 'PrivacyPage',
-  components: { HeaderCmp, FooterCmp, UtilsTitleSubtitleCmp },
+  components: { HeaderHomeCmp, FooterCmp, UtilsTitleSubtitleCmp },
   async asyncData({ $content }) {
     const cms = await $content('privacy').fetch()
     return { cms }

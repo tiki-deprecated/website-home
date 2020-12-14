@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import UtilsAvatarCmp from '~/components/utils/UtilsAvatarCmp'
-import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
+import UtilsAvatarCmp from '@/components/utils/UtilsAvatarCmp'
+import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 
 export default {
   name: 'TeamMemberCmp',

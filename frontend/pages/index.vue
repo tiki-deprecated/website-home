@@ -1,33 +1,41 @@
 <template>
   <div class="indexPage">
-    <header-cmp v-if="cms.header != null" class="headerCmp" :cms="cms.header" />
+    <header-home-cmp
+      v-if="cms.header != null"
+      class="headerCmp"
+      :cms="cms.header"
+    />
     <div class="indexPageCnt">
-      <join-cmp v-if="cms.join != null" :cms="cms.join" class="joinCmp" />
-      <product-cmp
+      <form-signup-cmp
+        v-if="cms.join != null"
+        :cms="cms.join"
+        class="joinCmp"
+      />
+      <you-can-cmp
         v-if="cms.product != null"
         :cms="cms.product"
         class="productCmp"
       />
-      <learn-cmp v-if="cms.learn != null" :cms="cms.learn" class="learnCmp" />
+      <believe-cmp v-if="cms.learn != null" :cms="cms.learn" class="learnCmp" />
     </div>
     <footer-cmp v-if="cms.footer != null" class="footerCmp" :cms="cms.footer" />
   </div>
 </template>
 
 <script>
-import HeaderCmp from '~/components/header/HeaderCmp'
-import JoinCmp from '~/components/join/JoinCmp'
-import ProductCmp from '~/components/product/ProductCmp'
-import LearnCmp from '~/components/learn/LearnCmp'
+import HeaderHomeCmp from '~/components/header_home/HeaderHomeCmp'
+import FormSignupCmp from '~/components/form_signup/FormSignupCmp'
+import YouCanCmp from '~/components/you_can/YouCanCmp'
+import BelieveCmp from '~/components/believe/BelieveCmp'
 import FooterCmp from '~/components/footer/FooterCmp'
 
 export default {
   name: 'IndexPage',
   components: {
-    HeaderCmp,
-    JoinCmp,
-    ProductCmp,
-    LearnCmp,
+    HeaderHomeCmp,
+    FormSignupCmp,
+    YouCanCmp,
+    BelieveCmp,
     FooterCmp,
   },
   async asyncData({ $content }) {
