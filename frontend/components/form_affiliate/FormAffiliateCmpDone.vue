@@ -25,7 +25,7 @@ export default {
   name: 'FormAffiliateCmpDone',
   computed: {
     opt() {
-      return this.$store.state.signup.opt
+      return this.$store.state.form_affiliate.opt
     },
   },
 }

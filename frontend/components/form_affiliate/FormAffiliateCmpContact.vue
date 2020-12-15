@@ -19,7 +19,7 @@
         @click="onSubmit"
       >
         <utils-svg-cmp
-          name="money/ico-send"
+          name="icon/send"
           class="formAffiliateCmpContactSendIco"
         />
       </div>
@@ -57,8 +57,8 @@ export default {
     onSubmit(submitEvent) {
       submitEvent.preventDefault()
       if (this.isReady) {
-        this.$store.commit('signup/setContact', this.contact)
-        this.$store.commit('signup/setPosOpt')
+        this.$store.commit('form_affiliate/setContact', this.contact)
+        this.$store.commit('form_affiliate/setPosOpt')
       }
     },
   },

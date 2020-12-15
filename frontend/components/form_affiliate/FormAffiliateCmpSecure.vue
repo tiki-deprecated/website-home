@@ -1,13 +1,13 @@
 <template>
   <div class="formAffiliateCmpSecureCnt">
-    <utils-svg-cmp name="money/ico-lock" class="formAffiliateCmpSecureLock" />
+    <utils-svg-cmp name="icon/lock" class="formAffiliateCmpSecureLock" />
     <div class="formAffiliateCmpSecureText">
       Your information is 100% secure
     </div>
     <div class="formAffiliateCmpSecureHowCnt" @click="onClick">
       <div class="formAffiliateCmpSecureHowText">How</div>
       <utils-svg-cmp
-        name="money/ico-question"
+        name="icon/question"
         class="formAffiliateCmpSecureHowQuestion"
       />
     </div>
@@ -23,7 +23,7 @@ export default {
   methods: {
     onClick(clickEvent) {
       clickEvent.preventDefault()
-      this.$store.commit('privacy/showPopup', true)
+      this.$store.commit('popup/showPrivacy', true)
     },
   },
 }

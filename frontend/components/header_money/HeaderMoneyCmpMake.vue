@@ -3,11 +3,11 @@
     <div class="headerMoneyCmpMakeTitle">
       <div class="headerMoneyCmpMakeQuote">
         <utils-svg-cmp
-          name="money/sketch-quote"
+          name="sketch/quote"
           class="headerMoneyCmpMakeQuoteLeft"
         />
         <utils-svg-cmp
-          name="money/sketch-quote"
+          name="sketch/quote"
           class="headerMoneyCmpMakeQuoteRight"
         />
       </div>

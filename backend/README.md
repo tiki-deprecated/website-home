@@ -6,7 +6,7 @@ unauthorized use of contact info, it never leaves our of our cloud.
 All data always encrypted in transit and at rest.
 
 ## Functions
-- signup.js - receives either a user or buyer signup from the frontend
+- form_affiliate.js - receives either a user or buyer signup from the frontend
 applies some very basic cleaning/sanitization and sticks it in a
 dynamodb table. 
 

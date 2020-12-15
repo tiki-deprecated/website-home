@@ -1,74 +1,75 @@
 <template>
-  <div>
-    <div class="productCmpCnt">
-      <utils-title-subtitle-cmp
-        :v-if="cms.title != null"
-        :title="cms.title"
-        class="productTitleCmp"
-      />
-      <utils-colored-string-cmp
-        v-if="cms.features.one != null"
-        :highlight="cms.features.one.highlight"
-        :desc="cms.features.one.description"
-        :color="cms.features.one.color"
-        class="utilsColoredStringCmp"
-      />
-      <utils-colored-string-cmp
-        v-if="cms.features.two != null"
-        :highlight="cms.features.two.highlight"
-        :desc="cms.features.two.description"
-        :color="cms.features.two.color"
-        class="utilsColoredStringCmp"
-      />
-      <utils-colored-string-cmp
-        v-if="cms.features.three != null"
-        :highlight="cms.features.three.highlight"
-        :desc="cms.features.three.description"
-        :color="cms.features.three.color"
-        class="utilsColoredStringCmp"
-      />
+  <div class="youCanCnt">
+    <div class="youCanTitleCnt">
+      <utils-svg-cmp name="sketch/quote" class="youCanQuoteLeft" />
+      <div class="youCanTitleText">With TIKI, you can</div>
+      <utils-svg-cmp name="sketch/quote" class="youCanQuoteRight" />
     </div>
-    <utils-svg-cmp
-      v-if="cms.tick != null"
-      name="tick-left"
-      class="productCmpTick"
-      :style="{ fill: `${cms.tick}` }"
-    />
+    <you-can-cmp-features class="youCanCmpFeatures" />
+    <you-can-cmp-how class="youCanCmpHow" />
   </div>
 </template>
 
 <script>
-import UtilsTitleSubtitleCmp from '@/components/utils/UtilsTitleSubtitleCmp'
+import YouCanCmpFeatures from '@/components/you_can/YouCanCmpFeatures'
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
-import UtilsColoredStringCmp from '@/components/utils/UtilsColoredStringCmp'
+import YouCanCmpHow from '@/components/you_can/YouCanCmpHow'
 
 export default {
   name: 'YouCanCmp',
-  components: { UtilsTitleSubtitleCmp, UtilsSvgCmp, UtilsColoredStringCmp },
-  props: {
-    cms: {
-      type: Object,
-      required: true,
-    },
-  },
+  components: { YouCanCmpHow, YouCanCmpFeatures, UtilsSvgCmp },
 }
 </script>
 
 <style scoped lang="sass">
-.productCmpCnt
-  padding: 1em 1em
+@import "assets/styles/mixins"
 
-.productTitleCmp
-  margin-top: 1em
+.youCanCnt
+  background: $money-yellow-xxlight
 
-.productCmpTick
-  margin-top: 2.25em
-  width: 5.5em
+.youCanTitleText
+  font-family: $font-family-koara
+  font-weight: bold
+  color: $money-purple
 
-.utilsColoredStringCmp
-  margin-top: 2.5em
-  font-size: medium
+.youCanQuoteLeft
+  transform: rotate(23deg)
 
-::v-deep .productCmpTick.svg
-  fill: $green-dark
+.youCanQuoteRight
+  transform: rotate(130deg)
+
+@include for-phone
+  .youCanCnt
+    padding: 18vw 0 18vw 0
+
+  .youCanQuoteLeft, .youCanQuoteRight
+    height: 14vw
+    margin-top: -20vw
+
+  .youCanTitleText
+    font-size: 8vw
+    width: 35vw
+    text-align: center
+
+  .youCanTitleCnt
+    margin: 0 auto
+    display: flex
+    align-items: center
+    width: fit-content
+@include for-tablet
+  .youCanCnt
+    padding: 5vw 0 3vw 0
+
+  .youCanQuoteLeft, .youCanQuoteRight
+    height: 3.5vw
+    margin-top: -3.5vw
+
+  .youCanTitleText
+    font-size: 2.25vw
+
+  .youCanTitleCnt
+    margin: 0 auto
+    display: flex
+    align-items: center
+    width: fit-content
 </style>

@@ -1,19 +1,13 @@
 <template>
   <div class="formAffiliateCmpLtdCnt">
-    <utils-svg-cmp
-      name="money/sketch-signup"
-      class="formAffiliateCmpLtdSketch"
-    />
+    <utils-svg-cmp name="sketch/signup" class="formAffiliateCmpLtdSketch" />
     <div class="formAffiliateCmpLtdTextCnt">
       <div class="formAffiliateCmpLtdText">
         Beta access is limited to make sure everyone gets their fair (and
         significant) share.&nbsp;
         <b class="formAffiliateCmpLtdTextHlt"> Only 9,568 left</b>
       </div>
-      <utils-svg-cmp
-        name="money/paint-warn"
-        class="formAffiliateCmpLtdPaintWarn"
-      />
+      <utils-svg-cmp name="paint/warn" class="formAffiliateCmpLtdPaintWarn" />
     </div>
   </div>
 </template>

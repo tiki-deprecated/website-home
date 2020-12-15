@@ -1,6 +1,6 @@
 <template>
   <div class="socialShareCnt">
-    <utils-svg-cmp name="money/sketch-share" class="socialShareSketchShare" />
+    <utils-svg-cmp name="sketch/share" class="socialShareSketchShare" />
     <div class="socialShareFight">
       Together we can fight back against creepy tech.
     </div>
@@ -14,13 +14,13 @@
           :hashtags="twitter.hashtags"
         >
           <utils-svg-cmp
-            name="money/btn-twt"
+            name="button/twitter"
             class="socialShareBtn socialShareBtnTwt"
           />
         </share-network>
         <a class="socialShareBtnIgShare" @click="igShare">
           <utils-svg-cmp
-            name="money/btn-ig"
+            name="button/instagram"
             class="socialShareBtn socialShareBtnIg"
           />
         </a>
@@ -34,18 +34,18 @@
         class="socialShareBtnRow2"
       >
         <utils-svg-cmp
-          name="money/btn-fb"
+          name="button/facebook"
           class="socialShareBtn socialShareBtnFb"
         />
       </share-network>
       <div class="socialShareBtnRow3">
         <a class="socialShareBtnIgShare" @click="webShare">
           <utils-svg-cmp
-            name="money/btn-sh"
+            name="button/share"
             class="socialShareBtn socialShareBtnSh"
           />
           <utils-svg-cmp
-            name="money/btn-sh-lg"
+            name="button/share-lg"
             class="socialShareBtn socialShareBtnShLg"
           />
         </a>
@@ -57,11 +57,11 @@
           :hashtags="linkedin.hashtags"
         >
           <utils-svg-cmp
-            name="money/btn-li"
+            name="button/linkedin"
             class="socialShareBtn socialShareBtnLi"
           />
           <utils-svg-cmp
-            name="money/btn-li-lg"
+            name="button/linkedin-lg"
             class="socialShareBtn socialShareBtnLiLg"
           />
         </share-network>

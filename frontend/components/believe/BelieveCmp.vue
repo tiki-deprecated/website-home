@@ -1,125 +1,182 @@
 <template>
-  <div>
-    <div class="learnCmpCnt">
-      <utils-title-subtitle-cmp
-        v-if="cms.title != null"
-        :title="cms.title"
-        :subtitle="cms.subtitle"
-        class="utilsTitleSubtitleCmp"
-      />
-      <utils-button-h-cmp
-        v-if="cms.meet != null"
-        :cms="cms.meet"
-        class="utilsButtonHCmpMeet"
-      />
-      <utils-button-h-cmp
-        v-if="cms.join != null"
-        :cms="cms.join"
-        class="utilsButtonHCmpJoin"
-      />
-      <utils-title-subtitle-cmp
-        v-if="cms.follow.title != null"
-        :title="cms.follow.title"
-        :subtitle="cms.follow.subtitle"
-        class="utilsTitleSubtitleCmpFollow"
-      />
-      <div class="learnCmpFollowButtons">
-        <utils-button-v-cmp
-          v-if="cms.follow.button.one != null"
-          :cms="cms.follow.button.one"
-          class="utilsButtonVCmp"
-        />
-        <utils-button-v-cmp
-          v-if="cms.follow.button.two != null"
-          :cms="cms.follow.button.two"
-          class="utilsButtonVCmp"
-        />
-        <utils-button-v-cmp
-          v-if="cms.follow.button.three != null"
-          :cms="cms.follow.button.three"
-          class="utilsButtonVCmp"
-        />
-        <utils-button-v-cmp
-          v-if="cms.follow.button.four != null"
-          :cms="cms.follow.button.four"
-          class="utilsButtonVCmp"
-        />
-        <utils-button-v-cmp
-          v-if="cms.follow.button.five != null"
-          :cms="cms.follow.button.five"
-          class="utilsButtonVCmp"
-        />
-        <utils-button-v-cmp
-          v-if="cms.follow.button.six != null"
-          :cms="cms.follow.button.six"
-          class="utilsButtonVCmp"
-        />
-      </div>
+  <div class="believeCnt">
+    <div class="believeTitleCnt">
+      <utils-svg-cmp name="sketch/quote" class="believeQuoteLeft" />
+      <div class="believeTitleText">What we believe in</div>
+      <utils-svg-cmp name="sketch/quote" class="believeQuoteRight" />
     </div>
-    <utils-svg-cmp
-      v-if="cms.tick != null"
-      name="tick-left"
-      class="learnCmpTick"
-      :style="{ fill: `${cms.tick}` }"
-    />
+    <div class="believeSubtitle">
+      We believe users deserve to be in control of their data.
+    </div>
+    <div class="believeButtons">
+      <nuxt-link to="/meet" class="believeValue">
+        <div class="believeValueText">See our values</div>
+        <utils-svg-cmp name="sketch/arrow" class="believeValueArrow" />
+      </nuxt-link>
+      <a
+        href="https://angel.co/company/mytiki/jobs"
+        class="believeJoin"
+        target="_blank"
+      >
+        <div class="believeJoinText">Join us</div>
+        <utils-svg-cmp name="sketch/arrow" class="believeJoinArrow" />
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-import UtilsTitleSubtitleCmp from '@/components/utils/UtilsTitleSubtitleCmp'
-import UtilsButtonHCmp from '@/components/utils/UtilsButtonHCmp'
-import UtilsButtonVCmp from '@/components/utils/UtilsButtonVCmp'
-import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp.vue'
+import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 
 export default {
   name: 'BelieveCmp',
-  components: {
-    UtilsTitleSubtitleCmp,
-    UtilsButtonVCmp,
-    UtilsButtonHCmp,
-    UtilsSvgCmp,
-  },
-  props: {
-    cms: {
-      type: Object,
-      required: true,
-    },
-  },
+  components: { UtilsSvgCmp },
 }
 </script>
 
 <style scoped lang="sass">
-.learnCmpCnt
-  padding: 1em 1em
+@import "assets/styles/mixins"
 
-.utilsTitleSubtitleCmp
-  margin-top: 1em
+.believeCnt
+  background: $money-blue-xlight
 
-.utilsTitleSubtitleCmpFollow
-  margin-top: 3em
+.believeTitleText
+  font-family: $font-family-koara
+  font-weight: bold
+  color: $money-purple
 
-.learnCmpFollowButtons
+.believeQuoteLeft
+  transform: rotate(23deg)
+
+.believeQuoteRight
+  transform: rotate(130deg)
+
+.believeSubtitle
+  font-family: $font-family-montserrat
+  font-weight: 600
+  color: $money-purple
+  text-align: center
+
+.believeValue, .believeJoin
+  background: $money-blue-dark
+  margin: 0 auto
   display: flex
-  margin-top: 1.25em
+  align-items: center
   justify-content: center
-  flex-wrap: wrap
 
-.utilsButtonVCmp
-  margin: 0.75em 0.75em
+.believeValue:hover, .believeJoin:hover
+  background: $money-blue-dark-hlt
 
-.utilsButtonHCmpMeet
-  margin-top: 2.5em
+.believeValue, .believeJoin, .believeValue:hover, .believeJoin:hover, .believeValue:visited, .believeJoin:visited, .believeValue:link, .believeJoin:link, .believeValue:active, .believeJoin:active
+  text-decoration: none
 
-.utilsButtonHCmpJoin
-  margin-top: 1em
+.believeValueText, .believeJoinText
+  font-family: $font-family-koara
+  color: $money-blue-light
+  text-align: right
 
-.learnCmpTick
-  margin-top: 1.25em
-  width: 5.5em
-  transform: rotate(180deg)
-  margin-right: 0
-  margin-left: auto
+.believeValueText, .believeJoinText, .believeValueText:hover, .believeJoinText:hover, .believeValueText:visited, .believeJoinText:visited, .believeValueText:link, .believeJoinText:link, .believeValueText:active, .believeJoinText:active
+  text-decoration: none
 
-::v-deep .learnCmpTick.svg
-  fill: $green
+::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+  fill: $money-blue-light
+
+@include for-phone
+  .believeCnt
+    padding: 18vw 0 55vw 0
+
+  .believeQuoteLeft, .believeQuoteRight
+    height: 14vw
+    margin-top: -20vw
+
+  .believeTitleText
+    font-size: 8vw
+    width: 35vw
+    text-align: center
+
+  .believeTitleCnt
+    margin: 0 auto
+    display: flex
+    align-items: center
+    width: fit-content
+
+  .believeSubtitle
+    font-size: 4vw
+    margin: 8vw auto 0 auto
+    width: 75%
+
+  .believeButtons
+    margin: 15vw 0
+
+  .believeValue, .believeJoin
+    height: 14vw
+    border-radius: 4vw
+    width: 60%
+    margin: 2vw auto
+
+  .believeValueText
+    font-size: 5.5vw
+    width: 66%
+
+  .believeJoinText
+    font-size: 5.5vw
+    width: 53%
+
+  .believeValueArrow
+    margin-left: 10%
+
+  .believeJoinArrow
+    margin-left: 22%
+
+  ::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+    height: 50%
+@include for-tablet
+  .believeCnt
+    padding: 5vw 0 3vw 0
+
+  .believeQuoteLeft, .believeQuoteRight
+    height: 3.5vw
+    margin-top: -3.5vw
+
+  .believeTitleText
+    font-size: 2.25vw
+
+  .believeTitleCnt
+    margin: 0 auto
+    display: flex
+    align-items: center
+    width: fit-content
+
+  .believeButtons
+    display: flex
+    margin-top: 2vw
+    align-items: center
+    justify-content: center
+
+  .believeSubtitle
+    font-size: 1.25vw
+    margin-top: 1.25vw
+
+  .believeValue, .believeJoin
+    height: 3vw
+    border-radius: 0.75vw
+    width: 15%
+    margin: 0 0.5vw
+
+  .believeValueText
+    font-size: 1.25vw
+    width: 65%
+
+  .believeJoinText
+    font-size: 1.25vw
+    width: 50%
+
+  .believeValueArrow
+    margin-left: 8%
+
+  .believeJoinArrow
+    margin-left: 20%
+
+  ::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+    height: 50%
 </style>

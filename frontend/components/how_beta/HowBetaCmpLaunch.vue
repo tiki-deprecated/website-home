@@ -1,8 +1,8 @@
 <template>
   <div class="howBetaCmpLaunchCnt">
-    <utils-svg-cmp name="money/bkg-launch" class="howBetaCmpLaunchBkgLaunch" />
+    <utils-svg-cmp name="background/launch" class="howBetaCmpLaunchBkgLaunch" />
     <utils-svg-cmp
-      name="money/bkg-launch-lg"
+      name="background/launch-lg"
       class="howBetaCmpLaunchBkgLaunchLg"
     />
     <div class="howBetaCmpLaunchText">

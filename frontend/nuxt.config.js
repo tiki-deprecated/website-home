@@ -26,7 +26,7 @@ export default {
         name: 'mytiki.com',
         content: "Tiki. It's Your Data",
       },
-      { name: 'title', property: 'og:title', content: 'Tiki' },
+      { name: 'title', property: 'og:title', content: 'TIKI' },
       {
         property: 'og:description',
         content:

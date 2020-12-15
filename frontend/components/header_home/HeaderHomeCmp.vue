@@ -1,27 +1,38 @@
 <template>
-  <div>
-    <div class="headerCmpCnt">
-      <nuxt-link to="/">
-        <utils-svg-cmp
-          v-if="cms.logo != null"
-          :name="cms.logo"
-          class="utilsSvgCmp headerCmpLogo"
-        />
-      </nuxt-link>
-      <nuxt-link to="/">
-        <utils-svg-cmp
-          v-if="cms.icon != null"
-          :name="cms.icon"
-          class="utilsSvgCmp headerCmpIcon"
-        />
-      </nuxt-link>
+  <div class="headerHomeCnt">
+    <utils-svg-cmp name="background/header-2-lg" class="headerHomeBkgImgLg" />
+    <utils-svg-cmp name="background/header-2" class="headerHomeBkgImg" />
+    <div class="headerHomeContent">
+      <div class="headerHomeContentWrapper">
+        <div class="headerHomeNav">
+          <utils-svg-cmp name="tiki/logo" class="headerHomeLogo" />
+          <div class="headerHomeNavRight">
+            <nuxt-link
+              :to="{ path: '/', hash: '#mission' }"
+              class="headerLinkMission"
+              >Our mission
+            </nuxt-link>
+            <nuxt-link
+              :to="{ path: '/', hash: '#signup' }"
+              class="headerLinkSignup headerLinkSignupNav"
+              >Sign up
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="headerHomeText">
+          <div class="headerHomeTitle">It's your data. Get paid for it.</div>
+          <div class="headerHomeSubtitle">
+            Your data is worth thousands a year. Why aren’t you getting your
+            fair share? Take back control. Get paid. Tiki’s got your back.
+          </div>
+          <nuxt-link
+            :to="{ path: '/', hash: '#signup' }"
+            class="headerLinkSignup"
+            >Sign up
+          </nuxt-link>
+        </div>
+      </div>
     </div>
-    <utils-svg-cmp
-      v-if="cms.tick != null"
-      name="tick-left"
-      class="utilsSvgCmp headerCmpTick"
-      :style="{ fill: `${cms.tick}` }"
-    />
   </div>
 </template>
 
@@ -31,48 +42,157 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp.vue'
 export default {
   name: 'HeaderHomeCmp',
   components: { UtilsSvgCmp },
-  props: {
-    cms: {
-      type: Object,
-      required: true,
-    },
-  },
 }
 </script>
 
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.headerCmpCnt
+.headerHomeCnt
+  background: $money-yellow-light
+  position: relative
+  width: 100%
+
+.headerHomeBkgImgLg, .headerHomeBkgImg
+  position: absolute
+  z-index: 1
+
+.headerHomeContent
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+  height: 100%
+  width: 100%
+
+.headerHomeContentWrapper
+  position: relative
+
+.headerHomeTitle
+  font-family: $font-family-montserrat
+  font-weight: 600
+
+.headerHomeText
+  font-family: $font-family-montserrat
+  font-weight: 600
+
+::v-deep .headerHomeBkgImgLg.svg > .layer1, ::v-deep .headerHomeBkgImgLg.svg > .lens, ::v-deep .headerHomeBkgImg.svg > .layer1, ::v-deep .headerHomeBkgImg.svg > .lens
+  fill: $money-orange
+
+::v-deep .headerHomeBkgImgLg.svg > .layer2, ::v-deep .headerHomeBkgImg.svg > .layer2
+  fill: $money-yellow-xlight
+
+::v-deep .headerHomeBkgImgLg.svg > .frames, ::v-deep .headerHomeBkgImg.svg > .frames
+  fill: $money-black-dark
+
+::v-deep .headerHomeBkgImgLg.svg > .pineapple, ::v-deep .headerHomeBkgImg.svg > .pineapple
+  fill: $money-black-light
+
+::v-deep .headerHomeLogoLg.svg, ::v-deep .headerHomeLogo.svg
+  fill: $money-black-dark
+
+.headerHomeNav
   display: flex
-  justify-content: space-between
   align-items: center
-  margin: 1em
+  justify-content: space-between
 
-.headerCmpLogo
-  width: 4.75em
+.headerHomeNavRight
+  display: flex
+  align-items: center
 
-::v-deep .headerCmpLogo.svg
-  fill: $blue
+.headerLinkMission
+  font-family: $font-family-montserrat
+  color: $money-black-dark
+  text-decoration: none
+  font-weight: 600
 
-.headerCmpIcon
-  width: 3em
+.headerLinkSignup
+  font-family: $font-family-montserrat
+  color: $money-white
+  text-decoration: none
+  font-weight: 600
+  background: $money-red
 
-.headerCmpTick
-  width: 5.5em
+.headerLinkMission:hover, .headerLinkMission:visited, .headerLinkMission:link, .headerLinkMission:active, .headerLinkSignup:hover, .headerLinkSignup:visited, .headerLinkSignup:link, .headerLinkSignup:active
+  text-decoration: none
 
-::v-deep .headerCmpTick.svg
-  fill: $orange
+@include for-phone
+  .headerHomeCnt
+    height: 145vw
+
+  .headerLinkSignupNav
+    display: none
+
+  .headerHomeBkgImgLg
+    display: none
+
+  ::v-deep .headerHomeBkgImg.svg
+    height: 50vw
+    right: 0
+    bottom: 15%
+
+  ::v-deep .headerHomeLogo.svg
+    height: 8vw
+
+  .headerHomeContentWrapper
+    padding: 4vw
+
+  .headerHomeText
+    margin: 13vw 0 0 0
+
+  .headerHomeTitle
+    font-size: 10vw
+    width: 90%
+
+  .headerHomeSubtitle
+    font-size: 5vw
+    margin-top: 5vw
+    margin-bottom: 12vw
+
+  .headerLinkSignup
+    font-size: 5vw
+    padding: 2vw 10vw
+    border-radius: 2.5vw
+
+  .headerLinkMission
+    font-size: 5vw
 
 @include for-tablet
-  .headerCmpCnt
-    margin: 1.5em 0
+  .headerHomeCnt
+    height: 25vw
 
-@include for-tablet
-  .headerCmpLogo
-    width: 5.25em
+  .headerHomeBkgImg
+    display: none
 
-@include for-tablet
-  .headerCmpIcon
-    width: 3.25em
+  ::v-deep .headerHomeBkgImgLg.svg
+    height: 23vw
+    right: 0
+    top: 5%
+
+  ::v-deep .headerHomeLogo.svg
+    height: 2vw
+
+  .headerHomeContentWrapper
+    padding: 1.5vw
+
+  .headerHomeText
+    margin: 5vw 0 0 5vw
+    width: 42%
+
+  .headerHomeTitle
+    font-size: 2.75vw
+
+  .headerHomeSubtitle
+    font-size: 1vw
+    margin-top: 1vw
+    margin-bottom: 3vw
+
+  .headerLinkSignup
+    font-size: 1vw
+    padding: 0.5vw 1.75vw
+    border-radius: 0.6vw
+
+  .headerLinkMission
+    font-size: 1vw
+    margin-right: 3vw
 </style>

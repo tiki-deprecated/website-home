@@ -1,7 +1,7 @@
 <template>
   <nuxt-link to="/" class="HowBetaCmpLearnBtnCnt">
     <div class="HowBetaCmpLearnBtnText">Learn more</div>
-    <utils-svg-cmp name="money/sketch-arrow" class="HowBetaCmpLearnBtnArrow" />
+    <utils-svg-cmp name="sketch/arrow" class="HowBetaCmpLearnBtnArrow" />
   </nuxt-link>
 </template>
 
@@ -26,7 +26,6 @@ export default {
 
 .HowBetaCmpLearnBtnCnt:hover
   background: $money-blue-dark-hlt
-
 
 .HowBetaCmpLearnBtnCnt, .HowBetaCmpLearnBtnCnt:hover, .HowBetaCmpLearnBtnCnt:visited, .HowBetaCmpLearnBtnCntText:link, .HowBetaCmpLearnBtnCnt:active
   text-decoration: none

@@ -2,8 +2,8 @@
   <div class="headerMoneyCmpAmtCnt">
     <div class="headerMoneyCmpAmtTop">Companies will make</div>
     <div class="headerMoneyCmpAmtMdl">
-      <utils-svg-cmp name="money/paint-hlt" class="headerMoneyCmpAmtPaintHlt" />
-      <div class="headerMoneyCmpAmtMdlText">$370 BILLION</div>
+      <utils-svg-cmp name="paint/highlight" class="headerMoneyCmpAmtPaintHlt" />
+      <div class="headerMoneyCmpAmtMdlText">$382 BILLION</div>
     </div>
     <div class="headerMoneyCmpAmtBtm">
       from our data <b style="font-weight: 900">this year</b>
@@ -26,7 +26,7 @@ export default {
 .headerMoneyCmpAmtCnt
   font-family: $font-family-nunito
   font-weight: bold
-  color: $money-yellow-xlight
+  color: $money-yellow-neon
   position: relative
 
 .headerMoneyCmpAmtTop

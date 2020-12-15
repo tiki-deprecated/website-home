@@ -3,11 +3,11 @@
     <div class="headerMoneyStack">
       <div class="headerMoneyTop">
         <utils-svg-cmp
-          name="money/bkg-header"
+          name="background/header-1"
           class="headerMoneyTopBkgHeader"
         />
         <utils-svg-cmp
-          name="money/bkg-header-lg"
+          name="background/header-1-lg"
           class="headerMoneyTopBkgHeaderLg"
         />
         <div class="headerMoneyTopCnt">
@@ -19,7 +19,7 @@
         <header-money-cmp-make class="headerMoneyMakeCmp" />
       </div>
     </div>
-    <utils-svg-cmp name="money/pineapple" class="headerMoneyPineapple" />
+    <utils-svg-cmp name="tiki/pineapple" class="headerMoneyPineapple" />
   </div>
 </template>
 

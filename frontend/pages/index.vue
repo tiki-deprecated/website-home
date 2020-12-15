@@ -1,70 +1,110 @@
 <template>
   <div class="indexPage">
-    <header-home-cmp
-      v-if="cms.header != null"
-      class="headerCmp"
-      :cms="cms.header"
-    />
-    <div class="indexPageCnt">
-      <form-signup-cmp
-        v-if="cms.join != null"
-        :cms="cms.join"
-        class="joinCmp"
-      />
-      <you-can-cmp
-        v-if="cms.product != null"
-        :cms="cms.product"
-        class="productCmp"
-      />
-      <believe-cmp v-if="cms.learn != null" :cms="cms.learn" class="learnCmp" />
+    <div class="indexPageStack">
+      <header-home-cmp class="headerHomeCmp" />
+      <div class="whyDivider"></div>
+      <you-can-cmp class="youCanCmp" />
+      <form-signup-cmp class="formSignupCmp" />
+      <believe-cmp class="believeCmp" />
+      <social-follow-cmp class="socialFollowCmp" />
+      <footer-cmp class="footerCmp" />
     </div>
-    <footer-cmp v-if="cms.footer != null" class="footerCmp" :cms="cms.footer" />
+    <why-cmp class="whyCmp" />
+    <how-beta-cmp-launch class="howBetaCmpLaunch" />
+    <popup-privacy-cmp class="mnyPopupDataCmp" />
   </div>
 </template>
 
 <script>
+import HowBetaCmpLaunch from '~/components/how_beta/HowBetaCmpLaunch'
 import HeaderHomeCmp from '~/components/header_home/HeaderHomeCmp'
-import FormSignupCmp from '~/components/form_signup/FormSignupCmp'
+import WhyCmp from '~/components/why/WhyCmp'
 import YouCanCmp from '~/components/you_can/YouCanCmp'
+import FormSignupCmp from '~/components/form_signup/FormSignupCmp'
 import BelieveCmp from '~/components/believe/BelieveCmp'
 import FooterCmp from '~/components/footer/FooterCmp'
+import PopupPrivacyCmp from '~/components/popup/PopupPrivacyCmp'
+import SocialFollowCmp from '~/components/social/SocialFollowCmp'
 
 export default {
   name: 'IndexPage',
   components: {
     HeaderHomeCmp,
-    FormSignupCmp,
+    WhyCmp,
     YouCanCmp,
+    FormSignupCmp,
     BelieveCmp,
     FooterCmp,
-  },
-  async asyncData({ $content }) {
-    const cms = await $content('index').fetch()
-    return { cms }
+    PopupPrivacyCmp,
+    HowBetaCmpLaunch,
+    SocialFollowCmp,
   },
 }
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
 @import "assets/styles/mixins"
 
 .indexPage
   width: 100%
   position: relative
 
-.indexPageCnt
-  margin: 0 auto 0 auto
+.indexPageStack
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1
 
-.joinCmp, .productCmp, .learnCmp
-  margin-top: 1em
+.whyCmp
+  position: absolute
+  z-index: 2
+
+.mnyPopupDataCmp
+  position: fixed
+  z-index: 9
+
+.howBetaCmpLaunch
+  position: absolute
+  z-index: 3
+
+.whyDivider
+  position: relative
+
+@include for-phone
+  .whyDivider
+    height: 100vw
+
+  .whyCmp
+    top: 109vw
+    left: 50%
+    transform: translate(-50%, 0)
+    height: 130vw
+
+  .believeCmp
+    height: 110vw
+
+  .howBetaCmpLaunch
+    top: 595vw
+    left: 0
 
 @include for-tablet
-  .indexPage
-    max-width: 50%
-    margin: 0 auto
+  .whyDivider
+    height: 22vw
 
-@include for-desktop
-  .indexPage
-    max-width: 35%
-    margin: 0 auto
+  .whyCmp
+    top: 22vw
+    left: 50%
+    transform: translate(-50%, 0)
+    height: 18vw
+
+  .formSignupCmp
+    height: 15.75vw
+
+  .believeCmp
+    height: 20vw
+
+  .howBetaCmpLaunch
+    top: 104vw
+    left: 0
 </style>

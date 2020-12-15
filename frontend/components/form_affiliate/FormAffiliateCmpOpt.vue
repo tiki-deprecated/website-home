@@ -1,11 +1,11 @@
 <template>
   <div class="formAffiliateCmpOptCnt">
     <div @click="onYes">
-      <utils-svg-cmp name="money/btn-check" class="formAffiliateCmpOptCheck" />
+      <utils-svg-cmp name="button/check" class="formAffiliateCmpOptCheck" />
       <div class="formAffiliateCmpOptText">YES</div>
     </div>
     <div @click="onNo">
-      <utils-svg-cmp name="money/btn-x" class="formAffiliateCmpOptX" />
+      <utils-svg-cmp name="button/x" class="formAffiliateCmpOptX" />
       <div class="formAffiliateCmpOptText">NO</div>
     </div>
   </div>
@@ -32,8 +32,8 @@ export default {
       this.submit(this.opt)
     },
     submit(opt) {
-      this.$store.commit('signup/setOpt', opt)
-      this.$store.commit('signup/setPosDone')
+      this.$store.commit('form_affiliate/setOpt', opt)
+      this.$store.commit('form_affiliate/setPosDone')
     },
   },
 }

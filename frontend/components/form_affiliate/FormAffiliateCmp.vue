@@ -29,16 +29,16 @@ export default {
   },
   computed: {
     isAccess() {
-      return this.$store.getters['signup/isPosAccess']
+      return this.$store.getters['form_affiliate/isPosAccess']
     },
     isContact() {
-      return this.$store.getters['signup/isPosContact']
+      return this.$store.getters['form_affiliate/isPosContact']
     },
     isOpt() {
-      return this.$store.getters['signup/isPosOpt']
+      return this.$store.getters['form_affiliate/isPosOpt']
     },
     isDone() {
-      return this.$store.getters['signup/isPosDone']
+      return this.$store.getters['form_affiliate/isPosDone']
     },
   },
 }

@@ -1,66 +1,38 @@
 <template>
-  <div>
-    <div class="joinCmpCnt">
-      <utils-title-subtitle-cmp
-        v-if="cms.title != null"
-        :title="cms.title"
-        :subtitle="cms.subtitle"
-        class="utilsTitleSubtitleCmp"
-      />
-      <div class="joinCmpVid">
-        <utils-video-cmp
-          v-if="cms.youtube != null"
-          :id="cms.youtube"
-          class="utilsVidCmp"
-        />
-        <utils-share-cmp
-          v-if="cms.share != null"
-          class="utilsShareCmp"
-          :cms="cms.share"
-        />
-      </div>
-      <utils-signup-cmp
-        v-if="cms.cta != null"
-        :title="cms.cta"
-        :disclaimer="cms.disclaimer"
-        class="utilsSignupCmp"
-        @utilsSignupCmpSubmit="utilsSignupCmpSubmit"
-      />
-    </div>
-    <utils-svg-cmp
-      v-if="cms.tick != null"
-      name="tick-left"
-      class="joinCmpTick"
-      :style="{ fill: `${cms.tick}` }"
-    />
+  <div class="formSignupCnt">
+    <form-signup-cmp-ltd :class="{ formSignupHide: isOpt || isDone }" />
+    <form-signup-cmp-tribe :class="{ formSignupHide: !isOpt }" />
+    <form-signup-cmp-contact :class="{ formSignupHide: !isContact }" />
+    <form-signup-cmp-opt :class="{ formSignupHide: !isOpt }" />
+    <form-signup-cmp-done :class="{ formSignupHide: !isDone }" />
   </div>
 </template>
 
 <script>
-import UtilsTitleSubtitleCmp from '@/components/utils/UtilsTitleSubtitleCmp'
-import UtilsVideoCmp from '@/components/utils/UtilsVideoCmp'
-import UtilsSignupCmp from '@/components/utils/UtilsSignupCmp'
-import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
-import UtilsShareCmp from '@/components/utils/UtilsShareCmp'
+import FormSignupCmpLtd from '@/components/form_signup/FormSignupCmpLtd'
+import FormSignupCmpContact from '@/components/form_signup/FormSignupCmpContact'
+import FormSignupCmpTribe from '@/components/form_signup/FormSignupCmpTribe'
+import FormSignupCmpOpt from '@/components/form_signup/FormSignupCmpOpt'
+import FormSignupCmpDone from '@/components/form_signup/FormSignupCmpDone'
 
 export default {
   name: 'FormSignupCmp',
   components: {
-    UtilsTitleSubtitleCmp,
-    UtilsVideoCmp,
-    UtilsSignupCmp,
-    UtilsSvgCmp,
-    UtilsShareCmp,
+    FormSignupCmpLtd,
+    FormSignupCmpContact,
+    FormSignupCmpTribe,
+    FormSignupCmpOpt,
+    FormSignupCmpDone,
   },
-  props: {
-    cms: {
-      type: Object,
-      required: true,
+  computed: {
+    isContact() {
+      return this.$store.getters['form_signup/isPosContact']
     },
-  },
-  methods: {
-    utilsSignupCmpSubmit() {
-      this.$emit('userSignupCmpSubmit')
+    isOpt() {
+      return this.$store.getters['form_signup/isPosOpt']
+    },
+    isDone() {
+      return this.$store.getters['form_signup/isPosDone']
     },
   },
 }
@@ -69,29 +41,18 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.joinCmpCnt
-  padding: 1em 1em
+.formSignupCnt
+  position: relative
+  background: $money-yellow
 
-.utilsSignupCmp
-  margin-top: 3em
+.formSignupHide
+  display: none
 
-.utilsVidCmp
-  margin-top: 3em
+@include for-phone
+  .formSignupCnt
+    padding: 7vw 5vw
 
-.joinCmpTick
-  margin-top: 2.25em
-  width: 5.5em
-  transform: rotate(180deg)
-  margin-right: 0
-  margin-left: auto
-
-::v-deep .joinCmpTick.svg
-  fill: $blue
-
-.utilsShareCmp
-  margin-top: 0.5em
-
-.joinCmpVid
-  width: 100%
-  margin: 0 auto
+@include for-tablet
+  .formSignupCnt
+    padding: 3vw 3vw
 </style>

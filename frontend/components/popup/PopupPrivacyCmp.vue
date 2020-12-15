@@ -7,7 +7,7 @@
     <div class="popupPrivacyWrapper" @click="ignore">
       <div class="popupPrivacyCnt">
         <div @click="close">
-          <utils-svg-cmp name="money/ico-x" class="popupPrivacyIcoX" />
+          <utils-svg-cmp name="icon/x" class="popupPrivacyIcoX" />
         </div>
         <div class="popupPrivacyTitle">How we use your data</div>
         <div class="popupPrivacyText">
@@ -40,7 +40,7 @@ export default {
   components: { UtilsSvgCmp },
   computed: {
     show() {
-      return this.$store.state.privacy.popup
+      return this.$store.state.popup.privacy
     },
   },
   methods: {
@@ -51,7 +51,7 @@ export default {
     close(clickEvent) {
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
-      this.$store.commit('privacy/showPopup', false)
+      this.$store.commit('popup/showPrivacy', false)
     },
   },
 }

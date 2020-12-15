@@ -17,10 +17,7 @@
       }"
       @click="onSubmit"
     >
-      <utils-svg-cmp
-        name="money/ico-send"
-        class="formAffiliateCmpCodeSendIco"
-      />
+      <utils-svg-cmp name="icon/send" class="formAffiliateCmpCodeSendIco" />
     </div>
   </div>
 </template>
@@ -54,8 +51,8 @@ export default {
       if (this.isReady) this.submit(this.code)
     },
     submit(code) {
-      this.$store.commit('signup/setCode', code)
-      this.$store.commit('signup/setPosContact')
+      this.$store.commit('form_affiliate/setCode', code)
+      this.$store.commit('form_affiliate/setPosContact')
     },
   },
 }
