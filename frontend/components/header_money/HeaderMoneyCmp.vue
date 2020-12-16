@@ -11,7 +11,9 @@
           class="headerMoneyTopBkgHeaderLg"
         />
         <div class="headerMoneyTopCnt">
-          <utils-svg-cmp name="tiki/logo" class="headerMoneyTopLogo" />
+          <nuxt-link to="/">
+            <utils-svg-cmp name="tiki/logo" class="headerMoneyTopLogo" />
+          </nuxt-link>
           <header-money-cmp-amt class="headerCompaniesAmountCmp" />
         </div>
       </div>
@@ -39,7 +41,7 @@ export default {
 
 .headerMoneyCnt
   position: relative
-  background: $money-blue-light
+  background: $blue-light
 
 .headerMoneyTop
   position: relative
@@ -77,34 +79,34 @@ export default {
   z-index: 2
 
 ::v-deep .headerMoneyTopBkgHeader.svg > .layer1, ::v-deep .headerMoneyTopBkgHeaderLg.svg > .layer1
-  fill: $money-yellow-light
+  fill: $yellow-light
 
 ::v-deep .headerMoneyTopBkgHeader.svg > .layer2, ::v-deep .headerMoneyTopBkgHeaderLg.svg > .layer2
-  fill: $money-red-dark
+  fill: $red-dark
 
 ::v-deep .headerMoneyTopBkgHeader.svg > .layer3, ::v-deep .headerMoneyTopBkgHeaderLg.svg > .layer3
-  fill: $money-orange
+  fill: $orange
 
 ::v-deep .headerMoneyPineapple.svg > .layer1
-  fill: $money-pink
+  fill: $pink
 
 ::v-deep .headerMoneyPineapple.svg > .layer2
-  fill: $money-orange
+  fill: $orange
 
 ::v-deep .headerMoneyPineapple.svg > .pineapple
-  fill: $money-black-light
+  fill: $black-light
 
 ::v-deep .headerMoneyPineapple.svg > .frames
-  fill: $money-black-dark
+  fill: $black-dark
 
 ::v-deep .headerMoneyPineapple.svg > .lens
-  fill: $money-orange
+  fill: $orange
 
 ::v-deep .headerMoneyPineapple.svg > .paint
-  fill: $money-blue-dark
+  fill: $blue-dark
 
 ::v-deep .headerMoneyPineapple.svg > .text
-  fill: $money-yellow-light
+  fill: $yellow-light
 
 @include for-phone
   .headerMoneyCnt

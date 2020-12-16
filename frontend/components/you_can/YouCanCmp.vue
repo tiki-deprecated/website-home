@@ -25,12 +25,12 @@ export default {
 @import "assets/styles/mixins"
 
 .youCanCnt
-  background: $money-yellow-xxlight
+  background: $yellow-xxlight
 
 .youCanTitleText
   font-family: $font-family-koara
   font-weight: bold
-  color: $money-purple
+  color: $purple
 
 .youCanQuoteLeft
   transform: rotate(23deg)

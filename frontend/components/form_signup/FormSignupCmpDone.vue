@@ -38,12 +38,12 @@ export default {
   display: none
 
 .formSignupCmpDoneTitle
-  color: $money-green
+  color: $green
   font-family: $font-family-montserrat
   font-weight: 600
 
 .formSignupCmpDoneText
-  color: $money-blue-dark
+  color: $blue-dark
   font-family: $font-family-nunito
   font-weight: 700
 

@@ -44,29 +44,29 @@ export default {
   z-index: 1
 
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .bkg, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .bkg
-  fill: $money-blue-light
+  fill: $blue-light
 
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .blob1, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .blob1
-  fill: $money-pink
+  fill: $pink
 
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .blob2, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .blob2
-  fill: $money-orange
+  fill: $orange
 
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .paint, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .paint
-  fill: $money-yellow-light
+  fill: $yellow-light
 
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .date, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .date
-  fill: $money-blue-dark
+  fill: $blue-dark
 
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .launch, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .launch
-  fill: $money-pink
+  fill: $pink
 
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .bulb, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .bulb
-  fill: $money-black-dark
+  fill: $black-dark
 
 .howBetaCmpLaunchText
   font-family: $font-family-montserrat
-  color: $money-purple
+  color: $purple
   text-align: center
   position: absolute
   font-weight: 600
@@ -120,7 +120,7 @@ export default {
     display: block
 
   .howBetaCmpLaunchContactHlt
-    color: $money-orange
+    color: $orange
     font-weight: 600
     text-decoration: none
 </style>

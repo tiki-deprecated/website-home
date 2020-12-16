@@ -62,7 +62,6 @@ export default {
    */
   css: [
     '@/assets/styles/theme.sass',
-    '@/assets/styles/theme-money.sass',
     '@/assets/fonts/gadugi/Gadugi.css',
     '@/assets/fonts/koara/Koara.css',
     '@/assets/fonts/montserrat/Montserrat.css',
@@ -105,6 +104,7 @@ export default {
     '@nuxtjs/axios',
     'vue-social-sharing/nuxt',
     '@nuxtjs/toast',
+    'vue-scrollto/nuxt',
   ],
   /*
    ** Content module configuration

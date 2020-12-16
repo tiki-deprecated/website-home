@@ -33,17 +33,17 @@ export default {
 @import "assets/styles/mixins"
 
 .whyCnt
-  background: $money-blue-dark
+  background: $blue-dark
 
 .whyTitle
   font-family: $font-family-montserrat
   font-weight: 600
-  color: $money-white
+  color: $white
 
 .whyText
   font-family: $font-family-nunito-sans
   font-weight: 300
-  color: $money-white
+  color: $white
 
 .whyCmpCounter
   margin-left: auto

@@ -24,17 +24,17 @@ export default {
 .youCanCmpHowTitle
   font-family: $font-family-koara
   text-align: center
-  color: $money-purple
+  color: $purple
 
 .youCanCmpHowSubtitle
   font-family: $font-family-montserrat
   font-weight: 600
   text-align: center
-  color: $money-purple
+  color: $purple
 
 .youCanCmpHowSubtitleHlt
   font-weight: 600
-  color: $money-orange
+  color: $orange
 
 @include for-phone
   .youCanCmpHowTitle

@@ -44,7 +44,7 @@ export default {
 
 .headerMoneyCmpMakeTitleText
   font-family: $font-family-koara
-  color: $money-purple
+  color: $purple
   display: inline
   position: absolute
 
@@ -63,10 +63,10 @@ export default {
 .headerMoneyCmpMakeSubtitle
   font-family: $font-family-montserrat
   font-weight: 600
-  color: $money-purple
+  color: $purple
 
 .headerMoneyCmpMakeSubtitleHlt
-  color: $money-orange
+  color: $orange
   font-weight: 600
 
 @include for-phone

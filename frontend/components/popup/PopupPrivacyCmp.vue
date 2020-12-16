@@ -71,7 +71,7 @@ export default {
 
 .popupPrivacyWrapper
   position: absolute
-  background: $money-white
+  background: $white
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
@@ -82,23 +82,23 @@ export default {
 
 .popupPrivacyTitle
   font-family: $font-family-montserrat
-  color: $money-blue-dark
+  color: $blue-dark
   font-weight: 600
 
 .popupPrivacyText
   font-family: $font-family-montserrat
-  color: $money-blue-dark
+  color: $blue-dark
 
 .popupPrivacyPolicy
   font-family: $font-family-nunito
-  color: $money-blue
+  color: $blue
   font-weight: 700
 
 .popupPrivacyIcoX
   margin: 0 0 0 auto
 
 ::v-deep .popupPrivacyIcoX.svg
-  fill: $money-gray-dark
+  fill: $gray-dark
 
 @include for-phone
   .popupPrivacyWrapper

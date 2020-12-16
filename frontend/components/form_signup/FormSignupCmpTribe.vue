@@ -24,12 +24,12 @@ export default {
 @import "../../assets/styles/mixins"
 
 .formSignupCmpTribeTitle
-  color: $money-green
+  color: $green
   font-family: $font-family-montserrat
   font-weight: 600
 
 .formSignupCmpTribeText
-  color: $money-blue-dark
+  color: $blue-dark
   font-family: $font-family-nunito
   font-weight: 700
 

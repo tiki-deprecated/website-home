@@ -47,28 +47,28 @@ export default {
   justify-content: space-between
 
 .formAffiliateCmpOptText
-  color: $money-blue-dark
+  color: $blue-dark
   font-family: $font-family-montserrat
   font-weight: 600
   text-align: center
 
 ::v-deep .formAffiliateCmpOptX.svg > .ico, ::v-deep .formAffiliateCmpOptCheck.svg > .ico
-  fill: $money-white
+  fill: $white
 
 ::v-deep .formAffiliateCmpOptX.svg > .border, ::v-deep .formAffiliateCmpOptCheck.svg > .border
-  fill: $money-gray-xxlight
+  fill: $gray-xxlight
 
 ::v-deep .formAffiliateCmpOptX.svg > .bkg
-  fill: $money-orange
+  fill: $orange
 
 ::v-deep .formAffiliateCmpOptX:hover.svg > .bkg
-  fill: $money-orange-dark
+  fill: $orange-dark
 
 ::v-deep .formAffiliateCmpOptCheck.svg > .bkg
-  fill: $money-green
+  fill: $green
 
 ::v-deep .formAffiliateCmpOptCheck:hover.svg > .bkg
-  fill: $money-green-dark
+  fill: $green-dark
 
 @include for-phone
   ::v-deep .formAffiliateCmpOptCheck.svg, ::v-deep .formAffiliateCmpOptX.svg

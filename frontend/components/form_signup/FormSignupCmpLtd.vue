@@ -28,7 +28,7 @@ export default {
 
 .formSignupCmpLtdText
   font-family: $font-family-nunito
-  color: $money-blue-dark
+  color: $blue-dark
   font-weight: bold
   position: absolute
   top: 0
@@ -36,17 +36,17 @@ export default {
   z-index: 1
 
 .formSignupCmpLtdTextHlt
-  color: $money-red-dark
+  color: $red-dark
   font-weight: bold
 
 .formSignupCmpLtdPaintWarn
   position: absolute
 
 ::v-deep .formSignupCmpLtdPaintWarn.svg > .warn
-  fill: $money-red-dark
+  fill: $red-dark
 
 ::v-deep .formSignupCmpLtdPaintWarn.svg > .layer1
-  fill: $money-yellow
+  fill: $yellow
 
 @include for-phone
   ::v-deep .formSignupCmpLtdSketch.svg

@@ -73,18 +73,18 @@ export default {
   align-items: center
 
 .formAffiliateCmpContactInput
-  background: $money-white
+  background: $white
   width: 100%
   display: flex
   align-items: center
   border-style: solid
-  border-color: $money-gray-xlight
+  border-color: $gray-xlight
   font-family: $font-family-montserrat
-  color: $money-blue
+  color: $blue
   font-weight: 600
 
 .formAffiliateCmpContactInput::placeholder
-  color: $money-gray-xlight
+  color: $gray-xlight
 
 .formAffiliateCmpContactInput:focus
   outline: 0
@@ -94,12 +94,12 @@ export default {
   border-style: solid
 
 .formAffiliateCmpContactSendReady
-  background: $money-blue-dark
-  border-color: $money-blue-dark
+  background: $blue-dark
+  border-color: $blue-dark
 
 .formAffiliateCmpContactSendNotReady
-  background: $money-gray-xlight
-  border-color: $money-gray-xlight
+  background: $gray-xlight
+  border-color: $gray-xlight
 
 .formAffiliateCmpContactSendIco
   width: 8vw
@@ -109,7 +109,7 @@ export default {
   transform: translate(-50%, -50%)
 
 ::v-deep .formAffiliateCmpContactSendIco.svg
-  fill: $money-white
+  fill: $white
 
 @include for-phone
   .formAffiliateCmpContactCnt
@@ -161,3 +161,41 @@ export default {
   .formAffiliateCmpSecure
     margin-top: 1.25vw
 </style>
+
+<!--async utilsSignupSubmit(submitEvent) {-->
+<!--submitEvent.preventDefault()-->
+<!--if (this.ready != null) {-->
+<!--const parent = this-->
+<!--const path =-->
+<!--'https://api.mytiki.com/' +-->
+<!--this.apiVersion +-->
+<!--'/signup/' +-->
+<!--(this.isUser ? 'user' : 'buyer')-->
+
+<!--// eslint-disable-next-line no-unused-vars-->
+<!--const res = await this.$axios-->
+<!--.$post(-->
+<!--path,-->
+<!--{-->
+<!--contact: this.ready,-->
+<!--},-->
+<!--{-->
+<!--headers: {-->
+<!--'Content-Type': 'application/json',-->
+<!--},-->
+<!--validateStatus(status) {-->
+<!--return status === 200-->
+<!--},-->
+<!--}-->
+<!--)-->
+<!--.then(function (e) {-->
+<!--parent.submitted = parent.ready-->
+<!--parent.isError = false-->
+<!--parent.$emit('utilsSignupCmpSubmit')-->
+<!--})-->
+<!--.catch(function (e) {-->
+<!--parent.isError = true-->
+<!--parent.submitted = null-->
+<!--})-->
+<!--}-->
+<!--},-->

@@ -66,18 +66,18 @@ export default {
   align-items: center
 
 .formAffiliateCmpCodeInput
-  background: $money-white
+  background: $white
   width: 100%
   display: flex
   align-items: center
   border-style: solid
-  border-color: $money-gray-xlight
+  border-color: $gray-xlight
   font-family: $font-family-montserrat
-  color: $money-blue
+  color: $blue
   font-weight: 600
 
 .formAffiliateCmpCodeInput::placeholder
-  color: $money-gray-xlight
+  color: $gray-xlight
 
 .formAffiliateCmpCodeInput:focus
   outline: 0
@@ -87,12 +87,12 @@ export default {
   border-style: solid
 
 .formAffiliateCmpCodeSendReady
-  background: $money-blue-dark
-  border-color: $money-blue-dark
+  background: $blue-dark
+  border-color: $blue-dark
 
 .formAffiliateCmpCodeSendNotReady
-  background: $money-gray-xlight
-  border-color: $money-gray-xlight
+  background: $gray-xlight
+  border-color: $gray-xlight
 
 .formAffiliateCmpCodeSendIco
   width: 8vw
@@ -102,7 +102,7 @@ export default {
   transform: translate(-50%, -50%)
 
 ::v-deep .formAffiliateCmpCodeSendIco.svg
-  fill: $money-white
+  fill: $white
 
 @include for-phone
   .formAffiliateCmpCode

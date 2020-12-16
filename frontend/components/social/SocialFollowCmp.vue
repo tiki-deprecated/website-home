@@ -82,12 +82,12 @@ export default {
 
 .socialFollowCnt
   width: 100%
-  background: rgba($money-yellow-light, 0.10)
+  background: rgba($yellow-light, 0.10)
 
 .socialFollowTitleText
   font-family: $font-family-koara
   font-weight: bold
-  color: $money-purple
+  color: $purple
 
 .socialFollowQuoteLeft
   transform: rotate(23deg)
@@ -97,7 +97,7 @@ export default {
 
 .socialFollowFight
   font-family: $font-family-montserrat
-  color: $money-purple
+  color: $purple
   font-weight: 600
   text-align: center
 
@@ -105,16 +105,16 @@ export default {
   margin: 0 auto
 
 ::v-deep .socialFollowBtn.svg > .bkg
-  fill: $money-blue-light
+  fill: $blue-light
 
 ::v-deep .socialFollowBtn.svg > .ico
-  fill: $money-blue-dark
+  fill: $blue-dark
 
 .socialFollowBtn:hover
   animation: wiggle 0.75s infinite
 
 ::v-deep .socialFollowBtn:hover.svg > .bkg
-  fill: $money-yellow-light
+  fill: $yellow-light
 
 @keyframes wiggle
   0%

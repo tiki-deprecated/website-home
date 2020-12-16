@@ -43,7 +43,7 @@ export default {
 
 .formSignupCnt
   position: relative
-  background: $money-yellow
+  background: $yellow
 
 .formSignupHide
   display: none

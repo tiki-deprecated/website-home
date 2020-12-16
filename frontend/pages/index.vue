@@ -4,7 +4,7 @@
       <header-home-cmp class="headerHomeCmp" />
       <div class="whyDivider"></div>
       <you-can-cmp class="youCanCmp" />
-      <form-signup-cmp class="formSignupCmp" />
+      <form-signup-cmp id="signup" class="formSignupCmp" />
       <believe-cmp class="believeCmp" />
       <social-follow-cmp class="socialFollowCmp" />
       <footer-cmp class="footerCmp" />
@@ -27,7 +27,7 @@ import PopupPrivacyCmp from '~/components/popup/PopupPrivacyCmp'
 import SocialFollowCmp from '~/components/social/SocialFollowCmp'
 
 export default {
-  name: 'IndexPage',
+  name: 'Index',
   components: {
     HeaderHomeCmp,
     WhyCmp,

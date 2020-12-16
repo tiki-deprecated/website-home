@@ -5,15 +5,16 @@
     <div class="headerHomeContent">
       <div class="headerHomeContentWrapper">
         <div class="headerHomeNav">
-          <utils-svg-cmp name="tiki/logo" class="headerHomeLogo" />
+          <nuxt-link to="/">
+            <utils-svg-cmp name="tiki/logo" class="headerHomeLogo" />
+          </nuxt-link>
           <div class="headerHomeNavRight">
-            <nuxt-link
-              :to="{ path: '/', hash: '#mission' }"
-              class="headerLinkMission"
+            <nuxt-link to="/meet" class="headerLinkMission"
               >Our mission
             </nuxt-link>
             <nuxt-link
-              :to="{ path: '/', hash: '#signup' }"
+              v-scroll-to="{ el: '#signup' }"
+              :to="{ path: '/', hash: 'signup' }"
               class="headerLinkSignup headerLinkSignupNav"
               >Sign up
             </nuxt-link>
@@ -26,7 +27,8 @@
             fair share? Take back control. Get paid. Tiki’s got your back.
           </div>
           <nuxt-link
-            :to="{ path: '/', hash: '#signup' }"
+            v-scroll-to="{ el: '#signup' }"
+            :to="{ path: '/', hash: 'signup' }"
             class="headerLinkSignup"
             >Sign up
           </nuxt-link>
@@ -49,7 +51,7 @@ export default {
 @import "../../assets/styles/mixins"
 
 .headerHomeCnt
-  background: $money-yellow-light
+  background: $yellow-light
   position: relative
   width: 100%
 
@@ -77,19 +79,19 @@ export default {
   font-weight: 600
 
 ::v-deep .headerHomeBkgImgLg.svg > .layer1, ::v-deep .headerHomeBkgImgLg.svg > .lens, ::v-deep .headerHomeBkgImg.svg > .layer1, ::v-deep .headerHomeBkgImg.svg > .lens
-  fill: $money-orange
+  fill: $orange
 
 ::v-deep .headerHomeBkgImgLg.svg > .layer2, ::v-deep .headerHomeBkgImg.svg > .layer2
-  fill: $money-yellow-xlight
+  fill: $yellow-xlight
 
 ::v-deep .headerHomeBkgImgLg.svg > .frames, ::v-deep .headerHomeBkgImg.svg > .frames
-  fill: $money-black-dark
+  fill: $black-dark
 
 ::v-deep .headerHomeBkgImgLg.svg > .pineapple, ::v-deep .headerHomeBkgImg.svg > .pineapple
-  fill: $money-black-light
+  fill: $black-light
 
-::v-deep .headerHomeLogoLg.svg, ::v-deep .headerHomeLogo.svg
-  fill: $money-black-dark
+::v-deep .headerHomeLogo.svg
+  fill: $black-dark
 
 .headerHomeNav
   display: flex
@@ -102,16 +104,16 @@ export default {
 
 .headerLinkMission
   font-family: $font-family-montserrat
-  color: $money-black-dark
+  color: $black-dark
   text-decoration: none
   font-weight: 600
 
 .headerLinkSignup
   font-family: $font-family-montserrat
-  color: $money-white
+  color: $white
   text-decoration: none
   font-weight: 600
-  background: $money-red
+  background: $red
 
 .headerLinkMission:hover, .headerLinkMission:visited, .headerLinkMission:link, .headerLinkMission:active, .headerLinkSignup:hover, .headerLinkSignup:visited, .headerLinkSignup:link, .headerLinkSignup:active
   text-decoration: none

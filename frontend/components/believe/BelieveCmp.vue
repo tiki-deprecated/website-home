@@ -38,12 +38,12 @@ export default {
 @import "assets/styles/mixins"
 
 .believeCnt
-  background: $money-blue-xlight
+  background: $blue-xlight
 
 .believeTitleText
   font-family: $font-family-koara
   font-weight: bold
-  color: $money-purple
+  color: $purple
 
 .believeQuoteLeft
   transform: rotate(23deg)
@@ -54,32 +54,32 @@ export default {
 .believeSubtitle
   font-family: $font-family-montserrat
   font-weight: 600
-  color: $money-purple
+  color: $purple
   text-align: center
 
 .believeValue, .believeJoin
-  background: $money-blue-dark
+  background: $blue-dark
   margin: 0 auto
   display: flex
   align-items: center
   justify-content: center
 
 .believeValue:hover, .believeJoin:hover
-  background: $money-blue-dark-hlt
+  background: $blue-dark-hlt
 
 .believeValue, .believeJoin, .believeValue:hover, .believeJoin:hover, .believeValue:visited, .believeJoin:visited, .believeValue:link, .believeJoin:link, .believeValue:active, .believeJoin:active
   text-decoration: none
 
 .believeValueText, .believeJoinText
   font-family: $font-family-koara
-  color: $money-blue-light
+  color: $blue-light
   text-align: right
 
 .believeValueText, .believeJoinText, .believeValueText:hover, .believeJoinText:hover, .believeValueText:visited, .believeJoinText:visited, .believeValueText:link, .believeJoinText:link, .believeValueText:active, .believeJoinText:active
   text-decoration: none
 
 ::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
-  fill: $money-blue-light
+  fill: $blue-light
 
 @include for-phone
   .believeCnt

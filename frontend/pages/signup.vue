@@ -1,13 +1,13 @@
 <template>
-  <div class="mnyPageCnt">
-    <div class="mnyPageStack">
-      <header-money-cmp class="mnyHeaderCmp" />
-      <how-beta-cmp class="mnyWorkCmp" />
-      <social-share-cmp class="mnyShareCmp" />
-      <footer-cmp class="mnyFooterCmp" />
+  <div class="signupPage">
+    <div class="signupPageStack">
+      <header-money-cmp class="signupHeaderCmp" />
+      <how-beta-cmp class="signupWorkCmp" />
+      <social-share-cmp class="signupShareCmp" />
+      <footer-cmp class="signupFooterCmp" />
     </div>
-    <form-affiliate-cmp class="mnySignupCmp" />
-    <popup-privacy-cmp class="mnyPopupDataCmp" />
+    <form-affiliate-cmp class="signupSignupCmp" />
+    <popup-privacy-cmp class="signupPopupDataCmp" />
   </div>
 </template>
 
@@ -21,7 +21,6 @@ import PopupPrivacyCmp from '@/components/popup/PopupPrivacyCmp'
 
 export default {
   name: 'Money',
-  layout: 'tiki',
   components: {
     FooterCmp,
     FormAffiliateCmp,
@@ -36,26 +35,26 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.mnyPageCnt
+.signupPage
   position: relative
 
-.mnyPageStack
+.signupPageStack
   position: absolute
   top: 0
   left: 0
   z-index: 1
   width: 100%
 
-.mnySignupCmp
+.signupSignupCmp
   position: absolute
   z-index: 2
 
-.mnyPopupDataCmp
+.signupPopupDataCmp
   position: fixed
   z-index: 9
 
 @include for-phone
-  .mnySignupCmp
+  .signupSignupCmp
     width: 70%
     top: 140%
     left: 50%
@@ -63,7 +62,7 @@ export default {
     height: 65vw
 
 @include for-tablet
-  .mnySignupCmp
+  .signupSignupCmp
     width: 50%
     top: 155%
     left: 50%

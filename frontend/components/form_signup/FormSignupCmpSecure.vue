@@ -43,19 +43,19 @@ export default {
 .formSignupCmpSecureText
   font-family: $font-family-montserrat
   font-weight: 600
-  color: $money-purple
+  color: $purple
 
 .formSignupCmpSecureHowText
   font-family: $font-family-nunito
   font-weight: 700
-  color: $money-blue
+  color: $blue
   text-decoration: underline
 
 ::v-deep .formSignupCmpSecureLock.svg
-    fill: $money-purple
+    fill: $purple
 
 ::v-deep .formSignupCmpSecureHowQuestion.svg
-    fill: $money-blue
+    fill: $blue
 
 @include for-phone
   .formSignupCmpSecureHowText

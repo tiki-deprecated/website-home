@@ -174,14 +174,14 @@ export default {
 
 .socialShareCnt
   width: 100%
-  background: rgba($money-yellow-light, 0.10)
+  background: rgba($yellow-light, 0.10)
 
 .socialShareSketchShare
   margin: 0 auto
 
 .socialShareFight
   font-family: $font-family-koara
-  color: $money-purple
+  color: $purple
   font-weight: bold
   text-align: center
 
@@ -189,16 +189,16 @@ export default {
   margin: 0 auto
 
 ::v-deep .socialShareBtn.svg > .bkg
-  fill: $money-blue-light
+  fill: $blue-light
 
 ::v-deep .socialShareBtn.svg > .ico
-  fill: $money-blue-dark
+  fill: $blue-dark
 
 .socialShareBtn:hover
   animation: wiggle 0.75s infinite
 
 ::v-deep .socialShareBtn:hover.svg > .bkg
-  fill: $money-yellow-light
+  fill: $yellow-light
 
 @keyframes wiggle
   0%

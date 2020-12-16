@@ -26,7 +26,7 @@ export default {
 .headerMoneyCmpAmtCnt
   font-family: $font-family-nunito
   font-weight: bold
-  color: $money-yellow-neon
+  color: $yellow-neon
   position: relative
 
 .headerMoneyCmpAmtTop
@@ -53,7 +53,7 @@ export default {
   height: 100%
 
 ::v-deep .headerMoneyCmpAmtPaintHlt.svg
-  fill: $money-purple
+  fill: $purple
 
 .headerMoneyCmpAmtMdlText
   position: absolute

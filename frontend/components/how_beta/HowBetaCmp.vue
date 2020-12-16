@@ -29,24 +29,24 @@ export default {
 
 .howBetaCnt
   position: relative
-  background: $money-blue-xlight
+  background: $blue-xlight
   width: 100%
 
 .howBetaTitle
   margin: 0 auto
   font-family: $font-family-koara
   text-align: center
-  color: $money-purple
+  color: $purple
 
 .howBetaSubtitle
   font-family: $font-family-montserrat
   font-weight: 600
   text-align: center
-  color: $money-purple
+  color: $purple
 
 .howBetaSubtitleHlt
   font-weight: 600
-  color: $money-orange
+  color: $orange
 
 .howBetaCmpLaunch
   position: relative

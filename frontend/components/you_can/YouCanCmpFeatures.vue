@@ -44,7 +44,7 @@ export default {
 @import "assets/styles/mixins"
 
 .youCanFeatureSeeNum, .youCanFeatureControlNum, .youCanFeatureMonetizeNum
-  color: $money-black-dark
+  color: $black-dark
   font-family: $font-family-montserrat
   font-weight: 600
 
@@ -65,17 +65,17 @@ export default {
 
 .youCanFeatureSeeText, .youCanFeatureControlText, .youCanFeatureMonetizeText
   font-family: $font-family-nunito-sans
-  color: $money-black-dark
+  color: $black-dark
   font-weight: normal
 
 .youCanFeatureSeeBlob
-  fill: $money-yellow
+  fill: $yellow
 
 .youCanFeatureControlBlob
-  fill: $money-red
+  fill: $red
 
 .youCanFeatureMonetizeBlob
-  fill: $money-pink
+  fill: $pink
 
 @include for-phone
   .youCanFeatures

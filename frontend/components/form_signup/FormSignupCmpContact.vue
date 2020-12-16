@@ -70,18 +70,18 @@ export default {
   align-items: center
 
 .formSignupCmpContactInput
-  background: $money-white
+  background: $white
   width: 100%
   display: flex
   align-items: center
   border-style: solid
-  border-color: $money-gray-xlight
+  border-color: $gray-xlight
   font-family: $font-family-montserrat
-  color: $money-blue
+  color: $blue
   font-weight: 600
 
 .formSignupCmpContactInput::placeholder
-  color: $money-gray-xlight
+  color: $gray-xlight
 
 .formSignupCmpContactInput:focus
   outline: 0
@@ -91,12 +91,12 @@ export default {
   border-style: solid
 
 .formSignupCmpContactSendReady
-  background: $money-blue-dark
-  border-color: $money-blue-dark
+  background: $blue-dark
+  border-color: $blue-dark
 
 .formSignupCmpContactSendNotReady
-  background: $money-gray-xlight
-  border-color: $money-gray-xlight
+  background: $gray-xlight
+  border-color: $gray-xlight
 
 .formSignupCmpContactSendIco
   width: 8vw
@@ -106,7 +106,7 @@ export default {
   transform: translate(-50%, -50%)
 
 ::v-deep .formSignupCmpContactSendIco.svg
-  fill: $money-white
+  fill: $white
 
 @include for-phone
   .formSignupCmpContactCnt

@@ -49,7 +49,7 @@ export default {
 
 .formAffiliateCnt
   position: relative
-  background: $money-yellow-light
+  background: $yellow-light
 
 .formAffiliateHide
   display: none

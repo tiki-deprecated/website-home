@@ -40,13 +40,13 @@ export default {
 
 .whyCmpCounterValue
   font-family: $font-family-koara
-  color: $money-yellow
+  color: $yellow
   text-align: center
   font-weight: 300
 
 .whyCmpCounterText
   font-family: $font-family-nunito
-  color: $money-yellow
+  color: $yellow
   text-align: center
   font-weight: 300
 

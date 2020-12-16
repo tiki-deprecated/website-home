@@ -18,28 +18,28 @@ export default {
 @import "../../assets/styles/mixins"
 
 .HowBetaCmpLearnBtnCnt
-  background: $money-blue-dark
+  background: $blue-dark
   margin: 0 auto
   display: flex
   align-items: center
   justify-content: center
 
 .HowBetaCmpLearnBtnCnt:hover
-  background: $money-blue-dark-hlt
+  background: $blue-dark-hlt
 
 .HowBetaCmpLearnBtnCnt, .HowBetaCmpLearnBtnCnt:hover, .HowBetaCmpLearnBtnCnt:visited, .HowBetaCmpLearnBtnCntText:link, .HowBetaCmpLearnBtnCnt:active
   text-decoration: none
 
 .HowBetaCmpLearnBtnText
   font-family: $font-family-koara
-  color: $money-blue-light
+  color: $blue-light
   text-align: right
 
 .HowBetaCmpLearnBtnText, .HowBetaCmpLearnBtnText:hover, .HowBetaCmpLearnBtnText:visited, .HowBetaCmpLearnBtnText:link, .HowBetaCmpLearnBtnText:active
   text-decoration: none
 
 ::v-deep .HowBetaCmpLearnBtnArrow.svg
-  fill: $money-blue-light
+  fill: $blue-light
 
 @include for-phone
   .HowBetaCmpLearnBtnCnt
