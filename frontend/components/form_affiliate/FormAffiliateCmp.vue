@@ -52,7 +52,7 @@ export default {
   background: $yellow-light
 
 .formAffiliateHide
-  display: none
+  display: none!important
 
 @include for-phone
   .formAffiliateCnt

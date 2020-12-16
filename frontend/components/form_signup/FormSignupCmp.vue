@@ -46,7 +46,7 @@ export default {
   background: $yellow
 
 .formSignupHide
-  display: none
+  display: none!important
 
 @include for-phone
   .formSignupCnt

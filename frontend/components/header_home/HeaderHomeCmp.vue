@@ -1,7 +1,11 @@
 <template>
   <div class="headerHomeCnt">
-    <utils-svg-cmp name="background/header-2-lg" class="headerHomeBkgImgLg" />
-    <utils-svg-cmp name="background/header-2" class="headerHomeBkgImg" />
+    <div class="headerHomeBkgImgLgHide">
+      <utils-svg-cmp name="background/header-2-lg" class="headerHomeBkgImgLg" />
+    </div>
+    <div class="headerHomeBkgImgHide">
+      <utils-svg-cmp name="background/header-2" class="headerHomeBkgImg" />
+    </div>
     <div class="headerHomeContent">
       <div class="headerHomeContentWrapper">
         <div class="headerHomeNav">
@@ -125,7 +129,7 @@ export default {
   .headerLinkSignupNav
     display: none
 
-  .headerHomeBkgImgLg
+  .headerHomeBkgImgLgHide
     display: none
 
   ::v-deep .headerHomeBkgImg.svg
@@ -163,7 +167,7 @@ export default {
   .headerHomeCnt
     height: 25vw
 
-  .headerHomeBkgImg
+  .headerHomeBkgImgHide
     display: none
 
   ::v-deep .headerHomeBkgImgLg.svg
