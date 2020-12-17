@@ -6,7 +6,7 @@
       <utils-svg-cmp name="sketch/quote" class="socialFollowQuoteRight" />
     </div>
     <div class="socialFollowFight">
-      We’re all users and in it together. No secrets, real transparency. Follow
+      We’re all users and in it together. No secrets. Real transparency. Follow
       us, tweet us, hit us up. Together we're a revolution.
     </div>
     <div class="socialFollowBtnGroup">

@@ -7,7 +7,7 @@
     <div class="privacyDate">09/24/2020</div>
     <div class="privacyBody">
       <div class="privacyLine">
-        Tiki is committed to protecting and preserving your privacy.
+        TIKI is committed to protecting and preserving your privacy.
       </div>
       <div class="privacyLine">
         This page informs you of our policies regarding the collection, use, and
@@ -50,7 +50,7 @@
       <div class="privacyLine">
         Contact Information: If you choose to provide your contact information
         (email address, phone number, or otherwise), it may only be used to
-        deliver important Tiki updates such as feature previews, early beta
+        deliver important TIKI updates such as feature previews, early beta
         invites, or other notable programs.
       </div>
       <div class="privacyLine">
@@ -65,7 +65,8 @@
         Anonymous Site Statistics: We collect the following
         <a class="privacyLink" href="https://plausible.io/mytiki.com"
           >anonymous data</a
-        >to improve business operations, content, and performance of the Site.
+        >
+        to improve business operations, content, and performance of the Site.
       </div>
       <div class="privacyLine">
         Anonymous Infrastructure Metrics: We collect various anonymous data on

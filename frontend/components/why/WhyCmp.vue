@@ -5,8 +5,8 @@
       <div class="whyText">
         <div class="whyTextLine">You think you own your data?</div>
         <div class="whyTextLine">
-          In 2020 alone, the data on our behaviour and purchases was worth more
-          than <b>$382 billion</b> in advertising revenue.
+          In 2020 alone, the data on our behaviour and purchases will be worth
+          more than <b>$382 billion</b> in advertising revenue.
         </div>
       </div>
       <why-cmp-counter class="whyCmpCounter" />

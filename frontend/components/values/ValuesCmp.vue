@@ -10,7 +10,7 @@
         <div class="valueTitle valueTitleTransparency">Transparency</div>
         <div class="valueText">
           helps build trust. Seeing is believing, and nothing is off-limits. No
-          shadowbans or secret algorithms at Tiki.
+          shadowbans or secret algorithms at TIKI.
         </div>
       </div>
       <div class="valueWrapper">
@@ -23,7 +23,7 @@
       <div class="valueWrapper">
         <div class="valueTitle valueTitleDiversity">Diversity</div>
         <div class="valueText">
-          is not optional within the walls of Tiki. We're here for our users; we
+          is not optional within the walls of TIKI. We're here for our users; we
           represent our users
         </div>
       </div>

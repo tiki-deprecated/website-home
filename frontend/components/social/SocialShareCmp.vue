@@ -8,7 +8,7 @@
       <div class="socialShareBtnRow1">
         <share-network
           network="twitter"
-          :url="twitter.url"
+          :url="currentUrl"
           :title="twitter.title"
           :description="twitter.description"
           :hashtags="twitter.hashtags"
@@ -27,7 +27,7 @@
       </div>
       <share-network
         network="facebook"
-        :url="facebook.url"
+        :url="currentUrl"
         :title="facebook.title"
         :description="facebook.description"
         :hashtags="facebook.hashtags"
@@ -51,7 +51,7 @@
         </a>
         <share-network
           network="linkedin"
-          :url="linkedin.url"
+          :url="currentUrl"
           :title="linkedin.title"
           :description="linkedin.description"
           :hashtags="linkedin.hashtags"
@@ -73,10 +73,10 @@
 <script>
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 
-const URL = 'https://mytiki.com/money'
-const TITLE = 'title goes here'
-const DESCRIPTION = 'description goes here'
-const HASHTAGS = 'hashtag1 hashtag2'
+const TITLE = "It's your data. Get paid for it."
+const DESCRIPTION =
+  'TIKI helps you take back control of your online data and privacy and get paid for it. With TIKI, you can see, control and monetize your online data.'
+const HASHTAGS = 'TIKI'
 
 export default {
   name: 'SocialShareCmp',
@@ -84,37 +84,37 @@ export default {
   data() {
     return {
       facebook: {
-        url: URL,
         title: TITLE,
         description: DESCRIPTION,
         hashtags: HASHTAGS,
       },
       instagram: {
-        url: URL,
         title: TITLE,
         description: DESCRIPTION,
         hashtags: HASHTAGS,
         profile: 'https://instagram.com/my.tiki',
       },
       twitter: {
-        url: URL,
         title: TITLE,
         description: DESCRIPTION,
         hashtags: HASHTAGS,
       },
       linkedin: {
-        url: URL,
         title: TITLE,
         description: DESCRIPTION,
         hashtags: HASHTAGS,
       },
       web: {
-        url: URL,
         title: TITLE,
         description: DESCRIPTION,
         hashtags: HASHTAGS,
       },
     }
+  },
+  computed: {
+    currentUrl() {
+      return 'https://mytiki.com' + this.$route.fullPath
+    },
   },
   methods: {
     copy(url) {
@@ -145,11 +145,11 @@ export default {
         if (navigator && navigator.share)
           this.share(
             this.web.title,
-            this.web.url,
+            this.currentUrl,
             this.web.description,
             this.web.hashtags
           )
-        else this.copy(this.web.url)
+        else this.copy(this.currentUrl)
       }
     },
     igShare(clickEvent) {
@@ -158,7 +158,7 @@ export default {
         if (navigator && navigator.share)
           this.share(
             this.instagram.title,
-            this.instagram.url,
+            this.currentUrl,
             this.instagram.description,
             this.instagram.hashtags
           )
@@ -264,7 +264,7 @@ export default {
     margin-top: 10vw
 @include for-tablet
   .socialShareCnt
-    padding-top: 19vw
+    padding-top: 20vw
 
   ::v-deep .socialShareSketchShare.svg
     height: 4vw
@@ -307,6 +307,6 @@ export default {
     align-items: center
     justify-content: space-between
     width: 60%
-    margin: 2vw auto 0 auto
+    margin: 3vw auto 0 auto
     padding-bottom: 2vw
 </style>

@@ -13,8 +13,9 @@
       <div
         class="formSignupCmpContactSend"
         :class="{
-          formSignupCmpContactSendReady: isReady,
+          formSignupCmpContactSendReady: isReady && !isError,
           formSignupCmpContactSendNotReady: !isReady,
+          formSignupCmpContactSendError: isError && isReady,
         }"
         @click="onSubmit"
       >
@@ -28,6 +29,7 @@
 <script>
 import FormSignupCmpSecure from '@/components/form_signup/FormSignupCmpSecure'
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import { signUp } from '@/libs/api'
 
 export default {
   name: 'FormSignupCmpContact',
@@ -35,6 +37,7 @@ export default {
   data() {
     return {
       contact: '',
+      isError: false,
     }
   },
   computed: {
@@ -51,11 +54,19 @@ export default {
     onInput(inputEvent) {
       this.contact = inputEvent.target.value
     },
-    onSubmit(submitEvent) {
+    async onSubmit(submitEvent) {
       submitEvent.preventDefault()
       if (this.isReady) {
         this.$store.commit('form_signup/setContact', this.contact)
-        this.$store.commit('form_signup/setPosOpt')
+        const rsp = await signUp(this.$axios, this.contact, '').then(function (
+          data
+        ) {
+          return data.success
+        })
+        // eslint-disable-next-line no-undef
+        plausible('Signup', { props: { page: 'home' } })
+        if (rsp) this.$store.commit('form_signup/setPosOpt')
+        else this.isError = true
       }
     },
   },
@@ -89,6 +100,10 @@ export default {
 .formSignupCmpContactSend
   position: relative
   border-style: solid
+
+.formSignupCmpContactSendError
+  background: $red
+  border-color: $red
 
 .formSignupCmpContactSendReady
   background: $blue-dark

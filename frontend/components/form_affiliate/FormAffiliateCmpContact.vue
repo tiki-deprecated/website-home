@@ -13,8 +13,9 @@
       <div
         class="formAffiliateCmpContactSend"
         :class="{
-          formAffiliateCmpContactSendReady: isReady,
+          formAffiliateCmpContactSendReady: isReady && !isError,
           formAffiliateCmpContactSendNotReady: !isReady,
+          formAffiliateCmpContactSendError: isError && isReady,
         }"
         @click="onSubmit"
       >
@@ -31,6 +32,7 @@
 <script>
 import FormAffiliateCmpSecure from '@/components/form_affiliate/FormAffiliateCmpSecure'
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import { signUp } from '@/libs/api'
 
 export default {
   name: 'FormAffiliateCmpContact',
@@ -38,6 +40,7 @@ export default {
   data() {
     return {
       contact: '',
+      isError: false,
     }
   },
   computed: {
@@ -54,11 +57,26 @@ export default {
     onInput(inputEvent) {
       this.contact = inputEvent.target.value
     },
-    onSubmit(submitEvent) {
+    async onSubmit(submitEvent) {
       submitEvent.preventDefault()
       if (this.isReady) {
         this.$store.commit('form_affiliate/setContact', this.contact)
-        this.$store.commit('form_affiliate/setPosOpt')
+        const rsp = await signUp(
+          this.$axios,
+          this.contact,
+          this.$store.state.form_affiliate.code
+        ).then(function (data) {
+          return data.success
+        })
+        // eslint-disable-next-line no-undef
+        plausible('Signup', {
+          props: {
+            page: 'signup',
+            affiliate: this.$store.state.form_affiliate.code,
+          },
+        })
+        if (rsp) this.$store.commit('form_affiliate/setPosOpt')
+        else this.isError = true
       }
     },
   },
@@ -92,6 +110,10 @@ export default {
 .formAffiliateCmpContactSend
   position: relative
   border-style: solid
+
+.formAffiliateCmpContactSendError
+  background: $red
+  border-color: $red
 
 .formAffiliateCmpContactSendReady
   background: $blue-dark
@@ -161,41 +183,3 @@ export default {
   .formAffiliateCmpSecure
     margin-top: 1.25vw
 </style>
-
-<!--async utilsSignupSubmit(submitEvent) {-->
-<!--submitEvent.preventDefault()-->
-<!--if (this.ready != null) {-->
-<!--const parent = this-->
-<!--const path =-->
-<!--'https://api.mytiki.com/' +-->
-<!--this.apiVersion +-->
-<!--'/signup/' +-->
-<!--(this.isUser ? 'user' : 'buyer')-->
-
-<!--// eslint-disable-next-line no-unused-vars-->
-<!--const res = await this.$axios-->
-<!--.$post(-->
-<!--path,-->
-<!--{-->
-<!--contact: this.ready,-->
-<!--},-->
-<!--{-->
-<!--headers: {-->
-<!--'Content-Type': 'application/json',-->
-<!--},-->
-<!--validateStatus(status) {-->
-<!--return status === 200-->
-<!--},-->
-<!--}-->
-<!--)-->
-<!--.then(function (e) {-->
-<!--parent.submitted = parent.ready-->
-<!--parent.isError = false-->
-<!--parent.$emit('utilsSignupCmpSubmit')-->
-<!--})-->
-<!--.catch(function (e) {-->
-<!--parent.isError = true-->
-<!--parent.submitted = null-->
-<!--})-->
-<!--}-->
-<!--},-->

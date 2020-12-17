@@ -13,6 +13,7 @@
 
 <script>
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import { optIn } from '@/libs/api'
 
 export default {
   name: 'FormAffiliateCmpOpt',
@@ -23,16 +24,25 @@ export default {
     }
   },
   methods: {
-    onYes(inputEvent) {
+    async onYes(inputEvent) {
       this.opt = true
-      this.submit(this.opt)
+      await this.submit(this.opt)
     },
-    onNo(inputEvent) {
+    async onNo(inputEvent) {
       this.opt = false
-      this.submit(this.opt)
+      await this.submit(this.opt)
     },
-    submit(opt) {
+    async submit(opt) {
       this.$store.commit('form_affiliate/setOpt', opt)
+      // eslint-disable-next-line no-unused-vars
+      const rsp = await optIn(
+        this.$axios,
+        this.$store.state.form_affiliate.contact,
+        this.$store.state.form_affiliate.code,
+        opt
+      ).then(function (data) {
+        return data.success
+      })
       this.$store.commit('form_affiliate/setPosDone')
     },
   },

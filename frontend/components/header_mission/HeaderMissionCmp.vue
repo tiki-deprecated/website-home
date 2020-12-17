@@ -20,9 +20,9 @@
       <utils-svg-cmp name="sketch/quote" class="headerMissionQuoteRight" />
     </div>
     <div class="headerMissionSubtitle">
-      We’re building a fair, user-centric, decentralized system giving users
-      control of their data. It’s your data; you deserve the right to see,
-      control, and monetize it. Your data does not belong to corporations, Tiki
+      We’re building a fair, user-centric, decentralized system giving, you the
+      users control of their data. It’s your data; you deserve the right to see,
+      control, and monetize it. Your data does not belong to corporations, TIKI
       included! We build tools to protect users from exploitation, greed, and
       carelessness. We build tools to empower users.
     </div>
