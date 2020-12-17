@@ -24,27 +24,45 @@ export default {
       {
         hid: 'website',
         name: 'mytiki.com',
-        content: "Tiki. It's Your Data",
+        content: "It's your data. Get paid for it.",
       },
-      { name: 'title', property: 'og:title', content: 'Tiki' },
+      {
+        name: 'description',
+        content:
+          'TIKI helps you take back control of your online data and privacy and get paid for it. With TIKI, you can see, control and monetize your online data.',
+      },
+      {
+        name: 'title',
+        content: "It's your data. Get paid for it.",
+      },
+      {
+        property: 'og:title',
+        content: "It's your data. Get paid for it.",
+      },
       {
         property: 'og:description',
         content:
-          "It's your data, and its worth thousands. Take back control and get paid.",
+          'TIKI helps you take back control of your online data and privacy and get paid for it. With TIKI, you can see, control and monetize your online data.',
       },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://mytiki.com' },
-      { property: 'og:image', content: 'https://mytiki.com/og-image.png' },
-      { property: 'og:video', content: 'https://youtu.be/IP4UeduStUI' },
-      { property: 'twitter:title', content: 'Tiki' },
+      {
+        property: 'og:image',
+        content:
+          'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png',
+      },
+      {
+        property: 'twitter:title',
+        content: "It's your data. Get paid for it.",
+      },
       {
         property: 'twitter:description',
         content:
-          "It's your data, and its worth thousands. Take back control and get paid.",
+          'TIKI helps you take back control of your online data and privacy and get paid for it. With TIKI, you can see, control and monetize your online data.',
       },
       { property: 'twitter:url', content: 'https://mytiki.com' },
       { property: 'twitter:card', content: 'summary_large_image' },
-      { property: 'twitter:image', content: 'https://mytiki.com/og-image.png' },
+      { property: 'twitter:image', content: 'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png' },
       { property: 'twitter:site', content: '@my_tiki_' },
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
@@ -55,6 +73,7 @@ export default {
         'data-domain': 'mytiki.com',
         src: 'https://plausible.io/js/plausible.js',
       },
+      'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
     ],
   },
   /*
@@ -62,8 +81,6 @@ export default {
    */
   css: [
     '@/assets/styles/theme.sass',
-    '@/assets/styles/theme-money.sass',
-    '@/assets/fonts/gadugi/Gadugi.css',
     '@/assets/fonts/koara/Koara.css',
     '@/assets/fonts/montserrat/Montserrat.css',
     '@/assets/fonts/nunito/Nunito.css',
@@ -93,24 +110,29 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module,
     '@nuxtjs/eslint-module',
+    [
+      'nuxt-compress',
+      {
+        gzip: {
+          cache: true,
+        },
+        brotli: {
+          threshold: 10240,
+        },
+      },
+    ],
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     '@nuxtjs/axios',
     'vue-social-sharing/nuxt',
     '@nuxtjs/toast',
+    'vue-scrollto/nuxt',
   ],
-  /*
-   ** Content module configuration
-   ** See https://content.nuxtjs.org/configuration
-   */
-  content: {},
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/

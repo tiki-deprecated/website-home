@@ -1,124 +1,158 @@
 <template>
-  <div>
-    <div class="valuesCmpCnt">
-      <utils-title-subtitle-extended-cmp
-        v-if="cms.title != null"
-        :title="cms.title"
-        :subtitle="cms.subtitle"
-        :extended="cms.extended"
-        class="utilsTitleSubtitleExtendedCmp"
-      />
-      <UtilsSvgCmp
-        v-if="cms.divider != null"
-        name="tick"
-        class="utilsSvgCmpDivider"
-        :style="{ fill: `${cms.divider}` }"
-      />
-      <div class="valuesCmpValues">
-        <div class="valuesCmpValuesHeading">Values</div>
-        <utils-colored-string-cmp
-          v-if="cms.values.one != null"
-          :highlight="cms.values.one.highlight"
-          :desc="cms.values.one.description"
-          :color="cms.values.one.color"
-          class="utilsColoredStringCmp"
-        />
-        <utils-colored-string-cmp
-          v-if="cms.values.two != null"
-          :highlight="cms.values.two.highlight"
-          :desc="cms.values.two.description"
-          :color="cms.values.two.color"
-          class="utilsColoredStringCmp"
-        />
-        <utils-colored-string-cmp
-          v-if="cms.values.three != null"
-          :highlight="cms.values.three.highlight"
-          :desc="cms.values.three.description"
-          :color="cms.values.three.color"
-          class="utilsColoredStringCmp"
-        />
-        <utils-colored-string-cmp
-          v-if="cms.values.four != null"
-          :highlight="cms.values.four.highlight"
-          :desc="cms.values.four.description"
-          :color="cms.values.four.color"
-          class="utilsColoredStringCmp"
-        />
-        <utils-colored-string-cmp
-          v-if="cms.values.five != null"
-          :highlight="cms.values.five.highlight"
-          :desc="cms.values.five.description"
-          :color="cms.values.five.color"
-          class="utilsColoredStringCmp"
-        />
+  <div class="valuesCnt">
+    <div class="valuesTitleCnt">
+      <utils-svg-cmp name="sketch/quote" class="valuesQuoteLeft" />
+      <div class="valuesTitleText">Our values</div>
+      <utils-svg-cmp name="sketch/quote" class="valuesQuoteRight" />
+    </div>
+    <div class="valuesSection">
+      <div class="valueWrapper">
+        <div class="valueTitle valueTitleTransparency">Transparency</div>
+        <div class="valueText">
+          helps build trust. Seeing is believing, and nothing is off-limits. No
+          shadowbans or secret algorithms at TIKI.
+        </div>
+      </div>
+      <div class="valueWrapper">
+        <div class="valueTitle valueTitleCommunity">Community</div>
+        <div class="valueText">
+          is what connects us. Together, we're an unstoppable force. We expect
+          better. We demand better.
+        </div>
+      </div>
+      <div class="valueWrapper">
+        <div class="valueTitle valueTitleDiversity">Diversity</div>
+        <div class="valueText">
+          is not optional within the walls of TIKI. We're here for our users; we
+          represent our users
+        </div>
+      </div>
+      <div class="valueWrapper">
+        <div class="valueTitle valueTitleSustainability">Sustainability</div>
+        <div class="valueText">
+          comes before profit. We work tirelessly to bring lasting positive
+          change to our users' lives.
+        </div>
+      </div>
+      <div class="valueWrapper">
+        <div class="valueTitle valueTitleReliability">Reliability</div>
+        <div class="valueText">
+          is foundational to trust. We want our users to count on us and aim
+          never to break that trust.
+        </div>
       </div>
     </div>
-    <UtilsSvgCmp
-      v-if="cms.tick != null"
-      name="tick-left"
-      class="utilsSvgCmpTick"
-      :style="{ fill: `${cms.tick}` }"
-    />
   </div>
 </template>
 
 <script>
-import UtilsTitleSubtitleExtendedCmp from '~/components/utils/UtilsTitleSubtitleExtendedCmp'
-import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
-import UtilsColoredStringCmp from '~/components/utils/UtilsColoredStringCmp'
+import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 
 export default {
   name: 'ValuesCmp',
   components: {
-    UtilsTitleSubtitleExtendedCmp,
-    UtilsColoredStringCmp,
     UtilsSvgCmp,
-  },
-  props: {
-    cms: {
-      type: Object,
-      required: true,
-    },
   },
 }
 </script>
 
 <style scoped lang="sass">
-.valuesCmpCnt
-  padding: 1em
+@import "assets/styles/mixins"
 
-.utilsTitleSubtitleExtendedCmp
-  margin-top: 1em
+.valuesCnt
+  background: $green-xxlight
 
-.utilsSvgCmpDivider
-  width: 4em
-  margin: 3em auto 0 auto
-
-.utilsSvgCmpDivider.svg
-  fill: $grey
-
-.valuesCmpValues
-  margin-top: 3em
-
-.utilsColoredStringCmp
-  margin-top: 2em
-  font-size: medium
-
-.utilsSvgCmpTick
-  margin-top: 2.25em
-  width: 5.5em
-  transform: rotate(180deg)
-  margin-right: 0
-  margin-left: auto
-
-::v-deep .utilsSvgCmpTick.svg
-  fill: $orange
-
-.valuesCmpValuesHeading
-  color: $text
-  width: fit-content
-  font-size: large
+.valuesTitleText
+  font-family: $font-family-koara
   font-weight: bold
+  color: $purple
+
+.valuesQuoteLeft
+  transform: rotate(23deg)
+
+.valuesQuoteRight
+  transform: rotate(130deg)
+
+.valuesSubtitle
+  font-family: $font-family-montserrat
+  font-weight: 600
+  color: $purple
+  text-align: center
+
+.valuesSection
+  display: flex
+  align-items: start
+  justify-content: center
+  flex-wrap: wrap
+  font-family: $font-family-montserrat
+  font-weight: 600
+  text-align: center
+
+.valueTitle
   text-transform: uppercase
-  letter-spacing: 0.2ch
+
+.valueTitleTransparency
+  color: $pink
+
+.valueTitleCommunity
+  color: $red
+
+.valueTitleDiversity
+  color: $yellow
+
+.valueTitleSustainability
+  color: $green
+
+.valueTitleReliability
+  color: $orange
+
+@include for-phone
+  .valuesCnt
+    padding: 20vw 10vw
+
+  .valuesQuoteLeft, .valuesQuoteRight
+    height: 14vw
+    margin-top: -20vw
+
+  .valuesTitleText
+    font-size: 8vw
+    width: 28vw
+    text-align: center
+
+  .valuesTitleCnt
+    margin: 0 auto
+    display: flex
+    align-items: center
+    width: fit-content
+
+  .valueWrapper
+    margin: 2.5vw 0
+
+  .valuesSection
+    margin: 7.5vw 0
+@include for-tablet
+  .valuesCnt
+    padding: 5vw 0 3vw 0
+
+  .valuesQuoteLeft, .valuesQuoteRight
+    height: 3.5vw
+    margin-top: -3.5vw
+
+  .valuesTitleText
+    font-size: 2.25vw
+
+  .valuesTitleCnt
+    margin: 0 auto
+    display: flex
+    align-items: center
+    width: fit-content
+
+  .valuesSection
+    width: 80%
+    margin: 0 auto
+    font-size: 1vw
+
+  .valueWrapper
+    width: 30%
+    margin: 3vw 1vw
 </style>

@@ -1,5 +1,18 @@
 @font-face {
   font-family: 'Koara';
+  src: url('Koara-Light.eot');
+  src: url('Koara-Light.eot?#iefix') format('embedded-opentype'),
+  url('Koara-Light.woff2') format('woff2'),
+  url('Koara-Light.woff') format('woff'),
+  url('Koara-Light.ttf') format('truetype'),
+  url('Koara-Light.svg#Koara-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Koara';
   src: url('Koara-Bold.eot');
   src: url('Koara-Bold.eot?#iefix') format('embedded-opentype'),
   url('Koara-Bold.woff2') format('woff2'),
@@ -7,6 +20,19 @@
   url('Koara-Bold.ttf') format('truetype'),
   url('Koara-Bold.svg#Koara-Bold') format('svg');
   font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Koara';
+  src: url('Koara-Regular.eot');
+  src: url('Koara-Regular.eot?#iefix') format('embedded-opentype'),
+  url('Koara-Regular.woff2') format('woff2'),
+  url('Koara-Regular.woff') format('woff'),
+  url('Koara-Regular.ttf') format('truetype'),
+  url('Koara-Regular.svg#Koara-Regular') format('svg');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }

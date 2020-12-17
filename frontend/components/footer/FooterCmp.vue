@@ -1,28 +1,50 @@
 <template>
-  <div class="footerCmpCnt">
-    <div class="footerCmpCopyright">{{ cms.copyright }}</div>
+  <div class="footerCnt">
+    <div class="footerText">
+      © 2020 TIKI Inc.&nbsp;&nbsp;|&nbsp;&nbsp;
+      <nuxt-link to="/privacy" class="footerLink">Privacy Policy</nuxt-link
+      >&nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="https://github.com/tiki" target="_blank" class="footerLink"
+        >Github</a
+      >
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'FooterCmp',
-  props: {
-    cms: {
-      type: Object,
-      required: true,
-    },
-  },
 }
 </script>
 
 <style scoped lang="sass">
-.footerCmpCnt
-  margin-top: 1em
+@import "../../assets/styles/mixins"
 
-.footerCmpCopyright
-  color: $text
-  font-size: smaller
-  text-align: center
-  padding: 1em 0
+.footerCnt
+  background: $blue-dark
+  display: flex
+  align-items: center
+
+.footerText
+  font-family: $font-family-montserrat
+  color: $white
+  margin: 0 auto
+
+.footerLink, .footerLink:hover, .footerLink:link, .footerLink:visited, .footerLink:active
+  text-decoration: none
+  color: $white
+
+@include for-phone
+  .footerCnt
+    height: 8vw
+
+  .footerText
+    font-size: 4vw
+
+@include for-tablet
+  .footerCnt
+    height: 2vw
+
+  .footerText
+    font-size: 1vw
 </style>
