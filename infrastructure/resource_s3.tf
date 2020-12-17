@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "frontend" {
 
   website {
     index_document = "index.html"
-    error_document = "404.html"
+    error_document = "redirect/index.html"
   }
 
   server_side_encryption_configuration {
@@ -86,14 +86,14 @@ resource "aws_s3_bucket_object" "backend_functions" {
   server_side_encryption = "AES256"
 }
 
-resource "aws_s3_bucket_object" "frontend_dist" {
+/*resource "aws_s3_bucket_object" "frontend_dist" {
   for_each               = fileset(local.global_frontend_dist_path, "**")
   bucket                 = aws_s3_bucket.frontend.bucket
   key                    = each.value
   source                 = "${local.global_frontend_dist_path}${each.value}"
   etag                   = filemd5("${local.global_frontend_dist_path}${each.value}")
   server_side_encryption = "AES256"
-}
+}*/
 
 output "s3_website" {
   value = aws_s3_bucket.frontend.website_endpoint

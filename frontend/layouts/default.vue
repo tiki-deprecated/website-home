@@ -6,9 +6,8 @@
 
 <style scoped lang="sass">
 .defaultLayout
-  font-family: $font-family-gadugi
-  font-size: 1rem
-  background-color: $white
+  font-family: $font-family-montserrat
+  font-weight: normal
 </style>
 
 <style lang="sass">
