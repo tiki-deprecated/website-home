@@ -33,6 +33,9 @@ export default {
       },
       {
         name: 'title',
+        content: "It's your data. Get paid for it.",
+      },
+      {
         property: 'og:title',
         content: "It's your data. Get paid for it.",
       },
@@ -43,7 +46,11 @@ export default {
       },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://mytiki.com' },
-      { property: 'og:image', content: 'https://mytiki.com/og-image.png' },
+      {
+        property: 'og:image',
+        content:
+          'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png',
+      },
       {
         property: 'twitter:title',
         content: "It's your data. Get paid for it.",
@@ -55,7 +62,7 @@ export default {
       },
       { property: 'twitter:url', content: 'https://mytiki.com' },
       { property: 'twitter:card', content: 'summary_large_image' },
-      { property: 'twitter:image', content: 'https://mytiki.com/og-image.png' },
+      { property: 'twitter:image', content: 'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png' },
       { property: 'twitter:site', content: '@my_tiki_' },
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
