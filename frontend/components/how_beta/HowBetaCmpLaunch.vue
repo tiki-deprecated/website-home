@@ -102,7 +102,7 @@ export default {
 
   .howBetaCmpLaunchBkgLaunchLg
     display: unset
-    top: -15%
+    top: 5%
 
   .howBetaCmpLaunchText
     font-size: 1.25vw

@@ -80,6 +80,9 @@ export default {
 ::v-deep .formAffiliateCmpOptCheck:hover.svg > .bkg
   fill: $green-dark
 
+.formAffiliateCmpOptCheck, .formAffiliateCmpOptX
+  cursor: pointer
+
 @include for-phone
   ::v-deep .formAffiliateCmpOptCheck.svg, ::v-deep .formAffiliateCmpOptX.svg
     height: 15vw

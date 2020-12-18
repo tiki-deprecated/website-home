@@ -13,9 +13,8 @@
       <div
         class="formSignupCmpContactSend"
         :class="{
-          formSignupCmpContactSendReady: isReady && !isError,
+          formSignupCmpContactSendReady: isReady,
           formSignupCmpContactSendNotReady: !isReady,
-          formSignupCmpContactSendError: isError && isReady,
         }"
         @click="onSubmit"
       >
@@ -37,7 +36,6 @@ export default {
   data() {
     return {
       contact: '',
-      isError: false,
     }
   },
   computed: {
@@ -58,15 +56,14 @@ export default {
       submitEvent.preventDefault()
       if (this.isReady) {
         this.$store.commit('form_signup/setContact', this.contact)
+        this.$store.commit('form_signup/setPosOpt')
         const rsp = await signUp(this.$axios, this.contact, '').then(function (
           data
         ) {
           return data.success
         })
-        // eslint-disable-next-line no-undef
-        plausible('Signup', { props: { page: 'home' } })
-        if (rsp) this.$store.commit('form_signup/setPosOpt')
-        else this.isError = true
+        this.$store.commit('form_signup/setError', rsp)
+        this.$plausible.trackEvent('Signup', { props: { page: 'home' } })
       }
     },
   },
@@ -100,10 +97,7 @@ export default {
 .formSignupCmpContactSend
   position: relative
   border-style: solid
-
-.formSignupCmpContactSendError
-  background: $red
-  border-color: $red
+  cursor: pointer
 
 .formSignupCmpContactSendReady
   background: $blue-dark

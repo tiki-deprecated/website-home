@@ -38,7 +38,7 @@ export default {
   display: none
 
 .formSignupCmpDoneTitle
-  color: $green
+  color: $blue-dark
   font-family: $font-family-montserrat
   font-weight: 600
 

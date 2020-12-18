@@ -34,8 +34,8 @@ export default {
     },
     async submit(opt) {
       this.$store.commit('form_signup/setOpt', opt)
-      // eslint-disable-next-line no-unused-vars
-      const rsp = await optIn(
+      this.$store.commit('form_signup/setPosDone')
+      await optIn(
         this.$axios,
         this.$store.state.form_signup.contact,
         '',
@@ -43,7 +43,6 @@ export default {
       ).then(function (data) {
         return data.success
       })
-      this.$store.commit('form_signup/setPosDone')
     },
   },
 }
@@ -79,6 +78,9 @@ export default {
 
 ::v-deep .formSignupCmpOptCheck:hover.svg > .bkg
   fill: $green-dark
+
+.formSignupCmpOptCheck, .formSignupCmpOptX
+  cursor: pointer
 
 @include for-phone
   ::v-deep .formSignupCmpOptCheck.svg, ::v-deep .formSignupCmpOptX.svg

@@ -192,7 +192,7 @@ export default {
     margin-top: 10vw
 @include for-tablet
   .socialFollowCnt
-    padding-top: 23vw
+    padding-top: 18vw
 
   .socialFollowQuoteLeft, .socialFollowQuoteRight
     height: 3.5vw
@@ -209,7 +209,7 @@ export default {
 
   .socialFollowFight
     font-size: 1.25vw
-    margin: 2vw auto 0 auto
+    margin: 2vw auto 4vw auto
     width: 50%
 
   ::v-deep .socialFollowBtnTwt.svg

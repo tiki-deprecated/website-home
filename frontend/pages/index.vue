@@ -102,9 +102,9 @@ export default {
     height: 15.75vw
 
   .believeCmp
-    height: 20vw
+    height: 30vw
 
   .howBetaCmpLaunch
-    top: 104vw
+    top: 120vw
     left: 0
 </style>

@@ -13,9 +13,8 @@
       <div
         class="formAffiliateCmpContactSend"
         :class="{
-          formAffiliateCmpContactSendReady: isReady && !isError,
+          formAffiliateCmpContactSendReady: isReady,
           formAffiliateCmpContactSendNotReady: !isReady,
-          formAffiliateCmpContactSendError: isError && isReady,
         }"
         @click="onSubmit"
       >
@@ -40,7 +39,6 @@ export default {
   data() {
     return {
       contact: '',
-      isError: false,
     }
   },
   computed: {
@@ -61,6 +59,7 @@ export default {
       submitEvent.preventDefault()
       if (this.isReady) {
         this.$store.commit('form_affiliate/setContact', this.contact)
+        this.$store.commit('form_affiliate/setPosOpt')
         const rsp = await signUp(
           this.$axios,
           this.contact,
@@ -68,15 +67,13 @@ export default {
         ).then(function (data) {
           return data.success
         })
-        // eslint-disable-next-line no-undef
-        plausible('Signup', {
+        this.$store.commit('form_signup/setError', rsp)
+        this.$plausible.trackEvent('Signup', {
           props: {
             page: 'signup',
             affiliate: this.$store.state.form_affiliate.code,
           },
         })
-        if (rsp) this.$store.commit('form_affiliate/setPosOpt')
-        else this.isError = true
       }
     },
   },
@@ -110,10 +107,7 @@ export default {
 .formAffiliateCmpContactSend
   position: relative
   border-style: solid
-
-.formAffiliateCmpContactSendError
-  background: $red
-  border-color: $red
+  cursor: pointer
 
 .formAffiliateCmpContactSendReady
   background: $blue-dark

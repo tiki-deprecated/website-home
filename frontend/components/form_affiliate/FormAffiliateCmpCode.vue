@@ -85,6 +85,7 @@ export default {
 .formAffiliateCmpCodeSend
   position: relative
   border-style: solid
+  cursor: pointer
 
 .formAffiliateCmpCodeSendReady
   background: $blue-dark

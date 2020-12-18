@@ -6,6 +6,7 @@ export const state = () => ({
   pos: POS_CONTACT,
   contact: '',
   opt: false,
+  error: false,
 })
 
 export const mutations = {
@@ -26,6 +27,9 @@ export const mutations = {
   },
   setPosDone(state) {
     state.pos = POS_DONE
+  },
+  setError(state, error) {
+    state.error = error
   },
 }
 

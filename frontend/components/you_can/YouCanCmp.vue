@@ -58,7 +58,7 @@ export default {
     width: fit-content
 @include for-tablet
   .youCanCnt
-    padding: 5vw 0 3vw 0
+    padding: 7vw 0 7vw 0
 
   .youCanQuoteLeft, .youCanQuoteRight
     height: 3.5vw
