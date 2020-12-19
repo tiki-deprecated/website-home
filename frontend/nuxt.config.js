@@ -93,7 +93,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['~/plugins/plausible.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -127,7 +127,6 @@ export default {
     'vue-social-sharing/nuxt',
     '@nuxtjs/toast',
     'vue-scrollto/nuxt',
-    'vue-plausible',
   ],
   /*
    ** Build configuration
@@ -154,8 +153,5 @@ export default {
   axios: {},
   router: {
     middleware: 'affiliate',
-  },
-  plausible: {
-    domain: 'mytiki.com',
   },
 }

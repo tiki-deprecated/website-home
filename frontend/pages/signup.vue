@@ -29,6 +29,9 @@ export default {
     HeaderMoneyCmp,
     PopupPrivacyCmp,
   },
+  mounted() {
+    this.$plausible.trackPageview()
+  },
 }
 </script>
 

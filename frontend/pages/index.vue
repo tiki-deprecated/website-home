@@ -39,6 +39,9 @@ export default {
     HowBetaCmpLaunch,
     SocialFollowCmp,
   },
+  mounted() {
+    this.$plausible.trackPageview()
+  },
 }
 </script>
 

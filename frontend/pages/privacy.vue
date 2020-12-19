@@ -109,6 +109,9 @@ import FooterCmp from '~/components/footer/FooterCmp'
 export default {
   name: 'Privacy',
   components: { FooterCmp, UtilsSvgCmp },
+  mounted() {
+    this.$plausible.trackPageview()
+  },
 }
 </script>
 

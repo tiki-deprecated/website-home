@@ -21,6 +21,9 @@ export default {
     TeamCmp,
     FooterCmp,
   },
+  mounted() {
+    this.$plausible.trackPageview()
+  },
 }
 </script>
 
