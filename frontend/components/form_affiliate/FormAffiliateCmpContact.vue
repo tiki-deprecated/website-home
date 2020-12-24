@@ -67,7 +67,7 @@ export default {
         ).then(function (data) {
           return data.success
         })
-        this.$store.commit('form_signup/setError', rsp)
+        this.$store.commit('form_home/setError', rsp)
         this.$plausible.trackEvent('Signup', {
           props: {
             page: 'signup',

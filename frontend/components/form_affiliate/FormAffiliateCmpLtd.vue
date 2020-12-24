@@ -5,7 +5,9 @@
       <div class="formAffiliateCmpLtdText">
         Beta access is limited to make sure everyone gets their fair (and
         significant) share.&nbsp;
-        <b class="formAffiliateCmpLtdTextHlt"> Only 9,568 left</b>
+        <b class="formAffiliateCmpLtdTextHlt">
+          Only {{ spotsRemaining }} left</b
+        >
       </div>
       <utils-svg-cmp name="paint/warn" class="formAffiliateCmpLtdPaintWarn" />
     </div>
@@ -14,10 +16,29 @@
 
 <script>
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import { count } from '@/libs/api'
 
 export default {
   name: 'FormAffiliateCmpLtd',
   components: { UtilsSvgCmp },
+  computed: {
+    spotsRemaining() {
+      return this.$store.getters.remainingSpots
+    },
+  },
+  mounted() {
+    if (this.$store.state.signupCount === 0) this.updateCount()
+  },
+  methods: {
+    async updateCount() {
+      const rsp = await count(this.$axios).then(function (data) {
+        return data
+      })
+      if (rsp.success) {
+        this.$store.commit('setSignupCount', rsp.body.total)
+      }
+    },
+  },
 }
 </script>
 
