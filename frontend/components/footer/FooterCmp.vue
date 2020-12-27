@@ -1,11 +1,14 @@
 <template>
   <div class="footerCnt">
     <div class="footerText">
-      © 2020 TIKI Inc.&nbsp;&nbsp;|&nbsp;&nbsp;
-      <nuxt-link to="/privacy" class="footerLink">Privacy Policy</nuxt-link
-      >&nbsp;&nbsp;|&nbsp;&nbsp;
+      <nuxt-link to="/" class="footerLink"
+        >© 2020 TIKI Inc.&nbsp;&nbsp;</nuxt-link
+      >|
+      <nuxt-link to="/privacy" class="footerLink"
+        >&nbsp;&nbsp;Privacy Policy&nbsp;&nbsp;</nuxt-link
+      >|
       <a href="https://github.com/tiki" target="_blank" class="footerLink"
-        >Github</a
+        >&nbsp;&nbsp;Github</a
       >
     </div>
   </div>

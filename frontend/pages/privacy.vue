@@ -119,7 +119,7 @@ export default {
 @import "assets/styles/mixins"
 
 .privacyPage
-  background: $yellow-xxlight
+  background: $tan-light
 
 ::v-deep .headerLogo.svg
   fill: $black-dark
