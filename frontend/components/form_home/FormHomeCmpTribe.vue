@@ -1,13 +1,13 @@
 <template>
-  <div class="formAffiliateCmpTribeCnt">
-    <div class="formAffiliateCmpTribeTitle">
+  <div class="formHomeCmpTribeCnt">
+    <div class="formHomeCmpTribeTitle">
       Great, you're now part of the TIKI tribe!
     </div>
-    <div class="formAffiliateCmpTribeText">
-      <div class="formAffiliateCmpTribeTextLine">
+    <div class="formHomeCmpTribeText">
+      <div class="formHomeCmpTribeTextLine">
         Your feedback is important to us.
       </div>
-      <div class="formAffiliateCmpTribeTextLine">
+      <div class="formHomeCmpTribeTextLine">
         Would you like to take part in design discussions?
       </div>
     </div>
@@ -16,40 +16,40 @@
 
 <script>
 export default {
-  name: 'FormAffiliateCmpTribe',
+  name: 'FormHomeCmpTribe',
 }
 </script>
 
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formAffiliateCmpTribeTitle
+.formHomeCmpTribeTitle
   color: $green
   font-family: $font-family-montserrat
   font-weight: 600
 
-.formAffiliateCmpTribeText
+.formHomeCmpTribeText
   color: $blue-dark
   font-family: $font-family-nunito
   font-weight: 700
 
 @include for-phone
-  .formAffiliateCmpTribeTitle
+  .formHomeCmpTribeTitle
     font-size: 5vw
 
-  .formAffiliateCmpTribeText
+  .formHomeCmpTribeText
     font-size: 4vw
     margin-top: 4vw
 
-  .formAffiliateCmpTribeTextLine
+  .formHomeCmpTribeTextLine
     padding: 1vw 0
 
 @include for-tablet
-  .formAffiliateCmpTribeTitle
+  .formHomeCmpTribeTitle
     font-size: 1.75vw
     text-align: center
 
-  .formAffiliateCmpTribeText
+  .formHomeCmpTribeText
     font-size: 1.25vw
     text-align: center
     margin-top: 1vw

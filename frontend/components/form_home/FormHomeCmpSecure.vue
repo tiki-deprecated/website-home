@@ -1,14 +1,12 @@
 <template>
-  <div class="formAffiliateCmpSecureCnt">
-    <utils-svg-cmp name="icon/lock" class="formAffiliateCmpSecureLock" />
-    <div class="formAffiliateCmpSecureText">
-      Your information is 100% secure
-    </div>
-    <div class="formAffiliateCmpSecureHowCnt" @click="onClick">
-      <div class="formAffiliateCmpSecureHowText">How</div>
+  <div class="formHomeCmpSecureCnt">
+    <utils-svg-cmp name="icon/lock" class="formHomeCmpSecureLock" />
+    <div class="formHomeCmpSecureText">Your information is 100% secure</div>
+    <div class="formHomeCmpSecureHowCnt" @click="onClick">
+      <div class="formHomeCmpSecureHowText">How</div>
       <utils-svg-cmp
         name="icon/question"
-        class="formAffiliateCmpSecureHowQuestion"
+        class="formHomeCmpSecureHowQuestion"
       />
     </div>
   </div>
@@ -18,7 +16,7 @@
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 
 export default {
-  name: 'FormAffiliateCmpSecure',
+  name: 'FormHomeCmpSecure',
   components: { UtilsSvgCmp },
   methods: {
     onClick(clickEvent) {
@@ -32,55 +30,55 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formAffiliateCmpSecureCnt
+.formHomeCmpSecureCnt
   display: flex
   align-items: center
   justify-content: center
 
-.formAffiliateCmpSecureHowCnt
+.formHomeCmpSecureHowCnt
   display: flex
   align-items: center
   cursor: pointer
 
-.formAffiliateCmpSecureText
+.formHomeCmpSecureText
   font-family: $font-family-montserrat
   font-weight: 600
   color: $purple
 
-.formAffiliateCmpSecureHowText
+.formHomeCmpSecureHowText
   font-family: $font-family-nunito
   font-weight: 700
   color: $blue
   text-decoration: underline
 
-::v-deep .formAffiliateCmpSecureLock.svg
+::v-deep .formHomeCmpSecureLock.svg
     fill: $purple
 
-::v-deep .formAffiliateCmpSecureHowQuestion.svg
+::v-deep .formHomeCmpSecureHowQuestion.svg
     fill: $blue
 
 @include for-phone
-  .formAffiliateCmpSecureHowText
+  .formHomeCmpSecureHowText
     margin-left: 2vw
     margin-right: 1vw
     font-size: 3vw
 
-  .formAffiliateCmpSecureText
+  .formHomeCmpSecureText
     font-size: 3vw
     margin-left: 1vw
 
-  ::v-deep .formAffiliateCmpSecureLock.svg, ::v-deep .formAffiliateCmpSecureHowQuestion.svg
+  ::v-deep .formHomeCmpSecureLock.svg, ::v-deep .formHomeCmpSecureHowQuestion.svg
     height: 3.3vw
 @include for-tablet
-  .formAffiliateCmpSecureHowText
+  .formHomeCmpSecureHowText
     margin-left: 0.75vw
     margin-right: 0.25vw
     font-size: 1vw
 
-  .formAffiliateCmpSecureText
+  .formHomeCmpSecureText
     font-size: 1vw
     margin-left: 0.25vw
 
-  ::v-deep .formAffiliateCmpSecureLock.svg, ::v-deep .formAffiliateCmpSecureHowQuestion.svg
+  ::v-deep .formHomeCmpSecureLock.svg, ::v-deep .formHomeCmpSecureHowQuestion.svg
     height: 1.1vw
 </style>

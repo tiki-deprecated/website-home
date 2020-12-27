@@ -1,28 +1,20 @@
-export const POS_ACCESS = 'access'
 export const POS_CONTACT = 'contact'
 export const POS_OPT = 'opt'
 export const POS_DONE = 'done'
 
 export const state = () => ({
-  pos: POS_ACCESS,
-  code: '',
+  pos: POS_CONTACT,
   contact: '',
   opt: false,
   error: false,
 })
 
 export const mutations = {
-  setCode(state, code) {
-    state.code = code
-  },
   setContact(state, contact) {
     state.contact = contact
   },
   setOpt(state, opt) {
     state.opt = opt
-  },
-  setPosAccess(state) {
-    state.pos = POS_ACCESS
   },
   setPosContact(state) {
     state.pos = POS_CONTACT
@@ -39,9 +31,6 @@ export const mutations = {
 }
 
 export const getters = {
-  isPosAccess: (state) => {
-    return state.pos === POS_ACCESS
-  },
   isPosContact: (state) => {
     return state.pos === POS_CONTACT
   },

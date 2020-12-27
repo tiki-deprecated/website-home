@@ -1,18 +1,18 @@
 <template>
-  <div class="formAffiliateCmpDoneCnt">
-    <div class="formAffiliateCmpDoneTitle">Done!</div>
-    <div class="formAffiliateCmpDoneText">
-      <div class="formAffiliateCmpDoneTextLine">Thank you for signing up.</div>
+  <div class="formHomeCmpDoneCnt">
+    <div class="formHomeCmpDoneTitle">Done!</div>
+    <div class="formHomeCmpDoneText">
+      <div class="formHomeCmpDoneTextLine">Thank you for signing up.</div>
       <div
-        class="formAffiliateCmpDoneTextLine"
-        :class="{ formAffiliateCmpDoneTextLineHide: !opt }"
+        class="formHomeCmpDoneTextLine"
+        :class="{ formHomeCmpDoneTextLineHide: !opt }"
       >
         We will let you know when our Beta launches in January and we may get in
         touch beforehand for feedback.
       </div>
       <div
-        class="formAffiliateCmpDoneTextLine"
-        :class="{ formAffiliateCmpDoneTextLineHide: opt }"
+        class="formHomeCmpDoneTextLine"
+        :class="{ formHomeCmpDoneTextLineHide: opt }"
       >
         We will let you know when our Beta launches in January.
       </div>
@@ -22,10 +22,10 @@
 
 <script>
 export default {
-  name: 'FormAffiliateCmpDone',
+  name: 'FormHomeCmpDone',
   computed: {
     opt() {
-      return this.$store.state.form_affiliate.opt
+      return this.$store.state.form_home.opt
     },
   },
 }
@@ -34,39 +34,39 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formAffiliateCmpDoneTextLineHide
+.formHomeCmpDoneTextLineHide
   display: none
 
-.formAffiliateCmpDoneTitle
-  color: $green
+.formHomeCmpDoneTitle
+  color: $blue-dark
   font-family: $font-family-montserrat
   font-weight: 600
 
-.formAffiliateCmpDoneText
+.formHomeCmpDoneText
   color: $blue-dark
   font-family: $font-family-nunito
   font-weight: 700
 
 @include for-phone
-  .formAffiliateCmpDoneTitle
+  .formHomeCmpDoneTitle
     font-size: 8vw
 
-  .formAffiliateCmpDoneText
+  .formHomeCmpDoneText
     font-size: 4vw
     margin-top: 3vw
 
-  .formAffiliateCmpDoneTextLine
+  .formHomeCmpDoneTextLine
     padding: 2vw 0
 @include for-tablet
-  .formAffiliateCmpDoneTitle
+  .formHomeCmpDoneTitle
     font-size: 2.5vw
     text-align: center
 
-  .formAffiliateCmpDoneText
+  .formHomeCmpDoneText
     font-size: 1.25vw
     text-align: center
     margin-top: 1vw
 
-  .formAffiliateCmpDoneTextLine
+  .formHomeCmpDoneTextLine
     padding: 0.5vw 0
 </style>

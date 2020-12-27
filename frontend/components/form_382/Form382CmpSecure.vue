@@ -1,13 +1,10 @@
 <template>
-  <div class="formSignupCmpSecureCnt">
-    <utils-svg-cmp name="icon/lock" class="formSignupCmpSecureLock" />
-    <div class="formSignupCmpSecureText">Your information is 100% secure</div>
-    <div class="formSignupCmpSecureHowCnt" @click="onClick">
-      <div class="formSignupCmpSecureHowText">How</div>
-      <utils-svg-cmp
-        name="icon/question"
-        class="formSignupCmpSecureHowQuestion"
-      />
+  <div class="form382CmpSecureCnt">
+    <utils-svg-cmp name="icon/lock" class="form382CmpSecureLock" />
+    <div class="form382CmpSecureText">Your information is 100% secure</div>
+    <div class="form382CmpSecureHowCnt" @click="onClick">
+      <div class="form382CmpSecureHowText">How</div>
+      <utils-svg-cmp name="icon/question" class="form382CmpSecureHowQuestion" />
     </div>
   </div>
 </template>
@@ -16,7 +13,7 @@
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 
 export default {
-  name: 'FormSignupCmpSecure',
+  name: 'Form382CmpSecure',
   components: { UtilsSvgCmp },
   methods: {
     onClick(clickEvent) {
@@ -30,55 +27,55 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formSignupCmpSecureCnt
+.form382CmpSecureCnt
   display: flex
   align-items: center
   justify-content: center
 
-.formSignupCmpSecureHowCnt
+.form382CmpSecureHowCnt
   display: flex
   align-items: center
   cursor: pointer
 
-.formSignupCmpSecureText
+.form382CmpSecureText
   font-family: $font-family-montserrat
   font-weight: 600
   color: $purple
 
-.formSignupCmpSecureHowText
+.form382CmpSecureHowText
   font-family: $font-family-nunito
   font-weight: 700
   color: $blue
   text-decoration: underline
 
-::v-deep .formSignupCmpSecureLock.svg
+::v-deep .form382CmpSecureLock.svg
     fill: $purple
 
-::v-deep .formSignupCmpSecureHowQuestion.svg
+::v-deep .form382CmpSecureHowQuestion.svg
     fill: $blue
 
 @include for-phone
-  .formSignupCmpSecureHowText
+  .form382CmpSecureHowText
     margin-left: 2vw
     margin-right: 1vw
     font-size: 3vw
 
-  .formSignupCmpSecureText
+  .form382CmpSecureText
     font-size: 3vw
     margin-left: 1vw
 
-  ::v-deep .formSignupCmpSecureLock.svg, ::v-deep .formSignupCmpSecureHowQuestion.svg
+  ::v-deep .form382CmpSecureLock.svg, ::v-deep .form382CmpSecureHowQuestion.svg
     height: 3.3vw
 @include for-tablet
-  .formSignupCmpSecureHowText
+  .form382CmpSecureHowText
     margin-left: 0.75vw
     margin-right: 0.25vw
     font-size: 1vw
 
-  .formSignupCmpSecureText
+  .form382CmpSecureText
     font-size: 1vw
     margin-left: 0.25vw
 
-  ::v-deep .formSignupCmpSecureLock.svg, ::v-deep .formSignupCmpSecureHowQuestion.svg
+  ::v-deep .form382CmpSecureLock.svg, ::v-deep .form382CmpSecureHowQuestion.svg
     height: 1.1vw
 </style>

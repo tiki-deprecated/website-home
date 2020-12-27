@@ -1,12 +1,12 @@
 <template>
-  <div class="formAffiliateCmpOptCnt">
+  <div class="form382CmpOptCnt">
     <div @click="onYes">
-      <utils-svg-cmp name="button/check" class="formAffiliateCmpOptCheck" />
-      <div class="formAffiliateCmpOptText">YES</div>
+      <utils-svg-cmp name="button/check" class="form382CmpOptCheck" />
+      <div class="form382CmpOptText">YES</div>
     </div>
     <div @click="onNo">
-      <utils-svg-cmp name="button/x" class="formAffiliateCmpOptX" />
-      <div class="formAffiliateCmpOptText">NO</div>
+      <utils-svg-cmp name="button/x" class="form382CmpOptX" />
+      <div class="form382CmpOptText">NO</div>
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 import { optIn } from '@/libs/api'
 
 export default {
-  name: 'FormAffiliateCmpOpt',
+  name: 'Form382CmpOpt',
   components: { UtilsSvgCmp },
   data() {
     return {
@@ -33,17 +33,17 @@ export default {
       await this.submit(this.opt)
     },
     async submit(opt) {
-      this.$store.commit('form_affiliate/setOpt', opt)
+      this.$store.commit('form_382/setOpt', opt)
       // eslint-disable-next-line no-unused-vars
       const rsp = await optIn(
         this.$axios,
-        this.$store.state.form_affiliate.contact,
-        this.$store.state.form_affiliate.code,
+        this.$store.state.form_382.contact,
+        this.$store.state.code,
         opt
       ).then(function (data) {
         return data.success
       })
-      this.$store.commit('form_affiliate/setPosDone')
+      this.$store.commit('form_382/setPosDone')
     },
   },
 }
@@ -51,58 +51,58 @@ export default {
 
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
-.formAffiliateCmpOptCnt
+.form382CmpOptCnt
   display: flex
   align-items: center
   justify-content: space-between
 
-.formAffiliateCmpOptText
+.form382CmpOptText
   color: $blue-dark
   font-family: $font-family-montserrat
   font-weight: 600
   text-align: center
 
-::v-deep .formAffiliateCmpOptX.svg > .ico, ::v-deep .formAffiliateCmpOptCheck.svg > .ico
+::v-deep .form382CmpOptX.svg > .ico, ::v-deep .form382CmpOptCheck.svg > .ico
   fill: $white
 
-::v-deep .formAffiliateCmpOptX.svg > .border, ::v-deep .formAffiliateCmpOptCheck.svg > .border
+::v-deep .form382CmpOptX.svg > .border, ::v-deep .form382CmpOptCheck.svg > .border
   fill: $gray-xxlight
 
-::v-deep .formAffiliateCmpOptX.svg > .bkg
+::v-deep .form382CmpOptX.svg > .bkg
   fill: $orange
 
-::v-deep .formAffiliateCmpOptX:hover.svg > .bkg
+::v-deep .form382CmpOptX:hover.svg > .bkg
   fill: $orange-dark
 
-::v-deep .formAffiliateCmpOptCheck.svg > .bkg
+::v-deep .form382CmpOptCheck.svg > .bkg
   fill: $green
 
-::v-deep .formAffiliateCmpOptCheck:hover.svg > .bkg
+::v-deep .form382CmpOptCheck:hover.svg > .bkg
   fill: $green-dark
 
-.formAffiliateCmpOptCheck, .formAffiliateCmpOptX
+.form382CmpOptCheck, .form382CmpOptX
   cursor: pointer
 
 @include for-phone
-  ::v-deep .formAffiliateCmpOptCheck.svg, ::v-deep .formAffiliateCmpOptX.svg
+  ::v-deep .form382CmpOptCheck.svg, ::v-deep .form382CmpOptX.svg
     height: 15vw
 
-  .formAffiliateCmpOptText
+  .form382CmpOptText
     font-size: 4vw
     margin-top: 1vw
 
-  .formAffiliateCmpOptCnt
+  .form382CmpOptCnt
     margin: 6vw auto 0 auto
     width: 50%
 @include for-tablet
-  ::v-deep .formAffiliateCmpOptCheck.svg, ::v-deep .formAffiliateCmpOptX.svg
+  ::v-deep .form382CmpOptCheck.svg, ::v-deep .form382CmpOptX.svg
     height: 4.5vw
 
-  .formAffiliateCmpOptText
+  .form382CmpOptText
     font-size: 1.25vw
     margin-top: 0.25vw
 
-  .formAffiliateCmpOptCnt
+  .form382CmpOptCnt
     margin: 2vw auto 0 auto
     width: 25%
 </style>

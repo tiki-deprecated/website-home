@@ -6,7 +6,7 @@
       <social-share-cmp class="signupShareCmp" />
       <footer-cmp class="signupFooterCmp" />
     </div>
-    <form-affiliate-cmp class="signupSignupCmp" />
+    <form382-cmp class="signupSignupCmp" />
     <popup-privacy-cmp class="signupPopupDataCmp" />
   </div>
 </template>
@@ -15,15 +15,15 @@
 import HeaderMoneyCmp from '@/components/header_money/HeaderMoneyCmp'
 import HowBetaCmp from '@/components/how_beta/HowBetaCmp'
 import SocialShareCmp from '@/components/social/SocialShareCmp'
-import FormAffiliateCmp from '@/components/form_affiliate/FormAffiliateCmp'
+import Form382Cmp from '@/components/form_382/Form382Cmp'
 import FooterCmp from '@/components/footer/FooterCmp'
 import PopupPrivacyCmp from '@/components/popup/PopupPrivacyCmp'
 
 export default {
-  name: 'Money',
+  name: 'Signup382Billion',
   components: {
     FooterCmp,
-    FormAffiliateCmp,
+    Form382Cmp,
     SocialShareCmp,
     HowBetaCmp,
     HeaderMoneyCmp,
@@ -31,6 +31,8 @@ export default {
   },
   mounted() {
     this.$plausible.trackPageview()
+    console.log('query code is ' + this.$nuxt.$route.query.code)
+    this.$store.commit('form_382/setCode', this.$nuxt.$route.query.code)
   },
 }
 </script>

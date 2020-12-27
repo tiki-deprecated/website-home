@@ -152,6 +152,6 @@ export default {
    */
   axios: {},
   router: {
-    middleware: 'affiliate',
+    middleware: 'signup',
   },
 }

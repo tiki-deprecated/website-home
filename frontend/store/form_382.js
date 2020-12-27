@@ -10,9 +10,6 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setCode(state, code) {
-    state.code = code
-  },
   setContact(state, contact) {
     state.contact = contact
   },

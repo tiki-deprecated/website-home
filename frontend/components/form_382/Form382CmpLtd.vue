@@ -1,15 +1,13 @@
 <template>
-  <div class="formAffiliateCmpLtdCnt">
-    <utils-svg-cmp name="sketch/signup" class="formAffiliateCmpLtdSketch" />
-    <div class="formAffiliateCmpLtdTextCnt">
-      <div class="formAffiliateCmpLtdText">
+  <div class="form382CmpLtdCnt">
+    <utils-svg-cmp name="sketch/signup" class="form382CmpLtdSketch" />
+    <div class="form382CmpLtdTextCnt">
+      <div class="form382CmpLtdText">
         Beta access is limited to make sure everyone gets their fair (and
         significant) share.&nbsp;
-        <b class="formAffiliateCmpLtdTextHlt">
-          Only {{ spotsRemaining }} left</b
-        >
+        <b class="form382CmpLtdTextHlt"> Only {{ spotsRemaining }} left</b>
       </div>
-      <utils-svg-cmp name="paint/warn" class="formAffiliateCmpLtdPaintWarn" />
+      <utils-svg-cmp name="paint/warn" class="form382CmpLtdPaintWarn" />
     </div>
   </div>
 </template>
@@ -19,7 +17,7 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 import { count } from '@/libs/api'
 
 export default {
-  name: 'FormAffiliateCmpLtd',
+  name: 'Form382CmpLtd',
   components: { UtilsSvgCmp },
   computed: {
     spotsRemaining() {
@@ -45,10 +43,10 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formAffiliateCmpLtdTextCnt
+.form382CmpLtdTextCnt
   position: relative
 
-.formAffiliateCmpLtdText
+.form382CmpLtdText
   font-family: $font-family-nunito
   color: $blue-dark
   font-weight: bold
@@ -57,46 +55,46 @@ export default {
   left: 0
   z-index: 1
 
-.formAffiliateCmpLtdTextHlt
+.form382CmpLtdTextHlt
   color: $red-dark
   font-weight: bold
 
-.formAffiliateCmpLtdPaintWarn
+.form382CmpLtdPaintWarn
   position: absolute
 
-::v-deep .formAffiliateCmpLtdPaintWarn.svg > .warn
+::v-deep .form382CmpLtdPaintWarn.svg > .warn
   fill: $red-dark
 
-::v-deep .formAffiliateCmpLtdPaintWarn.svg > .layer1
+::v-deep .form382CmpLtdPaintWarn.svg > .layer1
   fill: $yellow
 
 @include for-phone
-  ::v-deep .formAffiliateCmpLtdSketch.svg
+  ::v-deep .form382CmpLtdSketch.svg
     height: 9vw
 
-  .formAffiliateCmpLtdTextCnt
+  .form382CmpLtdTextCnt
     height: 22vw
 
-  .formAffiliateCmpLtdText
+  .form382CmpLtdText
     margin-top: 5vw
     font-size: 4vw
 
-  .formAffiliateCmpLtdPaintWarn
+  .form382CmpLtdPaintWarn
     bottom: -4%
     right: -3%
 
-  ::v-deep .formAffiliateCmpLtdPaintWarn.svg
+  ::v-deep .form382CmpLtdPaintWarn.svg
     height: 8vw
 
 @include for-tablet
-  ::v-deep .formAffiliateCmpLtdSketch.svg
+  ::v-deep .form382CmpLtdSketch.svg
     height: 3vw
     margin: 0 auto
 
-  .formAffiliateCmpLtdTextCnt
+  .form382CmpLtdTextCnt
     height: 6.75vw
 
-  .formAffiliateCmpLtdText
+  .form382CmpLtdText
     font-size: 1.25vw
     text-align: center
     top: 40%
@@ -104,10 +102,10 @@ export default {
     transform: translate(-50%, -40%)
     width: 60%
 
-  .formAffiliateCmpLtdPaintWarn
+  .form382CmpLtdPaintWarn
     bottom: 22%
     right: 16%
 
-  ::v-deep .formAffiliateCmpLtdPaintWarn.svg
+  ::v-deep .form382CmpLtdPaintWarn.svg
     height: 2.6vw
 </style>

@@ -1,12 +1,12 @@
 <template>
-  <div class="formSignupCmpOptCnt">
+  <div class="formHomeCmpOptCnt">
     <div @click="onYes">
-      <utils-svg-cmp name="button/check" class="formSignupCmpOptCheck" />
-      <div class="formSignupCmpOptText">YES</div>
+      <utils-svg-cmp name="button/check" class="formHomeCmpOptCheck" />
+      <div class="formHomeCmpOptText">YES</div>
     </div>
     <div @click="onNo">
-      <utils-svg-cmp name="button/x" class="formSignupCmpOptX" />
-      <div class="formSignupCmpOptText">NO</div>
+      <utils-svg-cmp name="button/x" class="formHomeCmpOptX" />
+      <div class="formHomeCmpOptText">NO</div>
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 import { optIn } from '@/libs/api'
 
 export default {
-  name: 'FormSignupCmpOpt',
+  name: 'FormHomeCmpOpt',
   components: { UtilsSvgCmp },
   data() {
     return {
@@ -33,11 +33,11 @@ export default {
       await this.submit(this.opt)
     },
     async submit(opt) {
-      this.$store.commit('form_signup/setOpt', opt)
-      this.$store.commit('form_signup/setPosDone')
+      this.$store.commit('form_home/setOpt', opt)
+      this.$store.commit('form_home/setPosDone')
       await optIn(
         this.$axios,
-        this.$store.state.form_signup.contact,
+        this.$store.state.form_home.contact,
         '',
         opt
       ).then(function (data) {
@@ -50,58 +50,58 @@ export default {
 
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
-.formSignupCmpOptCnt
+.formHomeCmpOptCnt
   display: flex
   align-items: center
   justify-content: space-between
 
-.formSignupCmpOptText
+.formHomeCmpOptText
   color: $blue-dark
   font-family: $font-family-montserrat
   font-weight: 600
   text-align: center
 
-::v-deep .formSignupCmpOptX.svg > .ico, ::v-deep .formSignupCmpOptCheck.svg > .ico
+::v-deep .formHomeCmpOptX.svg > .ico, ::v-deep .formHomeCmpOptCheck.svg > .ico
   fill: $white
 
-::v-deep .formSignupCmpOptX.svg > .border, ::v-deep .formSignupCmpOptCheck.svg > .border
+::v-deep .formHomeCmpOptX.svg > .border, ::v-deep .formHomeCmpOptCheck.svg > .border
   fill: $gray-xxlight
 
-::v-deep .formSignupCmpOptX.svg > .bkg
+::v-deep .formHomeCmpOptX.svg > .bkg
   fill: $orange
 
-::v-deep .formSignupCmpOptX:hover.svg > .bkg
+::v-deep .formHomeCmpOptX:hover.svg > .bkg
   fill: $orange-dark
 
-::v-deep .formSignupCmpOptCheck.svg > .bkg
+::v-deep .formHomeCmpOptCheck.svg > .bkg
   fill: $green
 
-::v-deep .formSignupCmpOptCheck:hover.svg > .bkg
+::v-deep .formHomeCmpOptCheck:hover.svg > .bkg
   fill: $green-dark
 
-.formSignupCmpOptCheck, .formSignupCmpOptX
+.formHomeCmpOptCheck, .formHomeCmpOptX
   cursor: pointer
 
 @include for-phone
-  ::v-deep .formSignupCmpOptCheck.svg, ::v-deep .formSignupCmpOptX.svg
+  ::v-deep .formHomeCmpOptCheck.svg, ::v-deep .formHomeCmpOptX.svg
     height: 15vw
 
-  .formSignupCmpOptText
+  .formHomeCmpOptText
     font-size: 4vw
     margin-top: 1vw
 
-  .formSignupCmpOptCnt
+  .formHomeCmpOptCnt
     margin: 6vw auto 0 auto
     width: 50%
 @include for-tablet
-  ::v-deep .formSignupCmpOptCheck.svg, ::v-deep .formSignupCmpOptX.svg
+  ::v-deep .formHomeCmpOptCheck.svg, ::v-deep .formHomeCmpOptX.svg
     height: 4.5vw
 
-  .formSignupCmpOptText
+  .formHomeCmpOptText
     font-size: 1.25vw
     margin-top: 0.25vw
 
-  .formSignupCmpOptCnt
+  .formHomeCmpOptCnt
     margin: 2vw auto 0 auto
     width: 15%
 </style>
