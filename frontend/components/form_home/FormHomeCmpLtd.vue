@@ -70,6 +70,7 @@ export default {
 @include for-phone
   ::v-deep .formHomeCmpLtdSketch.svg
     height: 9vw
+    margin: 0 auto
 
   .formHomeCmpLtdTextCnt
     height: 22vw
@@ -77,6 +78,7 @@ export default {
   .formHomeCmpLtdText
     margin-top: 5vw
     font-size: 4vw
+    text-align: center
 
 @include for-tablet
   ::v-deep .formHomeCmpLtdSketch.svg
@@ -89,8 +91,6 @@ export default {
   .formHomeCmpLtdText
     font-size: 1.25vw
     text-align: center
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    margin-top: 1.5vw
     width: 100%
 </style>

@@ -141,6 +141,7 @@ export default {
 @include for-phone
   .socialFollowCnt
     padding-top: 45vw
+    padding-bottom: 10vw
 
   .socialFollowQuoteLeft, .socialFollowQuoteRight
     height: 14vw

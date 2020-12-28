@@ -116,7 +116,6 @@ export default {
 
 @include for-phone
   .formHomeCmpContactCnt
-    margin-top: 8vw
     width: 100%
 
   .formHomeCmpContactInput

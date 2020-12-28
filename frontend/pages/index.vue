@@ -88,7 +88,7 @@ export default {
     height: 110vw
 
   .howBetaCmpLaunch
-    top: 595vw
+    top: 755vw
     left: 0
 
 @include for-tablet
@@ -108,6 +108,6 @@ export default {
     height: 30vw
 
   .howBetaCmpLaunch
-    top: 120vw
+    top: 130vw
     left: 0
 </style>
