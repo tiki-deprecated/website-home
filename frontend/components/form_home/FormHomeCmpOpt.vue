@@ -33,11 +33,11 @@ export default {
       await this.submit(this.opt)
     },
     async submit(opt) {
-      this.$store.commit('form_home/setOpt', opt)
-      this.$store.commit('form_home/setPosDone')
+      this.$store.commit('form_signup/setOpt', opt)
+      this.$store.commit('form_signup/setPosDone')
       await optIn(
         this.$axios,
-        this.$store.state.form_home.contact,
+        this.$store.state.form_signup.contact,
         '',
         opt
       ).then(function (data) {

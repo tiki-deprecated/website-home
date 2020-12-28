@@ -25,7 +25,7 @@ export default {
   name: 'FormHomeCmpDone',
   computed: {
     opt() {
-      return this.$store.state.form_home.opt
+      return this.$store.state.form_signup.opt
     },
   },
 }

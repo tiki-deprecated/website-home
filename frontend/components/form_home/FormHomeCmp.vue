@@ -26,13 +26,13 @@ export default {
   },
   computed: {
     isContact() {
-      return this.$store.getters['form_home/isPosContact']
+      return this.$store.getters['form_signup/isPosContact']
     },
     isOpt() {
-      return this.$store.getters['form_home/isPosOpt']
+      return this.$store.getters['form_signup/isPosOpt']
     },
     isDone() {
-      return this.$store.getters['form_home/isPosDone']
+      return this.$store.getters['form_signup/isPosDone']
     },
   },
 }

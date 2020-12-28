@@ -55,16 +55,13 @@ export default {
     async onSubmit(submitEvent) {
       submitEvent.preventDefault()
       if (this.isReady) {
-        this.$store.commit('form_382/setContact', this.contact)
-        this.$store.commit('form_382/setPosOpt')
-        const rsp = await signUp(
-          this.$axios,
-          this.contact,
-          this.$store.state.code
-        ).then(function (data) {
-          return data.success
-        })
-        this.$store.commit('form_home/setError', rsp)
+        this.$store.commit('form_signup/setContact', this.contact)
+        this.$store.commit('form_signup/setPosOpt')
+        await signUp(this.$axios, this.contact, this.$store.state.code).then(
+          function (data) {
+            return data.success
+          }
+        )
         this.$plausible.trackEvent('Signup', {
           props: {
             page: 'signup',

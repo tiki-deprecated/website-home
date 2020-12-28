@@ -33,17 +33,17 @@ export default {
       await this.submit(this.opt)
     },
     async submit(opt) {
-      this.$store.commit('form_382/setOpt', opt)
+      this.$store.commit('form_signup/setOpt', opt)
       // eslint-disable-next-line no-unused-vars
       const rsp = await optIn(
         this.$axios,
-        this.$store.state.form_382.contact,
+        this.$store.state.form_signup.contact,
         this.$store.state.code,
         opt
       ).then(function (data) {
         return data.success
       })
-      this.$store.commit('form_382/setPosDone')
+      this.$store.commit('form_signup/setPosDone')
     },
   },
 }

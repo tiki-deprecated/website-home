@@ -25,7 +25,7 @@ export default {
   name: 'Form382CmpDone',
   computed: {
     opt() {
-      return this.$store.state.form_382.opt
+      return this.$store.state.form_signup.opt
     },
   },
 }

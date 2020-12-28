@@ -6,7 +6,6 @@ export const state = () => ({
   pos: POS_CONTACT,
   contact: '',
   opt: false,
-  error: false,
 })
 
 export const mutations = {
