@@ -33,7 +33,9 @@ export default {
   },
   computed: {
     sanitize() {
-      return this.answer.replace(/\*\*(.*?)\*\*/gm, '<b>$1</b>')
+      return this.answer
+        .replace(/\*\*(.*?)\*\*/gm, '<b>$1</b>')
+        .replace(/\\[\r\n]\s+/gm, '<br>')
     },
   },
 }
