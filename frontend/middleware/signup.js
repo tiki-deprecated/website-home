@@ -3,10 +3,12 @@ const PATH_2 = '/signup/10-dollars/'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
-    if (route.path === '/signup') {
+    if (route.path === '/signup' || route.path === '/signup/') {
       redirect(addQuery(pickAB(), route.query))
     } else {
-      redirect(pickAB() + { code: route.path.substring(1, route.path.length) })
+      redirect(
+        addQuery(pickAB(), { code: route.path.substring(1, route.path.length) })
+      )
     }
   }
 }
