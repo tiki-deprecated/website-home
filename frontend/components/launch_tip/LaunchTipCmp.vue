@@ -41,8 +41,8 @@ export default {
 
 @include for-phone
   .launchTipCnt
-    height: 34vw
-    padding-top: 20vw
+    height: 40vw
+    padding-top: 35vw
     padding-bottom: 4vw
 
   .launchTipText
