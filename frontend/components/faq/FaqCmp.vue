@@ -15,6 +15,46 @@
     <div class="faqContent">
       <div class="faqContentWrapper">
         <div class="faqTitle">Your questions</div>
+        <faq-cmp-q-a
+          question="How much do I get paid?"
+          answer="The amount that you get paid will depend on the accounts that you link and the amount of data you want to share. Currently we estimate you can get paid up to **$10/month**."
+          class="faqCmpQA"
+        />
+        <faq-cmp-q-a
+          question="How does TIKI work?"
+          answer="TIKI gets you paid by selling the data from the accounts you link (like Facebook and Google). **You choose which accounts to link, and you can stop sharing your data at any point**."
+          class="faqCmpQA"
+        />
+        <faq-cmp-q-a
+          question="How do I sign up?"
+          answer="We are launching our Beta in January and you can sign up to take one of our limited spaces. We will then let you know shortly before the launch and provide you with login info."
+          class="faqCmpQA"
+        />
+        <faq-cmp-q-a
+          question="How does TIKI affect the accounts I link to it?"
+          answer="It simply doesn’t. A lot of other apps integrate third party logins - Spotify, for example, uses Facebook for authorisation and login purposes. It’s a standard practice."
+          class="faqCmpQA"
+        />
+        <faq-cmp-q-a
+          question="How secure is TIKI?"
+          answer="TIKI is as secure as it can possibly be. We take security AND privacy extremely seriously, and we have taken various measures to protect your data. Find out more on our blog."
+          class="faqCmpQA"
+        />
+        <faq-cmp-q-a
+          question="Can my data be linked to me as an individual?"
+          answer="No. Individual data is “de-individualised” and NOONE, ever sees any of your data. We only sell “datasets” - that is, groups of data for thousands of people where noone can ever be recognised."
+          class="faqCmpQA"
+        />
+        <faq-cmp-q-a
+          question="Are you making money off MY data then?"
+          answer="TIKI is designed to make YOU money first, and us second. Majority of money (???%) are yours, and we don’t charge you. We only charge our business customers."
+          class="faqCmpQA"
+        />
+        <faq-cmp-q-a
+          question="But you are still selling my data?"
+          answer="You can actually choose NOT to sell your data, but just CONTROL it. This service is absolutely free. We only sell your data IF you want to make money off it."
+          class="faqCmpQA"
+        />
       </div>
     </div>
   </div>
@@ -22,10 +62,11 @@
 
 <script>
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import FaqCmpQA from '@/components/faq/FaqCmpQA'
 
 export default {
   name: 'FaqCmp',
-  components: { UtilsSvgCmp },
+  components: { UtilsSvgCmp, FaqCmpQA },
 }
 </script>
 
@@ -83,7 +124,7 @@ export default {
 
 .faqContentWrapper
   position: relative
-  width: 100%
+  margin: 0 auto
 
 .faqTitle
   text-align: center
@@ -93,7 +134,7 @@ export default {
 
 @include for-phone
   .faqCnt
-    height: 200vw
+    height: 420vw
 
   .faqBkgBlobLgWrapper
     display: none
@@ -111,15 +152,19 @@ export default {
     right: -12vw
 
   .faqBkgExtension
-    height: 140vw
+    height: 380vw
 
   .faqTitle
-    margin-top: 10vw
+    margin-top: 12vw
     font-size: 6vw
+    margin-bottom: 2vw
+
+  .faqContentWrapper
+    width: 80%
 
 @include for-tablet
   .faqCnt
-    height: 50vw
+    height: 65vw
 
   .faqBkgBlobWrapper
     display: none
@@ -141,5 +186,9 @@ export default {
 
   .faqTitle
     margin-top: 7vw
+    margin-bottom: 2.5vw
     font-size: 1.5vw
+
+  .faqContentWrapper
+    width: 50%
 </style>
