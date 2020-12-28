@@ -136,7 +136,7 @@ export default {
 
 @include for-phone
   .faqCnt
-    height: 500vw
+    height: 530vw
 
   .faqBkgBlobLgWrapper
     display: none
