@@ -6,13 +6,9 @@ export const state = () => ({
   pos: POS_CONTACT,
   contact: '',
   opt: false,
-  error: false,
 })
 
 export const mutations = {
-  setCode(state, code) {
-    state.code = code
-  },
   setContact(state, contact) {
     state.contact = contact
   },

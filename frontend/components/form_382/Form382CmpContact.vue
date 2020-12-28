@@ -1,38 +1,38 @@
 <template>
-  <div class="formSignupCmpContactCnt">
-    <div class="formSignupCmpContactField">
+  <div class="form382CmpContactCnt">
+    <div class="form382CmpContactField">
       <input
         type="text"
         placeholder="email or phone"
         autocomplete="off"
         autocapitalize="none"
-        class="formSignupCmpContactInput"
+        class="form382CmpContactInput"
         @input="onInput"
         @keypress.enter="onSubmit"
       />
       <div
-        class="formSignupCmpContactSend"
+        class="form382CmpContactSend"
         :class="{
-          formSignupCmpContactSendReady: isReady,
-          formSignupCmpContactSendNotReady: !isReady,
+          form382CmpContactSendReady: isReady,
+          form382CmpContactSendNotReady: !isReady,
         }"
         @click="onSubmit"
       >
-        <utils-svg-cmp name="icon/send" class="formSignupCmpContactSendIco" />
+        <utils-svg-cmp name="icon/send" class="form382CmpContactSendIco" />
       </div>
     </div>
-    <form-signup-cmp-secure class="formSignupCmpSecure" />
+    <form382-cmp-secure class="form382CmpSecure" />
   </div>
 </template>
 
 <script>
-import FormSignupCmpSecure from '@/components/form_signup/FormSignupCmpSecure'
+import Form382CmpSecure from '@/components/form_382/Form382CmpSecure'
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 import { signUp } from '@/libs/api'
 
 export default {
-  name: 'FormSignupCmpContact',
-  components: { UtilsSvgCmp, FormSignupCmpSecure },
+  name: 'Form382CmpContact',
+  components: { UtilsSvgCmp, Form382CmpSecure },
   data() {
     return {
       contact: '',
@@ -57,13 +57,17 @@ export default {
       if (this.isReady) {
         this.$store.commit('form_signup/setContact', this.contact)
         this.$store.commit('form_signup/setPosOpt')
-        const rsp = await signUp(this.$axios, this.contact, '').then(function (
-          data
-        ) {
-          return data.success
+        await signUp(this.$axios, this.contact, this.$store.state.code).then(
+          function (data) {
+            return data.success
+          }
+        )
+        this.$plausible.trackEvent('Signup', {
+          props: {
+            page: 'signup',
+            382: this.$store.state.code,
+          },
         })
-        this.$store.commit('form_signup/setError', rsp)
-        this.$plausible.trackEvent('Signup', { props: { page: 'home' } })
       }
     },
   },
@@ -73,11 +77,11 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formSignupCmpContactField
+.form382CmpContactField
   display: flex
   align-items: center
 
-.formSignupCmpContactInput
+.form382CmpContactInput
   background: $white
   width: 100%
   display: flex
@@ -88,82 +92,82 @@ export default {
   color: $blue
   font-weight: 600
 
-.formSignupCmpContactInput::placeholder
+.form382CmpContactInput::placeholder
   color: $gray-xlight
 
-.formSignupCmpContactInput:focus
+.form382CmpContactInput:focus
   outline: 0
 
-.formSignupCmpContactSend
+.form382CmpContactSend
   position: relative
   border-style: solid
   cursor: pointer
 
-.formSignupCmpContactSendReady
+.form382CmpContactSendReady
   background: $blue-dark
   border-color: $blue-dark
 
-.formSignupCmpContactSendNotReady
+.form382CmpContactSendNotReady
   background: $gray-xlight
   border-color: $gray-xlight
 
-.formSignupCmpContactSendIco
+.form382CmpContactSendIco
   width: 8vw
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
 
-::v-deep .formSignupCmpContactSendIco.svg
+::v-deep .form382CmpContactSendIco.svg
   fill: $white
 
 @include for-phone
-  .formSignupCmpContactCnt
+  .form382CmpContactCnt
     margin-top: 8vw
     width: 100%
 
-  .formSignupCmpContactInput
+  .form382CmpContactInput
     height: 15vw
     border-radius: 4vw 0 0 4vw
     border-width: 1px
     font-size: 4vw
     text-indent: 2vw
 
-  .formSignupCmpContactSend
+  .form382CmpContactSend
     height: 15vw
     width: 20vw
     border-radius: 0 4vw 4vw 0
     border-width: 2px
     margin-left: -1px
 
-  .formSignupCmpContactSendIco
+  .form382CmpContactSendIco
     width: 8vw
 
-  .formSignupCmpSecure
+  .form382CmpSecure
     margin-top: 6vw
 
 @include for-tablet
-  .formSignupCmpContactCnt
+  .form382CmpContactCnt
     margin: 0 auto
-    width: 33%
+    width: 50%
 
-  .formSignupCmpContactInput
+  .form382CmpContactInput
     height: 3vw
     border-radius: 0.5vw 0 0 0.5vw
     border-width: 1px
     font-size: 1.5vw
     text-indent: 0.75vw
 
-  .formSignupCmpContactSend
+  .form382CmpContactSend
     height: 3vw
     width: 4vw
     border-radius: 0 0.5vw 0.5vw 0
     border-width: 2px
     margin-left: -1px
 
-  .formSignupCmpContactSendIco
+  .form382CmpContactSendIco
     width: 1.75vw
 
-  .formSignupCmpSecure
+  .form382CmpSecure
     margin-top: 1.25vw
 </style>

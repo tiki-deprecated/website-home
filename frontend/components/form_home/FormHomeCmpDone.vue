@@ -1,18 +1,18 @@
 <template>
-  <div class="formSignupCmpDoneCnt">
-    <div class="formSignupCmpDoneTitle">Done!</div>
-    <div class="formSignupCmpDoneText">
-      <div class="formSignupCmpDoneTextLine">Thank you for signing up.</div>
+  <div class="formHomeCmpDoneCnt">
+    <div class="formHomeCmpDoneTitle">Done!</div>
+    <div class="formHomeCmpDoneText">
+      <div class="formHomeCmpDoneTextLine">Thank you for signing up.</div>
       <div
-        class="formSignupCmpDoneTextLine"
-        :class="{ formSignupCmpDoneTextLineHide: !opt }"
+        class="formHomeCmpDoneTextLine"
+        :class="{ formHomeCmpDoneTextLineHide: !opt }"
       >
         We will let you know when our Beta launches in January and we may get in
         touch beforehand for feedback.
       </div>
       <div
-        class="formSignupCmpDoneTextLine"
-        :class="{ formSignupCmpDoneTextLineHide: opt }"
+        class="formHomeCmpDoneTextLine"
+        :class="{ formHomeCmpDoneTextLineHide: opt }"
       >
         We will let you know when our Beta launches in January.
       </div>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'FormSignupCmpDone',
+  name: 'FormHomeCmpDone',
   computed: {
     opt() {
       return this.$store.state.form_signup.opt
@@ -34,39 +34,39 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formSignupCmpDoneTextLineHide
+.formHomeCmpDoneTextLineHide
   display: none
 
-.formSignupCmpDoneTitle
+.formHomeCmpDoneTitle
   color: $blue-dark
   font-family: $font-family-montserrat
   font-weight: 600
 
-.formSignupCmpDoneText
+.formHomeCmpDoneText
   color: $blue-dark
   font-family: $font-family-nunito
   font-weight: 700
 
 @include for-phone
-  .formSignupCmpDoneTitle
+  .formHomeCmpDoneTitle
     font-size: 8vw
 
-  .formSignupCmpDoneText
+  .formHomeCmpDoneText
     font-size: 4vw
     margin-top: 3vw
 
-  .formSignupCmpDoneTextLine
+  .formHomeCmpDoneTextLine
     padding: 2vw 0
 @include for-tablet
-  .formSignupCmpDoneTitle
+  .formHomeCmpDoneTitle
     font-size: 2.5vw
     text-align: center
 
-  .formSignupCmpDoneText
+  .formHomeCmpDoneText
     font-size: 1.25vw
     text-align: center
     margin-top: 1vw
 
-  .formSignupCmpDoneTextLine
+  .formHomeCmpDoneTextLine
     padding: 0.5vw 0
 </style>

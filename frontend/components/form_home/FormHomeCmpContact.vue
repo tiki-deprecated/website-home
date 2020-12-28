@@ -1,41 +1,38 @@
 <template>
-  <div class="formAffiliateCmpContactCnt">
-    <div class="formAffiliateCmpContactField">
+  <div class="formHomeCmpContactCnt">
+    <div class="formHomeCmpContactField">
       <input
         type="text"
         placeholder="email or phone"
         autocomplete="off"
         autocapitalize="none"
-        class="formAffiliateCmpContactInput"
+        class="formHomeCmpContactInput"
         @input="onInput"
         @keypress.enter="onSubmit"
       />
       <div
-        class="formAffiliateCmpContactSend"
+        class="formHomeCmpContactSend"
         :class="{
-          formAffiliateCmpContactSendReady: isReady,
-          formAffiliateCmpContactSendNotReady: !isReady,
+          formHomeCmpContactSendReady: isReady,
+          formHomeCmpContactSendNotReady: !isReady,
         }"
         @click="onSubmit"
       >
-        <utils-svg-cmp
-          name="icon/send"
-          class="formAffiliateCmpContactSendIco"
-        />
+        <utils-svg-cmp name="icon/send" class="formHomeCmpContactSendIco" />
       </div>
     </div>
-    <form-affiliate-cmp-secure class="formAffiliateCmpSecure" />
+    <form-home-cmp-secure class="formHomeCmpSecure" />
   </div>
 </template>
 
 <script>
-import FormAffiliateCmpSecure from '@/components/form_affiliate/FormAffiliateCmpSecure'
+import FormHomeCmpSecure from '@/components/form_home/FormHomeCmpSecure'
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 import { signUp } from '@/libs/api'
 
 export default {
-  name: 'FormAffiliateCmpContact',
-  components: { UtilsSvgCmp, FormAffiliateCmpSecure },
+  name: 'FormHomeCmpContact',
+  components: { UtilsSvgCmp, FormHomeCmpSecure },
   data() {
     return {
       contact: '',
@@ -58,22 +55,12 @@ export default {
     async onSubmit(submitEvent) {
       submitEvent.preventDefault()
       if (this.isReady) {
-        this.$store.commit('form_affiliate/setContact', this.contact)
-        this.$store.commit('form_affiliate/setPosOpt')
-        const rsp = await signUp(
-          this.$axios,
-          this.contact,
-          this.$store.state.form_affiliate.code
-        ).then(function (data) {
+        this.$store.commit('form_signup/setContact', this.contact)
+        this.$store.commit('form_signup/setPosOpt')
+        await signUp(this.$axios, this.contact, '').then(function (data) {
           return data.success
         })
-        this.$store.commit('form_home/setError', rsp)
-        this.$plausible.trackEvent('Signup', {
-          props: {
-            page: 'signup',
-            affiliate: this.$store.state.form_affiliate.code,
-          },
-        })
+        this.$plausible.trackEvent('Signup', { props: { page: 'home' } })
       }
     },
   },
@@ -83,11 +70,11 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formAffiliateCmpContactField
+.formHomeCmpContactField
   display: flex
   align-items: center
 
-.formAffiliateCmpContactInput
+.formHomeCmpContactInput
   background: $white
   width: 100%
   display: flex
@@ -98,82 +85,82 @@ export default {
   color: $blue
   font-weight: 600
 
-.formAffiliateCmpContactInput::placeholder
+.formHomeCmpContactInput::placeholder
   color: $gray-xlight
 
-.formAffiliateCmpContactInput:focus
+.formHomeCmpContactInput:focus
   outline: 0
 
-.formAffiliateCmpContactSend
+.formHomeCmpContactSend
   position: relative
   border-style: solid
   cursor: pointer
 
-.formAffiliateCmpContactSendReady
+.formHomeCmpContactSendReady
   background: $blue-dark
   border-color: $blue-dark
 
-.formAffiliateCmpContactSendNotReady
+.formHomeCmpContactSendNotReady
   background: $gray-xlight
   border-color: $gray-xlight
 
-.formAffiliateCmpContactSendIco
+.formHomeCmpContactSendIco
   width: 8vw
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
 
-::v-deep .formAffiliateCmpContactSendIco.svg
+::v-deep .formHomeCmpContactSendIco.svg
   fill: $white
 
 @include for-phone
-  .formAffiliateCmpContactCnt
+  .formHomeCmpContactCnt
     margin-top: 8vw
     width: 100%
 
-  .formAffiliateCmpContactInput
+  .formHomeCmpContactInput
     height: 15vw
     border-radius: 4vw 0 0 4vw
     border-width: 1px
     font-size: 4vw
     text-indent: 2vw
 
-  .formAffiliateCmpContactSend
+  .formHomeCmpContactSend
     height: 15vw
     width: 20vw
     border-radius: 0 4vw 4vw 0
     border-width: 2px
     margin-left: -1px
 
-  .formAffiliateCmpContactSendIco
+  .formHomeCmpContactSendIco
     width: 8vw
 
-  .formAffiliateCmpSecure
+  .formHomeCmpSecure
     margin-top: 6vw
 
 @include for-tablet
-  .formAffiliateCmpContactCnt
+  .formHomeCmpContactCnt
     margin: 0 auto
-    width: 50%
+    width: 33%
 
-  .formAffiliateCmpContactInput
+  .formHomeCmpContactInput
     height: 3vw
     border-radius: 0.5vw 0 0 0.5vw
     border-width: 1px
     font-size: 1.5vw
     text-indent: 0.75vw
 
-  .formAffiliateCmpContactSend
+  .formHomeCmpContactSend
     height: 3vw
     width: 4vw
     border-radius: 0 0.5vw 0.5vw 0
     border-width: 2px
     margin-left: -1px
 
-  .formAffiliateCmpContactSendIco
+  .formHomeCmpContactSendIco
     width: 1.75vw
 
-  .formAffiliateCmpSecure
+  .formHomeCmpSecure
     margin-top: 1.25vw
 </style>

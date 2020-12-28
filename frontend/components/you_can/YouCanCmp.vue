@@ -25,7 +25,7 @@ export default {
 @import "assets/styles/mixins"
 
 .youCanCnt
-  background: $yellow-xxlight
+  background: $tan-light
 
 .youCanTitleText
   font-family: $font-family-koara

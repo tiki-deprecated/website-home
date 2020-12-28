@@ -11,9 +11,11 @@
           class="headerMoneyTopBkgHeaderLg"
         />
         <div class="headerMoneyTopCnt">
-          <nuxt-link to="/">
-            <utils-svg-cmp name="tiki/logo" class="headerMoneyTopLogo" />
-          </nuxt-link>
+          <div class="headerMoneyLogoWrapper">
+            <nuxt-link to="/">
+              <utils-svg-cmp name="tiki/logo" class="headerMoneyTopLogo" />
+            </nuxt-link>
+          </div>
           <header-money-cmp-amt class="headerCompaniesAmountCmp" />
         </div>
       </div>
@@ -107,6 +109,10 @@ export default {
 
 ::v-deep .headerMoneyPineapple.svg > .text
   fill: $yellow-light
+
+.headerMoneyLogoWrapper
+  width: fit-content
+  height: fit-content
 
 @include for-phone
   .headerMoneyCnt
