@@ -60,7 +60,9 @@ export default {
         await signUp(this.$axios, this.contact, '').then(function (data) {
           return data.success
         })
-        this.$plausible.trackEvent('Signup', { props: { page: 'home' } })
+        this.$plausible.trackEvent('Signup', {
+          props: { page: 'home', affiliate: this.$store.state.code },
+        })
       }
     },
   },

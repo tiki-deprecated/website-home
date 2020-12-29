@@ -63,10 +63,7 @@ export default {
           }
         )
         this.$plausible.trackEvent('Signup', {
-          props: {
-            page: 'signup',
-            382: this.$store.state.code,
-          },
+          props: { page: 'signup', affiliate: this.$store.state.code },
         })
       }
     },
