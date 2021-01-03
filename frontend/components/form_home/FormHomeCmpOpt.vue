@@ -120,9 +120,10 @@ export default {
     margin: 6vw auto 0 auto
     width: 50%
 
-  ::v-deep .formHomeCmpOptLoading.svg
-    width: 5vw
-    margin: 3vw auto
+  .formHomeCmpOptLoadingSubmit
+    height: 15vw
+    margin: 6vw auto
+
 @include for-tablet
   ::v-deep .formHomeCmpOptCheck.svg, ::v-deep .formHomeCmpOptX.svg
     height: 4.5vw
@@ -136,6 +137,6 @@ export default {
     width: 15%
 
   .formHomeCmpOptLoadingSubmit
-    width: 5vw
-    margin: 3vw auto
+    height: 4.5vw
+    margin: 2vw auto
 </style>

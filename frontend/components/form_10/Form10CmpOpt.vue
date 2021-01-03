@@ -1,12 +1,21 @@
 <template>
-  <div class="form10CmpOptCnt">
-    <div @click="onYes">
-      <utils-svg-cmp name="button/check" class="form10CmpOptCheck" />
-      <div class="form10CmpOptText">YES</div>
+  <div>
+    <div v-if="!isSubmitted" class="form10CmpOptCnt">
+      <div @click="onYes">
+        <utils-svg-cmp name="button/check" class="form10CmpOptCheck" />
+        <div class="form10CmpOptText">YES</div>
+      </div>
+      <div @click="onNo">
+        <utils-svg-cmp name="button/x" class="form10CmpOptX" />
+        <div class="form10CmpOptText">NO</div>
+      </div>
     </div>
-    <div @click="onNo">
-      <utils-svg-cmp name="button/x" class="form10CmpOptX" />
-      <div class="form10CmpOptText">NO</div>
+    <div :class="{ form10CmpOptLoadingSubmit: isSubmitted }">
+      <utils-svg-cmp
+        name="icon/loading"
+        class="form10CmpOptLoading"
+        :class="{ form10CmpOptLoadingSubmit: isSubmitted }"
+      />
     </div>
   </div>
 </template>
@@ -21,6 +30,7 @@ export default {
   data() {
     return {
       opt: false,
+      isSubmitted: false,
     }
   },
   methods: {
@@ -34,8 +44,8 @@ export default {
     },
     async submit(opt) {
       this.$store.commit('form_signup/setOpt', opt)
-      // eslint-disable-next-line no-unused-vars
-      const rsp = await optIn(
+      this.isSubmitted = true
+      await optIn(
         this.$axios,
         this.$store.state.form_signup.contact,
         this.$store.state.code,
@@ -83,6 +93,21 @@ export default {
 .form10CmpOptCheck, .form10CmpOptX
   cursor: pointer
 
+.form10CmpOptLoading
+  fill: $green
+  width: 0
+  margin: 0
+  transition-property: transform
+  transition-duration: 20s
+  transition-timing-function: linear
+  transition-delay: 0s
+
+::v-deep .form10CmpOptLoadingSubmit.svg
+  width: inherit
+
+.form10CmpOptLoadingSubmit
+  transform: rotate(-2000deg)
+
 @include for-phone
   ::v-deep .form10CmpOptCheck.svg, ::v-deep .form10CmpOptX.svg
     height: 15vw
@@ -95,6 +120,10 @@ export default {
     margin: 3vw auto 0 auto
     width: 50%
 
+  .form10CmpOptLoadingSubmit
+    height: 15vw
+    margin: 3vw auto
+
 @include for-tablet
   ::v-deep .form10CmpOptCheck.svg, ::v-deep .form10CmpOptX.svg
     height: 4.5vw
@@ -106,4 +135,8 @@ export default {
   .form10CmpOptCnt
     margin: 1vw auto 0 auto
     width: 25%
+
+  .form10CmpOptLoadingSubmit
+    height: 4.5vw
+    margin: 1vw auto
 </style>

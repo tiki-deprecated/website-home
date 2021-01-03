@@ -49,10 +49,10 @@ export default {
   text-decoration: underline
 
 ::v-deep .form10CmpSecureLock.svg
-    fill: $purple
+  fill: $purple
 
 ::v-deep .form10CmpSecureHowQuestion.svg
-    fill: $blue
+  fill: $blue
 
 @include for-phone
   .form10CmpSecureHowText
