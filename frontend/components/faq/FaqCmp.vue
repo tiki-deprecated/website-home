@@ -136,7 +136,7 @@ export default {
 
 @include for-phone
   .faqCnt
-    height: 530vw
+    height: 560vw
 
   .faqBkgBlobLgWrapper
     display: none
@@ -154,7 +154,7 @@ export default {
     right: -12vw
 
   .faqBkgExtension
-    height: 380vw
+    height: 520vw
 
   .faqTitle
     margin-top: 12vw
@@ -166,7 +166,7 @@ export default {
 
 @include for-tablet
   .faqCnt
-    height: 78vw
+    height: 89vw
 
   .faqBkgBlobWrapper
     display: none

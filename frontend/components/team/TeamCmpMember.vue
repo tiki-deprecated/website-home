@@ -15,21 +15,30 @@
         :href="`https://linkedin.com/in/${linkedin}`"
         class="teamMemberCmpSocialLink"
       >
-        <utils-svg-cmp name="icon/linkedin" class="utilsSvgCmp" />
+        <utils-svg-cmp
+          name="icon/linkedin"
+          class="utilsSvgCmp utilsSvgCmpLinkedin"
+        />
       </a>
       <a
         v-if="medium != null"
         :href="`https://medium.com/@${medium}`"
         class="teamMemberCmpSocialLink"
       >
-        <utils-svg-cmp name="icon/medium" class="utilsSvgCmp" />
+        <utils-svg-cmp
+          name="icon/medium"
+          class="utilsSvgCmp utilsSvgCmpMedium"
+        />
       </a>
       <a
         v-if="twitter != null"
         :href="`https://twitter.com/${twitter}`"
         class="teamMemberCmpSocialLink"
       >
-        <utils-svg-cmp name="icon/twitter" class="utilsSvgCmp" />
+        <utils-svg-cmp
+          name="icon/twitter"
+          class="utilsSvgCmp utilsSvgCmpTwitter"
+        />
       </a>
     </div>
   </div>
@@ -101,6 +110,15 @@ export default {
   text-align: center
   font-weight: normal
   font-family: $font-family-nunito
+
+::v-deep .utilsSvgCmpTwitter.svg
+  fill: #1DA1F2
+
+::v-deep .utilsSvgCmpMedium.svg
+  fill: #12100E
+
+::v-deep .utilsSvgCmpLinkedin.svg
+  fill: #2867B2
 
 @include for-phone
   .utilsAvatarCmp

@@ -73,7 +73,7 @@ export default {
 
 @include for-phone
   .faqCmpQACnt
-    margin-top: 10vw
+    margin-top: 13vw
 
   .faqCmpQATitle
     font-size: 5vw
@@ -92,7 +92,7 @@ export default {
 
 @include for-tablet
   .faqCmpQACnt
-    margin-top: 1.5vw
+    margin-top: 3vw
 
   .faqCmpQATitle
     font-size: 1.25vw

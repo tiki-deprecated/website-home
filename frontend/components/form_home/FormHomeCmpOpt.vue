@@ -1,12 +1,21 @@
 <template>
-  <div class="formHomeCmpOptCnt">
-    <div @click="onYes">
-      <utils-svg-cmp name="button/check" class="formHomeCmpOptCheck" />
-      <div class="formHomeCmpOptText">YES</div>
+  <div>
+    <div v-if="!isSubmitted" class="formHomeCmpOptCnt">
+      <div @click="onYes">
+        <utils-svg-cmp name="button/check" class="formHomeCmpOptCheck" />
+        <div class="formHomeCmpOptText">YES</div>
+      </div>
+      <div @click="onNo">
+        <utils-svg-cmp name="button/x" class="formHomeCmpOptX" />
+        <div class="formHomeCmpOptText">NO</div>
+      </div>
     </div>
-    <div @click="onNo">
-      <utils-svg-cmp name="button/x" class="formHomeCmpOptX" />
-      <div class="formHomeCmpOptText">NO</div>
+    <div :class="{ formHomeCmpOptLoadingSubmit: isSubmitted }">
+      <utils-svg-cmp
+        name="icon/loading"
+        class="formHomeCmpOptLoading"
+        :class="{ formHomeCmpOptLoadingSubmit: isSubmitted }"
+      />
     </div>
   </div>
 </template>
@@ -21,6 +30,7 @@ export default {
   data() {
     return {
       opt: false,
+      isSubmitted: false,
     }
   },
   methods: {
@@ -34,7 +44,7 @@ export default {
     },
     async submit(opt) {
       this.$store.commit('form_signup/setOpt', opt)
-      this.$store.commit('form_signup/setPosDone')
+      this.isSubmitted = true
       await optIn(
         this.$axios,
         this.$store.state.form_signup.contact,
@@ -43,6 +53,7 @@ export default {
       ).then(function (data) {
         return data.success
       })
+      this.$store.commit('form_signup/setPosDone')
     },
   },
 }
@@ -82,6 +93,21 @@ export default {
 .formHomeCmpOptCheck, .formHomeCmpOptX
   cursor: pointer
 
+.formHomeCmpOptLoading
+  fill: $blue-xlight
+  width: 0
+  margin: 0
+  transition-property: transform
+  transition-duration: 20s
+  transition-timing-function: linear
+  transition-delay: 0s
+
+::v-deep .formHomeCmpOptLoadingSubmit.svg
+  width: inherit
+
+.formHomeCmpOptLoadingSubmit
+  transform: rotate(-2000deg)
+
 @include for-phone
   ::v-deep .formHomeCmpOptCheck.svg, ::v-deep .formHomeCmpOptX.svg
     height: 15vw
@@ -93,6 +119,10 @@ export default {
   .formHomeCmpOptCnt
     margin: 6vw auto 0 auto
     width: 50%
+
+  ::v-deep .formHomeCmpOptLoading.svg
+    width: 5vw
+    margin: 3vw auto
 @include for-tablet
   ::v-deep .formHomeCmpOptCheck.svg, ::v-deep .formHomeCmpOptX.svg
     height: 4.5vw
@@ -104,4 +134,8 @@ export default {
   .formHomeCmpOptCnt
     margin: 2vw auto 0 auto
     width: 15%
+
+  .formHomeCmpOptLoadingSubmit
+    width: 5vw
+    margin: 3vw auto
 </style>
