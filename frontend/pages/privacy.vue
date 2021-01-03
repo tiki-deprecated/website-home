@@ -109,6 +109,9 @@ import FooterCmp from '~/components/footer/FooterCmp'
 export default {
   name: 'Privacy',
   components: { FooterCmp, UtilsSvgCmp },
+  mounted() {
+    this.$plausible.trackPageview()
+  },
 }
 </script>
 
@@ -116,7 +119,7 @@ export default {
 @import "assets/styles/mixins"
 
 .privacyPage
-  background: $yellow-xxlight
+  background: $tan-light
 
 ::v-deep .headerLogo.svg
   fill: $black-dark

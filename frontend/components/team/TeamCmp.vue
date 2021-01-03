@@ -144,7 +144,7 @@ export default {
 
 .teamWrapper
   display: flex
-  align-items: start
+  align-items: flex-start
   justify-content: center
   flex-wrap: wrap
 

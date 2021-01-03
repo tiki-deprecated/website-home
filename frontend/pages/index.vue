@@ -4,7 +4,7 @@
       <header-home-cmp class="headerHomeCmp" />
       <div class="whyDivider"></div>
       <you-can-cmp class="youCanCmp" />
-      <form-signup-cmp id="signup" class="formSignupCmp" />
+      <form-home-cmp id="signup" class="formHomeCmp" />
       <believe-cmp class="believeCmp" />
       <social-follow-cmp class="socialFollowCmp" />
       <footer-cmp class="footerCmp" />
@@ -20,7 +20,7 @@ import HowBetaCmpLaunch from '~/components/how_beta/HowBetaCmpLaunch'
 import HeaderHomeCmp from '~/components/header_home/HeaderHomeCmp'
 import WhyCmp from '~/components/why/WhyCmp'
 import YouCanCmp from '~/components/you_can/YouCanCmp'
-import FormSignupCmp from '~/components/form_signup/FormSignupCmp'
+import FormHomeCmp from '~/components/form_home/FormHomeCmp'
 import BelieveCmp from '~/components/believe/BelieveCmp'
 import FooterCmp from '~/components/footer/FooterCmp'
 import PopupPrivacyCmp from '~/components/popup/PopupPrivacyCmp'
@@ -32,12 +32,15 @@ export default {
     HeaderHomeCmp,
     WhyCmp,
     YouCanCmp,
-    FormSignupCmp,
+    FormHomeCmp,
     BelieveCmp,
     FooterCmp,
     PopupPrivacyCmp,
     HowBetaCmpLaunch,
     SocialFollowCmp,
+  },
+  mounted() {
+    this.$plausible.trackPageview()
   },
 }
 </script>
@@ -85,7 +88,7 @@ export default {
     height: 110vw
 
   .howBetaCmpLaunch
-    top: 595vw
+    top: 755vw
     left: 0
 
 @include for-tablet
@@ -98,13 +101,13 @@ export default {
     transform: translate(-50%, 0)
     height: 18vw
 
-  .formSignupCmp
+  .formHomeCmp
     height: 15.75vw
 
   .believeCmp
-    height: 20vw
+    height: 30vw
 
   .howBetaCmpLaunch
-    top: 104vw
+    top: 130vw
     left: 0
 </style>

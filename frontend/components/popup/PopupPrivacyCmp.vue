@@ -64,10 +64,12 @@ export default {
   display: none
 
 .popupPrivacyOverlay
-  position: relative
+  position: fixed
   background: rgba(#000, 0.3)
   width: 100%
   height: 100%
+  top: 0
+  left: 0
 
 .popupPrivacyWrapper
   position: absolute
@@ -96,6 +98,7 @@ export default {
 
 .popupPrivacyIcoX
   margin: 0 0 0 auto
+  cursor: pointer
 
 ::v-deep .popupPrivacyIcoX.svg
   fill: $gray-dark

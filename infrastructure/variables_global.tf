@@ -24,6 +24,7 @@ locals {
     {
       lambda_signup_arn   = aws_lambda_function.signup.invoke_arn,
       lambda_opt_in_arn   = aws_lambda_function.opt_in.invoke_arn,
+      lambda_count_arn   = aws_lambda_function.count.invoke_arn,
       servers_url  = "api.${var.global_website_domain}",
       region       = var.aws_region,
       version      = local.global_api_version,

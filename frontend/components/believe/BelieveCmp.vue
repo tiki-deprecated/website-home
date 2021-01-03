@@ -132,7 +132,7 @@ export default {
     height: 50%
 @include for-tablet
   .believeCnt
-    padding: 5vw 0 3vw 0
+    padding: 9vw 0 3vw 0
 
   .believeQuoteLeft, .believeQuoteRight
     height: 3.5vw

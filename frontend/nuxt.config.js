@@ -62,19 +62,14 @@ export default {
       },
       { property: 'twitter:url', content: 'https://mytiki.com' },
       { property: 'twitter:card', content: 'summary_large_image' },
-      { property: 'twitter:image', content: 'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png' },
+      {
+        property: 'twitter:image',
+        content:
+          'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png',
+      },
       { property: 'twitter:site', content: '@my_tiki_' },
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
-    script: [
-      {
-        async: true,
-        defer: true,
-        'data-domain': 'mytiki.com',
-        src: 'https://plausible.io/js/plausible.js',
-      },
-      'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
-    ],
   },
   /*
    ** Global CSS
@@ -98,7 +93,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['~/plugins/plausible.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -157,6 +152,6 @@ export default {
    */
   axios: {},
   router: {
-    middleware: 'affiliate',
+    middleware: 'signup',
   },
 }

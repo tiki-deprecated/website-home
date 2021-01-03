@@ -1,23 +1,56 @@
 <template>
-  <div class="utilsVideoCmpCnt">
-    <iframe
-      width="560"
-      height="315"
-      :src="'https://www.youtube.com/embed/' + id"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      class="utilsVideoCmpIframe"
-    />
+  <div class="utilsVideoCnt">
+    <div v-if="loadVideo" class="utilsVideoCntVideo">
+      <iframe
+        width="560"
+        height="315"
+        :src="'https://www.youtube.com/embed/' + id + '?autoplay=1'"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        class="utilsVideoCntVideoIframe"
+      />
+    </div>
+    <div v-if="!loadVideo" class="utilsVideoPlaceholder" @click="onClick">
+      <img
+        :src="require(`~/assets/images/${placeholder}`)"
+        alt="So why do you get nothing?"
+        class="utilsVideoCmpPlaceholderImg"
+      />
+      <utils-svg-cmp
+        name="button/play"
+        class="utilsVideoCmpPlaceholderButton"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+
 export default {
   name: 'UtilsVideoCmp',
+  components: { UtilsSvgCmp },
   props: {
     id: {
       type: String,
       required: true,
+    },
+    placeholder: {
+      type: String,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      loadVideo: false,
+      hover: false,
+    }
+  },
+  methods: {
+    onClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.loadVideo = true
     },
   },
 }
@@ -25,14 +58,18 @@ export default {
 
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
+.utilsVideoCnt
+  position: relative
+  width: 100%
+  height: 100%
 
-.utilsVideoCmpCnt
+.utilsVideoCntVideo
   overflow: hidden
   padding-bottom: 56.25%
   position: relative
   height: 0
 
-.utilsVideoCmpCnt .utilsVideoCmpIframe
+.utilsVideoCntVideoIframe
   left: 0
   top: 0
   height: 100%
@@ -40,4 +77,39 @@ export default {
   position: absolute
   border: none
   clip-path: inset(1px 1px)
+
+.utilsVideoPlaceholder
+  width: 100%
+  height: 100%
+  position: relative
+  cursor: pointer
+
+.utilsVideoCmpPlaceholderImg
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+
+.utilsVideoCmpPlaceholderButton
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 2
+
+::v-deep .utilsVideoCmpPlaceholderButton.svg
+  width: 20%
+
+::v-deep .utilsVideoCmpPlaceholderButton.svg > .play-fill, ::v-deep .utilsVideoCmpPlaceholderButton.svg > .button-fill
+  fill: none
+
+::v-deep .utilsVideoCmpPlaceholderButton.svg > .play-outline, ::v-deep .utilsVideoCmpPlaceholderButton.svg > .button-outline
+  fill: $yellow
+
+::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .button-outline, ::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .button-fill
+  fill: $yellow
+
+::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .play-outline, ::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .play-fill
+  fill: $white
 </style>

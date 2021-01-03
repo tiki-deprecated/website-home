@@ -1,30 +1,46 @@
 <template>
   <div class="youCanFeatures">
     <div class="youCanFeatureSee">
-      <utils-svg-cmp name="blob/b1" class="youCanFeatureSeeBlob" />
-      <div class="youCanFeatureSeeCnt">
-        <div class="youCanFeatureSeeNum">1. See</div>
-        <div class="youCanFeatureSeeText">
-          what data companies are collecting on you, how its used, and how
-          secure it really is.
+      <div class="youCanFeatureImgWrapper">
+        <img src="~/assets/images/see.png" class="youCanFeatureImg" />
+      </div>
+      <div class="youCanFeatureWrapper">
+        <utils-svg-cmp name="blob/b1" class="youCanFeatureSeeBlob" />
+        <div class="youCanFeatureSeeCnt">
+          <div class="youCanFeatureSeeNum">1. See</div>
+          <div class="youCanFeatureSeeText">
+            what data companies are collecting on you, how its used, and how
+            secure it really is.
+          </div>
         </div>
       </div>
     </div>
     <div class="youCanFeatureControl">
-      <utils-svg-cmp name="blob/b2" class="youCanFeatureControlBlob" />
-      <div class="youCanFeatureControlCnt">
-        <div class="youCanFeatureControlNum">2. Control</div>
-        <div class="youCanFeatureControlText">
-          who has access to your data and for what purpose. It’s your decision.
+      <div class="youCanFeatureImgWrapper">
+        <img src="~/assets/images/control.png" class="youCanFeatureImg" />
+      </div>
+      <div class="youCanFeatureWrapper">
+        <utils-svg-cmp name="blob/b2" class="youCanFeatureControlBlob" />
+        <div class="youCanFeatureControlCnt">
+          <div class="youCanFeatureControlNum">2. Control</div>
+          <div class="youCanFeatureControlText">
+            who has access to your data and for what purpose. It’s your
+            decision.
+          </div>
         </div>
       </div>
     </div>
     <div class="youCanFeatureMonetize">
-      <utils-svg-cmp name="blob/b3" class="youCanFeatureMonetizeBlob" />
-      <div class="youCanFeatureMonetizeCnt">
-        <div class="youCanFeatureMonetizeNum">3. Monetize</div>
-        <div class="youCanFeatureMonetizeText">
-          Get paid your fair share for granting buyers access to your data.
+      <div class="youCanFeatureImgWrapper">
+        <img src="~/assets/images/monetize.png" class="youCanFeatureImg" />
+      </div>
+      <div class="youCanFeatureWrapper">
+        <utils-svg-cmp name="blob/b3" class="youCanFeatureMonetizeBlob" />
+        <div class="youCanFeatureMonetizeCnt">
+          <div class="youCanFeatureMonetizeNum">3. Monetize</div>
+          <div class="youCanFeatureMonetizeText">
+            Get paid your fair share for granting buyers access to your data.
+          </div>
         </div>
       </div>
     </div>
@@ -77,13 +93,21 @@ export default {
 .youCanFeatureMonetizeBlob
   fill: $pink
 
+.youCanFeatureWrapper
+  position: relative
+  height: 100%
+
+.youCanFeatureImgWrapper
+  width: fit-content
+  margin: 0 auto
+
 @include for-phone
   .youCanFeatures
     margin-top: 10vw
 
   .youCanFeatureSee, .youCanFeatureControl, .youCanFeatureMonetize
     margin: 7vw 15vw
-    height: 22vw
+    height: 75vw
 
   .youCanFeatureSeeNum, .youCanFeatureControlNum, .youCanFeatureMonetizeNum
     font-size: 5vw
@@ -100,18 +124,21 @@ export default {
 
   .youCanFeatureSeeBlob
     width: 11.5vw
-    top: -12%
+    top: -3%
     left: -6%
 
   .youCanFeatureControlBlob
     width: 10vw
-    top: -12%
+    top: -3%
     left: -4%
 
   .youCanFeatureMonetizeBlob
     width: 10.25vw
-    top: -12%
+    top: -3%
     left: -5%
+
+  .youCanFeatureImg
+    width: 50vw
 
 @include for-tablet
   .youCanFeatures
@@ -123,12 +150,12 @@ export default {
   .youCanFeatureSee
     width: 20%
     margin: 0 2vw 0 10vw
-    height: 5vw
+    height: 17vw
 
   .youCanFeatureControl, .youCanFeatureMonetize
     width: 20%
     margin: 0 2vw
-    height: 5vw
+    height: 17vw
 
   .youCanFeatureSeeNum, .youCanFeatureControlNum, .youCanFeatureMonetizeNum
     font-size: 1.5vw
@@ -145,16 +172,19 @@ export default {
 
   .youCanFeatureSeeBlob
     width: 3.5vw
-    top: -12%
+    top: -3%
     left: -6%
 
   .youCanFeatureControlBlob
     width: 3vw
-    top: -12%
-    left: -4%
+    top: -4%
+    left: -3%
 
   .youCanFeatureMonetizeBlob
     width: 3.25vw
-    top: -12%
+    top: -3%
     left: -5%
+
+  .youCanFeatureImg
+    width: 10vw
 </style>

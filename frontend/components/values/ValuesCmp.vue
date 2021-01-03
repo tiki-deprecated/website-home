@@ -81,7 +81,7 @@ export default {
 
 .valuesSection
   display: flex
-  align-items: start
+  align-items: flex-start
   justify-content: center
   flex-wrap: wrap
   font-family: $font-family-montserrat

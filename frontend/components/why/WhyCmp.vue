@@ -5,15 +5,15 @@
       <div class="whyText">
         <div class="whyTextLine">You think you own your data?</div>
         <div class="whyTextLine">
-          In 2020 alone, the data on our behaviour and purchases will be worth
-          more than <b>$382 billion</b> in advertising revenue.
+          In 2020 alone, the data on our behaviour and purchases was worth more
+          than <b>$382 billion</b> in advertising revenue.
         </div>
       </div>
       <why-cmp-counter class="whyCmpCounter" />
     </div>
     <div class="whyVideo">
       <div class="utilsVideoCmp">
-        <utils-video-cmp id="IP4UeduStUI" />
+        <utils-video-cmp id="IP4UeduStUI" placeholder="yt-placeholder.png" />
       </div>
     </div>
   </div>
@@ -70,8 +70,13 @@ export default {
     margin-top: 5vw
     margin-bottom: 10vw
 
-  .utilsVideoCmp, .whyVideo
+  .whyVideo
     width: 100%
+    height: 39%
+
+  .utilsVideoCmp
+    width: 100%
+    height: 100%
 
 @include for-tablet
   .whyCnt
@@ -99,8 +104,10 @@ export default {
 
   .whyVideo
     width: 50%
+    height: 100%
 
   .utilsVideoCmp
     width: 100%
+    height: 100%
     margin-left: auto
 </style>

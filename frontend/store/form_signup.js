@@ -9,9 +9,6 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setCode(state, code) {
-    state.code = code
-  },
   setContact(state, contact) {
     state.contact = contact
   },
@@ -26,6 +23,9 @@ export const mutations = {
   },
   setPosDone(state) {
     state.pos = POS_DONE
+  },
+  setError(state, error) {
+    state.error = error
   },
 }
 

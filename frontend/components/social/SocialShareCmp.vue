@@ -264,7 +264,7 @@ export default {
     margin-top: 10vw
 @include for-tablet
   .socialShareCnt
-    padding-top: 20vw
+    padding-top: 14vw
 
   ::v-deep .socialShareSketchShare.svg
     height: 4vw

@@ -91,7 +91,7 @@ export default {
 
 @include for-tablet
   .howBetaCnt
-    height: 45vw
+    height: 62vw
 
   .howBetaTitle
     width: 20vw
@@ -103,10 +103,13 @@ export default {
     font-size: 1.25vw
 
   .howBetaCntStack
-    padding-top: 20vw
+    padding-top: 25vw
+
+  .howBetaCmpLaunch
+    margin-top: 5vw
 
   .howBetaCmpLearnBtn
-    top: 68%
+    top: 56%
     left: 50%
-    transform: translate(-50%, -68%)
+    transform: translate(-50%, -56%)
 </style>
