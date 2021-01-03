@@ -4,7 +4,7 @@
       <header-home-cmp class="headerHomeCmp" />
       <div class="whyDivider"></div>
       <you-can-cmp class="youCanCmp" />
-      <form-home-cmp id="home" class="formHomeCmp" />
+      <form-home-cmp id="signup" class="formHomeCmp" />
       <believe-cmp class="believeCmp" />
       <social-follow-cmp class="socialFollowCmp" />
       <footer-cmp class="footerCmp" />

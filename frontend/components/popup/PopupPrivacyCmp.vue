@@ -98,6 +98,7 @@ export default {
 
 .popupPrivacyIcoX
   margin: 0 0 0 auto
+  cursor: pointer
 
 ::v-deep .popupPrivacyIcoX.svg
   fill: $gray-dark

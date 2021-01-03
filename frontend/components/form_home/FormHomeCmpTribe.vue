@@ -24,7 +24,7 @@ export default {
 @import "../../assets/styles/mixins"
 
 .formHomeCmpTribeTitle
-  color: $green
+  color: $blue-dark
   font-family: $font-family-montserrat
   font-weight: 600
 

@@ -2,7 +2,7 @@
   <div class="whyCmpCounterCnt">
     <div class="whyCmpCounterValue">$ {{ total }}</div>
     <div class="whyCmpCounterText">
-      money made by companies <b>from our data</b>
+      money made this year <b>from our data</b>
     </div>
   </div>
 </template>
