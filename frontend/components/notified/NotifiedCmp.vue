@@ -1,7 +1,17 @@
 <template>
   <div class="notifiedCnt">
     <utils-svg-cmp name="background/notified" class="notifiedBkg" />
-    <nuxt-image src="/images/control.png" class="controlImage" />
+    <img
+      sizes="(max-width: 772px) 100vw, 772px"
+      srcset="
+        ~/assets/images/control_w_200.png 200w,
+        ~/assets/images/control_w_479.png 479w,
+        ~/assets/images/control_w_772.png 772w
+      "
+      src="~/assets/images/control_w_772.png"
+      alt=""
+      class="controlImage"
+    />
   </div>
 </template>
 
@@ -45,10 +55,10 @@ export default {
 
 @include for-tablet
   ::v-deep .notifiedBkg.svg
-    width: 12vw
+    width: 10vw
     margin: 0 0 0 10%
 
   .controlImage
-    width: 18vw
+    width: 15vw
     margin-top: auto
 </style>
