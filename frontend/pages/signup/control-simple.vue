@@ -24,6 +24,10 @@ import FooterCmp from '@/components/footer/FooterCmp'
 export default {
   name: 'ControlSimple',
   components: { HeaderSimpleCmp, FormSimpleCmp, NotifiedCmp, FooterCmp },
+  mounted() {
+    this.$plausible.trackPageview()
+    this.$store.commit('setCode', this.$nuxt.$route.query.code)
+  },
 }
 </script>
 
