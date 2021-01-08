@@ -11,8 +11,8 @@
       />
     </div>
     <div v-if="!loadVideo" class="utilsVideoPlaceholder" @click="onClick">
-      <img
-        :src="require(`~/assets/images/${placeholder}`)"
+      <nuxt-image
+        :src="placeholder"
         alt="So why do you get nothing?"
         class="utilsVideoCmpPlaceholderImg"
       />

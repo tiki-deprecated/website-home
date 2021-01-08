@@ -2,7 +2,7 @@
   <div class="youCanFeatures">
     <div class="youCanFeatureSee">
       <div class="youCanFeatureImgWrapper">
-        <img src="~/assets/images/see.png" class="youCanFeatureImg" />
+        <nuxt-image src="/images/see.png" class="youCanFeatureImg" />
       </div>
       <div class="youCanFeatureWrapper">
         <utils-svg-cmp name="blob/b1" class="youCanFeatureSeeBlob" />
@@ -17,7 +17,7 @@
     </div>
     <div class="youCanFeatureControl">
       <div class="youCanFeatureImgWrapper">
-        <img src="~/assets/images/control.png" class="youCanFeatureImg" />
+        <nuxt-image src="/images/control.png" class="youCanFeatureImg" />
       </div>
       <div class="youCanFeatureWrapper">
         <utils-svg-cmp name="blob/b2" class="youCanFeatureControlBlob" />
@@ -32,7 +32,7 @@
     </div>
     <div class="youCanFeatureMonetize">
       <div class="youCanFeatureImgWrapper">
-        <img src="~/assets/images/monetize.png" class="youCanFeatureImg" />
+        <nuxt-image src="/images/monetize.png" class="youCanFeatureImg" />
       </div>
       <div class="youCanFeatureWrapper">
         <utils-svg-cmp name="blob/b3" class="youCanFeatureMonetizeBlob" />
@@ -147,12 +147,7 @@ export default {
     align-items: center
     justify-content: center
 
-  .youCanFeatureSee
-    width: 20%
-    margin: 0 2vw 0 10vw
-    height: 17vw
-
-  .youCanFeatureControl, .youCanFeatureMonetize
+  .youCanFeatureControl, .youCanFeatureMonetize, .youCanFeatureSee
     width: 20%
     margin: 0 2vw
     height: 17vw
