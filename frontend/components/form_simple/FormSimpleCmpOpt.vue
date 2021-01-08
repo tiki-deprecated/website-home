@@ -129,14 +129,17 @@ export default {
     height: 4.5vw
 
   .formSimpleCmpOptText
-    font-size: 1.25vw
+    font-size: 1.5vw
     margin-top: 0.25vw
 
   .formSimpleCmpOptCnt
-    margin: 1vw auto 0 auto
+    margin: 2vw auto 0 auto
     width: 25%
 
   .formSimpleCmpOptLoadingSubmit
     height: 4.5vw
-    margin: 1vw auto
+    margin: 2vw auto
+
+  .formSimpleCmpOptCnt
+    justify-content: space-evenly
 </style>

@@ -54,7 +54,7 @@ export default {
     text-align: center
 
   .formSimpleCmpTribeText
-    font-size: 1.25vw
+    font-size: 1.5vw
     text-align: center
     margin-top: 1vw
 </style>

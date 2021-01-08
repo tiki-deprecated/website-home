@@ -32,6 +32,9 @@ export default {
   fill: $blue-dark
 
 @include for-phone
+  .notifiedCnt
+    height: 35vw
+
   ::v-deep .notifiedBkg.svg
     width: 40vw
     margin: 0 auto auto auto
@@ -41,4 +44,11 @@ export default {
     margin-top: auto
 
 @include for-tablet
+  ::v-deep .notifiedBkg.svg
+    width: 12vw
+    margin: 0 0 0 10%
+
+  .controlImage
+    width: 18vw
+    margin-top: auto
 </style>

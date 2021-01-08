@@ -40,16 +40,16 @@ export default {
 
 .formSimpleCnt
   position: relative
+  width: 100%
 
 .formSimpleHide
   display: none!important
 
 @include for-phone
   .formSimpleCnt
-    margin: 3vh auto 3vh auto
-    width: 100%
+    margin: 5vh auto 5vh auto
 
 @include for-tablet
   .formSimpleCnt
-    margin: 1.5vw auto 0 auto
+    margin: 1.5vw auto 1.5vw auto
 </style>

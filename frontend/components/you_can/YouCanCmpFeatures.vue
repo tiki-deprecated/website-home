@@ -147,12 +147,7 @@ export default {
     align-items: center
     justify-content: center
 
-  .youCanFeatureSee
-    width: 20%
-    margin: 0 2vw 0 10vw
-    height: 17vw
-
-  .youCanFeatureControl, .youCanFeatureMonetize
+  .youCanFeatureControl, .youCanFeatureMonetize, .youCanFeatureSee
     width: 20%
     margin: 0 2vw
     height: 17vw
