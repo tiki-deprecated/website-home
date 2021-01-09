@@ -13,7 +13,7 @@
     </div>
     <div class="whyVideo">
       <div class="utilsVideoCmp">
-        <utils-video-cmp id="IP4UeduStUI" placeholder="yt-placeholder.png" />
+        <utils-video-cmp id="IP4UeduStUI" placeholder="yt-placeholder" />
       </div>
     </div>
   </div>

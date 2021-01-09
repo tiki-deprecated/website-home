@@ -12,7 +12,9 @@
     </div>
     <div v-if="!loadVideo" class="utilsVideoPlaceholder" @click="onClick">
       <img
-        :src="require(`~/assets/images/${placeholder}`)"
+        sizes="(max-width: 1400px) 100vw, 1400px"
+        :srcset="srcSet"
+        :src="require(`~/assets/images/${placeholder}_w_1400.png`)"
         alt="So why do you get nothing?"
         class="utilsVideoCmpPlaceholderImg"
       />
@@ -45,6 +47,11 @@ export default {
       loadVideo: false,
       hover: false,
     }
+  },
+  computed: {
+    srcSet() {
+      return `${require(`~/assets/images/${this.placeholder}_w_200.png`)} 200w, ${require(`~/assets/images/${this.placeholder}_w_534.png`)} 534w, ${require(`~/assets/images/${this.placeholder}_w_786.png`)} 786w, ${require(`~/assets/images/${this.placeholder}_w_1004.png`)} 1004w, ${require(`~/assets/images/${this.placeholder}_w_1400.png`)} 1400w`
+    },
   },
   methods: {
     onClick(clickEvent) {

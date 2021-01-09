@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -12,7 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/toast": "^3.3.1",
     "nuxt": "^2.14.0",
     "nuxt-compress": "^4.1.0",
@@ -23,6 +23,8 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.11",
     "@vue/test-utils": "^1.0.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -32,12 +34,10 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.1.0",
-    "prettier": "^2.0.5",
-    "vue-jest": "^3.0.4",
-    "sass": "^1.26.9",
     "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
-    "@nuxtjs/svg": "^0.1.11",
-    "@nuxtjs/style-resources": "^1.0.0"
+    "vue-jest": "^3.0.4"
   }
 }

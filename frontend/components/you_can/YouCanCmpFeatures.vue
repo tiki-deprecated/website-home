@@ -2,7 +2,17 @@
   <div class="youCanFeatures">
     <div class="youCanFeatureSee">
       <div class="youCanFeatureImgWrapper">
-        <img src="~/assets/images/see.png" class="youCanFeatureImg" />
+        <img
+          sizes="(max-width: 768px) 100vw, 768px"
+          srcset="
+            ~/assets/images/see_w_200.png 200w,
+            ~/assets/images/see_w_466.png 466w,
+            ~/assets/images/see_w_768.png 768w
+          "
+          src="~/assets/images/see_w_768.png"
+          alt=""
+          class="youCanFeatureImg"
+        />
       </div>
       <div class="youCanFeatureWrapper">
         <utils-svg-cmp name="blob/b1" class="youCanFeatureSeeBlob" />
@@ -17,7 +27,17 @@
     </div>
     <div class="youCanFeatureControl">
       <div class="youCanFeatureImgWrapper">
-        <img src="~/assets/images/control.png" class="youCanFeatureImg" />
+        <img
+          sizes="(max-width: 772px) 100vw, 772px"
+          srcset="
+            ~/assets/images/control_w_200.png 200w,
+            ~/assets/images/control_w_479.png 479w,
+            ~/assets/images/control_w_772.png 772w
+          "
+          src="~/assets/images/control_w_772.png"
+          alt=""
+          class="youCanFeatureImg"
+        />
       </div>
       <div class="youCanFeatureWrapper">
         <utils-svg-cmp name="blob/b2" class="youCanFeatureControlBlob" />
@@ -32,7 +52,18 @@
     </div>
     <div class="youCanFeatureMonetize">
       <div class="youCanFeatureImgWrapper">
-        <img src="~/assets/images/monetize.png" class="youCanFeatureImg" />
+        <img
+          sizes="(max-width: 768px) 100vw, 768px"
+          srcset="
+            ~/assets/images/monetize_w_200.png 200w,
+            ~/assets/images/monetize_w_402.png 402w,
+            ~/assets/images/monetize_w_567.png 567w,
+            ~/assets/images/monetize_w_768.png 768w
+          "
+          src="~/assets/images/monetize_w_768.png"
+          alt=""
+          class="youCanFeatureImg"
+        />
       </div>
       <div class="youCanFeatureWrapper">
         <utils-svg-cmp name="blob/b3" class="youCanFeatureMonetizeBlob" />
@@ -147,12 +178,7 @@ export default {
     align-items: center
     justify-content: center
 
-  .youCanFeatureSee
-    width: 20%
-    margin: 0 2vw 0 10vw
-    height: 17vw
-
-  .youCanFeatureControl, .youCanFeatureMonetize
+  .youCanFeatureControl, .youCanFeatureMonetize, .youCanFeatureSee
     width: 20%
     margin: 0 2vw
     height: 17vw

@@ -1,5 +1,6 @@
 const PATH_1 = '/signup/382-billion/'
 const PATH_2 = '/signup/10-dollars/'
+const PATH_3 = '/signup/control-simple/'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
@@ -14,8 +15,10 @@ export default function ({ route, redirect }) {
 }
 
 function pickAB() {
-  if (Math.random() < 0.5) return PATH_1
-  else return PATH_2
+  const rand = Math.random()
+  if (rand < 0.33333) return PATH_1
+  else if (rand < 0.66666) return PATH_2
+  else return PATH_3
 }
 
 function addQuery(path, params) {
