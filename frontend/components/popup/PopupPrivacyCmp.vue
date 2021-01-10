@@ -9,24 +9,26 @@
         <div @click="close">
           <utils-svg-cmp name="icon/x" class="popupPrivacyIcoX" />
         </div>
-        <div class="popupPrivacyTitle">How we use your data</div>
+        <div class="popupPrivacyTitle">How we secure your data</div>
         <div class="popupPrivacyText">
           <div class="popupPrivacyTextParagraph">
             TIKI is all about data privacy.
           </div>
           <div class="popupPrivacyTextParagraph">
-            Your information is encrypted, secure, and will never be shared with
-            anyone.
+            Your information is encrypted, secured, and will never be shared
+            with anyone.
           </div>
           <div class="popupPrivacyTextParagraph">
-            This means we will never give your email to third parties, ever. Of
-            course, our servers are as secure as humanly (or machinely)
-            possible.
+            This means we will never give your info to third parties or
+            services, ever. It remains exclusively in our secure cloud, only be
+            used to communicate with you about our launch. Of course, our cloud,
+            servers, and code are as secure as humanly (or machinely) possible.
           </div>
         </div>
         <nuxt-link to="/privacy" class="popupPrivacyPolicy"
           >Our privacy policy</nuxt-link
         >
+        <div class="popupPrivacyGithub" @click="githubClick">Our code</div>
       </div>
     </div>
   </div>
@@ -52,6 +54,15 @@ export default {
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
       this.$store.commit('popup/showPrivacy', false)
+    },
+    githubClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Github', {
+        props: { location: 'Footer' },
+      })
+      const win = window.open('https://github.com/tiki', '_blank')
+      win.focus()
     },
   },
 }
@@ -91,10 +102,14 @@ export default {
   font-family: $font-family-montserrat
   color: $blue-dark
 
-.popupPrivacyPolicy
+.popupPrivacyPolicy, .popupPrivacyGithub
   font-family: $font-family-nunito
   color: $blue
   font-weight: 700
+
+.popupPrivacyGithub
+  text-decoration: underline
+  cursor: pointer
 
 .popupPrivacyIcoX
   margin: 0 0 0 auto
@@ -123,7 +138,12 @@ export default {
     margin: 3vw 0
 
   .popupPrivacyPolicy
-    margin: 10vw 0 3vw 0
+    margin: 10vw 0 0 0
+    font-size: 3.5vw
+    display: block
+
+  .popupPrivacyGithub
+    margin: 3vw 0 3vw 0
     font-size: 3.5vw
     display: block
 
@@ -148,7 +168,12 @@ export default {
     margin: 1vw 0
 
   .popupPrivacyPolicy
-    margin: 3vw 0 1vw 0
+    margin: 3vw 0 0 0
+    font-size: 1.25vw
+    display: block
+
+  .popupPrivacyGithub
+    margin: 1vw 0 1vw 0
     font-size: 1.25vw
     display: block
 </style>

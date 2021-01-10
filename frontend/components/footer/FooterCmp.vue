@@ -15,9 +15,9 @@
       <nuxt-link to="/privacy" class="footerLink footerSectionContent"
         >Privacy Policy</nuxt-link
       >
-      <a href="https://github.com/tiki" class="footerLink footerSectionContent"
-        >Github</a
-      >
+      <div class="footerLink footerSectionContent" @click="githubClick">
+        Github
+      </div>
     </div>
     <div class="footerCol footerCol3">
       <div class="footerSection">Contact us</div>
@@ -100,6 +100,15 @@ export default {
         props: { location: 'Footer', platform },
       })
       window.location.href = href
+    },
+    githubClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Github', {
+        props: { location: 'How?' },
+      })
+      const win = window.open('https://github.com/tiki', '_blank')
+      win.focus()
     },
   },
 }
