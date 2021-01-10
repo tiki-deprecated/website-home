@@ -1,7 +1,7 @@
 <template>
-  <div class="controlSimplePage">
-    <div class="controlSimplePageStack">
-      <div class="controlSimplePageWrapper">
+  <div class="controlSimple1Page">
+    <div class="controlSimple1PageStack">
+      <div class="controlSimple1PageWrapper">
         <header-simple-cmp
           class="headerSimpleCmp"
           heading="Take back control of your data, with **a single app**."
@@ -11,7 +11,7 @@
       </div>
       <footer-cmp class="footerCmp" />
     </div>
-    <popup-privacy-cmp class="controlSimplePopupDataCmp" />
+    <popup-privacy-cmp class="controlSimple1PopupDataCmp" />
   </div>
 </template>
 
@@ -22,7 +22,7 @@ import NotifiedCmp from '@/components/notified/NotifiedCmp'
 import FooterCmp from '@/components/footer/FooterCmp'
 
 export default {
-  name: 'ControlSimple',
+  name: 'ControlSimple1',
   components: { HeaderSimpleCmp, FormSimpleCmp, NotifiedCmp, FooterCmp },
   mounted() {
     this.$plausible.trackPageview()
@@ -32,23 +32,23 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.controlSimplePage
+.controlSimple1Page
   position: relative
 
-.controlSimplePageStack
+.controlSimple1PageStack
   position: absolute
   top: 0
   left: 0
   z-index: 1
   width: 100%
 
-.controlSimplePageWrapper
+.controlSimple1PageWrapper
   position: relative
   display: flex
   flex-direction: column
   min-height: 100vh
 
-.controlSimplePopupDataCmp
+.controlSimple1PopupDataCmp
   position: fixed
   z-index: 9
   width: 100%

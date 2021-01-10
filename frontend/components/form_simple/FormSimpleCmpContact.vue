@@ -18,7 +18,7 @@
         }"
         @click="onSubmit"
       >
-        I want to control my data
+        {{ cta }}
       </div>
     </div>
     <formSimple-cmp-secure class="formSimpleCmpSecure" />
@@ -32,6 +32,12 @@ import { signUp } from '@/libs/api'
 export default {
   name: 'FormSimpleCmpContact',
   components: { FormSimpleCmpSecure },
+  props: {
+    cta: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       contact: '',

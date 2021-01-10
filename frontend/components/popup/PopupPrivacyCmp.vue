@@ -15,11 +15,11 @@
             TIKI is all about data privacy.
           </div>
           <div class="popupPrivacyTextParagraph">
-            Your information is 100% secure and will never be shared with
+            Your information is encrypted, secure, and will never be shared with
             anyone.
           </div>
           <div class="popupPrivacyTextParagraph">
-            This means we will never give your email to third parties, ever. of
+            This means we will never give your email to third parties, ever. Of
             course, our servers are as secure as humanly (or machinely)
             possible.
           </div>

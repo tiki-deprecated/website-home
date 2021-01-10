@@ -1,7 +1,10 @@
 <template>
   <div class="formSimpleCnt">
     <formSimple-cmp-tribe :class="{ formSimpleHide: !isOpt }" />
-    <formSimple-cmp-contact :class="{ formSimpleHide: !isContact }" />
+    <formSimple-cmp-contact
+      :cta="cta"
+      :class="{ formSimpleHide: !isContact }"
+    />
     <formSimple-cmp-opt :class="{ formSimpleHide: !isOpt }" />
     <formSimple-cmp-done :class="{ formSimpleHide: !isDone }" />
   </div>
@@ -20,6 +23,13 @@ export default {
     FormSimpleCmpTribe,
     FormSimpleCmpOpt,
     FormSimpleCmpDone,
+  },
+  props: {
+    cta: {
+      type: String,
+      required: false,
+      default: 'I want to control my data',
+    },
   },
   computed: {
     isContact() {

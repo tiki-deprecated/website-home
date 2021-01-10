@@ -6,18 +6,20 @@
     </div>
     <div class="socialShareBtnGroup">
       <div class="socialShareBtnRow1">
-        <share-network
-          network="twitter"
-          :url="currentUrl"
-          :title="twitter.title"
-          :description="twitter.description"
-          :hashtags="twitter.hashtags"
-        >
-          <utils-svg-cmp
-            name="button/twitter"
-            class="socialShareBtn socialShareBtnTwt"
-          />
-        </share-network>
+        <div class="socialShareBtnWrapper" @click="socialTrack('Twitter')">
+          <share-network
+            network="twitter"
+            :url="currentUrl"
+            :title="twitter.title"
+            :description="twitter.description"
+            :hashtags="twitter.hashtags"
+          >
+            <utils-svg-cmp
+              name="button/twitter"
+              class="socialShareBtn socialShareBtnTwt"
+            />
+          </share-network>
+        </div>
         <a class="socialShareBtnIgShare" @click="igShare">
           <utils-svg-cmp
             name="button/instagram"
@@ -25,21 +27,23 @@
           />
         </a>
       </div>
-      <share-network
-        network="facebook"
-        :url="currentUrl"
-        :title="facebook.title"
-        :description="facebook.description"
-        :hashtags="facebook.hashtags"
-        class="socialShareBtnRow2"
-      >
-        <utils-svg-cmp
-          name="button/facebook"
-          class="socialShareBtn socialShareBtnFb"
-        />
-      </share-network>
+      <div class="socialShareBtnWrapper" @click="socialTrack('Facebook')">
+        <share-network
+          network="facebook"
+          :url="currentUrl"
+          :title="facebook.title"
+          :description="facebook.description"
+          :hashtags="facebook.hashtags"
+          class="socialShareBtnRow2"
+        >
+          <utils-svg-cmp
+            name="button/facebook"
+            class="socialShareBtn socialShareBtnFb"
+          />
+        </share-network>
+      </div>
       <div class="socialShareBtnRow3">
-        <a class="socialShareBtnIgShare" @click="webShare">
+        <a class="socialShareBtnWebShare" @click="webShare">
           <utils-svg-cmp
             name="button/share"
             class="socialShareBtn socialShareBtnSh"
@@ -49,22 +53,24 @@
             class="socialShareBtn socialShareBtnShLg"
           />
         </a>
-        <share-network
-          network="linkedin"
-          :url="currentUrl"
-          :title="linkedin.title"
-          :description="linkedin.description"
-          :hashtags="linkedin.hashtags"
-        >
-          <utils-svg-cmp
-            name="button/linkedin"
-            class="socialShareBtn socialShareBtnLi"
-          />
-          <utils-svg-cmp
-            name="button/linkedin-lg"
-            class="socialShareBtn socialShareBtnLiLg"
-          />
-        </share-network>
+        <div class="socialShareBtnWrapper" @click="socialTrack('LinkedIn')">
+          <share-network
+            network="linkedin"
+            :url="currentUrl"
+            :title="linkedin.title"
+            :description="linkedin.description"
+            :hashtags="linkedin.hashtags"
+          >
+            <utils-svg-cmp
+              name="button/linkedin"
+              class="socialShareBtn socialShareBtnLi"
+            />
+            <utils-svg-cmp
+              name="button/linkedin-lg"
+              class="socialShareBtn socialShareBtnLiLg"
+            />
+          </share-network>
+        </div>
       </div>
     </div>
   </div>
@@ -141,6 +147,7 @@ export default {
     },
     webShare(clickEvent) {
       clickEvent.preventDefault()
+      this.socialTracK('Link')
       if (process.client) {
         if (navigator && navigator.share)
           this.share(
@@ -154,6 +161,7 @@ export default {
     },
     igShare(clickEvent) {
       clickEvent.preventDefault()
+      this.socialTrack('Instagram')
       if (process.client) {
         if (navigator && navigator.share)
           this.share(
@@ -164,6 +172,11 @@ export default {
           )
         else window.location.href = this.instagram.profile
       }
+    },
+    socialTrack(platform) {
+      this.$plausible.trackEvent('Share', {
+        props: { location: 'Component', platform },
+      })
     },
   },
 }
@@ -184,6 +197,9 @@ export default {
   color: $purple
   font-weight: bold
   text-align: center
+
+.socialShareBtnWrapper, .socialShareBtnIgShare, .socialShareBtnWebShare
+  cursor: pointer
 
 .socialShareBtnFb
   margin: 0 auto
