@@ -1,5 +1,8 @@
 <template>
   <div class="formSimpleCmpContactCnt">
+    <div v-if="errorMessage !== null" class="formSimpleCmpContactError">
+      {{ errorMessage }}
+    </div>
     <div class="formSimpleCmpContactField">
       <input
         type="text"
@@ -7,6 +10,7 @@
         autocomplete="off"
         autocapitalize="none"
         class="formSimpleCmpContactInput"
+        :class="{ formSimpleCmpContactInputError: errorMessage !== null }"
         @input="onInput"
         @keypress.enter="onSubmit"
       />
@@ -41,6 +45,7 @@ export default {
   data() {
     return {
       contact: '',
+      errorMessage: null,
     }
   },
   computed: {
@@ -60,17 +65,28 @@ export default {
     async onSubmit(submitEvent) {
       submitEvent.preventDefault()
       if (this.isReady) {
+        this.errorMessage = null
         this.$store.commit('form_signup/setContact', this.contact)
         this.$store.commit('form_signup/setPosOpt')
-        await signUp(this.$axios, this.contact, this.$store.state.code).then(
-          function (data) {
-            return data.success
-          }
-        )
-        this.$plausible.trackEvent('Signup', {
-          props: { affiliate: this.$store.state.code },
+        const rsp = await signUp(
+          this.$axios,
+          this.contact,
+          this.$store.state.code
+        ).then(function (data) {
+          return data.success
         })
-      }
+        if (!rsp) {
+          this.errorMessage =
+            "Uh oh, something went wrong. Send us a note, we'll fix it!"
+          this.$plausible.trackEvent('Signup', {
+            props: { affiliate: this.$store.state.code, error: true },
+          })
+        } else {
+          this.$plausible.trackEvent('Signup', {
+            props: { affiliate: this.$store.state.code },
+          })
+        }
+      } else this.errorMessage = 'Uh oh, we need a valid email to notify you :)'
     },
   },
 }
@@ -109,6 +125,9 @@ export default {
   outline: 0
   border-color: $blue
 
+.formSimpleCmpContactInputError, .formSimpleCmpContactInputError:focus
+  border-color: $orange
+
 .formSimpleCmpContactSend
   cursor: pointer
 
@@ -119,6 +138,12 @@ export default {
 .formSimpleCmpContactSendNotReady
   background: $blue-dark
   border-color: $blue-dark
+
+.formSimpleCmpContactError
+  font-family: $font-family-montserrat
+  font-weight: 600
+  color: $orange
+  text-align: center
 
 @include for-phone
   .formSimpleCmpContactCnt
@@ -141,6 +166,10 @@ export default {
   .formSimpleCmpSecure
     margin-top: 5vw
 
+  .formSimpleCmpContactError
+    margin-bottom: 2vw
+    font-size: 3.5vw
+
 @include for-tablet
   .formSimpleCmpContactCnt
     margin: 1vw auto 0 auto
@@ -162,4 +191,8 @@ export default {
 
   .formSimpleCmpSecure
     margin-top: 1.25vw
+
+  .formSimpleCmpContactError
+    margin-bottom: 0.5vw
+    font-size: 1.1vw
 </style>
