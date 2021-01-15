@@ -25,7 +25,7 @@
         {{ cta }}
       </div>
     </div>
-    <formSimple-cmp-secure class="formSimpleCmpSecure" />
+    <formSimple-cmp-secure v-if="how" class="formSimpleCmpSecure" />
   </div>
 </template>
 
@@ -40,6 +40,11 @@ export default {
     cta: {
       type: String,
       required: true,
+    },
+    how: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
   },
   data() {

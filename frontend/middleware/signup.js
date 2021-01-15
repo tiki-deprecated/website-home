@@ -1,28 +1,19 @@
 const BILLION_382 = '/signup/382-billion/'
 const DOLLARS_10 = '/signup/10-dollars/'
 const CONTROL_SIMPLE_1 = '/signup/control-simple-1/'
-const CONTROL_SIMPLE_2 = '/signup/control-simple-2/'
-const CONTROL_SIMPLE_3 = '/signup/control-simple-3/'
+// const CONTROL_SIMPLE_2 = '/signup/control-simple-2/'
+// const CONTROL_SIMPLE_3 = '/signup/control-simple-3/'
 const CONTROL_SIMPLE_4 = '/signup/control-simple-4/'
-const CONTROL_SIMPLE_5 = '/signup/control-simple-5/'
+// const CONTROL_SIMPLE_5 = '/signup/control-simple-5/'
 
 const signupOptionsAll = [
   BILLION_382,
   DOLLARS_10,
   CONTROL_SIMPLE_1,
-  CONTROL_SIMPLE_2,
-  CONTROL_SIMPLE_3,
   CONTROL_SIMPLE_4,
-  CONTROL_SIMPLE_5,
 ]
 
-const signupOptionsControlSimple = [
-  CONTROL_SIMPLE_1,
-  CONTROL_SIMPLE_2,
-  CONTROL_SIMPLE_3,
-  CONTROL_SIMPLE_4,
-  CONTROL_SIMPLE_5,
-]
+const signupOptionsControlSimple = [CONTROL_SIMPLE_1, CONTROL_SIMPLE_4]
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {

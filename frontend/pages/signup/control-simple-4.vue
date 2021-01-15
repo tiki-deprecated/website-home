@@ -6,7 +6,11 @@
           class="headerSimpleCmp"
           heading="We can take back the internet if we work together."
         />
-        <form-simple-cmp class="formSimpleCmp" cta="Join the fight" />
+        <form-simple-cmp
+          class="formSimpleCmp"
+          cta="Join the fight"
+          :how="false"
+        />
         <notified-cmp class="notifiedCmp" />
       </div>
       <footer-cmp class="footerCmp" />

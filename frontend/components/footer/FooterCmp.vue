@@ -81,6 +81,13 @@
         >
           <utils-svg-cmp name="icon/medium" class="footerFollowButton" />
         </div>
+        <div
+          @click="
+            socialClick($event, 'https://discord.gg/evjYQq48Be', 'Discord')
+          "
+        >
+          <utils-svg-cmp name="icon/discord" class="footerFollowButton" />
+        </div>
       </div>
     </div>
   </div>
@@ -99,7 +106,8 @@ export default {
       this.$plausible.trackEvent('Follow', {
         props: { location: 'Footer', platform },
       })
-      window.location.href = href
+      const win = window.open(href, '_blank')
+      win.focus()
     },
     githubClick(clickEvent) {
       clickEvent.preventDefault()
