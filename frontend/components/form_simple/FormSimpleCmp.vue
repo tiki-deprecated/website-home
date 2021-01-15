@@ -4,6 +4,7 @@
     <formSimple-cmp-contact
       :cta="cta"
       :class="{ formSimpleHide: !isContact }"
+      :how="how"
     />
     <formSimple-cmp-opt :class="{ formSimpleHide: !isOpt }" />
     <formSimple-cmp-done :class="{ formSimpleHide: !isDone }" />
@@ -29,6 +30,11 @@ export default {
       type: String,
       required: false,
       default: 'I want to control my data',
+    },
+    how: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
   },
   computed: {
