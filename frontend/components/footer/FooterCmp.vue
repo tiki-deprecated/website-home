@@ -15,9 +15,9 @@
       <nuxt-link to="/privacy" class="footerLink footerSectionContent"
         >Privacy Policy</nuxt-link
       >
-      <a href="https://github.com/tiki" class="footerLink footerSectionContent"
-        >Github</a
-      >
+      <div class="footerLink footerSectionContent" @click="githubClick">
+        Github
+      </div>
     </div>
     <div class="footerCol footerCol3">
       <div class="footerSection">Contact us</div>
@@ -29,24 +29,65 @@
     <div class="footerCol footerCol4">
       <div class="footerSection">Follow us</div>
       <div class="footerFollowButtons">
-        <a href="https://twitter.com/my_tiki_">
+        <div
+          @click="
+            socialClick($event, 'https://twitter.com/my_tiki_', 'Twitter')
+          "
+        >
           <utils-svg-cmp name="icon/twitter" class="footerFollowButton" />
-        </a>
-        <a href="https://www.tiktok.com/@my.tiki">
+        </div>
+        <div
+          @click="
+            socialClick($event, 'https://www.tiktok.com/@my.tiki', 'TikTok')
+          "
+        >
           <utils-svg-cmp name="icon/tiktok" class="footerFollowButton" />
-        </a>
-        <a href="https://www.facebook.com/mytikiapp">
+        </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://www.facebook.com/mytikiapp',
+              'Facebook'
+            )
+          "
+        >
           <utils-svg-cmp name="icon/facebook" class="footerFollowButton" />
-        </a>
-        <a href="https://www.instagram.com/my.tiki/">
+        </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://www.instagram.com/my.tiki/',
+              'Instagram'
+            )
+          "
+        >
           <utils-svg-cmp name="icon/instagram" class="footerFollowButton" />
-        </a>
-        <a href="https://www.linkedin.com/company/mytiki">
+        </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://www.linkedin.com/company/mytiki',
+              'LinkedIn'
+            )
+          "
+        >
           <utils-svg-cmp name="icon/linkedin" class="footerFollowButton" />
-        </a>
-        <a href="https://medium.com/mytiki">
+        </div>
+        <div
+          @click="socialClick($event, 'https://medium.com/mytiki', 'Medium')"
+        >
           <utils-svg-cmp name="icon/medium" class="footerFollowButton" />
-        </a>
+        </div>
+        <div
+          @click="
+            socialClick($event, 'https://discord.gg/evjYQq48Be', 'Discord')
+          "
+        >
+          <utils-svg-cmp name="icon/discord" class="footerFollowButton" />
+        </div>
       </div>
     </div>
   </div>
@@ -58,6 +99,26 @@ import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
 export default {
   name: 'FooterCmp',
   components: { UtilsSvgCmp },
+  methods: {
+    socialClick(clickEvent, href, platform) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Follow', {
+        props: { location: 'Footer', platform },
+      })
+      const win = window.open(href, '_blank')
+      win.focus()
+    },
+    githubClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Github', {
+        props: { location: 'How?' },
+      })
+      const win = window.open('https://github.com/tiki', '_blank')
+      win.focus()
+    },
+  },
 }
 </script>
 

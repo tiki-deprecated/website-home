@@ -1,50 +1,47 @@
 <template>
-  <div class="formSimpleCmpContactCnt">
-    <div v-if="errorMessage !== null" class="formSimpleCmpContactError">
+  <div class="headerControlCmpFormContactCnt">
+    <div v-if="errorMessage !== null" class="headerControlCmpFormContactError">
       {{ errorMessage }}
     </div>
-    <div class="formSimpleCmpContactField">
+    <div class="headerControlCmpFormContactField">
       <input
         type="text"
         placeholder="Your email or phone #"
         autocomplete="off"
         autocapitalize="none"
-        class="formSimpleCmpContactInput"
-        :class="{ formSimpleCmpContactInputError: errorMessage !== null }"
+        class="headerControlCmpFormContactInput"
+        :class="{
+          headerControlCmpFormContactInputError: errorMessage !== null,
+        }"
         @input="onInput"
         @keypress.enter="onSubmit"
       />
       <div
-        class="formSimpleCmpContactSend"
+        class="headerControlCmpFormContactSend"
         :class="{
-          formSimpleCmpContactSendReady: isReady,
-          formSimpleCmpContactSendNotReady: !isReady,
+          headerControlCmpFormContactSendReady: isReady,
+          headerControlCmpFormContactSendNotReady: !isReady,
         }"
         @click="onSubmit"
       >
         {{ cta }}
       </div>
     </div>
-    <formSimple-cmp-secure v-if="how" class="formSimpleCmpSecure" />
+    <header-control-cmp-form-secure class="headerControlCmpFormSecure" />
   </div>
 </template>
 
 <script>
-import FormSimpleCmpSecure from '@/components/form_simple/FormSimpleCmpSecure'
+import HeaderControlCmpFormSecure from '@/components/header_control/HeaderControlCmpFormSecure'
 import { signUp } from '@/libs/api'
 
 export default {
-  name: 'FormSimpleCmpContact',
-  components: { FormSimpleCmpSecure },
+  name: 'HeaderControlCmpFormContact',
+  components: { HeaderControlCmpFormSecure },
   props: {
     cta: {
       type: String,
       required: true,
-    },
-    how: {
-      type: Boolean,
-      required: false,
-      default: true,
     },
   },
   data() {
@@ -100,7 +97,7 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formSimpleCmpContactInput, .formSimpleCmpContactSend
+.headerControlCmpFormContactInput, .headerControlCmpFormContactSend
   background: $white
   display: block
   border-style: solid
@@ -108,96 +105,96 @@ export default {
   font-family: $font-family-montserrat
   font-weight: 600
 
-.formSimpleCmpContactInput
+.headerControlCmpFormContactInput
   color: $blue
   margin: 0 auto
 
-.formSimpleCmpContactSend
+.headerControlCmpFormContactSend
   color: $black-dark
 
-.formSimpleCmpContactSend
+.headerControlCmpFormContactSend
   font-family: $font-family-montserrat
   color: $white
 
-.formSimpleCmpContactField
+.headerControlCmpFormContactField
   width: 100%
   margin: 0 auto
 
-.formSimpleCmpContactInput::placeholder
+.headerControlCmpFormContactInput::placeholder
   color: $gray
 
-.formSimpleCmpContactInput:focus
+.headerControlCmpFormContactInput:focus
   outline: 0
   border-color: $blue
 
-.formSimpleCmpContactInputError, .formSimpleCmpContactInputError:focus
+.headerControlCmpFormContactInputError, .headerControlCmpFormContactInputError:focus
   border-color: $orange
 
-.formSimpleCmpContactSend
+.headerControlCmpFormContactSend
   cursor: pointer
 
-.formSimpleCmpContactSendReady
+.headerControlCmpFormContactSendReady
   background: $green
   border-color: $green
 
-.formSimpleCmpContactSendNotReady
+.headerControlCmpFormContactSendNotReady
   background: $blue-dark
   border-color: $blue-dark
 
-.formSimpleCmpContactError
+.headerControlCmpFormContactError
   font-family: $font-family-montserrat
   font-weight: 600
   color: $orange
   text-align: center
 
 @include for-phone
-  .formSimpleCmpContactCnt
+  .headerControlCmpFormContactCnt
     width: 100%
 
-  .formSimpleCmpContactInput, .formSimpleCmpContactSend
+  .headerControlCmpFormContactInput, .headerControlCmpFormContactSend
     height: 15vw
     border-radius: 4vw
     font-size: 6vw
     text-indent: 4vw
     width: 88%
 
-  .formSimpleCmpContactInput:focus
+  .headerControlCmpFormContactInput:focus
     border-radius: 4vw
 
-  .formSimpleCmpContactSend
+  .headerControlCmpFormContactSend
     margin: 5vw auto 0 auto
     line-height: 15vw
 
-  .formSimpleCmpSecure
+  .headerControlCmpFormSecure
     margin-top: 5vw
 
-  .formSimpleCmpContactError
+  .headerControlCmpFormContactError
     margin-bottom: 2vw
     font-size: 3.5vw
 
 @include for-tablet
-  .formSimpleCmpContactCnt
+  .headerControlCmpFormContactCnt
     margin: 1vw auto 0 auto
     width: 33%
 
-  .formSimpleCmpContactInput, .formSimpleCmpContactSend
+  .headerControlCmpFormContactInput, .headerControlCmpFormContactSend
     height: 3vw
     border-radius: 0.5vw
     font-size: 1.5vw
     text-indent: 0.75vw
     width: 95%
 
-  .formSimpleCmpContactInput:focus
+  .headerControlCmpFormContactInput:focus
     border-radius: 0.5vw
 
-  .formSimpleCmpContactSend
+  .headerControlCmpFormContactSend
     margin: 1.25vw auto 0 auto
     line-height: 3vw
 
-  .formSimpleCmpSecure
+  .headerControlCmpFormSecure
     margin-top: 1.25vw
 
-  .formSimpleCmpContactError
+  .headerControlCmpFormContactError
     margin-bottom: 0.5vw
     font-size: 1.1vw
 </style>

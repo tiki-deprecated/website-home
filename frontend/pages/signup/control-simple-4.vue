@@ -1,17 +1,21 @@
 <template>
-  <div class="controlSimplePage">
-    <div class="controlSimplePageStack">
-      <div class="controlSimplePageWrapper">
+  <div class="controlSimple4Page">
+    <div class="controlSimple4PageStack">
+      <div class="controlSimple4PageWrapper">
         <header-simple-cmp
           class="headerSimpleCmp"
-          heading="Take back control of your data, with **a single app**."
+          heading="We can take back the internet if we work together."
         />
-        <form-simple-cmp class="formSimpleCmp" />
+        <form-simple-cmp
+          class="formSimpleCmp"
+          cta="Join the fight"
+          :how="false"
+        />
         <notified-cmp class="notifiedCmp" />
       </div>
       <footer-cmp class="footerCmp" />
     </div>
-    <popup-privacy-cmp class="controlSimplePopupDataCmp" />
+    <popup-privacy-cmp class="controlSimple4PopupDataCmp" />
   </div>
 </template>
 
@@ -22,7 +26,7 @@ import NotifiedCmp from '@/components/notified/NotifiedCmp'
 import FooterCmp from '@/components/footer/FooterCmp'
 
 export default {
-  name: 'ControlSimple',
+  name: 'ControlSimple4',
   components: { HeaderSimpleCmp, FormSimpleCmp, NotifiedCmp, FooterCmp },
   mounted() {
     this.$plausible.trackPageview()
@@ -32,23 +36,23 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.controlSimplePage
+.controlSimple4Page
   position: relative
 
-.controlSimplePageStack
+.controlSimple4PageStack
   position: absolute
   top: 0
   left: 0
   z-index: 1
   width: 100%
 
-.controlSimplePageWrapper
+.controlSimple4PageWrapper
   position: relative
   display: flex
   flex-direction: column
   min-height: 100vh
 
-.controlSimplePopupDataCmp
+.controlSimple4PopupDataCmp
   position: fixed
   z-index: 9
   width: 100%
