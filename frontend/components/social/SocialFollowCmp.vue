@@ -11,38 +11,46 @@
     </div>
     <div class="socialFollowBtnGroup">
       <div class="socialFollowBtnRow1">
-        <a href="https://twitter.com/my_tiki_" target="_blank">
+        <div
+          @click="
+            socialClick($event, 'https://twitter.com/my_tiki_', 'Twitter')
+          "
+        >
           <utils-svg-cmp
             name="button/twitter"
             class="socialFollowBtn socialFollowBtnTwt"
           />
-        </a>
-        <a
-          class="socialFollowBtnIgShare"
-          href="https://www.instagram.com/my.tiki/"
-          target="_blank"
+        </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://www.instagram.com/my.tiki/',
+              'Instagram'
+            )
+          "
         >
           <utils-svg-cmp
             name="button/instagram"
             class="socialFollowBtn socialFollowBtnIg"
           />
-        </a>
+        </div>
       </div>
-      <a
-        href="https://www.facebook.com/mytikiapp"
-        target="_blank"
-        class="socialFollowBtnRow2"
+      <div
+        @click="
+          socialClick($event, 'https://www.facebook.com/mytikiapp', 'Facebook')
+        "
       >
         <utils-svg-cmp
           name="button/facebook"
           class="socialFollowBtn socialFollowBtnFb"
         />
-      </a>
+      </div>
       <div class="socialFollowBtnRow3">
-        <a
-          href="https://www.tiktok.com/@my.tiki"
-          target="_blank"
-          class="socialFollowBtnWebShare"
+        <div
+          @click="
+            socialClick($event, 'https://www.tiktok.com/@my.tiki', 'TikTok')
+          "
         >
           <utils-svg-cmp
             name="button/tiktok"
@@ -52,8 +60,16 @@
             name="button/tiktok-lg"
             class="socialFollowBtn socialFollowBtnShLg"
           />
-        </a>
-        <a href="https://www.linkedin.com/company/mytiki" target="_blank">
+        </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://www.linkedin.com/company/mytiki',
+              'LinkedIn'
+            )
+          "
+        >
           <utils-svg-cmp
             name="button/linkedin"
             class="socialFollowBtn socialFollowBtnLi"
@@ -62,7 +78,7 @@
             name="button/linkedin-lg"
             class="socialFollowBtn socialFollowBtnLiLg"
           />
-        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -74,6 +90,17 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 export default {
   name: 'SocialFollowCmp',
   components: { UtilsSvgCmp },
+  methods: {
+    socialClick(clickEvent, href, platform) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Follow', {
+        props: { location: 'Component', platform },
+      })
+      const win = window.open(href, '_blank')
+      win.focus()
+    },
+  },
 }
 </script>
 
@@ -115,6 +142,9 @@ export default {
 
 ::v-deep .socialFollowBtn:hover.svg > .bkg
   fill: $yellow-light
+
+.socialFollowBtn
+  cursor: pointer
 
 @keyframes wiggle
   0%

@@ -22,6 +22,7 @@ export default {
     onClick(clickEvent) {
       clickEvent.preventDefault()
       this.$store.commit('popup/showPrivacy', true)
+      this.$plausible.trackEvent('How?')
     },
   },
 }

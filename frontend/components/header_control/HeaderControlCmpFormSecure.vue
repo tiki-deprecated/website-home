@@ -1,12 +1,14 @@
 <template>
-  <div class="formSimpleCmpSecureCnt">
-    <utils-svg-cmp name="icon/lock" class="formSimpleCmpSecureLock" />
-    <div class="formSimpleCmpSecureText">Your information is 100% secure</div>
-    <div class="formSimpleCmpSecureHowCnt" @click="onClick">
-      <div class="formSimpleCmpSecureHowText">How</div>
+  <div class="headerControlCmpFormSecureCnt">
+    <utils-svg-cmp name="icon/lock" class="headerControlCmpFormSecureLock" />
+    <div class="headerControlCmpFormSecureText">
+      Your information is 100% secure
+    </div>
+    <div class="headerControlCmpFormSecureHowCnt" @click="onClick">
+      <div class="headerControlCmpFormSecureHowText">How</div>
       <utils-svg-cmp
         name="icon/question"
-        class="formSimpleCmpSecureHowQuestion"
+        class="headerControlCmpFormSecureHowQuestion"
       />
     </div>
   </div>
@@ -16,7 +18,7 @@
 import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 
 export default {
-  name: 'FormSimpleCmpSecure',
+  name: 'HeaderControlCmpFormSecure',
   components: { UtilsSvgCmp },
   methods: {
     onClick(clickEvent) {
@@ -31,56 +33,56 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formSimpleCmpSecureCnt
+.headerControlCmpFormSecureCnt
   display: flex
   align-items: center
   justify-content: center
 
-.formSimpleCmpSecureHowCnt
+.headerControlCmpFormSecureHowCnt
   display: flex
   align-items: center
   cursor: pointer
 
-.formSimpleCmpSecureText
+.headerControlCmpFormSecureText
   font-family: $font-family-montserrat
   font-weight: 600
   color: $gray-dark
 
-.formSimpleCmpSecureHowText
+.headerControlCmpFormSecureHowText
   font-family: $font-family-nunito
   font-weight: 700
   color: $blue
   text-decoration: underline
 
-::v-deep .formSimpleCmpSecureLock.svg
+::v-deep .headerControlCmpFormSecureLock.svg
   fill: $gray-dark
 
-::v-deep .formSimpleCmpSecureHowQuestion.svg
+::v-deep .headerControlCmpFormSecureHowQuestion.svg
   fill: $blue
 
 @include for-phone
-  .formSimpleCmpSecureHowText
+  .headerControlCmpFormSecureHowText
     margin-left: 2vw
     margin-right: 1vw
     font-size: 3.5vw
 
-  .formSimpleCmpSecureText
+  .headerControlCmpFormSecureText
     font-size: 3.5vw
     margin-left: 1vw
 
-  ::v-deep .formSimpleCmpSecureLock.svg, ::v-deep .formSimpleCmpSecureHowQuestion.svg
+  ::v-deep .headerControlCmpFormSecureLock.svg, ::v-deep .headerControlCmpFormSecureHowQuestion.svg
     height: 4vw
 
 @include for-tablet
-  .formSimpleCmpSecureHowText
+  .headerControlCmpFormSecureHowText
     margin-left: 0.75vw
     margin-right: 0.25vw
     font-size: 1.1vw
 
-  .formSimpleCmpSecureText
+  .headerControlCmpFormSecureText
     font-size: 1.1vw
     margin-left: 0.25vw
 
-  ::v-deep .formSimpleCmpSecureLock.svg, ::v-deep .formSimpleCmpSecureHowQuestion.svg
+  ::v-deep .headerControlCmpFormSecureLock.svg, ::v-deep .headerControlCmpFormSecureHowQuestion.svg
     height: 1.2vw
 </style>
