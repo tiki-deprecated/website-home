@@ -59,6 +59,9 @@ export default {
   width: 100%
   height: 100%
 
+.signup382ShareCmp
+  background: rgba($yellow-light, 0.10)
+
 @include for-phone
   .signup382FormCmp
     width: 70%
@@ -67,6 +70,9 @@ export default {
     transform: translate(-50%, 140%)
     height: 65vw
 
+  .signup382ShareCmp
+    padding-top: 23vw
+
 @include for-tablet
   .signup382FormCmp
     width: 50%
@@ -74,4 +80,7 @@ export default {
     left: 50%
     transform: translate(-50%, 155%)
     height: 14.7vw
+
+  .signup382ShareCmp
+    padding-top: 14vw
 </style>

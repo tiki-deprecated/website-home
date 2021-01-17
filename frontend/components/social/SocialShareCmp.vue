@@ -187,7 +187,6 @@ export default {
 
 .socialShareCnt
   width: 100%
-  background: rgba($yellow-light, 0.10)
 
 .socialShareSketchShare
   margin: 0 auto
@@ -239,9 +238,6 @@ export default {
   justify-content: space-between
 
 @include for-phone
-  .socialShareCnt
-    padding-top: 23vw
-
   ::v-deep .socialShareSketchShare.svg
     height: 13vw
 
@@ -279,9 +275,6 @@ export default {
   .socialShareBtnGroup
     margin-top: 10vw
 @include for-tablet
-  .socialShareCnt
-    padding-top: 14vw
-
   ::v-deep .socialShareSketchShare.svg
     height: 4vw
 

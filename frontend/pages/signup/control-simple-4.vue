@@ -12,6 +12,7 @@
           :how="false"
         />
         <notified-cmp class="notifiedCmp" />
+        <social-share-cmp class="controlSimple4Share" />
       </div>
       <footer-cmp class="footerCmp" />
     </div>
@@ -24,10 +25,17 @@ import HeaderSimpleCmp from '@/components/header_simple/HeaderSimpleCmp'
 import FormSimpleCmp from '@/components/form_simple/FormSimpleCmp'
 import NotifiedCmp from '@/components/notified/NotifiedCmp'
 import FooterCmp from '@/components/footer/FooterCmp'
+import SocialShareCmp from '@/components/social/SocialShareCmp'
 
 export default {
   name: 'ControlSimple4',
-  components: { HeaderSimpleCmp, FormSimpleCmp, NotifiedCmp, FooterCmp },
+  components: {
+    HeaderSimpleCmp,
+    FormSimpleCmp,
+    NotifiedCmp,
+    FooterCmp,
+    SocialShareCmp,
+  },
   mounted() {
     this.$plausible.trackPageview()
     this.$store.commit('setCode', this.$nuxt.$route.query.code)
@@ -36,6 +44,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "../../assets/styles/mixins"
+
 .controlSimple4Page
   position: relative
 
@@ -57,4 +67,12 @@ export default {
   z-index: 9
   width: 100%
   height: 100%
+
+@include for-phone
+  .controlSimple4Share
+    margin-top: 5vh
+
+@include for-tablet
+  .controlSimple4Share
+    margin-top: -12vw
 </style>
