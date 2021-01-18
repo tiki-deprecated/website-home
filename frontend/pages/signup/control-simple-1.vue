@@ -8,6 +8,7 @@
         />
         <form-simple-cmp class="formSimpleCmp" />
         <notified-cmp class="notifiedCmp" />
+        <social-share-cmp class="controlSimple1Share" />
       </div>
       <footer-cmp class="footerCmp" />
     </div>
@@ -32,6 +33,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "../../assets/styles/mixins"
+
 .controlSimple1Page
   position: relative
 
@@ -53,4 +56,12 @@ export default {
   z-index: 9
   width: 100%
   height: 100%
+
+@include for-phone
+  .controlSimple1Share
+    margin-top: 5vh
+
+@include for-tablet
+  .controlSimple1Share
+    margin-top: -12vw
 </style>
