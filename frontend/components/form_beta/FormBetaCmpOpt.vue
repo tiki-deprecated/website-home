@@ -1,23 +1,20 @@
 <template>
   <div>
-    <div v-if="!isSubmitted" class="headerControlCmpFormOptCnt">
+    <div v-if="!isSubmitted" class="formBetaCmpOptCnt">
       <div @click="onYes">
-        <utils-svg-cmp
-          name="button/check"
-          class="headerControlCmpFormOptCheck"
-        />
-        <div class="headerControlCmpFormOptText">YES</div>
+        <utils-svg-cmp name="button/check" class="formBetaCmpOptCheck" />
+        <div class="formBetaCmpOptText">YES</div>
       </div>
       <div @click="onNo">
-        <utils-svg-cmp name="button/x" class="headerControlCmpFormOptX" />
-        <div class="headerControlCmpFormOptText">NO</div>
+        <utils-svg-cmp name="button/x" class="formBetaCmpOptX" />
+        <div class="formBetaCmpOptText">NO</div>
       </div>
     </div>
-    <div :class="{ headerControlCmpFormOptLoadingSubmit: isSubmitted }">
+    <div :class="{ formBetaCmpOptLoadingSubmit: isSubmitted }">
       <utils-svg-cmp
         name="icon/loading"
-        class="headerControlCmpFormOptLoading"
-        :class="{ headerControlCmpFormOptLoadingSubmit: isSubmitted }"
+        class="formBetaCmpOptLoading"
+        :class="{ formBetaCmpOptLoadingSubmit: isSubmitted }"
       />
     </div>
   </div>
@@ -28,7 +25,7 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
 import { optIn } from '@/libs/api'
 
 export default {
-  name: 'HeaderControlCmpFormOpt',
+  name: 'FormBetaCmpOpt',
   components: { UtilsSvgCmp },
   data() {
     return {
@@ -64,39 +61,38 @@ export default {
 
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
-.headerControlCmpFormOptCnt
+.formBetaCmpOptCnt
   display: flex
   align-items: center
   justify-content: space-between
 
-.headerControlCmpFormOptText
+.formBetaCmpOptText
   color: $blue-dark
   font-family: $font-family-montserrat
-  font-weight: 600
   text-align: center
 
-::v-deep .headerControlCmpFormOptX.svg > .ico, ::v-deep .headerControlCmpFormOptCheck.svg > .ico
+::v-deep .formBetaCmpOptX.svg > .ico, ::v-deep .formBetaCmpOptCheck.svg > .ico
   fill: $white
 
-::v-deep .headerControlCmpFormOptX.svg > .border, ::v-deep .headerControlCmpFormOptCheck.svg > .border
+::v-deep .formBetaCmpOptX.svg > .border, ::v-deep .formBetaCmpOptCheck.svg > .border
   fill: $gray-xxlight
 
-::v-deep .headerControlCmpFormOptX.svg > .bkg
+::v-deep .formBetaCmpOptX.svg > .bkg
   fill: $orange
 
-::v-deep .headerControlCmpFormOptX:hover.svg > .bkg
+::v-deep .formBetaCmpOptX:hover.svg > .bkg
   fill: $orange-dark
 
-::v-deep .headerControlCmpFormOptCheck.svg > .bkg
+::v-deep .formBetaCmpOptCheck.svg > .bkg
   fill: $green
 
-::v-deep .headerControlCmpFormOptCheck:hover.svg > .bkg
+::v-deep .formBetaCmpOptCheck:hover.svg > .bkg
   fill: $green-dark
 
-.headerControlCmpFormOptCheck, .headerControlCmpFormOptX
+.formBetaCmpOptCheck, .formBetaCmpOptX
   cursor: pointer
 
-.headerControlCmpFormOptLoading
+.formBetaCmpOptLoading
   fill: $green
   width: 0
   margin: 0
@@ -105,44 +101,44 @@ export default {
   transition-timing-function: linear
   transition-delay: 0s
 
-::v-deep .headerControlCmpFormOptLoadingSubmit.svg
+::v-deep .formBetaCmpOptLoadingSubmit.svg
   width: inherit
 
-.headerControlCmpFormOptLoadingSubmit
+.formBetaCmpOptLoadingSubmit
   transform: rotate(-2000deg)
 
 @include for-phone
-  ::v-deep .headerControlCmpFormOptCheck.svg, ::v-deep .headerControlCmpFormOptX.svg
+  ::v-deep .formBetaCmpOptCheck.svg, ::v-deep .formBetaCmpOptX.svg
     height: 15vw
 
-  .headerControlCmpFormOptText
+  .formBetaCmpOptText
     font-size: 5vw
     margin-top: 1vw
 
-  .headerControlCmpFormOptCnt
+  .formBetaCmpOptCnt
     margin: 5vw auto 0 auto
     width: 50%
 
-  .headerControlCmpFormOptLoadingSubmit
+  .formBetaCmpOptLoadingSubmit
     height: 15vw
     margin: 5vw auto
 
 @include for-tablet
-  ::v-deep .headerControlCmpFormOptCheck.svg, ::v-deep .headerControlCmpFormOptX.svg
+  ::v-deep .formBetaCmpOptCheck.svg, ::v-deep .formBetaCmpOptX.svg
     height: 4.5vw
 
-  .headerControlCmpFormOptText
+  .formBetaCmpOptText
     font-size: 1.25vw
     margin-top: 0.25vw
 
-  .headerControlCmpFormOptCnt
-    margin: 2.5vw auto 0 auto
+  .formBetaCmpOptCnt
+    margin: 2vw auto 0 auto
     width: 50%
 
-  .headerControlCmpFormOptLoadingSubmit
+  .formBetaCmpOptLoadingSubmit
     height: 4.5vw
-    margin: 2.5vw auto
+    margin: 2vw auto
 
-  .headerControlCmpFormOptCnt
+  .formBetaCmpOptCnt
     justify-content: space-evenly
 </style>

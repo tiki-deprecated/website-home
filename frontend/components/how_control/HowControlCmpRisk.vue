@@ -6,8 +6,8 @@
       </div>
       <div class="howControlCmpRiskBody">
         <p>
-          Selling/sharing your data shouldn’t be risky. It can be anonymous and
-          secure.
+          Selling/sharing your data shouldn’t be risky.
+          <b>It can be anonymous and secure.</b>
         </p>
         <p>
           Take a simple example, company x wants to know what people like or
@@ -15,19 +15,13 @@
           never needs to who said what.
         </p>
         <p>
-          And this is exactly how it is with TIKI - it makes your data as
-          anonymous and secure it can possibly be.
+          And this is exactly how it is with TIKI - it makes your data
+          <b>as anonymous and secure it can possibly be.</b>
         </p>
       </div>
     </div>
     <div class="howControlCmpRiskImgWrapper">
       <img
-        sizes="(max-width: 772px) 100vw, 772px"
-        srcset="
-          ~/assets/images/control_w_200.png 200w,
-          ~/assets/images/control_w_479.png 479w,
-          ~/assets/images/control_w_772.png 772w
-        "
         src="~/assets/images/control_w_772.png"
         alt=""
         class="howControlCmpRiskImg"
@@ -51,7 +45,15 @@ export default {
   width: 100%
 
 .howControlCmpRiskImg
-  width: 100%
+  height: 100%
+  display: block
+  margin: 0 auto
+
+.howControlCmpRiskText
+  font-family: $font-family-montserrat
+
+.howControlCmpRiskHeading
+  font-weight: 600
 
 @include for-phone
   .howControlCmpRiskText, .howControlCmpRiskImgWrapper
@@ -61,6 +63,21 @@ export default {
   .howControlCmpRiskCnt
     flex-direction: row-reverse
 
-  .howControlCmpRiskText, .howControlCmpRiskImgWrapper
-    width: 50%
+  .howControlCmpRiskText
+    width: 45%
+    margin: 0 auto
+    font-size: 1vw
+
+  .howControlCmpRiskHeading, .howControlCmpRiskBody
+    width: 80%
+    margin-right: auto
+    margin-left: 0
+
+  .howControlCmpRiskImgWrapper
+    width: 45%
+    height: 13vw
+    margin: 0 auto
+
+  .howControlCmpRiskHeading
+    font-size: 1.25vw
 </style>

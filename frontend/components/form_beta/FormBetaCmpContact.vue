@@ -1,41 +1,38 @@
 <template>
-  <div class="formSimpleCmpContactCnt">
-    <div v-if="errorMessage !== null" class="formSimpleCmpContactError">
+  <div class="formBetaCmpContactCnt">
+    <div v-if="errorMessage !== null" class="formBetaCmpContactError">
       {{ errorMessage }}
     </div>
-    <div class="formSimpleCmpContactField">
+    <div class="formBetaCmpContactField">
       <input
         type="text"
         placeholder="Your email or phone #"
         autocomplete="off"
         autocapitalize="none"
-        class="formSimpleCmpContactInput"
-        :class="{ formSimpleCmpContactInputError: errorMessage !== null }"
+        class="formBetaCmpContactInput"
+        :class="{ formBetaCmpContactInputError: errorMessage !== null }"
         @input="onInput"
         @keypress.enter="onSubmit"
       />
       <div
-        class="formSimpleCmpContactSend"
+        class="formBetaCmpContactSend"
         :class="{
-          formSimpleCmpContactSendReady: isReady,
-          formSimpleCmpContactSendNotReady: !isReady,
+          formBetaCmpContactSendReady: isReady,
+          formBetaCmpContactSendNotReady: !isReady,
         }"
         @click="onSubmit"
       >
         {{ cta }}
       </div>
     </div>
-    <form-simple-cmp-secure v-if="how" class="formSimpleCmpSecure" />
   </div>
 </template>
 
 <script>
-import FormSimpleCmpSecure from '@/components/form_simple/FormSimpleCmpSecure'
 import { signUp } from '@/libs/api'
 
 export default {
-  name: 'FormSimpleCmpContact',
-  components: { FormSimpleCmpSecure },
+  name: 'FormBetaCmpContact',
   props: {
     cta: {
       type: String,
@@ -100,104 +97,98 @@ export default {
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
 
-.formSimpleCmpContactInput, .formSimpleCmpContactSend
-  background: $white
+.formBetaCmpContactInput, .formBetaCmpContactSend
   display: block
   border-style: solid
-  border-color: $gray
+  border-color: $gray-xlight
   font-family: $font-family-montserrat
   font-weight: 600
 
-.formSimpleCmpContactInput
+.formBetaCmpContactInput
   color: $blue
+  background: $gray-xlight
   margin: 0 auto
 
-.formSimpleCmpContactSend
+.formBetaCmpContactSend
   color: $black-dark
 
-.formSimpleCmpContactSend
+.formBetaCmpContactSend
   font-family: $font-family-montserrat
-  color: $white
+  color: $black-dark
 
-.formSimpleCmpContactField
+.formBetaCmpContactField
   width: 100%
   margin: 0 auto
 
-.formSimpleCmpContactInput::placeholder
+.formBetaCmpContactInput::placeholder
   color: $gray
 
-.formSimpleCmpContactInput:focus
+.formBetaCmpContactInput:focus
   outline: 0
-  border-color: $blue
+  border-color: $gray
 
-.formSimpleCmpContactInputError, .formSimpleCmpContactInputError:focus
+.formBetaCmpContactInputError, .formBetaCmpContactInputError:focus
   border-color: $orange
 
-.formSimpleCmpContactSend
+.formBetaCmpContactSend
   cursor: pointer
 
-.formSimpleCmpContactSendReady
-  background: $green
-  border-color: $green
+.formBetaCmpContactSendReady
+  background: $gray-dark
+  border-color: $gray-dark
 
-.formSimpleCmpContactSendNotReady
-  background: $blue-dark
-  border-color: $blue-dark
+.formBetaCmpContactSendNotReady
+  background: $gray
+  border-color: $gray
 
-.formSimpleCmpContactError
+.formBetaCmpContactError
   font-family: $font-family-montserrat
   font-weight: 600
   color: $orange
   text-align: center
 
 @include for-phone
-  .formSimpleCmpContactCnt
+  .formBetaCmpContactCnt
     width: 100%
 
-  .formSimpleCmpContactInput, .formSimpleCmpContactSend
+  .formBetaCmpContactInput, .formBetaCmpContactSend
     height: 15vw
     border-radius: 4vw
     font-size: 6vw
     text-indent: 4vw
     width: 88%
 
-  .formSimpleCmpContactInput:focus
+  .formBetaCmpContactInput:focus
     border-radius: 4vw
 
-  .formSimpleCmpContactSend
+  .formBetaCmpContactSend
     margin: 5vw auto 0 auto
     line-height: 15vw
 
-  .formSimpleCmpSecure
-    margin-top: 5vw
-
-  .formSimpleCmpContactError
+  .formBetaCmpContactError
     margin-bottom: 2vw
     font-size: 3.5vw
 
 @include for-tablet
-  .formSimpleCmpContactCnt
+  .formBetaCmpContactCnt
     margin: 1vw auto 0 auto
-    width: 33%
+    width: 100%
 
-  .formSimpleCmpContactInput, .formSimpleCmpContactSend
-    height: 3vw
-    border-radius: 0.5vw
-    font-size: 1.5vw
+  .formBetaCmpContactInput, .formBetaCmpContactSend
+    height: 2.5vw
+    border-radius: 0.75vw
+    font-size: 1vw
     text-indent: 0.75vw
-    width: 95%
+    width: 100%
 
-  .formSimpleCmpContactInput:focus
-    border-radius: 0.5vw
+  .formBetaCmpContactInput:focus
+    border-radius: 0.75vw
 
-  .formSimpleCmpContactSend
-    margin: 1.25vw auto 0 auto
-    line-height: 3vw
+  .formBetaCmpContactSend
+    margin: 1vw auto 0 auto
+    line-height: 2.5vw
 
-  .formSimpleCmpSecure
-    margin-top: 1.25vw
-
-  .formSimpleCmpContactError
+  .formBetaCmpContactError
     margin-bottom: 0.5vw
-    font-size: 1.1vw
+    font-size: 0.9vw
 </style>
