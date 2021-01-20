@@ -13,9 +13,18 @@
             <utils-svg-cmp name="tiki/logo" class="headerHomeLogo" />
           </nuxt-link>
           <div class="headerHomeNavRight">
-            <nuxt-link to="/meet" class="headerLinkMission"
-              >Our mission
-            </nuxt-link>
+            <nuxt-link to="/meet" class="headerLinkMission">Mission</nuxt-link>
+            <div
+              class="headerLinkFAQ"
+              @click="
+                faqClick(
+                  $event,
+                  'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c'
+                )
+              "
+            >
+              FAQ
+            </div>
             <nuxt-link
               v-scroll-to="{ el: '#signup' }"
               :to="{ path: '/', hash: 'signup' }"
@@ -48,6 +57,17 @@ import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp.vue'
 export default {
   name: 'HeaderHomeCmp',
   components: { UtilsSvgCmp },
+  methods: {
+    faqClick(clickEvent, href) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('FAQ', {
+        props: { location: 'Home' },
+      })
+      const win = window.open(href, '_blank')
+      win.focus()
+    },
+  },
 }
 </script>
 
@@ -106,11 +126,12 @@ export default {
   display: flex
   align-items: center
 
-.headerLinkMission
+.headerLinkMission, .headerLinkFAQ
   font-family: $font-family-montserrat
   color: $black-dark
   text-decoration: none
   font-weight: 600
+  cursor: pointer
 
 .headerLinkSignup
   font-family: $font-family-montserrat
@@ -119,7 +140,7 @@ export default {
   font-weight: 600
   background: $red
 
-.headerLinkMission:hover, .headerLinkMission:visited, .headerLinkMission:link, .headerLinkMission:active, .headerLinkSignup:hover, .headerLinkSignup:visited, .headerLinkSignup:link, .headerLinkSignup:active
+.headerLinkMission:hover, .headerLinkMission:visited, .headerLinkMission:link, .headerLinkMission:active, .headerLinkSignup:hover, .headerLinkSignup:visited, .headerLinkSignup:link, .headerLinkSignup:active, .headerLinkFAQ:hover, .headerLinkFAQ:visited, .headerLinkFAQ:link, .headerLinkFAQ:active
   text-decoration: none
 
 @include for-phone
@@ -160,8 +181,9 @@ export default {
     padding: 2vw 10vw
     border-radius: 2.5vw
 
-  .headerLinkMission
+  .headerLinkMission, .headerLinkFAQ
     font-size: 5vw
+    margin-left: 4vw
 
 @include for-tablet
   .headerHomeCnt
@@ -198,7 +220,7 @@ export default {
     padding: 0.5vw 1.75vw
     border-radius: 0.6vw
 
-  .headerLinkMission
+  .headerLinkMission, .headerLinkFAQ
     font-size: 1vw
-    margin-right: 3vw
+    margin-right: 2vw
 </style>

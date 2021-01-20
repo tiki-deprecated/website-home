@@ -88,6 +88,28 @@
         >
           <utils-svg-cmp name="icon/discord" class="footerFollowButton" />
         </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://t.me/joinchat/Ud15PQBiW4eTWJR3',
+              'Telegram'
+            )
+          "
+        >
+          <utils-svg-cmp name="icon/telegram" class="footerFollowButton" />
+        </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP',
+              'Signal'
+            )
+          "
+        >
+          <utils-svg-cmp name="icon/signal" class="footerFollowButton" />
+        </div>
       </div>
     </div>
   </div>
