@@ -88,15 +88,7 @@
         >
           <utils-svg-cmp name="icon/discord" class="footerFollowButton" />
         </div>
-        <div
-          @click="
-            socialClick(
-              $event,
-              'https://t.me/joinchat/Ud15PQBiW4eTWJR3',
-              'Telegram'
-            )
-          "
-        >
+        <div @click="socialClick($event, 'https://t.me/mytikiapp', 'Telegram')">
           <utils-svg-cmp name="icon/telegram" class="footerFollowButton" />
         </div>
         <div

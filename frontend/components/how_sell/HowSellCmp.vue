@@ -52,7 +52,7 @@ export default {
 
 .howSellSteps
   display: flex
-  align-items: start
+  align-items: flex-start
   justify-content: space-evenly
 
 .howSellCmpSteps

@@ -80,6 +80,36 @@
           />
         </div>
       </div>
+      <div
+        @click="socialClick($event, 'https://discord.gg/evjYQq48Be', 'Discord')"
+      >
+        <utils-svg-cmp
+          name="button/discord"
+          class="socialFollowBtn socialFollowBtnDiscord"
+        />
+      </div>
+      <div class="socialFollowBtnRow5">
+        <div @click="socialClick($event, 'https://t.me/mytikiapp', 'Telegram')">
+          <utils-svg-cmp
+            name="button/telegram"
+            class="socialFollowBtn socialFollowBtnTelegram"
+          />
+        </div>
+        <div
+          @click="
+            socialClick(
+              $event,
+              'https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP',
+              'Signal'
+            )
+          "
+        >
+          <utils-svg-cmp
+            name="button/signal"
+            class="socialFollowBtn socialFollowBtnSignal"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -128,7 +158,7 @@ export default {
   font-weight: 600
   text-align: center
 
-.socialFollowBtnFb
+.socialFollowBtnFb, .socialFollowBtnDiscord
   margin: 0 auto
 
 ::v-deep .socialFollowBtn.svg > .bkg
@@ -158,12 +188,7 @@ export default {
   100%
     transform: rotate(0deg)
 
-.socialFollowBtnRow1
-  display: flex
-  align-items: center
-  justify-content: space-between
-
-.socialFollowBtnRow3
+.socialFollowBtnRow1, .socialFollowBtnRow3, .socialFollowBtnRow5
   display: flex
   align-items: center
   justify-content: space-between
@@ -193,16 +218,7 @@ export default {
     margin: 6vw auto 0 auto
     width: 80%
 
-  ::v-deep .socialFollowBtnTwt.svg
-    height: 30vw
-
-  ::v-deep .socialFollowBtnIg.svg
-    height: 30vw
-
-  ::v-deep .socialFollowBtnFb.svg
-    height: 30vw
-
-  ::v-deep .socialFollowBtnSh.svg
+  ::v-deep .socialFollowBtnTwt.svg, ::v-deep .socialFollowBtnIg.svg, ::v-deep .socialFollowBtnFb.svg, ::v-deep .socialFollowBtnSh.svg, ::v-deep .socialFollowBtnSignal.svg, ::v-deep .socialFollowBtnTelegram.svg, ::v-deep .socialFollowBtnDiscord.svg
     height: 30vw
 
   ::v-deep .socialFollowBtnShLg.svg
@@ -216,11 +232,9 @@ export default {
     display: none
     height: 0
 
-  .socialFollowBtnRow3
-    margin-top: -10vw
-
   .socialFollowBtnGroup
     margin-top: 10vw
+
 @include for-tablet
   .socialFollowCnt
     padding-top: 18vw
@@ -243,13 +257,7 @@ export default {
     margin: 2vw auto 4vw auto
     width: 50%
 
-  ::v-deep .socialFollowBtnTwt.svg
-    height: 6vw
-
-  ::v-deep .socialFollowBtnIg.svg
-    height: 6vw
-
-  ::v-deep .socialFollowBtnFb.svg
+  ::v-deep .socialFollowBtnTwt.svg, ::v-deep .socialFollowBtnIg.svg, ::v-deep .socialFollowBtnFb.svg, ::v-deep .socialFollowBtnSignal.svg, ::v-deep .socialFollowBtnTelegram.svg, ::v-deep .socialFollowBtnDiscord.svg
     height: 6vw
 
   ::v-deep .socialFollowBtnSh.svg
@@ -268,14 +276,14 @@ export default {
     display: unset
     height: 7vw
 
-  .socialFollowBtnRow1, .socialFollowBtnRow2, .socialFollowBtnRow3
-    width: 33%
+  .socialFollowBtnRow1, .socialFollowBtnRow2, .socialFollowBtnRow3, .socialFollowBtnRow4, .socialFollowBtnRow5
+    width: 22%
 
   .socialFollowBtnGroup
     display: flex
     align-items: center
     justify-content: space-between
-    width: 60%
+    width: 70%
     margin: 2vw auto 0 auto
     padding-bottom: 2vw
 </style>

@@ -75,7 +75,7 @@ export default {
 @import "../../assets/styles/mixins"
 
 .headerHomeCnt
-  background: $yellow-light
+  background: $tan-light
   position: relative
   width: 100%
 
@@ -154,9 +154,9 @@ export default {
     display: none
 
   ::v-deep .headerHomeBkgImg.svg
-    height: 50vw
+    height: 40vw
     right: 0
-    bottom: 15%
+    bottom: 22%
 
   ::v-deep .headerHomeLogo.svg
     height: 8vw
@@ -175,6 +175,8 @@ export default {
     font-size: 5vw
     margin-top: 5vw
     margin-bottom: 12vw
+    font-weight: 300
+    width: 90%
 
   .headerLinkSignup
     font-size: 5vw
@@ -193,9 +195,9 @@ export default {
     display: none
 
   ::v-deep .headerHomeBkgImgLg.svg
-    height: 23vw
+    height: 17vw
     right: 0
-    top: 5%
+    top: 17%
 
   ::v-deep .headerHomeLogo.svg
     height: 2vw
