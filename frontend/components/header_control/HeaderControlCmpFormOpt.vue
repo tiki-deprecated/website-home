@@ -132,16 +132,16 @@ export default {
     height: 4.5vw
 
   .headerControlCmpFormOptText
-    font-size: 1.5vw
+    font-size: 1.25vw
     margin-top: 0.25vw
 
   .headerControlCmpFormOptCnt
-    margin: 2vw auto 0 auto
-    width: 25%
+    margin: 2.5vw auto 0 auto
+    width: 50%
 
   .headerControlCmpFormOptLoadingSubmit
     height: 4.5vw
-    margin: 2vw auto
+    margin: 2.5vw auto
 
   .headerControlCmpFormOptCnt
     justify-content: space-evenly

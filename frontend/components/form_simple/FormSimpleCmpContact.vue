@@ -25,7 +25,7 @@
         {{ cta }}
       </div>
     </div>
-    <formSimple-cmp-secure v-if="how" class="formSimpleCmpSecure" />
+    <form-simple-cmp-secure v-if="how" class="formSimpleCmpSecure" />
   </div>
 </template>
 

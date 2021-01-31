@@ -5,11 +5,11 @@
         <img
           sizes="(max-width: 768px) 100vw, 768px"
           srcset="
-            ~/assets/images/see_w_200.png 200w,
-            ~/assets/images/see_w_466.png 466w,
-            ~/assets/images/see_w_768.png 768w
+            ~/assets/images/png/see/see_w_200.png 200w,
+            ~/assets/images/png/see/see_w_466.png 466w,
+            ~/assets/images/png/see/see_w_768.png 768w
           "
-          src="~/assets/images/see_w_768.png"
+          src="~/assets/images/png/see/see_w_768.png"
           alt=""
           class="youCanFeatureImg"
         />
@@ -30,11 +30,11 @@
         <img
           sizes="(max-width: 772px) 100vw, 772px"
           srcset="
-            ~/assets/images/control_w_200.png 200w,
-            ~/assets/images/control_w_479.png 479w,
-            ~/assets/images/control_w_772.png 772w
+            ~/assets/images/png/control/control_w_200.png 200w,
+            ~/assets/images/png/control/control_w_479.png 479w,
+            ~/assets/images/png/control/control_w_772.png 772w
           "
-          src="~/assets/images/control_w_772.png"
+          src="~/assets/images/png/control/control_w_772.png"
           alt=""
           class="youCanFeatureImg"
         />
@@ -55,12 +55,12 @@
         <img
           sizes="(max-width: 768px) 100vw, 768px"
           srcset="
-            ~/assets/images/monetize_w_200.png 200w,
-            ~/assets/images/monetize_w_402.png 402w,
-            ~/assets/images/monetize_w_567.png 567w,
-            ~/assets/images/monetize_w_768.png 768w
+            ~/assets/images/png/monetize/monetize_w_200.png 200w,
+            ~/assets/images/png/monetize/monetize_w_402.png 402w,
+            ~/assets/images/png/monetize/monetize_w_567.png 567w,
+            ~/assets/images/png/monetize/monetize_w_768.png 768w
           "
-          src="~/assets/images/monetize_w_768.png"
+          src="~/assets/images/png/monetize/monetize_w_768.png"
           alt=""
           class="youCanFeatureImg"
         />

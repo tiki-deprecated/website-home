@@ -27,17 +27,14 @@
         {{ cta }}
       </div>
     </div>
-    <header-control-cmp-form-secure class="headerControlCmpFormSecure" />
   </div>
 </template>
 
 <script>
-import HeaderControlCmpFormSecure from '@/components/header_control/HeaderControlCmpFormSecure'
 import { signUp } from '@/libs/api'
 
 export default {
   name: 'HeaderControlCmpFormContact',
-  components: { HeaderControlCmpFormSecure },
   props: {
     cta: {
       type: String,
@@ -98,15 +95,15 @@ export default {
 @import "../../assets/styles/mixins"
 
 .headerControlCmpFormContactInput, .headerControlCmpFormContactSend
-  background: $white
   display: block
   border-style: solid
-  border-color: $gray
+  border-color: $gray-xlight
   font-family: $font-family-montserrat
   font-weight: 600
 
 .headerControlCmpFormContactInput
   color: $blue
+  background: $gray-xlight
   margin: 0 auto
 
 .headerControlCmpFormContactSend
@@ -114,7 +111,7 @@ export default {
 
 .headerControlCmpFormContactSend
   font-family: $font-family-montserrat
-  color: $white
+  color: $black-dark
 
 .headerControlCmpFormContactField
   width: 100%
@@ -125,7 +122,7 @@ export default {
 
 .headerControlCmpFormContactInput:focus
   outline: 0
-  border-color: $blue
+  border-color: $gray
 
 .headerControlCmpFormContactInputError, .headerControlCmpFormContactInputError:focus
   border-color: $orange
@@ -134,12 +131,12 @@ export default {
   cursor: pointer
 
 .headerControlCmpFormContactSendReady
-  background: $green
-  border-color: $green
+  background: $gray-dark
+  border-color: $gray-dark
 
 .headerControlCmpFormContactSendNotReady
-  background: $blue-dark
-  border-color: $blue-dark
+  background: $gray
+  border-color: $gray
 
 .headerControlCmpFormContactError
   font-family: $font-family-montserrat
@@ -174,27 +171,24 @@ export default {
 
 @include for-tablet
   .headerControlCmpFormContactCnt
-    margin: 1vw auto 0 auto
-    width: 33%
+    margin: 0 auto
+    width: 100%
 
   .headerControlCmpFormContactInput, .headerControlCmpFormContactSend
-    height: 3vw
-    border-radius: 0.5vw
-    font-size: 1.5vw
+    height: 2.5vw
+    border-radius: 0.75vw
+    font-size: 1vw
     text-indent: 0.75vw
-    width: 95%
+    width: 100%
 
   .headerControlCmpFormContactInput:focus
-    border-radius: 0.5vw
+    border-radius: 0.75vw
 
   .headerControlCmpFormContactSend
-    margin: 1.25vw auto 0 auto
-    line-height: 3vw
-
-  .headerControlCmpFormSecure
-    margin-top: 1.25vw
+    margin: 1vw auto 0 auto
+    line-height: 2.5vw
 
   .headerControlCmpFormContactError
     margin-bottom: 0.5vw
-    font-size: 1.1vw
+    font-size: 0.9vw
 </style>

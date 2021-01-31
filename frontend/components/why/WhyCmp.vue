@@ -34,6 +34,7 @@ export default {
 
 .whyCnt
   background: $blue-dark
+  width: 100%
 
 .whyTitle
   font-family: $font-family-montserrat
@@ -50,17 +51,13 @@ export default {
   margin-right: auto
 
 @include for-phone
-  .whyCnt
-    width: 90%
-    border-radius: 2vw
-    padding: 2vw
-
   .whyMoney
-    width: 100%
+    width: 90%
+    margin: 0 auto
+    padding-top: 8vw
 
   .whyTitle
     font-size: 6vw
-    margin-top: 5vw
 
   .whyText
     font-size: 4vw
@@ -71,8 +68,9 @@ export default {
     margin-bottom: 10vw
 
   .whyVideo
-    width: 100%
+    width: 90%
     height: 39%
+    margin: 0 auto
 
   .utilsVideoCmp
     width: 100%
@@ -80,19 +78,15 @@ export default {
 
 @include for-tablet
   .whyCnt
-    width: 66%
-    border-radius: 1vw
-    padding: 2vw
     display: flex
-    align-items: flex-end
-    justify-content: space-between
+    justify-content: space-around
+    align-items: center
 
   .whyMoney
-    width: 50%
+    width: 35%
 
   .whyTitle
     font-size: 1.75vw
-    margin-top: 3vw
 
   .whyText
     width: 80%
@@ -103,8 +97,8 @@ export default {
     margin-top: 3vw
 
   .whyVideo
-    width: 50%
-    height: 100%
+    width: 35%
+    height: 82%
 
   .utilsVideoCmp
     width: 100%

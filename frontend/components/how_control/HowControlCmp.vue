@@ -15,4 +15,18 @@ export default {
 }
 </script>
 
-<style scoped lang="sass"></style>
+<style scoped lang="sass">
+@import "../../assets/styles/mixins"
+
+.howControlCnt
+  width: 100%
+
+@include for-phone
+@include for-tablet
+  .howControlCnt
+    width: 100%
+    margin: 4vw 0
+
+  .howControlCmpRisk
+    margin-top: 4vw
+</style>

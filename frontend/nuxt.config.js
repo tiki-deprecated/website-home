@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'Tiki',
+    title: 'TIKI',
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#',
     },

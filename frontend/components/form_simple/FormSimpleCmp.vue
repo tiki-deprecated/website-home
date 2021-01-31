@@ -1,13 +1,13 @@
 <template>
   <div class="formSimpleCnt">
-    <formSimple-cmp-tribe :class="{ formSimpleHide: !isOpt }" />
-    <formSimple-cmp-contact
+    <form-simple-cmp-tribe :class="{ formSimpleHide: !isOpt }" />
+    <form-simple-cmp-contact
       :cta="cta"
       :class="{ formSimpleHide: !isContact }"
       :how="how"
     />
-    <formSimple-cmp-opt :class="{ formSimpleHide: !isOpt }" />
-    <formSimple-cmp-done :class="{ formSimpleHide: !isDone }" />
+    <form-simple-cmp-opt :class="{ formSimpleHide: !isOpt }" />
+    <form-simple-cmp-done :class="{ formSimpleHide: !isDone }" />
   </div>
 </template>
 

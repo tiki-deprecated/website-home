@@ -14,18 +14,14 @@
           reserve the right to refuse service to anyone. Exactly, you choose who
           can buy your data and for what reason.
         </p>
-        <p>Change your mind, no problem, shut them off. You’re in charge.</p>
+        <p>
+          <b>Change your mind, no problem, shut them off. You’re in charge.</b>
+        </p>
       </div>
     </div>
     <div class="howControlCmpTakeImgWrapper">
       <img
-        sizes="(max-width: 772px) 100vw, 772px"
-        srcset="
-          ~/assets/images/control_w_200.png 200w,
-          ~/assets/images/control_w_479.png 479w,
-          ~/assets/images/control_w_772.png 772w
-        "
-        src="~/assets/images/control_w_772.png"
+        src="~/assets/images/png/control/control_w_772.png"
         alt=""
         class="howControlCmpTakeImg"
       />
@@ -48,13 +44,39 @@ export default {
   width: 100%
 
 .howControlCmpTakeImg
-  width: 100%
+  height: 100%
+  display: block
+  margin: 0 auto
+
+.howControlCmpTakeText
+  font-family: $font-family-montserrat
+
+.howControlCmpTakeHeading
+  font-weight: 600
 
 @include for-phone
-  .howControlCmpTakeText, .howControlCmpTakeImgWrapper
+  .howControlCmpTakeText
+    width: 100%
+
+  .howControlCmpTakeImgWrapper
     width: 100%
 
 @include for-tablet
-  .howControlCmpTakeText, .howControlCmpTakeImgWrapper
-    width: 50%
+  .howControlCmpTakeText
+    width: 45%
+    margin: 0 auto
+    font-size: 1vw
+
+  .howControlCmpTakeHeading, .howControlCmpTakeBody
+    width: 80%
+    margin-left: auto
+    margin-right: 0
+
+  .howControlCmpTakeImgWrapper
+    width: 45%
+    height: 13vw
+    margin: 0 auto
+
+  .howControlCmpTakeHeading
+    font-size: 1.25vw
 </style>

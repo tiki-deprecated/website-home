@@ -50,11 +50,12 @@ export default {
 
 @include for-tablet
   .headerControlCmpFormTribeTitle
-    font-size: 1.75vw
-    text-align: center
+    font-size: 1.5vw
 
   .headerControlCmpFormTribeText
-    font-size: 1.5vw
-    text-align: center
+    font-size: 1vw
     margin-top: 1vw
+
+  .headerControlCmpFormTribeTextLine
+    padding: 0.25vw 0
 </style>
