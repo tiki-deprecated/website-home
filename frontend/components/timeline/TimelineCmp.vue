@@ -10,13 +10,39 @@
       getting you paid.
     </div>
     <div class="timelineWrapper">
-      <utils-svg-cmp
-        name="background/timeline"
-        class="utilsSvgCmp timelineHorizontal"
+      <img
+        sizes="(max-width: 1400px) 100vw, 1400px"
+        srcset="
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_200.png   200w,
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_448.png   448w,
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_626.png   626w,
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_792.png   792w,
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_934.png   934w,
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_1069.png 1069w,
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_1238.png 1238w,
+          ~/assets/images/png/timeline-horizontal/timeline-horizontal_w_1400.png 1400w
+        "
+        src="~/assets/images/png/timeline-horizontal/timeline-horizontal_w_1400.png"
+        alt="10,000 signups. Beta Launch. Start getting paid."
+        class="timelineHorizontal"
       />
-      <utils-svg-cmp
-        name="background/timeline-vertical"
-        class="utilsSvgCmp timelineVertical"
+      <img
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        srcset="
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_200.png   200w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_252.png   252w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_301.png   301w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_343.png   343w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_386.png   386w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_432.png   432w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_476.png   476w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_517.png   517w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_555.png   555w,
+          ~/assets/images/png/timeline-vertical/timeline-vertical_w_1000.png 1000w
+        "
+        src="~/assets/images/png/timeline-vertical/timeline-vertical_w_1000.png"
+        alt="10,000 signups. Beta Launch. Start getting paid."
+        class="timelineVertical"
       />
     </div>
   </div>
@@ -35,28 +61,7 @@ export default {
 @import "assets/styles/mixins"
 
 .timelineCnt
-  background: $orange
-
-::v-deep .utilsSvgCmp.svg > .blob
-  fill: $yellow-xlight
-
-::v-deep .utilsSvgCmp.svg > .blob-bkg
-  fill: $yellow
-
-::v-deep .utilsSvgCmp.svg > .text
-  fill: $purple
-
-::v-deep .utilsSvgCmp.svg > .accent
-  fill: $blue-dark
-
-::v-deep .utilsSvgCmp.svg > .text-inv
-  fill: $gray-xxlight
-
-::v-deep .utilsSvgCmp.svg > .hlt
-  fill: $blue
-
-::v-deep .utilsSvgCmp.svg > .num
-  fill: $white
+  background: $yellow
 
 .timelineQuoteLeft
   transform: rotate(23deg)
@@ -65,18 +70,21 @@ export default {
   transform: rotate(130deg)
 
 ::v-deep .timelineQuoteLeft.svg, ::v-deep .timelineQuoteRight.svg
-  fill: $white
+  fill: $blue-dark
 
 .timelineTitleText
   font-family: $font-family-koara
   font-weight: 700
-  color: $white
+  color: $blue-dark
   text-align: center
 
 .timelineSubheading
   font-family: $font-family-montserrat
-  color: $white
+  color: $blue-dark
   text-align: center
+
+.timelineHorizontal, .timelineVertical
+  width: 100%
 
 @include for-phone
   .timelineCnt
@@ -86,9 +94,6 @@ export default {
     width: 80%
     margin: 0 auto
     padding: 2vw 0
-
-  .utilsSvgCmp
-    width: 100%
 
   .timelineTitleCnt
     display: none
@@ -106,9 +111,6 @@ export default {
   .timelineWrapper
     width: 80%
     margin: 0 auto
-
-  .utilsSvgCmp
-    width: 100%
 
   .timelineQuoteLeft, .timelineQuoteRight
     height: 3.5vw

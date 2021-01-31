@@ -1,7 +1,7 @@
 <template>
   <div class="howSellCmpStepsCnt">
     <img
-      :src="require(`~/assets/images/${img}.png`)"
+      :src="require(`~/assets/images/png/control/${img}.png`)"
       class="howSellCmpStepsImg"
       alt=""
     />

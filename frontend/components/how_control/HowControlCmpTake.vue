@@ -21,7 +21,7 @@
     </div>
     <div class="howControlCmpTakeImgWrapper">
       <img
-        src="~/assets/images/control_w_772.png"
+        src="~/assets/images/png/control/control_w_772.png"
         alt=""
         class="howControlCmpTakeImg"
       />

@@ -22,7 +22,7 @@
     </div>
     <div class="howControlCmpRiskImgWrapper">
       <img
-        src="~/assets/images/control_w_772.png"
+        src="~/assets/images/png/control/control_w_772.png"
         alt=""
         class="howControlCmpRiskImg"
       />
