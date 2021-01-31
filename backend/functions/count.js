@@ -1,20 +1,18 @@
-'use strict'
+"use strict";
 
-const { corsHeaders, getTotal} = require('./db.js')
-const AWS = require('aws-sdk')
-const dynamodb = new AWS.DynamoDB({ apiVersion: '2012-08-10' })
+const AWS = require("aws-sdk");
+const { corsHeaders, getTotal } = require("./db.js");
 
 exports.handler = function (event, context, callback) {
-
-  getTotal(function(rsp){
-    if(rsp.success){
+  getTotal(function (rsp) {
+    if (rsp.success) {
       callback(null, {
-        statusCode: '200',
+        statusCode: "200",
         headers: corsHeaders,
         body: JSON.stringify({
-          total: rsp.count
-        })})
-    } else
-      callback(null, { statusCode: '500', headers: corsHeaders })
-  })
-}
+          total: rsp.count,
+        }),
+      });
+    } else callback(null, { statusCode: "500", headers: corsHeaders });
+  });
+};
