@@ -1,6 +1,5 @@
 "use strict";
 
-const AWS = require("aws-sdk");
 const { corsHeaders, getTotal } = require("./db.js");
 
 exports.handler = function (event, context, callback) {

@@ -4,6 +4,7 @@ variable "global_bucket_prefix" {}
 variable "global_tag_environment" { default = "Production" }
 variable "global_tag_service" { default = "Website" }
 variable "global_website_domain" { default = "mytiki.com" }
+variable "global_sendgrid_api_key" {}
 
 locals {
   global_bucket_frontend = "${var.global_bucket_prefix}-frontend-${lower(var.global_tag_environment)}"

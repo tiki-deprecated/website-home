@@ -1,6 +1,8 @@
 "use strict";
 
 const { sanitize, contactType } = require("./format-data.js");
+const sendgrid = require("./sendgrid");
+const twilio = require("./twilio");
 const {
   corsHeaders,
   addContact,
@@ -35,12 +37,31 @@ exports.handler = function (event, context, callback) {
           function (rsp) {}
         );
       });
+      if (type === "email")
+        sendgrid.participate({ contact, code, optIn }, function (err, data) {
+          if (err) console.log(err, err.stack);
+        });
+      else if (optIn)
+        twilio.participate({ contact, code }, function (err, data) {
+          if (err) console.log(err, err.stack);
+        });
       callback(null, { statusCode: "200", headers: corsHeaders });
     } else {
       addContact({ contact, type, isUser: true, code, optIn }, function (rsp) {
-        if (rsp.success)
+        if (rsp.success) {
+          if (type === "email")
+            sendgrid.participate({ contact, code, optIn }, function (
+              err,
+              data
+            ) {
+              if (err) console.log(err, err.stack);
+            });
+          else if (optIn)
+            twilio.participate({ contact, code }, function (err, data) {
+              if (err) console.log(err, err.stack);
+            });
           callback(null, { statusCode: "200", headers: corsHeaders });
-        else callback(null, { statusCode: "500", headers: corsHeaders });
+        } else callback(null, { statusCode: "500", headers: corsHeaders });
       });
     }
   });
