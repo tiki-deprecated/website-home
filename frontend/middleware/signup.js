@@ -1,3 +1,4 @@
+const HOME = '/'
 const BILLION_382 = '/signup/382-billion/'
 const DOLLARS_10 = '/signup/10-dollars/'
 const CONTROL_SIMPLE_1 = '/signup/control-simple-1/'
@@ -28,7 +29,7 @@ export default function ({ route, redirect }) {
         break
       default:
         redirect(
-          addQuery(pickAB(signupOptionsAll), {
+          addQuery(HOME, {
             code: route.path.substring(1, route.path.length),
           })
         )

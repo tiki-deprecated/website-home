@@ -42,6 +42,7 @@ export default {
   },
   mounted() {
     this.$plausible.trackPageview()
+    this.$store.commit('setCode', this.$nuxt.$route.query.code)
   },
 }
 </script>
