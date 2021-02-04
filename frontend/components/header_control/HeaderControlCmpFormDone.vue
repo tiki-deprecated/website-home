@@ -66,14 +66,12 @@ export default {
 
 @include for-tablet
   .headerControlCmpFormDoneTitle
-    font-size: 2.5vw
-    text-align: center
+    font-size: 1.5vw
 
   .headerControlCmpFormDoneText
-    font-size: 1.5vw
-    text-align: center
+    font-size: 1vw
     margin-top: 1vw
 
   .headerControlCmpFormDoneTextLine
-    padding: 0.5vw 0
+    padding: 0.25vw 0
 </style>

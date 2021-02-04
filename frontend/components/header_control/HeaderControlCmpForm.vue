@@ -1,5 +1,8 @@
 <template>
   <div class="headerControlCmpFormCnt">
+    <header-control-cmp-form-join
+      :class="{ headerControlCmpFormHide: !isContact }"
+    />
     <header-control-cmp-form-tribe
       :class="{ headerControlCmpFormHide: !isOpt }"
     />
@@ -21,6 +24,7 @@ import HeaderControlCmpFormContact from '@/components/header_control/HeaderContr
 import HeaderControlCmpFormTribe from '@/components/header_control/HeaderControlCmpFormTribe'
 import HeaderControlCmpFormOpt from '@/components/header_control/HeaderControlCmpFormOpt'
 import HeaderControlCmpFormDone from '@/components/header_control/HeaderControlCmpFormDone'
+import HeaderControlCmpFormJoin from '@/components/header_control/HeaderControlCmpFormJoin'
 
 export default {
   name: 'HeaderControlCmpForm',
@@ -29,6 +33,7 @@ export default {
     HeaderControlCmpFormTribe,
     HeaderControlCmpFormOpt,
     HeaderControlCmpFormDone,
+    HeaderControlCmpFormJoin,
   },
   props: {
     cta: {
@@ -57,6 +62,7 @@ export default {
 .headerControlCmpFormCnt
   position: relative
   width: 100%
+  background: $white
 
 .headerControlCmpFormHide
   display: none!important
@@ -68,4 +74,7 @@ export default {
 @include for-tablet
   .headerControlCmpFormCnt
     margin: 1.5vw auto 1.5vw auto
+    border-radius: 0.5vw
+    padding: 2vw
+    height: 16vw
 </style>

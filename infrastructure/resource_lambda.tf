@@ -21,6 +21,7 @@ resource "aws_lambda_function" "signup" {
   environment {
     variables = {
       DYNAMODB_TABLE = var.global_dynamodb_table_name
+      SENDGRID_API_KEY = var.global_sendgrid_api_key
     }
   }
 
@@ -45,7 +46,8 @@ resource "aws_lambda_function" "opt_in" {
 
   environment {
     variables = {
-      DYNAMODB_TABLE = var.global_dynamodb_table_name
+      DYNAMODB_TABLE = var.global_dynamodb_table_name,
+      SENDGRID_API_KEY = var.global_sendgrid_api_key
     }
   }
 
@@ -70,7 +72,8 @@ resource "aws_lambda_function" "count" {
 
   environment {
     variables = {
-      DYNAMODB_TABLE = var.global_dynamodb_table_name
+      DYNAMODB_TABLE = var.global_dynamodb_table_name,
+      SENDGRID_API_KEY = var.global_sendgrid_api_key
     }
   }
 

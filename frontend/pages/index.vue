@@ -3,13 +3,14 @@
     <div class="indexPageStack">
       <header-home-cmp class="headerHomeCmp" />
       <div class="whyDivider"></div>
+      <why-cmp class="whyCmp" />
       <you-can-cmp class="youCanCmp" />
       <form-home-cmp id="signup" class="formHomeCmp" />
       <believe-cmp class="believeCmp" />
       <social-follow-cmp class="socialFollowCmp" />
       <footer-cmp class="footerCmp" />
     </div>
-    <why-cmp class="whyCmp" />
+    <timeline-cmp class="timelineCmp" />
     <how-beta-cmp-launch class="howBetaCmpLaunch" />
     <popup-privacy-cmp class="mnyPopupDataCmp" />
   </div>
@@ -41,6 +42,7 @@ export default {
   },
   mounted() {
     this.$plausible.trackPageview()
+    this.$store.commit('setCode', this.$nuxt.$route.query.code)
   },
 }
 </script>
@@ -59,7 +61,7 @@ export default {
   width: 100%
   z-index: 1
 
-.whyCmp
+.timelineCmp
   position: absolute
   z-index: 2
 
@@ -76,30 +78,38 @@ export default {
 
 @include for-phone
   .whyDivider
-    height: 100vw
+    height: 192vw
 
   .whyCmp
-    top: 109vw
+    height: 135vw
+
+  .timelineCmp
+    top: 120vw
     left: 50%
     transform: translate(-50%, 0)
-    height: 130vw
+    height: 210vw
+    border-radius: 3vw
 
   .believeCmp
     height: 110vw
 
   .howBetaCmpLaunch
-    top: 755vw
+    top: 972vw
     left: 0
 
 @include for-tablet
   .whyDivider
-    height: 22vw
+    height: 35vw
 
   .whyCmp
+    height: 24vw
+
+  .timelineCmp
     top: 22vw
     left: 50%
     transform: translate(-50%, 0)
-    height: 18vw
+    height: 36vw
+    border-radius: 0.5vw
 
   .formHomeCmp
     height: 15.75vw
@@ -108,6 +118,6 @@ export default {
     height: 30vw
 
   .howBetaCmpLaunch
-    top: 130vw
+    top: 167vw
     left: 0
 </style>

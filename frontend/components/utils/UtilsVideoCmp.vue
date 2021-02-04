@@ -14,7 +14,9 @@
       <img
         sizes="(max-width: 1400px) 100vw, 1400px"
         :srcset="srcSet"
-        :src="require(`~/assets/images/${placeholder}_w_1400.png`)"
+        :src="
+          require(`~/assets/images/png/${placeholder}/${placeholder}_w_1400.png`)
+        "
         alt="So why do you get nothing?"
         class="utilsVideoCmpPlaceholderImg"
       />
@@ -50,7 +52,7 @@ export default {
   },
   computed: {
     srcSet() {
-      return `${require(`~/assets/images/${this.placeholder}_w_200.png`)} 200w, ${require(`~/assets/images/${this.placeholder}_w_534.png`)} 534w, ${require(`~/assets/images/${this.placeholder}_w_786.png`)} 786w, ${require(`~/assets/images/${this.placeholder}_w_1004.png`)} 1004w, ${require(`~/assets/images/${this.placeholder}_w_1400.png`)} 1400w`
+      return `${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_200.png`)} 200w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_534.png`)} 534w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_786.png`)} 786w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_1004.png`)} 1004w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_1400.png`)} 1400w`
     },
   },
   methods: {

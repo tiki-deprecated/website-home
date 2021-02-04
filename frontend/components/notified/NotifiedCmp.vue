@@ -4,11 +4,11 @@
     <img
       sizes="(max-width: 772px) 100vw, 772px"
       srcset="
-        ~/assets/images/control_w_200.png 200w,
-        ~/assets/images/control_w_479.png 479w,
-        ~/assets/images/control_w_772.png 772w
+        ~/assets/images/png/control/control_w_200.png 200w,
+        ~/assets/images/png/control/control_w_479.png 479w,
+        ~/assets/images/png/control/control_w_772.png 772w
       "
-      src="~/assets/images/control_w_772.png"
+      src="~/assets/images/png/control/control_w_772.png"
       alt=""
       class="controlImage"
     />
