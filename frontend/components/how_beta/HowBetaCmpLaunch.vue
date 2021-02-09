@@ -6,16 +6,48 @@
       class="howBetaCmpLaunchBkgLaunchLg"
     />
     <div class="howBetaCmpLaunchText">
-      <div class="howBetaCmpLaunchTextFeedback">
+      <div class="howBetaCmpLaunchText4u">
         We need your help, your feedback, your ideas, your passion, your
         concerns.
       </div>
-      <div class="howBetaCmpLaunchText4u">We’re here for you.</div>
       <div class="howBetaCmpLaunchContact">
-        <a href="mailto:hello@mytiki.com" class="howBetaCmpLaunchContactHlt"
-          >Email us (hello@mytiki.com)</a
+        <div>
+          You can leave feedback
+          <a
+            href="https://feedback.mytiki.com/"
+            class="howBetaCmpLaunchContactHlt"
+            >on our roadmap here.</a
+          >
+        </div>
+
+        <div class="howBetaCmpLaunchContact">
+          Join our community on
+          <a
+            href="https://discord.com/invite/evjYQq48Be"
+            class="howBetaCmpLaunchContactHlt"
+            >Discord,</a
+          >
+          <a href="https://t.me/mytikiapp" class="howBetaCmpLaunchContactHlt"
+            >Telegram</a
+          >
+          or
+          <a
+            href="https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP"
+            class="howBetaCmpLaunchContactHlt"
+            >Signal</a
+          >
+          or message us on social to chat to us.
+        </div>
+      </div>
+      <div class="believeButtons">
+        <a
+          href="https://feedback.mytiki.com/"
+          class="believeJoin"
+          target="_blank"
         >
-        reach out on social with feedback, feature ideas, or anything else.
+          <div class="believeJoinText">Feedback</div>
+          <utils-svg-cmp name="sketch/arrow" class="believeJoinArrow" />
+        </a>
       </div>
     </div>
   </div>
@@ -39,7 +71,7 @@ export default {
 
 .howBetaCmpLaunchBkgLaunch, .howBetaCmpLaunchBkgLaunchLg
   position: absolute
-  top: 0
+  top: 20
   left: 0
   z-index: 1
 
@@ -64,6 +96,7 @@ export default {
 ::v-deep .howBetaCmpLaunchBkgLaunch.svg > .bulb, ::v-deep .howBetaCmpLaunchBkgLaunchLg.svg > .bulb
   fill: $black-dark
 
+
 .howBetaCmpLaunchText
   font-family: $font-family-montserrat
   color: $purple
@@ -72,7 +105,36 @@ export default {
   font-weight: 600
   z-index: 2
 
+.believeValue, .believeJoin
+  background: $blue-dark
+  margin: 0 auto
+  display: flex
+  width: 100%
+  align-items: center
+  justify-content: center
+
+.believeValue:hover, .believeJoin:hover
+  background: $blue-dark-hlt
+
+.believeValue, .believeJoin, .believeValue:hover, .believeJoin:hover, .believeValue:visited, .believeJoin:visited, .believeValue:link, .believeJoin:link, .believeValue:active, .believeJoin:active
+  text-decoration: none
+
+.believeValueText, .believeJoinText
+  font-family: $font-family-koara
+  color: $blue-light
+  width: 100%
+  text-align: left
+
+.believeValueText, .believeJoinText, .believeValueText:hover, .believeJoinText:hover, .believeValueText:visited, .believeJoinText:visited, .believeValueText:link, .believeJoinText:link, .believeValueText:active, .believeJoinText:active
+  text-decoration: none
+
+::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+  fill: $blue-light
+
 @include for-phone
+  .believeButtons
+    margin: 5vw 0
+
   .howBetaCmpLaunchCnt
     height: 110vw
 
@@ -84,16 +146,46 @@ export default {
 
   .howBetaCmpLaunchText
     font-size: 5vw
-    bottom: 10%
+    bottom: -10%
     left: 0
 
   .howBetaCmpLaunchText4u
-    margin-top: 5vw
-
-  .howBetaCmpLaunchContact
     display: none
 
+  .howBetaCmpLaunchContact
+    margin-top: 5vw
+
+  .believeValue, .believeJoin
+    height: 14vw
+    border-radius: 4vw
+    width: 60%
+    margin: 2vw auto
+
+  .believeValueText
+    font-size: 5.5vw
+    width: 66%
+
+  .believeJoinText
+    font-size: 5.5vw
+    width: 53%
+
+  .believeValueArrow
+    margin-left: 10%
+
+  .believeJoinArrow
+    margin-left: 22%
+
+  ::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+    height: 50%
+
 @include for-tablet
+
+  .believeButtons
+    display: flex
+    margin-top: 2vw
+    align-items: center
+    justify-content: center
+
   .howBetaCmpLaunchCnt
     height: 35vw
 
@@ -123,4 +215,26 @@ export default {
     color: $orange
     font-weight: 600
     text-decoration: none
+  .believeValue, .believeJoin
+    height: 3vw
+    border-radius: 0.75vw
+    width: 15%
+    margin: 0 0.5vw
+
+  .believeValueText
+    font-size: 1.25vw
+    width: 65%
+
+  .believeJoinText
+    font-size: 1.25vw
+    width: 50%
+
+  .believeValueArrow
+    margin-left: 8%
+
+  .believeJoinArrow
+    margin-left: 20%
+
+  ::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+    height: 50%
 </style>
