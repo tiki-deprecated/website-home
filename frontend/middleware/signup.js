@@ -27,6 +27,13 @@ export default function ({ route, redirect }) {
       case '/signup/':
         redirect(addQuery(pickAB(signupOptionsAll), route.query))
         break
+      case '/gameplan':
+      case '/gameplan/':
+        redirect(
+          301,
+          'https://tikimike.medium.com/tiki-investor-brief-feb-21-f0b33ad851a2?source=friends_link&sk=9a3d3b32fae6427ede71d8ccbe0db0bf'
+        )
+        break
       default:
         redirect(
           addQuery(HOME, {
