@@ -118,6 +118,6 @@ export default {
     height: 30vw
 
   .howBetaCmpLaunch
-    top: 167vw
+    top: 169vw
     left: 0
 </style>
