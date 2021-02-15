@@ -6,6 +6,17 @@
       </nuxt-link>
       <div class="headerMissionNavRight">
         <nuxt-link to="/meet" class="headerLinkMission">Our mission </nuxt-link>
+        <div
+          class="headerLinkFAQ"
+          @click="
+            faqClick(
+              $event,
+              'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c'
+            )
+          "
+        >
+          FAQ
+        </div>
         <nuxt-link
           v-scroll-to="{ el: '#signup' }"
           :to="{ path: '/', hash: 'signup' }"
@@ -57,11 +68,17 @@ export default {
   display: flex
   align-items: center
 
-.headerLinkMission
+.headerLinkMission, .headerLinkFAQ
   font-family: $font-family-montserrat
-  color: $pink
   text-decoration: none
   font-weight: 600
+
+.headerLinkMission
+  color: $pink
+
+.headerLinkFAQ
+  color: $black-dark
+  cursor: pointer
 
 .headerLinkSignup
   font-family: $font-family-montserrat
@@ -70,7 +87,7 @@ export default {
   font-weight: 600
   background: $red
 
-.headerLinkMission:hover, .headerLinkMission:visited, .headerLinkMission:link, .headerLinkMission:active, .headerLinkSignup:hover, .headerLinkSignup:visited, .headerLinkSignup:link, .headerLinkSignup:active
+.headerLinkMission:hover, .headerLinkMission:visited, .headerLinkMission:link, .headerLinkMission:active, .headerLinkSignup:hover, .headerLinkSignup:visited, .headerLinkSignup:link, .headerLinkSignup:active, .headerLinkFAQ:hover, .headerLinkFAQ:visited, .headerLinkFAQ:link, .headerLinkFAQ:active
   text-decoration: none
 
 .headerMissionTitleText
@@ -131,6 +148,10 @@ export default {
     margin: 8vw auto 0 auto
     width: 75%
 
+  .headerLinkFAQ
+    font-size: 5vw
+    margin-right: 4vw
+
 @include for-tablet
   .headerMissionCnt
     height: 25vw
@@ -144,9 +165,9 @@ export default {
     padding: 0.5vw 1.75vw
     border-radius: 0.6vw
 
-  .headerLinkMission
+  .headerLinkMission, .headerLinkFAQ
     font-size: 1vw
-    margin-right: 3vw
+    margin-right: 2vw
 
   .headerMissionQuoteLeft, .headerMissionQuoteRight
     height: 3.5vw
