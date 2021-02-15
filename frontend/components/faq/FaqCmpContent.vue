@@ -13,7 +13,7 @@
     />
     <faq-cmp-q-a
       question="How do I sign up?"
-      answer="We are launching our Beta in January. Sign up to take one of our limited spaces! We will then let you know shortly before the launch to help you with the initial setup."
+      answer="Our Beta is now live. Sign up to take one of the last remaining spaces! We will then let you know when we have reached our goal of 10,000 sign ups and can start getting you paid. "
       class="faqCmpQA"
     />
     <faq-cmp-q-a

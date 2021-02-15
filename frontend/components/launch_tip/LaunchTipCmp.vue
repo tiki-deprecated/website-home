@@ -1,12 +1,11 @@
 <template>
   <div class="launchTipCnt">
     <div class="launchTipText">
-      The TIKI app is launching its
-      <b class="launchTipTextHlt">private Beta</b> in January.
+      The TIKI app will launch once we have
+      <b class="launchTipTextHlt">10,000 sign ups</b>.
     </div>
     <div class="launchTipTextTip">
-      (Tip: our Beta is only open to a limited number of subscribers, so make
-      sure to sign up!)
+      (Tip: our Beta has less than 2,000 spaces left, so make sure to sign up!)
     </div>
   </div>
 </template>

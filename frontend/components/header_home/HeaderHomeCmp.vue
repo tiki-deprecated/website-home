@@ -185,7 +185,7 @@ export default {
 
   .headerLinkMission, .headerLinkFAQ
     font-size: 5vw
-    margin-left: 4vw
+    margin-right: 4vw
 
 @include for-tablet
   .headerHomeCnt
