@@ -7,14 +7,14 @@
         class="formHomeCmpDoneTextLine"
         :class="{ formHomeCmpDoneTextLineHide: !opt }"
       >
-        We will let you know when our Beta launches in January and we may get in
-        touch beforehand for feedback.
+        We will let you know when our Beta launches and we may get in touch
+        beforehand for feedback.
       </div>
       <div
         class="formHomeCmpDoneTextLine"
         :class="{ formHomeCmpDoneTextLineHide: opt }"
       >
-        We will let you know when our Beta launches in January.
+        We will let you know when our Beta launches.
       </div>
     </div>
   </div>
