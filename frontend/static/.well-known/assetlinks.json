@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "app",
+    "package_name": "com.mytiki.app",
+    "sha256_cert_fingerprints":
+    ["37:41:7F:A6:2C:A2:95:2F:A2:10:35:0B:AE:CB:E0:58:FE:6F:88:E7:ED:E2:A5:D7:DF:65:DF:99:3A:47:95:56"]
+  }
+}]
