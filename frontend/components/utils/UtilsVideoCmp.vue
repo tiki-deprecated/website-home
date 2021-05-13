@@ -1,35 +1,32 @@
 <template>
-  <div class="utilsVideoCnt">
-    <div v-if="loadVideo" class="utilsVideoCntVideo">
+  <div class="utilsVideo">
+    <div v-if="loadVideo" class="video">
       <iframe
         width="560"
         height="315"
         :src="'https://www.youtube.com/embed/' + id + '?autoplay=1'"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        class="utilsVideoCntVideoIframe"
+        class="videoIframe"
       />
     </div>
-    <div v-if="!loadVideo" class="utilsVideoPlaceholder" @click="onClick">
+    <div v-if="!loadVideo" class="placeholder" @click="onClick">
       <img
         sizes="(max-width: 1400px) 100vw, 1400px"
         :srcset="srcSet"
         :src="
-          require(`~/assets/images/png/${placeholder}/${placeholder}_w_1400.png`)
+          require(`~/assets/images/png/utils/${placeholder}/${placeholder}_w_1400.png`)
         "
         alt="So why do you get nothing?"
-        class="utilsVideoCmpPlaceholderImg"
+        class="placeholderImg"
       />
-      <utils-svg-cmp
-        name="button/play"
-        class="utilsVideoCmpPlaceholderButton"
-      />
+      <utils-svg-cmp name="utils/play" class="placeholderBtn" />
     </div>
   </div>
 </template>
 
 <script>
-import UtilsSvgCmp from '@/components/utils/UtilsSvgCmp'
+import UtilsSvgCmp from './UtilsSvgCmp'
 
 export default {
   name: 'UtilsVideoCmp',
@@ -52,7 +49,7 @@ export default {
   },
   computed: {
     srcSet() {
-      return `${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_200.png`)} 200w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_534.png`)} 534w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_786.png`)} 786w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_1004.png`)} 1004w, ${require(`~/assets/images/png/${this.placeholder}/${this.placeholder}_w_1400.png`)} 1400w`
+      return `${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_200.png`)} 200w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_534.png`)} 534w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_786.png`)} 786w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_1004.png`)} 1004w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_1400.png`)} 1400w`
     },
   },
   methods: {
@@ -67,18 +64,18 @@ export default {
 
 <style scoped lang="sass">
 @import "../../assets/styles/mixins"
-.utilsVideoCnt
+.utilsVideo
   position: relative
   width: 100%
   height: 100%
 
-.utilsVideoCntVideo
+.video
   overflow: hidden
   padding-bottom: 56.25%
   position: relative
   height: 0
 
-.utilsVideoCntVideoIframe
+.videoIframe
   left: 0
   top: 0
   height: 100%
@@ -87,38 +84,38 @@ export default {
   border: none
   clip-path: inset(1px 1px)
 
-.utilsVideoPlaceholder
+.placeholder
   width: 100%
   height: 100%
   position: relative
   cursor: pointer
 
-.utilsVideoCmpPlaceholderImg
+.placeholderImg
   width: 100%
   position: absolute
   top: 0
   left: 0
   z-index: 1
 
-.utilsVideoCmpPlaceholderButton
+.placeholderBtn
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
   z-index: 2
 
-::v-deep .utilsVideoCmpPlaceholderButton.svg
+::v-deep .placeholderBtn.svg
   width: 20%
 
-::v-deep .utilsVideoCmpPlaceholderButton.svg > .play-fill, ::v-deep .utilsVideoCmpPlaceholderButton.svg > .button-fill
+::v-deep .placeholderBtn.svg > .play-fill, ::v-deep .placeholderBtn.svg > .button-fill
   fill: none
 
-::v-deep .utilsVideoCmpPlaceholderButton.svg > .play-outline, ::v-deep .utilsVideoCmpPlaceholderButton.svg > .button-outline
+::v-deep .placeholderBtn.svg > .play-outline, ::v-deep .placeholderBtn.svg > .button-outline
   fill: $yellow
 
-::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .button-outline, ::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .button-fill
+::v-deep .placeholderBtn:hover.svg > .button-outline, ::v-deep .placeholderBtn:hover.svg > .button-fill
   fill: $yellow
 
-::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .play-outline, ::v-deep .utilsVideoCmpPlaceholderButton:hover.svg > .play-fill
+::v-deep .placeholderBtn:hover.svg > .play-outline, ::v-deep .placeholderBtn:hover.svg > .play-fill
   fill: $white
 </style>

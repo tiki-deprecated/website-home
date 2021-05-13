@@ -1,7 +1,7 @@
 <template>
   <div class="privacyPage">
     <nuxt-link to="/">
-      <utils-svg-cmp name="tiki/logo" class="headerLogo" />
+      <utils-svg-cmp name="utils/logo" class="headerLogo" />
     </nuxt-link>
     <div class="privacyTitle">Privacy Policy</div>
     <div class="privacyDate">09/24/2020</div>
@@ -99,16 +99,16 @@
         >.
       </div>
     </div>
-    <footer-cmp class="footerCmp" />
+    <utils-footer-cmp class="footerCmp" />
   </div>
 </template>
 
 <script>
+import UtilsFooterCmp from '../components/utils/footer/UtilsFooterCmp'
 import UtilsSvgCmp from '~/components/utils/UtilsSvgCmp'
-import FooterCmp from '~/components/footer/FooterCmp'
 export default {
   name: 'Privacy',
-  components: { FooterCmp, UtilsSvgCmp },
+  components: { UtilsFooterCmp, UtilsSvgCmp },
   mounted() {
     this.$plausible.trackPageview()
   },
