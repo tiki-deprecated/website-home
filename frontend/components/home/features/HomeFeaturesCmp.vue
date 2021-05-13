@@ -35,6 +35,7 @@ export default {
 
   .title
     margin: 0 auto
+    width: fit-content
 
 @include for-tablet
   .features

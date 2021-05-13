@@ -55,7 +55,7 @@ export default {
 
 @include for-phone
   .header
-    height: 145vw
+    height: 160vw
 
   .wrapper
     padding: 4vw

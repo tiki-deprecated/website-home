@@ -19,7 +19,7 @@ export default {
 @import "assets/styles/mixins"
 
 .timeline
-  background: $yellow
+  background: $blue-light
 
 @include for-phone
   .timeline
@@ -36,5 +36,5 @@ export default {
 
   .img
     width: 80%
-    margin: 0 auto
+    margin: 2vw auto 0 auto
 </style>

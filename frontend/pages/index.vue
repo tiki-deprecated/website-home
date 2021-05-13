@@ -76,14 +76,14 @@ export default {
 
 @include for-phone
   .timelineCmp
-    top: 120vw
+    top: 155vw
     left: 50%
     transform: translate(-50%, 0)
     height: 210vw
     border-radius: 3vw
 
   .divider
-    height: 192vw
+    height: 210vw
 
   .worthCmp
     height: 135vw
@@ -92,7 +92,7 @@ export default {
     height: 110vw
 
   .betaCmp
-    top: 972vw
+    top: 1000vw
     left: 0
 @include for-tablet
   .timelineCmp
