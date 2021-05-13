@@ -1,9 +1,12 @@
 <template>
   <div>
-    <div class="headerHomeTitle">It's your data. Get paid for it.</div>
+    <div class="headerHomeTitle">Your Data. Your Decisions.</div>
     <div class="headerHomeSubtitle">
-      Your data is worth thousands a year. Why aren’t you getting your fair
-      share? Take back control. Get paid. Tiki’s got your back.
+      It’s simple: your data is yours. No longer will confusing privacy policies
+      trick us into complacency. With TIKI, see what data you share online and
+      make informed decisions on who else can see it. Best of all, if you choose
+      to share, we make sure you get PAID. In our future, the people take power
+      back from corporations. Together, TIKI users will triumph. Join us!
     </div>
     <nuxt-link
       v-scroll-to="{ el: '#signup' }"

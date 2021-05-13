@@ -65,7 +65,7 @@ export default {
 
 @include for-tablet
   .header
-    height: 25vw
+    height: 30vw
 
   .wrapper
     padding: 1.5vw

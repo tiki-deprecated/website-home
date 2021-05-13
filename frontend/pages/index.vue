@@ -96,7 +96,7 @@ export default {
     left: 0
 @include for-tablet
   .timelineCmp
-    top: 22vw
+    top: 27vw
     left: 50%
     transform: translate(-50%, 0)
     height: 36vw
