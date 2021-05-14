@@ -3,9 +3,8 @@
     <utils-svg-cmp name="home/signup/signup" class="sketch" />
     <div class="textContainer">
       <div class="text">
-        Hurry up! We only have
-        <b class="highlight">{{ spotsRemaining }}</b> spaces left. Sign up below
-        to claim your spot when we launch.
+        Beta access is limited to make sure everyone gets their fair (and
+        significant) share.
       </div>
     </div>
   </div>
@@ -18,23 +17,13 @@ import { count } from '~/libs/api'
 export default {
   name: 'FormHomeCmpLtd',
   components: { UtilsSvgCmp },
-  computed: {
-    spotsRemaining() {
-      return this.$store.getters.remainingSpots
-    },
-  },
-  mounted() {
-    if (this.$store.state.signupCount === 0) this.updateCount()
-  },
-  methods: {
-    async updateCount() {
-      const rsp = await count(this.$axios).then(function (data) {
-        return data
-      })
-      if (rsp.success) {
-        this.$store.commit('setSignupCount', rsp.body.total)
-      }
-    },
+  async mounted() {
+    const rsp = await count(this.$axios).then(function (data) {
+      return data
+    })
+    if (rsp.success) {
+      this.$store.commit('setSignupCount', rsp.body.total)
+    }
   },
 }
 </script>

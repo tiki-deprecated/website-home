@@ -3,7 +3,7 @@
     <div class="field">
       <input
         type="text"
-        placeholder="email or phone"
+        placeholder="Your email"
         autocomplete="off"
         autocapitalize="none"
         class="input"
@@ -40,12 +40,7 @@ export default {
   },
   computed: {
     isReady() {
-      return (
-        /\S+@\S+\.\S+/.test(this.contact) ||
-        /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(
-          this.contact
-        )
-      )
+      return /\S+@\S+\.\S+/.test(this.contact)
     },
   },
   methods: {
