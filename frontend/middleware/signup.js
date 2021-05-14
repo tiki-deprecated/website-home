@@ -2,6 +2,7 @@ const HOME = '/'
 const ROADMAP = '/roadmap'
 const FEEDBACK = '/feedback'
 const SUMMARY = '/summary'
+const SIGNUP = '/#signup'
 const BETA = '/beta'
 const FAQ = '/faq'
 const TEAM = '/team'
@@ -16,6 +17,10 @@ export default function ({ route, redirect }) {
           301,
           'https://tikimike.medium.com/tiki-executive-summary-apr-21-5d07cafbbe1d?source=friends_link&sk=ac55b40a4af4aabb7a11da65f7c09695'
         )
+        break
+      case SIGNUP:
+      case SIGNUP + '/':
+        redirect(HOME, '#signup')
         break
       case ROADMAP:
       case ROADMAP + '/':
