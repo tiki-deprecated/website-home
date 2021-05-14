@@ -1,37 +1,59 @@
 const HOME = '/'
-const BILLION_382 = '/signup/382-billion/'
-const DOLLARS_10 = '/signup/10-dollars/'
-const CONTROL_SIMPLE_1 = '/signup/control-simple-1/'
-// const CONTROL_SIMPLE_2 = '/signup/control-simple-2/'
-// const CONTROL_SIMPLE_3 = '/signup/control-simple-3/'
-const CONTROL_SIMPLE_4 = '/signup/control-simple-4/'
-// const CONTROL_SIMPLE_5 = '/signup/control-simple-5/'
-
-const signupOptionsAll = [
-  BILLION_382,
-  DOLLARS_10,
-  CONTROL_SIMPLE_1,
-  CONTROL_SIMPLE_4,
-]
-
-const signupOptionsControlSimple = [CONTROL_SIMPLE_1, CONTROL_SIMPLE_4]
+const ROADMAP = '/roadmap'
+const FEEDBACK = '/feedback'
+const SUMMARY = '/summary'
+const BETA = '/beta'
+const FAQ = '/faq'
+const TEAM = '/team'
+const MISSION = '/mission'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
     switch (route.path) {
-      case '/signup/control-simple':
-      case '/signup/control-simple/':
-        redirect(addQuery(pickAB(signupOptionsControlSimple), route.query))
-        break
-      case '/signup':
-      case '/signup/':
-        redirect(addQuery(pickAB(signupOptionsAll), route.query))
-        break
-      case '/summary':
-      case '/summary/':
+      case SUMMARY:
+      case SUMMARY + '/':
         redirect(
           301,
           'https://tikimike.medium.com/tiki-executive-summary-apr-21-5d07cafbbe1d?source=friends_link&sk=ac55b40a4af4aabb7a11da65f7c09695'
+        )
+        break
+      case ROADMAP:
+      case ROADMAP + '/':
+        redirect(
+          301,
+          'https://www.notion.so/mytiki/206e9e86c520468ea604e057c0f0dea7?v=20062bf2771d4952840f862334a6cfc5'
+        )
+        break
+      case FEEDBACK:
+      case FEEDBACK + '/':
+        redirect(301, 'https://feedback.mytiki.com')
+        break
+      case BETA:
+      case BETA + '/':
+        redirect(
+          301,
+          'https://medium.com/mytiki/tiki-app-install-instructions-5b9d84697bda?source=friends_link&sk=3a233c7edff0c98c70addfa9462b158e'
+        )
+        break
+      case FAQ:
+      case FAQ + '/':
+        redirect(
+          301,
+          'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c'
+        )
+        break
+      case TEAM:
+      case TEAM + '/':
+        redirect(
+          301,
+          'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb'
+        )
+        break
+      case MISSION:
+      case MISSION + '/':
+        redirect(
+          301,
+          'https://medium.com/mytiki/its-your-data-fbe16ee5ec2a?source=friends_link&sk=db704d85904eed02af277ad6499005e3'
         )
         break
       default:
@@ -43,11 +65,6 @@ export default function ({ route, redirect }) {
         break
     }
   }
-}
-
-function pickAB(array) {
-  const rand = Math.floor(Math.random() * array.length)
-  return array[rand]
 }
 
 function addQuery(path, params) {
