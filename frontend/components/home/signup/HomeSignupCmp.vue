@@ -51,6 +51,7 @@ export default {
 @include for-phone
   .signup
     padding: 7vw 5vw
+    height: 62vw
 
 @include for-tablet
   .signup

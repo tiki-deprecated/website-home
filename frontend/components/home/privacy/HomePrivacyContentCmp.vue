@@ -5,13 +5,15 @@
       <div class="text">TIKI is all about data privacy.</div>
       <div class="text">
         Your information is encrypted, secured, and will never be shared with
-        anyone.
+        anyone. It will only be used to communicate with you about our launch.
+        Of course, our cloud, servers, and code are as secure as humanly (or
+        machinely) possible.
       </div>
       <div class="text">
         This means we will never give your info to third parties or services,
-        ever. It remains exclusively in our secure cloud, only be used to
-        communicate with you about our launch. Of course, our cloud, servers,
-        and code are as secure as humanly (or machinely) possible.
+        ever. We use SendGrid to deliver (SMTP) emails and their
+        <b class="link" @click="sendGridClick">policy</b>
+        is "We never sell your recipient email addresses."
       </div>
     </div>
     <nuxt-link to="/privacy" class="policy">Our privacy policy</nuxt-link>
@@ -27,9 +29,21 @@ export default {
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
       this.$plausible.trackEvent('Github', {
-        props: { location: 'Footer' },
+        props: { location: 'Popup' },
       })
       const win = window.open('https://github.com/tiki', '_blank')
+      win.focus()
+    },
+    sendGridClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('SendGrid', {
+        props: { location: 'Popup' },
+      })
+      const win = window.open(
+        'https://sendgrid.com/policies/security/',
+        '_blank'
+      )
       win.focus()
     },
   },
@@ -48,12 +62,12 @@ export default {
   font-family: $font-family-montserrat
   color: $blue-dark
 
-.policy, .github
+.policy, .github, .link
   font-family: $font-family-nunito
   color: $blue
   font-weight: 700
 
-.github
+.github, .link
   text-decoration: underline
   cursor: pointer
 

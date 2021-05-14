@@ -70,7 +70,7 @@
         <div class="monetizeContainer">
           <div class="monetizeNumber">3. Monetize</div>
           <div class="monetizeText">
-            Get paid your fair share for granting buyers access to your data.
+            your data. Get paid your fair share and even decide who gets access.
           </div>
         </div>
       </div>

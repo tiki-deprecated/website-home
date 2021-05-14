@@ -5,6 +5,7 @@ const SUMMARY = '/summary'
 const BETA = '/beta'
 const FAQ = '/faq'
 const TEAM = '/team'
+const MISSION = '/mission'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
@@ -46,6 +47,13 @@ export default function ({ route, redirect }) {
         redirect(
           301,
           'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb'
+        )
+        break
+      case MISSION:
+      case MISSION + '/':
+        redirect(
+          301,
+          'https://medium.com/mytiki/its-your-data-fbe16ee5ec2a?source=friends_link&sk=db704d85904eed02af277ad6499005e3'
         )
         break
       default:

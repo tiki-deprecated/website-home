@@ -6,26 +6,44 @@
     <div class="section">
       <div>
         You can leave feedback on our
-        <a href="https://feedback.mytiki.com/" class="highlight">roadmap </a>
+        <a class="highlight" @click="feedbackClick($event)">roadmap </a>
         here.
       </div>
       <div class="section">
         Join our community on
-        <a href="https://discord.com/invite/evjYQq48Be" class="highlight"
+        <a
+          class="highlight"
+          @click="
+            socialClick(
+              $event,
+              'https://discord.com/invite/evjYQq48Be',
+              'Discord'
+            )
+          "
           >Discord,</a
         >
-        <a href="https://t.me/mytikiapp" class="highlight">Telegram</a>
+        <a
+          class="highlight"
+          @click="socialClick($event, 'https://t.me/mytikiapp', 'Telegram')"
+          >Telegram</a
+        >
         or
         <a
-          href="https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP"
           class="highlight"
+          @click="
+            socialClick(
+              $event,
+              'https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP',
+              'Signal'
+            )
+          "
           >Signal</a
         >
         or message us on social to chat to us.
       </div>
     </div>
     <div class="btnContainer">
-      <a href="https://feedback.mytiki.com/" target="_blank" class="btn">
+      <a class="btn" @click="feedbackClick($event)">
         <div class="btnText">Feedback</div>
         <utils-svg-cmp name="utils/arrow" class="btnArrow" />
       </a>
@@ -39,6 +57,26 @@ import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
 export default {
   name: 'HomeBetaTextCmp',
   components: { UtilsSvgCmp },
+  methods: {
+    feedbackClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Mission', {
+        props: { location: 'Home' },
+      })
+      const win = window.open('https://feedback.mytiki.com', '_blank')
+      win.focus()
+    },
+    socialClick(clickEvent, href, platform) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Follow', {
+        props: { location: 'Component', platform },
+      })
+      const win = window.open(href, '_blank')
+      win.focus()
+    },
+  },
 }
 </script>
 

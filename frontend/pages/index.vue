@@ -2,13 +2,14 @@
   <div class="page">
     <div class="stack">
       <home-header-cmp />
-      <div class="divider" />
+      <home-raffle-cmp />
+      <home-signup-cmp id="signup" class="signupCmp" />
       <home-worth-cmp class="worthCmp" />
       <home-features-cmp />
-      <home-signup-cmp id="signup" class="signupCmp" />
+      <div class="divider" />
+      <home-signup-cmp class="signupCmp" />
       <home-believe-cmp class="believeCmp" />
       <home-follow-cmp />
-      <home-raffle-cmp />
       <utils-footer-cmp />
     </div>
     <home-timeline-cmp class="timelineCmp" />
@@ -79,7 +80,7 @@ export default {
 
 @include for-phone
   .timelineCmp
-    top: 155vw
+    top: 825vw
     left: 50%
     transform: translate(-50%, 0)
     height: 210vw
@@ -95,11 +96,11 @@ export default {
     height: 110vw
 
   .betaCmp
-    top: 1000vw
+    top: 1215vw
     left: 0
 @include for-tablet
   .timelineCmp
-    top: 27vw
+    top: 147vw
     left: 50%
     transform: translate(-50%, 0)
     height: 36vw
@@ -118,6 +119,6 @@ export default {
     height: 30vw
 
   .betaCmp
-    top: 169vw
+    top: 225vw
     left: 0
 </style>

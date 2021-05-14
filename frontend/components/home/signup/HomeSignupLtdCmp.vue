@@ -3,8 +3,8 @@
     <utils-svg-cmp name="home/signup/signup" class="sketch" />
     <div class="textContainer">
       <div class="text">
-        Beta access is limited to make sure everyone gets their fair (and
-        significant) share.
+        Get in now to be one of the first. Every week we're adding more users to
+        the beta. Reserve your spot now!
       </div>
     </div>
   </div>
@@ -41,15 +41,15 @@ export default {
 @include for-phone
   ::v-deep .sketch.svg
     height: 9vw
-    margin: 0 auto
+    margin: 0 auto 0 0
 
   .textContainer
-    height: 22vw
+    height: 26vw
 
   .text
     margin-top: 5vw
     font-size: 4vw
-    text-align: center
+    text-align: left
 
 @include for-tablet
   ::v-deep .sketch.svg

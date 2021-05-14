@@ -1,16 +1,12 @@
 <template>
   <div>
-    <nuxt-link to="/meet" class="believeValue">
-      <div class="believeValueText">See our values</div>
-      <utils-svg-cmp name="utils/arrow" class="believeValueArrow" />
-    </nuxt-link>
-    <a
-      href="https://angel.co/company/mytiki/jobs"
-      class="believeJoin"
-      target="_blank"
-    >
-      <div class="believeJoinText">Join us</div>
-      <utils-svg-cmp name="utils/arrow" class="believeJoinArrow" />
+    <a class="mission" @click="missionClick($event)">
+      <div class="missionText">Our Mission</div>
+      <utils-svg-cmp name="utils/arrow" class="missionArrow" />
+    </a>
+    <a class="team" @click="teamClick($event)">
+      <div class="teamText">The Team</div>
+      <utils-svg-cmp name="utils/arrow" class="teamArrow" />
     </a>
   </div>
 </template>
@@ -21,81 +17,107 @@ import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
 export default {
   name: 'HomeBelieveBtnCmp',
   components: { UtilsSvgCmp },
+  methods: {
+    missionClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Mission', {
+        props: { location: 'Home' },
+      })
+      const win = window.open(
+        'https://medium.com/mytiki/its-your-data-fbe16ee5ec2a?source=friends_link&sk=db704d85904eed02af277ad6499005e3',
+        '_blank'
+      )
+      win.focus()
+    },
+    teamClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('Team', {
+        props: { location: 'Home' },
+      })
+      const win = window.open(
+        'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb',
+        '_blank'
+      )
+      win.focus()
+    },
+  },
 }
 </script>
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.believeValue, .believeJoin
+.mission, .team
   background: $blue-dark
   margin: 0 auto
   display: flex
   align-items: center
   justify-content: center
 
-.believeValue:hover, .believeJoin:hover
+.mission:hover, .team:hover
   background: $blue-dark-hlt
 
-.believeValue, .believeJoin, .believeValue:hover, .believeJoin:hover, .believeValue:visited, .believeJoin:visited, .believeValue:link, .believeJoin:link, .believeValue:active, .believeJoin:active
+.mission, .team, .mission:hover, .team:hover, .mission:visited, .team:visited, .mission:link, .team:link, .mission:active, .team:active
   text-decoration: none
 
-.believeValueText, .believeJoinText
+.missionText, .teamText
   font-family: $font-family-koara
   color: $blue-light
   text-align: right
 
-.believeValueText, .believeJoinText, .believeValueText:hover, .believeJoinText:hover, .believeValueText:visited, .believeJoinText:visited, .believeValueText:link, .believeJoinText:link, .believeValueText:active, .believeJoinText:active
+.missionText, .teamText, .missionText:hover, .teamText:hover, .missionText:visited, .teamText:visited, .missionText:link, .teamText:link, .missionText:active, .teamText:active
   text-decoration: none
 
-::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+::v-deep .missionArrow.svg, ::v-deep .teamArrow.svg
   fill: $blue-light
 
 @include for-phone
-  .believeValue, .believeJoin
+  .mission, .team
     height: 14vw
     border-radius: 4vw
     width: 60%
     margin: 2vw auto
 
-  .believeValueText
+  .missionText
     font-size: 5.5vw
     width: 66%
 
-  .believeJoinText
+  .teamText
     font-size: 5.5vw
-    width: 53%
+    width: 59%
 
-  .believeValueArrow
+  .missionArrow
     margin-left: 10%
 
-  .believeJoinArrow
-    margin-left: 22%
+  .teamArrow
+    margin-left: 16%
 
-  ::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+  ::v-deep .missionArrow.svg, ::v-deep .teamArrow.svg
     height: 50%
 
 @include for-tablet
-  .believeValue, .believeJoin
+  .mission, .team
     height: 3vw
     border-radius: 0.75vw
     width: 15%
     margin: 0 0.5vw
 
-  .believeValueText
+  .missionText
     font-size: 1.25vw
     width: 65%
 
-  .believeJoinText
+  .teamText
     font-size: 1.25vw
     width: 50%
 
-  .believeValueArrow
+  .missionArrow
     margin-left: 8%
 
-  .believeJoinArrow
+  .teamArrow
     margin-left: 20%
 
-  ::v-deep .believeValueArrow.svg, ::v-deep .believeJoinArrow.svg
+  ::v-deep .missionArrow.svg, ::v-deep .teamArrow.svg
     height: 50%
 </style>

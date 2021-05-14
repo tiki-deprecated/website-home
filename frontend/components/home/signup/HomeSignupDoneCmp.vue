@@ -44,10 +44,12 @@ export default {
 @include for-phone
   .title
     font-size: 8vw
+    text-align: left
 
   .text
     font-size: 4vw
     margin-top: 3vw
+    text-align: left
 
   .line
     padding: 2vw 0

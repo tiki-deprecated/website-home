@@ -6,7 +6,7 @@
       <utils-svg-cmp name="utils/quote" class="quoteR" />
     </div>
     <div class="subtitle">
-      We believe users deserve to be in control of their data.
+      We believe you deserve a say in what happens to you data.
     </div>
   </div>
 </template>

@@ -2,8 +2,13 @@
   <div class="featuresHow">
     <div class="title">How does it work?</div>
     <div class="subtitle">
-      Link your accounts to the TIKI app and
-      <b class="highlight">we'll get you paid</b> your fair share
+      Just link your existing accounts to the TIKI app to get started.
+    </div>
+    <div class="subtitle">
+      With TIKI, you're in control.
+      <b class="highlight">Take back your data</b> and
+      <b class="highlight">get paid your fair share</b>. Data should be this
+      easy.
     </div>
   </div>
 </template>

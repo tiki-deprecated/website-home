@@ -30,10 +30,12 @@ export default {
 @include for-phone
   .title
     font-size: 5vw
+    text-align: left
 
   .text
     font-size: 4vw
     margin-top: 4vw
+    text-align: left
 
   .line
     padding: 1vw 0
