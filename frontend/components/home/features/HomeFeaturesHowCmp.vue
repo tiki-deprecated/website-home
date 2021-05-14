@@ -7,8 +7,7 @@
     <div class="subtitle">
       With TIKI, you're in control.
       <b class="highlight">Take back your data</b> and
-      <b class="highlight">get paid your fair share</b>. Data should be this
-      easy.
+      <b class="highlight">get paid your fair share</b>. Data should be easy.
     </div>
   </div>
 </template>
