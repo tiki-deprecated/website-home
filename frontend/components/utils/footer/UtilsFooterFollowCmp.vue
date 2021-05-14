@@ -3,25 +3,27 @@
     <div class="section">Follow us</div>
     <div class="follow">
       <div
-        @click="socialClick($event, 'https:twitter.com/my_tiki_', 'Twitter')"
+        @click="socialClick($event, 'https://twitter.com/my_tiki_', 'Twitter')"
       >
         <utils-svg-cmp name="utils/footer/twitter" class="followBtn" />
       </div>
       <div
-        @click="socialClick($event, 'https:www.tiktok.com/@my.tiki', 'TikTok')"
+        @click="
+          socialClick($event, 'https://www.tiktok.com/@my.tiki', 'TikTok')
+        "
       >
         <utils-svg-cmp name="utils/footer/tiktok" class="followBtn" />
       </div>
       <div
         @click="
-          socialClick($event, 'https:www.facebook.com/mytikiapp', 'Facebook')
+          socialClick($event, 'https://www.facebook.com/mytikiapp', 'Facebook')
         "
       >
         <utils-svg-cmp name="utils/footer/facebook" class="followBtn" />
       </div>
       <div
         @click="
-          socialClick($event, 'https:www.instagram.com/my.tiki/', 'Instagram')
+          socialClick($event, 'https://www.instagram.com/my.tiki/', 'Instagram')
         "
       >
         <utils-svg-cmp name="utils/footer/instagram" class="followBtn" />
@@ -30,18 +32,18 @@
         @click="
           socialClick(
             $event,
-            'https:www.linkedin.com/company/mytiki',
+            'https://www.linkedin.com/company/mytiki',
             'LinkedIn'
           )
         "
       >
         <utils-svg-cmp name="utils/footer/linkedin" class="followBtn" />
       </div>
-      <div @click="socialClick($event, 'https:medium.com/mytiki', 'Medium')">
+      <div @click="socialClick($event, 'https://medium.com/mytiki', 'Medium')">
         <utils-svg-cmp name="utils/footer/medium" class="followBtn" />
       </div>
       <div
-        @click="socialClick($event, 'https:discord.gg/evjYQq48Be', 'Discord')"
+        @click="socialClick($event, 'https://discord.gg/evjYQq48Be', 'Discord')"
       >
         <utils-svg-cmp name="utils/footer/discord" class="followBtn" />
       </div>
@@ -52,7 +54,7 @@
         @click="
           socialClick(
             $event,
-            'https:signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP',
+            'https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP',
             'Signal'
           )
         "
