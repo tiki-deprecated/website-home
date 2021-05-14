@@ -118,7 +118,7 @@ export default {
   .input
     height: 15vw
     border-radius: 4vw 0 0 4vw
-    border-width: 1px
+    border-width: 0
     font-size: 4vw
     text-indent: 2vw
 
@@ -126,7 +126,7 @@ export default {
     height: 15vw
     width: 20vw
     border-radius: 0 4vw 4vw 0
-    border-width: 2px
+    border-width: 1px
     margin-left: -1px
 
   .icoSend
@@ -143,7 +143,7 @@ export default {
   .input
     height: 3vw
     border-radius: 0.5vw 0 0 0.5vw
-    border-width: 1px
+    border-width: 0
     font-size: 1.5vw
     text-indent: 0.75vw
 
@@ -151,7 +151,7 @@ export default {
     height: 3vw
     width: 4vw
     border-radius: 0 0.5vw 0.5vw 0
-    border-width: 2px
+    border-width: 1px
     margin-left: -1px
 
   .icoSend
