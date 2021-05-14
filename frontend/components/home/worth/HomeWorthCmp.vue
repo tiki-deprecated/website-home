@@ -5,21 +5,19 @@
       <home-worth-counter-cmp class="counter" />
     </div>
     <div class="videoContainer">
-      <div class="video">
-        <utils-video-cmp id="IP4UeduStUI" placeholder="yt-placeholder" />
-      </div>
+      <home-worth-video-cmp class="videoCmp" />
     </div>
   </div>
 </template>
 
 <script>
-import UtilsVideoCmp from '../../utils/UtilsVideoCmp'
+import HomeWorthVideoCmp from './HomeWorthVideoCmp'
 import HomeWorthTextCmp from './HomeWorthTextCmp'
 import HomeWorthCounterCmp from './HomeWorthCounterCmp'
 
 export default {
   name: 'HomeWorthCmp',
-  components: { UtilsVideoCmp, HomeWorthCounterCmp, HomeWorthTextCmp },
+  components: { HomeWorthVideoCmp, HomeWorthCounterCmp, HomeWorthTextCmp },
 }
 </script>
 
@@ -66,7 +64,7 @@ export default {
     height: 39%
     margin: 0 auto
 
-  .video
+  .videoCmp
     width: 100%
     height: 100%
 
@@ -94,7 +92,7 @@ export default {
     width: 35%
     height: 82%
 
-  .video
+  .videoCmp
     width: 100%
     height: 100%
     margin-left: auto

@@ -1,10 +1,10 @@
 <template>
-  <div class="utilsVideo">
-    <div v-if="loadVideo" class="video">
+  <div class="video">
+    <div v-if="loadVideo" class="videoContainer">
       <iframe
         width="560"
         height="315"
-        :src="'https://www.youtube.com/embed/' + id + '?autoplay=1'"
+        :src="'https://www.youtube.com/embed/YFZm9mwWGOY?autoplay=1'"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         class="videoIframe"
@@ -13,10 +13,15 @@
     <div v-if="!loadVideo" class="placeholder" @click="onClick">
       <img
         sizes="(max-width: 1400px) 100vw, 1400px"
-        :srcset="srcSet"
-        :src="
-          require(`~/assets/images/png/utils/${placeholder}/${placeholder}_w_1400.png`)
+        srcset="
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1280.jpg  200w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_572.jpg   572w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_831.jpg   831w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1041.jpg 1041w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1250.jpg 1250w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1280.jpg 1280w
         "
+        src="~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1280.jpg"
         alt="So why do you get nothing?"
         class="placeholderImg"
       />
@@ -26,31 +31,16 @@
 </template>
 
 <script>
-import UtilsSvgCmp from './UtilsSvgCmp'
+import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
 
 export default {
-  name: 'UtilsVideoCmp',
+  name: 'HomeWorthVideoCmp',
   components: { UtilsSvgCmp },
-  props: {
-    id: {
-      type: String,
-      required: true,
-    },
-    placeholder: {
-      type: String,
-      required: true,
-    },
-  },
   data() {
     return {
       loadVideo: false,
       hover: false,
     }
-  },
-  computed: {
-    srcSet() {
-      return `${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_200.png`)} 200w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_534.png`)} 534w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_786.png`)} 786w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_1004.png`)} 1004w, ${require(`~/assets/images/png/utils/${this.placeholder}/${this.placeholder}_w_1400.png`)} 1400w`
-    },
   },
   methods: {
     onClick(clickEvent) {
@@ -63,13 +53,13 @@ export default {
 </script>
 
 <style scoped lang="sass">
-@import "../../assets/styles/mixins"
-.utilsVideo
+@import "assets/styles/mixins"
+.video
   position: relative
   width: 100%
   height: 100%
 
-.video
+.videoContainer
   overflow: hidden
   padding-bottom: 56.25%
   position: relative
