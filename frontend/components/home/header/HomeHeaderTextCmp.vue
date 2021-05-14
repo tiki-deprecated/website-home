@@ -1,12 +1,20 @@
 <template>
   <div>
-    <div class="headerHomeTitle">Your Data. Your Decisions.</div>
-    <div class="headerHomeSubtitle">
-      It’s simple: your data is yours. No longer will confusing privacy policies
-      trick us into complacency. With TIKI, see what data you share online and
-      make informed decisions on who else can see it. Best of all, if you choose
-      to share, we make sure you get PAID. In our future, the people take power
-      back from corporations. Together, TIKI users will triumph. Join us!
+    <div class="title">
+      <b class="titleHighlight">Your</b> Data.
+      <b class="titleHighlight">Your</b> Decisions.
+    </div>
+    <div class="subtitle line1">It’s simple: your data is yours.</div>
+    <div class="subtitle line2">
+      With TIKI, see what data you share online and make informed decisions on
+      who else can see it. Best of all, if you choose to share, we make sure you
+      get PAID.
+    </div>
+    <div class="subtitle line3">
+      In our future, the people take power back from corporations.
+      <b class="subtitleHighlight"
+        >Together, TIKI users will triumph. Join us!</b
+      >
     </div>
     <nuxt-link
       v-scroll-to="{ el: '#signup' }"
@@ -25,9 +33,13 @@ export default {
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
-.headerHomeTitle
+.title
   font-family: $font-family-montserrat
   font-weight: 600
+  color: $purple
+
+.subtitle
+  color: $purple
 
 .signup
   font-family: $font-family-montserrat
@@ -39,15 +51,21 @@ export default {
 .signup:hover, .signup:visited, .signup:link, .signup:active
   text-decoration: none
 
+.titleHighlight
+  color: $orange
+  font-weight: 600
+
+.subtitleHighlight
+  color: $purple
+  font-weight: 600
+
 @include for-phone
-  .headerHomeTitle
+  .title
     font-size: 10vw
     width: 90%
 
-  .headerHomeSubtitle
-    font-size: 5vw
-    margin-top: 5vw
-    margin-bottom: 12vw
+  .subtitle
+    font-size: 4.5vw
     font-weight: 300
     width: 90%
 
@@ -56,11 +74,20 @@ export default {
     padding: 2vw 10vw
     border-radius: 2.5vw
 
+  .line1
+    margin-top: 5vw
+
+  .line2, .line3
+    margin-top: 5vw
+
+  .line3
+    margin-bottom: 12vw
+
 @include for-tablet
-  .headerHomeTitle
+  .title
     font-size: 2.75vw
 
-  .headerHomeSubtitle
+  .subtitle
     font-size: 1vw
     margin-top: 1vw
     margin-bottom: 3vw
