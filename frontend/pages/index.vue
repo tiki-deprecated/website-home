@@ -8,6 +8,7 @@
       <home-signup-cmp id="signup" class="signupCmp" />
       <home-believe-cmp class="believeCmp" />
       <home-follow-cmp />
+      <home-raffle-cmp />
       <utils-footer-cmp />
     </div>
     <home-timeline-cmp class="timelineCmp" />
@@ -27,10 +28,12 @@ import HomeBelieveCmp from '../components/home/believe/HomeBelieveCmp'
 import HomeBetaCmp from '../components/home/beta/HomeBetaCmp'
 import HomeFollowCmp from '../components/home/follow/HomeFollowCmp'
 import HomePrivacyCmp from '../components/home/privacy/HomePrivacyCmp'
+import HomeRaffleCmp from '../components/home/raffle/HomeRaffleCmp'
 
 export default {
   name: 'Index',
   components: {
+    HomeRaffleCmp,
     HomePrivacyCmp,
     HomeFollowCmp,
     HomeBetaCmp,

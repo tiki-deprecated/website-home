@@ -12,19 +12,10 @@
 
 <script>
 import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
-import { count } from '~/libs/api'
 
 export default {
   name: 'FormHomeCmpLtd',
   components: { UtilsSvgCmp },
-  async mounted() {
-    const rsp = await count(this.$axios).then(function (data) {
-      return data
-    })
-    if (rsp.success) {
-      this.$store.commit('setSignupCount', rsp.body.total)
-    }
-  },
 }
 </script>
 

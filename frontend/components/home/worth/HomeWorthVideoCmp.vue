@@ -54,6 +54,7 @@ export default {
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
+
 .video
   position: relative
   width: 100%
