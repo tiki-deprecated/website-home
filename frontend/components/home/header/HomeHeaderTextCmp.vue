@@ -40,6 +40,7 @@ export default {
 
 .subtitle
   color: $purple
+  font-weight: normal
 
 .signup
   font-family: $font-family-montserrat
@@ -89,11 +90,18 @@ export default {
 
   .subtitle
     font-size: 1vw
-    margin-top: 1vw
-    margin-bottom: 3vw
 
   .signup
     font-size: 1vw
     padding: 0.5vw 1.75vw
     border-radius: 0.6vw
+
+  .line1
+    margin-top: 1vw
+
+  .line2, .line3
+    margin-top: 0.75vw
+
+  .line3
+    margin-bottom: 3vw
 </style>
