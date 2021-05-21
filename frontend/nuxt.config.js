@@ -127,6 +127,7 @@ export default {
     'vue-social-sharing/nuxt',
     '@nuxtjs/toast',
     'vue-scrollto/nuxt',
+    '@nuxt/content',
   ],
   /*
    ** Build configuration
