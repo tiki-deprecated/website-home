@@ -51,11 +51,6 @@ export default {
     const blog = await $content('blogs', params.slug).fetch()
     return { blog }
   },
-  /* computed: {
-    lastUpdated() {
-      return blog.updatedAt.toDateString()
-    },
-  }, */
 }
 </script>
 
@@ -78,7 +73,27 @@ export default {
   text-decoration: none
 
 ::v-deep .nuxt-content hr
-  border-color: $blue-xlight
+  width: 60px
+  border: none
+  padding: 2.5px
+  background-image: radial-gradient(circle at 2.5px, $blue-dark 1.25px, rgba(255,255,255,0) 2.5px)
+  background-size: 30px 5px, 5px 30px
+  background-repeat: repeat-x
+
+::v-deep .nuxt-content blockquote blockquote
+  font-style: italic
+  font-weight: normal
+  border-left: black solid 2px
+  margin-inline: 0
+  margin-block: 0
+  color: $purple
+
+::v-deep .nuxt-content blockquote
+  font-style: normal
+  font-weight: normal
+  color: $gray-dark
+  margin-inline: 0
+  margin-block: 0
 
 @include for-phone
   ::v-deep .headerLogo.svg
@@ -125,8 +140,19 @@ export default {
     max-width: 100%
 
   ::v-deep .nuxt-content hr
-    width: 40%
     margin: 10vw auto
+
+  ::v-deep .nuxt-content blockquote blockquote
+    padding-left: 4vw
+    font-size: 5vw
+    margin-top: 8vw
+    margin-bottom: 8vw
+
+  ::v-deep .nuxt-content blockquote
+    padding-left: 4vw
+    font-size: 6vw
+    margin-top: 8vw
+    margin-bottom: 8vw
 
 @include for-tablet
   ::v-deep .headerLogo.svg
@@ -173,6 +199,17 @@ export default {
     max-width: 100%
 
   ::v-deep .nuxt-content hr
-    width: 50%
-    margin: 1.5vw auto
+    margin: 4vw auto
+
+  ::v-deep .nuxt-content blockquote blockquote
+    padding-left: 1.5vw
+    font-size: 1.5vw
+    margin-top: 2.5vw
+    margin-bottom: 2.5vw
+
+  ::v-deep .nuxt-content blockquote
+    padding-left: 1.5vw
+    font-size: 2vw
+    margin-top: 2.5vw
+    margin-bottom: 2.5vw
 </style>
