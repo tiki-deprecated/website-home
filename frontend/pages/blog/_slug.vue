@@ -77,6 +77,9 @@ export default {
   color: $orange
   text-decoration: none
 
+::v-deep .nuxt-content hr
+  border-color: $blue-xlight
+
 @include for-phone
   ::v-deep .headerLogo.svg
     height: 8vw
@@ -121,6 +124,10 @@ export default {
   ::v-deep .nuxt-content img
     max-width: 100%
 
+  ::v-deep .nuxt-content hr
+    width: 40%
+    margin: 10vw auto
+
 @include for-tablet
   ::v-deep .headerLogo.svg
     height: 2vw
@@ -161,4 +168,11 @@ export default {
     font-size: 1.5vw
     margin-top: 1.5vw
     padding: 0 4vw
+
+  ::v-deep .nuxt-content img
+    max-width: 100%
+
+  ::v-deep .nuxt-content hr
+    width: 50%
+    margin: 1.5vw auto
 </style>

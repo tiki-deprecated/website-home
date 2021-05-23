@@ -6,6 +6,7 @@ const SIGNUP = '/#signup'
 const BETA = '/beta'
 const FAQ = '/faq'
 const TEAM = '/team'
+const MEET = '/meet'
 const MISSION = '/mission'
 
 export default function ({ route, redirect }) {
@@ -47,6 +48,8 @@ export default function ({ route, redirect }) {
           'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c'
         )
         break
+      case MEET:
+      case MEET + '/':
       case TEAM:
       case TEAM + '/':
         redirect(

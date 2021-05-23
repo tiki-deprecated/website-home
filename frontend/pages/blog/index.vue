@@ -60,7 +60,7 @@
 
 <script>
 import UtilsSvgCmp from '../../components/utils/UtilsSvgCmp'
-const pinnedSlugs = ['team']
+const pinnedSlugs = ['team', 'your-data', 'executive-summary-0421']
 
 export default {
   name: 'BlogIndex',
