@@ -95,6 +95,16 @@ export default {
   margin-inline: 0
   margin-block: 0
 
+::v-deep .nuxt-content img + em
+  color: $gray-dark
+  display: block
+  text-align: center
+
+::v-deep .nuxt-content img
+  display: block
+  margin-left: auto
+  margin-right: auto
+
 @include for-phone
   ::v-deep .headerLogo.svg
     height: 8vw
@@ -154,6 +164,9 @@ export default {
     margin-top: 8vw
     margin-bottom: 8vw
 
+  ::v-deep .nuxt-content img + em
+    font-size: 3.5vw
+
 @include for-tablet
   ::v-deep .headerLogo.svg
     height: 2vw
@@ -212,4 +225,7 @@ export default {
     font-size: 2vw
     margin-top: 2.5vw
     margin-bottom: 2.5vw
+
+  ::v-deep .nuxt-content img + em
+    font-size: 1vw
 </style>
