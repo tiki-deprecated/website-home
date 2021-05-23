@@ -14,10 +14,7 @@ export default function ({ route, redirect }) {
     switch (route.path) {
       case SUMMARY:
       case SUMMARY + '/':
-        redirect(
-          301,
-          'https://tikimike.medium.com/tiki-executive-summary-apr-21-5d07cafbbe1d?source=friends_link&sk=ac55b40a4af4aabb7a11da65f7c09695'
-        )
+        redirect('/blog/executive-summary-0421')
         break
       case SIGNUP:
       case SIGNUP + '/':
@@ -52,17 +49,11 @@ export default function ({ route, redirect }) {
       case MEET + '/':
       case TEAM:
       case TEAM + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb'
-        )
+        redirect('/blog/team')
         break
       case MISSION:
       case MISSION + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/its-your-data-fbe16ee5ec2a?source=friends_link&sk=db704d85904eed02af277ad6499005e3'
-        )
+        redirect('/blog/your-data')
         break
       default:
         redirect(

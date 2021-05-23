@@ -153,6 +153,6 @@ export default {
    */
   axios: {},
   router: {
-    middleware: 'signup',
+    middleware: 'redirect',
   },
 }
