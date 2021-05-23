@@ -23,6 +23,7 @@ TIKI’s Release 1.0 will consist of **Sign up and referral functionality**.
 [Here is the full prototype of what we’re releasing at launch.](https://mytiki.invisionapp.com/console/share/TJ2C6BIRCN)
 
 ![Release 1.0: Sign up & referral functionality](/blog-images/1*y2JPV0IaANvPmVyxvCcgAw.jpeg)
+*Release 1.0: Sign up & referral functionality*  
 
 ### Sign up & referral functionality
 
@@ -95,6 +96,7 @@ Note that it might change as we get feedback from you, the users, on what matter
 - Achievement badges
 
 ![TIKI Product Roadmap: Apr-Jun](/blog-images/1*J3ZH73e6MROxfRYwViDNLg.jpeg)
+*TIKI Product Roadmap: Apr-Jun*  
 
 We are aiming to get all of these features released quicker, but we’d rather promise you a slower timeline — we simply
 don’t want to disappoint you and be late with our delivery!

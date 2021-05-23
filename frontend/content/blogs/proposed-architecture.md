@@ -50,6 +50,7 @@ source databases, etc. As great as those systems are, TIKI must run the same in 
 Germany, and the Philippines. TIKI’s [traffic](https://plausible.io/mytiki.com) spans 185 countries.
 
 ![Countries](/blog-images/1*78D3HklRZm4_HKYs_7MhUA.png)
+*TIKI’s [traffic](https://plausible.io/mytiki.com) spans 185 countries*
 
 As there are three parts to TIKI, we’re going to use three types of components. UI, microservices, and distributed
 ledgers.

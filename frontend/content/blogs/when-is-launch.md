@@ -28,6 +28,7 @@ We have broken our journey in 3 stages, below you will find detailed information
 Ok, so at this stage all that we need is your email address so we can get you notified when we launch!
 
 ![10,000 email signups](/blog-images/1*B4FlkypLtOPWJuvM12zJfA.jpeg)
+*Stage 1: 10,000 Sign ups*
 
 ### What can you do to help?
 

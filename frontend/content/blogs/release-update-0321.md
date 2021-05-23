@@ -22,6 +22,7 @@ Thanks to all of you who signed up to join TIKI’s revolution, we accomplished 
 ups, and this means we can move on to step 2 — building the TIKI app and getting you paid.
 
 ![We are now on step 2](/blog-images/1*FmwDJFlmGRMhqQiW-7BmSA.png)
+*Our [timeline](https://mytiki.com/blog/when-is-launch) — we are now on step 2*
 
 > We reached 10,000 sign ups and we can move to step 2 — getting you paid.
 
@@ -40,6 +41,7 @@ on [our website](http://www.mytiki.com/#signup) and get your friends to sign up,
 > TIKI’s app will be released around the third week of March, and we aim to start getting people paid shortly after.
 
 ![TIKI’s app will be launched in March](/blog-images/1*hNzFGorofrQyuBhefpcFag.jpeg)
+*TIKI’s app will be launched in March*  
 
 Our main milestones are, in the following order:
 
@@ -67,6 +69,7 @@ full [investor brief](https://mytiki.com/blog/investor-brief-0221).
 > We need to get to 100,000 users, so that we can make our movement stronger, and more impactful.
 
 ![Our next goal — 100,000 users](/blog-images/1*U5u4gZcWfjLVwd4O0KaPBQ.jpeg)
+*Our next goal — 100,000 users*  
 
 ## We need to keep growing to make our data more valuable and our movement more powerful
 

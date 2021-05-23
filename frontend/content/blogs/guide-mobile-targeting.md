@@ -63,6 +63,7 @@ stored into your digital advertising ID that you might not even know in real lif
 other time.
 
 ![Liam Neeson just learned the truth about mobile conquest.](/blog-images/0*UBDcb8kQmOJKJo9A.png)
+*Liam Neeson just learned the truth about mobile conquest.*  
 
 And oh yeah, the reporting tied to this particular mobile conquesting endeavor is called “Audience
 DNA.” [Welcome to 1984](https://www.youtube.com/watch?v=h6HLTBwCFO0).

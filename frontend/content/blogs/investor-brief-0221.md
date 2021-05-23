@@ -7,6 +7,8 @@ updatedAt: '2021-02-17'
 At TIKI, we believe in transparency. Instead of pitch decks, we’ve elected to publicize in detail our entire game plan.
 Give it a shot; it’s a quick read and certainly something different.
 
+---
+
 ## PROBLEM. OPPORTUNITY.
 
 It won’t come as a shock to anyone. Data, particularly user data, is broken. With trust at an all-time low and privacy
@@ -32,6 +34,8 @@ and stock price. To users, this signifies change, a push back.
 > and yes, the worst word of them all disruption. There is a massive opportunity to create something special by putting 
 > users first, giving them control of their data.
 
+---
+
 ## SOLUTION.
 
 The number 1 question we get is, how is it even possible? People in tech always ask, how are you going to get Facebook
@@ -51,6 +55,8 @@ was previously thought inaccessible, like a competitor’s.
 Don’t worry if you’re feeling a little 🧐 . The idea of a data market is pretty abstract and kinda out there. Obviously,
 there's no way users are going to open up their own little storefronts, being like, “Hey, come buy my data!” There are 3
 parts to our solution. The first and most important:
+
+---
 
 ### 1. USER EXPERIENCE
 
@@ -86,6 +92,8 @@ companies you choose. No middlemen and big tech companies making decisions about
 paid what you deserve. You decide who can use your data. A transparent market cleans up the mess. It holds companies
 accountable; else, they get cut off. It enables truly secure sharing of data, 100% anonymized.
 
+---
+
 ### 2. SECURE PIPELINE
 
 Every user has a ton of data in dozens of different applications, and the data itself is full of sensitive information.
@@ -104,6 +112,8 @@ all of that data. Instead, we use edge computing (the TIKI app on your phone) to
    
 4. Encrypt and transfer the new anonymous insights to the data market with the permissions of who can or can’t buy it
    attached.
+   
+---
 
 ### 3. DATA MARKET
 
@@ -119,6 +129,8 @@ and chart building tools.
 Data reporting consists of pre-built dashboards full of insights for common use cases, similar to how you may interact
 with your website or social media analytics. We anticipate that with strong use-cases, reporting will be the primary
 entry-point for companies into the TIKI ecosystem.
+
+---
 
 ## BUSINESS MODEL.
 
@@ -202,6 +214,8 @@ Do not read this as we’re taking on everything and anything, just that before 
 buying data thru TIKI. Right now, we need to stay focused on acquiring as many users as fast as possible and simple
 wide-breadth use cases. Remember $1/yr. from 1,000 companies = $1,000/yr. for a user.
 
+---
+
 ## WHY TIKI.
 
 We’re doing this differently. The way to fix this mess is to do it with the users. When I say with, I mean community, a
@@ -235,6 +249,8 @@ in one unified user-centric experience (Roku).
 > The key to success is straightforward, get as many users as fast as possible and stay committed to user-centricity, 
 > trust, and transparency.
 
+---
+
 ## TRACTION. GROWTH.
 
 TIKI works if lots of people participate. Your data plus my data is mostly worthless, add in 9,998 others, and now it’s
@@ -262,6 +278,7 @@ Signal, and SEO.
 **Influencer Marketing:** TikTok
 
 ![https://plausible.io/mytiki.com](/blog-images/1*HXw_Az9NyrJuFB0_mFv6OQ.png)
+*See our site analytics for yourself: [https://plausible.io/mytiki.com](https://plausible.io/mytiki.com)*  
 
 We gained a few key insights from this data. First, the 2 large spikes are from our first TikTok influencer video. For
 February, we’ve made it a focused effort to do a lot more of this. Second, we found that Quora and Facebook paid ads
@@ -300,6 +317,8 @@ retaining your existing ones. Early indicators show a ton of excitement and dema
 our first few. More to come as we start to dial in the process.
 
 > The plan is 100 companies pre-registered by the end of March ‘21.
+
+---
 
 ## TIMELINE. MILESTONES.
 

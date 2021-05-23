@@ -74,6 +74,9 @@ user focus*.
 > > TIKI’s brand values — we are transparent, we care about the users first and foremost, and we can be trusted.
 
 ![Brand Values](/blog-images/1*bAst2qzcTKPs-_GUmbJbHw.png)
+*TIKI’s 3 core brand values*  
+
+---
 
 So how can you make your first step towards creating the successful brand identity of your startup? Here are the lessons
 that we learned that may help you along the way.
@@ -86,6 +89,7 @@ All that we knew about our brand when we started the exercise is that we didn’
 nor to behave or look like a corporate.
 
 ![Color Wheels & Theory](/blog-images/1*owTAHpFtUmmQCojm-9wR0Q.png)
+*Colour wheels & theory may not be your single go-to solution when deciding on a colour palette. Source: [www.sbmarketingtools.com](www.sbmarketingtools.com)*
 
 TIKI is human, TIKI is trust-worthy, in many ways it had to behave like a person, and not like a (large) organisation.
 
@@ -109,6 +113,7 @@ brands (from other markets, even), I put together rough ideas on a notepad and d
 go! We began to see what TIKI really stands for!
 
 ![Early explorations of colour & typography](/blog-images/1*utAqanPd2fr5JKe-2W7z-w.png)
+*Early explorations of colour & typography*  
 
 ## Lesson 3. Everyone should take part
 

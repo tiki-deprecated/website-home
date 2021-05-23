@@ -31,9 +31,9 @@ thing. That's not impressive; that's just annoying. If you’re going to thump y
 build transparency, I expect a whole lot more than a few flags for ads. This is literally off
 their [privacy policy](https://www.linkedin.com/legal/privacy-policy) website:
 
-> "LinkedIn’s mission is to connect the world’s professionals to allow them to be more productive and successful. 
-> Central to this mission is our commitment to be transparent about the data we collect about you, how it is used and 
-> with whom it is shared."
+> > "LinkedIn’s mission is to connect the world’s professionals to allow them to be more productive and successful. 
+> > Central to this mission is our commitment to be transparent about the data we collect about you, how it is used and 
+> > with whom it is shared."
 
 That’s all great that you show me an audit trail of when I changed my password with a link to the password reset form to
 do it again 🙄. How about an audit trail of who at Linkedin accessed my data, and for what reason? As someone who’s
