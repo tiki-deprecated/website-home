@@ -5,6 +5,7 @@ description: We have news for you — find out what’s happening in the world o
 alt: Beta January News
 author: Anna Stoilova
 updatedAt: '2021-01-30'
+category: product
 ---
 This is it! The end of January is here, and we have news for you.
 

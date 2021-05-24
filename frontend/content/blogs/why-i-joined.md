@@ -57,7 +57,7 @@ entity has ever had before. At least that we know of.
 Mike wanted to do his part in changing this. The pitch was relatively
 simple. [We give up a ton of our own personal information in exchange for “free” services](https://www.youtube.com/watch?v=zK-GIh4FJZQ)
 . These companies make a ton of money off of sending us increasingly personal targeted
-advertising. [And we see none of that money](https://medium.com/mytiki/we-dont-get-a-say-189eeee697dc). Surely there
+advertising. [And we see none of that money](https://mytiki.com/blog/we-dont-get-a-say). Surely there
 should be a way to reverse course here, right? Surely we can regain some control over what we share online?
 
 That’s what Mike wants to do. And now, that’s what I want to do too.
@@ -73,7 +73,7 @@ willing to do what we are willing to do.
 We want to go full open-source. All the code of the product will be available for anyone to see, in real time. We want
 to be especially selective with who we take money from and when. We do not want to be beholden to investors and
 stakeholders who might compromise the task of making a product built that prioritizes *users* making money. Lots of
-companies preach [transparency](https://medium.com/mytiki/real-transparency-is-powerful-a2b3950fc811). We will actually
+companies preach [transparency](https://mytiki.com/blog/transparency-is-powerful). We will actually
 follow through on that promise.
 
 Early on, we also made a promise to not let our own personal success take priority over the user. We don’t want to

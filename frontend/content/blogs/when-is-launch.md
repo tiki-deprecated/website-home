@@ -5,6 +5,7 @@ description: Here is our game plan on how we’re going to take back the interne
 alt: Timeline
 author: Anna Stoilova
 updatedAt: '2021-01-22'
+category: help
 ---
 In this article, you will find out more about our journey, what our game plan is, and how you can help us reach our goal
 of getting all users paid their fair share quicker.

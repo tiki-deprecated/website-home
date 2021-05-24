@@ -3,6 +3,7 @@ title: TIKI Pre-Seed Program — Feb ‘21
 description: We are funding scaling our user acquisition programs. In parallel, our team will deliver a killer MVP.
 author: Mike Audi
 updatedAt: '2021-02-16'
+category: company
 ---
 *The information below assumes you have read our [Investor Brief](https://mytiki.com/blog/investor-brief-0221).*
 

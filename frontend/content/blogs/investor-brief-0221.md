@@ -3,6 +3,7 @@ title: TIKI Investor Brief — Feb. ‘21
 description: Users are signing up far faster than anticipated. In response to the demand, here’s our game plan and why to move even faster. 
 author: Mike Audi 
 updatedAt: '2021-02-17'
+category: company
 ---
 At TIKI, we believe in transparency. Instead of pitch decks, we’ve elected to publicize in detail our entire game plan.
 Give it a shot; it’s a quick read and certainly something different.

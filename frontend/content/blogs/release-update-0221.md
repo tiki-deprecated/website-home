@@ -5,6 +5,7 @@ description: TIKI loves you back
 alt: '>7,000 email signups'
 author: Anna Stoilova
 updatedAt: '2021-02-13'
+category: product
 ---
 
 ### It is St Valentine’s weekend, and we cannot believe how much love we got from you.

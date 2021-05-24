@@ -8,6 +8,7 @@ const FAQ = '/faq'
 const TEAM = '/team'
 const MEET = '/meet'
 const MISSION = '/mission'
+const PRIVACY = '/privacy'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
@@ -33,17 +34,11 @@ export default function ({ route, redirect }) {
         break
       case BETA:
       case BETA + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/tiki-app-install-instructions-5b9d84697bda?source=friends_link&sk=3a233c7edff0c98c70addfa9462b158e'
-        )
+        redirect(301, '/blog/beta-install-instructions')
         break
       case FAQ:
       case FAQ + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c'
-        )
+        redirect(301, '/blog/faq')
         break
       case MEET:
       case MEET + '/':
@@ -54,6 +49,10 @@ export default function ({ route, redirect }) {
       case MISSION:
       case MISSION + '/':
         redirect('/blog/your-data')
+        break
+      case PRIVACY:
+      case PRIVACY + '/':
+        redirect('/blog/privacy')
         break
       default:
         redirect(

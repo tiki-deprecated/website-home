@@ -5,6 +5,7 @@ img: /blog-images/1*MTGvT9vVUWOCtfaCfA9M_A.gif
 alt: Your data. Your decisions. Our plan to get you there.
 author: Anna Stoilova
 updatedAt: '2021-05-14'
+category: product
 ---
 Time is flying like crazy here at TIKI, and with another week and 66k+ total people signed up, the time has come to
 update you on our product roadmap and what we’re building right now.

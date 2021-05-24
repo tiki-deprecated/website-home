@@ -4,6 +4,7 @@ img: /blog-images/1*grKh1EhOu2IbrFgG-BQ4qQ.jpeg
 alt: TIKI
 author: Anna Stoilova
 updatedAt: '2021-05-03'
+category: product
 ---
 Hey y’all,
 

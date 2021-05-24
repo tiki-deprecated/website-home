@@ -34,9 +34,7 @@
         </div>
       </article>
     </div>
-    <div class="footerWrapper">
-      <utils-footer-cmp />
-    </div>
+    <utils-footer-cmp />
   </div>
 </template>
 

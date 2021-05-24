@@ -4,6 +4,7 @@ img: /blog-images/1*rDPnLPY-HbA4B0cMfx8lUA.jpeg
 alt: Influencers wanted
 author: Shannon Bryan
 updatedAt: '2021-05-11'
+category: press
 ---
 As we gear up for the full TIKI app launch (so exciting!), we’re partnering with influencers to help us get the word
 out. These paid partnerships will steer followers to [mytiki.com](https://mytiki.com/#signup) to sign up to be notified

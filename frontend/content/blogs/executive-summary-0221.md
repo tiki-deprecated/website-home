@@ -5,6 +5,7 @@ img: /blog-images/1*OQm-qwn3DFTmdfka0hsmaQ.png
 alt: TIKI
 author: Mike Audi
 updatedAt: '2021-02-17'
+category: company
 ---
 *At TIKI, we believe in transparency. Instead of pitch decks, we’ve elected to publicize in detail our entire game plan.
 Skip straight to the detailed version [here](https://mytiki.com/blog/investor-brief-0221).*

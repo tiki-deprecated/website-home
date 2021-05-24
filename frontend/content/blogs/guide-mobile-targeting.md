@@ -29,7 +29,7 @@ Mobile conquesting allows for marketers to “advertise to customers on their mo
 websites by utilizing accurate location, demographic, behavioral and visit data.”
 
 Now we already went over the Bidstream
-and [how your phone’s geolocation data is bought, sold, and tracked over time](https://medium.com/mytiki/how-do-advertisers-know-where-youve-been-d8ab22de4a85)
+and [how your phone’s geolocation data is bought, sold, and tracked over time](https://mytiki.com/blog/how-do-adv-know-location)
 . Mobile conquesting is a bit different, but equally, if not more, creepy.
 
 First, you have to identify your target. Yep. You’re called a “target” for a reason. They’ve got to find out where you

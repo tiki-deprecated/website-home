@@ -1,70 +1,67 @@
 <template>
   <div>
-    <div class="headerBar">
-      <nuxt-link to="/">
-        <utils-svg-cmp name="utils/logo" class="headerLogo" />
-      </nuxt-link>
-    </div>
+    <blog-header-cmp />
     <div class="content">
-      <ul class="noBullets">
-        <li v-for="blog of pinned" :key="blog.slug">
-          <NuxtLink
-            :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
-            class="link"
-          >
-            <h2 class="title">{{ blog.title }}</h2>
-            <p class="byline">
-              {{ blog.author }} -
-              {{
-                new Date(blog.updatedAt).toLocaleDateString(undefined, {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })
-              }}
-            </p>
-            <p class="subtitle">{{ blog.description }}</p>
-            <img :src="blog.img" :alt="blog.alt" class="image" />
-            <div class="divider" />
-          </NuxtLink>
-        </li>
-      </ul>
-      <ul class="noBullets">
-        <li v-for="blog of all" :key="blog.slug">
-          <NuxtLink
-            :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
-            class="link"
-          >
-            <h2 class="title">{{ blog.title }}</h2>
-            <p class="byline">
-              {{ blog.author }} -
-              {{
-                new Date(blog.updatedAt).toLocaleDateString(undefined, {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })
-              }}
-            </p>
-            <p class="subtitle">{{ blog.description }}</p>
-            <img :src="blog.img" :alt="blog.alt" class="image" />
-            <div class="divider" />
-          </NuxtLink>
-        </li>
-      </ul>
+      <div class="section">
+        <div class="sectionTitle">Latest</div>
+        <blog-card-cmp :blog="latest" />
+      </div>
+      <div class="section">
+        <div class="sectionTitle">Featured</div>
+        <div v-for="feature of featured" :key="feature.slug">
+          <blog-card-cmp :blog="feature" class="feature" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectionTitle">Categories</div>
+        <div class="categories">
+          <blog-tile-cmp
+            image="/blog-images/1*Rqpfp7JPokgvE5Sa48TFMQ.jpg"
+            name="Company"
+            category="company"
+            class="category"
+          />
+          <blog-tile-cmp
+            image="/blog-images/1*grKh1EhOu2IbrFgG-BQ4qQ.jpeg"
+            name="Product"
+            category="product"
+          />
+          <blog-tile-cmp
+            image="/blog-images/1*mDrAkUAW0w1wkNeMmAHlyA.png "
+            name="Help & Support"
+            category="help"
+          />
+          <blog-tile-cmp
+            image="/blog-images/1*rDPnLPY-HbA4B0cMfx8lUA.jpeg"
+            name="Press & Media"
+            category="press"
+          />
+          <blog-tile-cmp
+            image="/blog-images/1*kxlS8zRpCForrH32VIco7g.png"
+            name="The Tech"
+            category="tech"
+          />
+          <blog-tile-cmp
+            image="/blog-images/1*zKW9Oa-wf-DJxQDRzSy2oQ.png"
+            name="All"
+            category="all"
+          />
+        </div>
+      </div>
     </div>
+    <utils-footer-cmp />
   </div>
 </template>
 
 <script>
-import UtilsSvgCmp from '../../components/utils/UtilsSvgCmp'
-const pinnedSlugs = ['team', 'your-data', 'executive-summary-0421']
+import BlogHeaderCmp from '../../components/blog/BlogHeaderCmp'
+import BlogTileCmp from '../../components/blog/BlogTileCmp'
+import BlogCardCmp from '../../components/blog/BlogCardCmp'
+import UtilsFooterCmp from '../../components/utils/footer/UtilsFooterCmp'
 
 export default {
   name: 'BlogIndex',
-  components: { UtilsSvgCmp },
+  components: { UtilsFooterCmp, BlogCardCmp, BlogTileCmp, BlogHeaderCmp },
   async asyncData({ $content, params }) {
     const blogs = await $content('blogs')
       .only([
@@ -75,14 +72,18 @@ export default {
         'slug',
         'author',
         'updatedAt',
+        'featured',
+        'category',
       ])
       .sortBy('updatedAt', 'desc')
       .fetch()
-    const pinned = blogs.filter((value) => pinnedSlugs.includes(value.slug))
-    const all = blogs.filter((value) => !pinnedSlugs.includes(value.slug))
+
+    const latest = blogs[0]
+    const featured = blogs.filter((value) => value.featured === true)
+
     return {
-      all,
-      pinned,
+      latest,
+      featured,
     }
   },
 }
@@ -91,97 +92,48 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.noBullets
-  list-style-type: none
-  padding: 0
-  margin: 0
-
-.link
-  text-decoration: none
-  font-family: $font-family-nunito-sans
-
-.title
-  color: $purple
+.sectionTitle
+  font-family: $font-family-koara
   font-weight: bold
+  color: $yellow
 
-.subtitle
-  color: $gray-dark
-
-.byline
-  color: $purple
-
-.divider
-  background-color: $yellow
-
-::v-deep .headerLogo.svg
-  fill: $white
-
-.headerBar
-  background-color: $purple
+.categories
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 
 @include for-phone
-  .image
-    width: 100%
-    margin: 4vw 0 0 0
-
-  .title
-    font-size: 10vw
+  .content
     margin: 0 4vw
 
-  .subtitle
-    margin: 2vw 4vw 0 4vw
-    font-size: 6vw
-
-  .byline
+  .sectionTitle
     font-size: 5vw
-    margin: 0 4vw
+    margin-bottom: 2vw
 
-  .divider
-    height: 1px
-    width: 100%
-    margin: 4vw 0
+  .section
+    margin-top: 8vw
 
-  .headerBar
-    padding: 4vw
+  .feature
+    margin-bottom: 4vw
 
-  ::v-deep .headerLogo.svg
-    height: 8vw
-
-  .noBullets
-    margin-top: 4vw
+  .category
+    margin: 0 2vw
 
 @include for-tablet
-  .image
-    width: 100%
-    margin: 2vw 0 0 0
-
-  .title
-    font-size: 2.5vw
-    margin: 0
-
-  .subtitle
-    margin: 1vw 0 0 0
-    font-size: 1.5vw
-
-  .byline
-    font-size: 1.25vw
-    margin: 0
-
-  .divider
-    height: 2px
-    width: 100%
-    margin: 2vw 0
-
-  .headerBar
-    padding: 1.5vw
-
-  ::v-deep .headerLogo.svg
-    height: 2vw
-
   .content
     width: 40%
     margin: 0 auto
 
-  .noBullets
+  .sectionTitle
+    font-size: 2vw
+    margin-bottom: 1vw
+
+  .section
     margin-top: 2vw
+
+  .feature
+    margin-bottom: 2vw
+
+  .category
+    margin: 0 1vw
 </style>

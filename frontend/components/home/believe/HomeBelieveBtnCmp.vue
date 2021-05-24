@@ -24,11 +24,7 @@ export default {
       this.$plausible.trackEvent('Mission', {
         props: { location: 'Home' },
       })
-      const win = window.open(
-        'https://medium.com/mytiki/its-your-data-fbe16ee5ec2a?source=friends_link&sk=db704d85904eed02af277ad6499005e3',
-        '_blank'
-      )
-      win.focus()
+      this.$router.push('/blog/your-data')
     },
     teamClick(clickEvent) {
       clickEvent.preventDefault()
@@ -36,11 +32,7 @@ export default {
       this.$plausible.trackEvent('Team', {
         props: { location: 'Home' },
       })
-      const win = window.open(
-        'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb',
-        '_blank'
-      )
-      win.focus()
+      this.$router.push('/blog/team')
     },
   },
 }

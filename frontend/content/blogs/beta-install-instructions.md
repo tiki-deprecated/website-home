@@ -5,6 +5,7 @@ img: /blog-images/1*grKh1EhOu2IbrFgG-BQ4qQ.jpeg
 alt: TIKI
 author: Anna Stoilova
 updatedAt: '2021-03-29'
+category: help
 ---
 Hello, TIKI tribe! The big day is here, the TIKI app has now launched!  
 If you’re reading this, you are probably among the first to know about the launch, as you have signed up for TIKI early

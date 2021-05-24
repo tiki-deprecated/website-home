@@ -3,6 +3,7 @@ title: Proposed Architecture
 description: Mar. ’21 — TIKI believes in user-centricity, transparency, and trust. Here’s what we’re building (and why).
 author: Mike Audi
 updatedAt: '2021-03-02'
+category: tech
 ---
 *Note: This is an outline of the proposed software architecture. It does not include any actual logic or data
 structures. It is almost certainly missing components and will change.*

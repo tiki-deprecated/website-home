@@ -4,6 +4,7 @@ img: /blog-images/1*7DwqUXgkg6exqDpbYY6pig.png
 alt: Join the Revolution 
 author: Anna Stoilova 
 updatedAt: '2020-12-15'
+category: product
 ---
 Exciting times! [TIKI](https://mytiki.com/) went out of stealth mode and we embarked on our core mission empowering
 people to take back control of their data!

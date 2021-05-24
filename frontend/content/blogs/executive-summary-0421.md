@@ -5,6 +5,7 @@ img: /blog-images/1*CCYt72X4sa5Ax2M8MoO_pw.jpeg
 alt: TIKI
 author: Mike Audi
 updatedAt: '2021-04-21'
+category: company
 ---
 *Heads up! We don’t do pitch decks. It’s just not our style. We believe a well-written blog to be less ambiguous, more
 transparent, and easier to understand. Our users will read this.*

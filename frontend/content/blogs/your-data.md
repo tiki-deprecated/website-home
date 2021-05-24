@@ -5,6 +5,8 @@ img: /blog-images/1*mDrAkUAW0w1wkNeMmAHlyA.png
 alt: data rights for all 
 author: Mike Audi 
 updatedAt: '2021-05-06'
+featured: true
+category: company
 ---
 Like all our favorite ideas, it started with a “what if” so simple it felt wrong.
 

@@ -3,6 +3,7 @@ title: TIKI’s product roadmap
 description: Our first release is just days away, and we wanted to let you know our future plans
 author: Anna Stoilova
 updatedAt: '2021-03-20'
+category: product
 ---
 Hello everyone! It’s happening. We are launching TIKI in the next few days, and today we’d like to share what our
 product roadmap will look like. Our roadmap is based on [your feedback](https://feedback.mytiki.com/), which has been

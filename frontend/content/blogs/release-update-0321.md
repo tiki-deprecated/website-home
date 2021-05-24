@@ -5,6 +5,7 @@ description: We achieved our 1st goal! What’s next?
 alt: 10,000 email signups
 author: Anna Stoilova
 updatedAt: '2021-02-28'
+category: product
 ---
 Most of you reading this are probably aware that, since launching TIKI, our first goal has always been to signup 10,000
 users for the launch of our exclusive beta.

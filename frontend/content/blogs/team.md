@@ -5,6 +5,8 @@ img: /blog-images/1*Rqpfp7JPokgvE5Sa48TFMQ.jpg
 alt: tiki team members
 author: Mike Audi
 updatedAt: '2021-05-11'
+featured: true
+category: company
 ---
 #### There seems to be a universal constant amongst all amazing creations, products, businesses… amazing people.
 

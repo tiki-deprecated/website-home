@@ -4,8 +4,7 @@
       <utils-svg-cmp name="utils/logo" class="logo" />
     </nuxt-link>
     <div class="featuresHow">
-      <div class="team" @click="teamClick($event)">Team</div>
-      <div class="faq" @click="faqClick($event)">FAQ</div>
+      <div class="more" @click="moreClick($event)">More</div>
       <nuxt-link
         v-scroll-to="{ el: '#signup' }"
         :to="{ path: '/', hash: 'signup' }"
@@ -23,29 +22,13 @@ export default {
   name: 'HomeHeaderNavCmp',
   components: { UtilsSvgCmp },
   methods: {
-    faqClick(clickEvent) {
+    moreClick(clickEvent) {
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
-      this.$plausible.trackEvent('FAQ', {
+      this.$plausible.trackEvent('more', {
         props: { location: 'Home' },
       })
-      const win = window.open(
-        'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c',
-        '_blank'
-      )
-      win.focus()
-    },
-    teamClick(clickEvent) {
-      clickEvent.preventDefault()
-      clickEvent.stopPropagation()
-      this.$plausible.trackEvent('Team', {
-        props: { location: 'Home' },
-      })
-      const win = window.open(
-        'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb',
-        '_blank'
-      )
-      win.focus()
+      this.$router.push('/blog')
     },
   },
 }
@@ -61,7 +44,7 @@ export default {
   display: flex
   align-items: center
 
-.team, .faq
+.more, .faq
   font-family: $font-family-montserrat
   color: $black-dark
   text-decoration: none
@@ -75,7 +58,7 @@ export default {
   font-weight: 600
   background: $red
 
-.team:hover, .team:visited, .team:link, .team:active, .signup:hover, .signup:visited, .signup:link, .signup:active, .faq:hover, .faq:visited, .faq:link, .faq:active
+.more:hover, .more:visited, .more:link, .more:active, .signup:hover, .signup:visited, .signup:link, .signup:active, .faq:hover, .faq:visited, .faq:link, .faq:active
   text-decoration: none
 
 @include for-phone
@@ -90,7 +73,7 @@ export default {
     padding: 2vw 10vw
     border-radius: 2.5vw
 
-  .team, .faq
+  .more, .faq
     font-size: 5vw
     margin-right: 4vw
 
@@ -103,7 +86,7 @@ export default {
     padding: 0.5vw 1.75vw
     border-radius: 0.6vw
 
-  .team, .faq
+  .more, .faq
     font-size: 1vw
     margin-right: 2vw
 </style>
