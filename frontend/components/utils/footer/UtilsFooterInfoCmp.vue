@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="section">Information</div>
-    <nuxt-link to="/privacy" class="link content">Privacy Policy</nuxt-link>
+    <nuxt-link to="/blog/privacy" class="link content"
+      >Privacy Notice</nuxt-link
+    >
     <div class="link content" @click="githubClick">Github</div>
   </div>
 </template>

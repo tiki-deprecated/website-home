@@ -15,11 +15,12 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.text
+.text, .text:hover, .text:link, .text:visited, .text:active
   font-family: $font-family-montserrat
   color: $gray-xlight
   margin: 0 auto
   font-weight : 300
+  text-decoration: none
 
 .link, .link:hover, .link:link, .link:visited, .link:active
   font-family: $font-family-montserrat

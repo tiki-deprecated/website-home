@@ -56,7 +56,7 @@
         @click="
           socialClick(
             $event,
-            'https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRtiktok3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP',
+            'https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP',
             'Signal'
           )
         "

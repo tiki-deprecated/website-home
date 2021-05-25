@@ -6,17 +6,16 @@ const SIGNUP = '/#signup'
 const BETA = '/beta'
 const FAQ = '/faq'
 const TEAM = '/team'
+const MEET = '/meet'
 const MISSION = '/mission'
+const PRIVACY = '/privacy'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
     switch (route.path) {
       case SUMMARY:
       case SUMMARY + '/':
-        redirect(
-          301,
-          'https://tikimike.medium.com/tiki-executive-summary-apr-21-5d07cafbbe1d?source=friends_link&sk=ac55b40a4af4aabb7a11da65f7c09695'
-        )
+        redirect('/blog/executive-summary-0421')
         break
       case SIGNUP:
       case SIGNUP + '/':
@@ -35,31 +34,25 @@ export default function ({ route, redirect }) {
         break
       case BETA:
       case BETA + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/tiki-app-install-instructions-5b9d84697bda?source=friends_link&sk=3a233c7edff0c98c70addfa9462b158e'
-        )
+        redirect(301, '/blog/beta-install-instructions')
         break
       case FAQ:
       case FAQ + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c'
-        )
+        redirect(301, '/blog/faq')
         break
+      case MEET:
+      case MEET + '/':
       case TEAM:
       case TEAM + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb'
-        )
+        redirect('/blog/team')
         break
       case MISSION:
       case MISSION + '/':
-        redirect(
-          301,
-          'https://medium.com/mytiki/its-your-data-fbe16ee5ec2a?source=friends_link&sk=db704d85904eed02af277ad6499005e3'
-        )
+        redirect('/blog/your-data')
+        break
+      case PRIVACY:
+      case PRIVACY + '/':
+        redirect('/blog/privacy')
         break
       default:
         redirect(

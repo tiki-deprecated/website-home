@@ -24,48 +24,48 @@ export default {
       {
         hid: 'website',
         name: 'mytiki.com',
-        content: "It's your data. Get paid for it.",
+        content: 'Your Data. Your Decisions.',
       },
       {
         name: 'description',
         content:
-          'TIKI helps you take back control of your online data and privacy and get paid for it. With TIKI, you can see, control and monetize your online data.',
+          'It’s simple: your data is yours. With TIKI, see what data you share online and make informed decisions on who else can see it. Best of all, if you choose to share, we make sure you get PAID.',
       },
       {
         name: 'title',
-        content: "It's your data. Get paid for it.",
+        content: 'Your Data. Your Decisions.',
       },
       {
         property: 'og:title',
-        content: "It's your data. Get paid for it.",
+        content: 'Your Data. Your Decisions.',
       },
       {
         property: 'og:description',
         content:
-          'TIKI helps you take back control of your online data and privacy and get paid for it. With TIKI, you can see, control and monetize your online data.',
+          'It’s simple: your data is yours. With TIKI, see what data you share online and make informed decisions on who else can see it. Best of all, if you choose to share, we make sure you get PAID.',
       },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://mytiki.com' },
       {
         property: 'og:image',
         content:
-          'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png',
+          'https://mytiki.com/og-img-8bd2ac71-c5fe-408e-943d-7c4717d2d295.png',
       },
       {
         property: 'twitter:title',
-        content: "It's your data. Get paid for it.",
+        content: 'Your Data. Your Decisions.',
       },
       {
         property: 'twitter:description',
         content:
-          'TIKI helps you take back control of your online data and privacy and get paid for it. With TIKI, you can see, control and monetize your online data.',
+          'It’s simple: your data is yours. With TIKI, see what data you share online and make informed decisions on who else can see it. Best of all, if you choose to share, we make sure you get PAID.',
       },
       { property: 'twitter:url', content: 'https://mytiki.com' },
       { property: 'twitter:card', content: 'summary_large_image' },
       {
         property: 'twitter:image',
         content:
-          'https://mytiki.com/og-img-d9216d73be474034a8208d3c613f72a8.png',
+          'https://mytiki.com/og-img-8bd2ac71-c5fe-408e-943d-7c4717d2d295.png',
       },
       { property: 'twitter:site', content: '@my_tiki_' },
     ],
@@ -127,6 +127,7 @@ export default {
     'vue-social-sharing/nuxt',
     '@nuxtjs/toast',
     'vue-scrollto/nuxt',
+    '@nuxt/content',
   ],
   /*
    ** Build configuration
@@ -152,6 +153,6 @@ export default {
    */
   axios: {},
   router: {
-    middleware: 'signup',
+    middleware: 'redirect',
   },
 }

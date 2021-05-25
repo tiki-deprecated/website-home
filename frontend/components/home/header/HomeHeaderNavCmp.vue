@@ -4,14 +4,15 @@
       <utils-svg-cmp name="utils/logo" class="logo" />
     </nuxt-link>
     <div class="featuresHow">
-      <div class="team" @click="teamClick($event)">Team</div>
-      <div class="faq" @click="faqClick($event)">FAQ</div>
       <nuxt-link
         v-scroll-to="{ el: '#signup' }"
         :to="{ path: '/', hash: 'signup' }"
         class="signup signupHide"
         >Sign up
       </nuxt-link>
+      <div class="more" @click="moreClick($event)">
+        MORE <utils-svg-cmp name="home/header/arrow-lame" class="arrow" />
+      </div>
     </div>
   </div>
 </template>
@@ -23,29 +24,13 @@ export default {
   name: 'HomeHeaderNavCmp',
   components: { UtilsSvgCmp },
   methods: {
-    faqClick(clickEvent) {
+    moreClick(clickEvent) {
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
-      this.$plausible.trackEvent('FAQ', {
+      this.$plausible.trackEvent('more', {
         props: { location: 'Home' },
       })
-      const win = window.open(
-        'https://medium.com/mytiki/tiki-faqs-48c783972df1?source=friends_link&sk=2e2903eecb626bee96070739c16a474c',
-        '_blank'
-      )
-      win.focus()
-    },
-    teamClick(clickEvent) {
-      clickEvent.preventDefault()
-      clickEvent.stopPropagation()
-      this.$plausible.trackEvent('Team', {
-        props: { location: 'Home' },
-      })
-      const win = window.open(
-        'https://medium.com/mytiki/meet-tiki-331f86f6e936?source=friends_link&sk=193f0b8bf53af9e81247e3c9dcb6e7bb',
-        '_blank'
-      )
-      win.focus()
+      this.$router.push('/blog')
     },
   },
 }
@@ -57,16 +42,22 @@ export default {
 ::v-deep .logo.svg
   fill: $black-dark
 
+::v-deep .arrow.svg
+  fill: $blue-dark
+
 .featuresHow
   display: flex
   align-items: center
 
-.team, .faq
+.more
   font-family: $font-family-montserrat
-  color: $black-dark
+  color: $blue-dark
   text-decoration: none
   font-weight: 600
   cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
 
 .signup
   font-family: $font-family-montserrat
@@ -75,7 +66,7 @@ export default {
   font-weight: 600
   background: $red
 
-.team:hover, .team:visited, .team:link, .team:active, .signup:hover, .signup:visited, .signup:link, .signup:active, .faq:hover, .faq:visited, .faq:link, .faq:active
+.more:hover, .more:visited, .more:link, .more:active, .signup:hover, .signup:visited, .signup:link, .signup:active
   text-decoration: none
 
 @include for-phone
@@ -90,9 +81,13 @@ export default {
     padding: 2vw 10vw
     border-radius: 2.5vw
 
-  .team, .faq
+  .more
     font-size: 5vw
     margin-right: 4vw
+
+  ::v-deep .arrow.svg
+    height: 5vw
+    padding-left: 3vw
 
 @include for-tablet
   ::v-deep .logo.svg
@@ -103,7 +98,11 @@ export default {
     padding: 0.5vw 1.75vw
     border-radius: 0.6vw
 
-  .team, .faq
+  .more
     font-size: 1vw
-    margin-right: 2vw
+    margin-left: 2vw
+
+  ::v-deep .arrow.svg
+    height: 1.25vw
+    padding-left: 1vw
 </style>
