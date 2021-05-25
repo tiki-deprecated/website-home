@@ -9,15 +9,16 @@
       </div>
       <h2 class="title">{{ blog.title }}</h2>
       <p class="byline">
-        {{ blog.author }} -
-        {{
-          new Date(blog.updatedAt).toLocaleDateString(undefined, {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })
-        }}
+        <span class="author">{{ blog.author }}</span>
+        <span class="date"
+          >&nbsp;•&nbsp;
+          {{
+            new Date(blog.updatedAt).toLocaleDateString(undefined, {
+              month: 'long',
+              day: 'numeric',
+            })
+          }}</span
+        >
       </p>
     </NuxtLink>
   </div>
@@ -43,11 +44,17 @@ export default {
   font-family: $font-family-nunito-sans
 
 .title
-  color: $purple
+  color: $blue-dark
   font-weight: bold
 
 .byline
-  color: $purple
+  font-weight: bold
+
+.author
+  color: $yellow
+
+.date
+  color: $gray
 
 .imageContainer
   overflow: hidden
@@ -74,11 +81,11 @@ export default {
     width: 100%
 
   .title
-    font-size: 1.5vw
-    margin: 0
+    font-size: 1.25vw
+    margin: 0.5vw 0 0 0
 
   .byline
-    font-size: 1.25vw
+    font-size: 1vw
     margin: 0
 
   .imageContainer

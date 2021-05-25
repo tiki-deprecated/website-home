@@ -1,5 +1,5 @@
 <template>
-  <div class="tile">
+  <div class="tile" :style="'background-color: ' + color">
     <NuxtLink
       :to="{
         name: 'blog-category-slug',
@@ -7,27 +7,31 @@
       }"
       class="link"
     >
-      <div class="imageContainer">
-        <img :src="image" alt="icon" class="image" />
-      </div>
+      <utils-svg-cmp :name="icon" class="icon" />
       <h2 class="name">{{ name }}</h2>
     </NuxtLink>
   </div>
 </template>
 
 <script>
+import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 export default {
   name: 'BlogCardCmp',
+  components: { UtilsSvgCmp },
   props: {
     name: {
       type: String,
       required: true,
     },
-    image: {
+    icon: {
       type: String,
       required: true,
     },
     category: {
+      type: String,
+      required: true,
+    },
+    color: {
       type: String,
       required: true,
     },
@@ -42,43 +46,36 @@ export default {
   text-decoration: none
   font-family: $font-family-nunito-sans
 
-.imageContainer
-  overflow: hidden
-  position: relative
-  width: 100%
-
-.image
-  height: 100%
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-
 .name
   text-align: center
-  color: $purple
+  color: $blue-dark
+
+::v-deep .icon.svg
+  fill: $blue-dark
 
 @include for-phone
   .tile
-    width: 20vh
-
-  .imageContainer
+    width: 42vw
     border-radius: 4vw
-    height: 20vh
 
   .name
     font-size: 5vw
     margin-top: 2vw
 
+  ::v-deep .icon.svg
+    height: 12vw
+    margin: 6vw auto 2vw auto
+
 @include for-tablet
   .tile
-    width: 20vh
-
-  .imageContainer
+    width: 11vw
     border-radius: 1vw
-    height: 20vh
 
   .name
-    font-size: 1.5vw
+    font-size: 1.25vw
     margin-top: 1vw
+
+  ::v-deep .icon.svg
+    height: 4vw
+    margin: 2vw auto 1vw auto
 </style>

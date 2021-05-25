@@ -1,6 +1,10 @@
 <template>
   <div>
     <blog-header-cmp />
+    <div class="explain">
+      Here you’ll find all you need to know about TIKI - mission, team, product
+      and everything else.
+    </div>
     <div class="content">
       <div class="section">
         <div class="sectionTitle">Latest</div>
@@ -12,39 +16,50 @@
           <blog-card-cmp :blog="feature" class="feature" />
         </div>
       </div>
-      <div class="section">
+      <div id="categories" class="section">
         <div class="sectionTitle">Categories</div>
         <div class="categories">
           <blog-tile-cmp
-            image="/blog-images/1*Rqpfp7JPokgvE5Sa48TFMQ.jpg"
+            icon="blog/finger"
+            name="Product"
+            category="product"
+            class="category"
+            color="#5CE9D8"
+          />
+          <blog-tile-cmp
+            icon="blog/pineapple"
             name="Company"
             category="company"
             class="category"
+            color="#FCDA57"
           />
           <blog-tile-cmp
-            image="/blog-images/1*grKh1EhOu2IbrFgG-BQ4qQ.jpeg"
-            name="Product"
-            category="product"
-          />
-          <blog-tile-cmp
-            image="/blog-images/1*mDrAkUAW0w1wkNeMmAHlyA.png "
-            name="Help & Support"
-            category="help"
-          />
-          <blog-tile-cmp
-            image="/blog-images/1*rDPnLPY-HbA4B0cMfx8lUA.jpeg"
+            icon="blog/microphone"
             name="Press & Media"
             category="press"
+            class="category"
+            color="#8DB0FF"
           />
           <blog-tile-cmp
-            image="/blog-images/1*kxlS8zRpCForrH32VIco7g.png"
+            icon="blog/help"
+            name="Help & Support"
+            category="help"
+            class="category"
+            color="#FEA184"
+          />
+          <blog-tile-cmp
+            icon="blog/robot"
             name="The Tech"
             category="tech"
+            class="category"
+            color="#91DBC0"
           />
           <blog-tile-cmp
-            image="/blog-images/1*zKW9Oa-wf-DJxQDRzSy2oQ.png"
+            icon="blog/check"
             name="All"
             category="all"
+            class="category"
+            color="#D8D8D8"
           />
         </div>
       </div>
@@ -95,45 +110,57 @@ export default {
 .sectionTitle
   font-family: $font-family-koara
   font-weight: bold
-  color: $yellow
+  color: $blue-dark
 
 .categories
   display: flex
   flex-wrap: wrap
   justify-content: space-between
 
+.explain
+  font-family: $font-family-nunito-sans
+  color: $gray-xdark
+
 @include for-phone
   .content
     margin: 0 4vw
 
   .sectionTitle
-    font-size: 5vw
-    margin-bottom: 2vw
-
-  .section
-    margin-top: 8vw
-
-  .feature
+    font-size: 6vw
     margin-bottom: 4vw
 
-  .category
-    margin: 0 2vw
+  .section
+    margin: 8vw 0
 
+  .feature
+    margin-bottom: 6vw
+
+  .explain
+    margin: 8vw 4vw
+    font-size: 3.75vw
+
+  .category
+    margin: 2vw 2vw
 @include for-tablet
   .content
     width: 40%
     margin: 0 auto
 
   .sectionTitle
-    font-size: 2vw
+    font-size: 1.75vw
     margin-bottom: 1vw
 
   .section
-    margin-top: 2vw
+    margin: 2vw 0
 
   .feature
     margin-bottom: 2vw
 
   .category
-    margin: 0 1vw
+    margin: 1vw 1vw
+
+  .explain
+    width: fit-content
+    margin: 2vw auto
+    font-size: 1vw
 </style>

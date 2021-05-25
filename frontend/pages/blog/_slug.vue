@@ -16,18 +16,19 @@
         /></a>
         <div class="heading">
           <h1 class="title">{{ blog.title }}</h1>
-          <p class="subtitle">{{ blog.description }}</p>
           <p class="byline">
-            {{ blog.author }} -
-            {{
-              new Date(blog.updatedAt).toLocaleDateString(undefined, {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })
-            }}
+            <span class="author">{{ blog.author }}</span>
+            <span class="date"
+              >&nbsp;•&nbsp;
+              {{
+                new Date(blog.updatedAt).toLocaleDateString(undefined, {
+                  month: 'long',
+                  day: 'numeric',
+                })
+              }}</span
+            >
           </p>
+          <p class="subtitle">{{ blog.description }}</p>
         </div>
         <div class="blogBody">
           <nuxt-content :document="blog" />
@@ -58,7 +59,7 @@ export default {
 .blogPage
   background-color: $white
   font-family: $font-family-nunito-sans
-  color: $purple
+  color: $gray-xdark
 
 ::v-deep .headerLogo.svg
   fill: $white
@@ -69,6 +70,9 @@ export default {
 ::v-deep .nuxt-content a
   color: $orange
   text-decoration: none
+
+::v-deep .nuxt-content h1, ::v-deep .nuxt-content h2, ::v-deep .nuxt-content h3, ::v-deep .nuxt-content h4, ::v-deep .nuxt-content h5, ::v-deep .nuxt-content h6
+  color: $blue-dark
 
 ::v-deep .nuxt-content hr
   width: 60px
@@ -81,20 +85,20 @@ export default {
 ::v-deep .nuxt-content blockquote blockquote
   font-style: italic
   font-weight: normal
-  border-left: black solid 2px
+  border-left: $blue-dark solid 2px
   margin-inline: 0
   margin-block: 0
-  color: $purple
+  color: $gray-xdark
 
 ::v-deep .nuxt-content blockquote
   font-style: normal
   font-weight: normal
-  color: $gray-dark
+  color: $gray-xdark
   margin-inline: 0
   margin-block: 0
 
 ::v-deep .nuxt-content img + em
-  color: $gray-dark
+  color: $gray-xdark
   display: block
   text-align: center
 
@@ -102,6 +106,23 @@ export default {
   display: block
   margin-left: auto
   margin-right: auto
+
+.byline
+  color: $purple
+  font-weight: bold
+
+.author
+  color: $yellow
+
+.date
+  color: $gray
+
+.subtitle
+  color: $gray-xdark
+  font-weight: 600
+
+.title
+  color: $blue-dark
 
 @include for-phone
   ::v-deep .headerLogo.svg
@@ -123,9 +144,8 @@ export default {
     margin: 8vw 0 0 0
 
   .subtitle
-    color: $gray-dark
     font-size: 5vw
-    margin: 2vw 0 0 0
+    margin: 8vw 0 0 0
 
   .byline
     font-size: 4vw
@@ -140,7 +160,7 @@ export default {
     width: 100%
 
   .blogBody
-    font-size: 5vw
+    font-size: 4.25vw
     margin-top: 8vw
     padding: 0 4vw
 
@@ -185,7 +205,6 @@ export default {
     margin: 1.5vw 0 0 0
 
   .subtitle
-    color: $gray-dark
     font-size: 2vw
     margin: 0
 

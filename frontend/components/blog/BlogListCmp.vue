@@ -7,15 +7,16 @@
       >
         <h2 class="title">{{ blog.title }}</h2>
         <p class="byline">
-          {{ blog.author }} -
-          {{
-            new Date(blog.updatedAt).toLocaleDateString(undefined, {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })
-          }}
+          <span class="author">{{ blog.author }}</span>
+          <span class="date"
+            >&nbsp;•&nbsp;
+            {{
+              new Date(blog.updatedAt).toLocaleDateString(undefined, {
+                month: 'long',
+                day: 'numeric',
+              })
+            }}</span
+          >
         </p>
         <p class="subtitle">{{ blog.description }}</p>
         <img :src="blog.img" :alt="blog.alt" class="image" />
@@ -50,16 +51,25 @@ export default {
   font-family: $font-family-nunito-sans
 
 .title
-  color: $purple
+  color: $blue-dark
   font-weight: bold
 
 .subtitle
-  color: $gray-dark
+  color: $gray-xdark
+  font-weight: 600
 
 .byline
-  color: $purple
+  font-weight: bold
+
+.author
+  color: $yellow
+
+.date
+  color: $gray
 
 .divider
+  height: 1px
+  width: 100%
   background-color: $yellow
 
 @include for-phone
@@ -68,20 +78,18 @@ export default {
     margin: 4vw 0 0 0
 
   .title
-    font-size: 10vw
+    font-size: 7vw
     margin: 0 4vw
 
   .subtitle
-    margin: 2vw 4vw 0 4vw
-    font-size: 6vw
+    margin: 0 4vw
+    font-size: 4.75vw
 
   .byline
-    font-size: 5vw
-    margin: 0 4vw
+    font-size: 4.5vw
+    margin: 1vw 4vw
 
   .divider
-    height: 1px
-    width: 100%
     margin: 4vw 0
 
   .noBullets
@@ -90,23 +98,21 @@ export default {
 @include for-tablet
   .image
     width: 100%
-    margin: 2vw 0 0 0
+    margin: 1vw 0 0 0
 
   .title
-    font-size: 2.5vw
+    font-size: 2.25vw
     margin: 0
 
   .subtitle
-    margin: 1vw 0 0 0
-    font-size: 1.5vw
+    margin: 0.75vw 0 0 0
+    font-size: 1.25vw
 
   .byline
-    font-size: 1.25vw
+    font-size: 1vw
     margin: 0
 
   .divider
-    height: 2px
-    width: 100%
     margin: 2vw 0
 
   .noBullets

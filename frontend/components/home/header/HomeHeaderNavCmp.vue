@@ -4,13 +4,15 @@
       <utils-svg-cmp name="utils/logo" class="logo" />
     </nuxt-link>
     <div class="featuresHow">
-      <div class="more" @click="moreClick($event)">More</div>
       <nuxt-link
         v-scroll-to="{ el: '#signup' }"
         :to="{ path: '/', hash: 'signup' }"
         class="signup signupHide"
         >Sign up
       </nuxt-link>
+      <div class="more" @click="moreClick($event)">
+        MORE <utils-svg-cmp name="home/header/arrow-lame" class="arrow" />
+      </div>
     </div>
   </div>
 </template>
@@ -40,16 +42,22 @@ export default {
 ::v-deep .logo.svg
   fill: $black-dark
 
+::v-deep .arrow.svg
+  fill: $blue-dark
+
 .featuresHow
   display: flex
   align-items: center
 
-.more, .faq
+.more
   font-family: $font-family-montserrat
-  color: $black-dark
+  color: $blue-dark
   text-decoration: none
   font-weight: 600
   cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
 
 .signup
   font-family: $font-family-montserrat
@@ -58,7 +66,7 @@ export default {
   font-weight: 600
   background: $red
 
-.more:hover, .more:visited, .more:link, .more:active, .signup:hover, .signup:visited, .signup:link, .signup:active, .faq:hover, .faq:visited, .faq:link, .faq:active
+.more:hover, .more:visited, .more:link, .more:active, .signup:hover, .signup:visited, .signup:link, .signup:active
   text-decoration: none
 
 @include for-phone
@@ -73,9 +81,13 @@ export default {
     padding: 2vw 10vw
     border-radius: 2.5vw
 
-  .more, .faq
+  .more
     font-size: 5vw
     margin-right: 4vw
+
+  ::v-deep .arrow.svg
+    height: 5vw
+    padding-left: 3vw
 
 @include for-tablet
   ::v-deep .logo.svg
@@ -86,7 +98,11 @@ export default {
     padding: 0.5vw 1.75vw
     border-radius: 0.6vw
 
-  .more, .faq
+  .more
     font-size: 1vw
-    margin-right: 2vw
+    margin-left: 2vw
+
+  ::v-deep .arrow.svg
+    height: 1.25vw
+    padding-left: 1vw
 </style>
