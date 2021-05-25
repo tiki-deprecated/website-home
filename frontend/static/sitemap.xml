@@ -7,8 +7,8 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mytiki.com/privacy/</loc>
-    <lastmod>2021-05-14T13:20:00+00:00</lastmod>
-    <priority>0.50</priority>
+    <loc>https://mytiki.com/blog/</loc>
+    <lastmod>2021-05-25T13:20:00+00:00</lastmod>
+    <priority>0.90</priority>
   </url>
 </urlset>
