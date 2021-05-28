@@ -1,8 +1,8 @@
 ---
 title: Why Gmail?
-description: You’re not going to believe what Gmail knows about you. I didn’t.
-img: blog-images/WHy_Gmail.jpg
-alt: Getting hold of your emails can be pure gold for Gmail’s profiling
+description: "You’re not going to believe what Gmail knows about you. I didn’t." 
+img: /blog-images/why-gmail.jpg
+alt: "Getting hold of your emails can be pure gold for Gmail’s profiling"
 author: Anna Stoilova
 updatedAt: '2021-05-24'
 featured: true
@@ -24,12 +24,13 @@ category: product
 <p>It can get worse though. <strong>Gmail can use this data to create a profile about who you are, what your interests are, and how you’re likely to behave, to a level of precision that’s difficult to imagine.</strong> </p>
 <p>For example, do you know that little handy reminder that is telling you to follow up with a person that hasn’t responded to your email yet? Seems innocent (and very handy), but the reality of it is that Gmail’s algorithms are constantly working on analyzing your email activity in real-time.</p>
 
-<p>!(https://github.com/tiki/website/blob/blog/frontend/static/blog-images/Screenshot%202021-05-24%20at%2001.59.20.png)</p>
+![Sent 6 days ago. Follow up?](/blog-images/screenshot-2021-05-24-at-01.59.20.png)
 
 > Gmail has the content of the emails you’ve received, and sent throughout the years. It knows when you read your emails, where you are when you open them, and how many times you’ve opened each email.</p>
 
 <p>Seeing and realising the depth of it all put me in a bit of a shock.</p>
-<p>!(https://github.com/tiki/website/blob/blog/frontend/static/blog-images/Screenshot%202021-05-24%20at%2013.49.31.png)</p>
+
+![Download data](/blog-images/screenshot-2021-05-24-at-13.49.31.png)
 
 <p>At first, I wanted to cry. And then… then I came back to my senses. I knew that we were starting something big here. We had to release the ability to add Gmail as soon as possible. We had to let you all know what Gmail are doing behind the scenes, and how you can do something about it.</p>
 
