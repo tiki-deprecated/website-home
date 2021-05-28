@@ -213,11 +213,11 @@ export default {
     margin: 0
 
   .date
-    font-size: 1.5vw
+    font-size: 1.25vw
     margin: 1vw 0 0 0
 
   .blog
-    width: 60%
+    width: 45%
     margin: 0 auto
 
   .blogBody
