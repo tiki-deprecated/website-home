@@ -1,5 +1,5 @@
 ---
-title: Friday Raffles: Win a TIKI “party in a box”!
+title: 'Friday Raffles: Win a TIKI “party in a box”!'
 img: /blog-images/fridayraffleheader.png
 alt: Friday raffles
 author: Shannon Bryan
