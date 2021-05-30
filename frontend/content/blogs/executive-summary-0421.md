@@ -46,7 +46,7 @@ Our model:
 *Try with your numbers. There are 30M SMBs in the US, and with the upending of major markets like the $80B mobile
 digital ad market, there’s no shortage of businesses who need data.*
 
-> > For 100k users to earn $10/month. TIKI needs 1k paying companies at $100/month or 10k companies at $10/month.
+> > For 100k users to earn $10/month. TIKI needs 1k paying companies at $1k/month or 10k companies at $100/month.
 > >
 > > At $10 /user/month * 10% fee = $1 MRR/user
 > >
