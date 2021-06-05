@@ -4,6 +4,7 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 module.exports = {
   signup(params, callback) {
     const data = {
+      list_ids: ['db65441d-ce52-4ec8-8472-cae7cdaebd19'],
       contacts: [
         {
           email: params.contact,
