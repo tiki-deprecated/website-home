@@ -40,6 +40,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.1
 
+      - name: Get Node.js version
+        id: nvm
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -50,6 +59,7 @@ jobs:
       - name: Generate Static Site
         run: |
           cd frontend
+          nvm install && nvm use
           npm install
           npm run build
           npm run generate
@@ -58,6 +68,6 @@ jobs:
         env:
           S3_BUCKET_FRONTEND: ${{ secrets.S3_BUCKET_FRONTEND}}
         run: |
-          cd dist
+          cd frontend/dist
           aws s3 sync . "s3://$S3_BUCKET_FRONTEND" --exclude "_nuxt/*" --delete --cache-control "max-age=3600"
           aws s3 sync _nuxt/ "s3://$S3_BUCKET_FRONTEND"/_nuxt --delete --cache-control "max-age=31536000, immutable"
