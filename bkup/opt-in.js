@@ -1,8 +1,8 @@
 "use strict";
 
-const { sanitize, contactType } = require("./format-data.js");
-const sendgrid = require("./sendgrid");
-const twilio = require("./twilio");
+const { sanitize, contactType } = require("../backend/utils/helpers.js");
+const sendgrid = require("../backend/utils/sendgrid");
+const twilio = require("../backend/utils/twilio");
 const {
   corsHeaders,
   addContact,

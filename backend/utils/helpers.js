@@ -6,6 +6,14 @@ const isPhone = function (contact) {
   return /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/.test(contact);
 };
 
+const corsHeaders = function () {
+  return {
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "OPTIONS,POST",
+  };
+};
+
 module.exports = {
   isUser(path) {
     if (path.match("/signup/user") != null) return true;
@@ -23,8 +31,5 @@ module.exports = {
     else return "unknown";
   },
 
-  contactTypePinpoint(contact) {
-    if (isEmail(contact)) return "EMAIL";
-    else return "SMS";
-  },
+  corsHeaders: corsHeaders(),
 };

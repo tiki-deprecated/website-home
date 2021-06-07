@@ -1,11 +1,14 @@
 {
   "name": "website-functions",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "private": true,
   "description": "Lambda functions for website backend",
   "dependencies": {
     "@sendgrid/client": "^7.4.2",
-    "crypto": "^1.0.1",
     "twilio": "^3.55.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "prettier": "2.3.1"
   }
 }

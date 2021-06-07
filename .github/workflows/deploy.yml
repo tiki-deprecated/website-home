@@ -12,6 +12,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.1
 
+      - name: Move Dependencies
+        run: |
+          mkdir infrastructure/dependencies
+          FUNCTIONS_VERSION=$(cat backend/package.json \
+           | grep version \
+           | head -1 \
+           | awk -F: '{ print $2 }' \
+           | sed 's/[",]//g' \
+           | sed 's/^ *//g')
+          API_VERSION=$(cat backend/oas.json \
+           | grep version \
+           | head -1 \
+           | awk -F: '{ print $2 }' \
+           | sed 's/[",]//g' \
+           | sed 's/^ *//g')
+          echo $FUNCTIONS_VERSION > infrastructure/dependencies/functions.version
+          echo $API_VERSION > infrastructure/dependencies/api.version
+          cp backend/oas.json infrastructure/dependencies/oas.json
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
@@ -71,3 +90,8 @@ jobs:
           cd frontend/dist
           aws s3 sync . "s3://$S3_BUCKET_FRONTEND" --exclude "_nuxt/*" --delete --cache-control "max-age=3600"
           aws s3 sync _nuxt/ "s3://$S3_BUCKET_FRONTEND"/_nuxt --delete --cache-control "max-age=31536000, immutable"
+
+      - name: Zip Backend Functions
+        run: |
+          cd backend
+          zip -r src.zip functions node_modules utils package.json package-lock.json
