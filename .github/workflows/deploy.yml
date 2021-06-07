@@ -42,7 +42,7 @@ jobs:
 
       - name: Get Node.js version
         id: nvm
-        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+        run: echo ::set-output name=NODE_VERSION::$(cat frontend/.nvmrc)
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
