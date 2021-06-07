@@ -95,3 +95,16 @@ jobs:
         run: |
           cd backend
           zip -r src.zip functions node_modules utils package.json package-lock.json
+
+      - name: Push Backend Functions
+        env:
+          S3_BUCKET_BACKEND: ${{ secrets.S3_BUCKET_BACKEND}}
+        run: |
+          FUNCTIONS_VERSION=$(cat backend/package.json \
+                     | grep version \
+                     | head -1 \
+                     | awk -F: '{ print $2 }' \
+                     | sed 's/[",]//g' \
+                     | sed 's/^ *//g')
+          cd backend
+          aws s3 sync src.zip "s3://$S3_BUCKET_BACKEND/$FUNCTIONS_VERSION"
