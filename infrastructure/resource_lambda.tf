@@ -1,7 +1,5 @@
-variable "aws_iam_role_lambda_exec" {}
-
 data "aws_iam_role" "lambda_exec" {
-  name = var.aws_iam_role_lambda_exec
+  name = var.global_role_lambda_exec
 }
 
 resource "aws_lambda_function" "signup_user_post" {
