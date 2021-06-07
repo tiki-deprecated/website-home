@@ -1,7 +1,8 @@
 data "aws_route53_zone" "website" {
-  name = var.global_website_domain
+  name = var.global_website_zone
 }
 
+/*
 resource "aws_route53_record" "this_a" {
   zone_id = data.aws_route53_zone.website.zone_id
   name    = data.aws_route53_zone.website.name
@@ -26,6 +27,18 @@ resource "aws_route53_record" "www" {
   }
 }
 
+resource "aws_route53_record" "api" {
+  name    = aws_api_gateway_domain_name.api.domain_name
+  type    = "A"
+  zone_id = data.aws_route53_zone.website.id
+
+  alias {
+    evaluate_target_health = true
+    name                   = aws_api_gateway_domain_name.api.cloudfront_domain_name
+    zone_id                = aws_api_gateway_domain_name.api.cloudfront_zone_id
+  }
+}*/
+
 resource "aws_route53_record" "acm_validate" {
   for_each = {
     for dvo in aws_acm_certificate.ssl.domain_validation_options : dvo.domain_name => {
@@ -41,16 +54,4 @@ resource "aws_route53_record" "acm_validate" {
   ttl             = 60
   type            = each.value.type
   zone_id         = data.aws_route53_zone.website.zone_id
-}
-
-resource "aws_route53_record" "api" {
-  name    = aws_api_gateway_domain_name.api.domain_name
-  type    = "A"
-  zone_id = data.aws_route53_zone.website.id
-
-  alias {
-    evaluate_target_health = true
-    name                   = aws_api_gateway_domain_name.api.cloudfront_domain_name
-    zone_id                = aws_api_gateway_domain_name.api.cloudfront_zone_id
-  }
 }

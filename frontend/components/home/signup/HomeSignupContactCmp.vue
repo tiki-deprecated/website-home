@@ -52,9 +52,11 @@ export default {
       if (this.isReady) {
         this.$store.commit('form_signup/setContact', this.contact)
         this.$store.commit('form_signup/setPosOpt')
-        await signUp(this.$axios, this.contact, '').then(function (data) {
-          return data.success
-        })
+        await signUp(this.$axios, this.contact, this.$store.state.code).then(
+          function (data) {
+            return data.success
+          }
+        )
         this.$plausible.trackEvent('Signup', {
           props: { affiliate: this.$store.state.code },
         })

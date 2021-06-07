@@ -16,7 +16,7 @@ requests, and responses. Hosted & pretty @ [readme.io](https://mytiki.readme.io)
 
 ## DB
 NOSQL Table defined as part of infrastructure. See 
-[infrastructure/resource_dynamodb.tf](../infrastructure/resource_dynamodb.tf)
+[infrastructure/resource_dynamodb.tf](../bkup/resource_dynamodb.tf)
 
 Data Structure (JSON)
 ```

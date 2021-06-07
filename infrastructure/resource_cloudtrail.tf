@@ -1,6 +1,6 @@
 resource "aws_cloudtrail" "website_object_log" {
   name                          = "ct-s3-${local.global_bucket_frontend}"
-  s3_bucket_name                = var.global_log_bucket
+  s3_bucket_name                = var.global_bucket_logs
   include_global_service_events = false
 
   tags = {

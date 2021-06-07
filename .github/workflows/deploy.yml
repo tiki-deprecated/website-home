@@ -1,0 +1,89 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  infrastructure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2.1.1
+
+      - name: Generate Static Site
+        run: ./.github/scripts/static-site-generate.sh
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
+      - name: Terraform Format
+        id: fmt
+        run: terraform fmt
+        working-directory: infrastructure
+
+      - name: Terraform Init
+        id: init
+        run: terraform init
+        working-directory: infrastructure
+
+      - name: Terraform Apply
+        id: apply
+        run: terraform apply -auto-approve
+        working-directory: infrastructure
+
+  api:
+    runs-on: ubuntu-latest
+
+    needs: infrastructure
+
+    steps:
+      - uses: actions/checkout@v2.1.1
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Get OAS
+        run: ./.github/scripts/get-oas.sh ${{ secrets.API_ID }} ${{ secrets.API_STAGE }} ${{ secrets.AWS_REGION }}
+
+      - uses: readmeio/github-readme-sync@2.0.0
+        with:
+          readme-oas-key: '${{ secrets.README_OAS_KEY }}'
+          oas-file-path: './infrastructure/files/oas-rendered.json'
+
+  content:
+    runs-on: ubuntu-latest
+
+    needs: infrastructure
+
+    steps:
+      - uses: actions/checkout@v2.1.1
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Generate Static Site
+        run: |
+          cd frontend
+          npm install
+          npm run build
+          npm run generate
+
+      - name: Push Static Site
+        env:
+          S3_BUCKET_FRONTEND: ${{ secrets.S3_BUCKET_FRONTEND}}
+        run: |
+          cd dist
+          aws s3 sync . "s3://$S3_BUCKET_FRONTEND" --exclude "_nuxt/*" --delete --cache-control "max-age=3600"
+          aws s3 sync _nuxt/ "s3://$S3_BUCKET_FRONTEND"/_nuxt --delete --cache-control "max-age=31536000, immutable"

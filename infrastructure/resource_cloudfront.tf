@@ -18,29 +18,20 @@ resource "aws_cloudfront_distribution" "website" {
 
   logging_config {
     include_cookies = false
-    bucket          = "${var.global_log_bucket}.s3.amazonaws.com"
+    bucket          = "${var.global_bucket_logs}.s3.amazonaws.com"
     prefix          = "CloudFront/"
   }
 
   aliases = ["www.${var.global_website_domain}", var.global_website_domain]
 
   default_cache_behavior {
-    allowed_methods  = ["GET", "HEAD"]
+    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = aws_s3_bucket.frontend.bucket
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
-
+    compress = true
+    cache_policy_id = "a7fcdb8a-677e-47ba-9a05-8230fed77d83"
+    origin_request_policy_id = "76b90ba9-bd24-4526-b4e3-e7a1730d9278"
     viewer_protocol_policy = "redirect-to-https"
-    min_ttl                = 1
-    default_ttl            = 86400
-    max_ttl                = 31536000
   }
 
   price_class = "PriceClass_All"
