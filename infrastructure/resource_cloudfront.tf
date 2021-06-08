@@ -24,6 +24,7 @@ resource "aws_cloudfront_distribution" "website" {
 
   aliases = ["www.${var.global_website_domain}", var.global_website_domain]
 
+  //noinspection MissingProperty
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]

@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Signup",
-    "version": "0.1.0"
+    "version": "${version}"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
     {}
   ],
   "paths": {
-    "/${version_pipe}/signup/user": {
+    "/${version_pipe}/user": {
       "post": {
         "tags": [],
         "summary": "Add User",
@@ -50,7 +50,7 @@
         },
         "x-amazon-apigateway-integration": {
           "type": "aws_proxy",
-          "uri": "${lambda_signup_arn}",
+          "uri": "${signup_user_post_arn}",
           "passthroughBehavior": "when_no_match",
           "httpMethod": "POST",
           "timeoutInMillis": 29000
@@ -58,138 +58,6 @@
         "deprecated": false,
         "security": []
       },
-      "options": {
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "headers": {
-              "Access-Control-Allow-Origin": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Allow-Methods": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Allow-Headers": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            },
-            "content": {}
-          }
-        },
-        "x-amazon-apigateway-integration": {
-          "responses": {
-            "default": {
-              "statusCode": "200",
-              "responseParameters": {
-                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'",
-                "method.response.header.Access-Control-Allow-Headers": "'Content-Type'",
-                "method.response.header.Access-Control-Allow-Origin": "'*'"
-              }
-            }
-          },
-          "requestTemplates": {
-            "application/json": "{\"statusCode\": 200}"
-          },
-          "passthroughBehavior": "when_no_match",
-          "type": "mock"
-        }
-      }
-    },
-    "/${version_pipe}/signup/user/opt": {
-      "post": {
-        "tags": [],
-        "summary": "User opt-in",
-        "description": "Add a new or update an existing user's opt-in status",
-        "operationId": "signupUserOpt",
-        "parameters": [],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "contact": {
-                    "type": "string",
-                    "description": "email or phone number"
-                  },
-                  "code": {
-                    "type": "string",
-                    "description": "affiliate code"
-                  },
-                  "optIn": {
-                    "type": "boolean",
-                    "description": "opt in (true)"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        },
-        "x-amazon-apigateway-integration": {
-          "type": "aws_proxy",
-          "uri": "${lambda_opt_in_arn}",
-          "passthroughBehavior": "when_no_match",
-          "httpMethod": "POST",
-          "timeoutInMillis": 29000
-        },
-        "deprecated": false,
-        "security": []
-      },
-      "options": {
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "headers": {
-              "Access-Control-Allow-Origin": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Allow-Methods": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Allow-Headers": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            },
-            "content": {}
-          }
-        },
-        "x-amazon-apigateway-integration": {
-          "responses": {
-            "default": {
-              "statusCode": "200",
-              "responseParameters": {
-                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'",
-                "method.response.header.Access-Control-Allow-Headers": "'Content-Type'",
-                "method.response.header.Access-Control-Allow-Origin": "'*'"
-              }
-            }
-          },
-          "requestTemplates": {
-            "application/json": "{\"statusCode\": 200}"
-          },
-          "passthroughBehavior": "when_no_match",
-          "type": "mock"
-        }
-      }
-    },
-    "/${version_pipe}/signup/count": {
       "get": {
         "tags": [],
         "summary": "Total Signups",
@@ -203,7 +71,7 @@
         },
         "x-amazon-apigateway-integration": {
           "type": "aws_proxy",
-          "uri": "${lambda_count_arn}",
+          "uri": "${signup_user_get_arn}",
           "passthroughBehavior": "when_no_match",
           "httpMethod": "POST",
           "timeoutInMillis": 29000
@@ -240,7 +108,7 @@
             "default": {
               "statusCode": "200",
               "responseParameters": {
-                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'",
                 "method.response.header.Access-Control-Allow-Headers": "'Content-Type'",
                 "method.response.header.Access-Control-Allow-Origin": "'*'"
               }
