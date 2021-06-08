@@ -57,15 +57,22 @@ resource "aws_s3_bucket" "backend" {
   }
 }
 
-/*
+resource "aws_s3_bucket_public_access_block" "backend" {
+  bucket = aws_s3_bucket.backend.id
+
+  block_public_acls   = true
+  block_public_policy = true
+  ignore_public_acls = true
+  restrict_public_buckets = true
+}
+
 resource "aws_s3_bucket_object" "backend_functions" {
   bucket                 = aws_s3_bucket.backend.bucket
-  key                    = "${local.global_functions_version_pipe}/functions.zip"
-  source                 = local.global_functions_zip_path
-  etag                   = filemd5(local.global_functions_zip_path)
+  key                    = "${local.global_functions_version_pipe}/src.zip"
+  source                 = local.global_functions_src_path
+  etag                   = filemd5(local.global_functions_src_path)
   server_side_encryption = "AES256"
 }
-*/
 
 output "s3_website" {
   value = aws_s3_bucket.frontend.website_endpoint

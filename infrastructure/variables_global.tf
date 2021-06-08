@@ -16,14 +16,14 @@ locals {
   global_functions_version_path = "${path.module}/dependencies/functions.version"
   global_functions_version      = file(local.global_functions_version_path)
   global_functions_version_pipe = replace(local.global_functions_version, ".", "-")
+  global_functions_src_path     = "${path.module}/dependencies/src.zip"
 
   global_api_version_path   = "${path.module}/dependencies/api.version"
   global_api_version        = file(local.global_api_version_path)
   global_api_version_pipe   = replace(local.global_api_version, ".", "-")
 
-  /*global_functions_zip_path     = "${path.module}/files/functions.zip"
 
-  global_api_version        = file(local.global_api_version_path)
+  /*global_api_version        = file(local.global_api_version_path)
   global_api_version_pipe   = replace(local.global_api_version, ".", "-")
   global_api_version_path   = "${path.module}/files/api.version"
   global_frontend_dist_path = "${path.module}/files/dist/"

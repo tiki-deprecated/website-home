@@ -12,6 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.1
 
+      - name: Zip Backend Functions
+        run: |
+          cd backend
+          zip -r src.zip functions node_modules utils package.json package-lock.json
+
       - name: Move Dependencies
         run: |
           mkdir infrastructure/dependencies
@@ -27,9 +32,10 @@ jobs:
            | awk -F: '{ print $2 }' \
            | sed 's/[",]//g' \
            | sed 's/^ *//g')
-          echo $FUNCTIONS_VERSION > infrastructure/dependencies/functions.version
-          echo $API_VERSION > infrastructure/dependencies/api.version
+          echo -n $FUNCTIONS_VERSION > infrastructure/dependencies/functions.version
+          echo -n $API_VERSION > infrastructure/dependencies/api.version
           cp backend/oas.json infrastructure/dependencies/oas.json
+          cp backend/src.zip infrastructure/dependencies/src.zip
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
@@ -90,21 +96,3 @@ jobs:
           cd frontend/dist
           aws s3 sync . "s3://$S3_BUCKET_FRONTEND" --exclude "_nuxt/*" --delete --cache-control "max-age=3600"
           aws s3 sync _nuxt/ "s3://$S3_BUCKET_FRONTEND"/_nuxt --delete --cache-control "max-age=31536000, immutable"
-
-      - name: Zip Backend Functions
-        run: |
-          cd backend
-          zip -r src.zip functions node_modules utils package.json package-lock.json
-
-      - name: Push Backend Functions
-        env:
-          S3_BUCKET_BACKEND: ${{ secrets.S3_BUCKET_BACKEND}}
-        run: |
-          FUNCTIONS_VERSION=$(cat backend/package.json \
-                     | grep version \
-                     | head -1 \
-                     | awk -F: '{ print $2 }' \
-                     | sed 's/[",]//g' \
-                     | sed 's/^ *//g')
-          cd backend
-          aws s3 sync src.zip "s3://$S3_BUCKET_BACKEND/$FUNCTIONS_VERSION"

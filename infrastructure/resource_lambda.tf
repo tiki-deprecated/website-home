@@ -3,17 +3,18 @@ data "aws_iam_role" "lambda_exec" {
 }
 
 resource "aws_lambda_function" "signup_user_post" {
-  function_name = "functions/user/post"
+  function_name = "signup_user_post"
 
   s3_bucket = aws_s3_bucket.backend.bucket
-  s3_key    = "${local.global_functions_version_pipe}/src.zip"
+  s3_key = aws_s3_bucket_object.backend_functions.key
+  package_type = "Zip"
 
-  handler = "signup.handler"
-  runtime = "nodejs12.x"
+  handler = "functions/user/post.handler"
+  runtime = "nodejs14.x"
 
   tags = {
     Environment = var.global_tag_environment
-    Service     = var.global_tag_service
+    Service = var.global_tag_service
   }
 
   environment {
@@ -22,5 +23,15 @@ resource "aws_lambda_function" "signup_user_post" {
     }
   }
 
+  source_code_hash = base64sha256(local.global_functions_src_path)
   role = data.aws_iam_role.lambda_exec.arn
+}
+
+
+resource "aws_lambda_permission" "signup_user_post_api" {
+  statement_id  = "AllowAPIGatewayInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.signup_user_post.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_api_gateway_rest_api.signup.execution_arn}/*/*"
 }
