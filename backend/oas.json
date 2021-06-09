@@ -33,7 +33,8 @@
                   "email": {
                     "type": "string",
                     "description": "email address",
-                    "example": "hello@mytiki.com"
+                    "example": "hello@mytiki.com",
+                    "required": true
                   },
                   "referrer": {
                     "type": "string",
@@ -185,6 +186,15 @@
   "x-samples-languages": [
     "curl",
     "javascript",
-    "python"
+    "python",
+    "swift",
+    "java"
+  ],
+  "x-readme.samples-enabled": [
+    "curl",
+    "javascript",
+    "python",
+    "swift",
+    "java"
   ]
 }

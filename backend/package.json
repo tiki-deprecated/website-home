@@ -4,7 +4,7 @@
   "private": true,
   "description": "Lambda functions for website backend",
   "dependencies": {
-    "@sendgrid/client": "^7.4.2",
+    "@sendgrid/client": "^7.4.3",
     "twilio": "^3.55.1"
   },
   "devDependencies": {
