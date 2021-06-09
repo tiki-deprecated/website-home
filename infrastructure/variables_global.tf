@@ -13,9 +13,8 @@ variable "global_tag_service" {}
 //i.e. tiki-website-logs
 variable "global_bucket_logs" {}
 
-variable "global_sendgrid_api_key" {
-  default = ""
-}
+variable "global_sendgrid_api_key" {}
+variable "global_sendgrid_api_validation_key" {}
 
 variable "global_role_lambda_exec" {}
 

@@ -2,29 +2,16 @@ const sendgrid = require("@sendgrid/client");
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = {
-  signup(params, callback) {
+  update(params, callback) {
     const data = {
       contacts: [
         {
-          email: params.contact,
+          email: params.email,
           custom_fields: {
-            e1_T: params.code,
+            e1_T: params.referrer,
             e2_D: new Date().toLocaleString().split(",")[0],
-            e3_T: "false",
-          },
-        },
-      ],
-    };
-    send(data, callback);
-  },
-  participate(params, callback) {
-    const data = {
-      contacts: [
-        {
-          email: params.contact,
-          custom_fields: {
-            e1_T: params.code,
             e3_T: params.optIn.toString(),
+            e4_T: params.confirmed.toString(),
           },
         },
       ],
@@ -34,16 +21,16 @@ module.exports = {
 };
 
 function send(body, callback) {
-  const request = {};
-  request.body = body;
-  request.method = "PUT";
-  request.url = "/v3/marketing/contacts";
   sendgrid
-    .request(request)
+    .request({
+      body,
+      method: "PUT",
+      url: "/v3/marketing/contacts",
+    })
     .then(([response, body]) => {
-      callback(null, { success: true });
+      callback(null, { code: response.statusCode, body });
     })
     .catch(function (error) {
-      callback(error, { success: false });
+      callback(error, null);
     });
 }

@@ -20,9 +20,9 @@
     "/${version_pipe}/user": {
       "post": {
         "tags": [],
-        "summary": "Add User",
-        "description": "Signup a new user",
-        "operationId": "signupUser",
+        "summary": "Add/Update User",
+        "description": "Signup user",
+        "operationId": "userPost",
         "parameters": [],
         "requestBody": {
           "content": {
@@ -30,13 +30,25 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "contact": {
+                  "email": {
                     "type": "string",
-                    "description": "email or phone number"
+                    "description": "email address",
+                    "example": "hello@mytiki.com"
                   },
-                  "code": {
+                  "referrer": {
                     "type": "string",
-                    "description": "affiliate code"
+                    "description": "referral code",
+                    "example": "AB4C"
+                  },
+                  "optIn": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "optIn to design discussions"
+                  },
+                  "confirmed": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "confirmed email address"
                   }
                 }
               }
@@ -45,7 +57,36 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "description": "obfuscated email address",
+                      "example": "****@mytiki.com"
+                    },
+                    "referrer": {
+                      "type": "string",
+                      "description": "referral code",
+                      "example": "AB4C"
+                    },
+                    "optIn": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "optIn to design discussions"
+                    },
+                    "confirmed": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "confirmed email address"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "x-amazon-apigateway-integration": {
@@ -60,13 +101,27 @@
       },
       "get": {
         "tags": [],
-        "summary": "Total Signups",
-        "description": "Get a count of user signups",
-        "operationId": "signupTotal",
+        "summary": "Get Users",
+        "description": "Anonymous Signup Metrics",
+        "operationId": "userGet",
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "integer",
+                      "example": 420,
+                      "description": "total users signed up"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "x-amazon-apigateway-integration": {
