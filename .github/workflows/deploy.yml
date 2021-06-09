@@ -61,7 +61,6 @@ jobs:
         env:
           AWS_REGION: ${{ secrets.AWS_REGION}}
         run: |
-          mkdir infrastructure/dependencies
           TERRAFORM_OUTPUT=$(terraform output)
           API_ID=$(echo $TERRAFORM_OUTPUT \
            | grep api_id \
