@@ -79,7 +79,7 @@ jobs:
            dependencies/oas-rendered.json
         working-directory: infrastructure
 
-      - uses: readmeio/github-readme-sync@2.0.0
+      - uses: readmeio/github-readme-sync@v2
         with:
           readme-oas-key: '${{ secrets.README_OAS_KEY }}'
           oas-file-path: 'infrastructure/dependencies/oas-rendered.json'
