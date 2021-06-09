@@ -26,13 +26,13 @@ resource "aws_cloudfront_distribution" "website" {
 
   //noinspection MissingProperty
   default_cache_behavior {
-    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
-    cached_methods   = ["GET", "HEAD"]
-    target_origin_id = aws_s3_bucket.frontend.bucket
-    compress = true
-    cache_policy_id = "a7fcdb8a-677e-47ba-9a05-8230fed77d83"
+    allowed_methods          = ["GET", "HEAD", "OPTIONS"]
+    cached_methods           = ["GET", "HEAD"]
+    target_origin_id         = aws_s3_bucket.frontend.bucket
+    compress                 = true
+    cache_policy_id          = "a7fcdb8a-677e-47ba-9a05-8230fed77d83"
     origin_request_policy_id = "76b90ba9-bd24-4526-b4e3-e7a1730d9278"
-    viewer_protocol_policy = "redirect-to-https"
+    viewer_protocol_policy   = "redirect-to-https"
   }
 
   price_class = "PriceClass_All"

@@ -5,8 +5,8 @@ data "aws_iam_role" "lambda_exec" {
 resource "aws_lambda_function" "signup_user_post" {
   function_name = "${local.global_bucket_backend}-signup-user-post"
 
-  s3_bucket = aws_s3_bucket.backend.bucket
-  s3_key = aws_s3_bucket_object.backend_functions.key
+  s3_bucket    = aws_s3_bucket.backend.bucket
+  s3_key       = aws_s3_bucket_object.backend_functions.key
   package_type = "Zip"
 
   handler = "functions/user/post.handler"
@@ -14,7 +14,7 @@ resource "aws_lambda_function" "signup_user_post" {
 
   tags = {
     Environment = var.global_tag_environment
-    Service = var.global_tag_service
+    Service     = var.global_tag_service
   }
 
   environment {
@@ -24,7 +24,7 @@ resource "aws_lambda_function" "signup_user_post" {
   }
 
   source_code_hash = base64sha256(local.global_functions_src_path)
-  role = data.aws_iam_role.lambda_exec.arn
+  role             = data.aws_iam_role.lambda_exec.arn
 }
 
 resource "aws_lambda_permission" "signup_user_post" {
@@ -38,8 +38,8 @@ resource "aws_lambda_permission" "signup_user_post" {
 resource "aws_lambda_function" "signup_user_get" {
   function_name = "${local.global_bucket_backend}-signup-user-get"
 
-  s3_bucket = aws_s3_bucket.backend.bucket
-  s3_key = aws_s3_bucket_object.backend_functions.key
+  s3_bucket    = aws_s3_bucket.backend.bucket
+  s3_key       = aws_s3_bucket_object.backend_functions.key
   package_type = "Zip"
 
   handler = "functions/user/get.handler"
@@ -57,7 +57,7 @@ resource "aws_lambda_function" "signup_user_get" {
   }
 
   source_code_hash = base64sha256(local.global_functions_src_path)
-  role = data.aws_iam_role.lambda_exec.arn
+  role             = data.aws_iam_role.lambda_exec.arn
 }
 
 resource "aws_lambda_permission" "signup_user_get" {

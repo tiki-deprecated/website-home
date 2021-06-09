@@ -37,7 +37,7 @@ resource "aws_api_gateway_base_path_mapping" "signup" {
   api_id      = aws_api_gateway_rest_api.signup.id
   stage_name  = aws_api_gateway_stage.signup.stage_name
   domain_name = aws_api_gateway_domain_name.signup.domain_name
-  base_path = "api"
+  base_path   = "api"
 }
 
 output "api_url" {
