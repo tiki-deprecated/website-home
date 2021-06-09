@@ -118,15 +118,15 @@ jobs:
           API_STAGE: ${{ secrets.API_STAGE}}
           AWS_REGION: ${{ secrets.AWS_REGION}}
         run: |
-          mkdir ./infrastructure/files
+          mkdir infrastructure/dependencies
           aws apigateway get-export \
            --rest-api-id $API_ID \
            --stage-name $API_STAGE \
            --export-type oas30 \
            --region $API_REGION \
-           ./infrastructure/files/oas-rendered.json
+           infrastructure/dependencies/oas-rendered.json
 
       - uses: readmeio/github-readme-sync@2.0.0
         with:
           readme-oas-key: '${{ secrets.README_OAS_KEY }}'
-          oas-file-path: './infrastructure/files/oas-rendered.json'
+          oas-file-path: 'infrastructure/dependencies/oas-rendered.json'
