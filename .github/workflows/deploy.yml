@@ -61,23 +61,10 @@ jobs:
         env:
           AWS_REGION: ${{ secrets.AWS_REGION}}
         run: |
-          TERRAFORM_OUTPUT=$(terraform output)
-          API_ID=$(echo $TERRAFORM_OUTPUT \
-           | grep api_id \
-           | head -1 \
-           | awk -F= '{ print $2 }' \
-           | sed 's/[",]//g' \
-           | sed 's/^ *//g')
-          API_STAGE=$(echo $TERRAFORM_OUTPUT \
-           | grep api_stage \
-           | head -1 \
-           | awk -F= '{ print $2 }' \
-           | sed 's/[",]//g' \
-           | sed 's/^ *//g')
-          echo $TERRAFORM_OUTPUT
+          API_ID=$(terraform output -raw api_id)
+          API_STAGE=$(terraform output -raw api_stage)
           echo $API_ID
           echo $API_STAGE
-          echo $AWS_REGION
           aws apigateway get-export \
            --rest-api-id $API_ID \
            --stage-name $API_STAGE \
