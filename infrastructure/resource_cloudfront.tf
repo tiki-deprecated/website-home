@@ -56,7 +56,3 @@ resource "aws_cloudfront_distribution" "website" {
 
   wait_for_deployment = false
 }
-
-output "cloudfront_domain" {
-  value = aws_cloudfront_distribution.website.domain_name
-}

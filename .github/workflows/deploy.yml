@@ -57,6 +57,36 @@ jobs:
         run: terraform apply -auto-approve
         working-directory: infrastructure
 
+      - name: Get OAS
+        env:
+          AWS_REGION: ${{ secrets.AWS_REGION}}
+        run: |
+          mkdir infrastructure/dependencies
+          TERRAFORM_OUTPUT=$(terraform output)
+          API_ID=$(echo $TERRAFORM_OUTPUT \
+           | grep api_id \
+           | head -1 \
+           | awk -F= '{ print $2 }' \
+           | sed 's/[",]//g' \
+           | sed 's/^ *//g')
+          API_STAGE=$(echo $TERRAFORM_OUTPUT \
+           | grep api_stage \
+           | head -1 \
+           | awk -F= '{ print $2 }' \
+           | sed 's/[",]//g' \
+           | sed 's/^ *//g')
+          aws apigateway get-export \
+           --rest-api-id $API_ID \
+           --stage-name $API_STAGE \
+           --export-type oas30 \
+           --region $API_REGION \
+           infrastructure/dependencies/oas-rendered.json
+
+      - uses: readmeio/github-readme-sync@2.0.0
+        with:
+          readme-oas-key: '${{ secrets.README_OAS_KEY }}'
+          oas-file-path: 'infrastructure/dependencies/oas-rendered.json'
+
   content:
     runs-on: ubuntu-latest
 
@@ -96,37 +126,3 @@ jobs:
           cd frontend/dist
           aws s3 sync . "s3://$S3_BUCKET_FRONTEND" --exclude "_nuxt/*" --delete --cache-control "max-age=3600"
           aws s3 sync _nuxt/ "s3://$S3_BUCKET_FRONTEND"/_nuxt --delete --cache-control "max-age=31536000, immutable"
-
-  api:
-    runs-on: ubuntu-latest
-
-    needs: infrastructure
-
-    steps:
-      - uses: actions/checkout@v2.1.1
-
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
-
-      - name: Get OAS
-        env:
-          API_ID: ${{ secrets.API_ID}}
-          API_STAGE: ${{ secrets.API_STAGE}}
-          AWS_REGION: ${{ secrets.AWS_REGION}}
-        run: |
-          mkdir infrastructure/dependencies
-          aws apigateway get-export \
-           --rest-api-id $API_ID \
-           --stage-name $API_STAGE \
-           --export-type oas30 \
-           --region $API_REGION \
-           infrastructure/dependencies/oas-rendered.json
-
-      - uses: readmeio/github-readme-sync@2.0.0
-        with:
-          readme-oas-key: '${{ secrets.README_OAS_KEY }}'
-          oas-file-path: 'infrastructure/dependencies/oas-rendered.json'
