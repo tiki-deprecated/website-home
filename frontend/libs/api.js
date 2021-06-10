@@ -1,62 +1,26 @@
-const API_URL = 'https://api.mytiki.com/'
-const API_VERION = '0-0-3'
-const API_PATH_SIGNUP = '/signup/user'
-const API_PATH_OPT = '/signup/user/opt'
-const API_PATH_COUNT = '/signup/count'
+const API_URL = 'https://signup.dev.mytiki.com/api/'
+const API_VERSION = '0-1-0'
+const API_PATH_USER = '/user'
 
-export async function signUp(axios, contact, code) {
+export async function post(axios, email, referrer, participate) {
+  const body = {}
+  if (email) body.email = email
+  if (referrer) body.referrer = referrer
+  if (participate != null) body.participate = participate
+
   return await axios
-    .$post(
-      API_URL + API_VERION + API_PATH_SIGNUP,
-      {
-        contact,
-        code,
+    .$post(API_URL + API_VERSION + API_PATH_USER, body, {
+      headers: {
+        'Content-Type': 'application/json',
       },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        validateStatus(status) {
-          return status === 200
-        },
-      }
-    )
+      validateStatus(status) {
+        return status === 200
+      },
+    })
     .then(function (data) {
       return {
         success: true,
-        data,
-      }
-    })
-    .catch(function (error) {
-      return {
-        success: false,
-        error,
-      }
-    })
-}
-
-export async function optIn(axios, contact, code, optIn) {
-  return await axios
-    .$post(
-      API_URL + API_VERION + API_PATH_OPT,
-      {
-        contact,
-        code,
-        optIn,
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        validateStatus(status) {
-          return status === 200
-        },
-      }
-    )
-    .then(function (data) {
-      return {
-        success: true,
-        data,
+        body: data.data,
       }
     })
     .catch(function (error) {
@@ -69,7 +33,7 @@ export async function optIn(axios, contact, code, optIn) {
 
 export async function count(axios) {
   return await axios
-    .get(API_URL + API_VERION + API_PATH_COUNT, {
+    .get(API_URL + API_VERSION + API_PATH_USER, {
       headers: {
         'Content-Type': 'application/json',
       },

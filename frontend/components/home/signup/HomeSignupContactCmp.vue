@@ -7,6 +7,7 @@
         autocomplete="off"
         autocapitalize="none"
         class="input"
+        :class="{ inputError: isFailed }"
         @input="onInput"
         @keypress.enter="onSubmit"
       />
@@ -15,11 +16,15 @@
         :class="{
           sendReady: isReady,
           sendNotReady: !isReady,
+          sendError: isFailed,
         }"
         @click="onSubmit"
       >
         <utils-svg-cmp name="home/signup/send" class="icoSend" />
       </div>
+    </div>
+    <div v-if="isFailed" :class="{ errorText: isFailed }">
+      Please enter a valid email
     </div>
     <home-signup-secure-cmp class="secure" />
   </div>
@@ -28,7 +33,7 @@
 <script>
 import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
 import HomeSignupSecureCmp from './HomeSignupSecureCmp'
-import { signUp } from '~/libs/api'
+import { post } from '~/libs/api'
 
 export default {
   name: 'HomeSignupContactCmp',
@@ -42,24 +47,34 @@ export default {
     isReady() {
       return /\S+@\S+\.\S+/.test(this.contact)
     },
+    isFailed() {
+      return this.$store.getters['form_signup/isPosFailed']
+    },
   },
   methods: {
     onInput(inputEvent) {
       this.contact = inputEvent.target.value
+      const isFailed = this.$store.getters['form_signup/isPosFailed']
+      if (isFailed) this.$store.commit('form_signup/setPosContact')
     },
     async onSubmit(submitEvent) {
       submitEvent.preventDefault()
       if (this.isReady) {
         this.$store.commit('form_signup/setContact', this.contact)
         this.$store.commit('form_signup/setPosOpt')
-        await signUp(this.$axios, this.contact, this.$store.state.code).then(
-          function (data) {
-            return data.success
-          }
-        )
-        this.$plausible.trackEvent('Signup', {
-          props: { affiliate: this.$store.state.code },
+        const success = await post(
+          this.$axios,
+          this.contact,
+          this.$store.state.code,
+          null
+        ).then(function (data) {
+          return data.success
         })
+        if (success) {
+          this.$plausible.trackEvent('Signup', {
+            props: { affiliate: this.$store.state.code },
+          })
+        } else this.$store.commit('form_signup/setPosFailed')
       }
     },
   },
@@ -84,11 +99,19 @@ export default {
   color: $blue
   font-weight: 600
 
+.inputError
+  border-color: $red-dark
+  color: $red-dark
+
 .input::placeholder
   color: $gray-xlight
 
 .input:focus
   outline: 0
+
+.errorText
+  font-family: $font-family-montserrat
+  color: $red-dark
 
 .send
   position: relative
@@ -98,6 +121,10 @@ export default {
 .sendReady
   background: $blue-dark
   border-color: $blue-dark
+
+.sendError
+  background: $red-dark
+  border-color: $red-dark
 
 .sendNotReady
   background: $gray-xlight
@@ -137,6 +164,10 @@ export default {
   .secure
     margin-top: 6vw
 
+  .errorText
+    margin: 1vw 0 0 2vw
+    font-size: 3.5vw
+
 @include for-tablet
   .signupContact
     margin: 0 auto
@@ -161,4 +192,8 @@ export default {
 
   .secure
     margin-top: 1.25vw
+
+  .errorText
+    margin: 0.25vw 0 0 1vw
+    font-size: 1vw
 </style>
