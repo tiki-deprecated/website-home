@@ -12,14 +12,12 @@ exports.handler = function (event, context, callback) {
 
   body.email = helpers.sanitizeString(body.email);
   body.referrer = helpers.sanitizeString(body.referrer);
-  body.optIn = helpers.sanitizeBool(body.optIn);
-  body.confirmed = helpers.sanitizeBool(body.confirmed);
 
   sendgrid.update(
     {
       email: body.email,
       referrer: body.referrer,
-      optIn: body.optIn,
+      participate: body.participate,
       confirmed: body.confirmed,
     },
     function (err, data) {
@@ -31,7 +29,7 @@ exports.handler = function (event, context, callback) {
           body: JSON.stringify({
             email: helpers.obfuscateEmail(body.email),
             referrer: body.referrer,
-            optIn: body.optIn,
+            participate: body.participate,
             confirmed: body.confirmed,
           }),
         });

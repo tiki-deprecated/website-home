@@ -41,7 +41,7 @@
                     "description": "referral code",
                     "example": "AB4C"
                   },
-                  "optIn": {
+                  "participate": {
                     "type": "boolean",
                     "default": false,
                     "description": "optIn to design discussions"

@@ -1,9 +1,6 @@
 module.exports = {
   sanitizeString(s) {
-    return s == null ? "" : s.trim().toLowerCase();
-  },
-  sanitizeBool(b) {
-    return b == null ? false : b;
+    return s == null ? null : s.trim().toLowerCase();
   },
   isEmail(s) {
     return /\S+@\S+\.\S+/.test(s);
