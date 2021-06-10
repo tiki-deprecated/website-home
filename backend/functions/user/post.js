@@ -25,7 +25,7 @@ exports.handler = function (event, context, callback) {
       if (data && helpers.is2xx(data.code)) {
         callback(null, {
           statusCode: "200",
-          headers: helpers.corsHeaders,
+          headers: helpers.corsHeaders(),
           body: JSON.stringify({
             email: helpers.obfuscateEmail(body.email),
             referrer: body.referrer,
