@@ -1,6 +1,8 @@
 const sendgrid = require("@sendgrid/client");
 const helpers = require("./helpers.js");
 
+const USER_LIST_ID = "db65441d-ce52-4ec8-8472-cae7cdaebd19";
+
 module.exports = {
   update(params, callback) {
     validateEmail(params.email, function (err, data) {
@@ -15,6 +17,21 @@ module.exports = {
       } else callback(err, { code: 400 });
     });
   },
+  count(callback) {
+    sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+    sendgrid
+      .request({
+        body: {},
+        method: "GET",
+        url: "/v3/marketing/lists/" + USER_LIST_ID + "/contacts/count",
+      })
+      .then(([response, body]) => {
+        callback(null, { code: response.statusCode, body });
+      })
+      .catch(function (error) {
+        callback(error, null);
+      });
+  },
 };
 
 function putContact(params, callback) {
@@ -28,6 +45,7 @@ function putContact(params, callback) {
   sendgrid
     .request({
       body: {
+        list_ids: [USER_LIST_ID],
         contacts: [
           {
             email: params.email,
