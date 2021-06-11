@@ -2,4 +2,4 @@
 *.zip
 
 # Dependency directories
-/functions/node_modules/
+node_modules/
