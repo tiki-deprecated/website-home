@@ -2,7 +2,7 @@
 title: Uprise Partners Backs TIKI on Shared Mission To Take Back Data
 img: /blog-images/uprisepartners_pressrelease-wide.jpg
 alt: Uprise Partners Backs TIKI
-author: Shannon Bryan
+author: Malinda Gagnon
 updatedAt: '2021-06-10'
 category: company
 ---
