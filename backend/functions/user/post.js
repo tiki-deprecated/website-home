@@ -21,8 +21,9 @@ exports.handler = function (event, context, callback) {
         db.updateContactOpt(
           element.contact_info.S,
           element.timestamp_utc.S,
-          body.participate,
-          {}
+          body.participate == null ? false : body.participate,
+          // eslint-disable-next-line no-unused-vars
+          function (_) {}
         );
       });
     } else {
@@ -31,10 +32,11 @@ exports.handler = function (event, context, callback) {
           contact: body.email,
           type: "email",
           isUser: true,
-          code: body.referrer,
-          optIn: body.participate,
+          code: body.referrer == null ? "" : body.referrer,
+          optIn: body.participate == null ? false : body.participate,
         },
-        {}
+        // eslint-disable-next-line no-unused-vars
+        function (_) {}
       );
     }
   });
