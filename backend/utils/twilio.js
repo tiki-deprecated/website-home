@@ -3,7 +3,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const signupServiceId = process.env.TWILIO_SIGNUP_SERVICE_ID;
 const participateServiceId = process.env.TWILIO_PARTICIPATE_SERVICE_ID;
-const twilio = require("twilio")(accountSid, authToken);
+const twilio = require("backend/utils/twilio")(accountSid, authToken);
 
 module.exports = {
   signup(params, callback) {

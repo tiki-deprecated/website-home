@@ -24,6 +24,7 @@ module.exports = {
           opt_in: { BOOL: props.optIn },
         },
       },
+      // eslint-disable-next-line no-unused-vars
       function (err, data) {
         if (err) {
           console.log(err);

@@ -1,3 +1,5 @@
 # Terraform
 .terraform
-files
+.terraform.lock.hcl
+
+dependencies

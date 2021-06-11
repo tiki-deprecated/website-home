@@ -4,7 +4,7 @@ description: User data. We all know this problem; we’re suffering. The root ca
 img: /blog-images/1*CCYt72X4sa5Ax2M8MoO_pw.jpeg
 alt: TIKI
 author: Mike Audi
-updatedAt: '2021-04-21'
+updatedAt: '2021-06-08'
 category: company
 ---
 *Heads up! We don’t do pitch decks. It’s just not our style. We believe a well-written blog to be less ambiguous, more
@@ -27,8 +27,8 @@ join [waitlist](https://mytiki.com/#signup)). Quickly understand what’s collec
 from one place and, if you want, directly sell your data to companies you choose.  
 *Read more about [how it works](https://mytiki.com/blog/your-data).*
 
-People responded. In the first two months, 10k users signed up for our beta. This week, less than four months in, we’ll
-cross **50k** users. Users hear about TIKI mainly from small influencer programs with a bit of digital ad spend for a
+People responded. In the first two months, 10k users signed up for our beta. As of May, less than five months in, we
+crossed **100k** signups. Users hear about TIKI mainly from small influencer programs with a bit of digital ad spend for a
 CAC of ~$0.50.
 
 We oversubscribed ($175k) a small [Pre-Seed](https://mytiki.com/blog/pre-seed-program) in March to continue the user
