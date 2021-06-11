@@ -14,7 +14,7 @@ exports.handler = function (event, context, callback) {
   body.email = helpers.sanitizeString(body.email);
   body.referrer = helpers.sanitizeString(body.referrer);
 
-  db.findContacts(body, function (rsp) {
+  db.findContacts(body.email, function (rsp) {
     if (rsp.success && rsp.data.Items.length > 0) {
       // eslint-disable-next-line no-unused-vars
       rsp.data.Items.forEach(function (element, index, array) {
