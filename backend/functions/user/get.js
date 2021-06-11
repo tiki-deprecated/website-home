@@ -3,7 +3,7 @@
 const helpers = require("../../utils/helpers.js");
 const sendgrid = require("../../utils/sendgrid");
 
-const NUM_SMS_SIGNUPS_IN_TWILIO = 4028;
+const NUM_SMS_SIGNUPS_IN_TWILIO = 11476;
 
 exports.handler = function (event, context, callback) {
   sendgrid.count(function (err, data) {
