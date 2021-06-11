@@ -1,17 +1,16 @@
-variable "aws_iam_role_lambda_exec" {}
-
 data "aws_iam_role" "lambda_exec" {
-  name = var.aws_iam_role_lambda_exec
+  name = var.global_role_lambda_exec
 }
 
-resource "aws_lambda_function" "signup" {
-  function_name = "Signup"
+resource "aws_lambda_function" "signup_user_post" {
+  function_name = "${local.global_bucket_backend}-signup-user-post"
 
-  s3_bucket = aws_s3_bucket.backend.bucket
-  s3_key    = "${local.global_functions_version_pipe}/functions.zip"
+  s3_bucket    = aws_s3_bucket.backend.bucket
+  s3_key       = aws_s3_bucket_object.backend_functions.key
+  package_type = "Zip"
 
-  handler = "signup.handler"
-  runtime = "nodejs12.x"
+  handler = "functions/user/post.handler"
+  runtime = "nodejs14.x"
 
   tags = {
     Environment = var.global_tag_environment
@@ -20,88 +19,54 @@ resource "aws_lambda_function" "signup" {
 
   environment {
     variables = {
-      DYNAMODB_TABLE = var.global_dynamodb_table_name
+      SENDGRID_API_VALIDATION_KEY = var.global_sendgrid_api_validation_key
       SENDGRID_API_KEY = var.global_sendgrid_api_key
+      DYNAMODB_TABLE = var.global_dynamo_table
     }
   }
 
-  source_code_hash = filemd5(local.global_functions_zip_path)
-
-  role = data.aws_iam_role.lambda_exec.arn
+  source_code_hash = base64sha256(local.global_functions_src_path)
+  role             = data.aws_iam_role.lambda_exec.arn
 }
 
-resource "aws_lambda_function" "opt_in" {
-  function_name = "Opt-in"
-
-  s3_bucket = aws_s3_bucket.backend.bucket
-  s3_key    = "${local.global_functions_version_pipe}/functions.zip"
-
-  handler = "opt-in.handler"
-  runtime = "nodejs12.x"
-
-  tags = {
-    Environment = var.global_tag_environment
-    Service     = var.global_tag_service
-  }
-
-  environment {
-    variables = {
-      DYNAMODB_TABLE = var.global_dynamodb_table_name,
-      SENDGRID_API_KEY = var.global_sendgrid_api_key
-    }
-  }
-
-  source_code_hash = filemd5(local.global_functions_zip_path)
-
-  role = data.aws_iam_role.lambda_exec.arn
-}
-
-resource "aws_lambda_function" "count" {
-  function_name = "Count"
-
-  s3_bucket = aws_s3_bucket.backend.bucket
-  s3_key    = "${local.global_functions_version_pipe}/functions.zip"
-
-  handler = "count.handler"
-  runtime = "nodejs12.x"
-
-  tags = {
-    Environment = var.global_tag_environment
-    Service     = var.global_tag_service
-  }
-
-  environment {
-    variables = {
-      DYNAMODB_TABLE = var.global_dynamodb_table_name,
-      SENDGRID_API_KEY = var.global_sendgrid_api_key
-    }
-  }
-
-  source_code_hash = filemd5(local.global_functions_zip_path)
-
-  role = data.aws_iam_role.lambda_exec.arn
-}
-
-resource "aws_lambda_permission" "signup_api" {
+resource "aws_lambda_permission" "signup_user_post" {
   statement_id  = "AllowAPIGatewayInvoke"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.signup.function_name
+  function_name = aws_lambda_function.signup_user_post.function_name
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_api_gateway_rest_api.signup.execution_arn}/*/*"
 }
 
-resource "aws_lambda_permission" "opt_in_api" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.opt_in.function_name
-  principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_api_gateway_rest_api.signup.execution_arn}/*/*"
+resource "aws_lambda_function" "signup_user_get" {
+  function_name = "${local.global_bucket_backend}-signup-user-get"
+
+  s3_bucket    = aws_s3_bucket.backend.bucket
+  s3_key       = aws_s3_bucket_object.backend_functions.key
+  package_type = "Zip"
+
+  handler = "functions/user/get.handler"
+  runtime = "nodejs12.x"
+
+  tags = {
+    Environment = var.global_tag_environment
+    Service     = var.global_tag_service
+  }
+
+  environment {
+    variables = {
+      SENDGRID_API_KEY = var.global_sendgrid_api_key
+      DYNAMODB_TABLE = var.global_dynamo_table
+    }
+  }
+
+  source_code_hash = base64sha256(local.global_functions_src_path)
+  role             = data.aws_iam_role.lambda_exec.arn
 }
 
-resource "aws_lambda_permission" "count_api" {
+resource "aws_lambda_permission" "signup_user_get" {
   statement_id  = "AllowAPIGatewayInvoke"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.count.function_name
+  function_name = aws_lambda_function.signup_user_get.function_name
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_api_gateway_rest_api.signup.execution_arn}/*/*"
 }

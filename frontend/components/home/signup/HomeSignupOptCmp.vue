@@ -22,7 +22,7 @@
 
 <script>
 import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
-import { optIn } from '~/libs/api'
+import { post } from '~/libs/api'
 
 export default {
   name: 'HomeSignupOptCmp',
@@ -45,15 +45,19 @@ export default {
     async submit(opt) {
       this.$store.commit('form_signup/setOpt', opt)
       this.isSubmitted = true
-      await optIn(
+      const success = await post(
         this.$axios,
         this.$store.state.form_signup.contact,
-        '',
+        this.$store.state.code,
         opt
       ).then(function (data) {
         return data.success
       })
-      this.$store.commit('form_signup/setPosDone')
+      if (success) this.$store.commit('form_signup/setPosDone')
+      else {
+        this.isSubmitted = false
+        this.$store.commit('form_signup/setPosFailed')
+      }
     },
   },
 }

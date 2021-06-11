@@ -19,7 +19,7 @@ vars, data, resource, and outputs)
 ## Execution
 Infrastructure relies upon several external (non-tf) files
 that are built and/or placed in files/*. This is automated in
-the github action [cd.yml](../.github/workflows/cd.yml). 
+the github action [cd.yml](../.github/workflows/deploy.yml). 
 These files include:
 - frontend/dist/* - Generated Static Site
 - backend/oas.json - OpenAPI specification
@@ -27,7 +27,7 @@ These files include:
 - backend/functions/functions.zip - Functions Package
 - backend/functions/functions.version - Function Version
 
-Execution automated via [GH action](../.github/workflows/cd.yml)
+Execution automated via [GH action](../.github/workflows/deploy.yml)
 to generate and then deploy the static site and corresponding
 backend functions. Deployments trigger on push to master. Terraform
 Cloud does the actual terraform execution as well as maintains

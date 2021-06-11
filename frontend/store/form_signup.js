@@ -1,5 +1,6 @@
 export const POS_CONTACT = 'contact'
 export const POS_OPT = 'opt'
+export const POS_FAILED = 'failed'
 export const POS_DONE = 'done'
 
 export const state = () => ({
@@ -24,6 +25,9 @@ export const mutations = {
   setPosDone(state) {
     state.pos = POS_DONE
   },
+  setPosFailed(state) {
+    state.pos = POS_FAILED
+  },
   setError(state, error) {
     state.error = error
   },
@@ -38,5 +42,8 @@ export const getters = {
   },
   isPosDone: (state) => {
     return state.pos === POS_DONE
+  },
+  isPosFailed: (state) => {
+    return state.pos === POS_FAILED
   },
 }

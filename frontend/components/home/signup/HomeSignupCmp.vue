@@ -2,7 +2,7 @@
   <div class="signup">
     <home-signup-ltd-cmp :class="{ signupHide: isOpt || isDone }" />
     <home-signup-tribe-cmp :class="{ signupHide: !isOpt }" />
-    <home-signup-contact-cmp :class="{ signupHide: !isContact }" />
+    <home-signup-contact-cmp :class="{ signupHide: isOpt || isDone }" />
     <home-signup-opt-cmp :class="{ signupHide: !isOpt }" />
     <home-signup-done-cmp :class="{ signupHide: !isDone }" />
   </div>

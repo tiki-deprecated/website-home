@@ -1,6 +1,6 @@
 resource "aws_acm_certificate" "ssl" {
   domain_name               = var.global_website_domain
-  subject_alternative_names = ["www.${var.global_website_domain}", "api.${var.global_website_domain}"]
+  subject_alternative_names = ["www.${var.global_website_domain}", "signup.${var.global_website_domain}"]
   validation_method         = "DNS"
 
   tags = {
