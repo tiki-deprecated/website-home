@@ -10,8 +10,6 @@ jobs:
   content:
     runs-on: ubuntu-latest
 
-    needs: infrastructure
-
     steps:
       - uses: actions/checkout@v2.1.1
 

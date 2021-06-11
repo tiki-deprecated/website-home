@@ -5,7 +5,7 @@
       class="link"
     >
       <div class="imageContainer">
-        <img :src="blog.img" :alt="blog.alt" class="image" />
+        <img :src="image" :alt="blog.alt" class="image" />
       </div>
       <h2 class="title">{{ blog.title }}</h2>
       <p class="byline">
@@ -31,6 +31,13 @@ export default {
     blog: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    image() {
+      return this.blog.img != null
+        ? this.blog.img
+        : '/blog-images/card-default.jpg'
     },
   },
 }
@@ -62,6 +69,7 @@ export default {
 @include for-phone
   .image
     width: 100%
+    border-radius: 4vw
 
   .title
     font-size: 5vw
@@ -73,12 +81,13 @@ export default {
     margin: 1vw 0 0 0
 
   .imageContainer
-    border-radius: 4vw
     height: 20vh
+    border-radius: 4vw
 
 @include for-tablet
   .image
     width: 100%
+    border-radius: 1vw
 
   .title
     font-size: 1.25vw
@@ -89,6 +98,6 @@ export default {
     margin: 0
 
   .imageContainer
-    border-radius: 1vw
     height: 20vh
+    border-radius: 1vw
 </style>
