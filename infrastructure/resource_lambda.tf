@@ -21,6 +21,7 @@ resource "aws_lambda_function" "signup_user_post" {
     variables = {
       SENDGRID_API_VALIDATION_KEY = var.global_sendgrid_api_validation_key
       SENDGRID_API_KEY = var.global_sendgrid_api_key
+      DYNAMODB_TABLE = var.global_dynamo_table
     }
   }
 
@@ -54,6 +55,7 @@ resource "aws_lambda_function" "signup_user_get" {
   environment {
     variables = {
       SENDGRID_API_KEY = var.global_sendgrid_api_key
+      DYNAMODB_TABLE = var.global_dynamo_table
     }
   }
 

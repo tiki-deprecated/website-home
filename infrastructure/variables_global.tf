@@ -17,6 +17,7 @@ variable "global_sendgrid_api_key" {}
 variable "global_sendgrid_api_validation_key" {}
 
 variable "global_role_lambda_exec" {}
+variable "global_dynamo_table" {}
 
 locals {
   global_bucket_frontend = "tiki-${lower(var.global_tag_service)}-frontend-${lower(var.global_tag_environment)}"

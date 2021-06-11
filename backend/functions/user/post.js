@@ -2,6 +2,7 @@
 
 const helpers = require("../../utils/helpers.js");
 const sendgrid = require("../../utils/sendgrid");
+const db = require("../../utils/db");
 
 exports.handler = function (event, context, callback) {
   if (event.body == null) callback(null, helpers.badRequest());
@@ -12,6 +13,31 @@ exports.handler = function (event, context, callback) {
 
   body.email = helpers.sanitizeString(body.email);
   body.referrer = helpers.sanitizeString(body.referrer);
+
+  db.findContacts(body, function (rsp) {
+    if (rsp.success && rsp.data.Items.length > 0) {
+      // eslint-disable-next-line no-unused-vars
+      rsp.data.Items.forEach(function (element, index, array) {
+        db.updateContactOpt(
+          element.contact_info.S,
+          element.timestamp_utc.S,
+          body.participate,
+          {}
+        );
+      });
+    } else {
+      db.addContact(
+        {
+          contact: body.email,
+          type: "email",
+          isUser: true,
+          code: body.referrer,
+          optIn: body.participate,
+        },
+        {}
+      );
+    }
+  });
 
   sendgrid.update(
     {
