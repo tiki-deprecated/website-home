@@ -1,4 +1,3 @@
-
 ---
 title: Release 0.1.0 is here
 img: /blog-images/nomoresecrets_release_0_1_0.jpeg
