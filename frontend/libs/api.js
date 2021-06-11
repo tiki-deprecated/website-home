@@ -1,4 +1,4 @@
-const API_URL = 'https://signup.dev.mytiki.com/api/'
+const API_URL = 'https://signup.mytiki.com/api/'
 const API_VERSION = '0-1-0'
 const API_PATH_USER = '/user'
 
