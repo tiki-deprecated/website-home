@@ -1,7 +1,9 @@
 <template>
   <div class="page">
     <div class="bkg">
-      <confirmed-confetti-cmp class="confetti" />
+      <div class="confetti-wrap">
+        <confirmed-confetti-cmp class="confetti" />
+      </div>
     </div>
     <div class="fgd">
       <div class="fdgWrapper">
@@ -60,13 +62,6 @@ body
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.bkg
-  position: absolute
-  z-index: 1
-  left: 50%
-  top: 0
-  transform: translate(-50%, 0)
-
 .fgd
   width: 100%
   position: absolute
@@ -103,7 +98,29 @@ body
   .footer
     margin-top: 15vw
 
+  .bkg
+    position: absolute
+    z-index: 1
+    left: 0
+    top: 0
+    width: 100%
+    height: 60vw
+    overflow: hidden
+
+  .confetti-wrap
+    position: absolute
+    z-index: 1
+    left: -30%
+    top: 0
+
 @include for-tablet
+  .bkg
+    position: absolute
+    z-index: 1
+    left: 50%
+    top: 0
+    transform: translate(-50%, 0)
+
   .pineapple
     margin-top: 10vw
 
