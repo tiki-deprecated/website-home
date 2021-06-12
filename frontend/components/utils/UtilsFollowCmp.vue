@@ -68,10 +68,10 @@
 </template>
 
 <script>
-import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
+import UtilsSvgCmp from './UtilsSvgCmp'
 
 export default {
-  name: 'HomeFollowBtnCmp',
+  name: 'UtilsFollowCmp',
   components: { UtilsSvgCmp },
   methods: {
     socialClick(clickEvent, href, platform) {

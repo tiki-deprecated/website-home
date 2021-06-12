@@ -2,6 +2,7 @@
 title: Competitive Landscape
 description: The goal is a trusted destination for data for all users. The greatest competitive advantage is loyal users.
 author: Mike Audi
+updatedAt: '2021-06-05'
 category: company
 ---
 > A classic investor question is, what is your competitive differentiation?

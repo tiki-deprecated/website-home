@@ -49,7 +49,8 @@ export default {
         this.$axios,
         this.$store.state.form_signup.contact,
         this.$store.state.code,
-        opt
+        opt,
+        null
       ).then(function (data) {
         return data.success
       })
