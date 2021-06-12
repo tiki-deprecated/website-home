@@ -36,6 +36,7 @@ module.exports = {
 
 function putContact(params, callback) {
   let customFields = {};
+  customFields.e9_T = encodeURIComponent(params.email);
   if (params.referrer != null) customFields.e1_T = params.referrer;
   if (params.participate != null)
     customFields.e3_T = params.participate.toString();
