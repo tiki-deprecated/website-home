@@ -5,7 +5,6 @@ img: /blog-images/why-gmail.jpg
 alt: "Getting hold of your emails can be pure gold for Gmail’s profiling"
 author: Anna Stoilova
 updatedAt: '2021-05-24'
-featured: true
 category: product
 ---
 
