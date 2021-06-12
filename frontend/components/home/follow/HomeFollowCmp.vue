@@ -1,17 +1,17 @@
 <template>
   <div class="follow">
     <home-follow-text-cmp />
-    <home-follow-btn-cmp />
+    <follow-btn-cmp />
   </div>
 </template>
 
 <script>
+import FollowBtnCmp from '../../utils/UtilsFollowCmp'
 import HomeFollowTextCmp from './HomeFollowTextCmp'
-import HomeFollowBtnCmp from './HomeFollowBtnCmp'
 
 export default {
   name: 'HomeFollowCmp',
-  components: { HomeFollowTextCmp, HomeFollowBtnCmp },
+  components: { HomeFollowTextCmp, FollowBtnCmp },
 }
 </script>
 

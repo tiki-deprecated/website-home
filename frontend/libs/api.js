@@ -2,11 +2,12 @@ const API_URL = 'https://signup.mytiki.com/api/'
 const API_VERSION = '0-1-0'
 const API_PATH_USER = '/user'
 
-export async function post(axios, email, referrer, participate) {
+export async function post(axios, email, referrer, participate, confirmed) {
   const body = {}
   if (email) body.email = email
   if (referrer) body.referrer = referrer
   if (participate != null) body.participate = participate
+  if (confirmed != null) body.confirmed = confirmed
 
   return await axios
     .$post(API_URL + API_VERSION + API_PATH_USER, body, {
