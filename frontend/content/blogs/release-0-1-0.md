@@ -4,7 +4,6 @@ img: /blog-images/nomoresecrets_release_0_1_0.jpeg
 alt: No more secrets
 author: Anna Stoilova
 updatedAt: '2021-06-10'
-featured: true
 category: product
 ---
 

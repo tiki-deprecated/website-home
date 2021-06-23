@@ -4,7 +4,7 @@ title: How will the TIKI app look and feel? Peek at the prototypes
 img: /blog-images/nomoresecrets_release_0_1_0.jpeg
 alt: A peak into the prototype
 author: Anna Stoilova
-updatedAt: '2021-06-17'
+updatedAt: '2021-06-23'
 featured: true
 category: product
 ---
