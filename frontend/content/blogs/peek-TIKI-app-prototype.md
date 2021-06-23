@@ -1,4 +1,3 @@
-
 ---
 title: How will the TIKI app look and feel? Peek at the prototypes
 img: /blog-images/nomoresecrets_release_0_1_0.jpeg
