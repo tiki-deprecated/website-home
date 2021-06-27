@@ -3,6 +3,7 @@
 const helpers = require("../../utils/helpers.js");
 const sendgrid = require("../../utils/sendgrid");
 const db = require("../../utils/db");
+const adjust = require("../../utils/adjust");
 
 //const NUM_SMS_SIGNUPS_IN_TWILIO = 11476;
 
@@ -20,7 +21,7 @@ exports.handler = function (event, context, callback) {
           statusCode: "200",
           headers: helpers.corsHeaders(),
           body: JSON.stringify({
-            total: data.body.contact_count,
+            total: adjust.lookup(data.body.contact_count),
           }),
         });
       } else callback(null, { statusCode: "500", headers: helpers.corsHeaders() });
