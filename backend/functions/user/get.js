@@ -7,7 +7,9 @@ const db = require("../../utils/db");
 //const NUM_SMS_SIGNUPS_IN_TWILIO = 11476;
 
 exports.handler = function (event, context, callback) {
-  console.log(event.referrer);
+  console.log("body: " + event.body);
+  console.log("referrer: " + event.referrer);
+  console.log("proxy: " + event["queryStringParameters"]["referrer"]);
 
   db.getTotal(function (rsp) {
     if (rsp.success) {
