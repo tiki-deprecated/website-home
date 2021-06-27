@@ -21,7 +21,7 @@ exports.handler = function (event, context, callback) {
           statusCode: "200",
           headers: helpers.corsHeaders(),
           body: JSON.stringify({
-            total: adjust.lookup(data.body.contact_count),
+            total: adjust.lookup(referrer, data.body.contact_count),
           }),
         });
       } else callback(null, { statusCode: "500", headers: helpers.corsHeaders() });
