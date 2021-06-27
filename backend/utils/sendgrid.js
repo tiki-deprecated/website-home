@@ -32,6 +32,23 @@ module.exports = {
         callback(error, null);
       });
   },
+  search(referrer, callback) {
+    sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+    sendgrid
+      .request({
+        body: {
+          query: "address_line_2 = '" + referrer + "'",
+        },
+        method: "POST",
+        url: "/v3/marketing/contacts/search",
+      })
+      .then(([response, body]) => {
+        callback(null, { code: response.statusCode, body });
+      })
+      .catch(function (error) {
+        callback(error, null);
+      });
+  },
 };
 
 function putContact(params, callback) {
