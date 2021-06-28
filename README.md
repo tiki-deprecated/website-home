@@ -4,6 +4,8 @@ True transparency extends even to the company website.
 The code here is not always pretty or fancy, but it gets
 the job done. 
 
+[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/7r9v.svg)](https://status.mytiki.com)
+
 ## Project Structure
 - [frontend](frontend/README.md) - static site gen.
 - [backend](backend/README.md) - user signup api + db

@@ -105,7 +105,18 @@
         "summary": "Get Users",
         "description": "Anonymous Signup Metrics",
         "operationId": "userGet",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "referrer",
+            "in": "query",
+            "description": "filter by referrer code",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "AX41"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",

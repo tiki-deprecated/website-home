@@ -4,7 +4,7 @@ description: User data. We all know this problem; we’re suffering. The root ca
 img: /blog-images/1*CCYt72X4sa5Ax2M8MoO_pw.jpeg
 alt: TIKI
 author: Mike Audi
-updatedAt: '2021-06-08'
+updatedAt: '2021-06-22'
 category: company
 ---
 *Heads up! We don’t do pitch decks. It’s just not our style. We believe a well-written blog to be less ambiguous, more
@@ -58,8 +58,8 @@ with user-centricity, trust, and transparency. To this end, we publish everythin
 approach creates sustainable growth. There is a future in which the tech giants and TIKI happily coexist; just look at
 Roku and Netflix, HBO, Disney, etc.
 
-We’re raising a seed round in May to reach 1 million users by the end of the year. Along the way, we will deliver an
-amazing product and, yes, even generate some revenue. TIKI is user-first. Users deserve control of their data. If this
+We’re raising a pre-seed round to accelerate delivery of an amazing product to our 100k user (and growing) waitlist.
+Along the way, maybe even generate some revenue. TIKI is user-first. Users deserve control of their data. If this
 mission resonates, we’d love to hear from you.
 
 **Want to learn more? Read about**
