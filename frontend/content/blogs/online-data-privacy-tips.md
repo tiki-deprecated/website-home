@@ -1,4 +1,3 @@
-
 ---
 title: TIKI Tips: Simple ways to take control of your online data right now
 img: /blog-images/blog_tikitips.png
