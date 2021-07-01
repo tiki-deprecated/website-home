@@ -1,10 +1,9 @@
 ---
 title: How will the TIKI app look and feel? Peek at the prototypes
-img: /blog-images/nomoresecrets_release_0_1_0.jpeg
+img: /blog-images/1*jlgC5uGKujQhHeTCP_GtIg.jpg
 alt: A peak into the prototype
 author: Anna Stoilova
-updatedAt: '2021-06-23'
-featured: true
+updatedAt: '2021-07-01'
 category: product
 ---
 
@@ -50,7 +49,7 @@ Ok, got it, now show me…
 
 In the prototype below, we’d like to show you what we’re building next over the next month (June/July 2021). For more details, [see our roadmap.](https://www.notion.so/mytiki/206e9e86c520468ea604e057c0f0dea7?v=20062bf2771d4952840f862334a6cfc5)
 
-![Prototype of we're releasing next](/blog-images/prototype1_061721.jpeg "what we're working on now")
+![Prototype of we're releasing next](/blog-images/1*jlgC5uGKujQhHeTCP_GtIg.jpg "what we're working on now")
 
 
  Take a look! **[Design prototype of what we’re releasing next](https://www.figma.com/proto/KLjKKYholojX3SZ2apnRHh/Product---Beta-app?page-id=1954%3A205&node-id=2327%3A9328&viewport=-2602%2C396%2C0.34398430585861206&scaling=scale-down)** (❗ Best viewed on desktop computer)
@@ -59,7 +58,7 @@ In the prototype below, we’d like to show you what we’re building next over 
 
 In the 2nd prototype below is our so called “Product Vision” piece, which is showing what we want to create in around a year’s time.
 
-![Prototype of what TIKI might look like in the future](/blog-images/prototype2_061721.jpeg "prototype of future")
+![Prototype of what TIKI might look like in the future](/blog-images/1*TqgK8tdc_eRylgBrkdWNKA.jpg "prototype of future")
 
 
  Take a look! **[Design prototype of what the app may look in the future](https://www.figma.com/proto/KLjKKYholojX3SZ2apnRHh/Product---Beta-app?kind=&node-id=1648%3A53&page-id=1410%3A0&scaling=min-zoom&viewport=630%2C612%2C0.1420566439628601)** (❗ Best viewed on desktop computer)

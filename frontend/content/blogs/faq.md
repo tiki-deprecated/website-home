@@ -4,6 +4,7 @@ img: /blog-images/1*rmAucNj5y8JLu55cXlhTyQ.png
 alt: Your questions answered
 author: Shane Faria
 updatedAt: '2021-01-15'
+featured: true
 category: help
 ---
 Got questions about what we are doing at TIKI? We hope this article will help answer questions you may have regarding
