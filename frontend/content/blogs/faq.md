@@ -27,6 +27,25 @@ can stop, start, or change your settings at any point.
 The amount that you get paid will depend on the accounts that you link and the amount of data you want to sell. To
 start, we estimate you can get paid up to **$10/month**. We believe we can grow this to over **$100/month**.
 
+## Is the TIKI app available to download now? 
+A beta version with limited features is available now, and users are currently helping us test it! We’ve been excited to see so much interest in this early version and hear feedback on all the ways we can continue to make it even more useful, user-friendly, and awesome. Thanks to this interest, we’re rolling out beta access slowly. If you’d like to check out the beta and join the community of people helping us make TIKI great, sign up at https://mytiki.com/#signup. We’ll email you with instructions for downloading the beta app as we continue adding users and you’ll be in the know with all that’s happening behind the scenes. 
+
+
+## What features are available in the app right now? 
+Our initial focus is on Gmail and all the ways Gmail scans and stores what you do online. Currently on TIKI, you can connect your Gmail account and view Google’s activity tracking and delete or disable it, turning off ad personalization and smart features to stop Google from scanning your emails. Here’s why we’ve started with Gmail: [Why Gmail](https://mytiki.com/blog/why-gmail)
+
+There are also tips for using a VPN and encrypted email. You’ll also be given a TIKI code to share with friends; you get $5 for every 10 people who join. 
+
+To stay apprised of what we’re working on, what new features are being rolled out, as well as our overall timeline for launch, [see the product roadmap](mytiki.com/roadmap). And check out [product updates on our blog](https://mytiki.com/blog/category/product).
+
+
+## When can I start getting paid?
+Soon. But not quite yet. We’re eager to get TIKI launched, too, but want to make sure all the features work seamlessly first. The best way to see where we are in the process is the [product roadmap](mytiki.com/roadmap). We also post updates to [our blog](https://mytiki.com/blog/category/product).
+
+## How do I stay connected with the TIKI Tribe, ask questions, or share feedback? 
+
+If you have any questions, you can always chat to us directly in our community channels [Discord](https://discord.com/invite/evjYQq48Be), [Telegram](https://t.me/mytikiapp), or [Signal](https://signal.group/#CjQKIA66Eq2VHecpcCd-cu-dziozMRSH3EuQdcZJNyMOYNi5EhC0coWtjWzKQ1dDKEjMqhkP).  
+
 ## How do I sign up?
 
 Sign up to take one of our limited spaces at [mytiki.com](https://mytiki.com/#signup)! We will then let you know shortly
