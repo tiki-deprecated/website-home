@@ -18,7 +18,6 @@ Gmail reads, stores, and analyzes every single one of your emails. That data is 
 
 Not loving the thought of Gmail knowing all your business? You can turn off both ad personalization and “smart features” to stop Google from scanning your emails: [support.google.com/mail/answer/10079371](https://support.google.com/mail/answer/10079371).
 
-
 ## 2. View your Google activity history (and delete it or disable tracking altogether)
 
 We know Google tracks our activity. But to actually SEE IT all there - every word searched on google.com, every location you looked up in maps, every true crime video you watched on YouTube, not to mention what time it was and which device you were on - just feels gross.
