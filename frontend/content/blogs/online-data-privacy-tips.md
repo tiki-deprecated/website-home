@@ -1,10 +1,9 @@
 ---
-title: TIKI Tips: Simple ways to take control of your online data right now
+title: "TIKI Tips: Simple ways to take control of your online data right now"
 img: /blog-images/blog_tikitips.png
 alt: TIKI tips
 author: Shannon Bryan 
 updatedAt: '2021-06-28'
-featured: 
 category: product
 ---
 
