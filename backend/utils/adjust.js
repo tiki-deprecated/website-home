@@ -34,7 +34,7 @@ module.exports = {
       case "$00015":
         return val + 9;
       case "$006YJ":
-        return val + 9;
+        return val + 10;
       case "$004XT":
         return val + 8;
       case "$0000T":
@@ -683,6 +683,10 @@ module.exports = {
         return val + 1;
       case "$0004Q":
         return val + 1;
+      case "$001OQ":
+        return val + 22;
+      case "$004JA":
+        return val + 11;
       default:
         return val;
     }
