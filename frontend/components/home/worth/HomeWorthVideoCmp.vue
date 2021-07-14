@@ -4,8 +4,8 @@
       <iframe
         width="560"
         height="315"
-        :src="'https://www.youtube.com/embed/YFZm9mwWGOY?autoplay=1'"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        :src="'https://www.youtube.com/embed/FSQv6CNfy00?autoplay=1'"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; clipboard-write"
         allowfullscreen
         class="videoIframe"
       />
@@ -14,14 +14,27 @@
       <img
         sizes="(max-width: 1400px) 100vw, 1400px"
         srcset="
-          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1280.jpg  200w,
-          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_572.jpg   572w,
-          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_831.jpg   831w,
-          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1041.jpg 1041w,
-          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1250.jpg 1250w,
-          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1280.jpg 1280w
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_200.png   200w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_350.png   350w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_463.png   463w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_568.png   568w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_643.png   643w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_727.png   727w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_804.png   804w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_866.png   866w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_938.png   938w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_993.png   993w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1045.png 1045w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1108.png 1108w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1160.png 1160w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1216.png 1216w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1254.png 1254w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1305.png 1305w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1356.png 1356w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1396.png 1396w,
+          ~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1400.png 1400w
         "
-        src="~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1280.jpg"
+        src="~/assets/images/png/home/worth/yt-placeholder/yt-placeholder_w_1400.png"
         alt="So why do you get nothing?"
         class="placeholderImg"
       />
