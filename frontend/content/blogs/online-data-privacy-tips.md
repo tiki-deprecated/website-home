@@ -1,10 +1,9 @@
 ---
-title: TIKI Tips: Simple ways to take control of your online data right now
+title: "TIKI Tips: Simple ways to take control of your online data right now"
 img: /blog-images/blog_tikitips.png
 alt: TIKI tips
 author: Shannon Bryan 
 updatedAt: '2021-06-28'
-featured: 
 category: product
 ---
 
@@ -17,7 +16,6 @@ Gmail knows what you’ve written to your friends.
 Gmail reads, stores, and analyzes every single one of your emails. That data is used for targeted ads and what they call “smart features,” like automatically adding your flight information to your calendar. 
 
 Not loving the thought of Gmail knowing all your business? You can turn off both ad personalization and “smart features” to stop Google from scanning your emails: [support.google.com/mail/answer/10079371](https://support.google.com/mail/answer/10079371).
-
 
 ## 2. View your Google activity history (and delete it or disable tracking altogether)
 
