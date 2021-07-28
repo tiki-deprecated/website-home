@@ -1,6 +1,6 @@
 ---
 title: TIKI Release Updates
-img: /blog-images/TIKI_updatesheader.png
+img: /blog-images/TIKI_updatesheader.jpg
 alt: TIKI release updates
 author: Anna Stoilova
 updatedAt: '2021-07-14'
