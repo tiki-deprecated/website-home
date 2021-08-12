@@ -1,5 +1,3 @@
-
-
 ---
 title: Your Digital Profile Knows More About You Than You Know About You (and You Gave It to Google for Free)
 img: /blog-images/tiki_blog_googleknowsyou.png
@@ -9,7 +7,6 @@ updatedAt: '2021-08-07'
 featured: 
 category: product
 ---
-
 Do you know yourself as well as [Google knows you?](https://www.youtube.com/watch?v=OMOGaugKpzs)
 
 No, really. Think about it for a second. You don’t need to go [full Descartes,](https://3.bp.blogspot.com/-GF33nruvSag/WXrwGoA15AI/AAAAAAAADsg/FY-yAfpih341YJ7S9shhHxjDAiMZ_EWsACLcBGAs/s1600/cog.jpg) but what do you honestly think? What about ten years ago? Fifteen? Thirty? (I’ve used up my current life quota, but feel free to keep reminiscing in intervals of your choice).
