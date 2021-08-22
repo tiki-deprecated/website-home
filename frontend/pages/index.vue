@@ -2,7 +2,7 @@
   <div class="page">
     <div class="stack">
       <home-header-cmp />
-      <home-raffle-cmp />
+      <home-cf-cmp />
       <home-signup-cmp id="signup" class="signupCmp" />
       <home-worth-cmp class="worthCmp" />
       <home-features-cmp />
@@ -31,7 +31,7 @@ import HomeBelieveCmp from '../components/home/believe/HomeBelieveCmp'
 import HomeBetaCmp from '../components/home/beta/HomeBetaCmp'
 import HomeFollowCmp from '../components/home/follow/HomeFollowCmp'
 import HomePrivacyCmp from '../components/home/privacy/HomePrivacyCmp'
-import HomeRaffleCmp from '../components/home/raffle/HomeRaffleCmp'
+import HomeCfCmp from '../components/home/cf/HomeCfCmp'
 import HomeCfPopupCmp from '../components/home/cf/HomeCfPopupCmp'
 import HomeCfBannerCmp from '../components/home/cf/HomeCfBannerCmp'
 
@@ -40,7 +40,7 @@ export default {
   components: {
     HomeCfBannerCmp,
     HomeCfPopupCmp,
-    HomeRaffleCmp,
+    HomeCfCmp,
     HomePrivacyCmp,
     HomeFollowCmp,
     HomeBetaCmp,

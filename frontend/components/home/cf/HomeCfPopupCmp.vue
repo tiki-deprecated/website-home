@@ -123,6 +123,7 @@ export default {
   font-weight: bold
   text-align: center
   width: fit-content
+  cursor: pointer
 
 @include for-phone
   .popupWrapper
