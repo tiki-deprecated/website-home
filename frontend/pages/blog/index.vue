@@ -1,70 +1,74 @@
 <template>
-  <div>
-    <blog-header-cmp />
-    <div class="explain">
-      Here you’ll find all you need to know about TIKI - mission, team, product
-      and everything else.
-    </div>
-    <div class="content">
-      <div class="section">
-        <div class="sectionTitle">Latest</div>
-        <blog-card-cmp :blog="latest" />
+  <div class="page">
+    <div class="stack">
+      <blog-header-cmp />
+      <div class="explain">
+        Here you’ll find all you need to know about TIKI - mission, team,
+        product and everything else.
       </div>
-      <div class="section">
-        <div class="sectionTitle">Featured</div>
-        <div v-for="feature of featured" :key="feature.slug">
-          <blog-card-cmp :blog="feature" class="feature" />
+      <div class="content">
+        <div class="section">
+          <div class="sectionTitle">Latest</div>
+          <blog-card-cmp :blog="latest" />
+        </div>
+        <div class="section">
+          <div class="sectionTitle">Featured</div>
+          <div v-for="feature of featured" :key="feature.slug">
+            <blog-card-cmp :blog="feature" class="feature" />
+          </div>
+        </div>
+        <div id="categories" class="section">
+          <div class="sectionTitle">Categories</div>
+          <div class="categories">
+            <blog-tile-cmp
+              icon="blog/finger"
+              name="Product"
+              category="product"
+              class="category"
+              color="#5CE9D8"
+            />
+            <blog-tile-cmp
+              icon="blog/pineapple"
+              name="Company"
+              category="company"
+              class="category"
+              color="#FCDA57"
+            />
+            <blog-tile-cmp
+              icon="blog/microphone"
+              name="Press & Media"
+              category="press"
+              class="category"
+              color="#8DB0FF"
+            />
+            <blog-tile-cmp
+              icon="blog/help"
+              name="Help & Support"
+              category="help"
+              class="category"
+              color="#FEA184"
+            />
+            <blog-tile-cmp
+              icon="blog/robot"
+              name="The Tech"
+              category="tech"
+              class="category"
+              color="#91DBC0"
+            />
+            <blog-tile-cmp
+              icon="blog/check"
+              name="All"
+              category="all"
+              class="category"
+              color="#D8D8D8"
+            />
+          </div>
         </div>
       </div>
-      <div id="categories" class="section">
-        <div class="sectionTitle">Categories</div>
-        <div class="categories">
-          <blog-tile-cmp
-            icon="blog/finger"
-            name="Product"
-            category="product"
-            class="category"
-            color="#5CE9D8"
-          />
-          <blog-tile-cmp
-            icon="blog/pineapple"
-            name="Company"
-            category="company"
-            class="category"
-            color="#FCDA57"
-          />
-          <blog-tile-cmp
-            icon="blog/microphone"
-            name="Press & Media"
-            category="press"
-            class="category"
-            color="#8DB0FF"
-          />
-          <blog-tile-cmp
-            icon="blog/help"
-            name="Help & Support"
-            category="help"
-            class="category"
-            color="#FEA184"
-          />
-          <blog-tile-cmp
-            icon="blog/robot"
-            name="The Tech"
-            category="tech"
-            class="category"
-            color="#91DBC0"
-          />
-          <blog-tile-cmp
-            icon="blog/check"
-            name="All"
-            category="all"
-            class="category"
-            color="#D8D8D8"
-          />
-        </div>
-      </div>
+      <utils-footer-cmp />
     </div>
-    <utils-footer-cmp />
+    <home-cf-popup-cmp class="cfPopupCmp" />
+    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
@@ -73,10 +77,19 @@ import BlogHeaderCmp from '../../components/blog/BlogHeaderCmp'
 import BlogTileCmp from '../../components/blog/BlogTileCmp'
 import BlogCardCmp from '../../components/blog/BlogCardCmp'
 import UtilsFooterCmp from '../../components/utils/footer/UtilsFooterCmp'
+import HomeCfPopupCmp from '../../components/home/cf/HomeCfPopupCmp'
+import HomeCfBannerCmp from '../../components/home/cf/HomeCfBannerCmp'
 
 export default {
   name: 'BlogIndex',
-  components: { UtilsFooterCmp, BlogCardCmp, BlogTileCmp, BlogHeaderCmp },
+  components: {
+    UtilsFooterCmp,
+    BlogCardCmp,
+    BlogTileCmp,
+    BlogHeaderCmp,
+    HomeCfPopupCmp,
+    HomeCfBannerCmp,
+  },
   async asyncData({ $content, params }) {
     const blogs = await $content('blogs')
       .only([
@@ -106,6 +119,15 @@ export default {
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
+.page
+  width: 100%
+  position: relative
+
+.stack
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1
 
 .sectionTitle
   font-family: $font-family-koara
@@ -120,6 +142,14 @@ export default {
 .explain
   font-family: $font-family-nunito-sans
   color: $gray-xdark
+
+.cfPopupCmp
+  position: fixed
+  z-index: 9
+
+.cfBannerCmp
+  position: fixed
+  z-index: 9
 
 @include for-phone
   .content
@@ -141,6 +171,11 @@ export default {
 
   .category
     margin: 2vw 2vw
+
+  .cfBannerCmp
+    bottom: 10vw
+    right: 5vw
+
 @include for-tablet
   .content
     width: 40%
@@ -163,4 +198,8 @@ export default {
     width: fit-content
     margin: 2vw auto
     font-size: 1vw
+
+  .cfBannerCmp
+    bottom: 3vw
+    left: 2vw
 </style>

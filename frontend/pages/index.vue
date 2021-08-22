@@ -15,7 +15,8 @@
     <home-timeline-cmp class="timelineCmp" />
     <home-beta-cmp class="betaCmp" />
     <home-privacy-cmp class="privacyCmp" />
-    <home-cf-popup-cmp class="cfCmp" />
+    <home-cf-popup-cmp class="cfPopupCmp" />
+    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
@@ -32,10 +33,12 @@ import HomeFollowCmp from '../components/home/follow/HomeFollowCmp'
 import HomePrivacyCmp from '../components/home/privacy/HomePrivacyCmp'
 import HomeRaffleCmp from '../components/home/raffle/HomeRaffleCmp'
 import HomeCfPopupCmp from '../components/home/cf/HomeCfPopupCmp'
+import HomeCfBannerCmp from '../components/home/cf/HomeCfBannerCmp'
 
 export default {
   name: 'Index',
   components: {
+    HomeCfBannerCmp,
     HomeCfPopupCmp,
     HomeRaffleCmp,
     HomePrivacyCmp,
@@ -81,7 +84,11 @@ export default {
   position: fixed
   z-index: 8
 
-.cfCmp
+.cfPopupCmp
+  position: fixed
+  z-index: 9
+
+.cfBannerCmp
   position: fixed
   z-index: 9
 
@@ -105,6 +112,11 @@ export default {
   .betaCmp
     top: 1215vw
     left: 0
+
+  .cfBannerCmp
+    bottom: 10vw
+    right: 5vw
+
 @include for-tablet
   .timelineCmp
     top: 147vw
@@ -128,4 +140,8 @@ export default {
   .betaCmp
     top: 225vw
     left: 0
+
+  .cfBannerCmp
+    bottom: 3vw
+    left: 2vw
 </style>
