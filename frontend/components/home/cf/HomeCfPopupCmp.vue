@@ -49,7 +49,20 @@ export default {
     close(clickEvent) {
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
+      this.$plausible.trackEvent('cf-popup', {
+        props: { location: 'Close' },
+      })
       this.$store.commit('cf/showPopup', false)
+      this.$store.commit('cf/showBanner', true)
+    },
+    moreClick(clickEvent) {
+      clickEvent.preventDefault()
+      clickEvent.stopPropagation()
+      this.$plausible.trackEvent('cf-popup', {
+        props: { location: 'Learn More' },
+      })
+      const win = window.open('https://startengine.com/tiki', '_self')
+      win.focus()
     },
   },
 }
