@@ -15,6 +15,7 @@
     <home-timeline-cmp class="timelineCmp" />
     <home-beta-cmp class="betaCmp" />
     <home-privacy-cmp class="privacyCmp" />
+    <home-cf-popup-cmp class="cfCmp" />
   </div>
 </template>
 
@@ -30,10 +31,12 @@ import HomeBetaCmp from '../components/home/beta/HomeBetaCmp'
 import HomeFollowCmp from '../components/home/follow/HomeFollowCmp'
 import HomePrivacyCmp from '../components/home/privacy/HomePrivacyCmp'
 import HomeRaffleCmp from '../components/home/raffle/HomeRaffleCmp'
+import HomeCfPopupCmp from '../components/home/cf/HomeCfPopupCmp'
 
 export default {
   name: 'Index',
   components: {
+    HomeCfPopupCmp,
     HomeRaffleCmp,
     HomePrivacyCmp,
     HomeFollowCmp,
@@ -75,6 +78,10 @@ export default {
   position: relative
 
 .privacyCmp
+  position: fixed
+  z-index: 8
+
+.cfCmp
   position: fixed
   z-index: 9
 
