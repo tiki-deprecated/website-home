@@ -1,51 +1,57 @@
 <template>
   <div class="blogPage">
-    <div class="content">
-      <div class="headerBar">
-        <nuxt-link to="/">
-          <utils-svg-cmp name="utils/logo" class="headerLogo" />
-        </nuxt-link>
+    <div class="stack">
+      <div class="content">
+        <div class="headerBar">
+          <nuxt-link to="/">
+            <utils-svg-cmp name="utils/logo" class="headerLogo" />
+          </nuxt-link>
+        </div>
+        <article class="blog">
+          <a :href="blog.img">
+            <img
+              v-if="blog.img != null"
+              :src="blog.img"
+              :alt="blog.alt"
+              class="image"
+          /></a>
+          <div class="heading">
+            <h1 class="title">{{ blog.title }}</h1>
+            <p class="byline">
+              <span class="author">{{ blog.author }}</span>
+              <span class="date"
+                >&nbsp;•&nbsp;
+                {{
+                  new Date(blog.updatedAt).toLocaleDateString(undefined, {
+                    month: 'long',
+                    day: 'numeric',
+                  })
+                }}</span
+              >
+            </p>
+            <p class="subtitle">{{ blog.description }}</p>
+          </div>
+          <div class="blogBody">
+            <nuxt-content :document="blog" />
+          </div>
+        </article>
       </div>
-      <article class="blog">
-        <a :href="blog.img">
-          <img
-            v-if="blog.img != null"
-            :src="blog.img"
-            :alt="blog.alt"
-            class="image"
-        /></a>
-        <div class="heading">
-          <h1 class="title">{{ blog.title }}</h1>
-          <p class="byline">
-            <span class="author">{{ blog.author }}</span>
-            <span class="date"
-              >&nbsp;•&nbsp;
-              {{
-                new Date(blog.updatedAt).toLocaleDateString(undefined, {
-                  month: 'long',
-                  day: 'numeric',
-                })
-              }}</span
-            >
-          </p>
-          <p class="subtitle">{{ blog.description }}</p>
-        </div>
-        <div class="blogBody">
-          <nuxt-content :document="blog" />
-        </div>
-      </article>
+      <utils-footer-cmp />
     </div>
-    <utils-footer-cmp />
+    <home-cf-popup-cmp class="cfPopupCmp" />
+    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
 <script>
 import UtilsSvgCmp from '../../components/utils/UtilsSvgCmp'
 import UtilsFooterCmp from '../../components/utils/footer/UtilsFooterCmp'
+import HomeCfPopupCmp from '../../components/home/cf/HomeCfPopupCmp'
+import HomeCfBannerCmp from '../../components/home/cf/HomeCfBannerCmp'
 
 export default {
   name: 'Slug',
-  components: { UtilsSvgCmp, UtilsFooterCmp },
+  components: { UtilsSvgCmp, UtilsFooterCmp, HomeCfPopupCmp, HomeCfBannerCmp },
   async asyncData({ $content, params }) {
     const blog = await $content('blogs', params.slug).fetch()
     return { blog }
@@ -60,6 +66,15 @@ export default {
   background-color: $white
   font-family: $font-family-nunito-sans
   color: $gray-xdark
+  width: 100%
+  position: relative
+
+.stack
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1
 
 ::v-deep .headerLogo.svg
   fill: $white
@@ -124,6 +139,10 @@ export default {
 .title
   color: $blue-dark
 
+.cfPopupCmp, .cfBannerCmp
+  position: fixed
+  z-index: 9
+
 @include for-phone
   ::v-deep .headerLogo.svg
     height: 8vw
@@ -185,6 +204,10 @@ export default {
   ::v-deep .nuxt-content img + em
     font-size: 3.5vw
 
+  .cfBannerCmp
+    bottom: 10vw
+    right: 5vw
+
 @include for-tablet
   ::v-deep .headerLogo.svg
     height: 2vw
@@ -245,4 +268,8 @@ export default {
 
   ::v-deep .nuxt-content img + em
     font-size: 1vw
+
+  .cfBannerCmp
+    bottom: 3vw
+    left: 2vw
 </style>

@@ -84,11 +84,7 @@ export default {
   position: fixed
   z-index: 8
 
-.cfPopupCmp
-  position: fixed
-  z-index: 9
-
-.cfBannerCmp
+.cfPopupCmp, .cfBannerCmp
   position: fixed
   z-index: 9
 

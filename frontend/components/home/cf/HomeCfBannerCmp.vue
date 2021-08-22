@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     click(clickEvent) {
-      console.log('clicked')
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
       this.$plausible.trackEvent('cf-banner', {
@@ -35,7 +34,6 @@ export default {
       this.$store.commit('cf/showPopup', true)
     },
     close(clickEvent) {
-      console.log('close')
       clickEvent.preventDefault()
       clickEvent.stopPropagation()
       this.$plausible.trackEvent('cf-banner', {

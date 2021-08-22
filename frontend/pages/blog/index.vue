@@ -143,11 +143,7 @@ export default {
   font-family: $font-family-nunito-sans
   color: $gray-xdark
 
-.cfPopupCmp
-  position: fixed
-  z-index: 9
-
-.cfBannerCmp
+.cfPopupCmp, .cfBannerCmp
   position: fixed
   z-index: 9
 
