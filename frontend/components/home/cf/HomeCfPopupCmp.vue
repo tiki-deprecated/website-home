@@ -5,24 +5,26 @@
         <div @click="close">
           <utils-svg-cmp name="home/cf/x" class="icoX" />
         </div>
-        <div class="title"><b class="titleHlt">Invest</b> in TIKI</div>
-        <div class="imgWrapper">
-          <img
-            sizes="(max-width: 829px) 100vw, 829px"
-            srcset="
-              ~/assets/images/png/home/cf/astrocat_w_200.png 200w,
-              ~/assets/images/png/home/cf/astrocat_w_829.png 829w
-            "
-            src="~/assets/images/png/home/cf/astrocat_w_829.png"
-            alt=""
-            class="img"
-          />
+        <div class="popupContent">
+          <div class="title"><b class="titleHlt">Invest</b> in TIKI</div>
+          <div class="imgWrapper">
+            <img
+              sizes="(max-width: 829px) 100vw, 829px"
+              srcset="
+                ~/assets/images/png/home/cf/astrocat_w_200.png 200w,
+                ~/assets/images/png/home/cf/astrocat_w_829.png 829w
+              "
+              src="~/assets/images/png/home/cf/astrocat_w_829.png"
+              alt=""
+              class="img"
+            />
+          </div>
+          <div class="text">
+            Take ownership in the data revolution: check out the benefits of
+            becoming an early investor.
+          </div>
+          <div class="cta" @click="moreClick($event)">Learn more</div>
         </div>
-        <div class="text">
-          Take ownership in the data revolution: check out the benefits of
-          becoming an early investor.
-        </div>
-        <div class="cta" @click="moreClick($event)">Learn more</div>
       </div>
     </div>
   </div>
@@ -61,7 +63,7 @@ export default {
 
 .popup
   position: fixed
-  background: rgba(#000, 0.3)
+  background: rgba($black, 0.6)
   width: 100%
   height: 100%
   top: 0
@@ -99,7 +101,7 @@ export default {
 .text
   font-family: $font-family-montserrat
   font-weight: 500
-  color: $black
+  color: $black-dark
 
 .cta
   background-color: $red
@@ -142,10 +144,44 @@ export default {
 
 @include for-tablet
   .popupWrapper
-    width: 30%
+    width: 45%
     padding: 1vw
     border-radius: 1.25vw
 
   ::v-deep .icoX.svg
-    height: 1.5vw
+    height: 2.25vw
+
+  .img
+    height: 15vw
+
+  .title
+    font-size: 2.25vw
+    text-align: left
+    margin-top: 2vw
+    float: left
+    display: inline
+
+  .imgWrapper
+    margin: 2vw auto 3vw auto
+    float: right
+    display: inline
+
+  .text
+    font-size: 1.1vw
+    text-align: left
+    margin-top: 2vw
+    float: left
+    width: 20vw
+    display: inline
+
+  .cta
+    margin: 2vw auto 0 auto
+    padding: 1vw 4vw
+    font-size: 1.2vw
+    border-radius: 1vw
+    float: left
+    display: inline
+
+  .popupContent
+    margin: 1vw 5vw 0 2vw
 </style>
