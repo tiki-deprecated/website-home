@@ -1,19 +1,23 @@
 <template>
   <div class="cf">
     <div class="contentWrapper">
-      <div class="title">Take ownership of the data revolution</div>
+      <div class="title">Invest in TIKI</div>
       <div class="textWrapper">
         <p class="text">
-          The idea of data ownership has caught fire, as evident by our huge
-          signup numbers.
+          Unlike typical startups, anyone can now purchase stock (until we run
+          out) in TIKI!
         </p>
         <p class="text">
-          TIKI’s tech is purpose built for the data revolution, bringing
-          unprecedented anonymity, control, and monetization to users around the
-          globe.
+          Our mission is to return power to users. Anyone should be allowed to
+          invest, now thanks to some new SEC laws and StartEngine, you can. In
+          just a few clicks, you can join our growing list of prestigious
+          investors.
         </p>
         <p class="hlt">
-          <b class="hlt1"> Join us, and take ownership in the future: </b>
+          <b class="hlt1">
+            Data is this generation’s gold rush.<br />
+            Join the revolution.
+          </b>
           <b class="hlt2" @click="moreClick($event)"
             >Invest in TIKI on StartEngine.com</b
           >

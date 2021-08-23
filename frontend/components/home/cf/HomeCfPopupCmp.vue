@@ -20,8 +20,8 @@
             />
           </div>
           <div class="text">
-            Take ownership in the data revolution: check out the benefits of
-            becoming an early investor.
+            Get in while you still can. Join the data revolution and purchase
+            stock in TIKI.
           </div>
           <div class="cta" @click="moreClick($event)">Learn more</div>
         </div>
