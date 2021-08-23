@@ -107,7 +107,7 @@ export default {
 
 @include for-phone
   .cf
-    height: 130vw
+    height: 135vw
 
   .cta
     font-size: 5vw
@@ -124,10 +124,10 @@ export default {
     font-size: 4vw
 
   .text
-    width: 65%
+    width: 68%
 
   .hlt
-    width: 100%
+    width: 93%
 
   .hlt1, .hlt2
     font-size: 4vw
@@ -141,7 +141,7 @@ export default {
     top: 35vw
 
   .contentWrapper
-    top: 15vw
+    top: 12vw
     left: 7vw
 
 
