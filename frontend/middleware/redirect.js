@@ -9,7 +9,7 @@ const TEAM = '/team'
 const MEET = '/meet'
 const MISSION = '/mission'
 const PRIVACY = '/privacy'
-const ONEPAGER = '/1pager'
+const ONEPAGER = '/1-pager.pdf'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
@@ -56,7 +56,6 @@ export default function ({ route, redirect }) {
         redirect('/blog/privacy')
         break
       case ONEPAGER:
-      case ONEPAGER + '/':
         redirect(301, 'https://tiki-email-assets.s3.amazonaws.com/1-pager.pdf')
         break
       default:
