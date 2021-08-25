@@ -20,7 +20,8 @@
             />
           </div>
           <div class="text">
-            Get in while you can. Join the data revolution and invest in TIKI.
+            Everyone's welcome! Join the data revolution and purchase a stake in
+            TIKI.
           </div>
           <div class="cta" @click="moreClick($event)">Learn more</div>
         </div>
