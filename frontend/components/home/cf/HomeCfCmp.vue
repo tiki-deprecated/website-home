@@ -4,8 +4,7 @@
       <div class="title">Invest in TIKI</div>
       <div class="textWrapper">
         <p class="text">
-          Unlike typical startups, anyone can now purchase stock (until we run
-          out) in TIKI!
+          Unlike typical startups, anyone can now invest in TIKI!
         </p>
         <p class="text">
           Our mission is to return power to users. Anyone should be allowed to
