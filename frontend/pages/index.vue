@@ -2,7 +2,7 @@
   <div class="page">
     <div class="stack">
       <home-header-cmp />
-      <home-raffle-cmp />
+      <home-cf-cmp />
       <home-signup-cmp id="signup" class="signupCmp" />
       <home-worth-cmp class="worthCmp" />
       <home-features-cmp />
@@ -15,6 +15,8 @@
     <home-timeline-cmp class="timelineCmp" />
     <home-beta-cmp class="betaCmp" />
     <home-privacy-cmp class="privacyCmp" />
+    <home-cf-popup-cmp class="cfPopupCmp" />
+    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
@@ -29,12 +31,16 @@ import HomeBelieveCmp from '../components/home/believe/HomeBelieveCmp'
 import HomeBetaCmp from '../components/home/beta/HomeBetaCmp'
 import HomeFollowCmp from '../components/home/follow/HomeFollowCmp'
 import HomePrivacyCmp from '../components/home/privacy/HomePrivacyCmp'
-import HomeRaffleCmp from '../components/home/raffle/HomeRaffleCmp'
+import HomeCfCmp from '../components/home/cf/HomeCfCmp'
+import HomeCfPopupCmp from '../components/home/cf/HomeCfPopupCmp'
+import HomeCfBannerCmp from '../components/home/cf/HomeCfBannerCmp'
 
 export default {
   name: 'Index',
   components: {
-    HomeRaffleCmp,
+    HomeCfBannerCmp,
+    HomeCfPopupCmp,
+    HomeCfCmp,
     HomePrivacyCmp,
     HomeFollowCmp,
     HomeBetaCmp,
@@ -76,6 +82,10 @@ export default {
 
 .privacyCmp
   position: fixed
+  z-index: 8
+
+.cfPopupCmp, .cfBannerCmp
+  position: fixed
   z-index: 9
 
 @include for-phone
@@ -98,6 +108,11 @@ export default {
   .betaCmp
     top: 1215vw
     left: 0
+
+  .cfBannerCmp
+    bottom: 10vw
+    right: 5vw
+
 @include for-tablet
   .timelineCmp
     top: 147vw
@@ -121,4 +136,8 @@ export default {
   .betaCmp
     top: 225vw
     left: 0
+
+  .cfBannerCmp
+    bottom: 3vw
+    left: 2vw
 </style>
