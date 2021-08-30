@@ -1,6 +1,6 @@
 ---
 title: So, Why Does an App That Allows You to Take Back Control of Your Data Matter at All?
-img: /blog-images/TIKI_itmatters.png
+img: /blog-images/Blog_whydoesitmatter.png
 alt: Why Does an App That Allows You to Take Back Control of Your Data Matter at All?
 author: Shane Faria
 updatedAt: '2021-08-26'
