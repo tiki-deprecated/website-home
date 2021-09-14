@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="value">$ {{ total }}</div>
-    <div class="text">money made this year <b>from our data</b></div>
+    <div class="text">money made this year <b>from user data</b></div>
   </div>
 </template>
 
