@@ -7,7 +7,6 @@ updatedAt: '2021-09-21'
 featured: true
 category: press
 --- 
-
 Stories and podcasts highlighting TIKI and our journey in the global data revolution!
 
 *Gust Launch Founder Spotlight, September 9, 2021*
