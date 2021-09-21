@@ -4,7 +4,7 @@ img: /blog-images/blog-inthenews-header.png
 alt: TIKI in the news
 author: Mike Audi
 updatedAt: '2021-09-21'
-featured: true
+featured:
 category: press
 --- 
 Stories and podcasts highlighting TIKI and our journey in the global data revolution!
