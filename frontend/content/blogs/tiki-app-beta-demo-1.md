@@ -9,7 +9,7 @@ category: product
 --- 
 Take a gander at TIKI's upcoming features!
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/th_PujcWRLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="yt-blog"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/th_PujcWRLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 Our founder Mike walks through a short demo of the "see" your data feature, which shows you the data that Google has on you. And it's not all unintelligible mumbo jumbo - it's in language we can all understand. 
 

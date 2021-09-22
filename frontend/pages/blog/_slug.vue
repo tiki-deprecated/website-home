@@ -61,7 +61,6 @@ export default {
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
-
 .blogPage
   background-color: $white
   font-family: $font-family-nunito-sans
@@ -272,4 +271,20 @@ export default {
   .cfBannerCmp
     bottom: 3vw
     left: 2vw
+</style>
+
+<style lang="sass">
+.yt-blog
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+  max-width: 100%
+
+.yt-blog iframe, .yt-blog object, .yt-blog embed
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
 </style>
