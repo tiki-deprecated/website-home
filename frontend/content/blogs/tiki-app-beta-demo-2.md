@@ -13,9 +13,9 @@ In this demo, TIKI's founder Mike shows off the TIKI app's unsubsribe from spam 
 
 <div class="yt-blog"><iframe width="560" height="315" src="https://www.youtube.com/embed/SX07GW8GOXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-The feature lets you unsubscribe with a simple swipe - it's that easy! You'll also see pertinent info about the spam you recieve - who's sending you emails, how often they email you, how often you open those emails. 
+The feature lets you unsubscribe with a simple swipe - it's that easy! You'll also see pertinent info about the spam you receive - who's sending you emails, how often they email you, how often you open those emails. 
 
-Even cooler: there's a security score accompanying each email sender, which is based on the kind of data that buisness has on you ("sensitivity score") and any known recent security breaches ("hacking score"). 
+Even cooler: there's a security score accompanying each email sender, which is based on the kind of data that business has on you ("sensitivity score") and any known recent security breaches ("hacking score"). 
 
 With TIKI, you decide what data companies collect, how they use it, and when they do, you get paid your fair share. Our unique data market makes your data anonymous and accessible by the millions of small businesses we actually care about, not just big budget corporations. 
 
