@@ -29,13 +29,19 @@ export default {
   position: absolute
   z-index: 1
   right: 0
-  bottom: 0
+
 
 @include for-phone
   .img
     height: 40vw
 
+  .imgWrapper
+    bottom: 35vw
+
 @include for-tablet
   .img
     height: 25vw
+
+  .imgWrapper
+    bottom: 7vw
 </style>

@@ -3,7 +3,7 @@
     <div class="blockWrapper">
       <div class="blockContainer">
         <div class="text">{{ count }}</div>
-        <utils-svg-cmp name="home/raffle/block" class="block" />
+        <utils-svg-cmp name="home/header/block" class="block" />
       </div>
     </div>
     <div class="subtext">people have signed up</div>
@@ -15,7 +15,7 @@ import UtilsSvgCmp from '../../utils/UtilsSvgCmp'
 import { count } from '~/libs/api'
 
 export default {
-  name: 'HomeRaffleCountCmp',
+  name: 'HomeHeaderCountCmp',
   components: { UtilsSvgCmp },
   computed: {
     count() {
@@ -82,11 +82,11 @@ export default {
 @include for-tablet
   .blockContainer
     height: 6vw
+    width: 20vw
 
   .text
-    font-size: 5.5vw
+    font-size: 4.5vw
 
   .subtext
-    margin-top: 1vw
-    font-size: 2vw
+    font-size: 1.2vw
 </style>

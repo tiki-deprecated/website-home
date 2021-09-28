@@ -1,10 +1,14 @@
 <template>
-  <div>
-    <blog-header-cmp />
-    <div class="content">
-      <blog-list-cmp :blogs="blogs" />
+  <div class="page">
+    <div class="stack">
+      <blog-header-cmp />
+      <div class="content">
+        <blog-list-cmp :blogs="blogs" />
+      </div>
+      <utils-footer-cmp />
     </div>
-    <utils-footer-cmp />
+    <home-cf-popup-cmp class="cfPopupCmp" />
+    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
@@ -12,10 +16,18 @@
 import BlogHeaderCmp from '../../../components/blog/BlogHeaderCmp'
 import BlogListCmp from '../../../components/blog/BlogListCmp'
 import UtilsFooterCmp from '../../../components/utils/footer/UtilsFooterCmp'
+import HomeCfBannerCmp from '../../../components/home/cf/HomeCfBannerCmp'
+import HomeCfPopupCmp from '../../../components/home/cf/HomeCfPopupCmp'
 
 export default {
   name: 'CategorySlug',
-  components: { UtilsFooterCmp, BlogListCmp, BlogHeaderCmp },
+  components: {
+    UtilsFooterCmp,
+    BlogListCmp,
+    BlogHeaderCmp,
+    HomeCfPopupCmp,
+    HomeCfBannerCmp,
+  },
   async asyncData({ $content, params }) {
     const all = await $content('blogs').sortBy('updatedAt', 'desc').fetch()
     const blogs =
@@ -30,14 +42,33 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
+.page
+  width: 100%
+  position: relative
+
+.stack
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1
+
 .noBullets
   list-style-type: none
   padding: 0
   margin: 0
 
+.cfPopupCmp, .cfBannerCmp
+  position: fixed
+  z-index: 9
+
 @include for-phone
   .noBullets
     margin-top: 4vw
+
+  .cfBannerCmp
+    bottom: 10vw
+    right: 5vw
 
 @include for-tablet
   .content
@@ -46,4 +77,8 @@ export default {
 
   .noBullets
     margin-top: 2vw
+
+  .cfBannerCmp
+    bottom: 3vw
+    left: 2vw
 </style>

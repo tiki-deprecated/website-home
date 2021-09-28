@@ -119,6 +119,12 @@ It is always possible, we suppose, that we may get a request from law enforcemen
 as a business is sold to another company, but those are limited scenarios in which we might have to disclose the little
 information we hold.
 
+**Google**  
+If you choose to link your Google account within the App, the use and transfer to any other app of information received
+from Google APIs will adhere
+to [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes)
+, including the Limited Use requirements.
+
 If you have any questions, concerns, or complaints about our Site, please let us know as soon as possible
 at [privacy@mytiki.com](mailto:privacy@mytiki.com). Please return to review this Notice occasionally, as we may change
 it from time to time.
