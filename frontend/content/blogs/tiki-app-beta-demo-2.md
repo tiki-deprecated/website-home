@@ -9,7 +9,7 @@ category: product
 --- 
 Spam is awesome! Wait, no, it's a massive pain in the inbox. 
 
-In this demo, TIKI's founder Mike shows off the TIKI app's unsubsribe from spam feature. 
+In this demo, TIKI's founder Mike shows off the TIKI app's unsubscribe from spam feature. 
 
 <div class="yt-blog"><iframe width="560" height="315" src="https://www.youtube.com/embed/SX07GW8GOXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
