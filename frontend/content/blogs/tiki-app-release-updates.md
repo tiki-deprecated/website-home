@@ -4,7 +4,6 @@ img: /blog-images/TIKI_updatesheader.jpg
 alt: TIKI release updates
 author: Anna Stoilova
 updatedAt: '2021-07-14'
-featured: true
 category: product
 --- 
 Hello TIKI tribe! We're charging ahead with new features, and we want to keep you apprised of all that's happening. See below for ongoing updates!
