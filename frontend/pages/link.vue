@@ -49,7 +49,8 @@ export default {
 
 <style lang="sass">
 body
-  background-color: rgba($orange,0.5)
+  background-image: linear-gradient(to bottom right, rgba($orange,0.3), rgba($orange,0.6))
+  min-height: 100vh
 </style>
 
 <style scoped lang="sass">

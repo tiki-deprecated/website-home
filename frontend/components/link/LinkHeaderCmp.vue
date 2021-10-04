@@ -35,7 +35,7 @@ export default {
 @import "assets/styles/mixins"
 
 ::v-deep .logo.svg
-  fill: $black-dark
+  fill: $blue-dark
 
 .right
   display: flex

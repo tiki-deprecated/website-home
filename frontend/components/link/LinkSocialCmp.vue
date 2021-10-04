@@ -50,7 +50,7 @@ export default {
 
 @include for-phone
   ::v-deep .icon.svg
-    height: 8vw
+    height: 7vw
 
 @include for-tablet
   ::v-deep .icon.svg
