@@ -9,6 +9,22 @@ category: press
 --- 
 Stories and podcasts highlighting TIKI and our journey in the global data revolution!
 
+*Futurism, October 11, 2021*
+
+[TIKI Gives Back the Data Ownership That Companies and Big Tech Have Taken From You](https://futurism.com/tiki-gives-back-the-data-ownership-that-companies-and-big-tech-have-taken-from-you)
+
+*Entrepreneur, October 8, 2021*
+
+[Hate How Companies Use Your Data? This App Gives Users Back Their Control](https://www.entrepreneur.com/article/389547)
+
+*Talk to Stefan - Founder Hot Seat podcast, October 6, 2021*
+
+[125,000 on the waitlist, how to hire more engineers? - Mike Audi, TIKI](https://anchor.fm/talktostefan/episodes/125-000-on-the-waitlist--how-to-hire-more-engineers----Mike-Audi--TIKI-e18bmse?fbclid=IwAR2QaQXclhxi5WzigLEIiwE30_E1SIowCrJg1tMPvauSlxKnN6MQusoFzbE)
+
+*Investor Connect podcast, September 30, 2021*
+
+[Investor Connect: Mike Audi of TIKI Inc.](https://investorconnect.org/investor-connect-mike-audi-of-tiki-inc/?fbclid=IwAR2BUccT6vyAztQAOmPzwvO3YxXHDSh18AMfJS5WDIOPb4oEQ7c_8dd805k)
+
 *Gust Launch Founder Spotlight, September 9, 2021*
 
 [Founder Spotlight - Crowdfunding your seed round with Mike Audi from TIKI Inc.](https://gust.com/launch/blog/crowdfunding-your-seed-round-mike-audi-tiki)
