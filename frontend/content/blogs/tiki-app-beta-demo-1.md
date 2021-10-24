@@ -4,7 +4,6 @@ img: /blog-images/tiki-blog-demo1.jpg
 alt: TIKI beta demo #1
 author: Mike Audi
 updatedAt: '2021-09-21'
-featured: true
 category: product
 --- 
 Take a gander at TIKI's upcoming features!

@@ -4,7 +4,6 @@ img: /blog-images/tiki_blog_demo2.jpg
 alt: TIKI beta demo #2
 author: Mike Audi
 updatedAt: '2021-09-28'
-featured: true
 category: product
 --- 
 Spam is awesome! Wait, no, it's a massive pain in the inbox. 

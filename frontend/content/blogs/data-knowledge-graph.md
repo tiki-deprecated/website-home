@@ -5,6 +5,7 @@ img: /blog-images/blog_knowledgegraph.png
 alt: knowledge graph
 author: Shane Faria
 updatedAt: '2021-10-22'
+featured: true
 category: product
 ---
 Our knowledge graph is a big deal.

@@ -4,7 +4,6 @@ img: /blog-images/TIKI-blog_eggisdata.png
 alt: You’re a Big Fat Hen and Mark Zuckerberg is Selling All of Your Eggs
 author: Shane Faria
 updatedAt: '2021-08-03'
-featured: true
 category: product
 ---
 

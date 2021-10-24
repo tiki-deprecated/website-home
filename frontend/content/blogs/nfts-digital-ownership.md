@@ -5,6 +5,7 @@ img: /blog-images/blog_nfts.png
 alt: WFT are NFTs
 author: Shane Faria
 updatedAt: '2021-10-22'
+featured: true
 category: company
 ---
 If you’ve been perusing Twitter in the past few months and are wondering why many users are rocking avatars that look straight out of a Super Nintendo game, the short answer is: NFTs.
