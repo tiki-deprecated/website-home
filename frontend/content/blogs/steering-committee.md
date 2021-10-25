@@ -12,14 +12,20 @@ democratizing safe, ethical insights about consumers for businesses of all sizes
 size – can build their data on highly accurate insights collected ethically and affordably directly from their target
 customers.
 
+>> “The ethical use and monetization of data is something the market has needed for quite some time. By bringing together such a diverse group of industry leaders, we’ll be able to understand how data-driven companies think about challenges related to data collection and usage in the market today.” — Brian Gagnon, Chairperson
+
+---
+
 **Steering Committee members are industry leaders spanning a variety of data-driven markets.** For transparency, the member list will be regularly updated.
 
 ### Members List:
-* **Brian Gagnon (Chairperson)** — Co-Founder and CTO, Uprise Partners
+* Announcing Shortly
+
+*Contact [Brian Gagnon](mailto:brian@mytiki.com) to inquire about joining the TIKI Steering Committee.*
 
 *Participation is voluntary and on an individual basis. It does not represent a personal or corporate endorsement of TIKI.*
 
->> “The ethical use and monetization of data is something the market has needed for quite some time. By bringing together such a diverse group of industry leaders, we’ll be able to understand how data-driven companies think about challenges related to data collection and usage in the market today.” — Brian Gagnon, Chairperson
+---
 
 According to a [recent Forrester survey](https://www.collibra.com/wp-content/uploads/The-Business-Impact-of-Data-Intelligent-Management_FINAL.pdf), 84% of businesses believe data is crucial to business decisions and strategy,
 and 64% planned to increase investment in data management technology over the next two years. Businesses that base
