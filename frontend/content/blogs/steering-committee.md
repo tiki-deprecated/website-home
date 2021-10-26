@@ -4,7 +4,7 @@ description: Focused on the ethical use and monetization of user data
 img: /blog-images/sc-banner.png
 alt: TIKI
 author: Brian Gagnon
-updatedAt: '2021-10-25'
+updatedAt: '2021-10-26'
 category: company
 ---
 With 32 million small-medium businesses in the U.S. alone, TIKI's Steering Committee is a major step towards
@@ -18,8 +18,11 @@ customers.
 
 **Steering Committee members are industry leaders spanning a variety of data-driven markets.** For transparency, the member list will be regularly updated.
 
-### Members List:
-* Announcing Shortly
+### Members List: 
+* **Brian Gagnon (Chairperson)** — Co-Founder and CTO, Uprise Partners
+* **Gil Dror** — CTO, Human Care Systems
+* **John Calcio** — VP of Sales, Pitch Media Group
+* **Nick Vranos** — Principal Engineer, Ellington Management Group
 
 *Contact [Brian Gagnon](mailto:brian@mytiki.com) to inquire about joining the TIKI Steering Committee.*
 
