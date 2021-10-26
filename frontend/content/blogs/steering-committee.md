@@ -19,10 +19,7 @@ customers.
 **Steering Committee members are industry leaders spanning a variety of data-driven markets.** For transparency, the member list will be regularly updated.
 
 ### Members List: 
-* **Brian Gagnon (Chairperson)** — Co-Founder and CTO, Uprise Partners
-* **Gil Dror** — CTO, Human Care Systems
-* **John Calcio** — VP of Sales, Pitch Media Group
-* **Nick Vranos** — Principal Engineer, Ellington Management Group
+* Announcing Soon.
 
 *Contact [Brian Gagnon](mailto:brian@mytiki.com) to inquire about joining the TIKI Steering Committee.*
 
