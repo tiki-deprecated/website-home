@@ -4,7 +4,7 @@ description: Focused on the ethical use and monetization of user data
 img: /blog-images/sc-banner.png
 alt: TIKI
 author: Brian Gagnon
-updatedAt: '2021-10-26'
+updatedAt: '2021-10-30'
 category: company
 ---
 With 32 million small-medium businesses in the U.S. alone, TIKI's Steering Committee is a major step towards
