@@ -19,7 +19,14 @@ customers.
 **Steering Committee members are industry leaders spanning a variety of data-driven markets.** For transparency, the member list will be regularly updated.
 
 ### Members List: 
-* Announcing Soon.
+* **Brian Gagnon (Chairperson)** — Co-Founder and CTO, Uprise Partners
+* **Gil Dror** — CTO, Human Care Systems
+* **Alex Sofronas** — Advanced Analytics, DirectTV
+* **John Calcio** — VP of Sales, Pitch Media Group
+* **Nick Vranos** — Principal Engineer, Ellington Management Group
+* **Mark Bugbee** — Principal Cloud Solution Architect (Azure Space), Microsoft
+* **Jeff Couret** – 1.7M followers on TikTok, President, SEOak
+* **Francesco Gadaleta** — Founder, Chief Engineer, Amethix Technologies
 
 *Contact [Brian Gagnon](mailto:brian@mytiki.com) to inquire about joining the TIKI Steering Committee.*
 
