@@ -65,6 +65,9 @@ export default {
 ::v-deep .missionArrow.svg, ::v-deep .teamArrow.svg
   fill: $blue-light
 
+.team
+  display: none
+
 @include for-phone
   .mission, .team
     height: 14vw

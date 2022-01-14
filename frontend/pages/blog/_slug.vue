@@ -38,20 +38,16 @@
       </div>
       <utils-footer-cmp />
     </div>
-    <home-cf-popup-cmp class="cfPopupCmp" />
-    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
 <script>
 import UtilsSvgCmp from '../../components/utils/UtilsSvgCmp'
 import UtilsFooterCmp from '../../components/utils/footer/UtilsFooterCmp'
-import HomeCfPopupCmp from '../../components/home/cf/HomeCfPopupCmp'
-import HomeCfBannerCmp from '../../components/home/cf/HomeCfBannerCmp'
 
 export default {
   name: 'Slug',
-  components: { UtilsSvgCmp, UtilsFooterCmp, HomeCfPopupCmp, HomeCfBannerCmp },
+  components: { UtilsSvgCmp, UtilsFooterCmp },
   async asyncData({ $content, params }) {
     const blog = await $content('blogs', params.slug).fetch()
     return { blog }

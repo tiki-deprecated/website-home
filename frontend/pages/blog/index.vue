@@ -67,8 +67,6 @@
       </div>
       <utils-footer-cmp />
     </div>
-    <home-cf-popup-cmp class="cfPopupCmp" />
-    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
@@ -77,8 +75,6 @@ import BlogHeaderCmp from '../../components/blog/BlogHeaderCmp'
 import BlogTileCmp from '../../components/blog/BlogTileCmp'
 import BlogCardCmp from '../../components/blog/BlogCardCmp'
 import UtilsFooterCmp from '../../components/utils/footer/UtilsFooterCmp'
-import HomeCfPopupCmp from '../../components/home/cf/HomeCfPopupCmp'
-import HomeCfBannerCmp from '../../components/home/cf/HomeCfBannerCmp'
 
 export default {
   name: 'BlogIndex',
@@ -87,8 +83,6 @@ export default {
     BlogCardCmp,
     BlogTileCmp,
     BlogHeaderCmp,
-    HomeCfPopupCmp,
-    HomeCfBannerCmp,
   },
   async asyncData({ $content, params }) {
     const blogs = await $content('blogs')

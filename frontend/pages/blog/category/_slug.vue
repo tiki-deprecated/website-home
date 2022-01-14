@@ -7,8 +7,6 @@
       </div>
       <utils-footer-cmp />
     </div>
-    <home-cf-popup-cmp class="cfPopupCmp" />
-    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
@@ -16,8 +14,6 @@
 import BlogHeaderCmp from '../../../components/blog/BlogHeaderCmp'
 import BlogListCmp from '../../../components/blog/BlogListCmp'
 import UtilsFooterCmp from '../../../components/utils/footer/UtilsFooterCmp'
-import HomeCfBannerCmp from '../../../components/home/cf/HomeCfBannerCmp'
-import HomeCfPopupCmp from '../../../components/home/cf/HomeCfPopupCmp'
 
 export default {
   name: 'CategorySlug',
@@ -25,8 +21,6 @@ export default {
     UtilsFooterCmp,
     BlogListCmp,
     BlogHeaderCmp,
-    HomeCfPopupCmp,
-    HomeCfBannerCmp,
   },
   async asyncData({ $content, params }) {
     const all = await $content('blogs').sortBy('updatedAt', 'desc').fetch()

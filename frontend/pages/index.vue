@@ -2,7 +2,6 @@
   <div class="page">
     <div class="stack">
       <home-header-cmp />
-      <home-cf-cmp />
       <home-signup-cmp id="signup" class="signupCmp" />
       <home-worth-cmp class="worthCmp" />
       <home-features-cmp />
@@ -15,8 +14,6 @@
     <home-timeline-cmp class="timelineCmp" />
     <home-beta-cmp class="betaCmp" />
     <home-privacy-cmp class="privacyCmp" />
-    <home-cf-popup-cmp class="cfPopupCmp" />
-    <home-cf-banner-cmp class="cfBannerCmp" />
   </div>
 </template>
 
@@ -31,16 +28,10 @@ import HomeBelieveCmp from '../components/home/believe/HomeBelieveCmp'
 import HomeBetaCmp from '../components/home/beta/HomeBetaCmp'
 import HomeFollowCmp from '../components/home/follow/HomeFollowCmp'
 import HomePrivacyCmp from '../components/home/privacy/HomePrivacyCmp'
-import HomeCfCmp from '../components/home/cf/HomeCfCmp'
-import HomeCfPopupCmp from '../components/home/cf/HomeCfPopupCmp'
-import HomeCfBannerCmp from '../components/home/cf/HomeCfBannerCmp'
 
 export default {
   name: 'Index',
   components: {
-    HomeCfBannerCmp,
-    HomeCfPopupCmp,
-    HomeCfCmp,
     HomePrivacyCmp,
     HomeFollowCmp,
     HomeBetaCmp,
@@ -90,7 +81,7 @@ export default {
 
 @include for-phone
   .timelineCmp
-    top: 825vw
+    top: 742vw
     left: 50%
     transform: translate(-50%, 0)
     height: 210vw
@@ -98,6 +89,7 @@ export default {
 
   .divider
     height: 210vw
+    background: $tan-light
 
   .worthCmp
     height: 135vw
@@ -106,7 +98,7 @@ export default {
     height: 110vw
 
   .betaCmp
-    top: 1215vw
+    top: 1125vw
     left: 0
 
   .cfBannerCmp
@@ -115,7 +107,7 @@ export default {
 
 @include for-tablet
   .timelineCmp
-    top: 147vw
+    top: 129vw
     left: 50%
     transform: translate(-50%, 0)
     height: 36vw
@@ -123,6 +115,7 @@ export default {
 
   .divider
     height: 35vw
+    background: $tan-light
 
   .worthCmp
     height: 24vw
@@ -134,7 +127,7 @@ export default {
     height: 30vw
 
   .betaCmp
-    top: 225vw
+    top: 207vw
     left: 0
 
   .cfBannerCmp

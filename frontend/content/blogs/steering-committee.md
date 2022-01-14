@@ -3,7 +3,7 @@ title: Steering Committee
 description: Focused on the ethical use and monetization of user data
 img: /blog-images/sc-banner.png
 alt: TIKI
-author: Brian Gagnon
+author: Mike Audi
 updatedAt: '2021-10-29'
 category: company
 ---
@@ -19,7 +19,6 @@ customers.
 **Steering Committee members are industry leaders spanning a variety of data-driven markets.** For transparency, the member list will be regularly updated.
 
 ### Members List: 
-* **Brian Gagnon (Chairperson)** — Co-Founder and CTO, Uprise Partners
 * **Gil Dror** — CTO, Human Care Systems
 * **Alex Sofronas** — Advanced Analytics, DirectTV
 * **John Calcio** — VP of Sales, Pitch Media Group
@@ -28,8 +27,6 @@ customers.
 * **Jeff Couret** – 1.7M followers on TikTok, President, SEOak
 * **Francesco Gadaleta** — Founder, Chief Engineer, Amethix Technologies
 * **Michal Pěchouček** — CTO, Avast Software
-
-*Contact [Brian Gagnon](mailto:brian@mytiki.com) to inquire about joining the TIKI Steering Committee.*
 
 *Participation is voluntary and on an individual basis. It does not represent a personal or corporate endorsement of TIKI.*
 
