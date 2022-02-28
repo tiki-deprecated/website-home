@@ -49,7 +49,7 @@ export default {
       {
         property: 'og:image',
         content:
-          'https://mytiki.com/og-img-8bd2ac71-c5fe-408e-943d-7c4717d2d295.png',
+          'https://mytiki.com/og-img-ac578a37-a3b6-49f8-ac0b-c8868cb01322.png',
       },
       {
         property: 'twitter:title',
@@ -65,7 +65,7 @@ export default {
       {
         property: 'twitter:image',
         content:
-          'https://mytiki.com/og-img-8bd2ac71-c5fe-408e-943d-7c4717d2d295.png',
+          'https://mytiki.com/og-img-ac578a37-a3b6-49f8-ac0b-c8868cb01322.png',
       },
       { property: 'twitter:site', content: '@my_tiki_' },
     ],
@@ -77,10 +77,7 @@ export default {
   css: [
     '@/assets/styles/theme.sass',
     '@/assets/fonts/koara/Koara.css',
-    '@/assets/fonts/montserrat/Montserrat.css',
-    '@/assets/fonts/nunito/Nunito.css',
     '@/assets/fonts/nunito-sans/NunitoSans.css',
-    '@/assets/fonts/marker-mark/MarkerMark.css',
   ],
   /*
    ** Style Resources

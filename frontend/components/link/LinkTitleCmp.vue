@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     src() {
-      return require('~/assets/images/png/link/' + this.image)
+      return require('~/assets/images/png/' + this.image)
     },
   },
 }
@@ -43,7 +43,7 @@ export default {
 
 .subtitle
   font-family: $font-family-nunito-sans
-  color: $blue-dark
+  color: $tiki-blue
   font-weight: 600
   text-align: center
   //text-shadow: 1px 1px 15px rgb(0, 0, 0, 0.15)
