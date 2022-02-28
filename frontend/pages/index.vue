@@ -3,6 +3,7 @@
     <div class="stack">
       <effed-cmp />
       <ctrl-cmp />
+      <pain-cmp />
     </div>
   </div>
 </template>
@@ -10,10 +11,11 @@
 <script>
 import EffedCmp from '../components/index/EffedCmp'
 import CtrlCmp from '../components/index/CtrlCmp'
+import PainCmp from '../components/index/PainCmp'
 
 export default {
   name: 'Index',
-  components: { CtrlCmp, EffedCmp },
+  components: { PainCmp, CtrlCmp, EffedCmp },
   mounted() {
     this.$plausible.trackPageview()
     this.$store.commit('setCode', this.$nuxt.$route.query.code)

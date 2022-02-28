@@ -2,9 +2,9 @@
   <div class="ctrl">
     <div class="ctrlContainer">
       <div class="textContainer">
-        <span>Those who control data</span>
+        <span>THOSE WHO CONTROL DATA</span>
         <br /><br />
-        <span>control the future.</span>
+        <span>CONTROL THE FUTURE.</span>
       </div>
       <div class="imgContainer">
         <img
@@ -35,7 +35,7 @@ export default {
 @import "assets/styles/mixins"
 
 .ctrl
-  background: $yellow
+  background: #FFD553
   height: 100vh
   width: 100%
   position: relative
@@ -64,10 +64,10 @@ export default {
     transform: translate(-50%, -50%)
 
   .textContainer
-    font-size: 16vw
-    max-width: 50%
+    font-size: 15vw
+    max-width: 60%
     top: 50%
-    right: 10%
+    right: 5%
     -ms-transform: translateY(-50%)
     transform: translateY(-50%)
 
@@ -77,7 +77,15 @@ export default {
 
   .imgContainer
     top: 50%
-    left: 12%
-    -ms-transform: translate(-50%, -50%)
-    transform: translate(-50%, -50%)
+    left: -7%
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+
+  .textContainer
+    font-size: 6vw
+    max-width: 40%
+    top: 50%
+    right: 7%
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
 </style>
