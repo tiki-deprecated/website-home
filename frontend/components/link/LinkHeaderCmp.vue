@@ -35,15 +35,15 @@ export default {
 @import "assets/styles/mixins"
 
 ::v-deep .logo.svg
-  fill: $blue-dark
+  fill: $tiki-blue
 
 .right
   display: flex
   align-items: center
 
 .blog
-  font-family: $font-family-montserrat
-  color: $blue-dark
+  font-family: $font-family-nunito-sans
+  color: $tiki-blue
   text-decoration: none
   font-weight: 600
   cursor: pointer
@@ -52,7 +52,7 @@ export default {
   justify-content: center
 
 .signup
-  font-family: $font-family-montserrat
+  font-family: $font-family-nunito-sans
   color: $white
   text-decoration: none
   font-weight: 600

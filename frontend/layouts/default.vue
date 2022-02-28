@@ -6,7 +6,7 @@
 
 <style scoped lang="sass">
 .defaultLayout
-  font-family: $font-family-montserrat
+  font-family: $font-family-nunito-sans
   font-weight: normal
 </style>
 
