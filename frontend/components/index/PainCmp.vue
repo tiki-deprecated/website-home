@@ -38,7 +38,6 @@ export default {
 @import "assets/styles/mixins"
 
 .pain
-  background-image: linear-gradient(var(--bg-deg), $gray-1 50%, $tiki-purple 50%)
   height: 100vh
   width: 100%
   position: relative
@@ -60,6 +59,9 @@ export default {
   font-weight: normal
 
 @include for-phone
+  .pain
+    background-image: linear-gradient(var(--bg-deg), $gray-1 50%, $tiki-purple 50%)
+
   .userPain, .bizPain
     font-size: 7vw
     width: 60%
@@ -71,5 +73,24 @@ export default {
   .bizPain
     bottom: 20%
     right: 5%
+
 @include for-tablet
+  .pain
+    background-image: linear-gradient(-90deg, $gray-1 50%, $tiki-purple 50%)
+
+  .userPain, .bizPain
+    font-size: 3vw
+    width: 40%
+
+  .userPain
+    top: 50%
+    left: 5%
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+
+  .bizPain
+    top: 50%
+    right: 5%
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
 </style>
