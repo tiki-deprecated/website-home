@@ -63,7 +63,10 @@ export default {
   color: $gray-2
 
 .imgContainer
-  display: inline-block
+  display: block
+
+.img
+  width: 100%
 
 @include for-phone
   .title
@@ -76,7 +79,7 @@ export default {
     width: 75%
 
   .imgContainer
-    width: 90%
+    width: 95%
     margin: 8vh auto 0 auto
 
 @include for-tablet
