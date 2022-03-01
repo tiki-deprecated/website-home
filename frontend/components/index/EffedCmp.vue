@@ -27,7 +27,7 @@ export default {
   position: relative
   width: 100%
   height: 100vh
-  font-family: Courier, monospace
+  font-family: $font-family-courier
 
 .line1
   overflow: hidden
