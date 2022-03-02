@@ -16,7 +16,7 @@
           muted=""
           playsinline=""
           class="hiwVideo"
-          poster="~/assets/images/jpeg/mobile-app.jpeg"
+          poster="~/assets/images/jpg/mobile-app.jpg"
         >
           Your browser does not support HTML5 video.
           <source src="~/assets/images/mp4/mobile-app.mp4" type="video/mp4" />
@@ -57,9 +57,12 @@
           href="https://youtu.be/7YXnA357LN8"
           target="_blank"
           ><div class="hiw2ButtonText">
-            Or watch our hilarious explainer video (no guarantee it helps). →
-          </div></a
-        >
+            <span>
+              Or watch our hilarious explainer video (no guarantee it
+              helps).&nbsp;
+              <utils-svg-cmp name="arrow-right" class="arrow"
+            /></span></div
+        ></a>
         <div class="hiwNote hiw1Note">
           For the crypto dorks and engineers, it’s all powered by TIKI’s
           purpose-built hybrid permissionless blockchain. On which, we will mint
@@ -97,9 +100,10 @@
 </template>
 
 <script>
+import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 export default {
   name: 'HiwCmp',
-  components: {},
+  components: { UtilsSvgCmp },
 }
 </script>
 
@@ -152,6 +156,10 @@ export default {
 .hiw3Img
   display: block
 
+::v-deep .arrow.svg
+  fill: $white
+  display: inline-block
+
 @include for-phone
   .hiwContainer
     width: 90%
@@ -160,7 +168,7 @@ export default {
     padding-bottom: 3vh
 
   .hiw
-    padding: 3vh 0
+    padding-top: 3vh
 
   .title
     font-size: 5.25vw
@@ -210,5 +218,8 @@ export default {
   .hiw3Img
     width: 90%
     margin: 3vh auto
+
+  ::v-deep .arrow.svg
+    height: 3.75vw
 @include for-tablet
 </style>

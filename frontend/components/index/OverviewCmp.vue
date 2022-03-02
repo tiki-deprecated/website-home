@@ -80,7 +80,7 @@ export default {
   font-weight: 800
   display: inline-block
 
-.missionText1, .missionText2
+.missionText1, .missionText2, .buildingText
   font-family: $font-family-nunito-sans
   color: $tiki-blue
   font-weight: normal

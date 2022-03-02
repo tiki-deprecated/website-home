@@ -9,6 +9,7 @@
       <strings-cmp />
       <overview-cmp />
       <hiw-cmp />
+      <unique-cmp />
     </div>
   </div>
 </template>
@@ -22,10 +23,12 @@ import OwnCmp from '../components/index/OwnCmp'
 import StringsCmp from '../components/index/StringsCmp'
 import OverviewCmp from '../components/index/OverviewCmp'
 import HiwCmp from '../components/index/HiwCmp'
+import UniqueCmp from '../components/index/UniqueCmp'
 
 export default {
   name: 'Index',
   components: {
+    UniqueCmp,
     HiwCmp,
     OverviewCmp,
     StringsCmp,
