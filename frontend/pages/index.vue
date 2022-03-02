@@ -7,6 +7,7 @@
       <wdwd-cmp />
       <own-cmp />
       <strings-cmp />
+      <overview-cmp />
     </div>
   </div>
 </template>
@@ -18,10 +19,19 @@ import PainCmp from '../components/index/PainCmp'
 import WdwdCmp from '../components/index/WdwdCmp'
 import OwnCmp from '../components/index/OwnCmp'
 import StringsCmp from '../components/index/StringsCmp'
+import OverviewCmp from '../components/index/OverviewCmp'
 
 export default {
   name: 'Index',
-  components: { StringsCmp, OwnCmp, WdwdCmp, PainCmp, CtrlCmp, EffedCmp },
+  components: {
+    OverviewCmp,
+    StringsCmp,
+    OwnCmp,
+    WdwdCmp,
+    PainCmp,
+    CtrlCmp,
+    EffedCmp,
+  },
   mounted() {
     this.$plausible.trackPageview()
     this.$store.commit('setCode', this.$nuxt.$route.query.code)

@@ -38,7 +38,6 @@ export default {
 @import "assets/styles/mixins"
 
 .strings
-  height: 115vh
   width: 100%
   position: relative
   overflow: hidden
@@ -81,5 +80,7 @@ export default {
     font-size: 6vw
     width: 52%
 
+  .strings
+    padding-bottom: 5vh
 @include for-tablet
 </style>
