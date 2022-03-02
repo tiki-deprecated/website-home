@@ -8,6 +8,7 @@
       <own-cmp />
       <strings-cmp />
       <overview-cmp />
+      <hiw-cmp />
     </div>
   </div>
 </template>
@@ -20,10 +21,12 @@ import WdwdCmp from '../components/index/WdwdCmp'
 import OwnCmp from '../components/index/OwnCmp'
 import StringsCmp from '../components/index/StringsCmp'
 import OverviewCmp from '../components/index/OverviewCmp'
+import HiwCmp from '../components/index/HiwCmp'
 
 export default {
   name: 'Index',
   components: {
+    HiwCmp,
     OverviewCmp,
     StringsCmp,
     OwnCmp,

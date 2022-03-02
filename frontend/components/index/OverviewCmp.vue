@@ -101,9 +101,6 @@ export default {
   border-top: solid $orange 1px
 
 @include for-phone
-  .overview
-    padding-bottom: 3vh
-
   .logoContainer
     width: 100%
     height: 100vw

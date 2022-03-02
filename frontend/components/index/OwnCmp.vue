@@ -59,7 +59,7 @@ export default {
   display: block
   text-transform: uppercase
 
-.subtitle_link
+.subtitle_link, .subtitle_link:hover, .subtitle_link:link, .subtitle_link:visited, .subtitle_link:active
   color: $gray-2
 
 .imgContainer
