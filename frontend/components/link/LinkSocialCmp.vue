@@ -1,7 +1,7 @@
 <template>
   <div class="button">
     <div @click="onClick($event, name, url)">
-      <utils-svg-cmp :name="`utils/footer/${name}`" class="icon" />
+      <utils-svg-cmp :name="`${name}-mono`" class="icon" />
     </div>
   </div>
 </template>

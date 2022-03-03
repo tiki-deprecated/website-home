@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div @click="onClick($event, 'logo', '/')">
-      <utils-svg-cmp name="utils/logo" class="logo" />
+      <utils-svg-cmp name="logo" class="logo" />
     </div>
     <div class="right">
       <div class="signup" @click="onClick($event, 'signup', '/')">Sign up</div>
