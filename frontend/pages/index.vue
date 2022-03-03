@@ -10,7 +10,7 @@
       <overview-cmp />
       <hiw-cmp />
       <unique-cmp />
-      <involved-cmp />
+      <involved-cmp id="signup" />
       <utils-footer-cmp />
     </div>
     <div class="clip">
