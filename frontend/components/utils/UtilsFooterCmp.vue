@@ -26,7 +26,7 @@
       >&nbsp;|&nbsp;<a href="https://blog.mytiki.com" class="link">Blog</a
       >&nbsp;|&nbsp;<a href="https://discord.com/invite/evjYQq48Be" class="link"
         >Community</a
-      >&nbsp;|&nbsp;<a href="https://github.com/tiki" class="link">Github</a
+      >&nbsp;|&nbsp;<a href="https://github.com/tiki" class="link">GitHub</a
       >&nbsp;|&nbsp;<a href="" class="link">Team & Investors</a>&nbsp;|&nbsp;<a
         href=""
         class="link"
