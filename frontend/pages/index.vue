@@ -1,56 +1,90 @@
 <template>
   <div class="page">
     <div class="stack">
-      <home-header-cmp />
-      <home-cf-cmp />
-      <home-signup-cmp id="signup" class="signupCmp" />
-      <home-worth-cmp class="worthCmp" />
-      <home-features-cmp />
-      <div class="divider" />
-      <home-signup-cmp class="signupCmp" />
-      <home-believe-cmp class="believeCmp" />
-      <home-follow-cmp />
+      <effed-cmp />
+      <ctrl-cmp />
+      <pain-cmp />
+      <wdwd-cmp />
+      <own-cmp />
+      <strings-cmp />
+      <overview-cmp />
+      <hiw-cmp />
+      <unique-cmp />
+      <involved-cmp />
       <utils-footer-cmp />
     </div>
-    <home-timeline-cmp class="timelineCmp" />
-    <home-beta-cmp class="betaCmp" />
-    <home-privacy-cmp class="privacyCmp" />
-    <home-cf-popup-cmp class="cfPopupCmp" />
-    <home-cf-banner-cmp class="cfBannerCmp" />
+    <div class="clip">
+      <img
+        sizes="(max-width: 1036px) 100vw, 1036px"
+        srcset="
+          ~/assets/images/png/fb-sticker_w_200.png   200w,
+          ~/assets/images/png/fb-sticker_w_1036.png 1036w
+        "
+        src="~/assets/images/png/fb-sticker_w_1036.png"
+        alt=""
+        class="fbSticker"
+      />
+      <img
+        sizes="(max-width: 584px) 100vw, 584px"
+        srcset="
+          ~/assets/images/png/pineapple-pizza_w_200.png 200w,
+          ~/assets/images/png/pineapple-pizza_w_584.png 584w
+        "
+        src="~/assets/images/png/pineapple-pizza_w_584.png"
+        alt=""
+        class="pineapplePizza"
+      />
+      <img
+        sizes="(max-width: 265px) 100vw, 265px"
+        srcset="
+          ~/assets/images/png/sticker-stack_w_200.png 200w,
+          ~/assets/images/png/sticker-stack_w_265.png 265w
+        "
+        src="~/assets/images/png/sticker-stack_w_265.png"
+        alt=""
+        class="stickerStack"
+      />
+      <img
+        sizes="(max-width: 325px) 100vw, 325px"
+        srcset="
+          ~/assets/images/png/google-sticker_w_200.png 200w,
+          ~/assets/images/png/google-sticker_w_325.png 265w
+        "
+        src="~/assets/images/png/google-sticker_w_325.png"
+        alt=""
+        class="googleSticker"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import HomeHeaderCmp from '../components/home/header/HomeHeaderCmp'
-import HomeTimelineCmp from '../components/home/timeline/HomeTimelineCmp'
-import HomeWorthCmp from '../components/home/worth/HomeWorthCmp'
-import HomeFeaturesCmp from '../components/home/features/HomeFeaturesCmp'
-import UtilsFooterCmp from '../components/utils/footer/UtilsFooterCmp'
-import HomeSignupCmp from '../components/home/signup/HomeSignupCmp'
-import HomeBelieveCmp from '../components/home/believe/HomeBelieveCmp'
-import HomeBetaCmp from '../components/home/beta/HomeBetaCmp'
-import HomeFollowCmp from '../components/home/follow/HomeFollowCmp'
-import HomePrivacyCmp from '../components/home/privacy/HomePrivacyCmp'
-import HomeCfCmp from '../components/home/cf/HomeCfCmp'
-import HomeCfPopupCmp from '../components/home/cf/HomeCfPopupCmp'
-import HomeCfBannerCmp from '../components/home/cf/HomeCfBannerCmp'
+import EffedCmp from '../components/index/EffedCmp'
+import CtrlCmp from '../components/index/CtrlCmp'
+import PainCmp from '../components/index/PainCmp'
+import WdwdCmp from '../components/index/WdwdCmp'
+import OwnCmp from '../components/index/OwnCmp'
+import StringsCmp from '../components/index/StringsCmp'
+import OverviewCmp from '../components/index/OverviewCmp'
+import HiwCmp from '../components/index/HiwCmp'
+import UniqueCmp from '../components/index/UniqueCmp'
+import InvolvedCmp from '../components/index/InvolvedCmp'
+import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 
 export default {
   name: 'Index',
   components: {
-    HomeCfBannerCmp,
-    HomeCfPopupCmp,
-    HomeCfCmp,
-    HomePrivacyCmp,
-    HomeFollowCmp,
-    HomeBetaCmp,
-    HomeFeaturesCmp,
     UtilsFooterCmp,
-    HomeHeaderCmp,
-    HomeTimelineCmp,
-    HomeWorthCmp,
-    HomeSignupCmp,
-    HomeBelieveCmp,
+    InvolvedCmp,
+    UniqueCmp,
+    HiwCmp,
+    OverviewCmp,
+    StringsCmp,
+    OwnCmp,
+    WdwdCmp,
+    PainCmp,
+    CtrlCmp,
+    EffedCmp,
   },
   mounted() {
     this.$plausible.trackPageview()
@@ -73,71 +107,72 @@ export default {
   width: 100%
   z-index: 1
 
-.timelineCmp
+.clip
   position: absolute
-  z-index: 2
-
-.divider
-  position: relative
-
-.privacyCmp
-  position: fixed
-  z-index: 8
-
-.cfPopupCmp, .cfBannerCmp
-  position: fixed
-  z-index: 9
+  top: 0
+  left: 0
+  width: 100%
+  height: 1000vh
+  overflow: hidden
 
 @include for-phone
-  .timelineCmp
-    top: 825vw
-    left: 50%
-    transform: translate(-50%, 0)
-    height: 210vw
-    border-radius: 3vw
+  .fbSticker
+    top: 172vh
+    right: 0
+    position: absolute
+    height: 16vh
+    z-index: 2
 
-  .divider
-    height: 210vw
+  .pineapplePizza
+    top: 310vh
+    right: -6%
+    position: absolute
+    height: 23vh
+    z-index: 2
 
-  .worthCmp
-    height: 135vw
+  .stickerStack
+    top: 777vh
+    left: -3%
+    position: absolute
+    height: 18vh
+    z-index: 2
 
-  .believeCmp
-    height: 110vw
-
-  .betaCmp
-    top: 1215vw
-    left: 0
-
-  .cfBannerCmp
-    bottom: 10vw
-    right: 5vw
+  .googleSticker
+    top: 707vh
+    right: 1%
+    position: absolute
+    height: 8vh
+    z-index: 2
 
 @include for-tablet
-  .timelineCmp
-    top: 147vw
-    left: 50%
-    transform: translate(-50%, 0)
-    height: 36vw
-    border-radius: 0.5vw
+  .fbSticker
+    top: 183vh
+    right: 0
+    position: absolute
+    height: 24vh
+    z-index: 2
 
-  .divider
-    height: 35vw
+  .pineapplePizza
+    top: 363vh
+    left: -1%
+    position: absolute
+    height: 38vh
+    z-index: 2
+    transform: scaleX(-1)
 
-  .worthCmp
-    height: 24vw
+  .stickerStack
+    top: 902vh
+    left: 31%
+    position: absolute
+    height: 25vh
+    z-index: 2
+    display: none
 
-  .signupCmp
-    height: 15.75vw
-
-  .believeCmp
-    height: 30vw
-
-  .betaCmp
-    top: 225vw
-    left: 0
-
-  .cfBannerCmp
-    bottom: 3vw
-    left: 2vw
+  .googleSticker
+    top: 800vh
+    right: 30%
+    position: absolute
+    height: 18vh
+    z-index: 2
+    display: none
 </style>

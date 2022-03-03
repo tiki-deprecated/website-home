@@ -17,16 +17,6 @@ vars, data, resource, and outputs)
 - variables_global.tf - cross file vars and locals
 
 ## Execution
-Infrastructure relies upon several external (non-tf) files
-that are built and/or placed in files/*. This is automated in
-the github action [cd.yml](../.github/workflows/deploy.yml). 
-These files include:
-- frontend/dist/* - Generated Static Site
-- backend/oas.json - OpenAPI specification
-- backend/api.version - API Version
-- backend/functions/functions.zip - Functions Package
-- backend/functions/functions.version - Function Version
-
 Execution automated via [GH action](../.github/workflows/deploy.yml)
 to generate and then deploy the static site and corresponding
 backend functions. Deployments trigger on push to master. Terraform
