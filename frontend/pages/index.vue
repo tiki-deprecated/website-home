@@ -66,6 +66,5 @@ export default {
   z-index: 1
 
 @include for-phone
-
 @include for-tablet
 </style>

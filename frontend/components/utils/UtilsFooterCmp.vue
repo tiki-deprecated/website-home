@@ -98,6 +98,7 @@ export default {
 
   .sitemap
     margin: 2vh 5vw 0 5vw
+    font-size: 4vw
 
   .copyright
     font-size: 4vw
@@ -106,12 +107,12 @@ export default {
 @include for-tablet
   .email
     font-size: 1vw
-    margin: 3vh 2vw 0 2vw
+    margin: 3vh 0 0 0
     text-align: center
     width: 100%
 
   .socials
-    margin: 2vh 1vw 0 1vw
+    margin: 2vh 0 0 0
     justify-content: center
     width: 100%
 
@@ -120,13 +121,14 @@ export default {
     margin: 0 1vw
 
   .sitemap
-    margin: 2vh 2vw 0 2vw
+    margin: 2vh 0 0 0
     width: 100%
+    font-size: 1vw
     justify-content: center
 
   .copyright
     font-size: 1vw
-    margin: 2vh 2vw
+    margin: 2vh 0
     text-align: center
     width: 100%
 </style>
