@@ -39,7 +39,6 @@ export default {
 @import "assets/styles/mixins"
 
 .own
-  height: 100vh
   width: 100%
   position: relative
   background-color: $tiki-blue
@@ -81,8 +80,12 @@ export default {
   .imgContainer
     width: 95%
     margin: 8vh auto 0 auto
+    padding-bottom: 12vh
 
 @include for-tablet
+  .own
+    height: 100vh
+
   .title
     font-size: 3.5vw
     margin: 12vh auto 0 auto

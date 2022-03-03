@@ -88,6 +88,9 @@ export default {
     top: -4%
     left: -14%
 
+  .img
+    height: 85vh
+
 @include for-tablet
   .title
     font-size: 3vw
