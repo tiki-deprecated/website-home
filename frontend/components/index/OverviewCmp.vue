@@ -83,7 +83,7 @@ export default {
 .missionText1, .missionText2, .buildingText
   font-family: $font-family-nunito-sans
   color: $tiki-blue
-  font-weight: normal
+  font-weight: 600
 
 .missionRow
   display: flex

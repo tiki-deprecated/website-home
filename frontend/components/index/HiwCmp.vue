@@ -16,7 +16,7 @@
           muted=""
           playsinline=""
           class="hiwVideo"
-          poster="~/assets/images/jpg/mobile-app.jpg"
+          :poster="require(`~/assets/images/jpg/mobile-app.jpg`)"
         >
           Your browser does not support HTML5 video.
           <source src="~/assets/images/mp4/mobile-app.mp4" type="video/mp4" />
@@ -134,7 +134,7 @@ export default {
 
 .hiwRowText
   font-family: $font-family-nunito-sans
-  font-weight: normal
+  font-weight: 600
   color: $tiki-blue
 
 .hiwNote
@@ -151,7 +151,7 @@ export default {
 .hiw2ButtonText
   color: $white
   font-family: $font-family-nunito-sans
-  font-weight: normal
+  font-weight: 600
 
 .hiw3Img
   display: block

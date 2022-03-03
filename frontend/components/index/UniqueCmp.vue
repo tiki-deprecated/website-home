@@ -112,7 +112,7 @@ export default {
 .subtitle
   font-family: $font-family-nunito-sans
   color: $tiki-blue
-  font-weight: normal
+  font-weight: 600
 
 .valueTitle
   font-family: $font-family-nunito-sans

@@ -10,6 +10,8 @@
       <overview-cmp />
       <hiw-cmp />
       <unique-cmp />
+      <involved-cmp />
+      <utils-footer-cmp />
     </div>
   </div>
 </template>
@@ -24,10 +26,14 @@ import StringsCmp from '../components/index/StringsCmp'
 import OverviewCmp from '../components/index/OverviewCmp'
 import HiwCmp from '../components/index/HiwCmp'
 import UniqueCmp from '../components/index/UniqueCmp'
+import InvolvedCmp from '../components/index/InvolvedCmp'
+import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 
 export default {
   name: 'Index',
   components: {
+    UtilsFooterCmp,
+    InvolvedCmp,
     UniqueCmp,
     HiwCmp,
     OverviewCmp,
