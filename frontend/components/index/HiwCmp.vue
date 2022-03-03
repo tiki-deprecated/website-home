@@ -189,6 +189,7 @@ export default {
   .hiw1Note
     width: 90%
     margin: 0 auto
+    font-size: 4.25vw
 
   .hiwVideo
     margin: 3vh auto
@@ -197,12 +198,14 @@ export default {
   .hiw2Note
     margin-left: 5vw
     width: 55%
+    font-size: 4.25vw
 
   .hiw2Img
     margin-right: auto
     margin-left: auto
-    width: 20%
-    height: fit-content
+    max-height: 10vh
+    height: auto
+    width: auto
 
   .hiw2Button
     width: 90%
@@ -251,6 +254,7 @@ export default {
   .hiw1Note
     width: 90%
     margin: 0 auto
+    font-size: 1.25vw
 
   .hiwVideo
     margin: 5vh auto
@@ -259,12 +263,14 @@ export default {
   .hiw2Note
     margin-left: 2vw
     width: 55%
+    font-size: 1.25vw
 
   .hiw2Img
     margin-right: auto
     margin-left: auto
-    width: 15%
-    height: fit-content
+    max-height: 10vh
+    height: auto
+    width: auto
 
   .hiw2Button
     width: 90%
