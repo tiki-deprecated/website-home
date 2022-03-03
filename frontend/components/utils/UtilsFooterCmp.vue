@@ -22,23 +22,18 @@
       /></a>
     </div>
     <div class="sitemap">
-      <a href="" class="link">Privacy Notice</a>&nbsp;|&nbsp;<a
-        href=""
-        class="link"
-        >Blog</a
-      >&nbsp;|&nbsp;<a href="" class="link">Community</a>&nbsp;|&nbsp;<a
-        href=""
-        class="link"
-        >Github</a
+      <a href="https://mytiki.com/privacy" class="link">Privacy Notice</a
+      >&nbsp;|&nbsp;<a href="https://blog.mytiki.com" class="link">Blog</a
+      >&nbsp;|&nbsp;<a href="https://discord.com/invite/evjYQq48Be" class="link"
+        >Community</a
+      >&nbsp;|&nbsp;<a href="https://github.com/tiki" class="link">Github</a
       >&nbsp;|&nbsp;<a href="" class="link">Team & Investors</a>&nbsp;|&nbsp;<a
         href=""
         class="link"
         >Roadmap</a
-      >&nbsp;|&nbsp;<a href="" class="link">Feedback</a>&nbsp;|&nbsp;<a
-        href=""
-        class="link"
-        >Job Openings</a
-      >
+      >&nbsp;|&nbsp;<a href="https://feedback.mytiki.com" class="link"
+        >Feedback</a
+      >&nbsp;|&nbsp;<a href="" class="link">Job Openings</a>
     </div>
     <div class="copyright">Copyright © 2022 Tiki inc.</div>
   </div>
@@ -105,6 +100,33 @@ export default {
     margin: 2vh 5vw 0 5vw
 
   .copyright
+    font-size: 4vw
     margin: 2vh 5vw
+
 @include for-tablet
+  .email
+    font-size: 1vw
+    margin: 3vh 2vw 0 2vw
+    text-align: center
+    width: 100%
+
+  .socials
+    margin: 2vh 1vw 0 1vw
+    justify-content: center
+    width: 100%
+
+  ::v-deep .social.svg
+    height: 3vh
+    margin: 0 1vw
+
+  .sitemap
+    margin: 2vh 2vw 0 2vw
+    width: 100%
+    justify-content: center
+
+  .copyright
+    font-size: 1vw
+    margin: 2vh 2vw
+    text-align: center
+    width: 100%
 </style>

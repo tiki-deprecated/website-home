@@ -179,5 +179,41 @@ export default {
   .valueDesc
     margin: 1vh 5vw 0 10vw
     font-size: 4vw
+
 @include for-tablet
+  .unique
+    padding-top: 5vh
+
+  .uniqueContainer
+    width: 33%
+    margin: 0 auto
+    border-radius: 1vw
+    padding-bottom: 5vh
+
+  .title
+    font-size: 2.25vw
+    margin: 3vh auto 0 2vw
+
+  .subtitle
+    font-size: 1.25vw
+    margin: 3vh 2vw 0 2vw
+
+  .valueTitle
+    font-size: 2vw
+    margin: 5vh 2vw 0 2vw
+
+  .valueSubtitle
+    font-size: 1.25vw
+    margin: 2vh 2vw 0 2vw
+
+  .valueLink
+    margin: 2vh 2vw 0 4vw
+    font-size: 1.25vw
+
+  ::v-deep .arrow.svg
+    height: 1vw
+
+  .valueDesc
+    margin: 1vh 2vw 0 4vw
+    font-size: 1vw
 </style>

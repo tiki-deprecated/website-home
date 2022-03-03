@@ -4,7 +4,7 @@
       <iframe
         width="560"
         height="315"
-        :src="'https://www.youtube.com/embed/' + ytId + '?autoplay=1'"
+        :src="'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1'"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; clipboard-write"
         allowfullscreen
         class="videoIframe"
@@ -47,6 +47,11 @@ export default {
       required: false,
       default: '',
     },
+    imgType: {
+      type: String,
+      required: false,
+      default: 'png',
+    },
   },
   data() {
     return {
@@ -60,7 +65,7 @@ export default {
       let srcSet
       for (let i = 0; i < len; i++) {
         if (srcSet !== undefined) srcSet += ','
-        srcSet += `${require(`@/assets/images/png/${this.imgName}_w_${this.imgSizes[i]}.png`)} ${
+        srcSet += `${require(`@/assets/images/${this.imgName}_w_${this.imgSizes[i]}.${this.imgType}`)} ${
           this.imgSizes[i]
         }w`
       }
@@ -74,9 +79,9 @@ export default {
     },
     src() {
       const len = this.imgSizes.length
-      return `${require(`@/assets/images/png/${this.imgName}_w_${
+      return `${require(`@/assets/images/${this.imgName}_w_${
         this.imgSizes[len - 1]
-      }.png`)}`
+      }.${this.imgType}`)}`
     },
   },
   methods: {
@@ -132,14 +137,14 @@ export default {
 ::v-deep .placeholderBtn.svg
   width: 20%
 
-::v-deep .placeholderBtn.svg > .play-fill, ::v-deep .placeholderBtn.svg > .button-fill
-  fill: none
-
-::v-deep .placeholderBtn.svg > .play-outline, ::v-deep .placeholderBtn.svg > .button-outline
+::v-deep .placeholderBtn.svg > .button-fill, ::v-deep .placeholderBtn.svg > .button-outline
   fill: $yellow
+
+::v-deep .placeholderBtn.svg > .play-fill, ::v-deep .placeholderBtn.svg > .play-outline
+  fill: $white
 
 ::v-deep .placeholderBtn:hover.svg > .button-outline, ::v-deep .placeholderBtn:hover.svg > .button-fill
-  fill: $yellow
+  fill: $tiki-orange
 
 ::v-deep .placeholderBtn:hover.svg > .play-outline, ::v-deep .placeholderBtn:hover.svg > .play-fill
   fill: $white

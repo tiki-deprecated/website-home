@@ -19,7 +19,7 @@ export default {
     css() {
       if (process.client) {
         const width = window.innerWidth
-        const height = window.innerHeight
+        const height = window.innerHeight * 0.66
         const angle = Math.atan(height / width)
         return {
           '--bg-deg': '-' + angle + 'rad',
@@ -38,7 +38,6 @@ export default {
 @import "assets/styles/mixins"
 
 .pain
-  height: 100vh
   width: 100%
   position: relative
 
@@ -60,6 +59,7 @@ export default {
 
 @include for-phone
   .pain
+    height: 66vh
     background-image: linear-gradient(var(--bg-deg), $gray-1 50%, $tiki-purple 50%)
 
   .userPain, .bizPain
@@ -71,11 +71,12 @@ export default {
     left: 5%
 
   .bizPain
-    bottom: 20%
+    bottom: 15%
     right: 5%
 
 @include for-tablet
   .pain
+    height: 100vh
     background-image: linear-gradient(-90deg, $gray-1 50%, $tiki-purple 50%)
 
   .userPain, .bizPain

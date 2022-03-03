@@ -221,5 +221,66 @@ export default {
 
   ::v-deep .arrow.svg
     height: 3.75vw
+
 @include for-tablet
+  .hiwContainer
+    width: 33%
+    margin: 0 auto
+    border-radius: 1vw
+    padding-bottom: 5vh
+
+  .hiw
+    padding-top: 5vh
+
+  .title
+    font-size: 2.25vw
+    margin: 3vh auto 0 2vw
+
+  .hiwRow
+    margin-top: 5vh
+
+  .hiwRowNum
+    font-size: 5vw
+    margin: 0 auto
+
+  .hiwRowText
+    font-size: 1.25vw
+    width: 70%
+    margin-right: 2vw
+
+  .hiw1Note
+    width: 90%
+    margin: 0 auto
+
+  .hiwVideo
+    margin: 5vh auto
+    width: 100%
+
+  .hiw2Note
+    margin-left: 2vw
+    width: 55%
+
+  .hiw2Img
+    margin-right: auto
+    margin-left: auto
+    width: 15%
+    height: fit-content
+
+  .hiw2Button
+    width: 90%
+    margin: 5vh auto
+    border-radius: 1vw
+
+  .hiw2ButtonText
+    font-size: 1.25vw
+    padding: 2vh 0
+    margin: 0 auto
+    width: 80%
+
+  .hiw3Img
+    width: 90%
+    margin: 5vh auto
+
+  ::v-deep .arrow.svg
+    height: 1vw
 </style>

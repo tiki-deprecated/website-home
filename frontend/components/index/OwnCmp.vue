@@ -46,7 +46,7 @@ export default {
 
 .title
   font-family: $font-family-koara
-  font-weight: bold
+  font-weight: normal
   color: $white
   text-align: center
   display: inline-block
@@ -83,4 +83,19 @@ export default {
     margin: 8vh auto 0 auto
 
 @include for-tablet
+  .title
+    font-size: 3.5vw
+    margin: 12vh auto 0 auto
+    padding-left: 5vw
+
+  .subtitle
+    font-size: 1.5vw
+    margin: 6vh auto 0 5vw
+    width: 33%
+
+  .imgContainer
+    position: absolute
+    width: 33%
+    top: 20%
+    right: 10%
 </style>

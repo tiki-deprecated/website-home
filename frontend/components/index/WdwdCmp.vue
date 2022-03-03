@@ -17,7 +17,6 @@ export default {
 @import "assets/styles/mixins"
 
 .wdwd
-  height: 100vh
   width: 100%
   position: relative
   background-color: #FFB720
@@ -44,8 +43,11 @@ export default {
   display: block
 
 @include for-phone
+  .wdwd
+    height: 80vh
+
   .line1
-    margin: 20vh auto 0 5vw
+    margin: 7vh auto 0 5vw
     font-size: 9vw
 
   .line2
@@ -59,4 +61,19 @@ export default {
     margin: 20vh auto 0 10vw
 
 @include for-tablet
+  .wdwd
+    height: 100vh
+
+  .line1
+    margin: 20vh auto 0 5vw
+    font-size: 3vw
+
+  .line2
+    margin: 20vh 5vw 0 auto
+    font-size: 3vw
+
+  .line3
+    font-size: 2.75vw
+    width: 19%
+    margin: 15vh auto 0 12vw
 </style>

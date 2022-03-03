@@ -36,7 +36,6 @@ export default {
 
 .ctrl
   background: #FFD553
-  height: 100vh
   width: 100%
   position: relative
 
@@ -54,11 +53,14 @@ export default {
   z-index: 1
 
 @include for-phone
+  .ctrl
+    height: 85vh
+
   .img
     height: 60vh
 
   .imgContainer
-    top: 50%
+    top: 45%
     left: 20%
     -ms-transform: translate(-50%, -50%)
     transform: translate(-50%, -50%)
@@ -66,12 +68,16 @@ export default {
   .textContainer
     font-size: 15vw
     max-width: 60%
-    top: 50%
+    top: 45%
     right: 5%
     -ms-transform: translateY(-50%)
     transform: translateY(-50%)
 
 @include for-tablet
+  .ctrl
+    height: 100vh
+    overflow: hidden
+
   .img
     height: 100vh
 

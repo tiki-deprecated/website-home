@@ -37,12 +37,10 @@
       </div>
       <utils-yt-cmp
         class="buildingVideo"
-        yt-id="FSQv6CNfy00"
-        img-name="yt-placeholder"
-        :img-sizes="[
-          200, 350, 463, 568, 643, 727, 804, 866, 938, 993, 1045, 1108, 1160,
-          1216, 1254, 1305, 1356, 1396, 1400,
-        ]"
+        yt-id="QbIO7EiHxcg"
+        img-name="jpg/product-video"
+        img-type="jpg"
+        :img-sizes="[200, 441, 687, 896, 1060, 1379, 1397, 1400]"
       />
     </div>
   </div>
@@ -68,6 +66,7 @@ export default {
 
 .logoContainer
   background-color: $tiki-pink
+  position: relative
 
 ::v-deep .logo.svg
   fill: $white
@@ -104,7 +103,6 @@ export default {
   .logoContainer
     width: 100%
     height: 100vw
-    position: relative
 
   .logo
     width: 80%
@@ -145,5 +143,49 @@ export default {
 
   .buildingContainer
     overflow: hidden
+
 @include for-tablet
+  .logoContainer
+    width: 100%
+    height: 20vw
+
+  .logo
+    width: 50%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+
+  .missionContainer, .buildingContainer
+    width: 33%
+    margin: 5vh auto 0 auto
+    border-radius: 1vw
+
+  .missionTitle, .buildingTitle
+    font-size: 2.25vw
+    margin: 3vh auto 0 2vw
+
+  .missionText1, .buildingText
+    font-size: 1.25vw
+    margin: 2vh 2vw 0 2vw
+
+  .missionText2
+    font-size: 1.25vw
+    margin: 2vh 2vw 5vh 2vw
+    width: 50%
+
+  .imgContainer
+    width: 33%
+    margin: 3vh 5vw 0 auto
+
+  .img
+    height: 15vh
+    margin: auto
+
+  .buildingVideo
+    margin-top: 3vh
+
+  .buildingContainer
+    overflow: hidden
 </style>

@@ -181,5 +181,46 @@ export default {
   .cta
     font-size: 4.25vw
     margin: 2vh 5vw 0 5vw
+
 @include for-tablet
+  .involved
+    padding: 5vh 0
+
+  .involvedContainer
+    width: 33%
+    margin: 0 auto
+    border-radius: 1vw
+    padding-bottom: 5vh
+
+  .title, .hiring
+    font-size: 2.25vw
+    margin: 3vh auto 0 2vw
+
+  .hiringLink
+    margin: 5vh 2vw 0 4vw
+    font-size: 1.25vw
+
+  ::v-deep .arrow.svg
+    height: 1vw
+
+  .waitlist
+    font-size: 1.25vw
+    margin: 2vh 2vw 0 2vw
+
+  .socials
+    margin: 6vh auto
+
+  .socialRow
+    margin: 0 auto
+
+  ::v-deep .social.svg
+    height: 6vh
+    margin: 4vh 2vw
+
+  .substack
+    width: 100%
+
+  .cta
+    font-size: 1.25vw
+    margin: 3vh 2vw 0 2vw
 </style>

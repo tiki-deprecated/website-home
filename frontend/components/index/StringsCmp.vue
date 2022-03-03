@@ -51,7 +51,6 @@ export default {
 .title, .cta
   font-family: $font-family-courier
   color: $tiki-blue
-  text-align: right
 
 .stat
   display: block
@@ -67,6 +66,7 @@ export default {
     font-size: 6vw
     margin: 4vh 5vw 0 auto
     width: 55%
+    text-align: right
 
   .stat
     margin: 70vh 5vw 0 5vw
@@ -79,8 +79,43 @@ export default {
     margin: 6vh 5vw 0 auto
     font-size: 6vw
     width: 52%
+    text-align: right
 
   .strings
     padding-bottom: 5vh
+
+  .imgContainer
+    top: -4%
+    left: -14%
+
 @include for-tablet
+  .title
+    font-size: 3vw
+    margin: 35vh auto 0 35vw
+    width: 55%
+    text-align: left
+
+  .stat
+    margin: 5vh auto 0 35vw
+    font-size: 3vw
+    width: 55%
+
+  .stat-num
+    font-size: 4vw
+
+  .cta
+    margin: 20vh 5vw 0 auto
+    font-size: 2vw
+    width: 33%
+    text-align: right
+
+  .strings
+    padding-bottom: 5vh
+
+  .img
+    height: 95vh
+
+  .imgContainer
+    top: -2%
+    left: -3%
 </style>
