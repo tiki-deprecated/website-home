@@ -4,6 +4,21 @@
       <div class="line1">The internet is fucked.</div>
       <div class="line2">Together we can fix it.</div>
     </div>
+    
+    <div class="signupContainer">
+      <nuxt-link
+        v-scroll-to="{ el: '#signup' }"
+        :to="{ path: '/', hash: 'signup' }"
+        class="signupButton"
+      >
+        <div class="signupButtonText">
+          <span>
+            Sign up&nbsp;
+          </span>
+        </div>
+      </nuxt-link>
+    </div>
+
     <div class="arrowContainer">
       <utils-svg-cmp name="arrow-down" class="arrow" />
     </div>
@@ -21,6 +36,20 @@ export default {
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
+
+.signupButton, .signupButton:hover, .signupButton:link, .signupButton:visited, .signupButton:active
+  background-color: $orange
+  display: block
+  text-decoration: none
+  padding: 20px 35px
+  border-radius: 1vw
+  margin-bottom: 4%
+
+.signupButtonText
+  color: $white
+  font-family: $font-family-nunito-sans
+  font-weight: 600
+  font-size: 20px
 
 .effed
   background: $white
@@ -61,12 +90,27 @@ export default {
   position: absolute
   top: 80%
   left: 50%
+  align-items: center
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+
+.signupContainer
+  margin: 0
+  position: absolute
+  top: 72%
+  left: 50%
+  align-items: center
   -ms-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
 
 ::v-deep .arrow.svg
+  align: right
+  text-align: center
   fill: $tiki-black
-  animation: arrow 7.5s forwards
+  animation: arrow 8s forwards
+
+::v-deep .signupButton
+  animation: signupButton 7.75s forwards
 
 @keyframes blink1
   from
@@ -87,6 +131,14 @@ export default {
     fill: transparent
   to
     fill: $tiki-black
+  
+@keyframes signupButton
+  from
+    opacity: 0
+  90%
+    opacity: 0
+  to
+    opacity: 1.0
 
 @include for-phone
   ::v-deep .arrow.svg
@@ -94,6 +146,10 @@ export default {
 
   .line1, .line2
     font-size: 6.8vw
+
+  .signupButton, .signupButton:hover, .signupButton:link, .signupButton:visited, .signupButton:active
+    padding: 15px 30px
+    border-radius: 2vw
 
   @keyframes typing1
     from
