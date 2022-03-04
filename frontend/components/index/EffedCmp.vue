@@ -43,7 +43,7 @@ export default {
   text-decoration: none
   padding: 20px 35px
   border-radius: 1vw
-  margin-bottom: 4%
+  margin-bottom: 5%
 
 .signupButtonText
   color: $white
