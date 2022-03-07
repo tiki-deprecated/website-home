@@ -100,8 +100,8 @@ export default {
     top: 172vh
     right: 0
     position: absolute
-    max-height: 16vh
-    max-width: 50vw
+    max-height: 20vh
+    max-width: 60vw
     z-index: 2
 
   .pineapplePizza

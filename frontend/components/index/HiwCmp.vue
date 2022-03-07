@@ -201,7 +201,7 @@ export default {
 
   .hiwRowLeft
     display: grid
-    margin: 0 0.5vh 0 0vh
+    margin: 0 1vh
 
   .hiwRow
     margin-top: 5vh
@@ -212,7 +212,7 @@ export default {
 
   .hiwRowSticker
     margin: 0 auto
-    max-height: 20vh
+    max-height: 40vh
     max-width: 20vw
     height: auto
     width: auto
@@ -234,13 +234,13 @@ export default {
 
   .googleSticker
     margin: 0 auto
-    max-height: 20vh
-    max-width: 20vw
+    max-height: 25vh
+    max-width: 25vw
     height: auto
     width: auto
-    position: relative
-    top: 6.5vh
-    right: -74vw
+    position: absolute
+    top: 27.5vh
+    right: 0vw
 
   .hiwVideo
     margin: 3vh auto
@@ -252,9 +252,8 @@ export default {
     font-size: 4.25vw
 
   .hiw2Img
-    margin-right: auto
-    margin-left: auto
-    max-height: 10vh
+    margin: auto
+    max-width: 23vw
     height: auto
     width: auto
 
@@ -345,7 +344,7 @@ export default {
     height: auto
     width: auto
     position: relative
-    top: 6.5vh
+    top: 5vh
     right: -28vw
 
   .hiw2Button
