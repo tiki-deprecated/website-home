@@ -10,6 +10,16 @@
             or Facebook to take control of their data.
           </div>
         </div>
+        <img
+          sizes="(max-width: 325px) 100vw, 325px"
+          srcset="
+            ~/assets/images/png/google-sticker_w_200.png 200w,
+            ~/assets/images/png/google-sticker_w_325.png 265w
+          "
+          src="~/assets/images/png/google-sticker_w_325.png"
+          alt=""
+          class="googleSticker"
+        />
         <video
           autoplay=""
           loop=""
@@ -28,7 +38,20 @@
       </div>
       <div class="hiw2">
         <div class="hiwRow">
-          <div class="hiwRowNum">2.</div>
+          <span class="hiwRowLeft">
+            <div class="hiwRowNum">2.</div>
+
+            <img
+              sizes="(max-width: 265px) 100vw, 265px"
+              srcset="
+                ~/assets/images/png/sticker-stack_w_200.png 200w,
+                ~/assets/images/png/sticker-stack_w_265.png 265w
+              "
+              src="~/assets/images/png/sticker-stack_w_265.png"
+              alt=""
+              class="hiwRowSticker"
+            />
+          </span>
           <div class="hiwRowText">
             Data ownership via NFTs. It’s simple. To sell (license) your data,
             first you must own it.<br /><br />As the seller, you choose who can
@@ -131,6 +154,8 @@ export default {
   font-family: $font-family-koara
   font-weight: bold
   color: $tiki-purple
+  grid-column: 1
+  grid-row: 1
 
 .hiwRowText
   font-family: $font-family-nunito-sans
@@ -174,12 +199,28 @@ export default {
     font-size: 5.25vw
     margin: 3vh auto 0 5vw
 
+  .hiwRowLeft
+    display: grid
+    margin: 0 0.5vh 0 0vh
+
   .hiwRow
     margin-top: 5vh
 
   .hiwRowNum
     font-size: 15vw
+    margin: -3.15vh auto
+
+  .hiwRowSticker
     margin: 0 auto
+    max-height: 20vh
+    max-width: 20vw
+    height: auto
+    width: auto
+    grid-column: 1
+    grid-row: 2
+    position: relative
+    top: 5vh
+    right: 7vw
 
   .hiwRowText
     font-size: 4.25vw
@@ -190,6 +231,16 @@ export default {
     width: 90%
     margin: 0 auto
     font-size: 4.25vw
+
+  .googleSticker
+    margin: 0 auto
+    max-height: 20vh
+    max-width: 20vw
+    height: auto
+    width: auto
+    position: relative
+    top: 6.5vh
+    right: -74vw
 
   .hiwVideo
     margin: 3vh auto
@@ -239,12 +290,28 @@ export default {
     font-size: 2.25vw
     margin: 3vh auto 0 2vw
 
+  .hiwRowLeft
+    display: grid
+    margin: -3.15vh auto
+
   .hiwRow
     margin-top: 5vh
 
   .hiwRowNum
     font-size: 5vw
+    margin: -3.15vh auto
+
+  .hiwRowSticker
     margin: 0 auto
+    max-height: 15vh
+    max-width: 8vw
+    height: auto
+    width: auto
+    grid-column: 1
+    grid-row: 2
+    position: relative
+    top: 3vh
+    right: 2vw
 
   .hiwRowText
     font-size: 1.25vw
@@ -271,6 +338,15 @@ export default {
     max-height: 10vh
     height: auto
     width: auto
+
+  .googleSticker
+    margin: 0 auto
+    max-height: 7vh
+    height: auto
+    width: auto
+    position: relative
+    top: 6.5vh
+    right: -28vw
 
   .hiw2Button
     width: 90%
