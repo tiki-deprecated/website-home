@@ -34,26 +34,6 @@
         alt=""
         class="pineapplePizza"
       />
-      <img
-        sizes="(max-width: 265px) 100vw, 265px"
-        srcset="
-          ~/assets/images/png/sticker-stack_w_200.png 200w,
-          ~/assets/images/png/sticker-stack_w_265.png 265w
-        "
-        src="~/assets/images/png/sticker-stack_w_265.png"
-        alt=""
-        class="stickerStack"
-      />
-      <img
-        sizes="(max-width: 325px) 100vw, 325px"
-        srcset="
-          ~/assets/images/png/google-sticker_w_200.png 200w,
-          ~/assets/images/png/google-sticker_w_325.png 265w
-        "
-        src="~/assets/images/png/google-sticker_w_325.png"
-        alt=""
-        class="googleSticker"
-      />
     </div>
   </div>
 </template>
@@ -79,7 +59,7 @@ export default {
     UniqueCmp,
     HiwCmp,
     OverviewCmp,
-    StringsCmp,
+    StringsCmp, // stringthing
     OwnCmp,
     WdwdCmp,
     PainCmp,
@@ -120,7 +100,8 @@ export default {
     top: 172vh
     right: 0
     position: absolute
-    height: 16vh
+    max-height: 20vh
+    max-width: 60vw
     z-index: 2
 
   .pineapplePizza
@@ -128,20 +109,6 @@ export default {
     right: -6%
     position: absolute
     height: 23vh
-    z-index: 2
-
-  .stickerStack
-    top: 777vh
-    left: -3%
-    position: absolute
-    height: 18vh
-    z-index: 2
-
-  .googleSticker
-    top: 707vh
-    right: 1%
-    position: absolute
-    height: 8vh
     z-index: 2
 
 @include for-tablet
@@ -159,20 +126,4 @@ export default {
     height: 38vh
     z-index: 2
     transform: scaleX(-1)
-
-  .stickerStack
-    top: 902vh
-    left: 31%
-    position: absolute
-    height: 25vh
-    z-index: 2
-    display: none
-
-  .googleSticker
-    top: 800vh
-    right: 30%
-    position: absolute
-    height: 18vh
-    z-index: 2
-    display: none
 </style>
