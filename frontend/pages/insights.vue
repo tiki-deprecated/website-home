@@ -1,16 +1,18 @@
 <template>
   <div class="page">
-    Hello World
+    <hero-cmp />
     <utils-footer-cmp />
   </div>
 </template>
 
 <script>
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
+import HeroCmp from '../components/insights/HeroCmp'
 
 export default {
   name: 'Insights',
   components: {
+    HeroCmp,
     UtilsFooterCmp,
   },
   mounted() {
