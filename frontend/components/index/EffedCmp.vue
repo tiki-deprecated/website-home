@@ -4,7 +4,7 @@
       <div class="line1">The internet is fucked.</div>
       <div class="line2">Together we can fix it.</div>
     </div>
-    
+
     <div class="signupContainer">
       <nuxt-link
         v-scroll-to="{ el: '#signup' }"
@@ -12,9 +12,7 @@
         class="signupButton"
       >
         <div class="signupButtonText">
-          <span>
-            Sign up&nbsp;
-          </span>
+          <span>Sign up&nbsp;</span>
         </div>
       </nuxt-link>
     </div>
@@ -131,7 +129,7 @@ export default {
     fill: transparent
   to
     fill: $tiki-black
-  
+
 @keyframes signupButton
   from
     opacity: 0
