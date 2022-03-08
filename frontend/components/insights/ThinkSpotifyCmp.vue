@@ -146,6 +146,7 @@ export default {
   .featureRow
     margin: 23px 10px
     float: left
+    max-width: 35vw
 
   .featureText
     font-size: 25px

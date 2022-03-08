@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    Hello World
+    <company-info-cmp />
     <think-spotify-cmp />
     <utils-footer-cmp />
   </div>
@@ -8,12 +8,14 @@
 
 <script>
 import ThinkSpotifyCmp from '../components/insights/ThinkSpotifyCmp'
+import CompanyInfoCmp from '../components/insights/CompanyInfoCmp'
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 
 export default {
-  name: 'Insights',
+  name: 'InsightsCmp',
   components: {
     ThinkSpotifyCmp,
+    CompanyInfoCmp,
     UtilsFooterCmp,
   },
   mounted() {
