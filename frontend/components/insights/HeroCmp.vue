@@ -28,7 +28,7 @@
           id="ytIframe"
           width="560"
           height="315"
-          src="https://www.youtube-nocookie.com/embed/QbIO7EiHxcg?autoplay=1&enablejsapi=1"
+          :src="videoSrc"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -50,6 +50,8 @@ export default {
       imgSizes: undefined,
       imgName: undefined,
       isOverlay: false,
+      videoSrc:
+        'https://www.youtube-nocookie.com/embed/QbIO7EiHxcg?autoplay=1&enablejsapi=1',
     }
   },
   computed: {
@@ -109,10 +111,7 @@ export default {
       clickEvent.stopPropagation()
       this.isOverlay = false
       const yt = window.document.getElementById('ytIframe')
-      yt.setAttribute(
-        'src',
-        'https://www.youtube-nocookie.com/embed/QbIO7EiHxcg?autoplay=1&enablejsapi=1 '
-      )
+      yt.setAttribute('src', this.videoSrc)
     },
   },
 }
