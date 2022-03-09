@@ -7,10 +7,16 @@
         <span class="insightText"> Tweet it at us, we'll add it.</span>
       </div>
 
-      <div class="twitter">
-        <utils-svg-cmp name="twitter" class="twitterIcon" />
-        <span class="twitterHandle">@my_tiki_</span>
-      </div>
+      <a
+        class="twitterLink"
+        href="https://twitter.com/my_tiki_"
+        target="_blank"
+      >
+        <div class="twitter">
+          <utils-svg-cmp name="twitter" class="twitterIcon" />
+          <span class="twitterHandle">@my_tiki_</span>
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -47,6 +53,10 @@ export default {
 
 .twitterHandle
   color: #1DA1F2
+
+a, a:hover, a:focus, a:active
+  text-decoration: none
+  color: inherit
 
 @include for-phone
   .ctrl
