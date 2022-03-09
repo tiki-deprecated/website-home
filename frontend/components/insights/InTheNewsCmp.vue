@@ -2,11 +2,10 @@
   <div class="ctrl">
     <div class="ctrlContainer">
       <div class="newsHeader">
-        <div class="halfLine"><hr /></div>
+        <hr class="halfLine" />
         <span class="newsText">IN THE NEWS</span>
-        <div class="halfLine"><hr /></div>
+        <hr class="halfLine" />
       </div>
-
       <div class="newsBody">
         <img
           sizes="(max-width: 1400px) 100vw, 1400px"
@@ -26,7 +25,7 @@
 
 <script>
 export default {
-  name: 'CompanyInfoCmp',
+  name: 'InTheNewsCmp',
 }
 </script>
 
@@ -47,26 +46,33 @@ export default {
     overflow: hidden
     display: flex
     align-items: center
-    justify-content: center
+    justify-content: space-between
 
 .newsText
-    font-family: "Nunito Sans ExtraBold"
-
-@include for-phone
+    font-family: $font-family-nunito-sans
+    text-transform: uppercase
+    font-weight: 800
 
 .halfLine
+  color: $gray-2
+  background-color: $gray-2
+  border-width: 0
+  margin: 0
+  height: 1px
+
+@include for-phone
+  .halfLine
     width: 20vw
-    float: left
 
-.newsHeader
-    font-size: 8vw
+  .newsHeader
+      font-size: 6.25vw
 
-.newsText
-    margin: 0vh 3vw
+  .newsText
+      margin: 0 3vw
 
-.ctrl
-    padding-top: 2vh
-    padding-bottom: 2.5vh
+  .ctrl
+      padding-top: 2vh
+      padding-bottom: 2.5vh
 
 @include for-tablet
 </style>
