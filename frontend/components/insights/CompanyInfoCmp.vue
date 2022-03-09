@@ -56,11 +56,8 @@ export default {
 
 .ctrl
   background-color: $gray-1
-  padding-top: 25px
-  padding-bottom: 52px
 
 .ctrlContainer
-  width: 86.15vw
   margin: 0 auto
   justify-content: center
   align-items: center
@@ -69,17 +66,6 @@ export default {
   display: flex
   justify-content: center
   align-items: center
-
-.mascotImg
-  width: 20vw
-  max-width: 200px
-  margin-top: 36px
-
-.mascotText
-  text-align: center
-  font-size: 14px
-  padding-top: 10.7px
-  margin-bottom: 37px
 
 .busProp
   font-weight: bold
@@ -90,9 +76,30 @@ export default {
 .infoText
   font-family: $font-family-nunito-sans
   color: $black
-  font-size: 18px
+
+.mascotText
+  text-align: center
 
 @include for-phone
+
+  .ctrl
+    padding-top: 1.7em
+    padding-bottom: 2.5em
+
+  .ctrlContainer
+    width: 86.15vw
+
+  .mascotImg
+    width: 20vw
+    margin-top: 2.2em
+
+  .mascotText
+    font-size: 1em
+    padding-top: 10.7px
+    margin-bottom: 2.2em
+
+  .infoText
+    font-size: 1.2em
 
 @include for-tablet
   .ctrl
@@ -104,5 +111,5 @@ export default {
     width: 80vw
 
   .whoWeAreText
-    font-size: 25px
+    font-size: 2em
 </style>
