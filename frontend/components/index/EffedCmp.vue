@@ -4,18 +4,13 @@
       <div class="line1">The internet is fucked.</div>
       <div class="line2">Together we can fix it.</div>
     </div>
-    
+
     <div class="signupContainer">
       <nuxt-link
         v-scroll-to="{ el: '#signup' }"
         :to="{ path: '/', hash: 'signup' }"
-        class="signupButton"
-      >
-        <div class="signupButtonText">
-          <span>
-            Sign up&nbsp;
-          </span>
-        </div>
+        class="signupButtonText"
+        >Sign up
       </nuxt-link>
     </div>
 
@@ -37,19 +32,11 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.signupButton, .signupButton:hover, .signupButton:link, .signupButton:visited, .signupButton:active
-  background-color: $orange
-  display: block
-  text-decoration: none
-  padding: 20px 35px
-  border-radius: 1vw
-  margin-bottom: 5%
-
-.signupButtonText
-  color: $white
+.signupButtonText, .signupButtonText:hover, .signupButtonText:link, .signupButtonText:visited, .signupButtonText:active
+  color: $orange
   font-family: $font-family-nunito-sans
   font-weight: 600
-  font-size: 20px
+  text-decoration: none
 
 .effed
   background: $white
@@ -97,20 +84,13 @@ export default {
 .signupContainer
   margin: 0
   position: absolute
-  top: 72%
-  left: 50%
-  align-items: center
-  -ms-transform: translate(-50%, -50%)
-  transform: translate(-50%, -50%)
+  animation: signup 8s forwards
 
 ::v-deep .arrow.svg
   align: right
   text-align: center
   fill: $tiki-black
   animation: arrow 8s forwards
-
-::v-deep .signupButton
-  animation: signupButton 7.75s forwards
 
 @keyframes blink1
   from
@@ -131,8 +111,8 @@ export default {
     fill: transparent
   to
     fill: $tiki-black
-  
-@keyframes signupButton
+
+@keyframes signup
   from
     opacity: 0
   90%
@@ -147,9 +127,12 @@ export default {
   .line1, .line2
     font-size: 6.8vw
 
-  .signupButton, .signupButton:hover, .signupButton:link, .signupButton:visited, .signupButton:active
-    padding: 15px 30px
-    border-radius: 2vw
+  .signupContainer
+    top: 2%
+    right: 5%
+
+  .signupButtonText
+    font-size: 5.25vw
 
   @keyframes typing1
     from
@@ -188,6 +171,13 @@ export default {
 
   .line1, .line2
     font-size: 4vw
+
+  .signupButtonText
+    font-size: 1.25vw
+
+  .signupContainer
+    top: 5%
+    right: 3%
 
   @keyframes typing1
     from
