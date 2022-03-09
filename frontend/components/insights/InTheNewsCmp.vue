@@ -65,8 +65,8 @@ export default {
     margin: 0vh 3vw
 
 .ctrl
-    padding-top: 1.7rem
-    padding-bottom: 2.5rem
+    padding-top: 2vh
+    padding-bottom: 2.5vh
 
 @include for-tablet
 </style>
