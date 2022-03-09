@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <tweet-us-cmp />
     <company-info-cmp />
     <think-spotify-cmp />
     <utils-footer-cmp />
@@ -10,14 +11,17 @@
 import ThinkSpotifyCmp from '../components/insights/ThinkSpotifyCmp'
 import CompanyInfoCmp from '../components/insights/CompanyInfoCmp'
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
+import TweetUsCmp from '../components/insights/TweetUsCmp.vue'
 
 export default {
   name: 'InsightsCmp',
   components: {
+    TweetUsCmp,
     ThinkSpotifyCmp,
     CompanyInfoCmp,
     UtilsFooterCmp,
   },
+
   mounted() {
     this.$plausible.trackPageview()
   },
