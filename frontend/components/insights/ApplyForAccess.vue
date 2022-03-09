@@ -66,11 +66,11 @@ export default {
     width: 86.15vw
 
   .applyHeaderText
-    font-size: 2.9em
+    font-size: 2.9rem
     margin-bottom: 4.3vh
 
   .applySubHeaderText
-    font-size: 1.13em
+    font-size: 1.13rem
     margin-bottom: 4.3vh
 
   .applyForm
