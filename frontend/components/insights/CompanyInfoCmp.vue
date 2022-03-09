@@ -1,6 +1,6 @@
 <template>
-  <div class="ctrl">
-    <div class="ctrlContainer">
+  <div class="companyInfo">
+    <div class="companyInfoContainer">
       <div class="infoText">
         <span>
           Data is a disaster and at the center of the biggest challenges we face
@@ -47,17 +47,22 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.tikiLink
-  color: $blue
-  text-decoration: underline
-
-.ctrl
+.companyInfo
   background-color: $gray-1
 
-.ctrlContainer
+.companyInfoContainer
   margin: 0 auto
   justify-content: center
   align-items: center
+
+.infoText
+  font-family: $font-family-nunito-sans
+  color: $tiki-black
+  font-weight: 300
+
+.tikiLink
+  color: $blue
+  text-decoration: underline
 
 .mascot
   display: flex
@@ -68,6 +73,7 @@ export default {
   font-family: $font-family-nunito-sans
   font-weight: 300
   color: $tiki-black
+  text-align: center
 
 .busProp
   font-family: $font-family-nunito-sans
@@ -77,43 +83,35 @@ export default {
 .blueText
   color: $blue
 
-.infoText
-  font-family: $font-family-nunito-sans
-  color: $tiki-black
-  font-weight: 300
-
-.mascotText
-  text-align: center
-
 @include for-phone
 
-  .ctrl
-    padding: 2.5em 0
+  .companyInfo
+    padding: 3vh 0
 
-  .ctrlContainer
+  .companyInfoContainer
     width: 86.15vw
+
+  .infoText, .busProp
+    font-size: 1.2rem
 
   .mascotImg
     width: 20vw
-    margin-top: 2.2em
+    margin-top: 5.5vh
 
   .mascotText
-    font-size: .9em
-    padding-top: .7em
-    margin-bottom: 2.2em
-
-  .infoText, .busProp
-    font-size: 1.2em
+    font-size: .9rem
+    padding-top: 1vh
+    margin-bottom: 5.5vh
 
 @include for-tablet
-  .ctrl
+  .companyInfo
     display: flex
     justify-content: center
     align-items: center
 
-  .ctrlContainer
+  .companyInfoContainer
     width: 80vw
 
   .whoWeAreText
-    font-size: 2em
+    font-size: 2rem
 </style>

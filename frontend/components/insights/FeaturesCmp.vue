@@ -1,6 +1,6 @@
 <template>
-  <div class="ctrl">
-    <div class="ctrlContainer">
+  <div class="features">
+    <div class="featuresContainer">
       <div class="headerContainer">
         <span class="headerText">Think Spotify, for data.</span>
         <br /><br />
@@ -69,10 +69,8 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.featureRow
-  display: flex
-  justify-content: center
-  align-items: center
+.features
+  background-color: $gray-1
 
 .headerText
   font-family: $font-family-koara
@@ -91,17 +89,19 @@ export default {
 .featureListContainer
   margin: 0 auto
 
+.featureRow
+  display: flex
+  justify-content: center
+  align-items: center
+
 .featureText
   font-family: $font-family-nunito-sans
   color: $tiki-blue
   margin-left: 0
-  font-weight: 300
+  font-weight: 400
 
 .featureTextBold
-  font-weight: 500
-
-.ctrl
-  background-color: $gray-1
+  font-weight: 700
 
 ::v-deep .featureIcon.svg > .background
   fill: $white
@@ -113,6 +113,15 @@ export default {
   fill: $orange
 
 @include for-phone
+  .features
+    padding-bottom: 10vh
+
+  .headerText
+    font-size: 2rem
+
+  .subHeaderText
+    font-size: 1.25rem
+
   .headerContainer
     width: 87.5vw
     margin: 0 auto
@@ -121,25 +130,16 @@ export default {
   .featureListContainer
     width: 87.5vw
 
-  .featureText
-    width: 64.25vw
-    font-size: 4vw
-
   .featureRow
     margin: 8vh auto 0 auto
+
+  .featureText
+    width: 64.25vw
+    font-size: .94rem
 
   ::v-deep .featureIcon.svg
     width: 15vw
     margin-right: 6vw
-
-  .ctrl
-    padding-bottom: 10vh
-
-  .headerText
-    font-size: 8.5vw
-
-  .subHeaderText
-    font-size: 5.25vw
 
 @include for-tablet
 </style>
