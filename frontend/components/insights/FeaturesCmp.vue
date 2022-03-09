@@ -15,36 +15,41 @@
         <div class="featureRow">
           <utils-svg-cmp name="feature-looking-glass" class="featureIcon" />
           <div class="featureText">
-            With TIKI: <b>search, discover & get recommended</b> real-time
-            insights relevant to your business
+            With TIKI:
+            <b class="featureTextBold">search</b>,
+            <b class="featureTextBold">discover</b> &
+            <b class="featureTextBold">get recommended</b>
+            real-time insights relevant to your business
           </div>
         </div>
         <div class="featureRow">
           <utils-svg-cmp name="feature-binoculars" class="featureIcon" />
           <div class="featureText">
             Scope out the competition. You read that right, not just your data.
-            <b>View any company’s data.</b>
+            <b class="featureTextBold">View any company’s data.</b>
           </div>
         </div>
         <div class="featureRow">
           <utils-svg-cmp name="feature-badge" class="featureIcon" />
           <div class="featureText">
             Get inspired by companies you admire.
-            <b>Learn their secrets and benchmark</b> against them.
+            <b class="featureTextBold">Learn their secrets and benchmark</b>
+            against them.
           </div>
         </div>
         <div class="featureRow">
           <utils-svg-cmp name="feature-insights" class="featureIcon" />
           <div class="featureText">
-            <b>Hundreds of thousands of insights</b> out of the box. Millions,
-            then billions more coming.
+            <b class="featureTextBold">Hundreds of thousands of insights</b> out
+            of the box. Millions, then billions more coming.
           </div>
         </div>
         <div class="featureRow">
           <utils-svg-cmp name="feature-ethical" class="featureIcon" />
           <div class="featureText">
             Ethically sourced, direct from users, with consent and $$$. The
-            <b>highest quality</b> with <b>none of the legal mess</b>.
+            <b class="featureTextBold">highest quality</b> with
+            <b class="featureTextBold">none of the legal mess</b>.
           </div>
         </div>
       </div>
@@ -90,6 +95,10 @@ export default {
   font-family: $font-family-nunito-sans
   color: $tiki-blue
   margin-left: 0
+  font-weight: normal
+
+.featureTextBold
+  font-weight: 600
 
 .ctrl
   background-color: $gray-1
@@ -107,58 +116,30 @@ export default {
   .headerContainer
     width: 87.5vw
     margin: 0 auto
-    padding-top: 60px
+    padding-top: 10vh
 
   .featureListContainer
     width: 87.5vw
-    margin: 35px auto 0 auto
 
   .featureText
     width: 64.25vw
-    font-size: 15px
+    font-size: 4vw
 
   .featureRow
-    margin: 23px auto
+    margin: 8vh auto 0 auto
 
   ::v-deep .featureIcon.svg
     width: 15vw
-    max-width: 150px
-    margin-right: 23px
-    top: 50%
+    margin-right: 6vw
 
   .ctrl
-    padding-bottom: 52px
+    padding-bottom: 10vh
 
   .headerText
-    font-size: 32px
+    font-size: 8.5vw
 
   .subHeaderText
-    font-size: 20px
+    font-size: 5.25vw
 
 @include for-tablet
-  .ctrl
-    display: flex
-    justify-content: center
-    align-items: center
-
-  .ctrlContainer
-    width: 80vw
-
-  .headerText
-    font-size: 54px
-
-  .subHeaderText
-    font-size: 28px
-
-  .featureRow
-    margin: 23px 10px
-    float: left
-
-  .featureText
-    font-size: 25px
-    width: 80%
-    margin-left: 0
-
-  .headerContainer
-    margin: 10px auto
 </style>
