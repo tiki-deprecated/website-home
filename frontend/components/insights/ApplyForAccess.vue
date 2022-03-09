@@ -60,7 +60,7 @@ export default {
 @include for-phone
 
   .apply
-    padding: 2.5em 0
+    padding: 5.2vh 0
 
   .applyContainer
     width: 86.15vw
