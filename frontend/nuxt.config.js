@@ -83,8 +83,8 @@ export default {
    ** Style Resources
    */
   styleResources: {
-    sass: ['./assets/styles/*.sass'],
-    scss: ['./assets/styles/*.scss'],
+    sass: ['@/assets/styles/*.sass'],
+    scss: ['@/assets/styles/*.scss'],
   },
   /*
    ** Plugins to load before mounting the App
@@ -121,8 +121,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     '@nuxtjs/axios',
-    'vue-social-sharing/nuxt',
-    '@nuxtjs/toast',
     'vue-scrollto/nuxt',
     '@nuxt/content',
   ],

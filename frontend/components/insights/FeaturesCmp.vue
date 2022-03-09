@@ -11,7 +11,6 @@
           ></span
         >
       </div>
-
       <div class="featureListContainer">
         <div class="featureRow">
           <utils-svg-cmp name="feature-looking-glass" class="featureIcon" />
@@ -54,8 +53,11 @@
 </template>
 
 <script>
+import UtilsSvgCmp from '../utils/UtilsSvgCmp'
+
 export default {
-  name: 'ThinkSpotifyCmp',
+  name: 'FeaturesCmp',
+  components: { UtilsSvgCmp },
 }
 </script>
 
@@ -66,21 +68,15 @@ export default {
   display: flex
   justify-content: center
   align-items: center
-  margin: 23px auto
-
-.headerContainer
-  padding-top: 60px
 
 .headerText
   font-family: $font-family-koara
-  font-size: 32px
   color: $tiki-purple
   font-weight: lighter
   text-align: center
 
 .subHeaderText
   font-family: $font-family-koara
-  font-size: 20px
   font-weight: lighter
 
 .accentText
@@ -93,17 +89,10 @@ export default {
 .featureText
   font-family: $font-family-nunito-sans
   color: $tiki-blue
-  font-size: 15px
+  margin-left: 0
 
 .ctrl
   background-color: $gray-1
-  padding-bottom: 52px
-
-::v-deep .featureIcon.svg
-  width: 15vw
-  max-width: 150px
-  margin-right: 23px
-  top: 50%
 
 ::v-deep .featureIcon.svg > .background
   fill: $white
@@ -118,15 +107,33 @@ export default {
   .headerContainer
     width: 87.5vw
     margin: 0 auto
+    padding-top: 60px
 
   .featureListContainer
     width: 87.5vw
-    margin: 0 auto
-    margin-top: 35px
+    margin: 35px auto 0 auto
 
   .featureText
     width: 64.25vw
-    margin-left: 0
+    font-size: 15px
+
+  .featureRow
+    margin: 23px auto
+
+  ::v-deep .featureIcon.svg
+    width: 15vw
+    max-width: 150px
+    margin-right: 23px
+    top: 50%
+
+  .ctrl
+    padding-bottom: 52px
+
+  .headerText
+    font-size: 32px
+
+  .subHeaderText
+    font-size: 20px
 
 @include for-tablet
   .ctrl

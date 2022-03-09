@@ -1,21 +1,21 @@
 <template>
   <div class="page">
     <hero-cmp />
-    <think-spotify-cmp />
+    <features-cmp />
     <utils-footer-cmp />
   </div>
 </template>
 
 <script>
-import ThinkSpotifyCmp from '../components/insights/ThinkSpotifyCmp'
+import FeaturesCmp from '../components/insights/FeaturesCmp'
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 import HeroCmp from '../components/insights/HeroCmp'
 
 export default {
-  name: 'Insights',
+  name: 'InsightsPage',
   components: {
     HeroCmp,
-    ThinkSpotifyCmp,
+    FeaturesCmp,
     UtilsFooterCmp,
   },
   mounted() {

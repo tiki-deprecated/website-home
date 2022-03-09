@@ -52,14 +52,14 @@ import InvolvedCmp from '../components/index/InvolvedCmp'
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 
 export default {
-  name: 'Index',
+  name: 'IndexPage',
   components: {
     UtilsFooterCmp,
     InvolvedCmp,
     UniqueCmp,
     HiwCmp,
     OverviewCmp,
-    StringsCmp, // stringthing
+    StringsCmp,
     OwnCmp,
     WdwdCmp,
     PainCmp,
