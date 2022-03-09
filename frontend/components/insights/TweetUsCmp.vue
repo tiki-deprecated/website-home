@@ -3,10 +3,8 @@
     <div class="ctrlContainer">
       <div class="insightBox">
         <div class="insightHeader">Looking for a specific insight?</div>
-
         <span class="insightText"> Tweet it at us, we'll add it.</span>
       </div>
-
       <a
         class="twitterLink"
         href="https://twitter.com/my_tiki_"
@@ -22,8 +20,11 @@
 </template>
 
 <script>
+import UtilsSvgCmp from '../utils/UtilsSvgCmp'
+
 export default {
   name: 'CompanyInfoCmp',
+  components: { UtilsSvgCmp },
 }
 </script>
 
@@ -41,10 +42,10 @@ export default {
 .insightBox
   font-family: $font-family-koara
   font-weight: lighter
+  color: $tiki-black
 
 .twitter
   width: 100%
-  margin: 7.4vh auto
   display: flex
   justify-content: center
   align-items: center
@@ -60,8 +61,7 @@ a, a:hover, a:focus, a:active
 
 @include for-phone
   .ctrl
-    padding-top: 1.7em
-    padding-bottom: 2.5em
+    padding-top: 2.5em
 
   .ctrlContainer
     width: 86.15vw
@@ -73,9 +73,12 @@ a, a:hover, a:focus, a:active
   .insightText
     font-size: 1.32em
 
+  .twitter
+    padding: 7.4vh 0
+
   .twitterIcon
     width: 9.3vw
-    padding-right: .4em
+    padding-right: 1em
 
   .twitterHandle
     font-size: 1.7rem

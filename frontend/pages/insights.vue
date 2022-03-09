@@ -3,6 +3,7 @@
     <hero-cmp />
     <features-cmp />
     <company-info-cmp />
+    <tweet-us-cmp />
     <utils-footer-cmp />
   </div>
 </template>
@@ -12,6 +13,7 @@ import FeaturesCmp from '../components/insights/FeaturesCmp'
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 import HeroCmp from '../components/insights/HeroCmp'
 import CompanyInfoCmp from '../components/insights/CompanyInfoCmp'
+import TweetUsCmp from '../components/insights/TweetUsCmp'
 
 export default {
   name: 'InsightsPage',
@@ -19,6 +21,7 @@ export default {
     HeroCmp,
     FeaturesCmp,
     CompanyInfoCmp,
+    TweetUsCmp,
     UtilsFooterCmp,
   },
   mounted() {
