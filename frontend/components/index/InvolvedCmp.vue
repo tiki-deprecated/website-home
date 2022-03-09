@@ -42,19 +42,19 @@
         </div>
       </div>
       <div class="hiring">Yes, We're Hiring!</div>
-      <a class="hiringLink" href="" target="_blank">
+      <a class="hiringLink" href="https://angel.co/l/2w7tAf" target="_blank">
         <span>
           <utils-svg-cmp name="arrow-right" class="arrow" />&nbsp;&nbsp;Mobile
           Developers</span
         ></a
       >
-      <a class="hiringLink" href="" target="_blank">
+      <a class="hiringLink" href="https://angel.co/l/2wJ38u" target="_blank">
         <span>
           <utils-svg-cmp name="arrow-right" class="arrow" />&nbsp;&nbsp;Data
           Engineers</span
         ></a
       >
-      <a class="hiringLink" href="" target="_blank">
+      <a class="hiringLink" href="https://angel.co/l/2wJ38A" target="_blank">
         <span>
           <utils-svg-cmp
             name="arrow-right"
@@ -62,7 +62,7 @@
           />&nbsp;&nbsp;Blockchain Engineers</span
         ></a
       >
-      <a class="hiringLink" href="" target="_blank">
+      <a class="hiringLink" href="https://angel.co/l/2wdGDy" target="_blank">
         <span>
           <utils-svg-cmp
             name="arrow-right"
