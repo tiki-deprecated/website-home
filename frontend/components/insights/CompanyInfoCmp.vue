@@ -95,7 +95,7 @@ export default {
 
   .mascotText
     font-size: 1em
-    padding-top: 10.7px
+    padding-top: .7em
     margin-bottom: 2.2em
 
   .infoText
