@@ -95,10 +95,10 @@ export default {
   font-family: $font-family-nunito-sans
   color: $tiki-blue
   margin-left: 0
-  font-weight: normal
+  font-weight: 300
 
 .featureTextBold
-  font-weight: 600
+  font-weight: 500
 
 .ctrl
   background-color: $gray-1

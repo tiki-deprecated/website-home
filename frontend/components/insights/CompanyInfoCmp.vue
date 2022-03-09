@@ -13,7 +13,6 @@
           data.
         </span>
       </div>
-
       <div class="mascot">
         <img
           sizes="(max-width: 316px) 100vw, 316px"
@@ -26,10 +25,8 @@
           class="mascotImg"
         />
       </div>
-
-      <div class="mascotText">(Our adorable mascot)</div>
-
-      <div class="infoText busProp">
+      <div class="mascotText">(our adorable mascot)</div>
+      <div class="busProp">
         <span>Users gain privacy, control, and compensation.</span>
         <br /><br />
         <span class="blueText"
@@ -67,15 +64,23 @@ export default {
   justify-content: center
   align-items: center
 
+.mascotText
+  font-family: $font-family-nunito-sans
+  font-weight: 300
+  color: $tiki-black
+
 .busProp
-  font-weight: bold
+  font-family: $font-family-nunito-sans
+  color: $tiki-black
+  font-weight: 500
 
 .blueText
   color: $blue
 
 .infoText
   font-family: $font-family-nunito-sans
-  color: $black
+  color: $tiki-black
+  font-weight: 300
 
 .mascotText
   text-align: center
@@ -83,8 +88,7 @@ export default {
 @include for-phone
 
   .ctrl
-    padding-top: 1.7em
-    padding-bottom: 2.5em
+    padding: 2.5em 0
 
   .ctrlContainer
     width: 86.15vw
@@ -94,11 +98,11 @@ export default {
     margin-top: 2.2em
 
   .mascotText
-    font-size: 1em
+    font-size: .9em
     padding-top: .7em
     margin-bottom: 2.2em
 
-  .infoText
+  .infoText, .busProp
     font-size: 1.2em
 
 @include for-tablet
