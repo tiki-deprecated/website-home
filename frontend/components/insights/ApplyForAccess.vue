@@ -1,5 +1,6 @@
 <template>
   <div class="apply">
+    <script src="//embed.typeform.com/next/embed.js"></script>
     <div class="applyContainer">
       <div class="applyHeader">
         <span class="applyHeaderText"> Apply for First Access </span>
@@ -11,7 +12,15 @@
           >
         </div>
       </div>
-      <div class="applyForm">{APPLY FORM}</div>
+      <div
+        class="applyForm"
+        data-tf-widget="k5DStEo8"
+        data-tf-opacity="0"
+        data-tf-hide-headers
+        data-tf-iframe-props="title=CohortApplications"
+        data-tf-medium="snippet"
+        data-tf-inline-on-mobile
+      />
       <div class="applyBusProp">
         <span>UNLIMITED ACCESS. $10 PER MONTH.</span>
         <span class="enoughSaid">ENOUGH SAID.</span>
@@ -74,10 +83,10 @@ export default {
 
   .applySubHeaderText
     font-size: 1.13rem
-    margin-bottom: 4.3vh
 
   .applyForm
-    margin-bottom: 4.3vh
+    width: 100%
+    height: 320px
 
   .applyBusProp
     font-size: 1.1rem
