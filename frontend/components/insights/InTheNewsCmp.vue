@@ -1,6 +1,6 @@
 <template>
-  <div class="ctrl">
-    <div class="ctrlContainer">
+  <div class="news">
+    <div class="newsContainer">
       <div class="newsHeader">
         <hr class="halfLine" />
         <span class="newsText">IN THE NEWS</span>
@@ -32,26 +32,21 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.ctrl
-    background-color: $gray-1
+.news
+  background-color: $gray-1
 
-.ctrlContainer
-    margin: 0 auto
-    justify-content: center
-    align-items: center
+.newsContainer
+  margin: 0 auto
+  justify-content: center
+  align-items: center
 
 .newsHeader
-    text-align: center
-    color: $gray-4
-    overflow: hidden
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-.newsText
-    font-family: $font-family-nunito-sans
-    text-transform: uppercase
-    font-weight: 800
+  text-align: center
+  color: $gray-4
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: space-between
 
 .halfLine
   color: $gray-2
@@ -60,19 +55,24 @@ export default {
   margin: 0
   height: 1px
 
+.newsText
+  font-family: $font-family-nunito-sans
+  text-transform: uppercase
+  font-weight: 800
+
 @include for-phone
-  .halfLine
-    width: 20vw
+  .news
+    padding-top: 2vh
+    padding-bottom: 2.5vh
 
   .newsHeader
-      font-size: 6.25vw
+    font-size: 2.125rem
+
+  .halfLine
+    width: 18vw
 
   .newsText
-      margin: 0 3vw
-
-  .ctrl
-      padding-top: 2vh
-      padding-bottom: 2.5vh
+    margin: 0 .1em
 
 @include for-tablet
 </style>

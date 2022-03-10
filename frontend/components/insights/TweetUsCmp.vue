@@ -1,6 +1,6 @@
 <template>
-  <div class="ctrl">
-    <div class="ctrlContainer">
+  <div class="tweetus">
+    <div class="tweetusContainer">
       <div class="insightBox">
         <div class="insightHeader">Looking for a specific insight?</div>
         <span class="insightText"> Tweet it at us, we'll add it.</span>
@@ -31,10 +31,10 @@ export default {
 <style scoped lang="sass">
 @import "assets/styles/mixins"
 
-.ctrl
+.tweetus
   background-color: $gray-1
 
-.ctrlContainer
+.tweetusContainer
   margin: 0 auto
   justify-content: center
   align-items: center
@@ -60,25 +60,25 @@ a, a:hover, a:focus, a:active
   color: inherit
 
 @include for-phone
-  .ctrl
-    padding-top: 2.5em
+  .tweetus
+    padding-top: 5.5vh
 
-  .ctrlContainer
+  .tweetusContainer
     width: 86.15vw
 
   .insightHeader
-    font-size: 1.95em
+    font-size: 1.95rem
     margin-bottom: 2.3vh
 
   .insightText
-    font-size: 1.32em
+    font-size: 1.32rem
 
   .twitter
     padding: 7.4vh 0
 
   .twitterIcon
     width: 9.3vw
-    padding-right: 1em
+    padding-right: 1rem
 
   .twitterHandle
     font-size: 1.7rem
