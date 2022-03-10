@@ -84,9 +84,8 @@ export default {
   color: $blue
 
 @include for-phone
-
   .companyInfo
-    padding: 3vh 0
+    padding-top: 10vh
 
   .companyInfoContainer
     width: 86.15vw

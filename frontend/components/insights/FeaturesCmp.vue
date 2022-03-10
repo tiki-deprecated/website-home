@@ -113,9 +113,6 @@ export default {
   fill: $orange
 
 @include for-phone
-  .features
-    padding-bottom: 10vh
-
   .headerText
     font-size: 2rem
 

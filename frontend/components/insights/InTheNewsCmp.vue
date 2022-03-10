@@ -62,11 +62,10 @@ export default {
 
 @include for-phone
   .news
-    padding-top: 2vh
     padding-bottom: 2.5vh
 
   .newsHeader
-    font-size: 2.125rem
+    font-size: 1.5rem
 
   .halfLine
     width: 18vw

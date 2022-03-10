@@ -6,12 +6,12 @@
         <br /><br />
         <div class="applySubHeaderText">
           TIKI IS IN DEVELOPMENT.
-          <b>THE INITIAL COHORT WILL BE CAPPED AT 100 COMPANIES.</b>
+          <b class="applySubHeaderTextBold"
+            >THE INITIAL COHORT WILL BE CAPPED AT 100 COMPANIES.</b
+          >
         </div>
       </div>
-
       <div class="applyForm">{APPLY FORM}</div>
-
       <div class="applyBusProp">
         <span>UNLIMITED ACCESS. $10 PER MONTH.</span>
         <span class="enoughSaid">ENOUGH SAID.</span>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'CompanyInfoCmp',
+  name: 'ApplyForAccessCmp',
 }
 </script>
 
@@ -47,20 +47,23 @@ export default {
 .applySubHeaderText
   font-family: $font-family-nunito-sans
   color: $tiki-blue
+  font-weight: 300
+
+.applySubHeaderTextBold
+  font-weight: 600
 
 .applyBusProp
   font-family: $font-family-nunito-sans
   color: $tiki-pink
-  font-weight: 700
+  font-weight: 600
   text-align: center
 
 .enoughSaid
   color: $black
 
 @include for-phone
-
   .apply
-    padding: 5.2vh 0
+    padding-top: 10vh
 
   .applyContainer
     width: 86.15vw
@@ -78,6 +81,8 @@ export default {
 
   .applyBusProp
     font-size: 1.1rem
+    width: 80%
+    margin: 0 auto
 
 @include for-tablet
 </style>

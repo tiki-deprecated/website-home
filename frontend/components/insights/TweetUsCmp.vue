@@ -61,7 +61,7 @@ a, a:hover, a:focus, a:active
 
 @include for-phone
   .tweetus
-    padding-top: 5.5vh
+    padding-top: 10vh
 
   .tweetusContainer
     width: 86.15vw
