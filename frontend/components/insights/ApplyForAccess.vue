@@ -91,7 +91,7 @@ export default {
   .applyBusProp
     font-size: 1.1rem
     width: 80%
-    margin: 0 auto
+    margin: 5vh auto
 
 @include for-tablet
   .apply

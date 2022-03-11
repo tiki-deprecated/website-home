@@ -3,8 +3,13 @@
     <div class="companyInfoContainer">
       <div class="infoText">
         <span>
-          Data is a disaster and at the center of the biggest challenges we face
-          online.
+          <span class="disasterHeader">Data is a Disaster</span>
+          <br />
+          <br />
+          <span
+            >And its at the center of the biggest challenges we face
+            online.</span
+          >
         </span>
         <br /><br />
         <span>
@@ -55,6 +60,11 @@ export default {
   justify-content: center
   align-items: center
 
+.disasterHeader
+  font-family: $font-family-koara
+  color: $tiki-blue
+  font-weight: normal
+
 .infoText
   font-family: $font-family-nunito-sans
   color: $tiki-black
@@ -90,6 +100,9 @@ export default {
   .companyInfoContainer
     width: 86.15vw
 
+  .disasterHeader
+    font-size: 2.9rem
+
   .infoText, .busProp
     font-size: 1.2rem
 
@@ -108,6 +121,10 @@ export default {
 
   .companyInfoContainer
     width: 86.15%
+
+  .disasterHeader
+    font-size: 2.9rem
+    margin-bottom: 4.3vh
 
   .infoText, .busProp
     font-size: 1.2rem

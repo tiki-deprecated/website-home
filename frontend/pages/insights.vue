@@ -65,19 +65,18 @@ export default {
 
   .info-cmp
     margin-left: 5vw
-    margin-right: 0vw
+    margin-right: 3vw
     width: 42vw
     display: inline-block
 
   .apply-cmp
-    margin-left: 0vw
-    margin-right: 5vw
+    margin-left: 3vw
     width: 42vw
     display: inline-block
     vertical-align: top
 
   .desktop-divider
-    visibility: visible
+    visibility: hidden
     padding-top: 10vh
     border-bottom: 1px solid $gray-4
     width: 80%

@@ -127,6 +127,7 @@ export default {
 
   .featureListContainer
     width: 87.5vw
+    padding-bottom: 20vh
 
   .featureRow
     margin: 8vh auto 0 auto
