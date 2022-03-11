@@ -47,6 +47,7 @@ export default {
   position: relative
   display: inline-block
   background-color: $gray-1
+  overflow: hidden
 
 .desktop-divider
   visibility: hidden
@@ -61,7 +62,7 @@ export default {
     float: left
 
   .features-cmp
-    width: 60vw
+    width: 50vw
 
   .info-cmp
     margin-left: 5vw
