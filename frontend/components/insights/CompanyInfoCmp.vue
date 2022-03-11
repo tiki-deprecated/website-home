@@ -104,13 +104,20 @@ export default {
 
 @include for-tablet
   .companyInfo
-    display: flex
-    justify-content: center
-    align-items: center
+    padding-top: 10%
 
   .companyInfoContainer
-    width: 80vw
+    width: 86.15%
 
-  .whoWeAreText
-    font-size: 2rem
+  .infoText, .busProp
+    font-size: 1.2rem
+
+  .mascotImg
+    width: 10vw
+    margin-top: 5.5vh
+
+  .mascotText
+    font-size: .9rem
+    padding-top: 1vh
+    margin-bottom: 5.5vh
 </style>

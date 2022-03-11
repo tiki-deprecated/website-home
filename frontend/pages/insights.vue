@@ -1,12 +1,15 @@
 <template>
   <div class="page">
-    <hero-cmp />
-    <features-cmp />
-    <apply-for-access-cmp />
-    <company-info-cmp />
-    <tweet-us-cmp />
-    <in-the-news-cmp />
-    <utils-footer-cmp />
+    <div class="hero-cmp"><hero-cmp /></div>
+    <div class="features-cmp"><features-cmp /></div>
+
+    <hr class="desktop-divider" />
+
+    <div class="info-cmp"><company-info-cmp /></div>
+    <div class="apply-cmp"><apply-for-access-cmp /></div>
+    <div><tweet-us-cmp /></div>
+    <div><in-the-news-cmp /></div>
+    <div><utils-footer-cmp /></div>
   </div>
 </template>
 
@@ -42,4 +45,41 @@ export default {
 .page
   width: 100%
   position: relative
+  display: inline-block
+  background-color: $gray-1
+
+.desktop-divider
+  visibility: hidden
+  height: 0
+  margin: 0 0
+  border: 0
+
+@include for-tablet
+  .hero-cmp
+    width: 30vw
+    height: 100vh
+    float: left
+
+  .features-cmp
+    width: 60vw
+
+  .info-cmp
+    margin-left: 5vw
+    margin-right: 0vw
+    width: 42vw
+    display: inline-block
+
+  .apply-cmp
+    margin-left: 0vw
+    margin-right: 5vw
+    width: 42vw
+    display: inline-block
+    vertical-align: top
+
+  .desktop-divider
+    visibility: visible
+    padding-top: 10vh
+    border-bottom: 1px solid $gray-4
+    width: 80%
+    margin-left: 10%
 </style>

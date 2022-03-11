@@ -10,12 +10,11 @@
         <img
           sizes="(max-width: 1400px) 100vw, 1400px"
           srcset="
-            ~/assets/images/png/NewsSources_w_200.png   200w,
-            ~/assets/images/png/NewsSources_w_792.png   792w,
-            ~/assets/images/png/NewsSources_w_1135.png 1156w,
-            ~/assets/images/png/NewsSources_w_1400.png 1400w
+            ~/assets/images/png/NewsSources_w_200.png        200w,
+            ~/assets/images/png/NewsSources_w_792.png        792w,
+            ~/assets/images/png/InTheNewsDesktop_w_1400.png 1400w
           "
-          src="~/assets/images/png/NewsSources_w_1400.png"
+          src="~/assets/images/png/InTheNewsDesktop_w_1400.png"
           alt=""
         />
       </div>
@@ -74,4 +73,20 @@ export default {
     margin: 0 .1em
 
 @include for-tablet
+  .newsBody > img
+    width: 90%
+    margin-left: 5%
+
+  .news
+    padding-top: 8vh
+    padding-bottom: 2.5vh
+
+  .newsHeader
+    font-size: 2rem
+
+  .halfLine
+    width: 35vw
+
+  .newsText
+    margin: 0 .1em
 </style>
