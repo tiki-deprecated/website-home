@@ -5,7 +5,6 @@
         <span class="infoDesktop">
           <span class="disasterHeader">Data is a Disaster</span>
           <br />
-          <br />
           <span
             >And its at the center of the biggest challenges we face
             online.</span
@@ -15,7 +14,7 @@
           Data is a disaster and at the center of the biggest challenges we face
           online.
         </span>
-        <br /><br />
+        <br />
         <span>
           We’re building <a class="tikiLink" href="https://mytiki.com">TIKI</a>,
           a powerful new technology to reshape how the world interacts with
