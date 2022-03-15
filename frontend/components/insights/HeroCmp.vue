@@ -149,7 +149,6 @@ export default {
 
 .overlay
   position: absolute
-  width: 100%
   height: 100%
   z-index: 3
   background-color: rgba(#000000,0.70)
@@ -158,10 +157,6 @@ export default {
 .ytOverlay
   position: absolute
   z-index: 4
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  width: 90%
   display: none
 
 .overlayShow
@@ -254,6 +249,15 @@ export default {
   ::v-deep .videoPlay
     height: 3vh
 
+  .overlay
+    width: 100%
+
+  .ytOverlay
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90%
+
 @include for-tablet
   .hero
     width: 100%
@@ -283,4 +287,13 @@ export default {
 
   ::v-deep .videoPlay
     height: 1.2rem
+
+  .overlay
+    width: 100vw
+
+  .ytOverlay
+    top: 50%
+    left: 50vw
+    transform: translate(-50%, -50%)
+    width: 70vw
 </style>
