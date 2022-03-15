@@ -50,7 +50,8 @@ export default {
       imgSizes: undefined,
       imgName: undefined,
       isOverlay: false,
-      videoSrc: 'https://www.youtube-nocookie.com/embed/1siTWNNt-30?autoplay=1',
+      videoSrc:
+        'https://www.youtube-nocookie.com/embed/1siTWNNt-30?rel=0&amp;autoplay=1&amp;showinfo=0&amp;modestbranding=1',
     }
   },
   computed: {
