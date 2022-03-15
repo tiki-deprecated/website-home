@@ -4,6 +4,16 @@
       <div class="line1">The internet is fucked.</div>
       <div class="line2">Together we can fix it.</div>
     </div>
+
+    <div class="signupContainer">
+      <nuxt-link
+        v-scroll-to="{ el: '#signup' }"
+        :to="{ path: '/', hash: 'signup' }"
+        class="signupButtonText"
+        >Sign up
+      </nuxt-link>
+    </div>
+
     <div class="arrowContainer">
       <utils-svg-cmp name="arrow-down" class="arrow" />
     </div>
@@ -21,6 +31,12 @@ export default {
 
 <style scoped lang="sass">
 @import "assets/styles/mixins"
+
+.signupButtonText, .signupButtonText:hover, .signupButtonText:link, .signupButtonText:visited, .signupButtonText:active
+  color: $orange
+  font-family: $font-family-nunito-sans
+  font-weight: 600
+  text-decoration: none
 
 .effed
   background: $white
@@ -61,12 +77,20 @@ export default {
   position: absolute
   top: 80%
   left: 50%
+  align-items: center
   -ms-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
 
+.signupContainer
+  margin: 0
+  position: absolute
+  animation: signup 8s forwards
+
 ::v-deep .arrow.svg
+  align: right
+  text-align: center
   fill: $tiki-black
-  animation: arrow 7.5s forwards
+  animation: arrow 8s forwards
 
 @keyframes blink1
   from
@@ -88,12 +112,27 @@ export default {
   to
     fill: $tiki-black
 
+@keyframes signup
+  from
+    opacity: 0
+  90%
+    opacity: 0
+  to
+    opacity: 1.0
+
 @include for-phone
   ::v-deep .arrow.svg
     height: 4vh
 
   .line1, .line2
     font-size: 6.8vw
+
+  .signupContainer
+    top: 2%
+    right: 5%
+
+  .signupButtonText
+    font-size: 5.25vw
 
   @keyframes typing1
     from
@@ -132,6 +171,13 @@ export default {
 
   .line1, .line2
     font-size: 4vw
+
+  .signupButtonText
+    font-size: 1.25vw
+
+  .signupContainer
+    top: 5%
+    right: 3%
 
   @keyframes typing1
     from

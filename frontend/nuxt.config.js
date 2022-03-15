@@ -24,25 +24,25 @@ export default {
       {
         hid: 'website',
         name: 'mytiki.com',
-        content: 'Your Data. Your Decisions.',
+        content: 'Own Your Data',
       },
       {
         name: 'description',
         content:
-          'It’s simple: your data is yours. With TIKI, see what data you share online and make informed decisions on who else can see it. Best of all, if you choose to share, we make sure you get PAID.',
+          'The internet is a mess. Data is at the center. User data ownership is the answer. Users control and license their data for real money; businesses stream real-time insights straight from the source. Everyone wins.',
       },
       {
         name: 'title',
-        content: 'Your Data. Your Decisions.',
+        content: 'Own Your Data',
       },
       {
         property: 'og:title',
-        content: 'Your Data. Your Decisions.',
+        content: 'Own Your Data',
       },
       {
         property: 'og:description',
         content:
-          'It’s simple: your data is yours. With TIKI, see what data you share online and make informed decisions on who else can see it. Best of all, if you choose to share, we make sure you get PAID.',
+          'The internet is a mess. Data is at the center. User data ownership is the answer. Users control and license their data for real money; businesses stream real-time insights straight from the source. Everyone wins.',
       },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://mytiki.com' },
@@ -53,12 +53,12 @@ export default {
       },
       {
         property: 'twitter:title',
-        content: 'Your Data. Your Decisions.',
+        content: 'Own Your Data',
       },
       {
         property: 'twitter:description',
         content:
-          'It’s simple: your data is yours. With TIKI, see what data you share online and make informed decisions on who else can see it. Best of all, if you choose to share, we make sure you get PAID.',
+          'The internet is a mess. Data is at the center. User data ownership is the answer. Users control and license their data for real money; businesses stream real-time insights straight from the source. Everyone wins.',
       },
       { property: 'twitter:url', content: 'https://mytiki.com' },
       { property: 'twitter:card', content: 'summary_large_image' },
@@ -83,8 +83,8 @@ export default {
    ** Style Resources
    */
   styleResources: {
-    sass: ['./assets/styles/*.sass'],
-    scss: ['./assets/styles/*.scss'],
+    sass: ['@/assets/styles/*.sass'],
+    scss: ['@/assets/styles/*.scss'],
   },
   /*
    ** Plugins to load before mounting the App
@@ -121,8 +121,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     '@nuxtjs/axios',
-    'vue-social-sharing/nuxt',
-    '@nuxtjs/toast',
     'vue-scrollto/nuxt',
     '@nuxt/content',
   ],

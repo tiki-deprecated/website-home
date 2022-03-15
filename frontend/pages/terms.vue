@@ -10,7 +10,7 @@
 <script>
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 export default {
-  name: 'Terms',
+  name: 'TermsPage',
   components: { UtilsFooterCmp },
   async asyncData({ $content }) {
     const page = await $content('terms').fetch()

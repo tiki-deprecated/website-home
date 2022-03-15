@@ -26,7 +26,7 @@ import LinkFeatureCmp from '../components/link/LinkFeatureCmp'
 import LinkSocialCmp from '../components/link/LinkSocialCmp'
 
 export default {
-  name: 'Link',
+  name: 'LinkPage',
   components: {
     LinkHeaderCmp,
     LinkTitleCmp,

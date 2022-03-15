@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Redirect',
+  name: 'RedirectPage',
 }
 </script>
 

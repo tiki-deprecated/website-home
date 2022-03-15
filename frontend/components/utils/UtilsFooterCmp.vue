@@ -35,7 +35,10 @@
         >Feedback</a
       >&nbsp;|&nbsp;<a href="" class="link">Job Openings</a>
     </div>
-    <div class="copyright">Copyright © 2022 Tiki inc.</div>
+    <div class="bottom">
+      <div class="copyright">Copyright © 2022 Tiki inc.</div>
+      <div class="nashville">Built in Nashville</div>
+    </div>
   </div>
 </template>
 
@@ -78,11 +81,18 @@ export default {
   text-decoration: none
   font-weight: normal
 
-.copyright
+.bottom
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.copyright, .nashville
   color: $white
   font-family: $font-family-nunito-sans
   font-weight: normal
-  display: inline-block
+
+.nashville
+  text-align: right
 
 @include for-phone
   .email
@@ -100,9 +110,11 @@ export default {
     margin: 2vh 5vw 0 5vw
     font-size: 4vw
 
-  .copyright
+  .bottom
+    padding: 2vh 5vw
+
+  .copyright, .nashville
     font-size: 4vw
-    margin: 2vh 5vw
 
 @include for-tablet
   .email
@@ -126,9 +138,12 @@ export default {
     font-size: 1vw
     justify-content: center
 
-  .copyright
+  .bottom
+    padding: 2vh 0
+    margin: 0 auto
+    width: fit-content
+
+  .copyright, .nashville
     font-size: 1vw
-    margin: 2vh 0
-    text-align: center
-    width: 100%
+    margin: 0 7vw
 </style>
