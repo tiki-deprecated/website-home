@@ -95,26 +95,28 @@ export default {
 
 @include for-tablet
   .apply
-    padding-top: 5vh
+    padding-top: 8vh
 
   .applyContainer
     width: 86.15%
 
   .applyHeaderText
-    font-size: 2.9rem
+    font-size: 2rem
     margin-bottom: 4.3vh
 
   .applySubHeaderText
     font-size: 1.13rem
+    width: 60%
+    margin: 0 auto
 
   .applyForm
-    width: 100%
+    margin: 0 auto
+    width: 60%
     height: 400px
     overflow: hidden
 
   .applyBusProp
     font-size: 1.1rem
-    width: 80%
-    margin-top: -20vh
-    margin-left: 10%
+    width: 60%
+    margin: -80px auto 0 auto
 </style>

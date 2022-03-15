@@ -141,8 +141,6 @@ export default {
 @include for-tablet
   .features
     max-height: 100vh
-    width: 70vw
-    margin-left: 30vw
 
   .featuresContainer
     max-height: 100vh
@@ -166,7 +164,7 @@ export default {
     grid-template-columns: 50% 50%
 
   .featureRow
-    margin: 8vh auto 0 auto
+    margin: 7vh 0.5vw 0 0.5vw
 
   .featureText
     width: 80%
