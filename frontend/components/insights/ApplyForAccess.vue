@@ -1,5 +1,5 @@
 <template>
-  <div class="apply">
+  <div id="signup" class="apply">
     <script src="//embed.typeform.com/next/embed.js"></script>
     <div class="applyContainer">
       <div class="applyHeader">
