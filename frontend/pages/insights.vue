@@ -1,15 +1,20 @@
 <template>
   <div class="page">
-    <div class="hero-cmp"><hero-cmp /></div>
-    <div class="features-cmp"><features-cmp /></div>
-
-    <hr class="desktop-divider" />
-
-    <div class="info-cmp"><company-info-cmp /></div>
-    <div class="apply-cmp"><apply-for-access-cmp /></div>
-    <div><tweet-us-cmp /></div>
-    <div><in-the-news-cmp /></div>
-    <div><utils-footer-cmp /></div>
+    <div class="content">
+      <div class="wrapper">
+        <div class="leftContent">
+          <div class="hero-cmp"><hero-cmp /></div>
+        </div>
+        <div class="rightContent">
+          <div class="features-cmp"><features-cmp /></div>
+          <div class="info-cmp"><company-info-cmp /></div>
+          <div class="apply-cmp"><apply-for-access-cmp /></div>
+          <div><tweet-us-cmp /></div>
+          <div><in-the-news-cmp /></div>
+          <div><utils-footer-cmp /></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -47,39 +52,26 @@ export default {
   position: relative
   display: inline-block
   background-color: $gray-1
-  overflow: hidden
-
-.desktop-divider
-  visibility: hidden
-  height: 0
-  margin: 0 0
-  border: 0
 
 @include for-tablet
-  .hero-cmp
-    width: 30vw
+  .page
     height: 100vh
+
+  .content
+    position: relative
+    height: 100%
+    overflow: hidden
+
+  .wrapper
+    position: absolute
+    width: 100%
+    height: 100%
+
+  .rightContent
+    overflow: auto
+    height: 100%
+
+  .leftContent
     float: left
-
-  .features-cmp
-    width: 50vw
-
-  .info-cmp
-    margin-left: 5vw
-    margin-right: 3vw
-    width: 42vw
-    display: inline-block
-
-  .apply-cmp
-    margin-left: 3vw
-    width: 42vw
-    display: inline-block
-    vertical-align: top
-
-  .desktop-divider
-    visibility: hidden
-    padding-top: 10vh
-    border-bottom: 1px solid $gray-4
-    width: 80%
-    margin-left: 10%
+    width: (100vh * 0.666)
 </style>

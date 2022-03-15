@@ -3,22 +3,20 @@
     <div class="companyInfoContainer">
       <div class="infoText">
         <span class="infoDesktop">
-          <span class="disasterHeader">Data is a Disaster</span>
-          <br />
-          <span
-            >And its at the center of the biggest challenges we face
-            online.</span
-          >
+          Data is a disaster and at the center of the biggest challenges we face
+          online. We’re building
+          <a class="tikiLink" href="https://mytiki.com">TIKI</a>, a powerful new
+          technology to reshape how the world interacts with data.
         </span>
         <span class="infoMobile">
           Data is a disaster and at the center of the biggest challenges we face
           online.
-        </span>
-        <br />
-        <span>
-          We’re building <a class="tikiLink" href="https://mytiki.com">TIKI</a>,
-          a powerful new technology to reshape how the world interacts with
-          data.
+          <br /><br />
+          <span>
+            We’re building
+            <a class="tikiLink" href="https://mytiki.com">TIKI</a>, a powerful
+            new technology to reshape how the world interacts with data.
+          </span>
         </span>
       </div>
       <div class="mascot">
@@ -36,7 +34,7 @@
       <div class="mascotText">(our adorable mascot)</div>
       <div class="busProp">
         <span>Users gain privacy, control, and compensation.</span>
-        <br /><br />
+        <br /><br class="infoMobile" />
         <span class="blueText"
           >Businesses get the insights they need without the hassle — no
           engineers or lawyers needed.</span
@@ -126,7 +124,7 @@ export default {
 
 @include for-tablet
   .companyInfo
-    padding-top: 10%
+    padding-top: 10vh
 
   .companyInfoContainer
     width: 86.15%
@@ -139,7 +137,7 @@ export default {
     font-size: 1.2rem
 
   .mascotImg
-    width: 10vw
+    width: 5vw
     margin-top: 5.5vh
 
   .mascotText

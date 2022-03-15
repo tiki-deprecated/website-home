@@ -141,8 +141,6 @@ export default {
 @include for-tablet
   .features
     max-height: 100vh
-    width: 70vw
-    margin-left: 30vw
 
   .featuresContainer
     max-height: 100vh
