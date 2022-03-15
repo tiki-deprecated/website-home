@@ -78,15 +78,15 @@ export default {
     margin-left: 5%
 
   .news
-    padding-top: 8vh
     padding-bottom: 2.5vh
 
   .newsHeader
-    font-size: 2rem
+    font-size: 1.5rem
 
   .halfLine
     width: 35vw
 
   .newsText
     margin: 0 .1em
+    white-space: nowrap
 </style>

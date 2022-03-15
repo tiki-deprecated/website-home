@@ -93,15 +93,18 @@ a, a:hover, a:focus, a:active
   .insightHeader
     font-size: 1.95rem
     margin-bottom: 2.3vh
+    text-align: center
 
   .insightText
     font-size: 1.32rem
+    text-align: center
+    display: block
 
   .twitter
     padding: 7.4vh 0
 
   .twitterIcon
-    width: 4vw
+    width: 1.8rem
     padding-right: 0.3rem
 
   .twitterHandle

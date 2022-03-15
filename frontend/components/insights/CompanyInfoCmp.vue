@@ -3,44 +3,46 @@
     <div class="companyInfoContainer">
       <div class="infoText">
         <span class="infoDesktop">
-          <span class="disasterHeader">Data is a Disaster</span>
-          <br />
-          <span
-            >And its at the center of the biggest challenges we face
-            online.</span
-          >
+          Data is a disaster and at the center of the biggest challenges we face
+          online. We’re building
+          <a class="tikiLink" href="https://mytiki.com">TIKI</a>, a powerful new
+          technology to reshape how the world interacts with data.
         </span>
         <span class="infoMobile">
           Data is a disaster and at the center of the biggest challenges we face
           online.
-        </span>
-        <br />
-        <span>
-          We’re building <a class="tikiLink" href="https://mytiki.com">TIKI</a>,
-          a powerful new technology to reshape how the world interacts with
-          data.
+          <br /><br />
+          <span>
+            We’re building
+            <a class="tikiLink" href="https://mytiki.com">TIKI</a>, a powerful
+            new technology to reshape how the world interacts with data.
+          </span>
         </span>
       </div>
-      <div class="mascot">
-        <img
-          sizes="(max-width: 316px) 100vw, 316px"
-          srcset="
-            ~/assets/images/png/pineapple-floatie_w_200.png 200w,
-            ~/assets/images/png/pineapple-floatie_w_316.png 316w
-          "
-          src="~/assets/images/png/pineapple-floatie_w_316.png"
-          alt=""
-          class="mascotImg"
-        />
-      </div>
-      <div class="mascotText">(our adorable mascot)</div>
-      <div class="busProp">
-        <span>Users gain privacy, control, and compensation.</span>
-        <br /><br />
-        <span class="blueText"
-          >Businesses get the insights they need without the hassle — no
-          engineers or lawyers needed.</span
-        >
+      <div class="desktopFlex">
+        <div>
+          <div class="mascot">
+            <img
+              sizes="(max-width: 316px) 100vw, 316px"
+              srcset="
+                ~/assets/images/png/pineapple-floatie_w_200.png 200w,
+                ~/assets/images/png/pineapple-floatie_w_316.png 316w
+              "
+              src="~/assets/images/png/pineapple-floatie_w_316.png"
+              alt=""
+              class="mascotImg"
+            />
+          </div>
+          <div class="mascotText">(our adorable mascot)</div>
+        </div>
+        <div class="busProp">
+          <span>Users gain privacy, control, and compensation.</span>
+          <br /><br />
+          <span class="blueText"
+            >Businesses get the insights they need without the hassle — no
+            engineers or lawyers needed.</span
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -60,8 +62,6 @@ export default {
 
 .companyInfoContainer
   margin: 0 auto
-  justify-content: center
-  align-items: center
 
 .disasterHeader
   font-family: $font-family-koara
@@ -99,6 +99,7 @@ export default {
 @include for-phone
   .companyInfo
     padding-top: 10vh
+    display: flex
 
   .companyInfoContainer
     width: 86.15vw
@@ -126,7 +127,7 @@ export default {
 
 @include for-tablet
   .companyInfo
-    padding-top: 10%
+    padding-top: 10vh
 
   .companyInfoContainer
     width: 86.15%
@@ -139,17 +140,24 @@ export default {
     font-size: 1.2rem
 
   .mascotImg
-    width: 10vw
-    margin-top: 5.5vh
+    width: 5vw
 
   .mascotText
     font-size: .9rem
     padding-top: 1vh
-    margin-bottom: 5.5vh
+    white-space: nowrap
 
   .infoDesktop
     display: block
 
   .infoMobile
     display: none
+
+  .busProp
+    margin-left: 3vw
+
+  .desktopFlex
+    display: flex
+    align-items: center
+    margin-top: 4vh
 </style>
