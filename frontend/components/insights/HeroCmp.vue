@@ -7,7 +7,7 @@
       <div class="title">Your business needs data</div>
       <div class="subtitle">and you know it.</div>
       <nuxt-link
-        v-scroll-to="{ el: '#signup' }"
+        v-scroll-to="{ el: '#signup', container: '#scrollContainer' }"
         :to="{ path: '/insights', hash: 'signup' }"
         class="signup"
         >Sign up

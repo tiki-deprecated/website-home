@@ -5,7 +5,7 @@
         <div class="leftContent">
           <div class="hero-cmp"><hero-cmp /></div>
         </div>
-        <div class="rightContent">
+        <div id="scrollContainer" class="rightContent">
           <div class="features-cmp"><features-cmp /></div>
           <div class="info-cmp"><company-info-cmp /></div>
           <div class="apply-cmp"><apply-for-access-cmp /></div>
