@@ -19,26 +19,30 @@
           </span>
         </span>
       </div>
-      <div class="mascot">
-        <img
-          sizes="(max-width: 316px) 100vw, 316px"
-          srcset="
-            ~/assets/images/png/pineapple-floatie_w_200.png 200w,
-            ~/assets/images/png/pineapple-floatie_w_316.png 316w
-          "
-          src="~/assets/images/png/pineapple-floatie_w_316.png"
-          alt=""
-          class="mascotImg"
-        />
-      </div>
-      <div class="mascotText">(our adorable mascot)</div>
-      <div class="busProp">
-        <span>Users gain privacy, control, and compensation.</span>
-        <br /><br class="infoMobile" />
-        <span class="blueText"
-          >Businesses get the insights they need without the hassle — no
-          engineers or lawyers needed.</span
-        >
+      <div class="desktopFlex">
+        <div>
+          <div class="mascot">
+            <img
+              sizes="(max-width: 316px) 100vw, 316px"
+              srcset="
+                ~/assets/images/png/pineapple-floatie_w_200.png 200w,
+                ~/assets/images/png/pineapple-floatie_w_316.png 316w
+              "
+              src="~/assets/images/png/pineapple-floatie_w_316.png"
+              alt=""
+              class="mascotImg"
+            />
+          </div>
+          <div class="mascotText">(our adorable mascot)</div>
+        </div>
+        <div class="busProp">
+          <span>Users gain privacy, control, and compensation.</span>
+          <br /><br />
+          <span class="blueText"
+            >Businesses get the insights they need without the hassle — no
+            engineers or lawyers needed.</span
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -58,8 +62,6 @@ export default {
 
 .companyInfoContainer
   margin: 0 auto
-  justify-content: center
-  align-items: center
 
 .disasterHeader
   font-family: $font-family-koara
@@ -97,6 +99,7 @@ export default {
 @include for-phone
   .companyInfo
     padding-top: 10vh
+    display: flex
 
   .companyInfoContainer
     width: 86.15vw
@@ -138,16 +141,23 @@ export default {
 
   .mascotImg
     width: 5vw
-    margin-top: 5.5vh
 
   .mascotText
     font-size: .9rem
     padding-top: 1vh
-    margin-bottom: 5.5vh
+    white-space: nowrap
 
   .infoDesktop
     display: block
 
   .infoMobile
     display: none
+
+  .busProp
+    margin-left: 3vw
+
+  .desktopFlex
+    display: flex
+    align-items: center
+    margin-top: 4vh
 </style>

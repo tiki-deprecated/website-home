@@ -74,6 +74,10 @@ export default {
   .leftContent
     float: left
     width: (100vh * 0.666)
+
+  .info-cmp
+    width: 70%
+    margin: 0 auto
 </style>
 
 <style lang="sass">

@@ -259,21 +259,28 @@ export default {
     width: 100%
 
   .signup
-    margin-top: 3vh
-    font-size: 1.2rem
-    padding: 1vh 2vw
-    border-radius: 1vw
+    margin-top: 8vh
+    font-size: 1.1rem
+    padding: 1.25vh 1.5vw
+    border-radius: 0.25vw
     display: inline-block
     vertical-align: middle
 
+  .title
+    font-size: 1.8rem
+
+  .subtitle
+    margin-top: 5vh
+    font-size: 1.1rem
+
   .video
-    margin-top: 3.5vh
+    margin-top: 4vh
     position: relative
 
   .videoText
     font-size: 1rem
-    padding-bottom: .5rem
+    margin-left: 0.5rem
 
   ::v-deep .videoPlay
-    height: 1rem
+    height: 1.2rem
 </style>
