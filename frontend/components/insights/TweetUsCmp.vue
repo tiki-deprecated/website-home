@@ -84,4 +84,26 @@ a, a:hover, a:focus, a:active
     font-size: 1.7rem
 
 @include for-tablet
+  .tweetus
+    padding-top: 10vh
+
+  .tweetusContainer
+    width: 86.15%
+
+  .insightHeader
+    font-size: 1.95rem
+    margin-bottom: 2.3vh
+
+  .insightText
+    font-size: 1.32rem
+
+  .twitter
+    padding: 7.4vh 0
+
+  .twitterIcon
+    width: 4vw
+    padding-right: 0.3rem
+
+  .twitterHandle
+    font-size: 1.5rem
 </style>

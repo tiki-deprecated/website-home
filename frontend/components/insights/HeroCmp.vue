@@ -147,9 +147,6 @@ export default {
   width: 100%
   z-index: 2
 
-.imgContainer
-  position: absolute
-
 .overlay
   position: absolute
   width: 100%
@@ -258,4 +255,25 @@ export default {
     height: 3vh
 
 @include for-tablet
+  .hero
+    width: 100%
+
+  .signup
+    margin-top: 3vh
+    font-size: 1.2rem
+    padding: 1vh 2vw
+    border-radius: 1vw
+    display: inline-block
+    vertical-align: middle
+
+  .video
+    margin-top: 3.5vh
+    position: relative
+
+  .videoText
+    font-size: 1rem
+    padding-bottom: .5rem
+
+  ::v-deep .videoPlay
+    height: 1rem
 </style>

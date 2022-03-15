@@ -88,6 +88,7 @@ export default {
 
 .featureListContainer
   margin: 0 auto
+  height: 72vh
 
 .featureRow
   display: flex
@@ -126,17 +127,54 @@ export default {
 
   .featureListContainer
     width: 87.5vw
+    padding-bottom: 20vh
 
   .featureRow
     margin: 8vh auto 0 auto
 
   .featureText
-    width: 64.25vw
+    width: 64.25%
     font-size: .94rem
 
   ::v-deep .featureIcon.svg
-    width: 15vw
-    margin-right: 6vw
+    width: 15%
+    margin-right: 6%
 
 @include for-tablet
+  .features
+    max-height: 100vh
+    width: 70vw
+    margin-left: 30vw
+
+  .featuresContainer
+    max-height: 100vh
+
+  .headerText
+    font-size: 2rem
+
+  .subHeaderText
+    font-size: 1.25rem
+
+  .headerContainer
+    width: 87.5%
+    height: 15%
+    margin: 0 auto
+    padding-top: 5vh
+
+  .featureListContainer
+    width: 87.5%
+    height: 85%
+    display: grid
+    grid-template-columns: 50% 50%
+
+  .featureRow
+    margin: 8vh auto 0 auto
+
+  .featureText
+    width: 80%
+    font-size: .94rem
+
+  ::v-deep .featureIcon.svg
+    width: 15%
+    margin-right: 3%
 </style>

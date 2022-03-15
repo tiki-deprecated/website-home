@@ -91,7 +91,30 @@ export default {
   .applyBusProp
     font-size: 1.1rem
     width: 80%
-    margin: 0 auto
+    margin: 5vh auto
 
 @include for-tablet
+  .apply
+    padding-top: 5vh
+
+  .applyContainer
+    width: 86.15%
+
+  .applyHeaderText
+    font-size: 2.9rem
+    margin-bottom: 4.3vh
+
+  .applySubHeaderText
+    font-size: 1.13rem
+
+  .applyForm
+    width: 100%
+    height: 400px
+    overflow: hidden
+
+  .applyBusProp
+    font-size: 1.1rem
+    width: 80%
+    margin-top: -20vh
+    margin-left: 10%
 </style>

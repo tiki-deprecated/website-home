@@ -2,7 +2,16 @@
   <div class="companyInfo">
     <div class="companyInfoContainer">
       <div class="infoText">
-        <span>
+        <span class="infoDesktop">
+          <span class="disasterHeader">Data is a Disaster</span>
+          <br />
+          <br />
+          <span
+            >And its at the center of the biggest challenges we face
+            online.</span
+          >
+        </span>
+        <span class="infoMobile">
           Data is a disaster and at the center of the biggest challenges we face
           online.
         </span>
@@ -55,6 +64,11 @@ export default {
   justify-content: center
   align-items: center
 
+.disasterHeader
+  font-family: $font-family-koara
+  color: $tiki-blue
+  font-weight: normal
+
 .infoText
   font-family: $font-family-nunito-sans
   color: $tiki-black
@@ -90,6 +104,9 @@ export default {
   .companyInfoContainer
     width: 86.15vw
 
+  .disasterHeader
+    font-size: 2.9rem
+
   .infoText, .busProp
     font-size: 1.2rem
 
@@ -102,15 +119,38 @@ export default {
     padding-top: 1vh
     margin-bottom: 5.5vh
 
+  .infoDesktop
+    display: none
+
+  .infoMobile
+    display: block
+
 @include for-tablet
   .companyInfo
-    display: flex
-    justify-content: center
-    align-items: center
+    padding-top: 10%
 
   .companyInfoContainer
-    width: 80vw
+    width: 86.15%
 
-  .whoWeAreText
-    font-size: 2rem
+  .disasterHeader
+    font-size: 2.9rem
+    margin-bottom: 4.3vh
+
+  .infoText, .busProp
+    font-size: 1.2rem
+
+  .mascotImg
+    width: 10vw
+    margin-top: 5.5vh
+
+  .mascotText
+    font-size: .9rem
+    padding-top: 1vh
+    margin-bottom: 5.5vh
+
+  .infoDesktop
+    display: block
+
+  .infoMobile
+    display: none
 </style>
