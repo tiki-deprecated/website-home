@@ -2,7 +2,7 @@
   <div class="companyInfo">
     <div class="companyInfoContainer">
       <div class="infoText">
-        <span>
+        <span class="infoDesktop">
           <span class="disasterHeader">Data is a Disaster</span>
           <br />
           <br />
@@ -10,6 +10,10 @@
             >And its at the center of the biggest challenges we face
             online.</span
           >
+        </span>
+        <span class="infoMobile">
+          Data is a disaster and at the center of the biggest challenges we face
+          online.
         </span>
         <br /><br />
         <span>
@@ -115,6 +119,12 @@ export default {
     padding-top: 1vh
     margin-bottom: 5.5vh
 
+  .infoDesktop
+    display: none
+
+  .infoMobile
+    display: block
+
 @include for-tablet
   .companyInfo
     padding-top: 10%
@@ -137,4 +147,10 @@ export default {
     font-size: .9rem
     padding-top: 1vh
     margin-bottom: 5.5vh
+
+  .infoDesktop
+    display: block
+
+  .infoMobile
+    display: none
 </style>
