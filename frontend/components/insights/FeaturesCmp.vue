@@ -164,7 +164,7 @@ export default {
     grid-template-columns: 50% 50%
 
   .featureRow
-    margin: 8vh auto 0 auto
+    margin: 7vh 0.5vw 0 0.5vw
 
   .featureText
     width: 80%
