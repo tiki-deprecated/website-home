@@ -75,3 +75,17 @@ export default {
     float: left
     width: (100vh * 0.666)
 </style>
+
+<style lang="sass">
+@import "assets/styles/mixins"
+
+@include for-tablet
+  body
+    height: 100vh
+
+  #__nuxt
+    height: 100%
+
+  #__layout
+    height: 100%
+</style>

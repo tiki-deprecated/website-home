@@ -1,16 +1,16 @@
 <template>
-  <div class="defaultLayout">
-    <Nuxt />
-  </div>
+  <Nuxt />
 </template>
 
-<style scoped lang="sass">
-.defaultLayout
-  font-family: $font-family-nunito-sans
-  font-weight: normal
-</style>
+<script>
+export default {
+  name: 'DefaultLayout',
+}
+</script>
 
 <style lang="sass">
 body
   margin: 0
+  font-family: $font-family-nunito-sans
+  font-weight: normal
 </style>
