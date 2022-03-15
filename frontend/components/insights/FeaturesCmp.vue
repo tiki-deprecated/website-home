@@ -88,7 +88,6 @@ export default {
 
 .featureListContainer
   margin: 0 auto
-  height: 72vh
 
 .featureRow
   display: flex
@@ -127,7 +126,6 @@ export default {
 
   .featureListContainer
     width: 87.5vw
-    padding-bottom: 20vh
 
   .featureRow
     margin: 8vh auto 0 auto
