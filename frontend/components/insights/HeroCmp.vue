@@ -6,12 +6,25 @@
     <div class="contentContainer">
       <div class="title">Your business needs data</div>
       <div class="subtitle">and you know it.</div>
-      <nuxt-link
-        v-scroll-to="{ el: '#signup', container: '#scrollContainer' }"
-        :to="{ path: '/insights', hash: 'signup' }"
-        class="signup"
-        >Sign up
-      </nuxt-link>
+
+      <span class="hidePhone">
+        <nuxt-link
+          v-scroll-to="{ el: '#signup', container: '#scrollContainer' }"
+          :to="{ path: '/insights', hash: 'signup' }"
+          class="hidePhone signup"
+          >Sign up
+        </nuxt-link>
+      </span>
+
+      <span class="hideTablet">
+        <nuxt-link
+          v-scroll-to="{ el: '#signup' }"
+          :to="{ path: '/insights', hash: 'signup' }"
+          class="hideTablet signup"
+          >Sign up
+        </nuxt-link>
+      </span>
+
       <div class="video" @click="onVideoClick($event)">
         <utils-svg-cmp name="play" class="videoPlay" />
         <div class="videoText">watch the video</div>
@@ -51,7 +64,7 @@ export default {
       imgName: undefined,
       isOverlay: false,
       videoSrc:
-        'https://www.youtube-nocookie.com/embed/1siTWNNt-30?rel=0&amp;autoplay=1&amp;showinfo=0&amp;modestbranding=1',
+        'https://www.youtube-nocookie.com/embed/JaWLtfIt8m4?rel=0&amp;autoplay=0&amp;showinfo=0&amp;modestbranding=1',
     }
   },
   computed: {
@@ -258,6 +271,10 @@ export default {
     transform: translate(-50%, -50%)
     width: 90%
 
+  .hidePhone
+    display: none
+    visibility: hidden
+
 @include for-tablet
   .hero
     width: 100%
@@ -269,6 +286,10 @@ export default {
     border-radius: 0.25vw
     display: inline-block
     vertical-align: middle
+
+  .hideTablet
+    display: none
+    visibility: hidden
 
   .title
     font-size: 1.8rem
