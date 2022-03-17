@@ -277,16 +277,19 @@ export default {
 
 @include for-tablet
   .hiwContainer
-    width: 33%
+    padding-left: 10%
+    padding-right: 10%
+    padding-top: 2.5vh
+    padding-bottom: 5vh
+    width: 59%
     margin: 0 auto
     border-radius: 1vw
-    padding-bottom: 5vh
 
   .hiw
     padding-top: 5vh
 
   .title
-    font-size: 2.25vw
+    font-size: 3rem
     margin: 3vh auto 0 2vw
 
   .hiwRowLeft
@@ -298,7 +301,8 @@ export default {
 
   .hiwRowNum
     font-size: 5vw
-    margin: -3.15vh auto
+    margin-right: 1.5rem
+    margin-top: -3vh
 
   .hiwRowSticker
     margin: 0 auto
@@ -313,8 +317,8 @@ export default {
     right: 2vw
 
   .hiwRowText
-    font-size: 1.25vw
-    width: 70%
+    font-size: 2rem
+    width: 60%
     margin-right: 2vw
 
   .hiw1Note
@@ -323,8 +327,10 @@ export default {
     font-size: 1.25vw
 
   .hiwVideo
-    margin: 5vh auto
-    width: 100%
+    width: 35%
+    left: 60%
+    bottom: 15vh
+    position: relative
 
   .hiw2Note
     margin-left: 2vw

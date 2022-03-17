@@ -4,29 +4,32 @@
       <utils-svg-cmp name="logo" class="logo" />
     </div>
     <div class="missionContainer">
-      <div class="missionTitle">We are on a mission to</div>
+      <div class="missionTitle">We are on a mission</div>
       <div class="missionText1">
-        Flip the data ecosystem, placing users in charge by enabling them to
+        To flip the data ecosystem, placing users in charge by enabling them to
         exercise their data ownership rights, resulting in a new fair market for
         data.
       </div>
       <div class="missionRow">
         <div class="missionText2">
-          Users own their data; businesses safely get the insights they need;
+          Users own their data;
+          <br />
+          Businesses safely get the insights they need;
+          <br />
           TIKI facilitates.
         </div>
-        <div class="imgContainer">
-          <img
-            sizes="(max-width: 343px) 100vw, 343x"
-            srcset="
-              ~/assets/images/png/fruit-bowl_w_200.png 200w,
-              ~/assets/images/png/fruit-bowl_w_343.png 343w
-            "
-            src="~/assets/images/png/fruit-bowl_w_343.png"
-            alt=""
-            class="img"
-          />
-        </div>
+      </div>
+      <div class="imgContainer">
+        <img
+          sizes="(max-width: 343px) 100vw, 343x"
+          srcset="
+            ~/assets/images/png/fruit-bowl_w_200.png 200w,
+            ~/assets/images/png/fruit-bowl_w_343.png 343w
+          "
+          src="~/assets/images/png/fruit-bowl_w_343.png"
+          alt=""
+          class="img"
+        />
       </div>
     </div>
     <div class="buildingContainer">
@@ -85,7 +88,7 @@ export default {
   font-weight: 600
 
 .missionRow
-  display: flex
+  display: inline-block
 
 .img
   display: block
@@ -158,33 +161,57 @@ export default {
     -ms-transform: translate(-50%, -50%)
 
   .missionContainer, .buildingContainer
-    width: 33%
+    width: 79%
+    min-height: 35vh
     margin: 5vh auto 0 auto
     border-radius: 1vw
 
   .missionTitle, .buildingTitle
     font-size: 2.25vw
     margin: 3vh auto 0 2vw
+    font-size: 3rem
+
+  .buildingTitle
+    float: right
+    margin-right: 8.8vw
+    position: relative
 
   .missionText1, .buildingText
-    font-size: 1.25vw
-    margin: 2vh 2vw 0 2vw
+    width: 70%
+    font-size: 1.25rem
+    margin: 1vh 8.8vw 0 2vw
+    display: inline-block
+
+  .buildingText
+    float: right
+    width: 35%
+    position: absolute
+    margin-top: 11vh
+    margin-left: 35vw
+    text-align: right
 
   .missionText2
-    font-size: 1.25vw
+    font-size: 1.25rem
     margin: 2vh 2vw 5vh 2vw
-    width: 50%
+    display: inline-block
+
+  .buildingVideo
+    width: 35%
+    margin: 7vh 3vw 7vh 3vw
+    display: absolute
+    top: 50%
 
   .imgContainer
     width: 33%
-    margin: 3vh 5vw 0 auto
+    float: right
+    bottom: 30%
+    display: inline-block
+    position: relative
+    bottom: 10vh
 
   .img
-    height: 15vh
+    height: 25vh
     margin: auto
-
-  .buildingVideo
-    margin-top: 3vh
 
   .buildingContainer
     overflow: hidden
