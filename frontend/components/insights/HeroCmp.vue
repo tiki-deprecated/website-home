@@ -64,7 +64,7 @@ export default {
       imgName: undefined,
       isOverlay: false,
       videoSrc:
-        'https://www.youtube-nocookie.com/embed/1siTWNNt-30?rel=0&amp;autoplay=0&amp;showinfo=0&amp;modestbranding=1',
+        'https://www.youtube-nocookie.com/embed/JaWLtfIt8m4?rel=0&amp;autoplay=0&amp;showinfo=0&amp;modestbranding=1',
     }
   },
   computed: {
