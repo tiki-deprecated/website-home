@@ -187,7 +187,7 @@ export default {
     padding: 5vh 0
 
   .involvedContainer
-    width: 33%
+    width: 66%
     margin: 0 auto
     border-radius: 1vw
     padding-bottom: 5vh

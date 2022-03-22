@@ -185,7 +185,7 @@ export default {
     padding-top: 5vh
 
   .uniqueContainer
-    width: 33%
+    width: 66%
     margin: 0 auto
     border-radius: 1vw
     padding-bottom: 5vh
