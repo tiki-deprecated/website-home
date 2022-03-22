@@ -389,7 +389,7 @@ export default {
     margin: -3.15vh auto
 
   .hiwRow
-    margin: 2.5vh 7% 2.5vh 7%
+    margin: 4vh 7% 3vh 7%
 
   .hiwRowNum
     font-size: 5vw
@@ -417,8 +417,10 @@ export default {
 
   .hiwDivider
     width: 70%
-    border-color: #C4C4C4
-    margin: 0 auto
+    border-top: 1px solid black
+    border-width: thin
+    margin: 1vh auto
+    opacity: .5
 
   .hiwNote
     margin-top: 4vh
@@ -483,15 +485,15 @@ export default {
     right: -28vw
 
   .hiw2Button
-    width: 90%
-    margin: 3vh auto
+    width: 60%
+    margin: 3vh auto 3vh 0
     border-radius: 1vw
 
   .hiw2ButtonText
-    font-size: 1.5rem
+    font-size: 1rem
     padding: 2vh 0
     margin: 0 auto
-    width: 80%
+    width: 90%
 
   .phoneOnly
     display: none
