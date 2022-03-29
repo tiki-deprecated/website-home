@@ -72,7 +72,11 @@
             />&nbsp;&nbsp;Roadmap</span
           ></a
         >
-        <a class="valueLink" href="" target="_blank">
+        <a
+          class="valueLink"
+          href="https://blog.mytiki.com/p/meet-the-tiki-team"
+          target="_blank"
+        >
           <span>
             <utils-svg-cmp name="arrow-right" class="arrow" />&nbsp;&nbsp;Team &
             Investors</span
