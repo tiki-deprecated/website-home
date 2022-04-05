@@ -6,7 +6,7 @@
         <div class="hiwRow">
           <div class="hiwRowNum tabletOnly">1.</div>
 
-          <span class="hiwRowTextCol">
+          <div class="hiwRowTextCol">
             <div class="hiwRowNum phoneOnly">1.</div>
 
             <div class="hiwRowText">
@@ -33,7 +33,7 @@
               Swipe left to turn off tracking, swipe right to get paid for it.
               It’s your data, it’s your choice. You’re in control.
             </div>
-          </span>
+          </div>
 
           <span class="hiwImgCol hiw1ImgCol tabletOnly">
             <video
@@ -53,8 +53,6 @@
           </span>
         </div>
 
-        <hr class="hiwDivider" />
-
         <img
           sizes="(max-width: 325px) 100vw, 325px"
           srcset="
@@ -68,27 +66,9 @@
       </div>
       <div class="hiw2">
         <div class="hiwRow">
-          <span class="hiwImgCol">
-            <img
-              sizes="(max-width: 316px) 100vw, 316px"
-              srcset="
-                ~/assets/images/png/pineapple-floatie_w_200.png 200w,
-                ~/assets/images/png/pineapple-floatie_w_316.png 316w
-              "
-              src="~/assets/images/png/pineapple-floatie_w_316.png"
-              alt=""
-              class="hiw2Img tabletOnly"
-            />
-            <div class="hiwNote hiw2Note">
-              For the crypto dorks and engineers, it’s all powered by TIKI’s
-              purpose-built hybrid permissionless blockchain. On which, we will
-              mint more NFTs than the world has ever seen.
-            </div>
-          </span>
-
           <div class="hiwRowNum tabletOnly">2.</div>
 
-          <span class="hiwRowTextCol">
+          <span class="hiwRowTextCol hiw2RowTextCol">
             <span class="hiwRowNum phoneOnly">
               2.
 
@@ -130,22 +110,50 @@
               />
             </div>
 
-            <a
-              class="hiw2Button"
-              href="https://youtu.be/7YXnA357LN8"
-              target="_blank"
-              ><div class="hiw2ButtonText">
-                <span>
-                  Watch our hilarious explainer video (no guarantee it
-                  helps).&nbsp;
-                  <utils-svg-cmp name="arrow-right" class="arrow"
-                /></span></div
-            ></a>
+            <div class="hiw2ButtonRow">
+              <a
+                class="hiwButton hiw2Button"
+                href="https://youtu.be/7YXnA357LN8"
+                target="_blank"
+                ><div class="hiwButtonText">
+                  <span>
+                    Watch our hilarious explainer video (no guarantee it
+                    helps).&nbsp;
+                    <utils-svg-cmp name="arrow-right" class="arrow"
+                  /></span></div
+              ></a>
+
+              <img
+                sizes="(max-width: 316px) 100vw, 316px"
+                srcset="
+                  ~/assets/images/png/pineapple-floatie_w_200.png 200w,
+                  ~/assets/images/png/pineapple-floatie_w_316.png 316w
+                "
+                src="~/assets/images/png/pineapple-floatie_w_316.png"
+                alt=""
+                class="hiw2Img tabletOnly"
+              />
+            </div>
+
+            <img
+              sizes="(max-width: 265px) 100vw, 265px"
+              srcset="
+                ~/assets/images/png/sticker-stack_w_200.png 200w,
+                ~/assets/images/png/sticker-stack_w_265.png 265w
+              "
+              src="~/assets/images/png/sticker-stack_w_265.png"
+              alt=""
+              class="hiwRowSticker tabletOnly"
+            />
+
+            <div class="hiwNote hiw2Note">
+              For the crypto dorks and engineers, it’s all powered by TIKI’s
+              purpose-built hybrid permissionless blockchain. On which, we will
+              mint more NFTs than the world has ever seen.
+            </div>
           </span>
         </div>
       </div>
-
-      <hr class="hiwDivider" />
 
       <div class="hiw3">
         <div class="hiwRow">
@@ -163,21 +171,29 @@
           </span>
 
           <span class="hiwImgCol hiw3ImgCol">
-            <img
-              sizes="(max-width: 1216px) 100vw, 1216px"
-              srcset="
-                ~/assets/images/png/coming-soon_w_200.png   200w,
-                ~/assets/images/png/coming-soon_w_1216.png 1216w
-              "
-              src="~/assets/images/png/coming-soon_w_1216.png"
-              alt="Coming Soon"
-              class="hiw3Img"
-            />
-            <div class="hiwNote hiw3Note">
+            <div class="strictVideoContainer">
+              <utils-yt-cmp
+                class="buildingVideo"
+                yt-id="JaWLtfIt8m4"
+                img-name="jpg/insights_thumbnail"
+                img-type="jpg"
+                :img-sizes="[200, 457, 642, 841, 1014, 1195, 1351, 1400]"
+              />
+            </div>
+
+            <a class="hiwButton hiw3Button" href="/insights" target="_blank"
+              ><div class="hiwButtonText">
+                <span>
+                  Learn More&nbsp;
+                  <utils-svg-cmp name="arrow-right" class="arrow"
+                /></span></div
+            ></a>
+
+            <!-- <div class="hiwNote hiw3Note">
               TIKI’s knowledge graph aggregates insights across platforms and
               companies delivering an unprecedented 360° view into customers. Oh
               and it’s searchable.
-            </div>
+            </div> -->
           </span>
         </div>
       </div>
@@ -231,12 +247,12 @@ export default {
   font-style: italic
   color: $gray-5
 
-.hiw2Button, .hiw2Button:hover, .hiw2Button:link, .hiw2Button:visited, .hiw2Button:active
+.hiwButton, .hiwButton:hover, .hiwButton:link, .hiwButton:visited, .hiwButton:active
   background-color: $orange
   display: block
   text-decoration: none
 
-.hiw2ButtonText
+.hiwButtonText
   color: $white
   font-family: $font-family-nunito-sans
   font-weight: 600
@@ -265,7 +281,6 @@ export default {
 
   .hiwRow
     margin-top: 5vh
-    display: block
     display: flex
     flex-flow: column
 
@@ -325,9 +340,6 @@ export default {
     width: 100%
     order: 3
 
-  .hiwDivider
-    display: none
-
   .hiwVideo
     margin: 3vh auto
     width: 100%
@@ -346,19 +358,19 @@ export default {
     width: auto
     margin-bottom: 1.5vh
 
-  .hiw2Button
+  .hiw2Button, .hiw3Button
     width: 90%
     margin: 2vh auto
     border-radius: 2vw
 
-  .hiw2ButtonText
+  .hiwButtonText
     font-size: 4.25vw
     padding: 2vh 0
     margin: 0 auto
     width: 80%
 
-  .hiw3ImgCol
-    width: 90%
+  .strictVideoContainer
+    margin-top: 2vh
 
   .hiw3Img
     width: 100%
@@ -382,18 +394,21 @@ export default {
 
   .title
     font-size: 2.25vw
-    margin: 3vh auto 0 10%
+    margin: 3vh auto 0 2vw
 
   .hiwRowLeft
     display: grid
     margin: -3.15vh auto
 
   .hiwRow
-    margin: 4vh 7% 3vh 7%
+    margin: 4vh 2vw 3vh 2vw
+
+  .hiw1, .hiw2, .hiw3
+    margin: 2vh 0
 
   .hiwRowNum
     font-size: 5vw
-    margin: -3vh 0 0 3.15vw
+    margin-top: -3vh
 
   .hiwRowSticker
     display: none
@@ -415,29 +430,29 @@ export default {
     margin: 0 2vw 0 2vw
     width: 35vw
 
-  .hiwDivider
-    width: 70%
-    border-top: 1px solid black
-    border-width: thin
-    margin: 1vh auto
-    opacity: .5
+  .verticalAlign
+    display: flex
+    align-items: center
+
+  .hiw2RowTextCol
+    width: 100%
 
   .hiwNote
     margin-top: 4vh
 
   .hiw1Note
-    margin-top: 13vh
+    margin-top: 2vh
 
   .hiw1Note, .hiw2Note2
     font-size: 1.2rem
 
   .hiwVideo
-    max-width: 15vw
+    max-width: 60%
 
   .hiwImgCol
-    display: block
-    margin: auto
-    width: 30%
+    display: inline-block
+    margin: auto 0 auto auto
+    width: 20%
 
   .hiw1ImgCol
     width: 40%
@@ -447,11 +462,11 @@ export default {
     width: 40%
 
   .hiw2Note
-    font-size: .75rem
+    font-size: 1rem
     max-height: 20vh
     height: auto
     width: auto
-    margin: 1vh auto 0vh
+    margin: 1vh auto
 
   .hiw3Note
     font-size: 1rem
@@ -461,11 +476,9 @@ export default {
     margin: 1vh auto 0vh
 
   .hiw2Img
-    max-height: 15vh
-    height: auto
-    width: auto
-    margin: auto
-    display: flex
+    max-height: 12vh
+    float: right
+    margin-right: 55%
 
   .hiw3Img
     max-height: 25vh
@@ -484,12 +497,19 @@ export default {
     top: 5vh
     right: -28vw
 
-  .hiw2Button
-    width: 60%
-    margin: 3vh auto 3vh 0
+  .hiwButton, .hiwButton:hover, .hiwButton:link, .hiwButton:visited, .hiwButton:active
+    display: inline-block
+    width: 33%
+    margin: 3vh 0 3vh 0
     border-radius: 1vw
 
-  .hiw2ButtonText
+  .hiw3Button, .hiw3Button:hover, .hiw3Button:link, .hiw3Button:visited, .hiw3Button:active
+    width: 60%
+    text-align: center
+    display: block
+    margin: 2vh auto
+
+  .hiwButtonText
     font-size: 1rem
     padding: 2vh 0
     margin: 0 auto
@@ -499,5 +519,5 @@ export default {
     display: none
 
   ::v-deep .arrow.svg
-    height: 1vw
+    height: .75rem
 </style>

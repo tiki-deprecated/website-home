@@ -45,7 +45,7 @@
           />
         </div>
 
-        <span class="missionText">
+        <span class="buildingText">
           <div class="buildingTitle">We are building</div>
           <div class="buildingText1">
             A vertically integrated user data ownership platform that combines
@@ -137,6 +137,10 @@ export default {
     font-size: 1rem
     margin: 2vh -15vw 0 5vw
 
+  .buildingRow
+    display: flex
+    flex-flow: column
+
   .buildingText1
     font-size: 1rem
     margin: 2vh 5vw
@@ -144,6 +148,12 @@ export default {
   .missionText2
     font-size: 4.25vw
     margin: 2vh 5vw 5vh 5vw
+
+  .buildingText
+    order: 1
+
+  .strictVideoContainer
+    order: 2
 
   .imgContainer
     width: 10%
@@ -178,9 +188,17 @@ export default {
     margin: 5vh auto 0 auto
     border-radius: 1vw
 
-  .missionTitle, .buildingTitle
+  .buildingText
+    margin: auto
+    display: block
+
+  .missionTitle
     font-size: 2.25vw
     margin: 3vh auto 0 2vw
+
+  .buildingTitle
+    font-size: 2.25vw
+    margin: 0 auto 0 2vw
 
   .missionText1, .buildingText1
     font-size: 1.25vw
@@ -216,9 +234,9 @@ export default {
 
   .strictVideoContainer
     width: 100%
-    margin-top: 6vh
-    margin-bottom: 6vh
-    margin-left: 5vw
+    margin-top: 4vh
+    margin-bottom: 4vh
+    margin-left: 2vw
     display: block
 
   .buildingContainer
