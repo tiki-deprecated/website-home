@@ -52,7 +52,7 @@ export default {
   font-size: 6.8vw
   width: 0
   white-space: nowrap
-  animation: typing1 5s steps(23, end) forwards, blink1 1.06s 5
+  animation: typing1 3.5s steps(23, end) forwards, blink1 .75s 5
 
 .line2
   overflow: hidden
@@ -60,7 +60,7 @@ export default {
   border-right: 2px solid transparent
   width: 0
   white-space: nowrap
-  animation: typing2 7s steps(23, end) forwards, blink2 1.06s 7
+  animation: typing2 5s steps(23, end) forwards, blink2 .75s 7
 
 .textContainer
   display: inline-block
