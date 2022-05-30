@@ -1,5 +1,6 @@
 const HOME = '/'
 const SIGNUP = '/#signup'
+const BOUNCER = '/app/bouncer'
 
 export default function ({ route, redirect }) {
   if (route.name == null || route.name === 'redirect') {
@@ -7,6 +8,9 @@ export default function ({ route, redirect }) {
       case SIGNUP:
       case SIGNUP + '/':
         redirect(HOME, '#signup')
+        break
+      case BOUNCER:
+        // do nothing
         break
       default:
         redirect(
