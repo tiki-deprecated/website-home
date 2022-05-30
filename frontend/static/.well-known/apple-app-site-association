@@ -5,9 +5,7 @@
       {
         "appID": "8B528SGCJW.com.mytiki.app",
         "paths": [
-          "NOT /_/*",
-          "NOT /insights",
-          "/*"
+          "/app/*"
         ]
       }
     ]
