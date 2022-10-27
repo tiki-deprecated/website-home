@@ -4,7 +4,7 @@
       <utils-svg-cmp name="logo" class="logo" />
     </div>
     <div class="right">
-      <div class="signup" @click="onClick($event, 'signup', '/')">Sign up</div>
+      <div class="signup" @click="onClick($event, 'signup', '/')">Join the beta app</div>
       <div class="blog blogHide" @click="onClick($event, 'blog', '/blog')">
         BLOG
       </div>
