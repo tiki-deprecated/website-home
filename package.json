@@ -1,0 +1,41 @@
+{
+  "name": "website",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.2.1",
+    "@nuxtjs/axios": "^5.13.6",
+    "nuxt": "^2.15.8",
+    "nuxt-compress": "^5.0.0",
+    "plausible-tracker": "^0.3.8"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@nuxtjs/eslint-config": "^11.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/google-fonts": "^3.0.0-1",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@nuxtjs/svg": "^0.4.0",
+    "babel-core": "^6.26.3",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.6.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "jest": "^29.2.2",
+    "node-sass": "^7.0.3",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0"
+  }
+}
