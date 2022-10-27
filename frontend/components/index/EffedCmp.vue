@@ -10,7 +10,7 @@
         v-scroll-to="{ el: '#signup' }"
         :to="{ path: '/', hash: 'signup' }"
         class="signupButtonText"
-        >Sign up
+        >Join the beta app
       </nuxt-link>
     </div>
 
