@@ -61,7 +61,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
   },
-  css: ['@/assets/styles/theme.sass'],
+  css: ['@/assets/fonts/montserrat/stylesheet.css'],
   styleResources: {
     sass: ['@/assets/styles/*.sass'],
     scss: ['@/assets/styles/*.scss'],
@@ -81,7 +81,6 @@ export default {
         },
       },
     ],
-    '@nuxtjs/google-fonts',
   ],
   modules: [
     '@nuxtjs/style-resources',
@@ -101,15 +100,4 @@ export default {
   },
   axios: {},
   router: {},
-  googleFonts: {
-    display: 'fallback',
-    // preload: true,
-    download: true,
-    inject: true,
-    overwriting: false,
-    fontsDir: 'fonts',
-    families: {
-      Montserrat: true,
-    },
-  },
 }

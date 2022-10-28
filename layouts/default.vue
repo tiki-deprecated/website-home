@@ -13,4 +13,13 @@ export default {
 }
 </script>
 
-<style lang="sass"></style>
+<style lang="sass">
+@import "assets/styles/theme"
+
+body
+  margin: 0
+  font-family: $font-family-montserrat
+  font-weight: normal
+  color: $blue
+  font-size: 90%
+</style>
