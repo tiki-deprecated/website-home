@@ -5,7 +5,16 @@
 
 <template>
   <div>
-    <utils-svg-cmp :style="fill" name="banner-bkg" class="bannerBkg" />
+    <utils-svg-cmp
+      :style="fill"
+      name="banner-bkg-desktop"
+      class="bannerBkg desktop"
+    />
+    <utils-svg-cmp
+      :style="fill"
+      name="banner-bkg-mobile"
+      class="bannerBkg mobile"
+    />
   </div>
 </template>
 
@@ -37,11 +46,17 @@ export default {
 
 @include for-phone
   ::v-deep .bannerBkg.svg
-    height: 130vh
+    height: 110vh
     width: 100vw
+
+  .desktop
+    display: none
 
 @include for-tablet
   ::v-deep .bannerBkg.svg
     height: 100vh
     width: 100vw
+
+  .mobile
+    display: none
 </style>

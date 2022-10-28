@@ -7,7 +7,11 @@
   <div>
     <header-bar-cmp class="headerBar" :links="links" />
     <div class="indexContent">
-      <banner-home-cmp />
+      <div style="position: relative">
+        <banner-home-cmp class="bannerCmp" />
+        <about-cmp class="aboutCmp" />
+        <quote-cmp class="quoteCmp" />
+      </div>
     </div>
   </div>
 </template>
@@ -15,10 +19,12 @@
 <script>
 import HeaderBarCmp from '../components/header/HeaderBarCmp'
 import BannerHomeCmp from '../components/banner/BannerHomeCmp'
+import AboutCmp from '../components/about/AboutCmp'
+import QuoteCmp from '../components/quote/QuoteCmp'
 
 export default {
   name: 'IndexPage',
-  components: { BannerHomeCmp, HeaderBarCmp },
+  components: { BannerHomeCmp, HeaderBarCmp, AboutCmp, QuoteCmp },
   data: function () {
     return {
       links: [
@@ -57,6 +63,7 @@ export default {
   z-index: 1
   top: 0
   left: 0
+  width: 100%
 
 @include for-phone
   .headerBar
@@ -69,4 +76,8 @@ export default {
     margin: 3.73% 12.67%
     left: 0
     right: 0
+
+  .aboutCmp
+    width: 50%
+    margin: auto
 </style>
