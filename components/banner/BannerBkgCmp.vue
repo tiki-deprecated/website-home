@@ -5,7 +5,7 @@
 
 <template>
   <div>
-    <utils-svg-cmp :style="fill" name="header-bkg" class="headerBkg" />
+    <utils-svg-cmp :style="fill" name="banner-bkg" class="bannerBkg" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import theme from 'assets/styles/_export.scss'
 import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 
 export default {
-  name: 'HeaderCmp',
+  name: 'BannerBkgCmp',
   components: { UtilsSvgCmp },
   props: {
     color: {
@@ -32,16 +32,16 @@ export default {
 </script>
 
 <style scoped lang="sass">
-@import "assets/styles/mixins"
-@import "assets/styles/theme"
+@import "../../assets/styles/mixins"
+@import "../../assets/styles/theme"
 
 @include for-phone
-  ::v-deep .headerBkg.svg
+  ::v-deep .bannerBkg.svg
     height: 130vh
     width: 100vw
 
 @include for-tablet
-  ::v-deep .headerBkg.svg
+  ::v-deep .bannerBkg.svg
     height: 100vh
     width: 100vw
 </style>

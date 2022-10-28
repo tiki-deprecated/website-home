@@ -15,7 +15,7 @@
 import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 
 export default {
-  name: 'UtilsMenuCmp',
+  name: 'HeaderMenuCmp',
   components: { UtilsSvgCmp },
   methods: {
     onClick() {

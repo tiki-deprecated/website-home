@@ -35,7 +35,7 @@ import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 import HeaderMenuCmp from './HeaderMenuCmp'
 
 export default {
-  name: 'HeaderBar',
+  name: 'HeaderBarCmp',
   components: { UtilsSvgCmp, HeaderMenuCmp },
   props: {
     links: {
@@ -74,7 +74,7 @@ export default {
 .menuPopup
   position: absolute
   z-index: 99
-  background: rgba($blue, 0.85)
+  background: rgba($blue, 0.95)
   width: 100%
   border-radius: 0.5em
   left: 0

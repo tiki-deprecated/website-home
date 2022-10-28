@@ -22,4 +22,5 @@ body
   font-weight: normal
   color: $blue
   font-size: 90%
+  background-color: $gray
 </style>
