@@ -45,6 +45,10 @@ export default {
     transform: translateX(-50%)
     overflow: clip
 
+  .quoteCmp
+    height: 50vh
+    overflow: clip
+
 @include for-tablet
   .quoteCmp
     height: 100vh

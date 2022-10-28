@@ -7,8 +7,8 @@
   <div style="width: 100%; height: 100%">
     <div class="quotesWrapper">
       <div class="quotes">
-        <div class="qtext">“</div>
-        <div class="qtext">”</div>
+        <div class="qtext q1">“</div>
+        <div class="qtext q2">”</div>
       </div>
     </div>
     <div class="textWrapper">
@@ -62,10 +62,32 @@ export default {
 
 .author
   color: $white
-  font-weight: bold
   text-align: center
 
 @include for-phone
+  .qtext
+    font-size: 15em
+
+  .quotes
+    width: 95%
+    max-width: 375px
+    margin: auto
+
+  .primaryText
+    font-size: 1.4em
+    width: 90%
+    max-width: 350px
+    margin: auto
+
+  .author
+    margin: 25px auto
+    font-weight: normal
+
+  .q1
+    padding-bottom: 75px
+
+  .q2
+    padding-top: 60px
 
 @include for-tablet
   .qtext
@@ -84,4 +106,5 @@ export default {
 
   .author
     margin: 40px auto
+    font-weight: bold
 </style>
