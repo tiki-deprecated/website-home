@@ -7,7 +7,7 @@ export default {
   ssr: false,
   target: 'static',
   head: {
-    title: 'TIKI',
+    title: 'TIKI —unfuck the internet',
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#',
     },
@@ -25,7 +25,7 @@ export default {
       },
       {
         name: 'title',
-        content: 'TIKI —unfucking the internet',
+        content: 'TIKI',
       },
       {
         property: 'og:title',

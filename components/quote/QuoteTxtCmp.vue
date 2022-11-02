@@ -52,17 +52,18 @@ export default {
   align-items: center
 
 .qtext
-  color: $purple-light
+  color: $yellow
   font-weight: bold
 
 .primaryText
-  color: $white
+  color: $blue
   font-weight: bold
   text-align: center
 
 .author
-  color: $white
+  color: $blue
   text-align: center
+  font-size: .9em
 
 @include for-phone
   .qtext

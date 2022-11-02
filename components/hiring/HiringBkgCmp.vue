@@ -5,7 +5,8 @@
 
 <template>
   <div>
-    <utils-svg-cmp name="quote-bkg" class="bkg" />
+    <utils-svg-cmp name="hiring-bkg-desktop" class="bkg desktop" />
+    <utils-svg-cmp name="hiring-bkg-mobile" class="bkg mobile" />
   </div>
 </template>
 
@@ -13,7 +14,7 @@
 import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 
 export default {
-  name: 'QuoteBkgCmp',
+  name: 'HiringBkgCmp',
   components: { UtilsSvgCmp },
 }
 </script>
@@ -26,11 +27,16 @@ export default {
   fill: $yellow-light
 
 @include for-phone
-  .bkg
-    height: 50vh
+  ::v-deep .bkg.svg
+    width: 100vw
+
+  .desktop
+    display: none
 
 @include for-tablet
-  .bkg
-    width: 100%
-    height: 100vh
+  ::v-deep .bkg.svg
+    width: 100vw
+
+  .mobile
+    display: none
 </style>

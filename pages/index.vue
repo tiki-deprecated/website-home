@@ -11,6 +11,9 @@
         <banner-home-cmp class="bannerCmp" />
         <about-cmp class="aboutCmp" />
         <quote-cmp class="quoteCmp" />
+        <team-cmp class="teamCmp" />
+        <hiring-cmp class="hiringCmp" />
+        <utils-footer-cmp class="footerCmp" />
       </div>
     </div>
   </div>
@@ -21,10 +24,21 @@ import HeaderBarCmp from '../components/header/HeaderBarCmp'
 import BannerHomeCmp from '../components/banner/BannerHomeCmp'
 import AboutCmp from '../components/about/AboutCmp'
 import QuoteCmp from '../components/quote/QuoteCmp'
+import TeamCmp from '../components/team/TeamCmp'
+import HiringCmp from '../components/hiring/HiringCmp'
+import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 
 export default {
   name: 'IndexPage',
-  components: { BannerHomeCmp, HeaderBarCmp, AboutCmp, QuoteCmp },
+  components: {
+    BannerHomeCmp,
+    HeaderBarCmp,
+    AboutCmp,
+    QuoteCmp,
+    TeamCmp,
+    HiringCmp,
+    UtilsFooterCmp,
+  },
   data: function () {
     return {
       links: [
