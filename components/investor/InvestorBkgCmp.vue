@@ -5,8 +5,8 @@
 
 <template>
   <div>
-    <utils-svg-cmp name="hiring-bkg-desktop" class="bkg desktop" />
-    <utils-svg-cmp name="hiring-bkg-mobile" class="bkg mobile" />
+    <utils-svg-cmp name="investor-bkg-desktop" class="bkg desktop" />
+    <utils-svg-cmp name="investor-bkg-mobile" class="bkg mobile" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@
 import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 
 export default {
-  name: 'HiringBkgCmp',
+  name: 'InvestorBkgCmp',
   components: { UtilsSvgCmp },
 }
 </script>

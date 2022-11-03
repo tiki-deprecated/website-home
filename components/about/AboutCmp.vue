@@ -48,5 +48,5 @@ export default {
     max-width: 60%
 
   .solution
-    margin-top: 150px
+    margin-top: 225px
 </style>

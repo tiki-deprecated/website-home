@@ -12,7 +12,7 @@
         <about-cmp class="aboutCmp" />
         <quote-cmp class="quoteCmp" />
         <team-cmp class="teamCmp" />
-        <hiring-cmp class="hiringCmp" />
+        <investor-cmp class="investorCmp" />
         <involved-cmp class="involvedCmp" />
         <utils-footer-cmp class="footerCmp" />
       </div>
@@ -26,7 +26,7 @@ import BannerHomeCmp from '../components/banner/BannerHomeCmp'
 import AboutCmp from '../components/about/AboutCmp'
 import QuoteCmp from '../components/quote/QuoteCmp'
 import TeamCmp from '../components/team/TeamCmp'
-import HiringCmp from '../components/hiring/HiringCmp'
+import InvestorCmp from '../components/investor/InvestorCmp'
 import InvolvedCmp from '../components/involved/InvolvedCmp'
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 
@@ -38,7 +38,7 @@ export default {
     AboutCmp,
     QuoteCmp,
     TeamCmp,
-    HiringCmp,
+    InvestorCmp,
     InvolvedCmp,
     UtilsFooterCmp,
   },

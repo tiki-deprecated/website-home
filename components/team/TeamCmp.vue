@@ -6,7 +6,7 @@
 <template>
   <div class="teamCmp">
     <div class="title">Meet our team!</div>
-    <div class="subtitle">Content and Code.</div>
+    <div class="subtitle">Content & Code</div>
     <div class="bios">
       <team-bio-cmp
         name="Mike Audi"
