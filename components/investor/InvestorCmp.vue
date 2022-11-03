@@ -55,11 +55,11 @@
 </template>
 
 <script>
-import investorBkgCmp from './investorBkgCmp'
+import InvestorBkgCmp from './InvestorBkgCmp'
 
 export default {
   name: 'InvestorCmp',
-  components: { investorBkgCmp },
+  components: { InvestorBkgCmp },
 }
 </script>
 
