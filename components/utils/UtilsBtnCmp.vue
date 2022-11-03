@@ -70,6 +70,7 @@ export default {
 @include for-tablet
   .btn
     padding: 6px 25px
+    min-width: 175px
 
 @include for-phone
   .btn

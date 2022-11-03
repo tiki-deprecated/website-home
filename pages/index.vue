@@ -13,6 +13,7 @@
         <quote-cmp class="quoteCmp" />
         <team-cmp class="teamCmp" />
         <hiring-cmp class="hiringCmp" />
+        <involved-cmp class="involvedCmp" />
         <utils-footer-cmp class="footerCmp" />
       </div>
     </div>
@@ -26,6 +27,7 @@ import AboutCmp from '../components/about/AboutCmp'
 import QuoteCmp from '../components/quote/QuoteCmp'
 import TeamCmp from '../components/team/TeamCmp'
 import HiringCmp from '../components/hiring/HiringCmp'
+import InvolvedCmp from '../components/involved/InvolvedCmp'
 import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
 
 export default {
@@ -37,6 +39,7 @@ export default {
     QuoteCmp,
     TeamCmp,
     HiringCmp,
+    InvolvedCmp,
     UtilsFooterCmp,
   },
   data: function () {
@@ -92,6 +95,10 @@ export default {
     right: 0
 
   .aboutCmp
-    width: 50%
-    margin: auto
+    width: 75%
+    margin: 20px auto 150px auto
+
+  .involvedCmp
+    margin-bottom: 150px
+    margin-top: 100px
 </style>

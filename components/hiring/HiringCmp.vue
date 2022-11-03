@@ -27,14 +27,12 @@ export default {
 
 .hiringContainer
   position: relative
+  display: inline-block
 
 .bkgContainer
-  position: absolute
-  z-index: 1
-  top: 0
-  left: 0
-  right: 0
-  margin: auto
+  display: block
+  height: auto
+  width: 100vw
 
 .cntContainer
   position: absolute
@@ -43,6 +41,7 @@ export default {
   left: 0
   right: 0
   margin: auto
+  width: 100%
 
 .title
   font-weight: bold

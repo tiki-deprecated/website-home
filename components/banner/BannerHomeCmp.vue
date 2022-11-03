@@ -13,29 +13,18 @@
             sizes="(max-width: 1400px) 100vw, 1400px"
             srcset="
               ~/assets/images/png/home_banner_w_200.png   200w,
-              ~/assets/images/png/home_banner_w_358.png   358w,
-              ~/assets/images/png/home_banner_w_473.png   473w,
-              ~/assets/images/png/home_banner_w_576.png   576w,
-              ~/assets/images/png/home_banner_w_654.png   654w,
-              ~/assets/images/png/home_banner_w_754.png   754w,
-              ~/assets/images/png/home_banner_w_790.png   790w,
-              ~/assets/images/png/home_banner_w_859.png   859w,
-              ~/assets/images/png/home_banner_w_927.png   927w,
-              ~/assets/images/png/home_banner_w_974.png   974w,
-              ~/assets/images/png/home_banner_w_1026.png 1026w,
-              ~/assets/images/png/home_banner_w_1080.png 1080w,
-              ~/assets/images/png/home_banner_w_1148.png 1148w,
-              ~/assets/images/png/home_banner_w_1178.png 1178w,
-              ~/assets/images/png/home_banner_w_1217.png 1217w,
-              ~/assets/images/png/home_banner_w_1273.png 1273w,
-              ~/assets/images/png/home_banner_w_1316.png 1316w,
-              ~/assets/images/png/home_banner_w_1355.png 1355w,
-              ~/assets/images/png/home_banner_w_1369.png 1369w,
+              ~/assets/images/png/home_banner_w_474.png   474w,
+              ~/assets/images/png/home_banner_w_671.png   671w,
+              ~/assets/images/png/home_banner_w_827.png   827w,
+              ~/assets/images/png/home_banner_w_956.png   956w,
+              ~/assets/images/png/home_banner_w_1091.png 1091w,
+              ~/assets/images/png/home_banner_w_1203.png 1203w,
+              ~/assets/images/png/home_banner_w_1305.png 1305w,
               ~/assets/images/png/home_banner_w_1400.png 1400w
             "
             src="~/assets/images/png/home_banner_w_1400.png"
             alt=""
-            style="width: 100%"
+            class="bannerImgImg"
           />
         </picture>
         <div class="text">
@@ -84,11 +73,14 @@ export default {
 @import "../../assets/styles/mixins"
 @import "../../assets/styles/theme"
 
+.bannerHomeCmp
+  position: relative
+  display: inline-block
+
 .bannerBkg
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 1
+  width: 100vw
+  height: auto
+  display: block
 
 .bannerContent
   position: absolute
@@ -134,22 +126,27 @@ export default {
   .ctaLeadin
     margin-bottom: 10px
 
-  .bannerHomeCmp
-    height: 110vh
-
 @include for-tablet
   .bannerFlex
     display: flex
     flex-direction: row-reverse
     justify-content: space-between
     align-items: center
+    height: 100%
 
   .bannerImg
-    width: 35%
+    height: 90%
     margin: auto
 
+  .bannerImgImg
+    height: 100%
+    width: auto
+
   .bannerContent
-    transform: translateY(14vh)
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    height: 80%
 
   .text
     width: 40%
@@ -165,7 +162,4 @@ export default {
 
   .ctaLeadin
     margin-bottom: 10px
-
-  .bannerHomeCmp
-    height: 100vh
 </style>

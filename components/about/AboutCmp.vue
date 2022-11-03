@@ -4,43 +4,49 @@
   -->
 
 <template>
-  <div>
-    <div class="title">Data is humanity’s most powerful resource.</div>
-    <div>
-      Most of the problems we face on the internet can be traced back to the
-      exchange of data.
+  <div class="aboutContainer">
+    <div class="col1">
+      <about-problem-cmp class="problem" />
+      <about-solution-cmp class="solution" />
     </div>
-    <div>
-      Lack of privacy, censorship, digital nudging, invasive ads, and much more.
-      But limiting it is just a bandaid that results in a worse internet for
-      all.
-    </div>
-    <div>
-      At TIKI, we build better ways to exchange data. Or, as we like to say,
-      "unfuck the internet."
-    </div>
-    <div>
-      We enable willing and informed (fair market value) people and businesses
-      to trade with one another.
-    </div>
-    <div>
-      Powered by TIKI's decentralized exchange and built on blockchain
-      technology, our tools (SDKs, APIs, and Apps) bring data trade to existing
-      systems.
-    </div>
-    <div>
-      Data rewards, loyalty, gated features, managed consent, pooling, and more.
+    <div class="col2">
+      <about-graphic-cmp class="graphic" />
     </div>
   </div>
 </template>
 
 <script>
+import AboutProblemCmp from './AboutProblemCmp'
+import AboutSolutionCmp from './AboutSolutionCmp'
+import AboutGraphicCmp from './AboutGraphicCmp'
+
 export default {
   name: 'AboutCmp',
+  components: { AboutProblemCmp, AboutSolutionCmp, AboutGraphicCmp },
 }
 </script>
 
 <style scoped lang="sass">
-.title
-  font-size: 2.5em
+@import "assets/styles/mixins"
+@import "assets/styles/theme"
+
+@include for-phone
+
+@include for-tablet
+  .aboutContainer
+    display: flex
+    align-items: end
+
+  .col1 .col2
+    width: 50%
+
+  .col1
+    max-width: 400px
+
+  .col2
+    margin-left: -10%
+    max-width: 60%
+
+  .solution
+    margin-top: 150px
 </style>

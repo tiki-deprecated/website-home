@@ -66,7 +66,7 @@ export default {
   align-items: center
 
 .headerBarLink
-  margin: 0 0.5em
+  margin: 0 1.25em
   font-weight: normal
   color: $blue
   text-decoration: none

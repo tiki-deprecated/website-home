@@ -61,7 +61,11 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'icons/x-icon', href: '/favicon.ico' }],
   },
-  css: ['@/assets/fonts/montserrat/stylesheet.css'],
+  css: [
+    '@/assets/fonts/montserrat/stylesheet.css',
+    '@/assets/fonts/nunito-sans/stylesheet.css',
+    // '@/assets/fonts/koara/stylesheet.css',
+  ],
   styleResources: {
     sass: ['@/assets/styles/*.sass'],
     scss: ['@/assets/styles/*.scss'],

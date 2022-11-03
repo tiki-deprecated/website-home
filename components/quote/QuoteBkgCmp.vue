@@ -32,5 +32,4 @@ export default {
 @include for-tablet
   .bkg
     width: 100%
-    height: 100vh
 </style>

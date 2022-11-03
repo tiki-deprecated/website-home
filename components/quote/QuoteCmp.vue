@@ -6,6 +6,22 @@
 <template>
   <div class="quoteCmp">
     <quote-bkg-cmp class="bkg" />
+    <div class="createImg">
+      <div class="createTxt">With TIKI, create</div>
+      <picture>
+        <img
+          sizes="(max-width: 1400px) 100vw, 1400px"
+          srcset="
+            ~/assets/images/png/create_pineapple_w_200.png   200w,
+            ~/assets/images/png/create_pineapple_w_735.png   735w,
+            ~/assets/images/png/create_pineapple_w_1400.png 1400w
+          "
+          src="~/assets/images/png/create_pineapple_w_1400.png"
+          alt=""
+          class="createImgImg"
+        />
+      </picture>
+    </div>
     <quote-txt-cmp class="txt" />
   </div>
 </template>
@@ -25,10 +41,9 @@ export default {
 @import "assets/styles/mixins"
 
 .bkg
-  position: absolute
-  z-index: 1
-  top: 0
-  left: 0
+  display: block
+  height: auto
+  width: 100%
 
 .txt
   position: absolute
@@ -36,24 +51,43 @@ export default {
 
 .quoteCmp
   position: relative
+  display: inline-block
   width: 100%
+  overflow: clip
+
+.createTxt
+  font-weight: bold
+  text-align: center
 
 @include for-phone
   .bkg
-    top: 0
-    left: 50%
     transform: translateX(-50%)
-    overflow: clip
 
-  .quoteCmp
-    height: 50vh
-    overflow: clip
-
-@include for-tablet
-  .quoteCmp
-    height: 100vh
-
-  .bkg
+  .txt
     top: 0
     left: 0
+
+@include for-tablet
+  .txt
+    top: 15%
+    left: 0
+
+  .createImgImg
+    height: 100%
+    width: auto
+
+  .createImg
+    margin: auto
+    height: 40%
+    width: fit-content
+    display: block
+    position: absolute
+    z-index: 3
+    top: 0
+    left: 0
+    right: 0
+
+  .createTxt
+    font-size: 2em
+    margin-bottom: 30px
 </style>

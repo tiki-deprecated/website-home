@@ -18,7 +18,7 @@ export default {
 
 body
   margin: 0
-  font-family: $font-family-montserrat
+  font-family: $font-family-nunito-sans
   font-weight: normal
   color: $blue
   font-size: 90%

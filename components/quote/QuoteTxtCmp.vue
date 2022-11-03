@@ -54,6 +54,7 @@ export default {
 .qtext
   color: $yellow
   font-weight: bold
+  font-family: $font-family-montserrat
 
 .primaryText
   color: $blue
@@ -63,7 +64,7 @@ export default {
 .author
   color: $blue
   text-align: center
-  font-size: .9em
+  font-size: .95em
 
 @include for-phone
   .qtext
@@ -100,7 +101,7 @@ export default {
     margin: auto
 
   .primaryText
-    font-size: 2.25em
+    font-size: 2.15em
     width: 85%
     max-width: 700px
     margin: auto

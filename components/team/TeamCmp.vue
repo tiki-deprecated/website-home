@@ -6,10 +6,7 @@
 <template>
   <div class="teamCmp">
     <div class="title">Meet our team!</div>
-    <div class="subtitle">
-      Explanaition of the team A vertically integrated user data ownership
-      platform that combines data privacy, ownersh
-    </div>
+    <div class="subtitle">Content and Code.</div>
     <div class="bios">
       <team-bio-cmp
         name="Mike Audi"
@@ -22,7 +19,7 @@
       />
       <team-bio-cmp
         name="Shane Faria"
-        role="Co-Founder & Head of Content"
+        role="Head of Content"
         img-name="jpg/sfaria"
         img-type="jpg"
         :img-sizes="[200, 400]"
@@ -31,7 +28,7 @@
       />
       <team-bio-cmp
         name="Ricardo Gonçalves"
-        role="Mobile (SW) Lead"
+        role="Mobile Lead"
         img-name="jpg/rgoncalves"
         img-type="jpg"
         :img-sizes="[200, 368]"
@@ -97,7 +94,7 @@ export default {
   .subtitle
     text-align: center
     width: 50%
-    margin: 25px auto 0 auto
+    margin: 10px auto 0 auto
 
   .contact
     margin-top: 50px
