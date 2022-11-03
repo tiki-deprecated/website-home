@@ -1,4 +1,4 @@
-name: docs
+name: Deploy
 
 on:
   push:
@@ -32,8 +32,7 @@ jobs:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
       - name: Generate Static Site
         run: |
-          nvm install && nvm use
-          npm install
+          npm ci
           npm run build
           npm run generate
       - name: Setup Pages
