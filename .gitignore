@@ -86,6 +86,3 @@ dist
 
 # Serverless directories
 .serverless
-
-# Backup folder
-bkup
