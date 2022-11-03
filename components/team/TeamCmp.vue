@@ -46,7 +46,7 @@
       />
     </div>
     <div class="contact">
-      <utils-btn-cmp txt="Get in touch!" />
+      <utils-btn-cmp txt="Get in touch!" link="mailto:hello@mytiki.com" />
     </div>
   </div>
 </template>

@@ -5,9 +5,13 @@
 
 <template>
   <div class="linksContainer">
-    <utils-btn-cmp txt="Github" class="link" />
-    <utils-btn-cmp txt="Discord" class="link" />
-    <utils-btn-cmp txt="Careers" class="link" />
+    <utils-btn-cmp txt="Github" class="link" link="https://github.com/tiki" />
+    <utils-btn-cmp txt="Discord" class="link" link="https://discord.gg/tiki" />
+    <utils-btn-cmp
+      txt="Careers"
+      class="link"
+      link="https://angel.co/company/mytiki/jobs"
+    />
   </div>
 </template>
 

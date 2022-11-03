@@ -40,11 +40,14 @@
           <div class="cta">
             <div>
               <div class="ctaLeadin">For individuals:</div>
-              <utils-btn-cmp txt="Check out the App" />
+              <utils-btn-cmp txt="Coming Soon" />
             </div>
             <div>
               <div class="ctaLeadin">For developers:</div>
-              <utils-btn-cmp txt="Explore the TIKI SDK" />
+              <utils-btn-cmp
+                txt="Explore the TIKI SDK"
+                link="https://github.com/tiki"
+              />
             </div>
           </div>
         </div>

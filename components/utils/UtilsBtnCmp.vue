@@ -42,10 +42,10 @@ export default {
       this.$plausible.trackEvent('Outbound Link: Click', {
         props: { url: this.link },
       })
-      if (this.link.startsWith('http')) {
-        window.location.href = this.link
-      } else {
+      if (this.link.startsWith('/')) {
         await this.$router.push(this.link)
+      } else {
+        window.location.href = this.link
       }
     },
   },

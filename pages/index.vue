@@ -46,12 +46,8 @@ export default {
     return {
       links: [
         {
-          name: 'App',
-          href: 'https://mytiki.com',
-        },
-        {
           name: 'SDK',
-          href: 'https://mytiki.com',
+          href: 'https://github.com/tiki',
         },
         {
           name: 'Learn',
