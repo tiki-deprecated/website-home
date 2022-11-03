@@ -6,8 +6,8 @@
 <template>
   <div>
     <div class="title">
-      We enable willing and informed (fair market value) people and businesses
-      to trade with one another.
+      We enable willing and informed people and businesses to trade at fair
+      market value with one another.
     </div>
     <div class="text">
       Powered by TIKI's decentralized exchange and built on blockchain
