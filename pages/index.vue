@@ -70,6 +70,8 @@ export default {
   position: fixed
   z-index: 99
   top: 0
+  left: 0
+  right: 0
 
 .indexContent
   position: absolute
@@ -79,17 +81,10 @@ export default {
   width: 100%
 
 @include for-phone
-  .headerBar
-    margin: 6.52% 8.72%
-    left: 0
-    right: 0
+  .involvedCmp
+    margin: 75px auto
 
 @include for-tablet
-  .headerBar
-    margin: 3.73% 12.67%
-    left: 0
-    right: 0
-
   .aboutCmp
     width: 75%
     margin: 20px auto 150px auto

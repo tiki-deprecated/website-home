@@ -46,7 +46,7 @@ export default {
 
 @include for-phone
   ::v-deep .bannerBkg.svg
-    height: 110vh
+    height: 900px
     width: 100vw
 
   .desktop

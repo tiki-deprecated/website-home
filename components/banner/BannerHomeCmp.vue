@@ -30,12 +30,12 @@
         <div class="text">
           <div class="title">
             Choose<br />
-            better data
+            Better Data
           </div>
           <div class="description">
-            Build the new data economy with TIKI. Decentralized infrastructure
-            to create private, safe, and compliant data transactions between
-            people and businesses —more control, transparency, and value.
+            Decentralized infrastructure to create private, safe, and compliant
+            data transactions between people and businesses —more control,
+            transparency, and value. Build the new data economy with TIKI.
           </div>
           <div class="cta">
             <div>
@@ -114,7 +114,7 @@ export default {
 
 @include for-phone
   .bannerContent
-    top: 50px
+    top: 100px
 
   .text
     margin: 0 5%
@@ -124,10 +124,20 @@ export default {
     margin: 11px 0 21px 0
 
   .cta
-    margin-top: 40px
+    margin-top: 50px
+    justify-content: space-around
 
   .ctaLeadin
     margin-bottom: 10px
+
+  .bannerImg
+    width: 85%
+    margin: auto
+    display: block
+
+  .bannerImgImg
+    width: 100%
+    height: auto
 
 @include for-tablet
   .bannerFlex
@@ -138,12 +148,13 @@ export default {
     height: 100%
 
   .bannerImg
-    height: 90%
+    width: 90%
     margin: auto
+    max-width: 450px
 
   .bannerImgImg
-    height: 100%
-    width: auto
+    width: 100%
+    height: auto
 
   .bannerContent
     top: 50%
@@ -162,6 +173,7 @@ export default {
 
   .cta
     margin-top: 60px
+    justify-content: space-between
 
   .ctaLeadin
     margin-bottom: 10px

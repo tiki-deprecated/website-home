@@ -25,10 +25,19 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.linksContainer
-  width: fit-content
-  margin: auto
+@import "../../assets/styles/mixins"
+@import "../../assets/styles/theme"
 
-.link
-  margin: auto 20px
+@include for-tablet
+  .linksContainer
+    width: fit-content
+    margin: auto
+
+  .link
+    margin: auto 20px
+
+@include for-phone
+  .link
+    display: block
+    margin: 20px auto
 </style>

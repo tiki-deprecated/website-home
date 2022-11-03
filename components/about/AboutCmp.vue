@@ -31,6 +31,11 @@ export default {
 @import "assets/styles/theme"
 
 @include for-phone
+  .aboutContainer
+    margin: 40px 5% 0 5%
+
+  .problem
+    margin-bottom: 20px
 
 @include for-tablet
   .aboutContainer
@@ -46,6 +51,9 @@ export default {
   .col2
     margin-left: -10%
     max-width: 60%
+
+  .problem
+    margin-bottom: 40px
 
   .solution
     margin-top: 225px

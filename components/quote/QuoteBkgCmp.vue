@@ -5,7 +5,8 @@
 
 <template>
   <div>
-    <utils-svg-cmp name="quote-bkg" class="bkg" />
+    <utils-svg-cmp name="quote-bkg-desktop" class="bkg desktop" />
+    <utils-svg-cmp name="quote-bkg-mobile" class="bkg mobile" />
   </div>
 </template>
 
@@ -27,9 +28,15 @@ export default {
 
 @include for-phone
   .bkg
-    height: 50vh
+    width: 100%
+
+  .desktop
+    display: none
 
 @include for-tablet
   .bkg
     width: 100%
+
+  .mobile
+    display: none
 </style>

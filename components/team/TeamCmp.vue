@@ -37,7 +37,7 @@
       />
       <team-bio-cmp
         name="Barry O'Connor"
-        role="Governance (DAO) Lead"
+        role="Governance Lead"
         img-name="jpg/boconnor"
         img-type="jpg"
         :img-sizes="[200, 400]"

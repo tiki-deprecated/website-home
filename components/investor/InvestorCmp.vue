@@ -32,7 +32,17 @@
             "
             src="~/assets/images/png/vcs_w_1400.png"
             alt="LAGO, 11 Tribes Ventures, Long Run Capital, Join Forces Ventures, ids.company, 1121.vc"
-            class="vcImgImg"
+            class="vcImgImg desktop"
+          />
+          <img
+            sizes="(max-width: 1348px) 100vw, 1348px"
+            srcset="
+              ~/assets/images/png/vcs_mobile_w_200.png   200w,
+              ~/assets/images/png/vcs_mobile_w_1348.png 1348w
+            "
+            src="~/assets/images/png/vcs_mobile_w_1348.png"
+            class="vcImgImg mobile"
+            alt="LAGO, 11 Tribes Ventures, Long Run Capital, Join Forces Ventures, ids.company, 1121.vc"
           />
           <div class="angels">
             + Jim O'Neill, Deven Sharma, Ken Rapp, Kashish Mittal, Rikesh Govan,
@@ -72,9 +82,6 @@ export default {
   top: 0
   left: 0
   right: 0
-  margin: auto
-  width: 100%
-  display: flex
 
 .title
   font-weight: bold
@@ -82,13 +89,49 @@ export default {
 @include for-phone
   .title
     text-align: center
-    margin-top: 130px
+    margin-top: 175px
     font-size: 2em
+
+  .pineappleImg
+    display: block
+    width: 50%
+    margin: 50px auto
+
+  .pineappleImgImg
+    width: 100%
+
+  .cntContainer
+    margin: auto
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column-reverse
+
+  .desktop
+    display: none
+
+  .mobile
+    display: block
+
+  .vcImg
+    width: 90%
+    display: block
+    margin: 25px auto
+
+  .vcImgImg
+    width: 90%
+    margin: auto
+
+  .angels
+    text-align: center
+    font-size: .95em
+    font-weight: 500
+    margin-top: 50px
 
 @include for-tablet
   .title
     text-align: right
-    margin-top: 50%
+    margin-top: 15vw
     margin-right: 15%
     font-size: 2em
 
@@ -119,4 +162,12 @@ export default {
 
   .pineappleImgImg
     width: 100%
+
+  .cntContainer
+    margin: auto
+    width: 100%
+    display: flex
+
+  .mobile
+    display: none
 </style>

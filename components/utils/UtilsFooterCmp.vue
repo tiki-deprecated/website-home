@@ -7,12 +7,17 @@
   <div class="footerContainer">
     <utils-svg-cmp
       name="footer-bkg-desktop"
-      class="footerBkg"
+      class="footerBkg desktop"
+      :style="'fill: ' + bkgColor"
+    />
+    <utils-svg-cmp
+      name="footer-bkg-mobile"
+      class="footerBkg mobile"
       :style="'fill: ' + bkgColor"
     />
     <div class="content">
-      <div class="col">
-        <div class="section">Always Open Sourced</div>
+      <div class="col colfwm">
+        <div class="section">Always Open Source</div>
         <a class="link" href="https://github.com/tiki">Github</a>
       </div>
       <div class="col">
@@ -81,12 +86,7 @@ export default {
   left: 0
   right: 0
   z-index: 1
-  display: flex
   font-size: .95em
-  justify-content: space-between
-  align-items: start
-  width: 85%
-  margin: auto
 
 .section
   font-weight: bold
@@ -97,6 +97,36 @@ export default {
   color: $blue
   display: block
 
-.col
-  margin: 200px 20px 20px 20px
+@include for-phone
+  .col
+    margin: 20px 0
+    width: 40%
+
+  .content
+    width: fit-content
+    margin: 40% auto
+    display: flex
+    align-items: start
+    justify-content: end
+    flex-wrap: wrap
+
+  .colfwm
+    width: 80%
+
+  .desktop
+    display: none
+
+@include for-tablet
+  .col
+    margin: 15% 20px 20px 20px
+
+  .content
+    display: flex
+    width: 85%
+    margin: auto
+    justify-content: space-between
+    align-items: start
+
+  .mobile
+    display: none
 </style>

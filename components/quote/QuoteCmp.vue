@@ -59,35 +59,52 @@ export default {
   font-weight: bold
   text-align: center
 
-@include for-phone
-  .bkg
-    transform: translateX(-50%)
+.createImgImg
+  height: 100%
+  width: auto
 
+.createImg
+  margin: auto
+  width: fit-content
+  display: block
+  position: absolute
+  z-index: 3
+  top: 0
+  left: 0
+  right: 0
+
+@include for-phone
   .txt
-    top: 0
+    top: 15%
     left: 0
+
+  .createImg
+    width: 80%
+
+  .createTxt
+    font-size: 2em
+    margin-bottom: 30px
+
+  .createImgImg
+    height: auto
+    width: 100%
+
+  .bkg
+    margin-top: 40%
 
 @include for-tablet
   .txt
     top: 15%
     left: 0
 
-  .createImgImg
-    height: 100%
-    width: auto
-
   .createImg
-    margin: auto
     height: 40%
-    width: fit-content
-    display: block
-    position: absolute
-    z-index: 3
-    top: 0
-    left: 0
-    right: 0
 
   .createTxt
     font-size: 2em
     margin-bottom: 30px
+
+  .createImgImg
+    height: 100%
+    width: auto
 </style>

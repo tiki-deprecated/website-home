@@ -4,33 +4,36 @@
   -->
 
 <template>
-  <div class="headerBarContainer">
-    <utils-svg-cmp name="logo" class="logo" />
-    <div class="links">
-      <a
-        v-for="link in links"
-        :key="link.id"
-        class="headerBarLink"
-        :href="link.href"
-        >{{ link.name }}</a
-      >
-    </div>
-    <header-menu-cmp class="menu" @menu-click="menuActive = !menuActive" />
-    <transition name="expand">
-      <div v-if="menuActive" class="menuPopup expand">
+  <div>
+    <div class="headerBarContainer">
+      <utils-svg-cmp name="logo" class="logo" />
+      <div class="links">
         <a
           v-for="link in links"
           :key="link.id"
-          class="menuLink"
+          class="headerBarLink"
           :href="link.href"
           >{{ link.name }}</a
         >
       </div>
-    </transition>
+      <header-menu-cmp class="menu" @menu-click="menuActive = !menuActive" />
+      <transition name="expand">
+        <div v-if="menuActive" class="menuPopup expand">
+          <a
+            v-for="link in links"
+            :key="link.id"
+            class="menuLink"
+            :href="link.href"
+            >{{ link.name }}</a
+          >
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
+import theme from 'assets/styles/_export.scss'
 import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 import HeaderMenuCmp from './HeaderMenuCmp'
 
@@ -43,6 +46,10 @@ export default {
       default() {
         return [{}]
       },
+    },
+    bkgColor: {
+      type: String,
+      default: theme.yellowLight,
     },
   },
   data() {
@@ -64,6 +71,10 @@ export default {
   display: flex
   justify-content: space-between
   align-items: center
+  z-index: 2
+  position: absolute
+  left: 0
+  right: 0
 
 .headerBarLink
   margin: 0 1.25em
@@ -93,7 +104,7 @@ export default {
   font-weight: 500
 
 .expand
-  height: 7.7em
+  height: 5em
   animation: slideDown 400ms linear
   overflow: hidden
   opacity: 1
@@ -108,7 +119,7 @@ export default {
     height: 0
     opacity: 0
   to
-    height: 7.7em
+    height: 5em
     opacity: 1
 
 @include for-phone
@@ -121,6 +132,9 @@ export default {
   .menu
     display: contents
 
+  .headerBarContainer
+    margin: 6.52% 8.72%
+
 @include for-tablet
   ::v-deep .logo.svg
     height: 45px
@@ -130,4 +144,7 @@ export default {
 
   .menu
     display: none
+
+  .headerBarContainer
+    margin: 3.73% 12.67%
 </style>

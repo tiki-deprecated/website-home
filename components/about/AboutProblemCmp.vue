@@ -7,10 +7,10 @@
   <div>
     <div class="title">Data is humanity’s most powerful resource.</div>
     <div class="text">
-      Most of the problems we face on the internet can be traced back to the
-      exchange of data. Lack of privacy, censorship, digital nudging, invasive
-      ads, and much more. But limiting it is just a bandaid that results in a
-      worse internet for all.
+      The most pressing problems we face on the internet trace back to the
+      exchange of data —lack of privacy, censorship, digital nudging, invasive
+      ads, and much more. Yet, limiting data only results in a worse internet
+      for all.
     </div>
   </div>
 </template>
@@ -22,11 +22,22 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import "assets/styles/mixins"
+@import "assets/styles/theme"
+
 .title
-  font-size: 2em
   font-weight: bold
-  margin-bottom: 40px
 
 .text
   font-size: .95em
+
+@include for-phone
+  .title
+    font-size: 2em
+    margin-bottom: 40px
+
+@include for-tablet
+  .title
+    font-size: 2em
+    margin-bottom: 20px
 </style>

@@ -11,8 +11,8 @@
     </div>
     <div class="text">
       Powered by TIKI's decentralized exchange and built on blockchain
-      technology, our tools (SDKs, APIs, and Apps) bring data trade to existing
-      systems.
+      technology, our tools (SDKs, APIs, and Apps) bring data trade between
+      users and businesses to existing systems.
     </div>
   </div>
 </template>

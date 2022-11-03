@@ -75,4 +75,5 @@ export default {
 @include for-phone
   .btn
     padding: 6px 15px
+    min-width: 150px
 </style>
