@@ -5,13 +5,11 @@
 
 <template>
   <div class="aboutContainer">
-    <div class="col1">
+    <div class="txt">
       <about-problem-cmp class="problem" />
       <about-solution-cmp class="solution" />
     </div>
-    <div class="col2">
-      <about-graphic-cmp class="graphic" />
-    </div>
+    <about-graphic-cmp class="graphic" />
   </div>
 </template>
 
@@ -33,28 +31,44 @@ export default {
 @include for-phone
   .aboutContainer
     margin: 40px 5% 0 5%
+    position: relative
+    display: inline-block
 
   .problem
-    margin-bottom: 20px
+    margin-bottom: 450px
+
+  .graphic
+    position: absolute
+    height: 350px
+    left: 0
+    top: 60vw
+    right: 0
+    display: block
+    margin: auto
+    width: fit-content
 
 @include for-tablet
   .aboutContainer
-    display: flex
-    align-items: end
+    position: relative
+    margin: auto
+    display: block
 
-  .col1 .col2
-    width: 50%
-
-  .col1
-    max-width: 400px
-
-  .col2
-    margin-left: -10%
-    max-width: 60%
+  .txt
+    max-width: 500px
+    // margin-left: 20%
+    margin-right: auto
 
   .problem
     margin-bottom: 40px
 
   .solution
     margin-top: 225px
+
+  .graphic
+    position: absolute
+    // width: 80%
+    max-width: 700px
+    top: 60%
+    right: 0
+    transform: translateY(-50%)
 </style>

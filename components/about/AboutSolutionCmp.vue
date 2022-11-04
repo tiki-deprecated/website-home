@@ -6,7 +6,7 @@
 <template>
   <div>
     <div class="title">
-      We enable willing and informed people and businesses to trade at fair
+      We enable willing and informed people and businesses to trade data at fair
       market value with one another.
     </div>
     <div class="text">
@@ -28,6 +28,5 @@ export default {
   font-size: .95em
 
 .title
-  font-weight: bold
   margin-bottom: 20px
 </style>

@@ -7,7 +7,7 @@ export default {
   ssr: false,
   target: 'static',
   head: {
-    title: 'TIKI —unfuck the internet',
+    title: 'TIKI | Choose Better Data',
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#',
     },
@@ -86,12 +86,7 @@ export default {
       },
     ],
   ],
-  modules: [
-    '@nuxtjs/style-resources',
-    '@nuxtjs/svg',
-    '@nuxtjs/axios',
-    '@nuxt/content',
-  ],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/svg', '@nuxtjs/axios'],
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {

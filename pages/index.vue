@@ -67,7 +67,7 @@ export default {
 @import "assets/styles/theme"
 
 .headerBar
-  position: fixed
+  // position: fixed
   z-index: 99
   top: 0
   left: 0
@@ -83,6 +83,9 @@ export default {
 @include for-phone
   .involvedCmp
     margin: 75px auto
+
+  .aboutCmp
+    margin-bottom: 80px
 
 @include for-tablet
   .aboutCmp

@@ -34,7 +34,7 @@ export default {
 @include for-phone
   .title
     font-size: 2em
-    margin-bottom: 40px
+    margin-bottom: 30px
 
 @include for-tablet
   .title
