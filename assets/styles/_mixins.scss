@@ -1,0 +1,22 @@
+/*!
+ * Copyright (c) TIKI Inc.
+ * MIT license. See LICENSE file in root directory.
+ */
+
+@mixin for-phone {
+  @media (max-width: 575.98px) {
+    @content
+  }
+}
+
+@mixin for-tablet {
+  @media (min-width: 576px) {
+    @content
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 992px) {
+    @content
+  }
+}

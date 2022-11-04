@@ -3,44 +3,44 @@ name: Deploy
 on:
   push:
     tags:
-      - '*'
+      - '*.*.*'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-
-  content:
+  deploy:
+    environment:
+      name: Production
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2.1.1
-
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Get Node.js version
         id: nvm
-        run: echo ::set-output name=NODE_VERSION::$(cat frontend/.nvmrc)
-
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
-
       - name: Generate Static Site
         run: |
-          cd frontend
-          nvm install && nvm use
-          npm install
+          npm ci
           npm run build
           npm run generate
-
-      - name: Push Static Site
-        env:
-          S3_BUCKET_FRONTEND: ${{ secrets.S3_BUCKET_FRONTEND}}
-        run: |
-          cd frontend/dist
-          aws s3 sync . "s3://$S3_BUCKET_FRONTEND" --exclude "_nuxt/*" --delete --cache-control "max-age=3600"
-          aws s3 sync _nuxt/ "s3://$S3_BUCKET_FRONTEND"/_nuxt --delete --cache-control "max-age=31536000, immutable"
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

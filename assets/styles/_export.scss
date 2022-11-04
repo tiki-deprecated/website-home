@@ -1,0 +1,21 @@
+/*!
+ * Copyright (c) TIKI Inc.
+ * MIT license. See LICENSE file in root directory.
+ */
+
+@import "theme";
+
+:export {
+  yellow: $yellow;
+  yellowLight: $yellow-light;
+  blue: $blue;
+  greenDark: $green-dark;
+  green: $green;
+  greenLight: $green-light;
+  white: $white;
+  gray: $gray;
+  black: $black;
+  purple: $purple;
+  purpleLight: $purple-light;
+  pink: $pink;
+}
