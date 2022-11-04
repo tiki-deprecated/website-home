@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "8B528SGCJW.com.mytiki.app",
+        "paths": [
+          "/app/*"
+        ]
+      }
+    ]
+  }
+}

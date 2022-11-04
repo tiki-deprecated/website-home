@@ -1,22 +1,20 @@
-Website (mytiki.com)
+[mytiki.com](https://mytiki.com)
 ===========
 True transparency extends even to the company website. 
 The code here is not always pretty or fancy, but it gets
 the job done. 
 
-[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/7r9v.svg)](https://status.mytiki.com)
+[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/h60t.svg)](https://betteruptime.com/?utm_source=status_badge)
 
-## Project Structure
-- [frontend](frontend/README.md) - static site gen.
-- [backend](backend/README.md) - user signup api + db
-- [infrastructure](infrastructure/README.md) - terraform 
-infrastructure scripts
-
-## Additional Links
-- [Docs](https://mytiki.readme.io)
+## Overview
+- Built on [NuxtJS](https://nuxtjs.org) framework ([Vue.js](https://vuejs.org))
+- [JAMStack](https://jamstack.org) (sorta)
+- Statically generated (see [deploy.yml](https://github.com/tiki/tiki.github.io/blob/main/.github/workflows/deploy.yml))
+- Hosted by [GitHub Pages](https://pages.github.com)
 
 ## Authors
-- Mike Audi - [mike-audi](https://github.com/mike-audi)
+- Mike Audi ([@mike-audi](https://github.com/mike-audi))
+- Shane Faria ([@sfaria27](https://github.com/sfaria27))
 
 ## License
 This project is licensed under the MIT License - see the 
