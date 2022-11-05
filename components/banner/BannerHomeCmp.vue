@@ -174,6 +174,7 @@ export default {
   .cta
     margin-top: 60px
     justify-content: space-between
+    min-width: 370px
 
   .ctaLeadin
     margin-bottom: 10px
