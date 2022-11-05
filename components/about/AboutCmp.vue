@@ -41,7 +41,7 @@ export default {
     position: absolute
     height: 350px
     left: 0
-    top: 60vw
+    top: 33%
     right: 0
     display: block
     margin: auto
@@ -54,7 +54,7 @@ export default {
     display: block
 
   .txt
-    max-width: 500px
+    max-width: 425px
     // margin-left: 20%
     margin-right: auto
 
@@ -62,13 +62,12 @@ export default {
     margin-bottom: 40px
 
   .solution
-    margin-top: 225px
+    margin-top: 175px
 
   .graphic
     position: absolute
     // width: 80%
     max-width: 700px
-    top: 60%
+    top: 30%
     right: 0
-    transform: translateY(-50%)
 </style>
