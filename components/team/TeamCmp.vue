@@ -44,6 +44,24 @@
         link="https://www.linkedin.com/in/barryoconnor/"
         class="bio"
       />
+      <team-bio-cmp
+        name="Vignesh Sanathkumar"
+        role="Product Design"
+        img-name="jpg/vsanathkumar"
+        img-type="jpg"
+        :img-sizes="[200, 532]"
+        link="https://www.linkedin.com/in/vignesh-sanathkumar/"
+        class="bio"
+      />
+      <team-bio-cmp
+        name="Tim O'Guin"
+        role="Dev Communities"
+        img-name="jpg/toguin"
+        img-type="jpg"
+        :img-sizes="[200, 400]"
+        link="https://www.linkedin.com/in/timoguin/"
+        class="bio"
+      />
     </div>
     <div class="contact">
       <utils-btn-cmp txt="Get in touch!" link="mailto:hello@mytiki.com" />
