@@ -106,8 +106,8 @@ export default {
     width: fit-content
     margin: 40% auto
     display: flex
-    align-items: start
-    justify-content: end
+    align-items: flex-start
+    justify-content: flex-end
     flex-wrap: wrap
 
   .colfwm
@@ -125,7 +125,7 @@ export default {
     width: 85%
     margin: auto
     justify-content: space-between
-    align-items: start
+    align-items: flex-start
 
   .mobile
     display: none
