@@ -10,6 +10,6 @@ export default ({ app }, inject) => {
     domain: 'mytiki.com',
     trackLocalhost: false,
   })
-  plausible.enableAutoOutboundTracking()
+  // plausible.enableAutoOutboundTracking()
   inject('plausible', plausible)
 }

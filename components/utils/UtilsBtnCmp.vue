@@ -4,14 +4,24 @@
   -->
 
 <template>
-  <button
-    type="button"
-    class="btn"
-    :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
-    @click="onClick"
-  >
-    {{ txt }}
-  </button>
+  <div class="btnContainer">
+    <nuxt-link
+      v-if="isLocal"
+      :to="link"
+      class="btn"
+      :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
+    >
+      {{ txt }}
+    </nuxt-link>
+    <a
+      v-if="!isLocal"
+      class="btn"
+      :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
+      :href="link"
+    >
+      {{ txt }}
+    </a>
+  </div>
 </template>
 
 <script>
@@ -37,16 +47,9 @@ export default {
       default: '/',
     },
   },
-  methods: {
-    async onClick() {
-      this.$plausible.trackEvent('Outbound Link: Click', {
-        props: { url: this.link },
-      })
-      if (this.link.startsWith('/')) {
-        await this.$router.push(this.link)
-      } else {
-        window.location.href = this.link
-      }
+  computed: {
+    isLocal() {
+      return this.link.startsWith('/')
     },
   },
 }
@@ -56,8 +59,9 @@ export default {
 @import "../../assets/styles/mixins"
 @import "../../assets/styles/theme"
 
-.btn:focus
-  outline: 0
+.btnContainer
+  width: fit-content
+  display: inline-block
 
 .btn
   cursor: pointer
@@ -66,14 +70,17 @@ export default {
   border-radius: 29.5px
   font-size: 0.95em
   font-weight: 500
+  text-decoration: none
+  text-align: center
+  display: block
+  width: fit-content
+  min-width: 130px
 
 @include for-tablet
   .btn
     padding: 6px 25px
-    min-width: 175px
 
 @include for-phone
   .btn
     padding: 6px 15px
-    min-width: 150px
 </style>
