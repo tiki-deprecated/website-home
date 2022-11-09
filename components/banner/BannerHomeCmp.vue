@@ -40,7 +40,7 @@
           <div class="cta">
             <div>
               <div class="ctaLeadin">For individuals:</div>
-              <utils-btn-cmp txt="Coming Soon" />
+              <utils-btn-cmp txt="Coming Soon" :link="undefined" />
             </div>
             <div>
               <div class="ctaLeadin">For developers:</div>
