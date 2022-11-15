@@ -60,6 +60,7 @@ export default {
   color: $blue
   font-weight: bold
   text-align: center
+  font-family: $font-family-space-grotesk
 
 .author
   color: $blue

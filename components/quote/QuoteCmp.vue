@@ -7,13 +7,15 @@
   <div class="quoteCmp">
     <quote-bkg-cmp class="bkg" />
     <div class="createImg">
-      <div class="createTxt">With TIKI, create</div>
+      <div class="createTxt">
+        With TIKI, <strong class="createHlt">create</strong>
+      </div>
       <picture>
         <img
           sizes="(max-width: 1400px) 100vw, 1400px"
           srcset="
             ~/assets/images/png/create_pineapple_w_200.png   200w,
-            ~/assets/images/png/create_pineapple_w_735.png   735w,
+            ~/assets/images/png/create_pineapple_w_742.png   742w,
             ~/assets/images/png/create_pineapple_w_1400.png 1400w
           "
           src="~/assets/images/png/create_pineapple_w_1400.png"
@@ -58,6 +60,10 @@ export default {
 .createTxt
   font-weight: bold
   text-align: center
+
+.createHlt
+  font-weight: bold
+  color: $yellow-dark
 
 .createImgImg
   height: 100%

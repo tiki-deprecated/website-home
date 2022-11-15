@@ -67,7 +67,7 @@ export default {
   cursor: pointer
   background-color: transparent
   border: 0
-  border-radius: 29.5px
+  border-radius: 6px
   font-size: 0.95em
   font-weight: 500
   text-decoration: none
@@ -78,7 +78,7 @@ export default {
 
 @include for-tablet
   .btn
-    padding: 6px 25px
+    padding: 12px 25px
 
 @include for-phone
   .btn

@@ -5,7 +5,7 @@
 
 <template>
   <div class="teamCmp">
-    <div class="title">Meet our team!</div>
+    <div class="title"><strong class="titleHlt">Meet</strong> our team!</div>
     <div class="subtitle">Content & Code</div>
     <div class="bios">
       <team-bio-cmp
@@ -64,7 +64,7 @@
       />
     </div>
     <div class="contact">
-      <utils-btn-cmp txt="Get in touch!" link="mailto:hello@mytiki.com" />
+      <utils-btn-cmp txt="Get in touch" link="mailto:hello@mytiki.com" />
     </div>
   </div>
 </template>
@@ -86,6 +86,10 @@ export default {
 .title
   font-weight: bold
   text-align: center
+
+.titleHlt
+  font-weight: bold
+  color: $yellow-dark
 
 .subtitle
   font-size: .95em

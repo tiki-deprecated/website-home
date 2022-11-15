@@ -7,8 +7,8 @@
   <div>
     <div class="text">
       <div class="title">
-        We prioritize <b>user-centricity</b>, <b>transparency</b>, and
-        <b>trust</b> above all else.
+        We prioritize<br class="mobileOnly" />
+        user-centricity, transparency, and trust above all else.
       </div>
       <div class="subtitle">Love what we’re building? Get involved.</div>
     </div>
@@ -31,7 +31,7 @@ export default {
 
 .title
   font-size: 2em
-  font-weight: 500
+  font-weight: bold
   text-align: center
 
 .subtitle
@@ -53,4 +53,7 @@ export default {
   .text
     width: 40%
     margin: 60px auto
+
+  .mobileOnly
+    display: none
 </style>

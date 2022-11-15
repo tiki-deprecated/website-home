@@ -101,7 +101,6 @@ export default {
   padding: 10px 15px
   margin: 0
   font-size: 0.9em
-  font-weight: 500
 
 .expand
   height: 5em

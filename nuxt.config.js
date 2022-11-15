@@ -64,7 +64,8 @@ export default {
   css: [
     '@/assets/fonts/montserrat/stylesheet.css',
     '@/assets/fonts/nunito-sans/stylesheet.css',
-    // '@/assets/fonts/koara/stylesheet.css',
+    '@/assets/fonts/koara/stylesheet.css',
+    '@/assets/fonts/space-grotesk/stylesheet.css',
   ],
   styleResources: {
     sass: ['@/assets/styles/*.sass'],

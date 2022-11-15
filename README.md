@@ -11,6 +11,7 @@ the job done.
 - [JAMStack](https://jamstack.org) (sorta)
 - Statically generated (see [deploy.yml](https://github.com/tiki/tiki.github.io/blob/main/.github/workflows/deploy.yml))
 - Hosted by [GitHub Pages](https://pages.github.com)
+- Stats at [plausible.io/mytiki.com](https://plausible.io/mytiki.com?period=7d)
 
 ## Authors
 - Mike Audi ([@mike-audi](https://github.com/mike-audi))
