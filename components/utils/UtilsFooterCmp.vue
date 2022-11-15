@@ -79,6 +79,7 @@ export default {
   width: 100vw
   display: block
   height: auto
+  margin-top: -1px
 
 .content
   position: absolute
