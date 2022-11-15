@@ -124,8 +124,7 @@ export default {
 
   .angels
     text-align: center
-    font-size: .95em
-    font-weight: 500
+    font-size: 1.1em
     margin-top: 50px
 
 @include for-tablet
@@ -148,8 +147,8 @@ export default {
   .angels
     text-align: right
     margin-left: auto
-    font-size: .95em
-    font-weight: 500
+    font-size: 1.1em
+    font-weight: normal
     max-width: 500px
     margin-top: 50px
 

@@ -5,7 +5,10 @@
 
 <template>
   <div>
-    <div class="title">Data is humanity’s most powerful resource.</div>
+    <div class="title">
+      <strong class="titleHlt">Data</strong> is humanity’s most powerful
+      resource.
+    </div>
     <div class="text">
       The most pressing problems we face on the internet trace back to the
       exchange of data —lack of privacy, censorship, digital nudging, invasive
@@ -30,6 +33,10 @@ export default {
 
 .text
   font-size: .95em
+
+.titleHlt
+  font-weight: bold
+  color: $yellow-dark
 
 @include for-phone
   .title

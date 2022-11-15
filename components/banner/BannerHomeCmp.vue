@@ -29,7 +29,7 @@
         </picture>
         <div class="text">
           <div class="title">
-            Choose<br />
+            <strong class="titleHlt">Choose</strong><br />
             Better Data
           </div>
           <div class="description">
@@ -40,13 +40,20 @@
           <div class="cta">
             <div>
               <div class="ctaLeadin">For individuals:</div>
-              <utils-btn-cmp txt="Coming Soon" :link="undefined" />
+              <utils-btn-cmp
+                txt="Coming Soon"
+                :link="undefined"
+                txt-color="#FFB822"
+                bkg-color="#00133F"
+              />
             </div>
             <div>
               <div class="ctaLeadin">For developers:</div>
               <utils-btn-cmp
                 txt="Explore the TIKI SDK"
                 link="https://github.com/tiki"
+                txt-color="#FFB822"
+                bkg-color="#00133F"
               />
             </div>
           </div>
@@ -91,11 +98,15 @@ export default {
   width: 100%
 
 .title
+  font-family: $font-family-koara
   font-weight: bold
   line-height: 1em
 
+.titleHlt
+  font-weight: bold
+  color: $yellow-dark
+
 .description
-  font-weight: 500
   font-size: 0.95em
 
 .bannerFlex
@@ -110,7 +121,6 @@ export default {
   margin: auto
   text-align: center
   font-size: 0.95em
-  font-weight: 500
 
 @include for-phone
   .bannerContent
