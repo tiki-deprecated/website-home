@@ -113,4 +113,7 @@ export default {
   .createImgImg
     height: 100%
     width: auto
+
+  .bkg
+    margin-top: -1px
 </style>
