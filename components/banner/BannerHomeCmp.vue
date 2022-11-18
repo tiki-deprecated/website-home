@@ -13,13 +13,14 @@
             sizes="(max-width: 1400px) 100vw, 1400px"
             srcset="
               ~/assets/images/png/home_banner_w_200.png   200w,
-              ~/assets/images/png/home_banner_w_474.png   474w,
-              ~/assets/images/png/home_banner_w_671.png   671w,
-              ~/assets/images/png/home_banner_w_827.png   827w,
-              ~/assets/images/png/home_banner_w_956.png   956w,
-              ~/assets/images/png/home_banner_w_1091.png 1091w,
-              ~/assets/images/png/home_banner_w_1203.png 1203w,
-              ~/assets/images/png/home_banner_w_1305.png 1305w,
+              ~/assets/images/png/home_banner_w_472.png   472w,
+              ~/assets/images/png/home_banner_w_665.png   665w,
+              ~/assets/images/png/home_banner_w_826.png   826w,
+              ~/assets/images/png/home_banner_w_947.png   947w,
+              ~/assets/images/png/home_banner_w_1037.png 1037w,
+              ~/assets/images/png/home_banner_w_1106.png 1106w,
+              ~/assets/images/png/home_banner_w_1335.png 1335w,
+              ~/assets/images/png/home_banner_w_1353.png 1353w,
               ~/assets/images/png/home_banner_w_1400.png 1400w
             "
             src="~/assets/images/png/home_banner_w_1400.png"
