@@ -118,7 +118,7 @@ export default {
     height: 0
     opacity: 0
   to
-    height: 5em
+    height: 5em // TODO need to make this calculated based on num links
     opacity: 1
 
 @include for-phone

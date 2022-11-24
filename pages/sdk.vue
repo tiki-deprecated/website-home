@@ -8,13 +8,8 @@
     <header-bar-cmp class="headerBar" :links="links" />
     <div class="indexContent">
       <div style="position: relative">
-        <banner-home-cmp class="bannerCmp" />
-        <about-cmp class="aboutCmp" />
-        <quote-cmp class="quoteCmp" />
-        <team-cmp class="teamCmp" />
-        <investor-cmp class="investorCmp" />
-        <involved-cmp class="involvedCmp" />
-        <utils-footer-cmp class="footerCmp" />
+        <banner-sdk-cmp class="bannerCmp" />
+        boo
       </div>
     </div>
   </div>
@@ -22,36 +17,32 @@
 
 <script>
 import HeaderBarCmp from '../components/header/HeaderBarCmp'
-import BannerHomeCmp from '../components/banner/BannerHomeCmp'
-import AboutCmp from '../components/about/AboutCmp'
-import QuoteCmp from '../components/quote/QuoteCmp'
-import TeamCmp from '../components/team/TeamCmp'
-import InvestorCmp from '../components/investor/InvestorCmp'
-import InvolvedCmp from '../components/involved/InvolvedCmp'
-import UtilsFooterCmp from '../components/utils/UtilsFooterCmp'
+import BannerSdkCmp from '../components/banner/BannerSdkCmp'
 
 export default {
   name: 'IndexPage',
   components: {
-    BannerHomeCmp,
+    BannerSdkCmp,
     HeaderBarCmp,
-    AboutCmp,
-    QuoteCmp,
-    TeamCmp,
-    InvestorCmp,
-    InvolvedCmp,
-    UtilsFooterCmp,
   },
   data: function () {
     return {
       links: [
         {
-          name: 'SDK',
-          href: '/sdk',
+          name: 'Home',
+          href: '/',
         },
         {
           name: 'Learn',
           href: 'https://blog.mytiki.com',
+        },
+        {
+          name: 'Docs',
+          href: 'https://docs.mytiki.com',
+        },
+        {
+          name: 'Sign In',
+          href: 'https://console.mytiki.com',
         },
       ],
     }
