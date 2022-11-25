@@ -9,7 +9,7 @@
     <div class="indexContent">
       <div style="position: relative">
         <banner-sdk-cmp class="bannerCmp" />
-        boo
+        <hiw-cmp class="hiwCmp" />
       </div>
     </div>
   </div>
@@ -18,12 +18,14 @@
 <script>
 import HeaderBarCmp from '../components/header/HeaderBarCmp'
 import BannerSdkCmp from '../components/banner/BannerSdkCmp'
+import HiwCmp from '@/components/hiw/HiwCmp'
 
 export default {
   name: 'IndexPage',
   components: {
     BannerSdkCmp,
     HeaderBarCmp,
+    HiwCmp,
   },
   data: function () {
     return {
@@ -72,18 +74,18 @@ export default {
   width: 100%
 
 @include for-phone
-  .involvedCmp
-    margin: 75px auto
+  .hiwCmp
+    width: 90%
+    margin: auto
 
-  .aboutCmp
-    margin-bottom: 80px
+  .bannerCmp
+    margin-bottom: 50px
 
 @include for-tablet
-  .aboutCmp
-    width: 75%
-    margin: 20px auto 150px auto
+  .bannerCmp
+    margin-bottom: 50px
 
-  .involvedCmp
-    margin-bottom: 150px
-    margin-top: 100px
+  .hiwCmp
+    width: 75%
+    margin: auto
 </style>
