@@ -36,7 +36,7 @@ export default {
   data: function () {
     return {
       btnColor: theme.green,
-      txtColor: theme.greenDark,
+      txtColor: theme.greenLight,
     }
   },
 }

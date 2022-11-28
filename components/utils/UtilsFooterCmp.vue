@@ -15,7 +15,7 @@
       class="footerBkg mobile"
       :style="'fill: ' + bkgColor"
     />
-    <div class="content">
+    <div class="content" :style="'color:' + txtColor">
       <div class="col colfwm">
         <div class="section">Always Open Source</div>
         <a class="link" href="https://github.com/tiki">Github</a>
@@ -63,6 +63,10 @@ export default {
       type: String,
       default: theme.yellowLight,
     },
+    txtColor: {
+      type: String,
+      default: theme.blue,
+    },
   },
 }
 </script>
@@ -95,8 +99,8 @@ export default {
 
 .link
   text-decoration: none
-  color: $blue
   display: block
+  color: inherit
 
 @include for-phone
   .col

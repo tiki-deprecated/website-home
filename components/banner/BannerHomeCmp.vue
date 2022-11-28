@@ -52,7 +52,7 @@
               <div class="ctaLeadin">For developers:</div>
               <utils-btn-cmp
                 txt="Explore the TIKI SDK"
-                link="sdk"
+                link="https://github.com/tiki"
                 txt-color="#FFB822"
                 bkg-color="#00133F"
               />
@@ -169,9 +169,9 @@ export default {
 
   .bannerContent
     top: 50%
-    left: 0
-    transform: translateY(-50%)
-    height: 80%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 50%
 
   .text
     width: 40%

@@ -6,17 +6,24 @@
 <template>
   <div id="menu">
     <button type="button" class="button" @click="onClick">
-      <utils-svg-cmp name="burger" class="burger" />
+      <utils-svg-cmp name="burger" class="burger" :style="'fill:' + color" />
     </button>
   </div>
 </template>
 
 <script>
+import theme from 'assets/styles/_export.scss'
 import UtilsSvgCmp from '../utils/UtilsSvgCmp'
 
 export default {
   name: 'HeaderMenuCmp',
   components: { UtilsSvgCmp },
+  props: {
+    color: {
+      type: String,
+      default: theme.blue,
+    },
+  },
   methods: {
     onClick() {
       this.$emit('menu-click')
@@ -38,9 +45,6 @@ export default {
 
 .button:focus
   outline: 0
-
-.burger
-  fill: $blue
 
 ::v-deep .burger.svg
   width: 28px

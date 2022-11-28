@@ -4,7 +4,7 @@
   -->
 
 <template>
-  <div class="bannerHomeCmp">
+  <div class="bannerSdkCmp">
     <banner-bkg-cmp :color="color" class="bannerBkg" />
     <div class="bannerContent">
       <div class="title">Choose Better Data</div>
@@ -14,7 +14,7 @@
       </div>
       <div class="cta">
         <div class="ctaLeadin">
-          Free-forever: 100k users<br />$100/month: infinity users
+          <b>Free</b>: 100k users<br /><b>$100/mth</b>: infinity users
         </div>
         <utils-btn-cmp
           txt="Get Started"
@@ -50,7 +50,7 @@ export default {
 @import "../../assets/styles/mixins"
 @import "../../assets/styles/theme"
 
-.bannerHomeCmp
+.bannerSdkCmp
   position: relative
   display: inline-block
   color: $green-dark

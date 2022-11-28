@@ -4,9 +4,10 @@
   -->
 
 <template>
-  <div class="btnContainer">
+  <div class="btnContainer" @mousedown="mouseDown" @mouseleave="mouseUp">
     <nuxt-link
       v-if="isLocal"
+      ref="utilsBtn"
       :to="link"
       class="btn"
       :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
@@ -15,6 +16,7 @@
     </nuxt-link>
     <a
       v-if="!isLocal"
+      ref="utilsBtn"
       class="btn"
       :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
       :href="link"
@@ -50,6 +52,20 @@ export default {
   computed: {
     isLocal() {
       return this.link.startsWith('/')
+    },
+  },
+  methods: {
+    mouseDown(clickEvent) {
+      if (this.$refs.utilsBtn instanceof HTMLAnchorElement) {
+        this.$refs.utilsBtn.style.backgroundColor = this.txtColor
+        this.$refs.utilsBtn.style.color = this.bkgColor
+      }
+    },
+    mouseUp(clickEvent) {
+      if (this.$refs.utilsBtn instanceof HTMLAnchorElement) {
+        this.$refs.utilsBtn.style.backgroundColor = this.bkgColor
+        this.$refs.utilsBtn.style.color = this.txtColor
+      }
     },
   },
 }

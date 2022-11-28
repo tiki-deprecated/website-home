@@ -6,23 +6,33 @@
 <template>
   <div>
     <div class="headerBarContainer">
-      <utils-svg-cmp name="logo" class="logo" />
+      <utils-svg-cmp name="logo" class="logo" :style="'fill:' + txtColor" />
       <div class="links">
         <a
           v-for="link in links"
           :key="link.id"
           class="headerBarLink"
+          :style="'color:' + txtColor"
           :href="link.href"
           >{{ link.name }}</a
         >
       </div>
-      <header-menu-cmp class="menu" @menu-click="menuActive = !menuActive" />
+      <header-menu-cmp
+        class="menu"
+        :color="txtColor"
+        @menu-click="menuActive = !menuActive"
+      />
       <transition name="expand">
-        <div v-if="menuActive" class="menuPopup expand">
+        <div
+          v-if="menuActive"
+          class="menuPopup expand"
+          :style="'background-color:' + menuBkg"
+        >
           <a
             v-for="link in links"
             :key="link.id"
             class="menuLink"
+            :style="'color:' + linkColor"
             :href="link.href"
             >{{ link.name }}</a
           >
@@ -47,9 +57,15 @@ export default {
         return [{}]
       },
     },
-    bkgColor: {
+    txtColor: {
       type: String,
-      default: theme.yellowLight,
+      required: false,
+      default: theme.blue,
+    },
+    linkColor: {
+      type: String,
+      required: false,
+      default: theme.white,
     },
   },
   data() {
@@ -57,15 +73,17 @@ export default {
       menuActive: false,
     }
   },
+  computed: {
+    menuBkg() {
+      return this.txtColor + 'F2'
+    },
+  },
 }
 </script>
 
 <style scoped lang="sass">
 @import "assets/styles/theme"
 @import "assets/styles/mixins"
-
-.logo
-  fill: $blue
 
 .headerBarContainer
   display: flex
@@ -78,14 +96,12 @@ export default {
 
 .headerBarLink
   margin: 0 1.25em
-  font-weight: normal
-  color: $blue
+  font-weight: 500
   text-decoration: none
 
 .menuPopup
   position: absolute
   z-index: 99
-  background: rgba($blue, 0.95)
   width: 100%
   border-radius: 0.5em
   left: 0
@@ -95,7 +111,6 @@ export default {
   padding: 15px 0
 
 .menuLink
-  color: $white
   text-decoration: none
   display: block
   padding: 10px 15px
