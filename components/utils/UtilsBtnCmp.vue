@@ -4,9 +4,10 @@
   -->
 
 <template>
-  <div class="btnContainer">
+  <div class="btnContainer" @mousedown="mouseDown" @mouseleave="mouseUp">
     <nuxt-link
       v-if="isLocal"
+      ref="utilsBtn"
       :to="link"
       class="btn"
       :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
@@ -15,6 +16,7 @@
     </nuxt-link>
     <a
       v-if="!isLocal"
+      ref="utilsBtn"
       class="btn"
       :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
       :href="link"
@@ -52,6 +54,20 @@ export default {
       return this.link.startsWith('/')
     },
   },
+  methods: {
+    mouseDown(clickEvent) {
+      if (this.$refs.utilsBtn instanceof HTMLAnchorElement) {
+        this.$refs.utilsBtn.style.backgroundColor = this.bkgColor + 'A2'
+        this.$refs.utilsBtn.style.color = this.txtColor + 'A2'
+      }
+    },
+    mouseUp(clickEvent) {
+      if (this.$refs.utilsBtn instanceof HTMLAnchorElement) {
+        this.$refs.utilsBtn.style.backgroundColor = this.bkgColor
+        this.$refs.utilsBtn.style.color = this.txtColor
+      }
+    },
+  },
 }
 </script>
 
@@ -82,5 +98,5 @@ export default {
 
 @include for-phone
   .btn
-    padding: 6px 15px
+    padding: 12px 15px
 </style>
