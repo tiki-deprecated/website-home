@@ -69,10 +69,9 @@ export default {
     text-align: center
 
   .usesCases
-    display: flex
-    align-items: flex-start
-    justify-content: space-evenly
-    flex-wrap: wrap
+    display: block
+    width: fit-content
+    margin: auto
 
   .useCase
     margin: 10px 10px
@@ -83,7 +82,10 @@ export default {
     margin: 0 0 40px 5%
 
   .usesCases
-    display: block
+    display: flex
+    align-items: flex-start
+    justify-content: space-evenly
+    flex-wrap: wrap
 
   .useCase
     margin: 10px 10px

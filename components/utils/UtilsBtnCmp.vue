@@ -4,15 +4,9 @@
   -->
 
 <template>
-  <div
-    class="btnContainer"
-    @mousedown="mouseDown"
-    @mouseleave="mouseUp"
-    @mouseout="mouseUp"
-  >
+  <div class="btnContainer">
     <nuxt-link
       v-if="isLocal"
-      ref="utilsBtn"
       :to="link"
       class="btn"
       :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
@@ -21,7 +15,6 @@
     </nuxt-link>
     <a
       v-if="!isLocal"
-      ref="utilsBtn"
       class="btn"
       :style="'background-color: ' + bkgColor + ';color: ' + txtColor"
       :href="link"
@@ -59,20 +52,6 @@ export default {
       return this.link.startsWith('/')
     },
   },
-  methods: {
-    mouseDown(clickEvent) {
-      if (this.$refs.utilsBtn instanceof HTMLAnchorElement) {
-        this.$refs.utilsBtn.style.backgroundColor = this.bkgColor + 'A2'
-        this.$refs.utilsBtn.style.color = this.txtColor + 'A2'
-      }
-    },
-    mouseUp(clickEvent) {
-      if (this.$refs.utilsBtn instanceof HTMLAnchorElement) {
-        this.$refs.utilsBtn.style.backgroundColor = this.bkgColor
-        this.$refs.utilsBtn.style.color = this.txtColor
-      }
-    },
-  },
 }
 </script>
 
@@ -96,6 +75,10 @@ export default {
   display: block
   width: fit-content
   min-width: 130px
+  opacity: 1
+
+.btn:focus
+  opacity: 0.7
 
 @include for-tablet
   .btn
