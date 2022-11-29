@@ -6,7 +6,7 @@
 <template>
   <div>
     <utils-svg-cmp name="sdk-bkg-desktop" class="sdkBkg desktop" />
-    <utils-svg-cmp name="banner-bkg-mobile" class="sdkBkg mobile" />
+    <utils-svg-cmp name="sdk-bkg-mobile" class="sdkBkg mobile" />
   </div>
 </template>
 

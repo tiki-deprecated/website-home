@@ -88,6 +88,26 @@ export default {
   width: 100%
 
 @include for-phone
+  .title
+    font-size: 2.25em
+
+  .subtitle
+    width: 90%
+    margin: 10px auto 40px auto
+
+  .demoContent
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  .demoVid
+    width: 90%
+
+  .demoImg
+    width: 15%
+    bottom: -10%
+    left: 0
+
 @include for-tablet
   .title
     font-size: 2.25em

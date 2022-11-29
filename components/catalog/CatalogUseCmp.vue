@@ -63,16 +63,27 @@ export default {
   color: $green
 
 @include for-phone
-@include for-tablet
   .useTitle
     font-size: 2.25em
-    margin: 0 0 40px 5%
+    margin: 0 auto 40px auto
+    text-align: center
 
   .usesCases
     display: flex
     align-items: flex-start
     justify-content: space-evenly
     flex-wrap: wrap
+
+  .useCase
+    margin: 10px 10px
+
+@include for-tablet
+  .useTitle
+    font-size: 2.25em
+    margin: 0 0 40px 5%
+
+  .usesCases
+    display: block
 
   .useCase
     margin: 10px 10px

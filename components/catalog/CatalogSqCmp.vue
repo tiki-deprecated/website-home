@@ -142,6 +142,22 @@ export default {
   position: relative
 
 @include for-phone
+  .catalogSqWrapper
+    width: 146px
+    height: 146px
+    border-radius: 15px
+    border-width: 3px
+
+  .imgWrapper
+    overflow: clip
+    width: 100px
+    height: 100px
+
+  .title
+    width: 146px
+    margin-top: 15px
+    font-size: 1.2em
+
 @include for-tablet
   .catalogSqWrapper
     width: 146px

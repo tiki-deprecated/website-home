@@ -63,14 +63,6 @@ export default {
 .peekImgImg
   width: 100%
 
-.peekImg
-  width: 75px
-  position: absolute
-  right: 25vw
-  transform: rotate(-15deg)
-  bottom: -1.5vw
-  z-index: 1
-
 .bannerBkgSvg
   z-index: 2
   position: absolute
@@ -93,6 +85,14 @@ export default {
   .desktop
     display: none
 
+  .peekImg
+    width: 75px
+    position: absolute
+    right: 25vw
+    transform: rotate(-15deg)
+    bottom: -9vw
+    z-index: 1
+
 @include for-tablet
   .bannerBkgWrapper
     height: 100vh
@@ -100,4 +100,12 @@ export default {
 
   .mobile
     display: none
+
+  .peekImg
+    width: 75px
+    position: absolute
+    right: 25vw
+    transform: rotate(-15deg)
+    bottom: -1.5vw
+    z-index: 1
 </style>

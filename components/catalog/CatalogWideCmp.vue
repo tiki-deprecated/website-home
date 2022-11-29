@@ -129,6 +129,25 @@ export default {
   font-style: italic
 
 @include for-phone
+  .imgWrapper
+    overflow: clip
+    border-radius: 15px
+    width: 275px
+    height: 146px
+
+  .title
+    width: 275px
+    margin-top: 20px
+    font-size: 1.2em
+
+  .subtitle
+    width: 275px
+    margin-top: 10px
+
+  .extra
+    width: 275px
+    margin-top: 20px
+
 @include for-tablet
   .imgWrapper
     overflow: clip

@@ -25,6 +25,9 @@ export default {
 @import "assets/styles/mixins"
 
 @include for-phone
+  .txtCmp
+    margin-bottom: 75px
+
 @include for-tablet
   .hiwCmp
     display: flex

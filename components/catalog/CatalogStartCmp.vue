@@ -103,6 +103,16 @@ export default {
   margin: 20px auto
 
 @include for-phone
+  .startTitle
+    font-size: 2.25em
+    margin: 0 auto 40px auto
+    text-align: center
+
+  .guide
+    margin: 40px auto
+    display: block
+    width: fit-content
+
 @include for-tablet
   .startTitle
     font-size: 2.25em

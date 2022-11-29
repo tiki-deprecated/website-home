@@ -107,7 +107,19 @@ export default {
     margin: auto
 
   .bannerCmp
-    margin-bottom: 50px
+    margin-bottom: 100px
+
+  .catalogUseCmp
+    width: 90%
+    margin: 75px auto 0 auto
+
+  .catalogStartCmp
+    margin: 75px auto 0 auto
+    width: 90%
+
+  .startCmp
+    margin: 75px auto
+    width: 90%
 
 @include for-tablet
   .bannerCmp

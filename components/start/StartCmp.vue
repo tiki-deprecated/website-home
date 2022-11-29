@@ -110,4 +110,27 @@ export default {
     margin: 0 20px
 
 @include for-phone
+  .title
+    font-size: 2.25em
+    text-align: center
+
+  .subtitle
+    margin: 10px auto 40px auto
+    text-align: center
+
+  .startBtn
+    display: block
+    margin: 10px auto
+
+  .expert
+    margin: 20px auto
+    text-align: center
+
+  .startWrapper
+    display: flex
+    flex-wrap: wrap-reverse
+
+  .startImg
+    width: 75%
+    margin: 0 auto 75px auto
 </style>
