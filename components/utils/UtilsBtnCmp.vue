@@ -77,7 +77,7 @@ export default {
   min-width: 130px
   opacity: 1
 
-.btn:focus
+.btn:active
   opacity: 0.7
 
 @include for-tablet
