@@ -4,7 +4,12 @@
   -->
 
 <template>
-  <div class="btnContainer" @mousedown="mouseDown" @mouseleave="mouseUp">
+  <div
+    class="btnContainer"
+    @mousedown="mouseDown"
+    @mouseleave="mouseUp"
+    @mouseout="mouseUp"
+  >
     <nuxt-link
       v-if="isLocal"
       ref="utilsBtn"

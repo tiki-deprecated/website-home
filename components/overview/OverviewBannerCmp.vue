@@ -23,7 +23,18 @@
         "
         src="~/assets/images/png/app_pineapple_w_1400.png"
         alt="We don’t tell you what to do, we provide tools; you decide!"
-        class="ovrImgImg"
+        class="ovrImgImg desktop"
+      />
+      <img
+        sizes="(max-width: 1400px) 100vw, 1400px"
+        srcset="
+          ~/assets/images/png/app_pineapple_mobile_w_200.png   200w,
+          ~/assets/images/png/app_pineapple_mobile_w_763.png   763w,
+          ~/assets/images/png/app_pineapple_mobile_w_1400.png 1400w
+        "
+        src="~/assets/images/png/app_pineapple_mobile_w_1400.png"
+        alt="We don’t tell you what to do, we provide tools; you decide!"
+        class="ovrImgImg mobile"
       />
     </picture>
   </div>
@@ -62,6 +73,24 @@ export default {
   width: 100%
 
 @include for-phone
+  .title
+    margin-bottom: 20px
+
+  .subtitle
+    margin: auto
+    width: 90%
+
+  .cta
+    font-size: 1.75em
+    margin: 40px auto
+    width: 90%
+
+  .ovrImg
+    margin: auto
+
+  .desktop
+    display: none
+
 @include for-tablet
   .title
     margin: auto
@@ -78,4 +107,7 @@ export default {
   .ovrImg
     width: 45%
     margin: auto
+
+  .mobile
+    display: none
 </style>

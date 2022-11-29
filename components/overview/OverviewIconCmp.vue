@@ -4,13 +4,15 @@
   -->
 
 <template>
-  <div style="width: fit-content">
+  <div class="iconWrapper">
     <utils-svg-cmp :name="icon" class="iconSvg" />
-    <div class="ovwTitle">
-      {{ t1 }}<br />
-      {{ t2 }}
+    <div>
+      <div class="ovwTitle">
+        {{ t1 }}<br class="mobile" />
+        {{ t2 }}
+      </div>
+      <div class="ovwSubtitle">{{ subtitle }}</div>
     </div>
-    <div class="ovwSubtitle">{{ subtitle }}</div>
   </div>
 </template>
 
@@ -59,7 +61,31 @@ export default {
   fill: $purple
 
 @include for-phone
+  .ovwTitle
+    font-size: 1.2em
+    margin-bottom: 10px
+    text-align: left
+    width: 55vw
+
+  .iconSvg
+    margin-right: 20px
+    max-width: 150px
+
+  .ovwSubtitle
+    text-align: left
+
+  .mobile
+    display: none
+
+  .iconWrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
 @include for-tablet
+  .iconWrapper
+    width: fit-content
+
   .ovwTitle
     font-size: 1.2em
 
@@ -67,11 +93,14 @@ export default {
     width: 8vw
     max-width: 125px
     margin: auto
+    display: block
 
   .ovwSubtitle
     width: 20vw
     max-width: 250px
+    display: block
 
   .ovwTitle
     margin: 20px auto 10px auto
+    display: block
 </style>

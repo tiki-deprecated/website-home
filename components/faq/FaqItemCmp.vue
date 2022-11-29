@@ -72,7 +72,7 @@ export default {
   border: solid 1px $purple
   border-radius: 25px
   width: fit-content
-  padding: 0 10px
+  padding: 0 15px
 
 .titleBtn
   width: fit-content
@@ -82,7 +82,6 @@ export default {
   color: $purple
 
 .titleText
-  width: 500px
   overflow: clip
   text-overflow: ellipsis
   height: 1.2em
@@ -91,6 +90,19 @@ export default {
   font-weight: bold
 
 .body
-  width: 500px
   font-size: .95em
+
+@include for-tablet
+  .titleText
+    width: 500px
+
+  .body
+    width: 500px
+
+@include for-phone
+  .titleText
+    width: 75vw
+
+  .body
+    width: 75vw
 </style>

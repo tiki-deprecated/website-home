@@ -6,7 +6,7 @@
 <template>
   <div class="overviewBkgWrapper">
     <utils-svg-cmp name="overview-bkg-desktop" class="overviewBkgSvg desktop" />
-    <!-- <utils-svg-cmp name="overview-bkg-mobile" class="overviewBkgSvg mobile" /> -->
+    <utils-svg-cmp name="overview-bkg-mobile" class="overviewBkgSvg mobile" />
   </div>
 </template>
 

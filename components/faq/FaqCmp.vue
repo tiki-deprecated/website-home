@@ -58,23 +58,50 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.itemCmp
-  margin: 10px 0
+@import "assets/styles/theme"
+@import "assets/styles/mixins"
 
-.faqImgImg
-  width: 100%
+@include for-tablet
+  .itemCmp
+    margin: 10px 0
 
-.faqImg
-  width: 50%
-  max-width: 500px
-  display: block
+  .faqImgImg
+    width: 100%
 
-.faqWrapper
-  display: flex
-  align-items: flex-start
-  justify-content: space-between
+  .faqImg
+    width: 50%
+    max-width: 500px
+    display: block
 
-.faqMore
-  display: block
-  margin: 40px auto
+  .faqWrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+  .faqMore
+    display: block
+    margin: 40px auto
+
+@include for-phone
+  .itemCmp
+    margin: 10px 0
+
+  .faqImgImg
+    width: 100%
+
+  .faqImg
+    max-width: 350px
+    margin-bottom: 50px
+    display: block
+
+  .faqWrapper
+    display: flex
+    flex-wrap: wrap-reverse
+
+  .faqMore
+    display: block
+    margin: 40px auto
+
+  .faqs
+    margin: auto
 </style>

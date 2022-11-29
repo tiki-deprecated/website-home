@@ -50,11 +50,6 @@ export default {
 @import "assets/styles/theme"
 @import "assets/styles/mixins"
 
-.ovrIcons
-  display: flex
-  align-items: flex-start
-  justify-content: center
-
 .ovrBanner
   position: relative
 
@@ -65,9 +60,26 @@ export default {
   transform: translate(-50%, -50%)
 
 @include for-phone
+  .ovrIcons
+    margin: auto
+    display: block
+
+  .ovrIcon
+    margin: 50px auto
+    width: 90%
+
+  .ovrBanner
+    margin-top: 50px
+
+  .ovrBannerContent
+    width: 90%
+
 @include for-tablet
   .ovrIcons
     margin: auto
+    display: flex
+    align-items: flex-start
+    justify-content: center
 
   .ovrIcon
     margin: 0 20px

@@ -102,23 +102,27 @@ export default {
 
 @include for-phone
   .bannerContent
-    top: 20vh
-    width: 90%
-    left: 50%
-    transform: translateX(-50%)
+    top: 100px
+
+  .text
+    margin: 0 5%
 
   .title
-    font-size: 1.3em
-    margin-bottom: 15px
+    font-size: 2.5em
+    margin: 40px 0 20px 0
 
   .bannerImg
-    width: 85%
+    width: 90%
     margin: auto
     display: block
 
   .bannerImgImg
     width: 100%
     height: auto
+
+  .cta
+    margin-top: 40px
+    justify-content: space-between
 
 @include for-tablet
   .bannerFlex

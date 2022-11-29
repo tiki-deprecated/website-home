@@ -7,69 +7,33 @@
   <div>
     <div class="latestTitle">Latest <strong class="hlt">content</strong></div>
     <div class="contents">
-      <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
-        href="https://blog.mytiki.com"
+      <catalog-substack-cmp
+        href="https://blog.mytiki.com/p/the-current-state-of-your-data-and"
         class="content"
         :color="txtColor"
       />
-      <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
-        href="https://blog.mytiki.com"
+      <catalog-substack-cmp
+        href="https://blog.mytiki.com/p/your-datas-voyage"
         class="content"
         :color="txtColor"
       />
-      <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
-        href="https://blog.mytiki.com"
+      <catalog-substack-cmp
+        href="https://blog.mytiki.com/p/how-the-tiki-sdk-works-for-users"
         class="content"
         :color="txtColor"
       />
-      <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
-        href="https://blog.mytiki.com"
+      <catalog-substack-cmp
+        href="https://blog.mytiki.com/p/datadaos-and-data-pooling"
         class="content"
         :color="txtColor"
       />
-      <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
-        href="https://blog.mytiki.com"
+      <catalog-substack-cmp
+        href="https://blog.mytiki.com/p/governance-and-non-intervention-in"
         class="content"
         :color="txtColor"
       />
-      <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
-        href="https://blog.mytiki.com"
+      <catalog-substack-cmp
+        href="https://blog.mytiki.com/p/apple-shook-up-the-mobile-ad-market"
         class="content"
         :color="txtColor"
       />
@@ -87,11 +51,11 @@
 <script>
 import theme from 'assets/styles/_export.scss'
 import UtilsBtnCmp from '@/components/utils/UtilsBtnCmp'
-import CatalogWideCmp from '@/components/catalog/CatalogWideCmp'
+import CatalogSubstackCmp from '@/components/catalog/CatalogSubstackCmp'
 
 export default {
   name: 'CatalogLatestCmp',
-  components: { CatalogWideCmp, UtilsBtnCmp },
+  components: { UtilsBtnCmp, CatalogSubstackCmp },
   data: function () {
     return {
       btnTxtColor: theme.white,
@@ -111,6 +75,24 @@ export default {
   color: $purple
 
 @include for-phone
+  .latestTitle
+    font-size: 2.25em
+    margin: 0 auto 40px auto
+    text-align: center
+
+  .contents
+    display: flex
+    align-items: flex-start
+    justify-content: space-evenly
+    flex-wrap: wrap
+
+  .content
+    margin: 20px 10px
+
+  .moreBtn
+    margin: 20px auto
+    display: block
+
 @include for-tablet
   .latestTitle
     font-size: 2.25em

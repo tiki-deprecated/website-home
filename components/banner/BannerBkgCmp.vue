@@ -106,6 +106,6 @@ export default {
     position: absolute
     right: 25vw
     transform: rotate(-15deg)
-    bottom: -1.5vw
+    bottom: -1.25vw
     z-index: 1
 </style>

@@ -84,6 +84,17 @@ export default {
   width: 100%
 
 @include for-phone
+  .overviewCmp
+    margin: 75px auto
+
+  .latestCmp
+    margin: 50px auto
+    width: 90%
+
+  .faqCmp
+    width: 90%
+    margin: 50px auto 75px auto
+
 @include for-tablet
   .overviewCmp
     margin-top: 50px
