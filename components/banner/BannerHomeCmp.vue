@@ -5,7 +5,7 @@
 
 <template>
   <div class="bannerHomeCmp">
-    <banner-bkg-cmp :color="color" class="bannerBkg" />
+    <banner-bkg-cmp :color="color" class="bannerBkg" :hide-peek="true" />
     <div class="bannerContent">
       <div class="bannerFlex">
         <picture class="bannerImg">
@@ -90,7 +90,6 @@ export default {
 
 .bannerBkg
   width: 100vw
-  height: auto
   display: block
 
 .bannerContent

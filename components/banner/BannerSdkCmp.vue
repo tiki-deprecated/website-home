@@ -57,7 +57,6 @@ export default {
 
 .bannerBkg
   width: 100vw
-  height: auto
   display: block
 
 .bannerContent

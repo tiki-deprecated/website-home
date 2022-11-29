@@ -22,23 +22,25 @@
             Subscribe to our <strong class="hlt">Substack</strong> to get first
             access
           </div>
-          <iframe
-            ref="substack"
-            src="https://blog.mytiki.com/embed"
-            width="480"
-            height="320"
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
-          <div class="involved">
-            Or get involved immediately and hop in our Discord Channel:
+          <div class="subtitle">
+            Or get involved immediately and hop in our Discord Channel.
           </div>
-          <utils-btn-cmp
-            :txt-color="color"
-            :bkg-color="btnColor"
-            txt="Go to Discord"
-            link="https://discord.gg/tiki"
-          />
+          <div class="cta">
+            <utils-btn-cmp
+              :txt-color="color"
+              :bkg-color="btnColor"
+              txt="Go to Substack"
+              link="https://blog.mytiki.com"
+              class="ctaBtn"
+            />
+            <utils-btn-cmp
+              :txt-color="color"
+              :bkg-color="btnColor"
+              txt="Go to Discord"
+              link="https://discord.gg/tiki"
+              class="ctaBtn"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -59,11 +61,6 @@ export default {
       btnColor: theme.pink,
     }
   },
-  mounted() {
-    const cssLink = document.createElement('style')
-    cssLink.innerText = ':root{ --web_bg_color: #000;!important }'
-    this.$refs.substack.contentWindow.document.body.appendChild(cssLink)
-  },
 }
 </script>
 
@@ -77,12 +74,11 @@ export default {
 
 .bannerBkg
   width: 100vw
-  height: auto
   display: block
 
 .bannerContent
   position: absolute
-  z-index: 2
+  z-index: 3
   width: 100%
 
 .title
@@ -96,7 +92,11 @@ export default {
 .bannerFlex
   width: 100vw
 
-.involved
+.cta
+  display: flex
+  align-items: center
+
+.subtitle
   color: $white
   font-size: .95em
 
@@ -152,7 +152,10 @@ export default {
     width: 100%
     height: auto
 
-  .involved
-    margin-bottom: 20px
-    width: 300px
+  .cta
+    margin-top: 50px
+    justify-content: left
+
+  .ctaBtn
+    margin-right: 40px
 </style>

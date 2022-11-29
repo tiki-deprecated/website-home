@@ -57,8 +57,8 @@ export default {
   methods: {
     mouseDown(clickEvent) {
       if (this.$refs.utilsBtn instanceof HTMLAnchorElement) {
-        this.$refs.utilsBtn.style.backgroundColor = this.txtColor
-        this.$refs.utilsBtn.style.color = this.bkgColor
+        this.$refs.utilsBtn.style.backgroundColor = this.bkgColor + 'A2'
+        this.$refs.utilsBtn.style.color = this.txtColor + 'A2'
       }
     },
     mouseUp(clickEvent) {
