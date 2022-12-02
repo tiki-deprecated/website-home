@@ -7,35 +7,77 @@
   <div>
     <div class="latestTitle">Latest <strong class="hlt">content</strong></div>
     <div class="contents">
-      <catalog-substack-cmp
-        href="/api/content/p/the-current-state-of-your-data-and"
-        class="content"
+      <catalog-wide-cmp
+        :img-sizes="[200, 499, 714, 888, 1037, 1180, 1400]"
+        img-name="choose_better_data"
+        img-alt="Choose better data"
+        title="The Current State of Your Data, and TIKI’s Hopeful Future"
+        subtitle="The time for action is now."
+        extra="Nov 27"
+        href="https://blog.mytiki.com/p/the-current-state-of-your-data-and"
         :color="txtColor"
+        class="content"
       />
-      <catalog-substack-cmp
-        href="/api/content/p/your-datas-voyage"
-        class="content"
+      <catalog-wide-cmp
+        :img-sizes="[
+          200, 349, 450, 541, 597, 661, 735, 780, 825, 882, 930, 960, 979, 1066,
+          1107, 1150, 1152, 1282, 1400,
+        ]"
+        img-name="data_voyage"
+        img-alt="Your data's voyage"
+        title="Your Data's Voyage"
+        subtitle="Your data is everywhere. Time to take control."
+        extra="Nov 27"
+        href="https://blog.mytiki.com/p/your-datas-voyage"
         :color="txtColor"
+        class="content"
       />
-      <catalog-substack-cmp
-        href="/api/content/p/how-the-tiki-sdk-works-for-users"
-        class="content"
+      <catalog-wide-cmp
+        :img-sizes="[200, 511, 728, 914, 1065, 1247, 1400]"
+        img-name="sdk_for_users"
+        img-alt="TIKI SDK for users"
+        title="How the TIKI SDK Works for Users"
+        subtitle="Coming soon to applications near you!"
+        extra="Nov 27"
+        href="https://blog.mytiki.com/p/how-the-tiki-sdk-works-for-users"
         :color="txtColor"
+        class="content"
       />
-      <catalog-substack-cmp
-        href="/api/content/p/datadaos-and-data-pooling"
-        class="content"
+      <catalog-wide-cmp
+        :img-sizes="[200, 474, 681, 883, 1086, 1276, 1400]"
+        img-type="jpg"
+        img-name="data_pooling"
+        img-alt="sun tanning pineapple"
+        title="DataDAOs and Data Pooling"
+        subtitle="Getting the most out of the TIKI user experience"
+        extra="Nov 21"
+        href="https://blog.mytiki.com/p/datadaos-and-data-pooling"
         :color="txtColor"
+        class="content"
       />
-      <catalog-substack-cmp
-        href="/api/content/p/governance-and-non-intervention-in"
-        class="content"
+      <catalog-wide-cmp
+        :img-sizes="[200, 458, 706, 864, 1048, 1151, 1287, 1400]"
+        img-type="jpg"
+        img-name="lady_liberty"
+        img-alt="lady liberty"
+        title="Governance and Non-Intervention in Decentralized Data Exchange with TIKI DAO"
+        subtitle="An initial breakdown of the proposed TIKI DAO"
+        extra="Nov 8"
+        href="https://blog.mytiki.com/p/governance-and-non-intervention-in"
         :color="txtColor"
+        class="content"
       />
-      <catalog-substack-cmp
-        href="/api/content/p/apple-shook-up-the-mobile-ad-market"
-        class="content"
+      <catalog-wide-cmp
+        :img-sizes="[200, 1272, 1400]"
+        img-type="jpg"
+        img-name="idfa_popup"
+        img-alt="IDFA popup"
+        title="Apple Shook Up the Mobile Ad Market with iOS 14.5. TIKI Saw a Major Opportunity."
+        subtitle="Bridging the trust gap between brand and consumer is as easy as S-D-K"
+        extra="Sep 7"
+        href="https://blog.mytiki.com/p/apple-shook-up-the-mobile-ad-market"
         :color="txtColor"
+        class="content"
       />
     </div>
     <utils-btn-cmp
@@ -51,11 +93,11 @@
 <script>
 import theme from 'assets/styles/_export.scss'
 import UtilsBtnCmp from '@/components/utils/UtilsBtnCmp'
-import CatalogSubstackCmp from '@/components/catalog/CatalogSubstackCmp'
+import CatalogWideCmp from '@/components/catalog/CatalogWideCmp'
 
 export default {
   name: 'CatalogLatestCmp',
-  components: { UtilsBtnCmp, CatalogSubstackCmp },
+  components: { UtilsBtnCmp, CatalogWideCmp },
   data: function () {
     return {
       btnTxtColor: theme.white,

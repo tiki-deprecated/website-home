@@ -105,10 +105,4 @@ export default {
   },
   axios: {},
   router: {},
-  proxy: {
-    '/api/content/': {
-      target: 'https://blog.mytiki.com/',
-      pathRewrite: { '^/api/content/': '' },
-    },
-  },
 }
