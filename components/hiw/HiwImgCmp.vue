@@ -9,7 +9,7 @@
       sizes="(max-width: 1400px) 100vw, 1400px"
       srcset="
         ~/assets/images/png/oss_pineapple_w_200.png   200w,
-        ~/assets/images/png/oss_pineapple_w_859.png   859w,
+        ~/assets/images/png/oss_pineapple_w_794.png   794w,
         ~/assets/images/png/oss_pineapple_w_1400.png 1400w
       "
       src="~/assets/images/png/oss_pineapple_w_1400.png"

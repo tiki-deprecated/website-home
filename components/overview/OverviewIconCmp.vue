@@ -8,8 +8,7 @@
     <utils-svg-cmp :name="icon" class="iconSvg" />
     <div>
       <div class="ovwTitle">
-        {{ t1 }}<br class="mobile" />
-        {{ t2 }}
+        {{ title }}
       </div>
       <div class="ovwSubtitle">{{ subtitle }}</div>
     </div>
@@ -27,11 +26,7 @@ export default {
       type: String,
       required: true,
     },
-    t1: {
-      type: String,
-      required: true,
-    },
-    t2: {
+    title: {
       type: String,
       required: true,
     },
@@ -69,13 +64,12 @@ export default {
 
   .iconSvg
     margin-right: 20px
-    max-width: 150px
+    max-width: 125px
+    width: 50%
 
   .ovwSubtitle
     text-align: left
 
-  .mobile
-    display: none
 
   .iconWrapper
     display: flex
@@ -97,7 +91,7 @@ export default {
 
   .ovwSubtitle
     width: 20vw
-    max-width: 250px
+    max-width: 300px
     display: block
 
   .ovwTitle

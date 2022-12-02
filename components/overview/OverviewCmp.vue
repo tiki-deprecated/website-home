@@ -7,24 +7,21 @@
   <div>
     <div class="ovrIcons">
       <overview-icon-cmp
-        t1="Earn a"
-        t2="real say"
-        subtitle="Every user is a number of the TIKI DAO, where you decide the actual..."
-        icon="icon-code"
+        title="Propose"
+        subtitle="Your voice, not a central authority, fuels the data marketplace. Propose changes and improvements."
+        icon="icon-propose"
         class="ovrIcon"
       />
       <overview-icon-cmp
-        t1="1 place to manage"
-        t2="your data"
-        subtitle="Connect your various TIKI- supported... Connect your various TIKI- supported..."
-        icon="icon-lock"
+        title="Vote"
+        subtitle="Popular proposals move onto community vote. Your choices set marketplace standards and guidelines."
+        icon="icon-vote"
         class="ovrIcon"
       />
       <overview-icon-cmp
-        t1="Pool for data to"
-        t2="earn money"
-        subtitle="Pool your data with other TIKI users and create new valuable..."
-        icon="icon-heart"
+        title="Influence"
+        subtitle="Participation matters. Propose, vote, share and more to earn influence. More influence, more power."
+        icon="icon-influence"
         class="ovrIcon"
       />
     </div>

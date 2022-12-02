@@ -51,12 +51,16 @@ export default {
     return {
       links: [
         {
-          name: 'SDK',
-          href: 'https://github.com/tiki',
+          name: 'Substack',
+          href: 'https://blog.mytiki.com',
         },
         {
-          name: 'Learn',
-          href: 'https://blog.mytiki.com',
+          name: 'Docs',
+          href: 'https://docs.mytiki.com',
+        },
+        {
+          name: 'Console',
+          href: 'https://console.mytiki.com',
         },
       ],
       headerLinkColor: theme.yellow,

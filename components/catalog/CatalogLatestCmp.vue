@@ -8,32 +8,32 @@
     <div class="latestTitle">Latest <strong class="hlt">content</strong></div>
     <div class="contents">
       <catalog-substack-cmp
-        href="https://blog.mytiki.com/p/the-current-state-of-your-data-and"
+        href="/api/content/p/the-current-state-of-your-data-and"
         class="content"
         :color="txtColor"
       />
       <catalog-substack-cmp
-        href="https://blog.mytiki.com/p/your-datas-voyage"
+        href="/api/content/p/your-datas-voyage"
         class="content"
         :color="txtColor"
       />
       <catalog-substack-cmp
-        href="https://blog.mytiki.com/p/how-the-tiki-sdk-works-for-users"
+        href="/api/content/p/how-the-tiki-sdk-works-for-users"
         class="content"
         :color="txtColor"
       />
       <catalog-substack-cmp
-        href="https://blog.mytiki.com/p/datadaos-and-data-pooling"
+        href="/api/content/p/datadaos-and-data-pooling"
         class="content"
         :color="txtColor"
       />
       <catalog-substack-cmp
-        href="https://blog.mytiki.com/p/governance-and-non-intervention-in"
+        href="/api/content/p/governance-and-non-intervention-in"
         class="content"
         :color="txtColor"
       />
       <catalog-substack-cmp
-        href="https://blog.mytiki.com/p/apple-shook-up-the-mobile-ad-market"
+        href="/api/content/p/apple-shook-up-the-mobile-ad-market"
         class="content"
         :color="txtColor"
       />

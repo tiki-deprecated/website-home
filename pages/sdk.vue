@@ -60,7 +60,7 @@ export default {
           href: '/',
         },
         {
-          name: 'Learn',
+          name: 'Substack',
           href: 'https://blog.mytiki.com',
         },
         {
@@ -68,7 +68,7 @@ export default {
           href: 'https://docs.mytiki.com',
         },
         {
-          name: 'Sign In',
+          name: 'Console',
           href: 'https://console.mytiki.com',
         },
       ],

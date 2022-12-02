@@ -87,7 +87,12 @@ export default {
       },
     ],
   ],
-  modules: ['@nuxtjs/style-resources', '@nuxtjs/svg', '@nuxtjs/axios'],
+  modules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg',
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+  ],
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
@@ -100,4 +105,10 @@ export default {
   },
   axios: {},
   router: {},
+  proxy: {
+    '/api/content/': {
+      target: 'https://blog.mytiki.com/',
+      pathRewrite: { '^/api/content/': '' },
+    },
+  },
 }

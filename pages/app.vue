@@ -54,7 +54,7 @@ export default {
           href: '/',
         },
         {
-          name: 'Learn',
+          name: 'Substack',
           href: 'https://blog.mytiki.com',
         },
       ],
