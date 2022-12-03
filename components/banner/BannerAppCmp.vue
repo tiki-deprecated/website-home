@@ -10,10 +10,27 @@
       <div class="bannerFlex">
         <picture class="bannerImg">
           <img
-            sizes="(max-width: 524px) 100vw, 524px"
-            srcset="~/assets/images/png/coming_soon_w_524.png 524w"
-            src="~/assets/images/png/coming_soon_w_524.png"
-            alt=""
+            sizes="(max-width: 1400px) 100vw, 1400px"
+            srcset="
+              ~/assets/images/png/app_banner_w_200.png   200w,
+              ~/assets/images/png/app_banner_w_394.png   394w,
+              ~/assets/images/png/app_banner_w_529.png   529w,
+              ~/assets/images/png/app_banner_w_634.png   634w,
+              ~/assets/images/png/app_banner_w_651.png   651w,
+              ~/assets/images/png/app_banner_w_924.png   924w,
+              ~/assets/images/png/app_banner_w_964.png   964w,
+              ~/assets/images/png/app_banner_w_994.png   994w,
+              ~/assets/images/png/app_banner_w_1051.png 1051w,
+              ~/assets/images/png/app_banner_w_1044.png 1044w,
+              ~/assets/images/png/app_banner_w_1228.png 1228w,
+              ~/assets/images/png/app_banner_w_1270.png 1270w,
+              ~/assets/images/png/app_banner_w_1290.png 1290w,
+              ~/assets/images/png/app_banner_w_1343.png 1343w,
+              ~/assets/images/png/app_banner_w_1314.png 1314w,
+              ~/assets/images/png/app_banner_w_1400.png 1400w
+            "
+            src="~/assets/images/png/app_banner_w_1400.png"
+            alt="Proposed Bylaw: Companies with a severe data breach in the last 12 months require community approval"
             class="bannerImgImg"
           />
         </picture>
@@ -112,7 +129,7 @@ export default {
     margin: 40px 0 20px 0
 
   .bannerImg
-    width: 90%
+    width: 50%
     margin: auto
     display: block
 
@@ -150,7 +167,7 @@ export default {
   .bannerImg
     width: 30%
     margin: auto 5% auto auto
-    max-width: 300px
+    max-width: 250px
 
   .bannerImgImg
     width: 100%

@@ -6,7 +6,9 @@
 <template>
   <div>
     <div class="headerBarContainer">
-      <utils-svg-cmp name="logo" class="logo" :style="'fill:' + txtColor" />
+      <nuxt-link to="/">
+        <utils-svg-cmp name="logo" class="logo" :style="'fill:' + txtColor" />
+      </nuxt-link>
       <div class="links">
         <a
           v-for="link in links"
@@ -18,6 +20,7 @@
         >
       </div>
       <header-menu-cmp
+        v-if="links.length > 0"
         class="menu"
         :color="txtColor"
         @menu-click="menuActive = !menuActive"
@@ -77,6 +80,11 @@ export default {
     menuBkg() {
       return this.txtColor + 'F2'
     },
+    cssVars() {
+      return {
+        '--height': this.links.length * 3 + 'em',
+      }
+    },
   },
 }
 </script>
@@ -118,7 +126,7 @@ export default {
   font-size: 0.9em
 
 .expand
-  height: 5em
+  height: var(--height)
   animation: slideDown 400ms linear
   overflow: hidden
   opacity: 1

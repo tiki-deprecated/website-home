@@ -48,16 +48,7 @@ export default {
   },
   data: function () {
     return {
-      links: [
-        {
-          name: 'Home',
-          href: '/',
-        },
-        {
-          name: 'Substack',
-          href: 'https://blog.mytiki.com',
-        },
-      ],
+      links: [],
       headerColor: theme.white,
       footerColor: theme.purple,
     }

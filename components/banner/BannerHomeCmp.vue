@@ -42,8 +42,8 @@
             <div>
               <div class="ctaLeadin">For individuals:</div>
               <utils-btn-cmp
-                txt="Coming Soon"
-                :link="undefined"
+                txt="Check out the app"
+                link="/app"
                 txt-color="#FFB822"
                 bkg-color="#00133F"
               />
