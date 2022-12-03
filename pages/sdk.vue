@@ -56,10 +56,6 @@ export default {
     return {
       links: [
         {
-          name: 'Home',
-          href: '/',
-        },
-        {
           name: 'Substack',
           href: 'https://blog.mytiki.com',
         },
