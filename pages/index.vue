@@ -5,7 +5,11 @@
 
 <template>
   <div>
-    <header-bar-cmp class="headerBar" :links="links" />
+    <header-bar-cmp
+      class="headerBar"
+      :links="links"
+      :link-color="headerLinkColor"
+    />
     <div class="indexContent">
       <div style="position: relative">
         <banner-home-cmp class="bannerCmp" />
@@ -21,6 +25,7 @@
 </template>
 
 <script>
+import theme from 'assets/styles/_export.scss'
 import HeaderBarCmp from '../components/header/HeaderBarCmp'
 import BannerHomeCmp from '../components/banner/BannerHomeCmp'
 import AboutCmp from '../components/about/AboutCmp'
@@ -46,14 +51,19 @@ export default {
     return {
       links: [
         {
-          name: 'SDK',
-          href: 'https://github.com/tiki',
-        },
-        {
-          name: 'Learn',
+          name: 'Substack',
           href: 'https://blog.mytiki.com',
         },
+        {
+          name: 'Docs',
+          href: 'https://docs.mytiki.com',
+        },
+        {
+          name: 'Console',
+          href: 'https://console.mytiki.com',
+        },
       ],
+      headerLinkColor: theme.yellow,
     }
   },
   mounted() {

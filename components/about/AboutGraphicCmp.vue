@@ -13,7 +13,7 @@
         ~/assets/images/png/about_pineapple_w_1400.png 1400w
       "
       src="~/assets/images/png/about_pineapple_w_1400.png"
-      alt='We build better ways to exchange data. Or, as we like to say, "unfuck the internet."'
+      alt="We enable willing and informed people and businesses to trade data at fair market value with one another"
       class="aboutImgImg desktop"
     />
     <img
@@ -25,7 +25,7 @@
         ~/assets/images/png/about_pineapple_mobile_w_1285.png 1285w
       "
       src="~/assets/images/png/about_pineapple_mobile_w_1285.png"
-      alt='We build better ways to exchange data. Or, as we like to say, "unfuck the internet."'
+      alt="We enable willing and informed people and businesses to trade data at fair market value with one another"
       class="aboutImgImg mobile"
     />
   </picture>

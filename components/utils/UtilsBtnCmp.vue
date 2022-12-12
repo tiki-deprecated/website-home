@@ -75,6 +75,10 @@ export default {
   display: block
   width: fit-content
   min-width: 130px
+  opacity: 1
+
+.btn:active
+  opacity: 0.7
 
 @include for-tablet
   .btn
@@ -82,5 +86,5 @@ export default {
 
 @include for-phone
   .btn
-    padding: 6px 15px
+    padding: 12px 15px
 </style>

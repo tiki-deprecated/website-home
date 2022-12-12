@@ -5,7 +5,7 @@
 
 <template>
   <div class="bannerHomeCmp">
-    <banner-bkg-cmp :color="color" class="bannerBkg" />
+    <banner-bkg-cmp :color="color" class="bannerBkg" :hide-peek="true" />
     <div class="bannerContent">
       <div class="bannerFlex">
         <picture class="bannerImg">
@@ -42,8 +42,8 @@
             <div>
               <div class="ctaLeadin">For individuals:</div>
               <utils-btn-cmp
-                txt="Coming Soon"
-                :link="undefined"
+                txt="Check out the app"
+                link="/app"
                 txt-color="#FFB822"
                 bkg-color="#00133F"
               />
@@ -52,7 +52,7 @@
               <div class="ctaLeadin">For developers:</div>
               <utils-btn-cmp
                 txt="Explore the TIKI SDK"
-                link="https://github.com/tiki"
+                link="/sdk"
                 txt-color="#FFB822"
                 bkg-color="#00133F"
               />
@@ -90,7 +90,6 @@ export default {
 
 .bannerBkg
   width: 100vw
-  height: auto
   display: block
 
 .bannerContent
@@ -169,9 +168,9 @@ export default {
 
   .bannerContent
     top: 50%
-    left: 0
-    transform: translateY(-50%)
-    height: 80%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 50%
 
   .text
     width: 40%
