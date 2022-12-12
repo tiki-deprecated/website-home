@@ -52,7 +52,7 @@
               <div class="ctaLeadin">For developers:</div>
               <utils-btn-cmp
                 txt="Explore the TIKI SDK"
-                link="https://github.com/tiki"
+                link="/sdk"
                 txt-color="#FFB822"
                 bkg-color="#00133F"
               />

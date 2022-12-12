@@ -40,7 +40,7 @@ export default {
       {
         property: 'og:image',
         content:
-          'https://mytiki.com/og-img-ac578a37-a3b6-49f8-ac0b-c8868cb01322.png',
+          'https://mytiki.com/og-img-ce633683-a1a1-44c0-8433-546cf4476de6.png',
       },
       {
         property: 'twitter:title',

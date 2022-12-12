@@ -13,9 +13,9 @@
         privacy, ownership issuance, and marketplace.
       </div>
       <demo-vid-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        yt-id="QbIO7EiHxcg"
+        :img-sizes="[200, 520, 743, 933, 1088, 1400]"
+        img-name="tiki_wallpaper"
+        yt-id="eYi5om9T3Fo"
         class="demoVid"
       />
       <picture class="demoImg">

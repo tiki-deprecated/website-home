@@ -8,6 +8,18 @@
     <div class="latestTitle">Latest <strong class="hlt">content</strong></div>
     <div class="contents">
       <catalog-wide-cmp
+        :img-sizes="[200, 573, 828, 1033, 1249, 1373, 1400]"
+        img-type="jpg"
+        img-name="influence"
+        img-alt="influence"
+        title="Decentralizing Marketplace Governance"
+        subtitle="Decentralized marketplaces demand decentralized governance. The TIKI DAO is a governance model of influence relative to market impact, measured by participation."
+        extra="Dec 9"
+        href="https://blog.mytiki.com/p/decentralizing-marketplace-governance"
+        :color="txtColor"
+        class="content"
+      />
+      <catalog-wide-cmp
         :img-sizes="[200, 499, 714, 888, 1037, 1180, 1400]"
         img-name="choose_better_data"
         img-alt="Choose better data"
@@ -64,18 +76,6 @@
         subtitle="An initial breakdown of the proposed TIKI DAO"
         extra="Nov 8"
         href="https://blog.mytiki.com/p/governance-and-non-intervention-in"
-        :color="txtColor"
-        class="content"
-      />
-      <catalog-wide-cmp
-        :img-sizes="[200, 1272, 1400]"
-        img-type="jpg"
-        img-name="idfa_popup"
-        img-alt="IDFA popup"
-        title="Apple Shook Up the Mobile Ad Market with iOS 14.5. TIKI Saw a Major Opportunity."
-        subtitle="Bridging the trust gap between brand and consumer is as easy as S-D-K"
-        extra="Sep 7"
-        href="https://blog.mytiki.com/p/apple-shook-up-the-mobile-ad-market"
         :color="txtColor"
         class="content"
       />

@@ -8,32 +8,32 @@
     <div class="useTitle">Popular <strong class="hlt">use cases</strong></div>
     <div class="usesCases">
       <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
+        :img-sizes="[200, 1170]"
+        img-name="tos"
+        img-alt="Terms of Service Example"
+        title="On-chain Terms of Service"
+        subtitle="Difficulty level: 1. We walk through using TIKI to manage the most common form of user data consent —agreeing to the terms of service."
+        extra="Manage user consent with TIKI →"
+        href="https://blog.mytiki.com/p/example-on-chain-terms-of-service"
+        class="useCase"
+      />
+      <catalog-wide-cmp
+        :img-sizes="[200, 520, 745, 919, 1085, 1269, 1400]"
+        img-name="choose_better"
+        img-alt="Choose Better Data"
+        title="Add a Data Reward to Boost IDFA Opt-Ins"
+        subtitle=""
+        extra="Coming Next Week"
         href="https://blog.mytiki.com"
         class="useCase"
       />
       <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
-        href="https://blog.mytiki.com"
-        class="useCase"
-      />
-      <catalog-wide-cmp
-        :img-sizes="[417]"
-        img-name="coming_soon"
-        img-alt="Coming Soon"
-        title="Increase user opt-in rates for data access."
-        subtitle="Create data rewards and incentive programs contingent on data access."
-        cta="How to add rewards for IDFA Permission →"
+        :img-sizes="[200, 520, 745, 919, 1085, 1269, 1400]"
+        img-name="choose_better"
+        img-alt="Choose Better Data"
+        title="Allow Users to Pay for your Subscription with Data"
+        subtitle=""
+        extra="Coming Next Week"
         href="https://blog.mytiki.com"
         class="useCase"
       />
