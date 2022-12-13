@@ -14,7 +14,7 @@
         title="On-chain Terms of Service"
         subtitle="Difficulty level: 1. We walk through using TIKI to manage the most common form of user data consent —agreeing to the terms of service."
         extra="Manage user consent with TIKI →"
-        href="https://blog.mytiki.com/p/example-on-chain-terms-of-service"
+        href="https://docs.mytiki.com/docs/tiki-sdk-flutter-example-on-chain-tos"
         class="useCase"
       />
       <catalog-wide-cmp
