@@ -5,16 +5,14 @@
 
 <template>
   <div>
-    <div class="title">Less data is worse products & services</div>
-    <div class="subtitle">
-      All- encompassing ToS don’t cut it anymore. Find opportunity in the new
-      data landscape.
-    </div>
+    <div class="title">Less data = worse products & services</div>
+    <div class="subtitle">Property rights for data.</div>
     <div class="body">
-      TIKI is a decentralized... fake text: Most of the problems we face on the
-      internet can be traced back to the exchange of data. Lack of privacy,
-      censorship, digital nudging, invasive ads, and much more. But limiting it
-      is just a bandaid that results in a worse internet for all.
+      TIKI is infrastructure to handle consumer data ownership, consent,
+      licensing, and rewards. Build powerful features to use and monetize data
+      legally and transparently —maximize opt-ins, minimize risk, deal users in.
+      <br /><br /><b>Decentralized</b> —don't change your backend or pipelines;
+      data stays in your system, where it belongs.
     </div>
     <utils-btn-cmp
       class="hiwBtn"
