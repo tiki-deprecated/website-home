@@ -19,7 +19,7 @@
       :bkg-color="btnColor"
       :txt-color="txtColor"
       txt="See how it works"
-      link="https://github.com/tiki"
+      link="https://blog.mytiki.com/p/how-tiki-works"
     />
   </div>
 </template>
