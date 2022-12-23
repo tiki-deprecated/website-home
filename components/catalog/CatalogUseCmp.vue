@@ -8,6 +8,20 @@
     <div class="useTitle">Popular <strong class="hlt">use cases</strong></div>
     <div class="usesCases">
       <catalog-wide-cmp
+        :img-sizes="[200, 375, 545, 640]"
+        img-name="idfa_prompt"
+        img-alt="Choose Better Data"
+        img-type="jpg"
+        title="Boost IDFA
+      Opt-in Rates"
+        subtitle="Difficulty level: 3. In this example, we walk
+      through adding data rewards to maximize Apple&#39;s App
+      Tracking Transparency opt-in rates."
+        extra="Use data rewards to increase opt-ins →"
+        href="https://docs.mytiki.com/docs/tiki-sdk-flutter-example-idfa"
+        class="useCase"
+      />
+      <catalog-wide-cmp
         :img-sizes="[200, 1170]"
         img-name="tos"
         img-alt="Terms of Service Example"
@@ -15,16 +29,6 @@
         subtitle="Difficulty level: 1. We walk through using TIKI to manage the most common form of user data consent —agreeing to the terms of service."
         extra="Manage user consent with TIKI →"
         href="https://docs.mytiki.com/docs/tiki-sdk-flutter-example-on-chain-tos"
-        class="useCase"
-      />
-      <catalog-wide-cmp
-        :img-sizes="[200, 520, 745, 919, 1085, 1269, 1400]"
-        img-name="choose_better"
-        img-alt="Choose Better Data"
-        title="Add a Data Reward to Boost IDFA Opt-Ins"
-        subtitle=""
-        extra="Coming Next Week"
-        href="https://blog.mytiki.com"
         class="useCase"
       />
       <catalog-wide-cmp
