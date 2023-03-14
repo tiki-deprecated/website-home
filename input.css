@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) TIKI Inc.
+ * MIT license. See LICENSE file in root directory.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+        @apply text-blue;
+        font-weight: bold;
+        line-height: 130%;
+    }
+    h2 {
+        @apply text-2xl;
+        @apply text-black;
+        font-weight: 600;
+        line-height: 130%;
+    }
+    h3 {
+        @apply text-lg;
+        @apply text-black;
+        font-weight: 600;
+        line-height: 130%;
+    }
+    body {
+        @apply text-base;
+        @apply text-gray;
+        line-height: 150%;
+        font-weight: 400;
+    }
+    strong {
+        color: theme("colors.orange");
+        font-weight: 600;
+    }
+}
