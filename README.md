@@ -5,8 +5,8 @@ The code here is not always pretty or fancy, but it gets
 the job done. 
 
 ## Overview
-- Built/hosted on [Readme](https://readme.com)
-- Repo includes static HTML/CSS
+- Website is built/hosted on [Readme](https://readme.com)
+- Repo includes non-standard assets used, such as the static HTML/CSS found on the landing page
 - Includes a janky NodeJS webserver for local debugging
 - Utilizes [Tailwind](https://tailwindcss.com)
 
