@@ -1,6 +1,5 @@
 [mytiki.com](https://mytiki.com)
 ===========
-True transparency extends even to the company website. 
 The code here is not always pretty or fancy, but it gets
 the job done. 
 
