@@ -88,4 +88,4 @@ dist
 .serverless
 
 # Tailwind output
-public/output.css
+html/output.css
