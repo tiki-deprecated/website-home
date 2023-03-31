@@ -1,43 +1,20 @@
 {
-  "name": "website",
-  "version": "3.0.14",
-  "private": true,
+  "name": "web-assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint:prettier": "prettier --check .",
-    "lint": "npm run lint:js && npm run lint:prettier",
-    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
+    "start": "node index",
+    "tailwind": "npx tailwindcss -i ./input.css -o html/output.css --watch"
   },
-  "dependencies": {
-    "@nuxt/content": "^1.0.0",
-    "@nuxtjs/axios": "^5.13.6",
-    "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
-    "nuxt-compress": "^5.0.0",
-    "plausible-tracker": "^0.3.8",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1",
-    "@nuxtjs/eslint-config": "^11.0.0",
-    "@nuxtjs/eslint-module": "^3.1.0",
-    "@nuxtjs/style-resources": "^1.2.1",
-    "@nuxtjs/svg": "^0.4.0",
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.5.1",
-    "prettier": "^2.7.1",
-    "sass": "^1.55.0",
-    "sass-loader": "^10.4.1",
-    "ufo": "^0.8.6",
-    "webpack": "^4.46.0"
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3",
+    "tailwindcss": "^3.2.7"
   }
 }

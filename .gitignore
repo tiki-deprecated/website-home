@@ -86,3 +86,6 @@ dist
 
 # Serverless directories
 .serverless
+
+# Tailwind output
+html/output.css
