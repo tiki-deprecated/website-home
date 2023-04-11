@@ -16,7 +16,8 @@ const htmlWrapperPrefix =
   '<head>' +
   '  <meta charset="UTF-8" />' +
   '  <title>Heading</title>' +
-  '  <meta name="viewport" content="width=device-width, initial-scale=1.0" />' +
+  '  <meta name="viewport" content="width=device-width, initial-scale=1" />' +
+  '  <script src="https://cdn.tailwindcss.com"></script>' +
   '  <link href="/output.css" rel="stylesheet" />' +
   '</head>' +
   '<body>'
@@ -31,7 +32,7 @@ const server = http.createServer(async (req, res) => {
     if (req.url === '/') fileUrl = '/index.html'
     else fileUrl = req.url
 
-    var filePath = path.resolve('./html' + fileUrl)
+    var filePath = path.resolve('./public' + fileUrl)
     const fileExt = path.extname(filePath)
     if (fileExt === '.html') {
       fs.exists(filePath, async (exists) => {
@@ -39,7 +40,7 @@ const server = http.createServer(async (req, res) => {
           res.statusCode = 404
           res.setHeader('Content-Type', 'text/html')
           await fs.readFile(
-            path.resolve('./html/404.html'),
+            path.resolve('./public/404.html'),
             'utf-8',
             function (err, data) {
               res.write(`${htmlWrapperPrefix}${data}${htmlWrapperPostfix}`)
@@ -59,11 +60,27 @@ const server = http.createServer(async (req, res) => {
       res.statusCode = 200
       res.setHeader('Content-Type', 'text/css')
       fs.createReadStream(filePath).pipe(res)
+    } else if (fileExt === '.png') {
+      res.statusCode = 200
+      res.setHeader('Content-Type', 'image/png')
+      fs.createReadStream(filePath).pipe(res)
+    } else if (fileExt === '.gif') {
+      res.statusCode = 200
+      res.setHeader('Content-Type', 'image/gif')
+      fs.createReadStream(filePath).pipe(res)
+    } else if (fileExt === '.svg') {
+      res.statusCode = 200
+      res.setHeader('Content-Type', 'image/svg+xml')
+      fs.createReadStream(filePath).pipe(res)
+    } else if (fileExt === '.jpeg') {
+      res.statusCode = 200
+      res.setHeader('Content-Type', 'image/jpeg')
+      fs.createReadStream(filePath).pipe(res)
     } else {
       res.statusCode = 404
       res.setHeader('Content-Type', 'text/html')
       await fs.readFile(
-        path.resolve('./html/404.html'),
+        path.resolve('./public/404.html'),
         'utf-8',
         function (err, data) {
           res.write(`${htmlWrapperPrefix}${data}${htmlWrapperPostfix}`)
@@ -75,7 +92,7 @@ const server = http.createServer(async (req, res) => {
     res.statusCode = 404
     res.setHeader('Content-Type', 'text/html')
     await fs.readFile(
-      path.resolve('./html/404.html'),
+      path.resolve('./public/404.html'),
       'utf-8',
       function (err, data) {
         res.write(`${htmlWrapperPrefix}${data}${htmlWrapperPostfix}`)
