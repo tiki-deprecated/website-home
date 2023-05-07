@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "types": ["@cloudflare/workers-types", "jest"],
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+}
