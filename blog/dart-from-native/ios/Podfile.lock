@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - hello_tiki_plugin
+  - hello_tiki_plugin (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../dart/hello_tiki_module/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../dart/hello_tiki_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - hello_tiki_plugin (from `../dart/hello_tiki_module/.ios/.symlinks/plugins/hello_tiki_plugin/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../dart/hello_tiki_module/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../dart/hello_tiki_module/.ios/Flutter/FlutterPluginRegistrant"
+  hello_tiki_plugin:
+    :path: "../dart/hello_tiki_module/.ios/.symlinks/plugins/hello_tiki_plugin/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  FlutterPluginRegistrant: 47f5078e0e94b980e8558eff0033e49c3812f6c2
+  hello_tiki_plugin: 59fdd2f2b9392dccad854fcc773b0ba21021b74d
+
+PODFILE CHECKSUM: 8e26a50985d44d5962b3145b8b002cb0fa31d7fa
+
+COCOAPODS: 1.11.3

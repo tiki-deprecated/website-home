@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D4ACAAD29E75E2100A4C0F4 /* TikiSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4ACAAC29E75E2100A4C0F4 /* TikiSdk */; };
+		5D4ACAB029E7687300A4C0F4 /* terms.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D4ACAAF29E765A900A4C0F4 /* terms.md */; };
+		5DA14B0629E613A800C73FA4 /* MMA_CubicleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA14B0529E613A800C73FA4 /* MMA_CubicleApp.swift */; };
+		5DA14B0A29E613A900C73FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA14B0929E613A900C73FA4 /* Assets.xcassets */; };
+		5DA14B1629E613F000C73FA4 /* RageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA14B1329E613F000C73FA4 /* RageView.swift */; };
+		5DA14B1729E613F000C73FA4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA14B1429E613F000C73FA4 /* HomeView.swift */; };
+		5DA14B1829E613F000C73FA4 /* RageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA14B1529E613F000C73FA4 /* RageBar.swift */; };
+		5DA14B1B29E6145E00C73FA4 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 5DA14B1A29E6145E00C73FA4 /* GoogleMobileAds */; };
+		5DA14B1F29E61DF000C73FA4 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA14B1E29E61DF000C73FA4 /* AdViewController.swift */; };
+		5DA14B2129E626AB00C73FA4 /* AdViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA14B2029E626AB00C73FA4 /* AdViewRepresentable.swift */; };
+		5DA14B2529E630A000C73FA4 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA14B2429E630A000C73FA4 /* NativeAdView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D4ACAAF29E765A900A4C0F4 /* terms.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = terms.md; sourceTree = "<group>"; };
+		5DA14B0229E613A800C73FA4 /* MMA Cubicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MMA Cubicle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA14B0529E613A800C73FA4 /* MMA_CubicleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMA_CubicleApp.swift; sourceTree = "<group>"; };
+		5DA14B0929E613A900C73FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DA14B1329E613F000C73FA4 /* RageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RageView.swift; sourceTree = "<group>"; };
+		5DA14B1429E613F000C73FA4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5DA14B1529E613F000C73FA4 /* RageBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RageBar.swift; sourceTree = "<group>"; };
+		5DA14B1C29E6159000C73FA4 /* MMA-Cubicle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MMA-Cubicle-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5DA14B1E29E61DF000C73FA4 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
+		5DA14B2029E626AB00C73FA4 /* AdViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewRepresentable.swift; sourceTree = "<group>"; };
+		5DA14B2429E630A000C73FA4 /* NativeAdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DA14AFF29E613A800C73FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D4ACAAD29E75E2100A4C0F4 /* TikiSdk in Frameworks */,
+				5DA14B1B29E6145E00C73FA4 /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D4ACAAE29E7656C00A4C0F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D4ACAAF29E765A900A4C0F4 /* terms.md */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DA14AF929E613A800C73FA4 = {
+			isa = PBXGroup;
+			children = (
+				5DA14B0429E613A800C73FA4 /* MMA Cubicle */,
+				5DA14B0329E613A800C73FA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DA14B0329E613A800C73FA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DA14B0229E613A800C73FA4 /* MMA Cubicle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DA14B0429E613A800C73FA4 /* MMA Cubicle */ = {
+			isa = PBXGroup;
+			children = (
+				5D4ACAAE29E7656C00A4C0F4 /* Resources */,
+				5DA14B1C29E6159000C73FA4 /* MMA-Cubicle-Info.plist */,
+				5DA14B1429E613F000C73FA4 /* HomeView.swift */,
+				5DA14B1529E613F000C73FA4 /* RageBar.swift */,
+				5DA14B1329E613F000C73FA4 /* RageView.swift */,
+				5DA14B0529E613A800C73FA4 /* MMA_CubicleApp.swift */,
+				5DA14B2429E630A000C73FA4 /* NativeAdView.xib */,
+				5DA14B0929E613A900C73FA4 /* Assets.xcassets */,
+				5DA14B1D29E616E000C73FA4 /* Preview Content */,
+				5DA14B1E29E61DF000C73FA4 /* AdViewController.swift */,
+				5DA14B2029E626AB00C73FA4 /* AdViewRepresentable.swift */,
+			);
+			path = "MMA Cubicle";
+			sourceTree = "<group>";
+		};
+		5DA14B1D29E616E000C73FA4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DA14B0129E613A800C73FA4 /* MMA Cubicle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DA14B1029E613A900C73FA4 /* Build configuration list for PBXNativeTarget "MMA Cubicle" */;
+			buildPhases = (
+				5DA14AFE29E613A800C73FA4 /* Sources */,
+				5DA14AFF29E613A800C73FA4 /* Frameworks */,
+				5DA14B0029E613A800C73FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MMA Cubicle";
+			packageProductDependencies = (
+				5DA14B1A29E6145E00C73FA4 /* GoogleMobileAds */,
+				5D4ACAAC29E75E2100A4C0F4 /* TikiSdk */,
+			);
+			productName = "MMA Cubicle";
+			productReference = 5DA14B0229E613A800C73FA4 /* MMA Cubicle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DA14AFA29E613A800C73FA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5DA14B0129E613A800C73FA4 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 5DA14AFD29E613A800C73FA4 /* Build configuration list for PBXProject "MMA Cubicle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DA14AF929E613A800C73FA4;
+			packageReferences = (
+				5DA14B1929E6145E00C73FA4 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				5D4ACAAB29E75E2100A4C0F4 /* XCRemoteSwiftPackageReference "tiki-sdk-ios" */,
+			);
+			productRefGroup = 5DA14B0329E613A800C73FA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DA14B0129E613A800C73FA4 /* MMA Cubicle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DA14B0029E613A800C73FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA14B2529E630A000C73FA4 /* NativeAdView.xib in Resources */,
+				5D4ACAB029E7687300A4C0F4 /* terms.md in Resources */,
+				5DA14B0A29E613A900C73FA4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DA14AFE29E613A800C73FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA14B2129E626AB00C73FA4 /* AdViewRepresentable.swift in Sources */,
+				5DA14B1829E613F000C73FA4 /* RageBar.swift in Sources */,
+				5DA14B1F29E61DF000C73FA4 /* AdViewController.swift in Sources */,
+				5DA14B1729E613F000C73FA4 /* HomeView.swift in Sources */,
+				5DA14B0629E613A800C73FA4 /* MMA_CubicleApp.swift in Sources */,
+				5DA14B1629E613F000C73FA4 /* RageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5DA14B0E29E613A900C73FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5DA14B0F29E613A900C73FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DA14B1129E613A900C73FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MMA Cubicle/Preview Content\"";
+				DEVELOPMENT_TEAM = 8B528SGCJW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MMA-Cubicle-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mytiki.dignus.MMA-Cubicle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DA14B1229E613A900C73FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MMA Cubicle/Preview Content\"";
+				DEVELOPMENT_TEAM = 8B528SGCJW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MMA-Cubicle-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mytiki.dignus.MMA-Cubicle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DA14AFD29E613A800C73FA4 /* Build configuration list for PBXProject "MMA Cubicle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DA14B0E29E613A900C73FA4 /* Debug */,
+				5DA14B0F29E613A900C73FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DA14B1029E613A900C73FA4 /* Build configuration list for PBXNativeTarget "MMA Cubicle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DA14B1129E613A900C73FA4 /* Debug */,
+				5DA14B1229E613A900C73FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D4ACAAB29E75E2100A4C0F4 /* XCRemoteSwiftPackageReference "tiki-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tiki/tiki-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		5DA14B1929E6145E00C73FA4 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D4ACAAC29E75E2100A4C0F4 /* TikiSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D4ACAAB29E75E2100A4C0F4 /* XCRemoteSwiftPackageReference "tiki-sdk-ios" */;
+			productName = TikiSdk;
+		};
+		5DA14B1A29E6145E00C73FA4 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DA14B1929E6145E00C73FA4 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5DA14AFA29E613A800C73FA4 /* Project object */;
+}

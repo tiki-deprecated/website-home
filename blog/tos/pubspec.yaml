@@ -1,0 +1,21 @@
+name: tos
+description: Example of using TIKI for on-chain consent of Terms of Service
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  tiki_sdk_flutter: ^0.0.18
+  uuid: ^3.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true

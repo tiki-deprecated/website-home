@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "D2N Example"
+include ':app'
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(settingsDir.getParentFile(), 'dart/hello_tiki_module/.android/include_flutter.groovy'))
+
+include ':hello_tiki_module'
+project (':hello_tiki_module').projectDir = new File(settingsDir.getParentFile(), 'dart/hello_tiki_module')
