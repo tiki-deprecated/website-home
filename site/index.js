@@ -18,6 +18,10 @@ const htmlWrapperPrefix =
   '  <title>Heading</title>' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1" />' +
   '  <script src="https://cdn.tailwindcss.com"></script>' +
+  '  <link rel="preconnect" href="https://fonts.googleapis.com" /> \n' +
+  '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> \n' +
+  '  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />\n' +
+  '  <link href="https://cdn.mytiki.com/fonts/koara.css" rel="stylesheet" />' +
   '  <link href="/output.css" rel="stylesheet" />' +
   '</head>' +
   '<body>'
