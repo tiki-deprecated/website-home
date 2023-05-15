@@ -44,8 +44,6 @@ const save = (body, out) => {
       collapseWhitespace: true,
       removeAttributeQuotes: true,
       removeComments: true,
-      removeEmptyElements: true,
-      removeEmptyAttributes: true,
     })
   )
   fs.writeFileSync(
@@ -54,8 +52,6 @@ const save = (body, out) => {
       collapseWhitespace: true,
       removeAttributeQuotes: true,
       removeComments: true,
-      removeEmptyElements: true,
-      removeEmptyAttributes: true,
     })
   )
 }
