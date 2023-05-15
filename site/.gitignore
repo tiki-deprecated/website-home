@@ -87,5 +87,8 @@ dist
 # Serverless directories
 .serverless
 
-# Tailwind output
-public/output.css
+# Debug output
+public
+
+# Production output
+output
