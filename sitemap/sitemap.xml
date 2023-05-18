@@ -2,33 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mytiki.com/</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/recipes</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/docs/hey</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/docs/sdk-overview</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/docs/library-ios</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://console.mytiki.com/billing</loc>
@@ -37,20 +13,38 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mytiki.com/docs/quickstart</loc>
-    <lastmod>2023-05-07</lastmod>
+    <loc>https://mytiki.com/docs/hey</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mytiki.com/reference/list-licenses</loc>
-    <lastmod>2023-05-07</lastmod>
+    <loc>https://mytiki.com/docs/library-ios</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/docs/sdk-overview</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/recipes</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/docs/quickstart</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -61,554 +55,596 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://mytiki.com/reference/list-licenses</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://mytiki.com/docs</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/ui-customization</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mytiki.com/page/about</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-registry-id-delete</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/p/groovybank-puts-in-customer-pockets</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/get-title</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/pagination</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/reference/l0-auth-oauth-revoke-post</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/p/solving-copyright-and-intellectual</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/reference/l0-auth-oauth-revoke-post</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-index-license-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/getting-started</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-user-post</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-index-title-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-app-update</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/flutter-v216</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/what-is-a-consumer-data-license</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/podcast</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-registry-id-post</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/display-the-offer</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/creating-private-keys</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.mytiki.com/p/tiki-talk-episode-58-ad-attribution</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/license-customization</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-registry-id-get-pubkey</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/how-does-tiki-automate-enforcement</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/errors-1</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/ios-sdk-v203</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/reference/l0-registry-config-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/authorization</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytiki.com/changelog/js-sdk-v106</loc>
-    <lastmod>2023-05-07</lastmod>
+    <loc>https://mytiki.com/reference/l0-registry-config-get</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/custom-flows</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/changelog/js-sdk-v106</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/specifying-uses</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiki-sdk-ios.docs.mytiki.com/documentation/tikisdk/</loc>
+    <lastmod>2023-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.mytiki.com/p/monetizing-zero-party-data-for-training</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-registry-usage-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/recommendations</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/p/tiki-talk-episode-59-app-tracking</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/overview</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-app-delete</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/docs/snowflake</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-storage-upload-post</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/creating-an-offer</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-oauth-token-post_1_1</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/reference/auth</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/how-does-tiki-make-data-licenses-immutable</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/reference/auth</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-app-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/adding-tags</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/library-android</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.mytiki.com/p/tiki-company-update-may-23</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-app-create</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/reference/l0-auth-otp-start-post</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/reference/l0-auth-api-keys-create</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/docs/how-does-tiki-build-with-devs-in-mind</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/about</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/reference/l0-auth-otp-start-post</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/reference/l0-auth-api-keys-create</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/docs/how-does-tiki-build-with-devs-in-mind</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-api-keys-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/android-sdk-v215</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-org-post-user</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/android-sdk-v213</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/android-sdk-v214</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/android-sdk-v212</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-registry-config-post</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-registry-id-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-org-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/library-flutter</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytiki.com/docs/pre-built-ui</loc>
-    <lastmod>2023-05-07</lastmod>
+    <loc>https://blog.mytiki.com/p/monetizing-zero-party-data-for-training/comments</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.mytiki.com/p/how-to-monetize-app-data-in-a-privacy</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/ios-sdk-v210</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytiki.com/docs/selecting-a-pointer-record</loc>
-    <lastmod>2023-05-07</lastmod>
+    <loc>https://mytiki.com/docs/pre-built-ui</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/udla-template</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/docs/selecting-a-pointer-record</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/including-terms-and-conditions</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/connect-hooks</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/support</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/overview-1</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/sitemap</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/p/solving-copyright-and-intellectual/comments</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/how-does-tiki-fit-into-my-stack</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/reference/l0-index-license-list</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/user-data-license-agreement</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/reference/l0-index-license-list</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/guidelines</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/does-tiki-replace-att-on-ios</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/changelog/console-v041</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/library-web</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-services</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/how-is-tiki-optimized-for-high-volume-production-environments</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-storage-token-post</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytiki.com/changelog/console-v035</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/archive</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.mytiki.com/p/haymakers-in-the-office-increasing</loc>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/changelog/console-v035</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/enforce-license</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/creating-a-project</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytiki.com/docs/admob</loc>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/docs/how-is-tiki-more-efficient-than-docusign</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-api-keys-delete</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/get-license</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytiki.com/reference/l0-auth-user-get</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/p/what-is-a-consumer-data-license</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://blog.mytiki.com/p/does-tiki-replace-att-on-ios</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://blog.mytiki.com/p/little-debbie-crumbls-crumbl-ad-attribution</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://blog.mytiki.com/p/haymakers-in-the-office-increasing</loc>
-    <lastmod>2023-05-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://blog.mytiki.com/p/how-is-tiki-optimized-for-high-volume</loc>
-    <lastmod>2023-05-07</lastmod>
+    <lastmod>2023-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
