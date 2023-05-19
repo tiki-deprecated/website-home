@@ -3,10 +3,9 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-/** @type {import('tailwindcss').Config} */
-
 module.exports = {
-  content: ['./public/**/*.{html,js}'],
+  content: ['./dist/**/*.{html,js}'],
+  important: true,
   theme: {
     colors: {
       white: '#FFFFFF',
