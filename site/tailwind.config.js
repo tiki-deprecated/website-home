@@ -4,7 +4,8 @@
  */
 
 module.exports = {
-  content: ['./html/**/*.{html,js}'],
+  content: ['./dist/**/*.{html,js}'],
+  important: true,
   theme: {
     colors: {
       white: '#FFFFFF',
