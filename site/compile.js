@@ -11,12 +11,25 @@ const htmlHead =
   '<head>' +
   '  <meta charset="UTF-8" />' +
   '  <title>DEBUG</title>' +
+  '  <meta property="og:title" content="TIKI | Zero-party data monetization">' +
+  '  <meta property="og:type" content="website">' +
+  '  <meta property="og:image" content="https://cdn.mytiki.com/assets/og-img-3e6a58b7-e68d-4a90-af8a-2cc607a5ec52.png">' +
+  '  <meta property="og:url" content="https://mytiki.com">' +
+  '  <meta property="og:description" content="Create reward programs people ♡ to get the data you want.">' +
+  '  <meta property="og:site_name" content="TIKI | Zero-party Data">' +
+  '  <meta name="twitter:card" content="summary_large_image">' +
+  '  <meta name="twitter:image:alt" content="Zero-party data monetization">' +
+  '  <meta name="twitter:site" content="@my_tiki">' +
+  '  <meta name="twitter:title" content="TIKI | Zero-party data monetization">' +
+  '  <meta property="twitter:description" content="Create reward programs people ♡ to get the data you want.">' +
+  '  <meta name="twitter:image" content="https://cdn.mytiki.com/assets/og-img-3e6a58b7-e68d-4a90-af8a-2cc607a5ec52.png">' +
   '  <meta name="viewport" content="width=device-width, initial-scale=1" />' +
-  '  <link rel="preconnect" href="https://fonts.googleapis.com" /> \n' +
-  '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> \n' +
-  '  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />\n' +
+  '  <link rel="preconnect" href="https://fonts.googleapis.com" /> ' +
+  '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> ' +
+  '  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />' +
   '  <link href="https://cdn.mytiki.com/fonts/koara.css" rel="stylesheet" />' +
   '  <link href="/tiki-style.css" rel="stylesheet" />' +
+  '  <script defer data-domain="mytiki.com" src="https://plausible.io/js/script.tagged-events.js"></script>' +
   '</head>'
 
 const debugDir = 'public'
