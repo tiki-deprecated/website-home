@@ -2,10 +2,9 @@ id: custom-home-page
 class: w-screen
 files:
   - hero.html
-  - zpd.html
-  - use.html
-  - cta.html
-  - scale.html
   - blog.html
+  - integration.html
+  - sdk.html
+  - license.html
+  - api.html
   - price.html
-  - buy.html
