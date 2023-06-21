@@ -9,7 +9,7 @@
     "@mytiki/tiki-sdk-js": "^1.0.6",
     "@nuxt/typescript-runtime": "^3.0.1",
     "@tailwindcss/forms": "^0.5.3",
-    "nuxt": "^3.4.2"
+    "nuxt": "^3.4.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
