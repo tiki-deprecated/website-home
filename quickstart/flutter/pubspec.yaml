@@ -1,0 +1,23 @@
+name: tiki_quickstart_flutter
+description: Get started with the TIKI SDK in minutes
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - "assets/images/doc-logo.png"
+    - "assets/images/reward.png"
+    - "assets/terms.md"

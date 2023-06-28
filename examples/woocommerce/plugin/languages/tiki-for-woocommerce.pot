@@ -1,0 +1,271 @@
+# Copyright (C) 2023 TIKI Team
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: TIKI for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tiki-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-05-26T14:10:33+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: tiki-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "TIKI for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://mytiki.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Boost your cookie consent opt-in rates with TIKI for WooCommerce! Offer coupons or loyalty points in exchange for cookies' consent and improve user experiences and conversions."
+msgstr ""
+
+#. Author of the plugin
+msgid "TIKI Team"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://myiki.com"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:94
+msgid "TIKI For WooCommerce"
+msgstr ""
+
+#. translators: %s is replaced with the a tag for TIKI Console
+#: admin/class-tiki-woo-admin.php:134
+msgid "Visit the %s to acquire the API keys"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:135
+msgid "Create a new project or select an existing one."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:136
+msgid "Generate a Private Key for the project."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:137
+msgid "Take note of the Private Key ID, Private Key Secret, and Publishing ID."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:203
+#: admin/class-tiki-woo-admin.php:207
+msgid "Remove image"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:206
+msgid "Upload image"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:348
+#: admin/class-tiki-woo-admin.php:355
+msgid "Enable Discount Coupons"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:360
+msgid "Wether to enable discount coupons offer."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:379
+msgid "Coupons Settings"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:386
+msgid "Discount Type"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:391
+msgid " The WooCommerce Coupon type of discount."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:414
+msgid "Discount Value"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:419
+msgid "The numeric value of the discount. It can be a percentage or a fixed value, depending on the discount type. Accepts up to 2 decimal numbers."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:430
+#: admin/class-tiki-woo-admin.php:610
+msgid "Description"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:435
+msgid "Small text to add user-friendly details to the Offer. We recommend including details like the type of data the user is trading and participation requirements (like 10% off your next purchase of $10 or more)."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:444
+msgid "Offer image"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:449
+#: admin/class-tiki-woo-admin.php:629
+msgid "A 300 x 86 resolution image that ilustrates the offer. We've elected to make this portion of the UI an image so you can get as fancy/detailed as you'd like. We strongly recommend the image to be compelling, easy to understand, and focused on the incentive for the user to participate (hence, why it's called the reward image). The reward always goes hand in hand with the text Description (like a caption), so avoid over crowding it with too much text."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:458
+#: admin/class-tiki-woo-admin.php:638
+msgid "Offer use case 1"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:463
+#: admin/class-tiki-woo-admin.php:477
+#: admin/class-tiki-woo-admin.php:491
+#: admin/class-tiki-woo-admin.php:643
+#: admin/class-tiki-woo-admin.php:657
+#: admin/class-tiki-woo-admin.php:671
+msgid "Short statement for users on how their data will be used or not used, using familiar terms to enhance understanding and trust."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:472
+#: admin/class-tiki-woo-admin.php:652
+msgid "Offer use case 2"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:486
+#: admin/class-tiki-woo-admin.php:666
+msgid "Offer use case 3"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:500
+#: admin/class-tiki-woo-admin.php:680
+msgid "Offer terms"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:505
+#: admin/class-tiki-woo-admin.php:685
+msgid "The terms and conditions URL for this offer agreement. It should be a URL to a plain text file containing the legal conditions. This file can include simple markdown formatting."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:520
+msgid "Cookies Settings"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:527
+msgid "Cookies integration"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:557
+#: admin/class-tiki-woo-admin.php:564
+msgid "Enable Loyalty Points"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:569
+msgid "Enable loyalty points in exchange for cookies consent"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:588
+msgid "loyalty Settings"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:595
+msgid "Reward points"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:615
+msgid "Small text to add user-friendly details to the Offer. We recommend including details like the type of data the user is trading and participation requirements (like get 100 loyalty points)."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:624
+msgid "Offer Image"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:699
+msgid "Remove Settings"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:711
+msgid "Remove all plugin settings on uninstall"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:725
+msgid "API Settings"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:732
+msgid "Publishing ID"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:737
+msgid "The Publishing ID from TIKI Console. Required to create new Licenses."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:746
+msgid "Private Key ID"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:751
+msgid "Private Key ID from TIKI Console. Required to verify the Licenses."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:760
+msgid "Private Key Secret"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:765
+msgid "Private Key Secret from TIKI Console. Required to verify the Licenses."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:799
+msgid "UI Settings"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:806
+msgid "Default Offer"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:811
+msgid "Sets the default offer for Cookies consent. If the default option is disabled, the other will be used instead."
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:830
+msgid "Primary text color"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:845
+msgid "Secondary text color"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:860
+msgid "Primary background color"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:875
+msgid "Secondary background color"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:890
+msgid "Accent color"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:905
+msgid "Font Family"
+msgstr ""
+
+#: admin/class-tiki-woo-admin.php:920
+msgid "Settings"
+msgstr ""
+
+#: admin/partials/tiki-woo-admin-display.php:22
+msgid "General"
+msgstr ""
+
+#: admin/partials/tiki-woo-admin-display.php:24
+msgid "Coupons"
+msgstr ""
+
+#: admin/partials/tiki-woo-admin-display.php:26
+msgid "Loyalty"
+msgstr ""
+
+#: admin/partials/tiki-woo-admin-display.php:28
+msgid "Cookies"
+msgstr ""

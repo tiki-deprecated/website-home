@@ -1,0 +1,4 @@
+*** TIKI for WooCommerce Changelog ***
+
+2023-05-24 - version 1.0.0
+* Initial release

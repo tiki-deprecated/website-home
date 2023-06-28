@@ -1,0 +1,6 @@
+[submodule "infra"]
+	path = infra
+	url = https://github.com/tiki/tiki-dx-infra
+[submodule "api"]
+	path = api
+	url = https://github.com/tiki/tiki-dx-api

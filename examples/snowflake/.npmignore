@@ -1,0 +1,18 @@
+# Config Files
+.gitignore
+.eslintignore
+.eslintrc.json
+jest.config.json
+
+# IntelliJ
+.idea
+*.iml
+
+# Generated Outputs
+reports
+
+# JEST Tests
+src/__tests__/
+
+# Deployment Assets
+deploy

@@ -1,0 +1,25 @@
+{
+  "name": "tiki-dx-mytiki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss",
+    "compile": "rm -rf dist; rm -rf public; node compile; npm run tailwind -- -i ./input.css -o public/tiki-style.css; npm run tailwind -- -i ./input.css -o dist/tiki-style.css",
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "yaml": "^2.2.2"
+  }
+}
