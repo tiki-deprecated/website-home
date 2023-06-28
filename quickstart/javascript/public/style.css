@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) TIKI Inc.
+ * MIT license. See LICENSE file in root directory.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.welcome {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1C0000;
+    width: fit-content;
+}
+
+.welcome h1 {
+    text-align: center;
+}
+
+.welcome button {
+    cursor: pointer;
+    width: fit-content;
+    padding: 1em;
+    margin: auto;
+    display: block;
+    border-radius: .25em;
+    background-color: #1C0000;
+    color: #FFB822;
+    border: none;
+}
+
+.welcome img {
+    height:5em;
+    margin: auto;
+    width: 100%;
+}
