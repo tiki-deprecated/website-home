@@ -17,3 +17,12 @@ updates:
       prefix: "npm"
     labels:
       - "chore"
+
+  - package-ecosystem: "npm"
+    directory: "/quickstart/javascript"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "npm"
+    labels:
+      - "chore"
