@@ -1,14 +1,11 @@
-[mytiki.com](https://mytiki.com)
-===========
-The code here is not always pretty or fancy, but it gets
-the job done. 
+# TIKI DX (Developer Experience)
+An amalgamation of code and projects designed to improve a developer's experience with TIKI. It's the sort of stuff that powers the [mytiki.com](https://mytiki.com) website, sample code, and our reference docs. 
 
-## Overview
-- Website is built/hosted on [Readme](https://readme.com)
-- Repo includes non-standard assets used, such as the static HTML/CSS found on the landing page
-- Includes a janky NodeJS webserver for local debugging
-- Utilizes [Tailwind](https://tailwindcss.com)
+## Project Structure
+- `/api`: API router and raw OAS3 files
+- `/examples`: Code samples and popular integrations
+- `/infra`: Infrastructure as code —org-wide infra scripts
+- `/mytiki`: Content and assets for the mytiki.com website
+- `/quickstart`: Sandboxed projects for TIKI's quickstart guides
 
-## License
-This project is licensed under the MIT License - see the 
-[LICENSE.md](LICENSE) file for details
+## Contributors ✨
