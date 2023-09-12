@@ -2,9 +2,9 @@
 
 TIKI's cleanrooms are hosted [Iceberg](https://iceberg.apache.org) data lakes containing data legally licensed from users (zero-party), for your specific use case.
 
-This sample cleanroom contains actual user demographic, transaction, and receipt data for the time period of 8/29 to 9/6. 
+This sample cleanroom contains actual user demographic, transaction, and receipt data for the time period of 8/23 to 8/29. 
 
-**THIS DATASET IS FOR EVALUATION PURPOSES ONLY AND MAY NOT BE SHARED OR USED IN ANY OTHER FROM WITHOUT WRITTEN CONSENT FROM TIKI INC.**
+**THIS DATASET IS FOR EVALUATION PURPOSES ONLY AND MAY NOT BE SHARED OR USED IN ANY OTHER FORM WITHOUT WRITTEN CONSENT FROM TIKI INC.**
 
 ## Access
 
