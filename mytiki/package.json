@@ -16,7 +16,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.4.1",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.3.3"
   },
   "dependencies": {
     "html-minifier": "^4.0.0",
