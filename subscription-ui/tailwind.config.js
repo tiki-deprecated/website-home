@@ -10,7 +10,8 @@ module.exports = {
       "light-gray": "#F6F6F6",
       "dark-gray": "#00000099",
       yellow: "#FFD225",
-      white: "#FFFFFF"
+      white: "#FFFFFF",
+      green: "#00B272"
     },
     fontFamily: {
       sans: ["Space Grotesk, sans-serif"],
