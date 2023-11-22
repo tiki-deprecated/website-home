@@ -1,32 +1,41 @@
 <script setup lang="ts">
+const sampleData = [
+    {
+        Song: "Flashing Lights",
+        Artirts: "Kanye West",
+        Year: "2006"
+    },
+    {
+        song: "Flashing Lights",
+        Artirts: "Kanye West",
+        Year: "2006"
+    },
+    {
+        song: "Flashing Lights",
+        Artirts: "Kanye West",
+        Year: "2006"
+    },
+    {
+        song: "Flashing Lights",
+        Artirts: "Kanye West",
+        Year: "2008"
+    }
+]
+
+
 </script>
 
 <template>
-      <table class="table-auto">
+  <table class="table-fixed">
     <thead>
-      <tr>
-        <th class="bg-green text-white">Song</th>
-        <th class="bg-green text-white">Artist</th>
-        <th class="bg-green text-white">Year</th>
-      </tr>
+        <tr>
+            <th class="bg-green text-white" v-for="(value, key) in sampleData[0]" :key="key">{{key}}</th>
+        </tr>
     </thead>
-    <tbody class="border">
-      <tr class="border">
-        <td>Something</td>
-        <td>Malcolm Lockyer</td>
-        <td>1961</td>
-      </tr>
-      <tr>
-        <td>Witchy Woman</td>
-        <td>The Eagles</td>
-        <td>1972</td>
-      </tr>
-      <tr>
-        <td>Shining Star</td>
-        <td>Earth, Wind, and Fire</td>
-        <td>1975</td>
-      </tr>
+    <tbody>
+        <tr v-for="item in sampleData" :key="item.song" class="border">
+          <td v-for="(value, key) in item" :key="key" class="border px-10 py-2">{{ value }}</td>
+        </tr>
     </tbody>
   </table>
-
 </template>

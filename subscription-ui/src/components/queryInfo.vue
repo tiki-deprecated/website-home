@@ -19,7 +19,6 @@ const props = defineProps({
   <query-cost v-if="state === 'cost'"/>
   <query-stats v-if="state === 'stats'"/>
   <query-sample v-if="state === 'sample'"/>
-
 </template>
 
 <style></style>

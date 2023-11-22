@@ -72,7 +72,7 @@ const infoState = ref<string>()
         </button>
       </div>
       <div class="h-52 mt-3">
-        <query-info :state="infoState" />
+        <query-info :state="infoState"/>
       </div>
     </div>
   </div>
