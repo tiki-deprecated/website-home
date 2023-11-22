@@ -14,21 +14,21 @@ const handleState = (state: "cost" | "stats" | "sample") =>{
     <div class="mt-10 flex">
         <button
           class="text-lg px-5"
-          :class="infoState === 'cost' ? 'bg-green text-white' : 'border bg-light-gray'"
+          :class="infoState === 'cost' ? 'bg-green text-white border-l-2 border-r-2 border-t-2 border-black' : 'border-b-2 bg-light-gray'"
           @click="handleState('cost')"
         >
           Cost
         </button>
         <button
           class="text-lg px-5"
-          :class="infoState === 'stats' ? 'bg-green text-white' : 'border bg-light-gray'"
+          :class="infoState === 'stats' ? 'bg-green text-white border-l-2 border-r-2 border-t-2 border-black' : 'border-b-2 bg-light-gray'"
           @click="handleState('stats')"
         >
           Stats
         </button>
         <button
           class="text-lg px-5"
-          :class="infoState === 'sample' ? 'bg-green text-white' : 'border bg-light-gray'"
+          :class="infoState === 'sample' ? 'bg-green text-white border-l-2 border-r-2 border-t-2 border-black' : 'border-b-2 bg-light-gray'"
           @click="handleState('sample')"
         >
           Sample

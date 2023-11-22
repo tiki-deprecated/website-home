@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import queryEditor from './components/queryEditor.vue'
 import queryInfo from './components/queryInfo.vue'
 import infoButtons from './components/infoButtons.vue'
+import tableTaxonomy from './components/tableTaxonomy.vue'
 
 const selectedTable = ref<string>()
 const infoState = ref<string>()
@@ -28,23 +29,7 @@ const infoState = ref<string>()
             <option>Transactions</option>
           </select>
         </div>
-        <div class="mt-10">
-          <h2 class="text-blue text-3xl underline">{{ selectedTable }}</h2>
-          <ul v-if="selectedTable">
-            <li class="mt-2 w-2/5 flex justify-between text-blue">
-              user_id <span class="text-yellow">string</span>
-            </li>
-            <li class="mt-2 w-2/5 flex justify-between">
-              user_id <span class="text-yellow">string</span>
-            </li>
-            <li class="mt-2 w-2/5 flex justify-between">
-              Transactions<span class="text-yellow">string</span>
-            </li>
-            <li class="mt-2 w-2/5 flex justify-between">
-              user_id <span class="text-yellow">string</span>
-            </li>
-          </ul>
-        </div>
+        <table-taxonomy :tableTitle="selectedTable"/>
       </div>
     </div>
     <div id="col-2" class="grow">
