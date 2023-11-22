@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-
 defineProps({
   cost: {
     type: String, 

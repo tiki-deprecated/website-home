@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { type PropType } from 'vue';
+defineProps({
+  stats: {
+    type: Array as PropType<string[]>, 
+    required: false,
+  }
+})
 const stats = ['700k Users', '1,5M Records', '2 Publishers']
 </script>
 

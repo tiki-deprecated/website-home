@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { type PropType } from 'vue';
+
+defineProps({
+  sample: {
+    type: Array as PropType<object[]>, 
+    required: false,
+  }
+})
 const sampleData = [
     {
         Song: "Foo",
