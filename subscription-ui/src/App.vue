@@ -4,9 +4,12 @@ import queryEditor from './components/queryEditor.vue'
 import queryInfo from './components/queryInfo.vue'
 import infoButtons from './components/infoButtons.vue'
 import tableTaxonomy from './components/tableTaxonomy.vue'
+import type {QueryInfo} from "./interfaces/QueryInfo";
+
 
 const selectedTable = ref<string>()
 const infoState = ref<string>()
+const info = ref<QueryInfo>()
 </script>
 
 <template>
@@ -39,7 +42,7 @@ const infoState = ref<string>()
         @sample="infoState = 'sample'"
         @stats="infoState = 'stats'"
       />
-      <query-info :state="infoState" />
+      <query-info :state="infoState"/>
     </div>
   </div>
   <div class="flex justify-end mt-5 mb-10 mx-10">

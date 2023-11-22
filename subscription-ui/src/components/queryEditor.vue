@@ -5,6 +5,8 @@ import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
 monaco.languages.register({ id: 'SQL' })
 const editor = ref()
 
+const emits = defineEmits(["update"])
+
 const props = defineProps({
   table: {
     type: String, 
@@ -34,6 +36,7 @@ onMounted(() => {
 
 const submitQuery = () => {
   console.log(editorMonaco.getValue())
+  emits("update")
 }
 
 watch(

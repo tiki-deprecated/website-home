@@ -1,4 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+
+defineProps({
+  cost: {
+    type: String, 
+    required: false,
+  }
+})
+</script>
 
 <template>
   <div class="flex flex-col text-lg">
