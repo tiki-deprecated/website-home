@@ -29,7 +29,7 @@ const sampleData = [
   <table class="table-fixed">
     <thead>
         <tr>
-            <th class="bg-green text-white" v-for="(value, key) in sampleData[0]" :key="key">{{key}}</th>
+            <th class="bg-green text-white border border-black border-solid" v-for="(value, key) in sampleData[0]" :key="key">{{key}}</th>
         </tr>
     </thead>
     <tbody>

@@ -2,9 +2,10 @@
 import { computed, ref } from 'vue'
 import queryEditor from './components/queryEditor.vue'
 import queryInfo from './components/queryInfo.vue'
+import infoButtons from './components/infoButtons.vue';
 const selectedTable = ref<string>()
-
 const infoState = ref<string>()
+
 </script>
 
 <template>
@@ -48,29 +49,7 @@ const infoState = ref<string>()
     </div>
     <div id="col-2" class="grow h-screen-1/2">
       <query-editor />
-      <div class="mt-10 flex">
-        <button
-          class="text-lg px-5"
-          :class="infoState === 'cost' ? 'bg-green text-white' : 'border bg-light-gray'"
-          @click="infoState = 'cost'"
-        >
-          Cost
-        </button>
-        <button
-          class="text-lg px-5"
-          :class="infoState === 'stats' ? 'bg-green text-white' : 'border bg-light-gray'"
-          @click="infoState = 'stats'"
-        >
-          Stats
-        </button>
-        <button
-          class="text-lg px-5"
-          :class="infoState === 'sample' ? 'bg-green text-white' : 'border bg-light-gray'"
-          @click="infoState = 'sample'"
-        >
-          Sample
-        </button>
-      </div>
+      <info-buttons @cost="infoState = 'cost'" @sample="infoState = 'sample'" @stats="infoState = 'stats'"/>
       <div class="h-52 mt-3">
         <query-info :state="infoState"/>
       </div>
