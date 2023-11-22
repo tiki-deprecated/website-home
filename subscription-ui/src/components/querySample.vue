@@ -1,19 +1,29 @@
 <script setup lang="ts">
 const sampleData = [
     {
-        Song: "Flashing Lights",
-        Artirts: "Kanye West",
+        Song: "Foo",
+        Artirts: "Bar",
         Year: "2006"
     },
     {
-        song: "Flashing Lights",
-        Artirts: "Kanye West",
+        song: "Foo",
+        Artirts: "Bar",
         Year: "2006"
     },
     {
-        song: "Flashing Lights",
-        Artirts: "Kanye West",
+        song: "Foo",
+        Artirts: "Bar",
         Year: "2006"
+    },
+    {
+        song: "Foo",
+        Artirts: "Bar",
+        Year: "2008"
+    },
+    {
+        song: "Foo",
+        Artirts: "Bar",
+        Year: "2008"
     },
     {
         song: "Flashing Lights",
@@ -34,7 +44,7 @@ const sampleData = [
     </thead>
     <tbody>
         <tr v-for="item in sampleData" :key="item.song" class="border">
-          <td v-for="(value, key) in item" :key="key" class="border px-10 py-2">{{ value }}</td>
+          <td v-for="(value, key) in item" :key="key" class="border px-10 py-2 text-center">{{ value }}</td>
         </tr>
     </tbody>
   </table>

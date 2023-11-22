@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import queryEditor from './components/queryEditor.vue'
 import queryInfo from './components/queryInfo.vue'
 import infoButtons from './components/infoButtons.vue';
+
 const selectedTable = ref<string>()
 const infoState = ref<string>()
 
@@ -21,7 +22,7 @@ const infoState = ref<string>()
             v-model="selectedTable"
             name="tables"
             id="tables"
-            class="w-4/5 text-center py-1.5 bg-light-gray border border-solid border-dark-gray rounded-md"
+            class="w-72 text-center py-1.5 bg-light-gray border border-solid border-dark-gray rounded-md"
           >
             <option value="">Select a Table</option>
             <option>Receipts</option>
@@ -47,10 +48,10 @@ const infoState = ref<string>()
         </div>
       </div>
     </div>
-    <div id="col-2" class="grow h-screen-1/2">
+    <div id="col-2" class="grow">
       <query-editor />
       <info-buttons @cost="infoState = 'cost'" @sample="infoState = 'sample'" @stats="infoState = 'stats'"/>
-      <div class="h-52 mt-3">
+      <div class="mt-3">
         <query-info :state="infoState"/>
       </div>
     </div>

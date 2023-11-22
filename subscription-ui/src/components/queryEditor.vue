@@ -22,9 +22,9 @@ const submitQuery = () => {
 </script>
 
 <template>
-  <div id="editor" ref="editor" class="h-2/4"></div>
+  <div id="editor" ref="editor" class="h-60"></div>
   <button
-    class="border py-3 bg-green rounded-md w-60 text-white"
+    class="border py-3 bg-green rounded-md w-60 text-white mt-5"
     @click="submitQuery"
   >
     Estimate Cost
