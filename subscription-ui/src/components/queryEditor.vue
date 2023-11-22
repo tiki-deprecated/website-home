@@ -5,20 +5,51 @@ import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
 monaco.languages.register({ id: 'SQL' })
 const editor = ref()
 
-let editorMonaco: any
+const props = defineProps({
+  table: {
+    type: String, 
+    required: false
+  }
+})
+
+let editorMonaco: monaco.editor.IStandaloneCodeEditor
 onMounted(() => {
   editorMonaco = monaco.editor.create(editor.value, {
-    value: 'SELECT * FROM TABLE',
+    value: `SELECT * FROM ${props.table ? props.table : "TABLE"}
+    
+    
+    
+    
+    
+    
+    `,
     language: 'sql',
     theme: 'vs-dark',
+    automaticLayout: true,
     minimap: {
       enabled: false
     }
   })
 })
+
 const submitQuery = () => {
   console.log(editorMonaco.getValue())
 }
+
+watch(
+  () => props.table,
+  (newValue) => {
+    editorMonaco.setValue(`SELECT * FROM ${newValue?.toUpperCase()}
+    
+    
+    
+    
+    
+    
+    `)
+  }
+)
+
 </script>
 
 <template>

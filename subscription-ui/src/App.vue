@@ -33,7 +33,7 @@ const infoState = ref<string>()
       </div>
     </div>
     <div id="col-2" class="grow">
-      <query-editor />
+      <query-editor :table="selectedTable"/>
       <info-buttons
         @cost="infoState = 'cost'"
         @sample="infoState = 'sample'"
@@ -42,7 +42,7 @@ const infoState = ref<string>()
       <query-info :state="infoState" />
     </div>
   </div>
-  <div class="flex justify-end mt-5 mx-10">
+  <div class="flex justify-end mt-5 mb-10 mx-10">
     <button type="submit" class="bg-green text-white py-3 rounded-md w-60">
       Agree & Subscribe
     </button>
