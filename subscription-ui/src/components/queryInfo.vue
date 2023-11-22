@@ -1,22 +1,25 @@
 <script lang="ts" setup>
+import queryCost from "./queryCost.vue"
+import queryStats from "./queryStats.vue"
+import querySample from "./querySample.vue"
+import { defineProps } from "vue";
 
-const stats = ["700k Users", "1,5M Records", "2 Publishers"]
+const props = defineProps({
+    state: {
+        type: String,
+        required: false
+    }
+})
+
+
+
 </script>
 
 <template>
-    <div class="flex flex-col justify-center text-center">
-        <p class="px-2">The estimated cost to subscribe</p>
-        <p class="px-5">
-          to this dataset is: <span class="text-green underline"> $3,000 - $4,000/month </span>
-        </p>
-    </div>
-       <span class="flex gap-5 text-lg" v-for="stat of stats">
-        <img src="../assets/images/progessbox.svg" alt=""> {{stat}}
-       </span> 
-
-
+  <query-cost v-if="state === 'cost'"/>
+  <query-stats v-if="state === 'stats'"/>
+  <query-sample v-if="state === 'sample'"/>
 
 </template>
 
-<style>
-</style>
+<style></style>

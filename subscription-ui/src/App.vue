@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import queryEditor from './components/queryEditor.vue'
-import queryInfo from './components/queryInfo.vue';
+import queryInfo from './components/queryInfo.vue'
 const selectedTable = ref<string>()
+
+const infoState = ref<string>()
 </script>
 
 <template>
@@ -47,14 +49,30 @@ const selectedTable = ref<string>()
     <div id="col-2" class="grow h-screen-1/2">
       <query-editor />
       <div class="mt-10 flex">
-        <button class="text-lg px-5 bg-green text-white">Cost</button>
-        <button class="text-lg px-5 bg-light-gray border">Stats</button>
-        <button class="text-lg px-5 border bg-light-gray">Sample</button>
+        <button
+          class="text-lg px-5"
+          :class="infoState === 'cost' ? 'bg-green text-white' : 'border bg-light-gray'"
+          @click="infoState = 'cost'"
+        >
+          Cost
+        </button>
+        <button
+          class="text-lg px-5"
+          :class="infoState === 'stats' ? 'bg-green text-white' : 'border bg-light-gray'"
+          @click="infoState = 'stats'"
+        >
+          Stats
+        </button>
+        <button
+          class="text-lg px-5"
+          :class="infoState === 'sample' ? 'bg-green text-white' : 'border bg-light-gray'"
+          @click="infoState = 'sample'"
+        >
+          Sample
+        </button>
       </div>
-      <div
-        class="h-52 mt-3"
-      >
-       <query-info/>
+      <div class="h-52 mt-3">
+        <query-info :state="infoState" />
       </div>
     </div>
   </div>
