@@ -24,7 +24,7 @@ const submitQuery = () => {
 <template>
   <div id="editor" ref="editor" class="h-2/4"></div>
   <button
-    class="border border-yellow py-3 bg-yellow rounded-md w-60 text-white"
+    class="border py-3 bg-green rounded-md w-60 text-white"
     @click="submitQuery"
   >
     Estimate Cost
