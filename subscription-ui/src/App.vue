@@ -1,23 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
-
-monaco.languages.register({ id: 'SQL' })
-const editor = ref()
-
+import { ref } from 'vue'
+import queryEditor from './components/queryEditor.vue'
+import queryInfo from './components/queryInfo.vue';
 const selectedTable = ref<string>()
-
-onMounted(() => {
-  const editorMonaco = monaco.editor.create(editor.value, {
-    value: 'SELECT * FROM TABLE',
-    language: 'sql',
-    theme: 'vs-dark',
-    minimap: {
-      enabled: false
-    }
-  })
-  const text = editorMonaco.getValue()
-})
 </script>
 
 <template>
@@ -59,24 +44,18 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div id="col-2" class="grow" style="height: 50vh">
-      <div id="editor" ref="editor" style="height: 50%"></div>
-      <button class="mt-10 border border-yellow py-3 bg-yellow rounded-md w-60 text-white">
-        Estimate Cost
-      </button>
+    <div id="col-2" class="grow h-screen-1/2">
+      <query-editor />
       <div class="mt-10 flex">
-        <span class="text-lg px-5 bg-green text-white">Cost</span>
-        <span class="text-lg px-5 bg-light-gray border">Stats</span>
-        <span class="text-lg px-5 border bg-light-gray">Sample</span>
+        <button class="text-lg px-5 bg-green text-white">Cost</button>
+        <button class="text-lg px-5 bg-light-gray border">Stats</button>
+        <button class="text-lg px-5 border bg-light-gray">Sample</button>
       </div>
-      <div class="bg-light-gray font-normal w-fit text-center h-52 mt-3 flex flex-col justify-center">
-          <p>
-            The estimated cost to subscribe
-          </p> 
-          <p>
-            to this dataset is: <span class="text-green underline"> $3,000 - $4,000/month </span>
-          </p>
-        </div>
+      <div
+        class="h-52 mt-3"
+      >
+       <query-info/>
+      </div>
     </div>
   </div>
   <div class="flex justify-end mt-5 mx-5">

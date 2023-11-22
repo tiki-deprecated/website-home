@@ -16,7 +16,11 @@ module.exports = {
     fontFamily: {
       sans: ["Space Grotesk, sans-serif"],
     },
-    extend: {},
+    extend: {
+      height:{
+        "h-screen-1/2": "50vh"
+      }
+    },
   },
   plugins: [],
 }
