@@ -2,7 +2,7 @@
 import queryCost from './queryCost.vue';
 import queryStats from './queryStats.vue';
 import querySample from './querySample.vue';
-import { defineProps, type PropType } from 'vue';
+import { defineProps, watch, type PropType } from 'vue';
 import type {QueryInfo} from "../interfaces/QueryInfo";
 
 
@@ -16,6 +16,7 @@ const props = defineProps({
     required: false
   }
 })
+
 </script>
 
 <template>

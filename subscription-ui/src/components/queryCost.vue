@@ -9,10 +9,10 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col text-lg">
+  <div class="flex flex-col text-lg" v-if="cost">
     <p>The estimated cost to subscribe</p>
     <p>
-      to this dataset is: <span class="text-green underline"> $3,000 - $4,000/month </span>
+      to this dataset is: <span class="text-green underline"> {{ cost }} </span>
     </p>
   </div>
 </template>

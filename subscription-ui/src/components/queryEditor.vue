@@ -36,7 +36,43 @@ onMounted(() => {
 
 const submitQuery = () => {
   console.log(editorMonaco.getValue())
-  emits("update")
+  const exampleJson = {
+    "costs": "$3,000 - $4,000/month",
+    "stats": ['700k Users', '1,5M Records', '2 Publishers'],
+    "sample":[
+    {
+        Song: "Foo",
+        Artirts: "Bar",
+        Year: "2006"
+    },
+    {
+        song: "Foo",
+        Artirts: "Bar",
+        Year: "2006"
+    },
+    {
+        song: "Foo",
+        Artirts: "Bar",
+        Year: "2006"
+    },
+    {
+        song: "Foo",
+        Artirts: "Bar",
+        Year: "2008"
+    },
+    {
+        song: "Foo",
+        Artirts: "Bar",
+        Year: "2008"
+    },
+    {
+        song: "Foo",
+        Artirts: "Bar",
+        Year: "2008"
+    }
+]
+  }
+  emits("update", exampleJson)
 }
 
 watch(

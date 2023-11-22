@@ -6,7 +6,7 @@ defineProps({
     required: false,
   }
 })
-const stats = ['700k Users', '1,5M Records', '2 Publishers']
+
 </script>
 
 <template>

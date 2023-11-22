@@ -36,13 +36,13 @@ const info = ref<QueryInfo>()
       </div>
     </div>
     <div id="col-2" class="grow">
-      <query-editor :table="selectedTable"/>
+      <query-editor :table="selectedTable" @update="(infoJson)=> info = infoJson"/>
       <info-buttons
         @cost="infoState = 'cost'"
         @sample="infoState = 'sample'"
         @stats="infoState = 'stats'"
       />
-      <query-info :state="infoState"/>
+      <query-info :state="infoState" :info="info"/>
     </div>
   </div>
   <div class="flex justify-end mt-5 mb-10 mx-10">
