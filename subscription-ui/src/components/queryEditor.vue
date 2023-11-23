@@ -17,14 +17,7 @@ const props = defineProps({
 let editorMonaco: monaco.editor.IStandaloneCodeEditor
 onMounted(() => {
   editorMonaco = monaco.editor.create(editor.value, {
-    value: `SELECT * FROM ${props.table ? props.table : "TABLE"}
-    
-    
-    
-    
-    
-    
-    `,
+    value: `SELECT * FROM ${props.table ? props.table : "TABLE"}\n\n\n\n\n\n\n`,
     language: 'sql',
     theme: 'vs-dark',
     automaticLayout: true,
@@ -36,6 +29,7 @@ onMounted(() => {
 
 const submitQuery = () => {
   console.log(editorMonaco.getValue())
+  // fetch using this value
   const exampleJson = {
     "costs": "$3,000 - $4,000/month",
     "stats": ['700k Users', '1,5M Records', '2 Publishers'],
@@ -78,14 +72,7 @@ const submitQuery = () => {
 watch(
   () => props.table,
   (newValue) => {
-    editorMonaco.setValue(`SELECT * FROM ${newValue?.toUpperCase()}
-    
-    
-    
-    
-    
-    
-    `)
+    editorMonaco.setValue(`SELECT * FROM ${newValue?.toUpperCase()}\n\n\n\n\n\n\n`)
   }
 )
 

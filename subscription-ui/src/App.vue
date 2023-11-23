@@ -11,6 +11,12 @@ import type {QueryInfo} from "./interfaces/QueryInfo";
 const selectedTable = ref<string>()
 const infoState = ref<string>()
 const info = ref<QueryInfo>()
+
+const updateInfo = (infoJson: QueryInfo) => {
+  info.value = infoJson
+  infoState.value = "cost"
+}
+
 </script>
 
 <template>
@@ -19,18 +25,19 @@ const info = ref<QueryInfo>()
     <img src="./assets/images/tiki-pineapple.svg" alt="" />
   </div>
   <div class="flex mt-5 mx-10">
-    <div id="col-1" class="w-2/5">
+    <div class="w-2/5">
       <div class="flex-col">
         <table-select @update="(newValue)=> selectedTable = newValue"/>
         <table-taxonomy :tableTitle="selectedTable"/>
       </div>
     </div>
-    <div id="col-2" class="grow">
-      <query-editor :table="selectedTable" @update="(infoJson)=> info = infoJson"/>
+    <div class="grow px-8">
+      <query-editor :table="selectedTable" @update="updateInfo"/>
       <info-buttons
         @cost="infoState = 'cost'"
         @sample="infoState = 'sample'"
         @stats="infoState = 'stats'"
+        :state-prop="infoState"
       />
       <query-info :state="infoState" :info="info"/>
     </div>

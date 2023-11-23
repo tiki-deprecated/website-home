@@ -1,6 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 const emit = defineEmits(["cost", "stats", "sample"])
+
+const props = defineProps({
+  stateProp: {
+    type: String, 
+    required: false
+  }
+})
+
+watch(()=> props.stateProp, (newValue)=>{
+  infoState.value = newValue
+})
+
 const infoState = ref<string>()
 
 const handleState = (state: "cost" | "stats" | "sample") =>{
