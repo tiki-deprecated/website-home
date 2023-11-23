@@ -4,6 +4,7 @@ import queryEditor from './components/queryEditor.vue'
 import queryInfo from './components/queryInfo.vue'
 import infoButtons from './components/infoButtons.vue'
 import tableTaxonomy from './components/tableTaxonomy.vue'
+import tableSelect from './components/tableSelect.vue'
 import type {QueryInfo} from "./interfaces/QueryInfo";
 
 
@@ -20,18 +21,7 @@ const info = ref<QueryInfo>()
   <div class="flex mt-5 mx-10">
     <div id="col-1" class="w-2/5">
       <div class="flex-col">
-        <div class="">
-          <select
-            v-model="selectedTable"
-            name="tables"
-            id="tables"
-            class="w-72 text-center py-1.5 bg-light-gray border border-solid border-dark-gray rounded-md"
-          >
-            <option value="">Select a Table</option>
-            <option>Receipts</option>
-            <option>Transactions</option>
-          </select>
-        </div>
+        <table-select @update="(newValue)=> selectedTable = newValue"/>
         <table-taxonomy :tableTitle="selectedTable"/>
       </div>
     </div>
