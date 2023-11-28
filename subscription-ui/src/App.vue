@@ -21,10 +21,6 @@ const updateInfo = (infoJson: QueryInfo) => {
 
 <template>
   <div class="flex mt-5 mx-10">
-    <h1 class="underline text-blue text-4xl self-center grow">Configure and Subscribe</h1>
-    <img src="./assets/images/tiki-pineapple.svg" alt="" />
-  </div>
-  <div class="flex mt-5 mx-10">
     <div class="w-2/5">
       <div class="flex-col">
         <table-select @update="(newValue)=> selectedTable = newValue"/>
