@@ -12,6 +12,7 @@ defineProps({
 </script>
 
 <template>
+  <div class="overflow-scroll w-[60rem]">
   <table class="table-fixed" v-if="sample">
     <thead>
         <tr>
@@ -24,4 +25,6 @@ defineProps({
         </tr>
     </tbody>
   </table>
+</div>
+
 </template>
