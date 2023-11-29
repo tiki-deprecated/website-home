@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { watch } from 'vue'
+import { ref, watch } from 'vue'
+import { demographics, transactions, receipts } from '../interfaces/TablesTaxonomies'
 
 const props = defineProps({
   tableTitle: {
@@ -8,39 +9,16 @@ const props = defineProps({
   }
 })
 
-watch(
-  () => props.tableTitle,
-  (newValue) => {
-    console.log('Fetch the taxonomy of table:' + newValue)
-  }
-)
+const tableTaxonomy = ref()
 
-const tableTaxonomy = [
-  {
-    data: 'foo',
-    type: 'bar'
-  },
-  {
-    data: 'foo',
-    type: 'bar'
-  },
-  {
-    data: 'foo',
-    type: 'bar'
-  },
-  {
-    data: 'foo',
-    type: 'bar'
-  },
-  {
-    data: 'foo',
-    type: 'bar'
-  },
-  {
-    data: 'foo',
-    type: 'bar'
-  }
-]
+watch(()=> props.tableTitle, (newValue)=>{
+  newValue === 'Demographics'
+    ? tableTaxonomy.value = demographics
+    : newValue === 'Receipts'
+      ? tableTaxonomy.value =  receipts
+      : tableTaxonomy.value = transactions
+})
+
 </script>
 
 <template>
