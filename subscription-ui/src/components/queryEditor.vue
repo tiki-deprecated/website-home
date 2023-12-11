@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
-import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
-import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution'
+import * as monaco from "monaco-editor"
 
 const editor = ref()
 
@@ -19,7 +18,7 @@ let editorMonaco: monaco.editor.IStandaloneCodeEditor
 onMounted(() => {
   editorMonaco = monaco.editor.create(editor.value, {
     value: `SELECT * FROM ${props.table ? props.table : 'TABLE'}`,
-    language: 'trinosql',
+    language: 'mysql',
     theme: 'vs-dark',
     automaticLayout: true,
     minimap: {
