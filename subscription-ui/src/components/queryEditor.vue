@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import * as monaco from "monaco-editor"
-import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
+import TrinoSQLWorker from 'monaco-sql-languages/out/esm/trinosql/trinosql.worker?worker';
 
 self.MonacoEnvironment = {
-  getWorker(_, label) {
-    return new editorWorker()
-  }
-}
+	getWorker(_: any, label: string) {
+			return new TrinoSQLWorker();
+	}
+};
 
 const editor = ref()
 
