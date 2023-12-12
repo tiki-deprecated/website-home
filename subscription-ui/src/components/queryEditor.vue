@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
 import * as monaco from "monaco-editor"
+import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
+
+self.MonacoEnvironment = {
+  getWorker(_, label) {
+    return new editorWorker()
+  }
+}
 
 const editor = ref()
 
