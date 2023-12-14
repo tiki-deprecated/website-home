@@ -42,7 +42,7 @@ const isResized = ref<boolean>(false)
           <table-taxonomy :tableTitle="selectedTable" />
         </div>
       </div>
-      <div class="w-1 bg-light-gray  cursor-col-resize shadow-md border-left border-solid border-black" @mousedown="isResized = true" ></div>
+      <div class="w-1 bg-light-gray cursor-col-resize shadow-md border-left border-solid border-black" @mousedown="isResized = true" ></div>
       <div class="grow px-8 mt-5">
         <query-editor :table="selectedTable" @update="updateInfo" />
         <info-buttons

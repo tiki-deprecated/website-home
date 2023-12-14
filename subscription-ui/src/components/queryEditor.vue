@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-import * as monaco from "monaco-editor"
-import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution';
-import TrinoSQLWorker from 'monaco-sql-languages/out/esm/trinosql/trinosql.worker?worker';
+import { ref, onMounted, watch, computed } from 'vue'
+import * as monaco from 'monaco-editor'
+import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution'
+import TrinoSQLWorker from 'monaco-sql-languages/out/esm/trinosql/trinosql.worker?worker'
 
 self.MonacoEnvironment = {
-	getWorker(_: any, label: string) {
-			return new TrinoSQLWorker();
-	}
-};
+  getWorker(_: any, label: string) {
+    return new TrinoSQLWorker()
+  }
+}
 
 const editor = ref()
 
@@ -37,7 +37,7 @@ onMounted(() => {
 
 const submitQuery = () => {
   let query = editorMonaco.getValue()
-  
+
   if (query.endsWith(';')) {
     query = query.slice(0, -1)
   }
@@ -335,13 +335,30 @@ watch(
     editorMonaco.setValue(`SELECT * FROM ${newValue?.toUpperCase()}`)
   }
 )
+
+const editorHeight = ref<number>(240)
+
+const remHeight = computed(() => {
+  return `${editorHeight.value / 16}rem`
+})
+
+const resize = (e: MouseEvent) => {
+  if (!isResized.value) return
+
+  editorHeight.value = editorHeight.value + e.movementY / 2
+}
+
+const isResized = ref<boolean>(false)
 </script>
 
 <template>
-  <div id="editor" ref="editor" class="h-60"></div>
-  <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery">
-    Estimate Cost
-  </button>
+  <div @mousemove="resize" @mouseup="isResized = false">
+    <div id="editor" ref="editor" class="h-60 w-full" :style="{height: remHeight}"></div>
+    <div class="w-full bg-black h-1 cursor-row-resize" @mousedown="isResized = true"></div>
+    <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery">
+      Estimate Cost
+    </button>
+  </div>
 </template>
 
 <style></style>
