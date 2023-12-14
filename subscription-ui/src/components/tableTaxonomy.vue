@@ -30,7 +30,7 @@ watch(()=> props.tableTitle, (newValue)=>{
         v-for="data of tableTaxonomy"
         :key="data.data"
       >
-        {{ data.data }} <span class="text-yellow">{{ data.type }}</span>
+        {{ data.data }} <span class="text-green ml-5">{{ data.type }}</span>
       </li>
     </ul>
   </div>
