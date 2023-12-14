@@ -9,11 +9,11 @@ const transactions = [
   },
   {
     data: 'authorized_date',
-    type: 'string'
+    type: 'date'
   },
   {
     data: 'transaction_date',
-    type: 'string'
+    type: 'date'
   },
   {
     data: 'clean_merchant_name',
@@ -49,7 +49,7 @@ const transactions = [
   },
   {
     data: 'num_levels',
-    type: 'int32'
+    type: 'int'
   },
   {
     data: 'primary_personal_finance_category',
@@ -78,7 +78,10 @@ const transactions = [
 ]
 
 const demographics = [
-  { data: 'userid', type: 'string' },
+  {
+    data: 'userid',
+    type: 'string'
+  },
   {
     data: 'ipaddress',
     type: 'string'
@@ -89,7 +92,7 @@ const demographics = [
   },
   {
     data: 'estimated_age',
-    type: 'int32'
+    type: 'int'
   },
   {
     data: 'age_range',
@@ -116,7 +119,7 @@ const demographics = [
     type: 'string'
   },
   {
-    data: 'user_zip',
+    data: 'user_zip_sha256',
     type: 'string'
   },
   {
@@ -124,12 +127,16 @@ const demographics = [
     type: 'string'
   },
   {
-    data: 'presence_of_children',
+    data: 'user_state_abbrev',
     type: 'string'
   },
   {
+    data: 'presence_of_children',
+    type: 'boolean'
+  },
+  {
     data: 'quant_of_children',
-    type: 'int32'
+    type: 'int'
   },
   {
     data: 'education',
@@ -141,7 +148,7 @@ const demographics = [
   },
   {
     data: 'hh_size',
-    type: 'int32'
+    type: 'int'
   },
   {
     data: 'marital_status',
@@ -158,14 +165,17 @@ const demographics = [
 ]
 
 const receipts = [
-  { data: 'userid', type: 'string' },
   {
-    data: 'receiptID',
+    data: 'userid',
+    type: 'string'
+  },
+  {
+    data: 'receiptid',
     type: 'string'
   },
   {
     data: 'receipt_date',
-    type: 'string'
+    type: 'date'
   },
   {
     data: 'merchant_name',
@@ -209,7 +219,7 @@ const receipts = [
   },
   {
     data: 'quantity',
-    type: 'int32'
+    type: 'int'
   },
   {
     data: 'unit_price',
