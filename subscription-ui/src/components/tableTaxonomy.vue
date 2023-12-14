@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { demographics, transactions, receipts } from '../interfaces/TablesTaxonomies'
+import { demographics, transactions, receipts } from '../interfaces/TableTaxonomies'
 
 const props = defineProps({
   tableTitle: {
