@@ -18,6 +18,10 @@ const props = defineProps({
   table: {
     type: String,
     required: false
+  },
+  datafield: {
+    type: String,
+    required: false
   }
 })
 
@@ -278,61 +282,15 @@ const submitQuery = () => {
         size: 'Large',
         upc: '987654321098'
       },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      }
     ]
   }
   emits('update', exampleJson)
 }
 
 watch(
-  () => props.table,
+  () => props.datafield,
   (newValue) => {
-    editorMonaco.setValue(`SELECT * FROM ${newValue?.toUpperCase()}`)
+    editorMonaco.setValue(editorMonaco.getValue() + ' ' + newValue)
   }
 )
 

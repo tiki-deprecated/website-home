@@ -23,28 +23,28 @@ const remWidth = computed(() => {
 })
 
 const resize = (e: MouseEvent) => {
-
   if(!isResized.value) return
-
 
   panelWidth.value = panelWidth.value + e.movementX / 2
 }
 
-const isResized = ref<boolean>(false)
+const isResized = ref<boolean>(false);
+
+const datafield = ref<string>();
 </script>
 
 <template >
   <div class="w-full h-screen grid" @mousemove="resize" @mouseup="isResized = false">
     <div class="flex mx-10">
-      <div class="mt-5" :style="{ width: remWidth }" v-if="panelWidth > 300">
+      <div class="mt-5" :style="{ width: remWidth }" v-if="panelWidth > 256">
         <div class="flex-col">
           <cleanroom-select @update="(newValue) => (selectedTable = newValue)" @close="panelWidth = 299"/>
-          <table-taxonomy :tableTitle="selectedTable" />
+          <table-taxonomy @insert="(value) => datafield = value"/>
         </div>
       </div>
       <div class="w-1 bg-light-gray cursor-col-resize shadow-md border-left border-solid border-black" @mousedown="isResized = true" ></div>
       <div class="grow px-8 mt-5">
-        <query-editor :table="selectedTable" @update="updateInfo" />
+        <query-editor :table="selectedTable" @update="updateInfo" :datafield="datafield"/>
         <info-buttons
           @cost="infoState = 'cost'"
           @sample="infoState = 'sample'"
