@@ -1,37 +1,58 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
 import { demographics, transactions, receipts } from '../interfaces/TableTaxonomies'
 
-const props = defineProps({
-  tableTitle: {
-    type: String,
-    required: false
+const tables = ['demographics', 'receipts', 'transactions']
+
+const checkTable = (table: string) => {
+  switch (table) {
+    case 'demographics':
+      return demographics
+    case 'receipts':
+      return receipts
+    case 'transactions':
+      return transactions
   }
-})
-
-const tableTaxonomy = ref()
-
-watch(()=> props.tableTitle, (newValue)=>{
-  newValue === 'Demographics'
-    ? tableTaxonomy.value = demographics
-    : newValue === 'Receipts'
-      ? tableTaxonomy.value =  receipts
-      : tableTaxonomy.value = transactions
-})
-
+}
 </script>
 
 <template>
   <div class="mt-10">
-    <h2 class="text-blue text-3xl underline">{{ tableTitle }}</h2>
-    <ul v-if="tableTitle">
-      <li
-        class="mt-2 w-60 flex justify-between text-blue"
-        v-for="data of tableTaxonomy"
-        :key="data.data"
-      >
-        {{ data.data }} <span class="text-green ml-5">{{ data.type }}</span>
-      </li>
-    </ul>
+    <h1 class="text-2xl text-blue">Tables</h1>
+    <details v-for="table in tables" class="w-3/4">
+      <summary class="flex justify-between text-blue text-xl capitalize my-2">
+        {{ table }}
+        <span></span>
+      </summary>
+      <ul>
+        <li
+          class="has-tooltip mt-2 w-full flex justify-between text-blue cursor-pointer"
+          v-for="data of checkTable(table)"
+          :key="data.data"
+          @dblclick="$emit('insert', data.data)"
+        >
+          {{ data.data }} <span class="text-green ml-5">{{ data.type }}</span>
+        </li>
+      </ul>
+    </details>
   </div>
 </template>
+
+<style scoped>
+summary {
+  cursor: pointer;
+}
+
+details[open] summary span::before {
+  content: '-';
+}
+
+details summary span::before {
+  content: '+';
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+}
+
+</style>
