@@ -4,7 +4,7 @@ import queryEditor from './components/queryEditor.vue'
 import queryInfo from './components/queryInfo.vue'
 import infoButtons from './components/infoButtons.vue'
 import tableTaxonomy from './components/tableTaxonomy.vue'
-import tableSelect from './components/tableSelect.vue'
+import cleanroomSelect from './components/cleanroomSelect.vue'
 import type { QueryInfo } from './interfaces/QueryInfo'
 
 const selectedTable = ref<string>()
@@ -38,7 +38,7 @@ const isResized = ref<boolean>(false)
     <div class="flex mx-10">
       <div class="mt-5" :style="{ width: remWidth }" v-if="panelWidth > 300">
         <div class="flex-col">
-          <table-select @update="(newValue) => (selectedTable = newValue)" @close="panelWidth = 299"/>
+          <cleanroom-select @update="(newValue) => (selectedTable = newValue)" @close="panelWidth = 299"/>
           <table-taxonomy :tableTitle="selectedTable" />
         </div>
       </div>
