@@ -27,7 +27,7 @@ const error = ref<string>()
           class="bg-white flex-col gap-6 flex justify-center items-center relative overflow-hidden rounded-lg text-left shadow-xl transition-all px-12 w-[80vw] h-[80vh]"
         >
           <img src="../assets/images/pineapple_rounded.svg" alt="" class="w-32" />
-          <h1 class="text-3xl">Hey! Thanks for choose TIKI</h1>
+          <h1 class="text-3xl">Hey! Thanks for choosing TIKI!</h1>
           <p>
             Before you can generate an estimate, we need your auth token to make it happen.
             <a href="https://mytiki.com/reference/intro/authentication" target="_blank" class="text-green">Click here to get it.</a>
