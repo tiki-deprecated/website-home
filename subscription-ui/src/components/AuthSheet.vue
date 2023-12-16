@@ -34,7 +34,7 @@ const error = ref<string>()
           </p>
           <input
             type="text"
-            class="border border-solid border-dark-gray/20 rounded-lg px-4 py-1"
+            class="border border-solid border-dark-gray/20 rounded-lg px-4 py-1.5"
             placeholder="Paste your token here..."
             v-model="token"
             @keydown="error = ''"
