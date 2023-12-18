@@ -321,12 +321,12 @@ const tableName = ref<string>();
   <div @mousemove="resize" @mouseup="isResized = false" class="flex flex-col">
     <div id="editor" ref="editor" class="h-60 w-full" :style="{ height: remHeight }"></div>
     <div class="w-full bg-black h-1 cursor-row-resize" @mousedown="isResized = true"></div>
-    <div class="flex justify-between mt-5">
+    <div class="flex justify-between mt-5 items-center">
       <div class="flex flex-col">
         <label >Table's Name</label>
         <input v-model="tableName" type="text" class="border border-solid border-dark-gray/40 rounded-lg px-4 py-1.5" placeholder="Ex.: Starbucks Table">
       </div>
-      <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery">
+      <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery" :disabled="tableName?.length === 0" :class="tableName?.length === 0 ? 'bg-green/50' : ''">
         Estimate Cost
       </button>
     </div>
