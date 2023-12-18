@@ -1,4 +1,6 @@
 import {type Cleanroom} from "../interfaces/Cleanroom"
+import { type Estimate } from "@/interfaces/Estimate"
+import { type SubscriptionType } from "@/interfaces/Subscription"
 
 export class Subscription {
   async getCleanrooms(token: string): Promise<Cleanroom[]> {
@@ -15,19 +17,31 @@ export class Subscription {
     return (await fetch('https://account.mytiki.com/api/latest/cleanroom', options)).json()
   }
 
-  async estimate(name: string, query: string, id: string) {
+  async estimate(name: string, query: string, id: string, token: string): Promise<Estimate>{
     const options = {
       method: 'POST',
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
         authorization:
-          'Bearer token'
+          'Bearer ' + token
       },
       body: JSON.stringify({ name: name, query: query, cleanroomId: id })
     }
 
-    const response = await fetch('https://account.mytiki.com/api/latest/subscription', options)
+    return (await (fetch('https://account.mytiki.com/api/latest/subscription', options))).json()
+  }
+
+  async getSubscription(id: string, token: string): Promise<SubscriptionType>  {
+    const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        authorization: 'Bearer ' + token
+      }
+    };
+    
+    return (await (fetch('https://account.mytiki.com/api/latest/subscription/' + id, options))).json()
   }
 
   async subscribe(subscriptionId: string) {
