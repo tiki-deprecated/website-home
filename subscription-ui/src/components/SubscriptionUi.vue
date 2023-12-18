@@ -31,6 +31,8 @@ const resize = (e: MouseEvent) => {
 const isResized = ref<boolean>(false)
 
 const datafield = ref<string>()
+
+const tableName = ref<string>()
 </script>
 
 <template>
@@ -42,7 +44,7 @@ const datafield = ref<string>()
             @update="(newValue: string) => (cleanroomId = newValue)"
             @close="panelWidth = 299"
           />
-          <table-taxonomy @insert="(value:string) => (datafield = value)" />
+          <table-taxonomy @insert="(value:string) => (datafield = value)" @update="(table:string)=> tableName = table"/>
         </div>
       </div>
       <div
@@ -50,7 +52,7 @@ const datafield = ref<string>()
         @mousedown="isResized = true"
       ></div>
       <div class="grow px-8 mt-5">
-        <query-editor @update="updateInfo" :datafield="datafield" :cleanroomId="cleanroomId!"/>
+        <query-editor @update="updateInfo" :datafield="datafield" :cleanroomId="cleanroomId!" :table="tableName"/>
         <info-buttons
           @cost="infoState = 'cost'"
           @sample="infoState = 'sample'"
