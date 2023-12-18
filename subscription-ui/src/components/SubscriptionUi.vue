@@ -7,7 +7,7 @@ import tableTaxonomy from './tableTaxonomy.vue'
 import cleanroomSelect from './cleanroomSelect.vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
 
-const selectedTable = ref<string>()
+const cleanroomId = ref<string>()
 const infoState = ref<string>()
 const info = ref<QueryInfo>()
 
@@ -39,7 +39,7 @@ const datafield = ref<string>()
       <div class="mt-5" :style="{ width: remWidth }" v-if="panelWidth > 256">
         <div class="flex-col">
           <cleanroom-select
-            @update="(newValue: string) => (selectedTable = newValue)"
+            @update="(newValue: string) => (cleanroomId = newValue)"
             @close="panelWidth = 299"
           />
           <table-taxonomy @insert="(value:string) => (datafield = value)" />
@@ -50,7 +50,7 @@ const datafield = ref<string>()
         @mousedown="isResized = true"
       ></div>
       <div class="grow px-8 mt-5">
-        <query-editor :table="selectedTable" @update="updateInfo" :datafield="datafield" />
+        <query-editor @update="updateInfo" :datafield="datafield" :cleanroomId="cleanroomId!"/>
         <info-buttons
           @cost="infoState = 'cost'"
           @sample="infoState = 'sample'"

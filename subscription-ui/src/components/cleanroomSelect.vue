@@ -1,40 +1,29 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-const selectedTable = ref<string>()
+import { onMounted, ref } from 'vue'
+import { Subscription } from '../subscription/index'
+import {type Cleanroom} from "../interfaces/Cleanroom"
+
+
+const subscription = new Subscription()
+
+const token = sessionStorage.getItem('authToken')
+
+let cleanrooms: Cleanroom[]
+
+onMounted(async () => {
+  cleanrooms = await subscription.getCleanrooms(token!)
+})
+
 const emit = defineEmits(['update', 'close'])
-watch(
-  () => selectedTable.value,
-  (newValue) => {
-    emit('update', newValue)
-  }
-)
 
-const isShowMenu = ref<boolean>(false);
+const isShowMenu = ref<boolean>(false)
 
-const cleanroom = ref();
+const cleanroom = ref()
 
-const clearoomList = [
-  {
-    cleanroom_name: 'starbucks1',
-    id: 'masidajsdu10932x'
-  },
-  {
-    cleanroom_name: 'starbucks2',
-    id: '54fmasidajsdu10932x'
-  },
-  {
-    cleanroom_name: 'starbucks3',
-    id: 'g68masidajsdu10932x'
-  },
-  {
-    cleanroom_name: 'starbucks4',
-    id: 'x312masidajsdu10932x'
-  },
-]
-
-const selectCleanroom = (selectedCleanroom: object)=>{
+const selectCleanroom = (selectedCleanroom: Cleanroom) => {
   cleanroom.value = selectedCleanroom
   isShowMenu.value = false
+  emit('update', selectedCleanroom.cleanroomId)
 }
 </script>
 
@@ -49,7 +38,7 @@ const selectCleanroom = (selectedCleanroom: object)=>{
         aria-haspopup="true"
         @click="isShowMenu = !isShowMenu"
       >
-      {{cleanroom ? cleanroom.cleanroom_name : 'Select a Cleanroom'}}
+        {{ cleanroom ? cleanroom.description : 'Select a Cleanroom' }}
         <svg
           class="-mr-1 h-5 w-5 text-gray-400"
           viewBox="0 0 20 20"
@@ -77,12 +66,14 @@ const selectCleanroom = (selectedCleanroom: object)=>{
           role="menuitem"
           tabindex="-1"
           id="menu-item-0"
-          v-for="cleanroom in clearoomList"
-          :key="cleanroom.id"
+          v-for="cleanroom in cleanrooms"
+          :key="cleanroom.cleanroomId"
           @click="selectCleanroom(cleanroom)"
         >
-          <span class="border border-solid border-dark-gray/10 bg-dark-gray/10   px-2 rounded-md">{{ cleanroom.cleanroom_name }} </span>
-          {{ cleanroom.id }}
+          <span class="flex items-center border border-solid border-dark-gray/10 bg-dark-gray/10 px-2 rounded-md"
+            >{{ cleanroom.description }}
+          </span>
+          {{ cleanroom.cleanroomId }}
         </li>
       </ul>
     </div>

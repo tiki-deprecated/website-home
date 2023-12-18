@@ -15,16 +15,15 @@ const editor = ref()
 const emits = defineEmits(['update'])
 
 const props = defineProps({
-  table: {
-    type: String,
-    required: false
-  },
   datafield: {
     type: String,
     required: false
+  },
+  cleanroomId: {
+    type: String,
+    required: true
   }
 })
-
 let editorMonaco: monaco.editor.IStandaloneCodeEditor
 
 onMounted(() => {
@@ -281,7 +280,7 @@ const submitQuery = () => {
         category_level3: 'Subcategory 4',
         size: 'Large',
         upc: '987654321098'
-      },
+      }
     ]
   }
   emits('update', exampleJson)
@@ -311,7 +310,7 @@ const isResized = ref<boolean>(false)
 
 <template>
   <div @mousemove="resize" @mouseup="isResized = false">
-    <div id="editor" ref="editor" class="h-60 w-full" :style="{height: remHeight}"></div>
+    <div id="editor" ref="editor" class="h-60 w-full" :style="{ height: remHeight }"></div>
     <div class="w-full bg-black h-1 cursor-row-resize" @mousedown="isResized = true"></div>
     <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery">
       Estimate Cost
