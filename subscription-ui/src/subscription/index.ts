@@ -1,17 +1,18 @@
+import {type Cleanroom} from "../interfaces/Cleanroom"
+
 export class Subscription {
-  async cleanroom(name: string) {
+  async getCleanrooms(token: string): Promise<Cleanroom[]> {
     const options = {
-      method: 'POST',
+      method: 'GET',
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
         authorization:
-          'Bearer token'
+          'Bearer ' + token
       },
-      body: JSON.stringify({ name: name })
     }
 
-    const response = await fetch('https://account.mytiki.com/api/latest/cleanroom', options)
+    return (await fetch('https://account.mytiki.com/api/latest/cleanroom', options)).json()
   }
 
   async estimate(name: string, query: string, id: string) {
