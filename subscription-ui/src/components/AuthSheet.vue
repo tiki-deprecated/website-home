@@ -33,7 +33,7 @@ const error = ref<string>()
             <a href="https://mytiki.com/reference/intro/authentication" target="_blank" class="text-green">Click here to get it.</a>
           </p>
           <input
-            type="text"
+            type="password"
             class="border border-solid border-dark-gray/20 rounded-lg px-4 py-1.5"
             placeholder="Paste your token here..."
             v-model="token"

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { demographics, transactions, receipts } from '../interfaces/TableTaxonomies'
+import { defineEmits } from 'vue';
 
 const tables = ['demographics', 'receipts', 'transactions']
 
+const emit = defineEmits(['insert', 'update'])
 const checkTable = (table: string) => {
   switch (table) {
     case 'demographics':
@@ -13,12 +15,16 @@ const checkTable = (table: string) => {
       return transactions
   }
 }
+
+const updateTable = (event: any)=>{
+  if(event.newState === 'open') emit('update', `tiki.${event.srcElement.id}`)
+}
 </script>
 
 <template>
   <div class="mt-10">
     <h1 class="text-2xl text-blue">Tables</h1>
-    <details v-for="table in tables" class="w-3/4">
+    <details v-for="table in tables" class="w-3/4" :id="table"  @toggle="updateTable">
       <summary class="flex justify-between text-blue text-xl capitalize my-2">
         {{ table }}
         <span></span>

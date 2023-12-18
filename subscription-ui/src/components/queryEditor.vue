@@ -22,6 +22,10 @@ const props = defineProps({
   cleanroomId: {
     type: String,
     required: true
+  }, 
+  table: {
+    type: String,
+    required: false
   }
 })
 let editorMonaco: monaco.editor.IStandaloneCodeEditor
@@ -284,37 +288,48 @@ const submitQuery = () => {
     ]
   }
   emits('update', exampleJson)
-}
+};
 
 watch(
-  () => props.datafield,
-  (newValue) => {
-    editorMonaco.setValue(editorMonaco.getValue() + ' ' + newValue)
+  () => [props.datafield, props.table],
+  ([newDataField, newTable], [oldDataField, oldTable]) => {
+    if(newDataField !== oldDataField) editorMonaco.setValue(editorMonaco.getValue() + ' ' + newDataField)
+    if(newTable !== oldTable) editorMonaco.setValue(editorMonaco.getValue() + ' ' + newTable)
   }
-)
+);
 
-const editorHeight = ref<number>(240)
+
+
+const editorHeight = ref<number>(240);
 
 const remHeight = computed(() => {
   return `${editorHeight.value / 16}rem`
-})
+});
 
 const resize = (e: MouseEvent) => {
   if (!isResized.value) return
 
   editorHeight.value = editorHeight.value + e.movementY / 2
-}
+};
 
-const isResized = ref<boolean>(false)
+const isResized = ref<boolean>(false);
+
+const tableName = ref<string>();
 </script>
 
 <template>
-  <div @mousemove="resize" @mouseup="isResized = false">
+  <div @mousemove="resize" @mouseup="isResized = false" class="flex flex-col">
     <div id="editor" ref="editor" class="h-60 w-full" :style="{ height: remHeight }"></div>
     <div class="w-full bg-black h-1 cursor-row-resize" @mousedown="isResized = true"></div>
-    <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery">
-      Estimate Cost
-    </button>
+    <div class="flex justify-between mt-5 items-center">
+      <div class="flex flex-col">
+        <label >Table's Name</label>
+        <input v-model="tableName" type="text" class="border border-solid border-dark-gray/40 rounded-lg px-4 py-1.5" placeholder="Ex.: Starbucks Table">
+      </div>
+      <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery" :disabled="tableName?.length === 0" :class="tableName?.length === 0 ? 'bg-green/50' : ''">
+        Estimate Cost
+      </button>
+    </div>
   </div>
 </template>
 
