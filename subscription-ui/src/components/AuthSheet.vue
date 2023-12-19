@@ -34,7 +34,7 @@ const error = ref<string>()
     <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
       <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
         <div
-          class="bg-white flex-col gap-6 flex justify-center items-center relative overflow-hidden rounded-lg text-left shadow-xl transition-all px-12 w-[80vw] h-[80vh]"
+          class="bg-white flex-col gap-3 flex justify-center items-center relative overflow-hidden rounded-lg text-left shadow-xl transition-all px-12 w-[80vw] h-[80vh]"
         >
           <img src="../assets/images/pineapple_rounded.svg" alt="" class="w-32" />
           <h1 class="text-3xl">Hey! Thanks for choosing TIKI!</h1>
@@ -54,9 +54,9 @@ const error = ref<string>()
             v-model="token"
             @keydown="error = ''"
           />
-          <p v-if="error" class="text-red text-sm font-normal">{{ error }}</p>
+          <p v-show="error" class="text-red text-sm font-normal">{{ error }}</p>
           <button
-            class="border py-2 bg-green rounded-xl w-60 text-white hover:bg-green/70"
+            class="border py-2 bg-green rounded-xl w-60 text-white hover:bg-green/70 mt-"
             @click="submit"
             :disabled="!token"
             :class="!token ? 'bg-green/50' : ''"
