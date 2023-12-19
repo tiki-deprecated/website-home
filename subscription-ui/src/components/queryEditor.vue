@@ -4,7 +4,6 @@ import * as monaco from 'monaco-editor'
 import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution'
 import TrinoSQLWorker from 'monaco-sql-languages/out/esm/trinosql/trinosql.worker?worker'
 import { Subscription } from '../subscription/index'
-import { type Estimate } from '@/interfaces/Estimate'
 import { type SubscriptionType } from '@/interfaces/Subscription'
 
 self.MonacoEnvironment = {

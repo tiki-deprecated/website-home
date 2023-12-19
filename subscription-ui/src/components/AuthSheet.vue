@@ -11,7 +11,7 @@ const submit = async () => {
   if (token.value !== undefined && token.value !== '') {
     const response: ProfileInfo = await subscription.validate(token.value)
     if (!response.orgId && !response.userId) {
-      error.value = 'Incorrect Token'
+      error.value = 'Invalid auth token'
       return
     }
     sessionStorage.setItem('userId', response.userId)
@@ -54,6 +54,7 @@ const error = ref<string>()
             v-model="token"
             @keydown="error = ''"
           />
+          <p v-if="error" class="text-red text-sm font-normal">{{ error }}</p>
           <button
             class="border py-2 bg-green rounded-xl w-60 text-white hover:bg-green/70"
             @click="submit"
@@ -62,7 +63,6 @@ const error = ref<string>()
           >
             Continue
           </button>
-          <p v-if="error" class="text-red text-sm font-normal">{{ error }}</p>
         </div>
       </div>
     </div>
