@@ -3,6 +3,9 @@ import { ref, onMounted, watch, computed } from 'vue'
 import * as monaco from 'monaco-editor'
 import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution'
 import TrinoSQLWorker from 'monaco-sql-languages/out/esm/trinosql/trinosql.worker?worker'
+import { Subscription } from '../subscription/index'
+import { type Estimate } from '@/interfaces/Estimate'
+import { type SubscriptionType } from '@/interfaces/Subscription'
 
 self.MonacoEnvironment = {
   getWorker(_: any, label: string) {
@@ -10,24 +13,6 @@ self.MonacoEnvironment = {
   }
 }
 
-const editor = ref()
-
-const emits = defineEmits(['update'])
-
-const props = defineProps({
-  datafield: {
-    type: String,
-    required: false
-  },
-  cleanroomId: {
-    type: String,
-    required: true
-  }, 
-  table: {
-    type: String,
-    required: false
-  }
-})
 let editorMonaco: monaco.editor.IStandaloneCodeEditor
 
 onMounted(() => {
@@ -42,279 +27,80 @@ onMounted(() => {
   })
 })
 
-const submitQuery = () => {
+const props = defineProps({
+  datafield: {
+    type: String,
+    required: false
+  },
+  cleanroomId: {
+    type: String,
+    required: true
+  },
+  table: {
+    type: String,
+    required: false
+  }
+})
+
+const editor = ref()
+
+const emits = defineEmits(['update', 'loading' ])
+
+const subscription = new Subscription()
+
+const token = sessionStorage.getItem('authToken')
+
+const submitQuery = async () => {
+  emits('loading', true)
   let query = editorMonaco.getValue()
 
-  if (query.endsWith(';')) {
-    query = query.slice(0, -1)
-  }
-  console.log(query)
+  if (query.endsWith(';')) query = query.slice(0, -1)
 
-  // fetch using this value
-  const exampleJson = {
-    costs: '$3,000 - $4,000/month',
-    stats: ['700k Users', '1,5M Records', '2 Publishers'],
-    sample: [
-      {
-        userid: 'usr123',
-        receiptID: 'rec456',
-        receipt_date: '2023-11-28',
-        merchant_name: 'Store ABC',
-        merchant_address: '123 Main St',
-        merchant_city: 'Exampleville',
-        merchant_state: 'XY',
-        merchant_zip: '12345',
-        channel: 'Online',
-        amount: 55.67,
-        brand: 'Brand XYZ',
-        product_name: 'Product One',
-        product_description: 'Description for Product One',
-        quantity: 2,
-        unit_price: 25.99,
-        total_price: 51.98,
-        category_level1: 'Category A',
-        category_level2: 'Subcategory 1',
-        category_level3: 'Subcategory 2',
-        size: 'Medium',
-        upc: '123456789012'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      },
-      {
-        userid: 'usr456',
-        receiptID: 'rec789',
-        receipt_date: '2023-11-27',
-        merchant_name: 'Shop XYZ',
-        merchant_address: '456 Oak St',
-        merchant_city: 'New Town',
-        merchant_state: 'AB',
-        merchant_zip: '54321',
-        channel: 'In-store',
-        amount: 79.99,
-        brand: 'Brand ABC',
-        product_name: 'Product Two',
-        product_description: 'Description for Product Two',
-        quantity: 1,
-        unit_price: 79.99,
-        total_price: 79.99,
-        category_level1: 'Category B',
-        category_level2: 'Subcategory 3',
-        category_level3: 'Subcategory 4',
-        size: 'Large',
-        upc: '987654321098'
-      }
-    ]
+  const estimateResponse: SubscriptionType = await subscription.estimate(
+    tableName.value!,
+    query,
+    props.cleanroomId,
+    token!
+  )
+  if(!estimateResponse) return emits('loading', false)
+
+  const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
+
+  const total = estimateResponse.count[0].total?.toLocaleString()
+
+  const infoJson = {
+    costs: `$${costs}/month`,
+    stats: [`${total} Records`],
+    sample: estimateResponse.sample[0].records
   }
-  emits('update', exampleJson)
-};
+  emits('update', infoJson)
+  emits('loading', false)
+}
 
 watch(
   () => [props.datafield, props.table],
   ([newDataField, newTable], [oldDataField, oldTable]) => {
-    if(newDataField !== oldDataField) editorMonaco.setValue(editorMonaco.getValue() + ' ' + newDataField)
-    if(newTable !== oldTable) editorMonaco.setValue(editorMonaco.getValue() + ' ' + newTable)
+    if (newDataField !== oldDataField)
+      editorMonaco.setValue(editorMonaco.getValue() + ' ' + newDataField)
+    if (newTable !== oldTable) editorMonaco.setValue(editorMonaco.getValue() + ' ' + newTable)
   }
-);
+)
 
-
-
-const editorHeight = ref<number>(240);
+const editorHeight = ref<number>(240)
 
 const remHeight = computed(() => {
   return `${editorHeight.value / 16}rem`
-});
+})
 
 const resize = (e: MouseEvent) => {
   if (!isResized.value) return
 
   editorHeight.value = editorHeight.value + e.movementY / 2
-};
+}
 
-const isResized = ref<boolean>(false);
+const isResized = ref<boolean>(false)
 
-const tableName = ref<string>();
+const tableName = ref<string>()
 </script>
 
 <template>
@@ -323,10 +109,20 @@ const tableName = ref<string>();
     <div class="w-full bg-black h-1 cursor-row-resize" @mousedown="isResized = true"></div>
     <div class="flex justify-between mt-5 items-center">
       <div class="flex flex-col">
-        <label >Table's Name</label>
-        <input v-model="tableName" type="text" class="border border-solid border-dark-gray/40 rounded-lg px-4 py-1.5" placeholder="Ex.: Starbucks Table">
+        <label>Table's Name</label>
+        <input
+          v-model="tableName"
+          type="text"
+          class="border border-solid border-dark-gray/40 rounded-lg px-4 py-1.5"
+          placeholder="Ex.: Starbucks Table"
+        />
       </div>
-      <button class="border py-3 bg-green rounded-md w-60 text-white mt-5" @click="submitQuery" :disabled="tableName?.length === 0" :class="tableName?.length === 0 ? 'bg-green/50' : ''">
+      <button
+        class="border py-3 bg-green rounded-md w-60 text-white mt-5"
+        @click="submitQuery"
+        :disabled="!tableName || !cleanroomId"
+        :class="!tableName || !cleanroomId ? 'bg-green/50' : ''"
+      >
         Estimate Cost
       </button>
     </div>

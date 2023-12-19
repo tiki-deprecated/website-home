@@ -6,6 +6,7 @@ import infoButtons from './infoButtons.vue'
 import tableTaxonomy from './tableTaxonomy.vue'
 import cleanroomSelect from './cleanroomSelect.vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
+import LoadingScreen from './LoadingScreen.vue'
 
 const cleanroomId = ref<string>()
 const infoState = ref<string>()
@@ -33,10 +34,12 @@ const isResized = ref<boolean>(false)
 const datafield = ref<string>()
 
 const tableName = ref<string>()
+
+const isLoading = ref<boolean>(false)
 </script>
 
 <template>
-  <div class="w-full h-screen grid" @mousemove="resize" @mouseup="isResized = false">
+  <div class="w-full h-screen grid absolute" @mousemove="resize" @mouseup="isResized = false">
     <div class="flex mx-10">
       <div class="mt-5" :style="{ width: remWidth }" v-if="panelWidth > 256">
         <div class="flex-col">
@@ -44,7 +47,10 @@ const tableName = ref<string>()
             @update="(newValue: string) => (cleanroomId = newValue)"
             @close="panelWidth = 299"
           />
-          <table-taxonomy @insert="(value:string) => (datafield = value)" @update="(table:string)=> tableName = table"/>
+          <table-taxonomy
+            @insert="(value: string) => (datafield = value)"
+            @update="(table: string) => (tableName = table)"
+          />
         </div>
       </div>
       <div
@@ -52,7 +58,13 @@ const tableName = ref<string>()
         @mousedown="isResized = true"
       ></div>
       <div class="grow px-8 mt-5">
-        <query-editor @update="updateInfo" :datafield="datafield" :cleanroomId="cleanroomId!" :table="tableName"/>
+        <query-editor
+          @update="updateInfo"
+          :datafield="datafield"
+          :cleanroomId="cleanroomId!"
+          :table="tableName"
+          @loading="(value: boolean) => (isLoading = value)"
+        />
         <info-buttons
           @cost="infoState = 'cost'"
           @sample="infoState = 'sample'"
@@ -63,4 +75,5 @@ const tableName = ref<string>()
       </div>
     </div>
   </div>
+  <loading-screen v-if="isLoading" />
 </template>
