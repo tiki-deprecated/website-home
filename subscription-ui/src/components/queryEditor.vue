@@ -68,6 +68,7 @@ const submitQuery = async () => {
   const total = estimateResponse.count[0].total?.toLocaleString()
 
   const infoJson = {
+    subscriptionId: estimateResponse.subscriptionId,
     costs: `$${costs}/month`,
     stats: [`${total} Records`],
     sample: estimateResponse.sample[0].records

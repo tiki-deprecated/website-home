@@ -95,18 +95,18 @@ export class Subscription {
     return (await fetch('https://account.mytiki.com/api/latest/subscription/' + id, options)).json()
   }
 
-  async subscribe(subscriptionId: string) {
+  async subscribe(subscriptionId: string, token: string): Promise<SubscriptionType> {
     const options = {
       method: 'POST',
       headers: {
         accept: 'application/json',
-        authorization: 'Bearer token'
+        authorization: 'Bearer ' + token
       }
     }
 
-    const response = await fetch(
+    return (await fetch(
       `https://account.mytiki.com/api/latest/subscription/${subscriptionId}/purchase`,
       options
-    )
+    )).json()
   }
 }
