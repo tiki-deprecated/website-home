@@ -44,71 +44,40 @@ const props = defineProps({
 
 const editor = ref()
 
-const emits = defineEmits(['update'])
+const emits = defineEmits(['update', 'loading' ])
 
 const subscription = new Subscription()
 
 const token = sessionStorage.getItem('authToken')
 
 const submitQuery = async () => {
+  emits('loading', true)
   let query = editorMonaco.getValue()
+  console.log(query)
 
   if (query.endsWith(';')) query = query.slice(0, -1)
 
-  const estimateResponse: Estimate = await subscription.estimate(
+  const estimateResponse: SubscriptionType = await subscription.estimate(
     tableName.value!,
     query,
     props.cleanroomId,
     token!
   )
+  console.log('vue method:', estimateResponse)
+  if(!estimateResponse) return emits('loading', false)
 
-  if (!estimateResponse.subscriptionId) return
+  const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
 
-  console.log('estimate response:', estimateResponse)
-
-  let getSubscriptionResponse: SubscriptionType = await subscription.getSubscription(
-    estimateResponse.subscriptionId,
-    token!
-  )
-  console.log('get subscription response:', getSubscriptionResponse)
-
-  let count = 10
-
-  await new Promise((resolve) => {
-    let interval = setInterval(async () => {
-      count--
-      getSubscriptionResponse = await subscription.getSubscription(
-        estimateResponse.subscriptionId,
-        token!
-      )
-      console.log('interval', getSubscriptionResponse.count, getSubscriptionResponse.sample)
-      if (
-        count === 0 ||
-        (getSubscriptionResponse.count[0].status === 'success' &&
-          getSubscriptionResponse.sample[0].status === 'success')
-      ) {
-        resolve('')
-        clearInterval(interval)
-      }
-    }, 10000)
-  })
-
-  if (
-    getSubscriptionResponse.count[0].status !== 'success' ||
-    getSubscriptionResponse.sample[0].status !== 'success'
-  ) return 
-  
-  const costs = (getSubscriptionResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
-
-  const total = getSubscriptionResponse.count[0].total?.toLocaleString()
+  const total = estimateResponse.count[0].total?.toLocaleString()
 
   console.log(costs)
-  const exampleJson = {
+  const infoJson = {
     costs: `$${costs}/month`,
     stats: [`${total} Records`],
-    sample: getSubscriptionResponse.sample[0].records
+    sample: estimateResponse.sample[0].records
   }
-  emits('update', exampleJson)
+  emits('update', infoJson)
+  emits('loading', false)
 }
 
 watch(

@@ -1,6 +1,5 @@
-import {type Cleanroom} from "../interfaces/Cleanroom"
-import { type Estimate } from "@/interfaces/Estimate"
-import { type SubscriptionType } from "@/interfaces/Subscription"
+import { type Cleanroom } from '../interfaces/Cleanroom'
+import { type SubscriptionType } from '@/interfaces/Subscription'
 
 export class Subscription {
   async getCleanrooms(token: string): Promise<Cleanroom[]> {
@@ -9,39 +8,83 @@ export class Subscription {
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
-        authorization:
-          'Bearer ' + token
-      },
+        authorization: 'Bearer ' + token
+      }
     }
 
     return (await fetch('https://account.mytiki.com/api/latest/cleanroom', options)).json()
   }
 
-  async estimate(name: string, query: string, id: string, token: string): Promise<Estimate>{
+  async estimate(
+    name: string,
+    query: string,
+    id: string,
+    token: string
+  ): Promise<SubscriptionType> {
     const options = {
       method: 'POST',
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
-        authorization:
-          'Bearer ' + token
+        authorization: 'Bearer ' + token
       },
       body: JSON.stringify({ name: name, query: query, cleanroomId: id })
     }
 
-    return (await (fetch('https://account.mytiki.com/api/latest/subscription', options))).json()
+    const estimateResponse: SubscriptionType = await (
+      await fetch('https://account.mytiki.com/api/latest/subscription', options)
+    ).json()
+
+    if (!estimateResponse.subscriptionId) throw new Error('Failure to create an estimate')
+
+    console.log('estimate response:', estimateResponse)
+
+    let getSubscriptionResponse: SubscriptionType = await this.getSubscription(
+      estimateResponse.subscriptionId,
+      token!
+    )
+    console.log('get subscription response:', getSubscriptionResponse)
+
+    let count = 10
+
+    await new Promise((resolve) => {
+      let interval = setInterval(async () => {
+        count--
+        getSubscriptionResponse = await this.getSubscription(
+          estimateResponse.subscriptionId,
+          token!
+        )
+        console.log('interval', getSubscriptionResponse.count, getSubscriptionResponse.sample)
+        if (
+          count === 0 ||
+          (getSubscriptionResponse.count[0].status === 'success' &&
+            getSubscriptionResponse.sample[0].status === 'success')
+        ) {
+          resolve('')
+          clearInterval(interval)
+        }
+      }, 10000)
+    })
+
+    if (
+      getSubscriptionResponse.count[0].status !== 'success' ||
+      getSubscriptionResponse.sample[0].status !== 'success'
+    )
+      throw new Error('Failure to consult the estimate')
+
+    return getSubscriptionResponse
   }
 
-  async getSubscription(id: string, token: string): Promise<SubscriptionType>  {
+  async getSubscription(id: string, token: string): Promise<SubscriptionType> {
     const options = {
       method: 'GET',
       headers: {
         accept: 'application/json',
         authorization: 'Bearer ' + token
       }
-    };
-    
-    return (await (fetch('https://account.mytiki.com/api/latest/subscription/' + id, options))).json()
+    }
+
+    return (await fetch('https://account.mytiki.com/api/latest/subscription/' + id, options)).json()
   }
 
   async subscribe(subscriptionId: string) {
@@ -49,8 +92,7 @@ export class Subscription {
       method: 'POST',
       headers: {
         accept: 'application/json',
-        authorization:
-          'Bearer token'
+        authorization: 'Bearer token'
       }
     }
 
