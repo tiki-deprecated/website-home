@@ -1,7 +1,19 @@
 import { type Cleanroom } from '../interfaces/Cleanroom'
 import { type SubscriptionType } from '@/interfaces/Subscription'
+import { type ProfileInfo } from '@/interfaces/ProfileInfo'
 
 export class Subscription {
+  async validate(token: string): Promise<ProfileInfo> {
+    const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        authorization: 'Bearer ' + token
+      }
+    }
+
+    return (await fetch('https://account.mytiki.com/api/latest/profile', options)).json()
+  }
   async getCleanrooms(token: string): Promise<Cleanroom[]> {
     const options = {
       method: 'GET',
@@ -36,7 +48,6 @@ export class Subscription {
     ).json()
 
     if (!estimateResponse.subscriptionId) throw new Error('Failure to create an estimate')
-
 
     let getSubscriptionResponse: SubscriptionType = await this.getSubscription(
       estimateResponse.subscriptionId,
