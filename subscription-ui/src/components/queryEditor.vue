@@ -53,7 +53,6 @@ const token = sessionStorage.getItem('authToken')
 const submitQuery = async () => {
   emits('loading', true)
   let query = editorMonaco.getValue()
-  console.log(query)
 
   if (query.endsWith(';')) query = query.slice(0, -1)
 
@@ -63,14 +62,12 @@ const submitQuery = async () => {
     props.cleanroomId,
     token!
   )
-  console.log('vue method:', estimateResponse)
   if(!estimateResponse) return emits('loading', false)
 
   const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
 
   const total = estimateResponse.count[0].total?.toLocaleString()
 
-  console.log(costs)
   const infoJson = {
     costs: `$${costs}/month`,
     stats: [`${total} Records`],

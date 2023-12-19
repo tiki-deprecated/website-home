@@ -37,13 +37,11 @@ export class Subscription {
 
     if (!estimateResponse.subscriptionId) throw new Error('Failure to create an estimate')
 
-    console.log('estimate response:', estimateResponse)
 
     let getSubscriptionResponse: SubscriptionType = await this.getSubscription(
       estimateResponse.subscriptionId,
       token!
     )
-    console.log('get subscription response:', getSubscriptionResponse)
 
     let count = 10
 
@@ -54,7 +52,6 @@ export class Subscription {
           estimateResponse.subscriptionId,
           token!
         )
-        console.log('interval', getSubscriptionResponse.count, getSubscriptionResponse.sample)
         if (
           count === 0 ||
           (getSubscriptionResponse.count[0].status === 'success' &&
