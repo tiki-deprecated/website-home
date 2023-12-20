@@ -80,7 +80,7 @@ watch(
   }
 )
 
-const editorHeight = ref<number>(240)
+const editorHeight = ref<number>(550)
 
 const remHeight = computed(() => {
   return `${editorHeight.value / 16}rem`

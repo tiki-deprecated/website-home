@@ -57,6 +57,7 @@ export class Subscription {
     let count = 10
 
     await new Promise((resolve) => {
+      console.log(count)
       let interval = setInterval(async () => {
         count--
         getSubscriptionResponse = await this.getSubscription(

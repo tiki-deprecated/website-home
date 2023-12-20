@@ -1,18 +1,27 @@
 <script setup lang="ts">
+import type { PropType } from 'vue';
 
-defineProps({
+
+const props = defineProps({
   cost: {
     type: String, 
-    required: false,
+    required: true,
+  },
+  records: {
+    type: Object as PropType<string[]>,
+    required: true
   }
 })
+
+console.log(props.records)
+
 </script>
 
 <template>
-  <div class="flex flex-col text-lg" v-if="cost">
+  <div class="flex flex-col text-lg" v-if="cost && records">
     <p>The estimated cost to subscribe</p>
     <p>
-      to this dataset is: <span class="text-green underline"> {{ cost }} </span>
+      to this dataset with <span class="text-green underline">{{ records[0] }}</span> is: <span class="text-green underline"> {{ cost }} </span>
     </p>
   </div>
 </template>
