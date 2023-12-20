@@ -13,8 +13,6 @@ const props = defineProps({
   }
 })
 
-console.log(props.records)
-
 </script>
 
 <template>

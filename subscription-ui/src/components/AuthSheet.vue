@@ -54,7 +54,7 @@ const error = ref<string>()
             v-model="token"
             @keydown="error = ''"
           />
-          <p v-show="error" class="text-red text-sm font-normal">{{ error }}</p>
+          <p v-if="error" class="text-red text-sm font-normal">{{ error }}</p>
           <button
             class="border py-2 bg-green rounded-xl w-60 text-white hover:bg-green/70 mt-"
             @click="submit"

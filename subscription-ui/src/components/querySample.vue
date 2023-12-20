@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="overflow-scroll w-4/4 h-[60rem] mb-10 rounded-lg">
+  <div class="overflow-scroll w-4/4 h-[60rem] mb-4 rounded-lg">
     <table class="h-full" v-if="sample">
       <thead >
         <tr >

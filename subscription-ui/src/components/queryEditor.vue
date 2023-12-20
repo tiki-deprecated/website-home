@@ -63,19 +63,6 @@ const submitQuery = async () => {
   
   const sample = estimateResponse.sample[0].records
 
-  if(estimateResponse.sample[0].records){
-    sample?.push(estimateResponse.sample[0].records[1]) 
-    sample?.push(estimateResponse.sample[0].records[1]) 
-    sample?.push(estimateResponse.sample[0].records[1]) 
-    sample?.push(estimateResponse.sample[0].records[1]) 
-    sample?.push(estimateResponse.sample[0].records[1]) 
-    sample?.push(estimateResponse.sample[0].records[1]) 
-    sample?.push(estimateResponse.sample[0].records[1]) 
-    sample?.push(estimateResponse.sample[0].records[1]) 
-  
-  }
-
-  console.log(sample)
   const infoJson = {
     subscriptionId: estimateResponse.subscriptionId,
     costs: `$${costs}/month`,
