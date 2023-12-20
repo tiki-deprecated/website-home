@@ -2,15 +2,9 @@
 import { ref, onMounted, watch, computed } from 'vue'
 import * as monaco from 'monaco-editor'
 import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution'
-import TrinoSQLWorker from 'monaco-sql-languages/out/esm/trinosql/trinosql.worker?worker'
 import { Subscription } from '../subscription/index'
 import { type SubscriptionType } from '@/interfaces/Subscription'
 
-self.MonacoEnvironment = {
-  getWorker(_: any, label: string) {
-    return new TrinoSQLWorker()
-  }
-}
 
 let editorMonaco: monaco.editor.IStandaloneCodeEditor
 
@@ -66,12 +60,14 @@ const submitQuery = async () => {
   const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
 
   const total = estimateResponse.count[0].total?.toLocaleString()
+  
+  const sample = estimateResponse.sample[0].records
 
   const infoJson = {
     subscriptionId: estimateResponse.subscriptionId,
     costs: `$${costs}/month`,
     stats: [`${total} Records`],
-    sample: estimateResponse.sample[0].records
+    sample: sample
   }
   emits('update', infoJson)
   emits('loading', false)
@@ -86,7 +82,7 @@ watch(
   }
 )
 
-const editorHeight = ref<number>(240)
+const editorHeight = ref<number>(550)
 
 const remHeight = computed(() => {
   return `${editorHeight.value / 16}rem`

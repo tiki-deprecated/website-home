@@ -2,19 +2,16 @@
 import { computed, ref } from 'vue'
 import queryEditor from './queryEditor.vue'
 import queryInfo from './queryInfo.vue'
-import infoButtons from './infoButtons.vue'
 import tableTaxonomy from './tableTaxonomy.vue'
 import cleanroomSelect from './cleanroomSelect.vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
 import LoadingScreen from './LoadingScreen.vue'
 
 const cleanroomId = ref<string>()
-const infoState = ref<string>()
 const info = ref<QueryInfo>()
 
 const updateInfo = (infoJson: QueryInfo) => {
   info.value = infoJson
-  infoState.value = 'cost'
 }
 
 const panelWidth = ref<number>(350)
@@ -65,13 +62,7 @@ const isLoading = ref<boolean>(false)
           :table="tableName"
           @loading="(value: boolean) => (isLoading = value)"
         />
-        <info-buttons
-          @cost="infoState = 'cost'"
-          @sample="infoState = 'sample'"
-          @stats="infoState = 'stats'"
-          :state-prop="infoState"
-        />
-        <query-info :state="infoState" :info="info" />
+        <query-info :info="info" v-if="info" @close="info = undefined"/>
       </div>
     </div>
   </div>
