@@ -60,12 +60,27 @@ const submitQuery = async () => {
   const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
 
   const total = estimateResponse.count[0].total?.toLocaleString()
+  
+  const sample = estimateResponse.sample[0].records
 
+  if(estimateResponse.sample[0].records){
+    sample?.push(estimateResponse.sample[0].records[1]) 
+    sample?.push(estimateResponse.sample[0].records[1]) 
+    sample?.push(estimateResponse.sample[0].records[1]) 
+    sample?.push(estimateResponse.sample[0].records[1]) 
+    sample?.push(estimateResponse.sample[0].records[1]) 
+    sample?.push(estimateResponse.sample[0].records[1]) 
+    sample?.push(estimateResponse.sample[0].records[1]) 
+    sample?.push(estimateResponse.sample[0].records[1]) 
+  
+  }
+
+  console.log(sample)
   const infoJson = {
     subscriptionId: estimateResponse.subscriptionId,
     costs: `$${costs}/month`,
     stats: [`${total} Records`],
-    sample: estimateResponse.sample[0].records
+    sample: sample
   }
   emits('update', infoJson)
   emits('loading', false)

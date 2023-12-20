@@ -62,7 +62,7 @@ const isLoading = ref<boolean>(false)
           :table="tableName"
           @loading="(value: boolean) => (isLoading = value)"
         />
-        <query-info :info="info" v-if="info"/>
+        <query-info :info="info" v-if="info" @close="info = undefined"/>
       </div>
     </div>
   </div>
