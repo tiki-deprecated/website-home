@@ -2,10 +2,12 @@
 import queryCost from './queryCost.vue';
 import queryStats from './queryStats.vue';
 import querySample from './querySample.vue';
-import { defineProps, watch, type PropType } from 'vue';
+import { defineProps, type PropType } from 'vue';
 import type {QueryInfo} from "../interfaces/QueryInfo";
+import { Subscription } from '@/subscription';
+import type { SubscriptionType } from '@/interfaces/Subscription';
 
-
+const subscription = new Subscription()
 const props = defineProps({
   state: {
     type: String,
@@ -17,6 +19,13 @@ const props = defineProps({
   }
 })
 
+const token = sessionStorage.getItem('authToken')
+
+const subscribe = async () => {
+  const response: SubscriptionType = await subscription.subscribe(props.info!.subscriptionId, token!)
+  if(!response || response.status !== 'subscribed') alert('failed')
+  alert('success')
+}
 </script>
 
 <template>
@@ -24,6 +33,13 @@ const props = defineProps({
     <query-cost v-if="state === 'cost'" :cost="info?.costs"/>
     <query-stats v-if="state === 'stats'" :stats="info?.stats"/>
     <query-sample v-if="state === 'sample'" :sample="info?.sample"/>
+    <button
+        class="border py-3 bg-green rounded-md w-60 text-white mt-5"
+        @click="subscribe"
+        v-if="info"
+      >
+        Subscribe
+    </button>
   </div>
 </template>
 
