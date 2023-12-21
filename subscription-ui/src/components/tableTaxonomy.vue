@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { demographics, transactions, receipts } from '../interfaces/TableTaxonomies'
-import { defineEmits } from 'vue';
+import { defineEmits } from 'vue'
 
 const tables = ['demographics', 'receipts', 'transactions']
 
@@ -16,15 +16,15 @@ const checkTable = (table: string) => {
   }
 }
 
-const updateTable = (event: any)=>{
-  if(event.newState === 'open') emit('update', `tiki.${event.srcElement.id}`)
+const updateTable = (event: any) => {
+  if (event.newState === 'open') emit('update', `tiki.${event.srcElement.id}`)
 }
 </script>
 
 <template>
   <div class="mt-10">
     <h1 class="text-2xl text-blue">Tables</h1>
-    <details v-for="table in tables" class="w-3/4" :id="table"  @toggle="updateTable">
+    <details v-for="table in tables" class="w-3/4" :id="table" @toggle="updateTable">
       <summary class="flex justify-between text-blue text-xl capitalize my-2">
         {{ table }}
         <span></span>
@@ -36,7 +36,10 @@ const updateTable = (event: any)=>{
           :key="data.data"
           @dblclick="$emit('insert', data.data)"
         >
-          {{ data.data }} <span class="text-green ml-5">{{ data.type }}</span>
+          <span class="break-all">
+            {{ data.data }}
+          </span>
+          <span class="text-green ml-5">{{ data.type }}</span>
         </li>
       </ul>
     </details>
@@ -60,5 +63,4 @@ details summary::-webkit-details-marker,
 details summary::marker {
   display: none;
 }
-
 </style>

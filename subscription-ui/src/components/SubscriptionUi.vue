@@ -38,17 +38,26 @@ const isLoading = ref<boolean>(false)
 <template>
   <div class="w-full h-screen grid absolute" @mousemove="resize" @mouseup="isResized = false">
     <div class="flex mx-10">
-      <div class="mt-5" :style="{ width: remWidth }" v-if="panelWidth > 256">
+      <div class="mt-5" :style="{ width: remWidth }" v-if="panelWidth > 250">
         <div class="flex-col">
           <cleanroom-select
             @update="(newValue: string) => (cleanroomId = newValue)"
-            @close="panelWidth = 299"
+            @close="panelWidth = 0"
           />
           <table-taxonomy
             @insert="(value: string) => (datafield = value)"
             @update="(table: string) => (tableName = table)"
           />
         </div>
+      </div>
+      <div class="w-10 mt-4 mr-2" v-else>
+        <button
+          class="flex border border-light-gray border-solid rounded-lg shadow-md p-1"
+          @click="panelWidth = 350"
+        >
+          <img src="../assets/images/collapse-right.svg" class="w-6"
+          alt="" />
+        </button>
       </div>
       <div
         class="w-1 bg-light-gray cursor-col-resize shadow-md border-left border-solid border-black"
@@ -62,7 +71,7 @@ const isLoading = ref<boolean>(false)
           :table="tableName"
           @loading="(value: boolean) => (isLoading = value)"
         />
-        <query-info :info="info" v-if="info" @close="info = undefined"/>
+        <query-info :info="info" v-if="info" @close="info = undefined" />
       </div>
     </div>
   </div>
