@@ -1,30 +1,35 @@
 <script setup lang="ts">
-import { type PropType } from 'vue';
+import { type PropType } from 'vue'
 
-defineProps({
+const props = defineProps({
   sample: {
-    type: Array as PropType<any[]>, 
-    required: false,
+    type: Array as PropType<any[]>,
+    required: false
   }
 })
-
-
 </script>
 
 <template>
-  <div class="overflow-scroll w-[60rem] h-[60rem]">
-  <table class="table-auto h-full dark:text-white" v-if="sample">
-    <thead>
-        <tr>
-            <th class="bg-green text-white border border-black border-solid px-10 py-2 dark:border-white" v-for="(value, key) in sample![0]" :key="key">{{key}}</th>
+  <div class="overflow-scroll w-4/4 h-[60rem] mb-4 rounded-lg">
+    <table class="h-full dark:text-white" v-if="sample">
+      <thead >
+        <tr >
+          <th
+            class="bg-green text-white text-center border border-dark-gray/20 border-solid px-12 py-2 dark:border-white"
+            v-for="(value, key) in sample[0].split(',')"
+            :key="key"
+          >
+            {{ value }}
+          </th>
         </tr>
-    </thead>
-    <tbody>
-        <tr v-for="item in sample" :key="item.song" class="border dark:border-white">
-          <td v-for="(value, key) in item" :key="key" class="border px-10 py-2 text-center">{{ value }}</td>
+      </thead>
+      <tbody>
+        <tr v-for="(row, index) in sample.slice(1)" :key="index" >
+          <td class="border border-dark-gray/20 border-solid px-2 break-all text-center dark:border-white" v-for="(item, index) in row.split(',')" :key="index">
+            {{ item }}
+          </td>
         </tr>
-    </tbody>
-  </table>
-</div>
-
+      </tbody>
+    </table>
+  </div>
 </template>

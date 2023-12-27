@@ -12,7 +12,8 @@ module.exports = {
       yellow: "#FFD225",
       white: "#FFFFFF",
       green: "#00B272",
-      black: "#000000"
+      black: "#000000",
+      red: "#FF0000"
     },
     fontFamily: {
       sans: ["Space Grotesk, sans-serif"],
