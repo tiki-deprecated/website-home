@@ -23,10 +23,10 @@ watch(()=> props.tableTitle, (newValue)=>{
 
 <template>
   <div class="mt-10">
-    <h2 class="text-blue text-3xl underline">{{ tableTitle }}</h2>
+    <h2 class="text-blue dark:text-white text-3xl underline">{{ tableTitle }}</h2>
     <ul v-if="tableTitle">
       <li
-        class="mt-2 w-60 flex justify-between text-blue"
+        class="mt-2 w-60 flex justify-between text-blue dark:text-white "
         v-for="data of tableTaxonomy"
         :key="data.data"
       >

@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <span class="flex gap-5 text-lg py-2" v-for="stat of stats">
+  <span class="flex gap-5 text-lg py-2 dark:text-white" v-for="stat of stats">
     <img src="../assets/images/progessbox.svg" alt="" /> {{ stat }}
   </span>
 </template>

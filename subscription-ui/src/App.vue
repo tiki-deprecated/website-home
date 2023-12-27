@@ -20,28 +20,30 @@ const updateInfo = (infoJson: QueryInfo) => {
 </script>
 
 <template>
-  <div class="flex mt-5 mx-10">
-    <div class="w-2/5">
-      <div class="flex-col">
-        <table-select @update="(newValue)=> selectedTable = newValue"/>
-        <table-taxonomy :tableTitle="selectedTable"/>
+  <div class="bg-white dark:bg-black">
+    <div class="flex mt-5 mx-10">
+      <div class="w-2/5">
+        <div class="flex-col">
+          <table-select @update="(newValue)=> selectedTable = newValue"/>
+          <table-taxonomy :tableTitle="selectedTable"/>
+        </div>
+      </div>
+      <div class="grow px-8">
+        <query-editor :table="selectedTable" @update="updateInfo"/>
+        <info-buttons
+          @cost="infoState = 'cost'"
+          @sample="infoState = 'sample'"
+          @stats="infoState = 'stats'"
+          :state-prop="infoState"
+        />
+        <query-info :state="infoState" :info="info"/>
       </div>
     </div>
-    <div class="grow px-8">
-      <query-editor :table="selectedTable" @update="updateInfo"/>
-      <info-buttons
-        @cost="infoState = 'cost'"
-        @sample="infoState = 'sample'"
-        @stats="infoState = 'stats'"
-        :state-prop="infoState"
-      />
-      <query-info :state="infoState" :info="info"/>
+    <div class="flex justify-end mt-5 mb-10 mx-10">
+      <button type="submit" class="bg-green text-white py-3 rounded-md w-60">
+        Agree & Subscribe
+      </button>
     </div>
-  </div>
-  <div class="flex justify-end mt-5 mb-10 mx-10">
-    <button type="submit" class="bg-green text-white py-3 rounded-md w-60">
-      Agree & Subscribe
-    </button>
   </div>
 </template>
 
