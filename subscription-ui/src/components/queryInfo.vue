@@ -24,13 +24,14 @@ const subscribe = async () => {
     props.info!.subscriptionId,
     token!
   )
-  if (!response || response.status !== 'subscribed') return error.value = 'Something went wrong with subscription, review your billing profile'
+  if (!response || response.status !== 'subscribed')
+    return (error.value = 'Something went wrong with subscription, review your billing profile')
   successMessage.value = 'Yeah! You did it. Thanks for subscribing, enjoy our data!'
 }
 </script>
 
 <template>
-  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true"  >
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <div
       class="fixed inset-0 bg-black bg-opacity-60 transition-opacity"
       @click="$emit('close')"
@@ -41,20 +42,26 @@ const subscribe = async () => {
         <div
           class="bg-white flex-col gap-3 flex justify-center relative overflow-hidden rounded-lg text-left shadow-xl transition-all px-12 w-[80vw] h-[80vh]"
         >
-        <div class="flex justify-between items-center">
-          <h1 class="text-2xl mb-4 mt-8">
-            Estimated cost of  
-            <span class="text-green underline"> {{ info.costs }} </span>
-            for
-            <span class="text-green underline">{{ info.stats[0] }}</span>
-          </h1>
-          <button class="w-7 flex items-center justify-center mt-4" @click="$emit('close')">
-            <img src="../assets/images/crossmark-outline.svg" alt="test">
-          </button>
-        </div>
-        <query-sample :sample="info?.sample" />
-        <div class="text-center">
-          <p v-if="error || successMessage" class="font-normal mb-4" :class="error ? 'text-red' : 'text-green'">{{ error || successMessage}}</p>
+          <div class="flex justify-between items-center">
+            <h1 class="text-2xl mb-4 mt-8">
+              Estimated cost of
+              <span class="text-green underline"> {{ info.costs }} </span>
+              for
+              <span class="text-green underline">{{ info.stats[0] }}</span>
+            </h1>
+            <button class="w-7 flex items-center justify-center mt-4" @click="$emit('close')">
+              <img src="../assets/images/crossmark-outline.svg" alt="test" />
+            </button>
+          </div>
+          <query-sample :sample="info?.sample" />
+          <div class="text-center">
+            <p
+              v-if="error || successMessage"
+              class="font-normal mb-4"
+              :class="error ? 'text-red' : 'text-green'"
+            >
+              {{ error || successMessage }}
+            </p>
             <button
               class="border py-3 bg-green rounded-md w-60 text-white mb-10"
               @click="subscribe"
@@ -63,7 +70,6 @@ const subscribe = async () => {
             >
               Subscribe $
             </button>
-
           </div>
         </div>
       </div>

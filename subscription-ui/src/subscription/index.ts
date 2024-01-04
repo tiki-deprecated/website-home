@@ -57,7 +57,7 @@ export class Subscription {
     let count = 10
 
     await new Promise((resolve) => {
-      let interval = setInterval(async () => {
+      const interval = setInterval(async () => {
         count--
         getSubscriptionResponse = await this.getSubscription(
           estimateResponse.subscriptionId,
@@ -104,9 +104,11 @@ export class Subscription {
       }
     }
 
-    return (await fetch(
-      `https://account.mytiki.com/api/latest/subscription/${subscriptionId}/purchase`,
-      options
-    )).json()
+    return (
+      await fetch(
+        `https://account.mytiki.com/api/latest/subscription/${subscriptionId}/purchase`,
+        options
+      )
+    ).json()
   }
 }

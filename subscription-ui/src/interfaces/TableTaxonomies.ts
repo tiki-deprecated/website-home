@@ -248,7 +248,7 @@ const receipts = [
   {
     data: 'upc',
     type: 'string'
-  },
+  }
 ]
 
-export {demographics, receipts, transactions}
+export { demographics, receipts, transactions }

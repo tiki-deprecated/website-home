@@ -55,8 +55,7 @@ const isLoading = ref<boolean>(false)
           class="flex border border-light-gray border-solid rounded-lg shadow-md p-1"
           @click="panelWidth = 350"
         >
-          <img src="../assets/images/collapse-right.svg" class="w-6"
-          alt="" />
+          <img src="../assets/images/collapse-right.svg" class="w-6" alt="" />
         </button>
       </div>
       <div

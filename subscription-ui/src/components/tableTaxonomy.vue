@@ -24,7 +24,7 @@ const updateTable = (event: any) => {
 <template>
   <div class="mt-10">
     <h1 class="text-2xl text-blue">Tables</h1>
-    <details v-for="table in tables" class="w-3/4" :id="table" @toggle="updateTable">
+    <details v-for="table in tables" class="w-3/4" :id="table" :key="table" @toggle="updateTable">
       <summary class="flex justify-between text-blue text-xl capitalize my-2">
         {{ table }}
         <span></span>
