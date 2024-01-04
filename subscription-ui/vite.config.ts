@@ -8,6 +8,18 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  css: {
+    devSourcemap: true
+  },
+  build: {
+    cssMinify: true,
+    rollupOptions: {
+      treeshake: {
+        preset: 'smallest'
+      }
+    },
+    sourcemap: true
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
