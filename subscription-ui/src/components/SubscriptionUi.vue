@@ -6,6 +6,7 @@ import tableTaxonomy from './tableTaxonomy.vue'
 import cleanroomSelect from './cleanroomSelect.vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
 import LoadingScreen from './LoadingScreen.vue'
+import CollapseIcon from '../assets/images/collapse_icon.svg'
 
 const cleanroomId = ref<string>()
 const info = ref<QueryInfo>()
@@ -55,7 +56,7 @@ const isLoading = ref<boolean>(false)
           class="flex border border-light-gray border-solid rounded-lg shadow-md p-1"
           @click="panelWidth = 350"
         >
-          <img src="../assets/images/collapse-right.svg" class="w-6" alt="" />
+          <CollapseIcon alt="Expand panel" class="w-6 rotate-180" />
         </button>
       </div>
       <div

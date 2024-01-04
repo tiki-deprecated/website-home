@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { Subscription } from '../subscription/index'
 import { type Cleanroom } from '../interfaces/Cleanroom'
+import CollapseIcon from '../assets/images/collapse_icon.svg'
 
 const subscription = new Subscription()
 
@@ -81,7 +82,7 @@ const selectCleanroom = (selectedCleanroom: Cleanroom) => {
       class="border border-light-gray border-solid rounded-lg shadow-md p-1"
       @click="$emit('close')"
     >
-      <img src="../assets/images/collapse_icon.svg" alt="" />
+      <CollapseIcon alt="Collapse panel" />
     </button>
   </div>
 </template>

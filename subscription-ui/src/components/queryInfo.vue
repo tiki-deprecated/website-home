@@ -4,6 +4,7 @@ import { defineProps, type PropType, ref } from 'vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
 import { Subscription } from '@/subscription'
 import type { SubscriptionType } from '@/interfaces/Subscription'
+import CloseIcon from '../assets/images/crossmark-outline.svg'
 
 const subscription = new Subscription()
 const props = defineProps({
@@ -50,7 +51,7 @@ const subscribe = async () => {
               <span class="text-green underline">{{ info.stats[0] }}</span>
             </h1>
             <button class="w-7 flex items-center justify-center mt-4" @click="$emit('close')">
-              <img src="../assets/images/crossmark-outline.svg" alt="test" />
+              <CloseIcon alt="Close modal" />
             </button>
           </div>
           <query-sample :sample="info?.sample" />

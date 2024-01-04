@@ -2,6 +2,7 @@
 import { ref, defineEmits } from 'vue'
 import { Subscription } from '@/subscription'
 import type { ProfileInfo } from '@/interfaces/ProfileInfo'
+import PineappleRoundedLogo from '../assets/images/pineapple_rounded.svg'
 
 const subscription = new Subscription()
 
@@ -36,7 +37,7 @@ const error = ref<string>()
         <div
           class="bg-white flex-col gap-3 flex justify-center items-center relative overflow-hidden rounded-lg text-left shadow-xl transition-all px-12 w-[80vw] h-[80vh]"
         >
-          <img src="../assets/images/pineapple_rounded.svg" alt="" class="w-32" />
+          <PineappleRoundedLogo alt="TIKI Pineapple" />
           <h1 class="text-3xl">Hey! Thanks for choosing TIKI!</h1>
           <p>
             Before you can generate an estimate, we need your auth token to make it happen.
