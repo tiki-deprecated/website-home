@@ -1,7 +1,5 @@
 export interface Cleanroom {
-    cleanroomId: string,
-    name: string,
-    description: string
-  }
-  
-  
+  cleanroomId: string
+  name: string
+  description: string
+}

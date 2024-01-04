@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { Subscription } from '../subscription/index'
-import {type Cleanroom} from "../interfaces/Cleanroom"
-
+import { type Cleanroom } from '../interfaces/Cleanroom'
 
 const subscription = new Subscription()
 
@@ -70,7 +69,8 @@ const selectCleanroom = (selectedCleanroom: Cleanroom) => {
           :key="cleanroom.cleanroomId"
           @click="selectCleanroom(cleanroom)"
         >
-          <span class="flex items-center border border-solid border-dark-gray/10 bg-dark-gray/10 px-2 rounded-md"
+          <span
+            class="flex items-center border border-solid border-dark-gray/10 bg-dark-gray/10 px-2 rounded-md"
             >{{ cleanroom.description }}
           </span>
           {{ cleanroom.cleanroomId }}

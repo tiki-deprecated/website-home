@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, computed } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import * as monaco from 'monaco-editor'
 import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution'
 import { Subscription } from '../subscription/index'
 import { type SubscriptionType } from '@/interfaces/Subscription'
-
 
 let editorMonaco: monaco.editor.IStandaloneCodeEditor
 
@@ -37,7 +36,7 @@ const props = defineProps({
 
 const editor = ref()
 
-const emits = defineEmits(['update', 'loading' ])
+const emits = defineEmits(['update', 'loading'])
 
 const subscription = new Subscription()
 
@@ -55,12 +54,12 @@ const submitQuery = async () => {
     props.cleanroomId,
     token!
   )
-  if(!estimateResponse) return emits('loading', false)
+  if (!estimateResponse) return emits('loading', false)
 
   const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
 
   const total = estimateResponse.count[0].total?.toLocaleString()
-  
+
   const sample = estimateResponse.sample[0].records
 
   const infoJson = {
@@ -110,5 +109,4 @@ const tableName = ref<string>()
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

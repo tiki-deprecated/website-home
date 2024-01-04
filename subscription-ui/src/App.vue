@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
   <auth-sheet v-if="!token" @submit="handleToken" />
-  <subscription-ui v-else/>
+  <subscription-ui v-else />
 </template>
 
 <style scoped></style>
