@@ -47,7 +47,7 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: tiki-subscription-builder
-          directory: subscription-ui
+          directory: /subscription-ui
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           # Optional: Switch what branch you are publishing to.
