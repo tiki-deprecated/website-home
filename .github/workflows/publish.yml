@@ -36,7 +36,7 @@ jobs:
       # Run a build step here if your project requires
 
       - name: Build Subscription-UI
-        run:
+        run: |
           cd subscription-ui
           npm ci
           npm run build
