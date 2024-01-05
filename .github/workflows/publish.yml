@@ -1,14 +1,21 @@
 name: Publish
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'subscription-ui/**'
+      - '.github/workflows/publish.yml'
   pull_request:
     branches:
       - main
     types:
-      - closed
-    paths: 
+      - opened
+      - synchronize
+    paths:
       - 'subscription-ui/**'
-      - '.github/workflows/**'
+      - '.github/workflows/publish.yml'
 
 # Cancel any active builds when new commits are pushed
 concurrency:
@@ -40,12 +47,10 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: tiki-subscription-builder
-          directory: /subscription-ui/dist
+          directory: subscription-ui
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           # Optional: Switch what branch you are publishing to.
-          # By default this will be the branch which triggered this workflow
-          branch: main
           # Optional: Change the working directory
           workingDirectory: my-site
           # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
