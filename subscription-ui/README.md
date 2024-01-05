@@ -29,3 +29,11 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Deployment
+
+The project is built as a static site and deployed to Cloudflare Pages: https://tiki-subscription-builder.pages.dev
+
+To deploy manually, a simple `npm run deploy` can be used to trigger a direct upload using the wrangler CLI.
+
+For CI/CD, a GitHub Actions workflow handles this for all pull requests and pushes to main.
