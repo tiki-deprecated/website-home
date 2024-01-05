@@ -15,7 +15,7 @@ export default defineConfig({
     cssMinify: true,
     rollupOptions: {
       treeshake: {
-        preset: 'smallest'
+        preset: 'recommended'
       }
     },
     sourcemap: true
