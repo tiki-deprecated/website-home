@@ -42,7 +42,7 @@ jobs:
           projectName: tiki-subscription-builder
           directory: /subscription-ui/dist
           # Optional: Enable this if you want to have GitHub Deployments triggered
-          gitHubToken: ${{ secrets.CF_API_TOKEN }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           # Optional: Switch what branch you are publishing to.
           # By default this will be the branch which triggered this workflow
           branch: main
