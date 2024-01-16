@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import querySample from './querySample.vue'
-import { defineProps, type PropType, ref } from 'vue'
+import { type PropType, ref } from 'vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
 import { Subscription } from '@/subscription'
 import type { SubscriptionType } from '@/interfaces/Subscription'

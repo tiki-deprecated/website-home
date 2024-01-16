@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, defineEmits } from 'vue'
+import { ref } from 'vue'
 import { Subscription } from '@/subscription'
 import type { ProfileInfo } from '@/interfaces/ProfileInfo'
 
@@ -28,43 +28,42 @@ const error = ref<string>()
 </script>
 
 <template>
-  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 bg-black bg-opacity-70 transition-opacity"></div>
-
-    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-        <div
-          class="bg-white flex-col gap-3 flex justify-center items-center relative overflow-hidden rounded-lg text-left shadow-xl transition-all px-12 w-[80vw] h-[80vh]"
+  <div class="flex justify-between text-left h-screen">
+    <div class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10">
+      <h1 class="text-3xl font-semibold text-tiki-black">Subscription Builder</h1>
+      <p class="text-xl text-tiki-gray font-normal my-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <hr class="text-tiki-black/10 my-6" />
+      <h1 class="mt-4 text-tiki-gray font-semibold">API KEY</h1>
+      <label for="" class="text-tiki-gray font-normal mt-1 block">
+        Copy and paste your API Key from
+        <a
+          class="text-green underline"
+          href="https://mytiki.com/reference/intro/authentication"
+          target="_blank"
+          >Get Access</a
         >
-          <img src="../assets/images/pineapple_rounded.svg" alt="" class="w-32" />
-          <h1 class="text-3xl">Hey! Thanks for choosing TIKI!</h1>
-          <p>
-            Before you can generate an estimate, we need your auth token to make it happen.
-            <a
-              href="https://mytiki.com/reference/intro/authentication"
-              target="_blank"
-              class="text-green"
-              >Click here to get it.</a
-            >
-          </p>
-          <input
-            type="password"
-            class="border border-solid border-dark-gray/20 rounded-lg px-4 py-1.5"
-            placeholder="Paste your token here..."
-            v-model="token"
-            @keydown="error = ''"
-          />
-          <p v-if="error" class="text-red text-sm font-normal">{{ error }}</p>
-          <button
-            class="border py-2 bg-green rounded-xl w-60 text-white hover:bg-green/70 mt-"
-            @click="submit"
-            :disabled="!token"
-            :class="!token ? 'bg-green/50' : ''"
-          >
-            Continue
-          </button>
-        </div>
+        to start.
+      </label>
+      <input
+        v-model="token"
+        type="password"
+        class="block border border-tiki-black/10 border-solid rounded-md flex gap-2 p-2.5 mt-4 w-full"
+      />
+      <div class="w-full flex justify-end mt-4">
+        <button
+          class="mt-6 bg-green text-white w-32 px-2 py-3 text-lg rounded-lg"
+          @click="submit"
+          :disabled="!token"
+          :class="!token ? 'bg-green/50' : ''"
+        >
+          Continue
+        </button>
       </div>
+    </div>
+    <div class="w-2/5 flex justify-center">
+      <img src="../assets/images/tiki-pineapple-block.svg" alt="" class="w-40" />
     </div>
   </div>
 </template>
