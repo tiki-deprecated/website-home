@@ -22,16 +22,18 @@ const updateTable = (event: any) => {
 </script>
 
 <template>
-  <div class="mt-10">
-    <h1 class="text-2xl text-blue">Tables</h1>
-    <details v-for="table in tables" class="w-3/4" :id="table" :key="table" @toggle="updateTable">
-      <summary class="flex justify-between text-blue text-xl capitalize my-2">
+  <div class="mt-10 w-full">
+    <h1 class="text-lg text-tiki-gray font-medium">TABLES</h1>
+    <details v-for="table in tables" class="w-full" :id="table" :key="table" @toggle="updateTable">
+      <summary
+        class="flex flex-row-reverse py-1.5 cursor-pointer text-tiki-gray font-normal capitalize my-1 w-full"
+      >
         {{ table }}
         <span></span>
       </summary>
       <ul>
         <li
-          class="has-tooltip mt-2 w-full flex justify-between text-blue cursor-pointer"
+          class="mt-2 w-full flex justify-between text-tiki-gray font-normal cursor-pointer px-5"
           v-for="data of checkTable(table)"
           :key="data.data"
           @dblclick="$emit('insert', data.data)"
@@ -39,7 +41,7 @@ const updateTable = (event: any) => {
           <span class="break-all">
             {{ data.data }}
           </span>
-          <span class="text-green ml-5">{{ data.type }}</span>
+          <span class="text-tiki-gray font-normal ml-5">{{ data.type }}</span>
         </li>
       </ul>
     </details>
@@ -49,14 +51,32 @@ const updateTable = (event: any) => {
 <style scoped>
 summary {
   cursor: pointer;
+  justify-content: start;
 }
 
 details[open] summary span::before {
-  content: '-';
+  content: url('@/assets/images/green-select-arrow.svg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+details[open] > summary {
+  background-color: rgba(0, 178, 114, 0.09);
+  color: #00B272;
+  border-radius: 0.25rem;
 }
 
 details summary span::before {
-  content: '+';
+  content: url('@/assets/images/closed-arrow.svg');
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.15rem;
 }
 
 details summary::-webkit-details-marker,
