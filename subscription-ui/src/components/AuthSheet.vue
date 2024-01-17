@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { Subscription } from '@/subscription'
 import type { ProfileInfo } from '@/interfaces/ProfileInfo'
+import HeaderTitle from './HeaderTitle.vue'
 
 const subscription = new Subscription()
 
@@ -28,13 +29,8 @@ const error = ref<string>()
 </script>
 
 <template>
-  <div class="flex justify-between text-left h-screen">
     <div class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10">
-      <h1 class="text-3xl font-semibold text-tiki-black">Subscription Builder</h1>
-      <p class="text-xl text-tiki-gray font-normal my-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-      <hr class="text-tiki-black/10 my-6" />
+      <header-title />
       <h1 class="mt-4 text-tiki-gray font-semibold">API KEY</h1>
       <label for="" class="text-tiki-gray font-normal mt-1 block">
         Copy and paste your API Key from
@@ -65,7 +61,7 @@ const error = ref<string>()
     <div class="w-2/5 flex justify-center">
       <img src="../assets/images/tiki-pineapple-block.svg" alt="" class="w-40" />
     </div>
-  </div>
+
 </template>
 
 <style scoped></style>
