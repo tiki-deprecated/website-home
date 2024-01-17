@@ -12,7 +12,9 @@ module.exports = {
       white: "#FFFFFF",
       green: "#00B272",
       'tiki-black': '#1C0000',
-      'tiki-gray': '#505C59'
+      'tiki-gray': '#505C59',
+      'tiki-yellow': '#ffe68f',
+      'tiki-red': '#c71b29'
     },
     fontFamily: {
       sans: ["Space Grotesk, sans-serif"],

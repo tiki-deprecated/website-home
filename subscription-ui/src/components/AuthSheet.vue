@@ -51,7 +51,7 @@ const error = ref<string>()
         class="block border border-tiki-black/10 border-solid rounded-md flex gap-2 p-2.5 mt-4 w-full"
       />
       <text-button
-      :state="!token ? ButtonState.DISABLED : ButtonState.NORMAL"
+      :state="!token ? ButtonState.DISABLED : ButtonState.ACTIVE"
       :text="'Continue'"
       @submit="submit"
       />

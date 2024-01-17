@@ -1,6 +1,6 @@
 
 export enum ButtonState {
-    NORMAL,
+    ACTIVE,
     DISABLED, 
     OUTLINED
 }

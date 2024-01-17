@@ -16,6 +16,7 @@ onMounted(() => {
       'editor.foreground': '#505C59',
       'editorLineNumber.foreground': '#505C59',
       'editorActiveLineNumber.foreground': '#505C59',
+      "editor.lineHighlightBorder": "#FFFFFF",
     }
   })
 
