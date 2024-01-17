@@ -22,6 +22,7 @@ const cleanroomSelected = ref()
     id="cleanroom"
     v-model="cleanroomSelected"
     class="text-tiki-gray/70"
+    @change="$emit('changeCleanroom', cleanroomSelected)"
   >
     <option value="undefined" disabled>My cleanroom</option>
     <option

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import cleanroomSelect from './cleanroomSelect.vue'
-import queryEditor from './queryEditor.vue';
+import queryEditor from './queryEditor.vue'
 
-defineEmits(['update'])
+defineEmits(['updateCleanroom', 'submit', 'updateTableName'])
 
 defineProps({
   title: {
@@ -28,7 +28,7 @@ const componentHandler = (type: string) => {
     case 'cleanroomSelect':
       return cleanroomSelect
     case 'queryEditor':
-        return queryEditor
+      return queryEditor
     default:
       return type
   }
@@ -42,8 +42,15 @@ const componentHandler = (type: string) => {
   </label>
   <component
     :is="componentHandler(type)"
-    class="block border border-tiki-black/10 border-solid rounded-md flex gap-2 p-2.5 mt-4 w-full placeholder:text-tiki-gray/70"
+    :class="
+      type !== 'queryEditor'
+        ? 'block border border-tiki-black/10 border-solid rounded-md flex gap-2 p-2.5 mt-4 w-full placeholder:text-tiki-gray/70'
+        : ''
+    "
     :placeholder="placeholder"
-    @change="(value:string)=> $emit('update', value)"
+    @changeCleanroom="(value: string)=>$emit('updateCleanroom', value)"
+    @input="(event: InputEvent) => $emit('updateTableName', event.target?.value)"
+    @update="(query: string) => $emit('submit', query)"
+    >
   ></component>
 </template>

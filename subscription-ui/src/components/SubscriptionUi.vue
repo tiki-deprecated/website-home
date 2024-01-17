@@ -4,10 +4,10 @@ import tableTaxonomy from './tableTaxonomy.vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
 import InputComponent from './InputComponent.vue'
 import HeaderTitle from './HeaderTitle.vue'
-import TextButton from './TextButton.vue'
-import { ButtonState } from '@/interfaces/ButtonState'
 import AlertComponent from './AlertComponent.vue'
 import { BuilderState } from '@/interfaces/BuilderState'
+import { Subscription } from '@/subscription'
+import { type SubscriptionType } from '@/interfaces/Subscription'
 
 const cleanroomId = ref<string>()
 const info = ref<QueryInfo>()
@@ -19,6 +19,44 @@ const updateInfo = (infoJson: QueryInfo) => {
 const tableName = ref<string>()
 
 const isLoading = ref<boolean>(false)
+
+const hasError = ref<boolean>()
+
+const subscription = new Subscription()
+
+const token = sessionStorage.getItem('authToken')
+
+const submit = async (query: string)=>{
+  isLoading.value = true
+
+  const estimateResponse: SubscriptionType = await subscription.estimate(
+    tableName.value!,
+    query,
+    cleanroomId.value!,
+    token!
+  )
+  if (!estimateResponse) {
+    hasError.value = true
+    return isLoading.value = false
+  }
+
+  const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
+
+  const total = estimateResponse.count[0].total?.toLocaleString()
+
+  const sample = estimateResponse.sample[0].records
+
+  const infoJson = {
+    subscriptionId: estimateResponse.subscriptionId,
+    costs: `$${costs}/month`,
+    stats: [`${total} Records`],
+    sample: sample
+  }
+
+  console.log(infoJson)
+
+  isLoading.value = false
+}
 </script>
 
 <template>
@@ -27,7 +65,7 @@ const isLoading = ref<boolean>(false)
   >
     <header-title />
     <alert-component
-      :type="isLoading ? BuilderState.ERROR : BuilderState.INITIAL"
+      :type="isLoading && !hasError ? BuilderState.LOADING : hasError ?  BuilderState.ERROR : BuilderState.INITIAL"
       :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
       v-if="isLoading"
     />
@@ -35,21 +73,22 @@ const isLoading = ref<boolean>(false)
       :title="'CLEANROOM'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
       :type="'cleanroomSelect'"
-      @update="(value) => (cleanroomId = value)"
+      @update-cleanroom="(value) => cleanroomId = value"
     />
     <input-component
       :title="'TABLE NAME'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
       :type="'input'"
       :placeholder="'my_first_table'"
-      @update="(value) => (tableName = value)"
+      @update-table-name="(value) => tableName = value"
     />
     <input-component
       :title="'CREATE FILTER'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
       :type="'queryEditor'"
-    />
-    <text-button :state="ButtonState.ACTIVE" :text="'Get Estimate'" @submit="isLoading = true" />
+      @submit="submit"
+      >
+    </input-component>
   </div>
   <div class="w-2/5 flex px-8">
     <table-taxonomy />
