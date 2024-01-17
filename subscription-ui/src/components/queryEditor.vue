@@ -8,14 +8,29 @@ import { type SubscriptionType } from '@/interfaces/Subscription'
 let editorMonaco: monaco.editor.IStandaloneCodeEditor
 
 onMounted(() => {
+  monaco.editor.defineTheme('myCustomTheme', {
+    base: 'vs', // can also be vs-dark or hc-black
+    inherit: true, // can also be false to completely replace the builtin rules
+    rules: [],
+    colors: {
+      'editor.foreground': '#505C59',
+      'editorLineNumber.foreground': '#505C59',
+      'editorActiveLineNumber.foreground': '#505C59',
+    }
+  })
+
+  monaco.editor.setTheme('myCustomTheme')
+
   editorMonaco = monaco.editor.create(editor.value, {
     value: `SELECT * FROM ${props.table ? props.table : 'TABLE'}`,
-    language: 'trinosql',
-    theme: 'vs-dark',
+    language: '',
     automaticLayout: true,
     minimap: {
       enabled: false
-    }
+    },
+    fontFamily: 'SF Mono',
+    fontSize: 18,
+    fontWeight: '400'
   })
 })
 
@@ -86,26 +101,7 @@ const tableName = ref<string>()
 
 <template>
   <div class="flex flex-col">
-    <div id="editor" ref="editor" class="h-[40rem] w-full"></div>
-    <div class="flex justify-between mt-5 items-center">
-      <div class="flex flex-col">
-        <label>Table's Name</label>
-        <input
-          v-model="tableName"
-          type="text"
-          class="border border-solid border-dark-gray/40 rounded-lg px-4 py-1.5"
-          placeholder="Ex.: Starbucks Table"
-        />
-      </div>
-      <button
-        class="border py-3 bg-green rounded-md w-60 text-white mt-5"
-        @click="submitQuery"
-        :disabled="!tableName || !cleanroomId"
-        :class="!tableName || !cleanroomId ? 'bg-green/50' : ''"
-      >
-        Estimate Cost
-      </button>
-    </div>
+    <div id="editor" ref="editor" class="h-[15rem] w-full"></div>
   </div>
 </template>
 

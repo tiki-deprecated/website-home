@@ -3,6 +3,9 @@ import { ref } from 'vue'
 import { Subscription } from '@/subscription'
 import type { ProfileInfo } from '@/interfaces/ProfileInfo'
 import HeaderTitle from './HeaderTitle.vue'
+import TextButton from './TextButton.vue'
+import {ButtonState} from '@/interfaces/ButtonState'
+
 
 const subscription = new Subscription()
 
@@ -47,16 +50,11 @@ const error = ref<string>()
         type="password"
         class="block border border-tiki-black/10 border-solid rounded-md flex gap-2 p-2.5 mt-4 w-full"
       />
-      <div class="w-full flex justify-end mt-4">
-        <button
-          class="mt-6 bg-green text-white w-32 px-2 py-3 text-lg rounded-lg"
-          @click="submit"
-          :disabled="!token"
-          :class="!token ? 'bg-green/50' : ''"
-        >
-          Continue
-        </button>
-      </div>
+      <text-button
+      :state="!token ? ButtonState.DISABLED : ButtonState.NORMAL"
+      :text="'Continue'"
+      @submit="submit"
+      />
     </div>
     <div class="w-2/5 flex justify-center">
       <img src="../assets/images/tiki-pineapple-block.svg" alt="" class="w-40" />

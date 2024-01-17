@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import cleanroomSelect from './cleanroomSelect.vue'
+import queryEditor from './queryEditor.vue';
 
 defineEmits(['update'])
 
@@ -26,6 +27,8 @@ const componentHandler = (type: string) => {
   switch (type) {
     case 'cleanroomSelect':
       return cleanroomSelect
+    case 'queryEditor':
+        return queryEditor
     default:
       return type
   }

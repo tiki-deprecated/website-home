@@ -8,6 +8,8 @@ import type { QueryInfo } from '../interfaces/QueryInfo'
 import LoadingScreen from './LoadingScreen.vue'
 import InputComponent from './InputComponent.vue'
 import HeaderTitle from './HeaderTitle.vue'
+import TextButton from './TextButton.vue'
+import { ButtonState } from '@/interfaces/ButtonState'
 
 const cleanroomId = ref<string>()
 const info = ref<QueryInfo>()
@@ -15,12 +17,6 @@ const info = ref<QueryInfo>()
 const updateInfo = (infoJson: QueryInfo) => {
   info.value = infoJson
 }
-
-const panelWidth = ref<number>(350)
-
-const isResized = ref<boolean>(false)
-
-const datafield = ref<string>()
 
 const tableName = ref<string>()
 
@@ -34,14 +30,20 @@ const isLoading = ref<boolean>(false)
       :title="'CLEANROOM'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
       :type="'cleanroomSelect'"
-      @update="console.log('teste1')"
+      @update="(value)=> cleanroomId = value"
       />
       <input-component 
       :title="'TABLE NAME'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
       :type="'input'"
       :placeholder="'my_first_table'"
-      @update="console.log('teste2')"
+      @update="(value)=> tableName = value"
       />
+      <input-component 
+      :title="'CREATE FILTER'"
+      :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+      :type="'queryEditor'"
+      />
+      <text-button :state="ButtonState.NORMAL" :text="'Get Estimate'"/>
     </div>
 </template>
