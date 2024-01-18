@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted } from 'vue'
 import * as monaco from 'monaco-editor'
 import 'monaco-sql-languages/out/esm/trinosql/trinosql.contribution'
-import { Subscription } from '../subscription/index'
-import { type SubscriptionType } from '@/interfaces/Subscription'
 import { ButtonState } from '@/interfaces/ButtonState'
 import TextButton from './TextButton.vue'
 
@@ -41,38 +39,11 @@ const editor = ref()
 
 const emits = defineEmits(['update'])
 
-const subscription = new Subscription()
-
-const token = sessionStorage.getItem('authToken')
-
 const submitQuery = async () => {
   let query = editorMonaco.getValue()
 
   if (query.endsWith(';')) query = query.slice(0, -1)
   emits('update', query)
-
-  // const estimateResponse: SubscriptionType = await subscription.estimate(
-  //   tableName.value!,
-  //   query,
-  //   props.cleanroomId,
-  //   token!
-  // )
-  // if (!estimateResponse) return emits('loading', false)
-
-  // const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
-
-  // const total = estimateResponse.count[0].total?.toLocaleString()
-
-  // const sample = estimateResponse.sample[0].records
-
-  // const infoJson = {
-  //   subscriptionId: estimateResponse.subscriptionId,
-  //   costs: `$${costs}/month`,
-  //   stats: [`${total} Records`],
-  //   sample: sample
-  // }
-  // emits('update', infoJson)
-  // emits('loading', false)
 }
 </script>
 

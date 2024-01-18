@@ -49,7 +49,7 @@ const componentHandler = (type: string) => {
     "
     :placeholder="placeholder"
     @changeCleanroom="(value: string)=>$emit('updateCleanroom', value)"
-    @input="(event: InputEvent) => $emit('updateTableName', event.target?.value)"
+    @input="(event: InputEvent) => $emit('updateTableName', (event.target as HTMLInputElement).value)"
     @update="(query: string) => $emit('submit', query)"
     >
   ></component>
