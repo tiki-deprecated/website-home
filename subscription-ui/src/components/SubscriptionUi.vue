@@ -20,13 +20,13 @@ const tableName = ref<string>()
 
 const isLoading = ref<boolean>(false)
 
-const hasError = ref<boolean>()
+const hasError = ref<boolean>(false)
 
 const subscription = new Subscription()
 
 const token = sessionStorage.getItem('authToken')
 
-const submit = async (query: string)=>{
+const submit = async (query: string) => {
   isLoading.value = true
 
   const estimateResponse: SubscriptionType = await subscription.estimate(
@@ -37,7 +37,7 @@ const submit = async (query: string)=>{
   )
   if (!estimateResponse) {
     hasError.value = true
-    return isLoading.value = false
+    return (isLoading.value = false)
   }
 
   const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
@@ -65,30 +65,40 @@ const submit = async (query: string)=>{
   >
     <header-title />
     <alert-component
-      :type="isLoading && !hasError ? BuilderState.LOADING : hasError ?  BuilderState.ERROR : BuilderState.INITIAL"
+      :type="
+        isLoading && !hasError
+          ? BuilderState.LOADING
+          : hasError && !isLoading
+            ? BuilderState.ERROR
+            : BuilderState.INITIAL
+      "
       :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
-      v-if="isLoading"
+      v-if="isLoading || hasError"
     />
-    <input-component
-      :title="'CLEANROOM'"
-      :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
-      :type="'cleanroomSelect'"
-      @update-cleanroom="(value) => cleanroomId = value"
-    />
-    <input-component
-      :title="'TABLE NAME'"
-      :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
-      :type="'input'"
-      :placeholder="'my_first_table'"
-      @update-table-name="(value) => tableName = value"
-    />
-    <input-component
-      :title="'CREATE FILTER'"
-      :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
-      :type="'queryEditor'"
-      @submit="submit"
-      >
-    </input-component>
+    <div class="flex relative w-full">
+      <div class="w-full">
+        <input-component
+        :title="'CLEANROOM'"
+        :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+        :type="'cleanroomSelect'"
+        @update-cleanroom="(value) => (cleanroomId = value)"
+      />
+      <input-component
+        :title="'TABLE NAME'"
+        :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+        :type="'input'"
+        :placeholder="'my_first_table'"
+        @update-table-name="(value) => (tableName = value)"
+      />
+      <input-component
+        :title="'CREATE FILTER'"
+        :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+        :type="'queryEditor'"
+        @submit="submit"
+      />
+      </div>
+      <div class="absolute w-full h-full bg-white/50" v-if="isLoading"></div>
+    </div>
   </div>
   <div class="w-2/5 flex px-8">
     <table-taxonomy />
