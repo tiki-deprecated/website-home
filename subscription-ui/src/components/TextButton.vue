@@ -7,7 +7,7 @@ defineEmits(['submit']);
 
 defineProps({
     state:{
-        type: Object as PropType<ButtonState>,
+        type: Number as PropType<ButtonState>,
         required: true
     },
     text:{

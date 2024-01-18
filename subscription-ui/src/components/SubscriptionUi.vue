@@ -35,6 +35,7 @@ const submit = async (query: string) => {
     cleanroomId.value!,
     token!
   )
+
   if (!estimateResponse) {
     hasError.value = true
     return (isLoading.value = false)
@@ -57,6 +58,12 @@ const submit = async (query: string) => {
 
   isLoading.value = false
 }
+
+const cancelRequest = () => {
+  subscription.cancel()
+  isLoading.value = false
+  hasError.value = false
+}
 </script>
 
 <template>
@@ -74,28 +81,29 @@ const submit = async (query: string) => {
       "
       :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
       v-if="isLoading || hasError"
+      @cancel="cancelRequest"
     />
     <div class="flex relative w-full">
       <div class="w-full">
         <input-component
-        :title="'CLEANROOM'"
-        :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
-        :type="'cleanroomSelect'"
-        @update-cleanroom="(value) => (cleanroomId = value)"
-      />
-      <input-component
-        :title="'TABLE NAME'"
-        :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
-        :type="'input'"
-        :placeholder="'my_first_table'"
-        @update-table-name="(value) => (tableName = value)"
-      />
-      <input-component
-        :title="'CREATE FILTER'"
-        :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
-        :type="'queryEditor'"
-        @submit="submit"
-      />
+          :title="'CLEANROOM'"
+          :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+          :type="'cleanroomSelect'"
+          @update-cleanroom="(value) => (cleanroomId = value)"
+        />
+        <input-component
+          :title="'TABLE NAME'"
+          :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+          :type="'input'"
+          :placeholder="'my_first_table'"
+          @update-table-name="(value) => (tableName = value)"
+        />
+        <input-component
+          :title="'CREATE FILTER'"
+          :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+          :type="'queryEditor'"
+          @submit="submit"
+        />
       </div>
       <div class="absolute w-full h-full bg-white/50" v-if="isLoading"></div>
     </div>

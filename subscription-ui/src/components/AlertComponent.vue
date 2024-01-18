@@ -2,10 +2,11 @@
 import type { PropType } from 'vue';
 import {BuilderState} from '@/interfaces/BuilderState';
 
+defineEmits(['cancel'])
 
 defineProps({
     type:{
-        type: Object as PropType<BuilderState>,
+        type: Number as PropType<BuilderState>,
         required: true
     },
     text:{
@@ -25,7 +26,7 @@ defineProps({
             <img src="@/assets/images/alert-icon.svg" alt="" class="w-6" v-else>
             {{ text }}
         </div>
-        <button class="flex justify-center items-center gap-2 text-tiki-gray font-normal">
+        <button class="flex justify-center items-center gap-2 text-tiki-gray font-normal" @click="$emit('cancel')">
             <span v-if="type === BuilderState.LOADING">Cancel</span>
             <img src="@/assets/images/cancel-icon.svg" class="w-6" v-if="type === BuilderState.LOADING">
             <img src="@/assets/images/red-crossmark.svg" class="w-6" v-else>
