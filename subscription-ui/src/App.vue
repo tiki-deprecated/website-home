@@ -2,22 +2,35 @@
 import { onMounted, ref } from 'vue'
 import SubscriptionUi from './components/SubscriptionUi.vue'
 import AuthSheet from './components/AuthSheet.vue'
+import { EstimateState } from './interfaces/EstimateState';
+import PurchaseSheet from './components/PurchaseSheet.vue'
+import { type QueryInfo } from './interfaces/QueryInfo';
 
-const token = ref<string>()
+const state = ref<EstimateState>();
 
 const handleToken = (submittedToken: string) => {
-  token.value = submittedToken
-  sessionStorage.setItem('authToken', token.value)
+  sessionStorage.setItem('authToken', submittedToken);
+  state.value = EstimateState.ESTIMATE;
 }
 onMounted(() => {
-  token.value = sessionStorage.getItem('authToken') ?? ''
+  sessionStorage.getItem('authToken') ? state.value = EstimateState.ESTIMATE : state.value = EstimateState.AUTH
 })
+
+const estimateInfo = ref<QueryInfo>()
+
+const handleEstimate = (estimate_info: QueryInfo) =>{
+  if(!sessionStorage.getItem('authToken')) return state.value = EstimateState.AUTH
+  
+  state.value = EstimateState.SUBSCRIPTION
+  estimateInfo.value = estimate_info
+}
 </script>
 
 <template>
   <div class="flex justify-between text-left h-screen">
-  <auth-sheet v-if="!token" @submit="handleToken" />
-  <subscription-ui v-else />
+  <auth-sheet v-if="state === EstimateState.AUTH" @submit="handleToken" />
+  <subscription-ui v-if="state === EstimateState.ESTIMATE" @estimate="handleEstimate"/>
+  <purchase-sheet v-if="state === EstimateState.SUBSCRIPTION" :estimate-info="estimateInfo!"/>
   </div>
 </template>
 

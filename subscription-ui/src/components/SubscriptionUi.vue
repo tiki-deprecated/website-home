@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import tableTaxonomy from './tableTaxonomy.vue'
-import type { QueryInfo } from '../interfaces/QueryInfo'
 import InputComponent from './InputComponent.vue'
 import HeaderTitle from './HeaderTitle.vue'
 import AlertComponent from './AlertComponent.vue'
@@ -9,12 +8,9 @@ import { BuilderState } from '@/interfaces/BuilderState'
 import { Subscription } from '@/subscription'
 import { type SubscriptionType } from '@/interfaces/Subscription'
 
-const cleanroomId = ref<string>()
-const info = ref<QueryInfo>()
+const emits = defineEmits(['estimate'])
 
-const updateInfo = (infoJson: QueryInfo) => {
-  info.value = infoJson
-}
+const cleanroomId = ref<string>()
 
 const tableName = ref<string>()
 
@@ -55,7 +51,8 @@ const submit = async (query: string) => {
   }
 
   console.log(infoJson)
-
+  emits('estimate', infoJson)
+  
   isLoading.value = false
 }
 
