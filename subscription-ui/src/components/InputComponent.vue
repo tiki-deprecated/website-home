@@ -3,7 +3,7 @@ import cleanroomSelect from './cleanroomSelect.vue'
 import queryEditor from './queryEditor.vue'
 import querySample from './querySample.vue';
 import queryInfo from './queryInfo.vue';
-import { onMounted, type PropType } from 'vue';
+import { type PropType } from 'vue';
 import { type QueryInfo } from '@/interfaces/QueryInfo';
 
 defineEmits(['updateCleanroom', 'submit', 'updateTableName'])

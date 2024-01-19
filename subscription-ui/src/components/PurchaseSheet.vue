@@ -5,13 +5,28 @@ import { type PropType } from 'vue'
 import InputComponent from './InputComponent.vue'
 import TextButton from './TextButton.vue'
 import { ButtonState } from '@/interfaces/ButtonState'
+import { Subscription } from '@/subscription'
+import type { SubscriptionType } from '@/interfaces/Subscription'
 
-defineProps({
+const props = defineProps({
   estimateInfo: {
     type: Object as PropType<QueryInfo>,
     required: true
   }
 })
+
+const subscription = new Subscription()
+
+const token = sessionStorage.getItem('authToken')
+
+const subscribe = async () => {
+  const response: SubscriptionType = await subscription.subscribe(
+    props.estimateInfo!.subscriptionId,
+    token!
+  )
+  if (!response || response.status !== 'subscribed')
+    return 
+}
 </script>
 
 <template>
@@ -40,6 +55,7 @@ defineProps({
     <text-button
       :state="ButtonState.ACTIVE"
       :text="'Subscribe'"
+      @submit="subscribe"
       />
   </div>
 </template>

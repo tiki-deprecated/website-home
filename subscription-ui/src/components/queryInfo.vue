@@ -1,11 +1,7 @@
 <script lang="ts" setup>
-import querySample from './querySample.vue'
 import { type PropType, ref } from 'vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
-import { Subscription } from '@/subscription'
-import type { SubscriptionType } from '@/interfaces/Subscription'
 
-const subscription = new Subscription()
 const props = defineProps({
   info: {
     type: Object as PropType<QueryInfo>,
@@ -13,26 +9,36 @@ const props = defineProps({
   }
 })
 
-const error = ref<string>()
-
-const successMessage = ref<string>()
-
-const token = sessionStorage.getItem('authToken')
-
-const subscribe = async () => {
-  const response: SubscriptionType = await subscription.subscribe(
-    props.info!.subscriptionId,
-    token!
-  )
-  if (!response || response.status !== 'subscribed')
-    return (error.value = 'Something went wrong with subscription, review your billing profile')
-  successMessage.value = 'Yeah! You did it. Thanks for subscribing, enjoy our data!'
-}
 </script>
 
 <template>
   <div>
-    <h1>test</h1>
+    <div class="w-full flex flex-col">
+    <div>
+      <h1 class="text-tiki-gray font-semibold">INITIAL LOAD</h1>
+      <div class="flex justify-between">
+        <div class="font-normal text-tiki-gray">Number of Records</div>
+        <div class="font-normal text-tiki-gray">{{ info.stats[0] }}</div>
+      </div>
+      <div class="flex justify-between">
+        <div class="font-normal text-tiki-gray">Cost</div>
+        <div class="font-normal text-tiki-gray">${{ info.stats[1] }}</div>
+      </div>
+    </div>
+    <hr class="text-tiki-black/10 my-4" />
+  
+    <div>
+      <h1 class="text-tiki-gray font-semibold">MONTHLY UPDATES</h1>
+      <div class="flex justify-between">
+        <div class="font-normal text-tiki-gray">Number of Records</div>
+        <div class="font-normal text-tiki-gray">{{ info.stats[2] }}</div>
+      </div>
+      <div class="flex justify-between">
+        <div class="font-normal text-tiki-gray">Cost (monthly)</div>
+        <div class="font-normal text-tiki-gray">{{ info.costs }}</div>
+      </div>
+    </div>
+    </div>
   </div>
 </template>
 
