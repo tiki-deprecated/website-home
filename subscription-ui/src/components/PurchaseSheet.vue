@@ -15,6 +15,8 @@ const props = defineProps({
   }
 })
 
+const emits = defineEmits(['subscribe'])
+
 const subscription = new Subscription()
 
 const token = sessionStorage.getItem('authToken')
@@ -24,8 +26,9 @@ const subscribe = async () => {
     props.estimateInfo!.subscriptionId,
     token!
   )
-  if (!response || response.status !== 'subscribed')
-    return 
+  if (!response || response.status !== 'subscribed') return
+
+  emits('subscribe')
 }
 </script>
 
@@ -40,10 +43,7 @@ const subscribe = async () => {
       :type="'sampleData'"
       :sample="estimateInfo.sample"
     />
-    <text-button
-      :state="ButtonState.OUTLINED"
-      :text="'New Estimate'"
-      />
+    <text-button :state="ButtonState.OUTLINED" :text="'New Estimate'" />
   </div>
   <div class="w-2/5 flex flex-col px-8 mt-6">
     <input-component
@@ -52,10 +52,6 @@ const subscribe = async () => {
       :type="'queryInfo'"
       :info="estimateInfo"
     />
-    <text-button
-      :state="ButtonState.ACTIVE"
-      :text="'Subscribe'"
-      @submit="subscribe"
-      />
+    <text-button :state="ButtonState.ACTIVE" :text="'Subscribe'" @submit="subscribe" />
   </div>
 </template>

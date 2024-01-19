@@ -3,8 +3,7 @@ import { type SubscriptionType } from '@/interfaces/Subscription'
 import { type ProfileInfo } from '@/interfaces/ProfileInfo'
 
 export class Subscription {
-
-  private _interval: number = 0;
+  private _interval: number = 0
 
   async validate(token: string): Promise<ProfileInfo> {
     const options = {
@@ -115,7 +114,7 @@ export class Subscription {
     ).json()
   }
 
-  cancel(){
-    clearInterval(this._interval);
+  cancel() {
+    clearInterval(this._interval)
   }
 }

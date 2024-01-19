@@ -1,43 +1,42 @@
 <script lang="ts" setup>
-import { type PropType, ref } from 'vue'
+import { type PropType } from 'vue'
 import type { QueryInfo } from '../interfaces/QueryInfo'
 
-const props = defineProps({
+defineProps({
   info: {
     type: Object as PropType<QueryInfo>,
     required: true
   }
 })
-
 </script>
 
 <template>
   <div>
     <div class="w-full flex flex-col">
-    <div>
-      <h1 class="text-tiki-gray font-semibold">INITIAL LOAD</h1>
-      <div class="flex justify-between">
-        <div class="font-normal text-tiki-gray">Number of Records</div>
-        <div class="font-normal text-tiki-gray">{{ info.stats[0] }}</div>
+      <div>
+        <h1 class="text-tiki-gray font-semibold">INITIAL LOAD</h1>
+        <div class="flex justify-between">
+          <div class="font-normal text-tiki-gray">Number of Records</div>
+          <div class="font-normal text-tiki-gray">{{ info.stats[0] }}</div>
+        </div>
+        <div class="flex justify-between">
+          <div class="font-normal text-tiki-gray">Cost</div>
+          <div class="font-normal text-tiki-gray">${{ info.stats[1] }}</div>
+        </div>
       </div>
-      <div class="flex justify-between">
-        <div class="font-normal text-tiki-gray">Cost</div>
-        <div class="font-normal text-tiki-gray">${{ info.stats[1] }}</div>
+      <hr class="text-tiki-black/10 my-4" />
+
+      <div>
+        <h1 class="text-tiki-gray font-semibold">MONTHLY UPDATES</h1>
+        <div class="flex justify-between">
+          <div class="font-normal text-tiki-gray">Number of Records</div>
+          <div class="font-normal text-tiki-gray">{{ info.stats[2] }}</div>
+        </div>
+        <div class="flex justify-between">
+          <div class="font-normal text-tiki-gray">Cost (monthly)</div>
+          <div class="font-normal text-tiki-gray">{{ info.costs }}</div>
+        </div>
       </div>
-    </div>
-    <hr class="text-tiki-black/10 my-4" />
-  
-    <div>
-      <h1 class="text-tiki-gray font-semibold">MONTHLY UPDATES</h1>
-      <div class="flex justify-between">
-        <div class="font-normal text-tiki-gray">Number of Records</div>
-        <div class="font-normal text-tiki-gray">{{ info.stats[2] }}</div>
-      </div>
-      <div class="flex justify-between">
-        <div class="font-normal text-tiki-gray">Cost (monthly)</div>
-        <div class="font-normal text-tiki-gray">{{ info.costs }}</div>
-      </div>
-    </div>
     </div>
   </div>
 </template>

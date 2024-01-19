@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { Subscription } from '../subscription/index'
 import { type Cleanroom } from '../interfaces/Cleanroom'
 

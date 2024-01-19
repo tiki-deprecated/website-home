@@ -39,9 +39,9 @@ const submit = async (query: string) => {
 
   const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
 
-  const annualCost = ((estimateResponse.count[0].total! * 0.001) * 12).toFixed(2).toLocaleString()
+  const annualCost = (estimateResponse.count[0].total! * 0.001 * 12).toFixed(2).toLocaleString()
 
-  const monthlyUpdate = ((estimateResponse.count[0].total!) / 12).toFixed(2).toLocaleString()
+  const monthlyUpdate = (estimateResponse.count[0].total! / 12).toFixed(2).toLocaleString()
 
   const total = estimateResponse.count[0].total?.toLocaleString()
 
@@ -54,9 +54,7 @@ const submit = async (query: string) => {
     sample: sample
   }
 
-  console.log(infoJson)
   emits('estimate', infoJson)
-  
   isLoading.value = false
 }
 

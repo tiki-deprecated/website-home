@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { type PropType } from 'vue'
 
-const props = defineProps({
+defineProps({
   sample: {
     type: Array as PropType<any[]>,
     required: false
   }
 })
-
-console.log('teste 2 ', props.sample)
 </script>
 
 <template>

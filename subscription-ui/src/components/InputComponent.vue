@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import cleanroomSelect from './cleanroomSelect.vue'
 import queryEditor from './queryEditor.vue'
-import querySample from './querySample.vue';
-import queryInfo from './queryInfo.vue';
-import { type PropType } from 'vue';
-import { type QueryInfo } from '@/interfaces/QueryInfo';
+import querySample from './querySample.vue'
+import queryInfo from './queryInfo.vue'
+import { type PropType } from 'vue'
+import { type QueryInfo } from '@/interfaces/QueryInfo'
 
 defineEmits(['updateCleanroom', 'submit', 'updateTableName'])
 
-
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     required: true
@@ -35,9 +34,6 @@ const props = defineProps({
     required: false
   }
 })
-
-
-console.log('teste1', props.sample)
 
 const componentHandler = (type: string) => {
   switch (type) {
@@ -70,9 +66,12 @@ const componentHandler = (type: string) => {
     :placeholder="placeholder"
     :sample="sample"
     :info="info"
-    @changeCleanroom="(value: string)=>$emit('updateCleanroom', value)"
-    @input="(event: InputEvent) => $emit('updateTableName', (event.target as HTMLInputElement).value)"
+    @changeCleanroom="(value: string) => $emit('updateCleanroom', value)"
+    @input="
+      (event: InputEvent) => $emit('updateTableName', (event.target as HTMLInputElement).value)
+    "
     @update="(query: string) => $emit('submit', query)"
-    >
-  ></component>
+  >
+    ></component
+  >
 </template>

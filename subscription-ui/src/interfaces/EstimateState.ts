@@ -1,5 +1,5 @@
-export enum EstimateState{
-    AUTH, 
-    ESTIMATE, 
-    SUBSCRIPTION
+export enum EstimateState {
+  AUTH,
+  ESTIMATE,
+  SUBSCRIPTION
 }
