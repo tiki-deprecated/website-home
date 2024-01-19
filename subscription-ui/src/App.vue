@@ -36,6 +36,7 @@ const handleEstimate = (estimate_info: QueryInfo) => {
       v-if="state === EstimateState.SUBSCRIPTION"
       :estimate-info="estimateInfo!"
       @subscribe="state = EstimateState.ESTIMATE"
+      @back="state = EstimateState.ESTIMATE"
     />
   </div>
 </template>

@@ -32,7 +32,7 @@ defineProps({
   sample: {
     type: Array as PropType<any[]>,
     required: false
-  }
+  },
 })
 
 const componentHandler = (type: string) => {
@@ -49,10 +49,18 @@ const componentHandler = (type: string) => {
       return type
   }
 }
+
 </script>
 
 <template>
-  <h1 class="mt-4 text-tiki-gray font-semibold">{{ title }}</h1>
+  <div class="mt-4 text-tiki-gray font-semibold flex justify-between w-full">
+    <div>
+      {{ title }}
+    </div>
+    <div v-if="type === 'sampleData'">
+      {{ info?.total }}
+    </div>
+  </div>
   <label for="" class="text-tiki-gray font-normal mt-1 block">
     {{ description }}
   </label>

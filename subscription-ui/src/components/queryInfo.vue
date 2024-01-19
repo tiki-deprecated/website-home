@@ -17,11 +17,11 @@ defineProps({
         <h1 class="text-tiki-gray font-semibold">INITIAL LOAD</h1>
         <div class="flex justify-between">
           <div class="font-normal text-tiki-gray">Number of Records</div>
-          <div class="font-normal text-tiki-gray">{{ info.stats[0] }}</div>
+          <div class="font-normal text-tiki-gray">{{ info.total }}</div>
         </div>
         <div class="flex justify-between">
           <div class="font-normal text-tiki-gray">Cost</div>
-          <div class="font-normal text-tiki-gray">${{ info.stats[1] }}</div>
+          <div class="font-normal text-tiki-gray">${{ info.annualCost }}</div>
         </div>
       </div>
       <hr class="text-tiki-black/10 my-4" />
@@ -30,7 +30,7 @@ defineProps({
         <h1 class="text-tiki-gray font-semibold">MONTHLY UPDATES</h1>
         <div class="flex justify-between">
           <div class="font-normal text-tiki-gray">Number of Records</div>
-          <div class="font-normal text-tiki-gray">{{ info.stats[2] }}</div>
+          <div class="font-normal text-tiki-gray">{{ info.monthlyUpdate }}</div>
         </div>
         <div class="flex justify-between">
           <div class="font-normal text-tiki-gray">Cost (monthly)</div>

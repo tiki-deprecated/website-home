@@ -15,7 +15,7 @@ const props = defineProps({
   }
 })
 
-const emits = defineEmits(['subscribe'])
+const emits = defineEmits(['subscribe', 'back'])
 
 const subscription = new Subscription()
 
@@ -30,6 +30,7 @@ const subscribe = async () => {
 
   emits('subscribe')
 }
+
 </script>
 
 <template>
@@ -42,8 +43,9 @@ const subscribe = async () => {
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
       :type="'sampleData'"
       :sample="estimateInfo.sample"
+      :info="estimateInfo"
     />
-    <text-button :state="ButtonState.OUTLINED" :text="'New Estimate'" />
+    <text-button :state="ButtonState.OUTLINED" :text="'New Estimate'" @submit="$emit('back')"/>
   </div>
   <div class="w-2/5 flex flex-col px-8 mt-6">
     <input-component

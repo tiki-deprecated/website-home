@@ -31,7 +31,6 @@ const submit = async (query: string) => {
     cleanroomId.value!,
     token!
   )
-
   if (!estimateResponse) {
     hasError.value = true
     return (isLoading.value = false)
@@ -50,7 +49,9 @@ const submit = async (query: string) => {
   const infoJson = {
     subscriptionId: estimateResponse.subscriptionId,
     costs: `$${costs}/month`,
-    stats: [`${total}`, annualCost, monthlyUpdate],
+    annualCost: annualCost,
+    monthlyUpdate: monthlyUpdate,
+    total: total,
     sample: sample
   }
 
