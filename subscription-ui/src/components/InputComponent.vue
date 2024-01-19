@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import cleanroomSelect from './cleanroomSelect.vue'
 import queryEditor from './queryEditor.vue'
+import querySample from './querySample.vue';
+import queryInfo from './queryInfo.vue';
+import { onMounted, type PropType } from 'vue';
+import { type QueryInfo } from '@/interfaces/QueryInfo';
 
 defineEmits(['updateCleanroom', 'submit', 'updateTableName'])
 
-defineProps({
+
+const props = defineProps({
   title: {
     type: String,
     required: true
@@ -20,8 +25,19 @@ defineProps({
   placeholder: {
     type: String,
     required: false
+  },
+  info: {
+    type: Object as PropType<QueryInfo>,
+    required: false
+  },
+  sample: {
+    type: Array as PropType<any[]>,
+    required: false
   }
 })
+
+
+console.log('teste1', props.sample)
 
 const componentHandler = (type: string) => {
   switch (type) {
@@ -29,6 +45,10 @@ const componentHandler = (type: string) => {
       return cleanroomSelect
     case 'queryEditor':
       return queryEditor
+    case 'sampleData':
+      return querySample
+    case 'queryInfo':
+      return queryInfo
     default:
       return type
   }
@@ -48,6 +68,8 @@ const componentHandler = (type: string) => {
         : ''
     "
     :placeholder="placeholder"
+    :sample="sample"
+    :info="info"
     @changeCleanroom="(value: string)=>$emit('updateCleanroom', value)"
     @input="(event: InputEvent) => $emit('updateTableName', (event.target as HTMLInputElement).value)"
     @update="(query: string) => $emit('submit', query)"

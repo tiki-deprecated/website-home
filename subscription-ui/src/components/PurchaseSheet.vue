@@ -23,11 +23,23 @@ defineProps({
       :title="'RESULTS'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
       :type="'sampleData'"
+      :sample="estimateInfo.sample"
     />
     <text-button
       :state="ButtonState.OUTLINED"
       :text="'New Estimate'"
       />
   </div>
-  <div class="w-2/5 flex px-8"></div>
+  <div class="w-2/5 flex flex-col px-8 mt-6">
+    <input-component
+      :title="'ESTIMATE'"
+      :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+      :type="'queryInfo'"
+      :info="estimateInfo"
+    />
+    <text-button
+      :state="ButtonState.ACTIVE"
+      :text="'Subscribe'"
+      />
+  </div>
 </template>
