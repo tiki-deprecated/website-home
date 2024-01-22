@@ -51,38 +51,28 @@ export class Subscription {
 
     if (!estimateResponse.subscriptionId) throw new Error('Failure to create an estimate')
 
-    let getSubscriptionResponse: SubscriptionType = await this.getSubscription(
-      estimateResponse.subscriptionId,
-      token!
-    )
-
     let count = 10
 
-    await new Promise((resolve) => {
+    return await new Promise((resolve, reject) => {
       this._interval = setInterval(async () => {
         count--
-        getSubscriptionResponse = await this.getSubscription(
+        console.log('count:', count)
+        if (count === 0){
+          reject('Failure to consult the estimate')
+          clearInterval(this._interval)
+        }
+        let subscriptionResponse = await this.getSubscription(
           estimateResponse.subscriptionId,
           token!
         )
-        if (
-          count === 0 ||
-          (getSubscriptionResponse.count[0].status === 'success' &&
-            getSubscriptionResponse.sample[0].status === 'success')
-        ) {
-          resolve('')
-          clearInterval(this._interval)
-        }
+        console.log('subsresponse:',subscriptionResponse)
+        if(subscriptionResponse.count[0]?.status === 'success' &&
+           subscriptionResponse.sample[0]?.status === 'success'){
+            resolve(subscriptionResponse)
+            clearInterval(this._interval)
+          }
       }, 10000)
     })
-
-    if (
-      getSubscriptionResponse.count[0].status !== 'success' ||
-      getSubscriptionResponse.sample[0].status !== 'success'
-    )
-      throw new Error('Failure to consult the estimate')
-
-    return getSubscriptionResponse
   }
 
   async getSubscription(id: string, token: string): Promise<SubscriptionType> {
