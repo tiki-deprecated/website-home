@@ -56,21 +56,21 @@ export class Subscription {
     return await new Promise((resolve, reject) => {
       this._interval = setInterval(async () => {
         count--
-        console.log('count:', count)
-        if (count === 0){
+        if (count === 0) {
           reject('Failure to consult the estimate')
           clearInterval(this._interval)
         }
-        let subscriptionResponse = await this.getSubscription(
+        const subscriptionResponse = await this.getSubscription(
           estimateResponse.subscriptionId,
           token!
         )
-        console.log('subsresponse:',subscriptionResponse)
-        if(subscriptionResponse.count[0]?.status === 'success' &&
-           subscriptionResponse.sample[0]?.status === 'success'){
-            resolve(subscriptionResponse)
-            clearInterval(this._interval)
-          }
+        if (
+          subscriptionResponse.count[0]?.status === 'success' &&
+          subscriptionResponse.sample[0]?.status === 'success'
+        ) {
+          resolve(subscriptionResponse)
+          clearInterval(this._interval)
+        }
       }, 10000)
     })
   }

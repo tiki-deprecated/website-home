@@ -6,7 +6,6 @@ import HeaderTitle from './HeaderTitle.vue'
 import AlertComponent from './AlertComponent.vue'
 import { BuilderState } from '@/interfaces/BuilderState'
 import { Subscription } from '@/subscription'
-import { type SubscriptionType } from '@/interfaces/Subscription'
 
 const emits = defineEmits(['estimate'])
 
@@ -30,7 +29,6 @@ const submit = async (query: string) => {
     .estimate(tableName.value!, query, cleanroomId.value!, token!)
     .then((response) => {
       estimateResponse = response
-      console.log('estimate response:', estimateResponse)
 
       const costs = (estimateResponse!.count[0].total! * 0.001).toFixed(2).toLocaleString()
 

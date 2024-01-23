@@ -30,7 +30,6 @@ const subscribe = async () => {
 
   emits('subscribe')
 }
-
 </script>
 
 <template>
@@ -45,7 +44,7 @@ const subscribe = async () => {
       :sample="estimateInfo.sample"
       :info="estimateInfo"
     />
-    <text-button :state="ButtonState.OUTLINED" :text="'New Estimate'" @submit="$emit('back')"/>
+    <text-button :state="ButtonState.OUTLINED" :text="'New Estimate'" @submit="$emit('back')" />
   </div>
   <div class="w-2/5 flex flex-col px-8 mt-6">
     <input-component

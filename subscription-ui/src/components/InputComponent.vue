@@ -32,7 +32,7 @@ defineProps({
   sample: {
     type: Array as PropType<any[]>,
     required: false
-  },
+  }
 })
 
 const componentHandler = (type: string) => {
@@ -49,7 +49,6 @@ const componentHandler = (type: string) => {
       return type
   }
 }
-
 </script>
 
 <template>
