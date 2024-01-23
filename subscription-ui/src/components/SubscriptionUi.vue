@@ -6,7 +6,6 @@ import HeaderTitle from './HeaderTitle.vue'
 import AlertComponent from './AlertComponent.vue'
 import { BuilderState } from '@/interfaces/BuilderState'
 import { Subscription } from '@/subscription'
-import { type SubscriptionType } from '@/interfaces/Subscription'
 
 const emits = defineEmits(['estimate'])
 
@@ -25,38 +24,41 @@ const token = sessionStorage.getItem('authToken')
 const submit = async (query: string) => {
   isLoading.value = true
 
-  const estimateResponse: SubscriptionType = await subscription.estimate(
-    tableName.value!,
-    query,
-    cleanroomId.value!,
-    token!
-  )
-  if (!estimateResponse) {
-    hasError.value = true
-    return (isLoading.value = false)
-  }
+  let estimateResponse
+  subscription
+    .estimate(tableName.value!, query, cleanroomId.value!, token!)
+    .then((response) => {
+      estimateResponse = response
 
-  const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
+      const costs = (estimateResponse!.count[0].total! * 0.001).toFixed(2).toLocaleString()
 
-  const annualCost = (estimateResponse.count[0].total! * 0.001 * 12).toFixed(2).toLocaleString()
+      const annualCost = (estimateResponse!.count[0].total! * 0.001 * 12)
+        .toFixed(2)
+        .toLocaleString()
 
-  const monthlyUpdate = (estimateResponse.count[0].total! / 12).toFixed(2).toLocaleString()
+      const monthlyUpdate = (estimateResponse!.count[0].total! / 12).toFixed(2).toLocaleString()
 
-  const total = estimateResponse.count[0].total?.toLocaleString()
+      const total = estimateResponse!.count[0].total?.toLocaleString()
 
-  const sample = estimateResponse.sample[0].records
+      const sample = estimateResponse!.sample[0].records
 
-  const infoJson = {
-    subscriptionId: estimateResponse.subscriptionId,
-    costs: `$${costs}/month`,
-    annualCost: annualCost,
-    monthlyUpdate: monthlyUpdate,
-    total: total,
-    sample: sample
-  }
+      const infoJson = {
+        subscriptionId: estimateResponse!.subscriptionId,
+        costs: `$${costs}/month`,
+        annualCost: annualCost,
+        monthlyUpdate: monthlyUpdate,
+        total: total,
+        sample: sample
+      }
 
-  emits('estimate', infoJson)
-  isLoading.value = false
+      emits('estimate', infoJson)
+      isLoading.value = false
+    })
+    .catch(() => {
+      hasError.value = true
+      isLoading.value = false
+      return
+    })
 }
 
 const cancelRequest = () => {
