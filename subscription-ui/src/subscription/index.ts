@@ -3,6 +3,9 @@ import { type SubscriptionType } from '@/interfaces/Subscription'
 import { type ProfileInfo } from '@/interfaces/ProfileInfo'
 
 export class Subscription {
+
+  private _interval: number = 0;
+
   async validate(token: string): Promise<ProfileInfo> {
     const options = {
       method: 'GET',
@@ -57,7 +60,7 @@ export class Subscription {
     let count = 10
 
     await new Promise((resolve) => {
-      const interval = setInterval(async () => {
+      this._interval = setInterval(async () => {
         count--
         getSubscriptionResponse = await this.getSubscription(
           estimateResponse.subscriptionId,
@@ -69,7 +72,7 @@ export class Subscription {
             getSubscriptionResponse.sample[0].status === 'success')
         ) {
           resolve('')
-          clearInterval(interval)
+          clearInterval(this._interval)
         }
       }, 10000)
     })
@@ -110,5 +113,9 @@ export class Subscription {
         options
       )
     ).json()
+  }
+
+  cancel(){
+    clearInterval(this._interval);
   }
 }

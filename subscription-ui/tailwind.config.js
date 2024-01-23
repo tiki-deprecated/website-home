@@ -6,14 +6,15 @@ module.exports = {
   ],
   theme: {
     colors:{
-      blue: "#00133F",
       "light-gray": "#F6F6F6",
       "dark-gray": "#00000099",
       yellow: "#FFD225",
       white: "#FFFFFF",
       green: "#00B272",
-      black: "#000000",
-      red: "#FF0000"
+      'tiki-black': '#1C0000',
+      'tiki-gray': '#505C59',
+      'tiki-yellow': '#ffe68f',
+      'tiki-red': '#c71b29'
     },
     fontFamily: {
       sans: ["Space Grotesk, sans-serif"],
