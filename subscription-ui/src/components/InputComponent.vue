@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import cleanroomSelect from './cleanroomSelect.vue'
 import queryEditor from './queryEditor.vue'
+import querySample from './querySample.vue'
+import queryInfo from './queryInfo.vue'
+import { type PropType } from 'vue'
+import { type QueryInfo } from '@/interfaces/QueryInfo'
 
 defineEmits(['updateCleanroom', 'submit', 'updateTableName'])
 
@@ -20,7 +24,15 @@ defineProps({
   placeholder: {
     type: String,
     required: false
-  }
+  },
+  info: {
+    type: Object as PropType<QueryInfo>,
+    required: false
+  },
+  sample: {
+    type: Array as PropType<any[]>,
+    required: false
+  },
 })
 
 const componentHandler = (type: string) => {
@@ -29,14 +41,26 @@ const componentHandler = (type: string) => {
       return cleanroomSelect
     case 'queryEditor':
       return queryEditor
+    case 'sampleData':
+      return querySample
+    case 'queryInfo':
+      return queryInfo
     default:
       return type
   }
 }
+
 </script>
 
 <template>
-  <h1 class="mt-4 text-tiki-gray font-semibold">{{ title }}</h1>
+  <div class="mt-4 text-tiki-gray font-semibold flex justify-between w-full">
+    <div>
+      {{ title }}
+    </div>
+    <div v-if="type === 'sampleData'">
+      {{ info?.total }}
+    </div>
+  </div>
   <label for="" class="text-tiki-gray font-normal mt-1 block">
     {{ description }}
   </label>
@@ -48,9 +72,14 @@ const componentHandler = (type: string) => {
         : ''
     "
     :placeholder="placeholder"
-    @changeCleanroom="(value: string)=>$emit('updateCleanroom', value)"
-    @input="(event: InputEvent) => $emit('updateTableName', (event.target as HTMLInputElement).value)"
+    :sample="sample"
+    :info="info"
+    @changeCleanroom="(value: string) => $emit('updateCleanroom', value)"
+    @input="
+      (event: InputEvent) => $emit('updateTableName', (event.target as HTMLInputElement).value)
+    "
     @update="(query: string) => $emit('submit', query)"
-    >
-  ></component>
+  >
+    ></component
+  >
 </template>

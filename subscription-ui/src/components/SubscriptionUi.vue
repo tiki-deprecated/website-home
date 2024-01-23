@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import tableTaxonomy from './tableTaxonomy.vue'
-import type { QueryInfo } from '../interfaces/QueryInfo'
 import InputComponent from './InputComponent.vue'
 import HeaderTitle from './HeaderTitle.vue'
 import AlertComponent from './AlertComponent.vue'
@@ -9,12 +8,9 @@ import { BuilderState } from '@/interfaces/BuilderState'
 import { Subscription } from '@/subscription'
 import { type SubscriptionType } from '@/interfaces/Subscription'
 
-const cleanroomId = ref<string>()
-const info = ref<QueryInfo>()
+const emits = defineEmits(['estimate'])
 
-const updateInfo = (infoJson: QueryInfo) => {
-  info.value = infoJson
-}
+const cleanroomId = ref<string>()
 
 const tableName = ref<string>()
 
@@ -35,13 +31,16 @@ const submit = async (query: string) => {
     cleanroomId.value!,
     token!
   )
-
   if (!estimateResponse) {
     hasError.value = true
     return (isLoading.value = false)
   }
 
   const costs = (estimateResponse.count[0].total! * 0.001).toFixed(2).toLocaleString()
+
+  const annualCost = (estimateResponse.count[0].total! * 0.001 * 12).toFixed(2).toLocaleString()
+
+  const monthlyUpdate = (estimateResponse.count[0].total! / 12).toFixed(2).toLocaleString()
 
   const total = estimateResponse.count[0].total?.toLocaleString()
 
@@ -50,12 +49,13 @@ const submit = async (query: string) => {
   const infoJson = {
     subscriptionId: estimateResponse.subscriptionId,
     costs: `$${costs}/month`,
-    stats: [`${total} Records`],
+    annualCost: annualCost,
+    monthlyUpdate: monthlyUpdate,
+    total: total,
     sample: sample
   }
 
-  console.log(infoJson)
-
+  emits('estimate', infoJson)
   isLoading.value = false
 }
 

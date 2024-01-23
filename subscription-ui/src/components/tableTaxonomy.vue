@@ -65,7 +65,7 @@ details[open] summary span::before {
 
 details[open] > summary {
   background-color: rgba(0, 178, 114, 0.09);
-  color: #00B272;
+  color: #00b272;
   border-radius: 0.25rem;
 }
 

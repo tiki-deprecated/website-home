@@ -1,6 +1,8 @@
 export interface QueryInfo {
   subscriptionId: string
   costs: string
-  stats: string[]
-  sample: object[]
+  annualCost: string
+  monthlyUpdate: string
+  total: string
+  sample: any[]
 }
