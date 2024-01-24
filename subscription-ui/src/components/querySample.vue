@@ -15,7 +15,7 @@ defineProps({
       <thead>
         <tr>
           <th
-            class="text-tiki-gray text-center font-semibold px-8 pb-2"
+            class="text-tiki-gray text-center font-semibold px-6 pb-2"
             v-for="(value, key) in sample[0].split(',')"
             :key="key"
           >
@@ -26,7 +26,7 @@ defineProps({
       <tbody>
         <tr v-for="(row, index) in sample.slice(1)" :key="index">
           <td
-            class="px-3 break-all text-center text-tiki-gray font-normal"
+            class="px-3 text-center text-tiki-gray font-normal"
             v-for="(item, index) in row.split(',')"
             :key="index"
           >
@@ -37,3 +37,11 @@ defineProps({
     </table>
   </div>
 </template>
+
+<style>
+td{
+ max-width: 6rem;
+ overflow: scroll;
+ white-space: nowrap;
+}
+</style>

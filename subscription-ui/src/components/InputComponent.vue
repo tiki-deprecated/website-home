@@ -67,7 +67,7 @@ const componentHandler = (type: string) => {
     :is="componentHandler(type)"
     :class="
       type !== 'queryEditor'
-        ? 'block border border-tiki-black/10 border-solid rounded-md flex gap-2 p-2.5 mt-4 w-full placeholder:text-tiki-gray/70'
+        ? 'block border border-tiki-black/10 border-solid rounded-md flex gap-2 p-2.5 mt-4 w-full placeholder:text-tiki-gray/70 text-tiki-gray'
         : ''
     "
     :placeholder="placeholder"
