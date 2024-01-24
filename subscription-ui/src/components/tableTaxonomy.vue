@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { demographics, transactions, receipts } from '../interfaces/TableTaxonomies'
-import { defineEmits } from 'vue'
 
 const tables = ['demographics', 'receipts', 'transactions']
 
