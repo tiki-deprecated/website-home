@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import type { QueryInfo } from '@/interfaces/QueryInfo'
 import HeaderTitle from './HeaderTitle.vue'
-import { type PropType } from 'vue'
+import { type PropType, ref } from 'vue'
 import InputComponent from './InputComponent.vue'
 import TextButton from './TextButton.vue'
 import { ButtonState } from '@/interfaces/ButtonState'
 import { Subscription } from '@/subscription'
 import type { SubscriptionType } from '@/interfaces/Subscription'
+import AlertComponent from './AlertComponent.vue'
+import { BuilderState } from '@/interfaces/BuilderState'
 
 const props = defineProps({
   estimateInfo: {
@@ -26,10 +28,13 @@ const subscribe = async () => {
     props.estimateInfo!.subscriptionId,
     token!
   )
-  if (!response || response.status !== 'subscribed') return
+  if (!response || response.status !== 'subscribed')
+    return (error.value = 'It was not possible to subscribe!')
 
   emits('subscribe')
 }
+
+const error = ref<string>()
 </script>
 
 <template>
@@ -37,6 +42,12 @@ const subscribe = async () => {
     class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10 gap-1.5 flex flex-col"
   >
     <header-title />
+    <alert-component
+      :type="BuilderState.ERROR"
+      :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+      v-if="error"
+      @cancel="error = undefined"
+    />
     <input-component
       :title="'RESULTS'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
