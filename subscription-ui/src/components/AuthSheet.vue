@@ -55,8 +55,8 @@ const error = ref<string>()
       @submit="submit"
     />
   </div>
-  <div class="w-2/5 flex justify-center">
-    <img src="../assets/images/tiki-pineapple-block.svg" alt="" class="w-40" />
+  <div class="w-2/5 flex justify-center items-center">
+    <img src="../assets/images/tiki-pineapple-block.png" alt="" class="w-40" />
   </div>
 </template>
 
