@@ -28,13 +28,13 @@ const subscribe = async () => {
     props.estimateInfo!.subscriptionId,
     token!
   )
-  if (!response || response.status !== 'subscribed') return error.value = 'It was not possible to subscribe!'
+  if (!response || response.status !== 'subscribed')
+    return (error.value = 'It was not possible to subscribe!')
 
   emits('subscribe')
 }
 
 const error = ref<string>()
-
 </script>
 
 <template>
@@ -43,9 +43,7 @@ const error = ref<string>()
   >
     <header-title />
     <alert-component
-      :type="
-        BuilderState.ERROR
-      "
+      :type="BuilderState.ERROR"
       :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
       v-if="error"
       @cancel="error = undefined"

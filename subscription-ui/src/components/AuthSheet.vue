@@ -36,9 +36,7 @@ const error = ref<string>()
   <div class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10">
     <header-title />
     <alert-component
-      :type="
-        BuilderState.ERROR
-      "
+      :type="BuilderState.ERROR"
       :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
       v-if="error"
       @cancel="error = undefined"
