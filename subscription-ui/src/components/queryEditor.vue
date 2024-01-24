@@ -31,7 +31,7 @@ onMounted(() => {
     },
     fontFamily: 'SF Mono',
     fontSize: 18,
-    fontWeight: '400'
+    fontWeight: '300'
   })
 })
 
