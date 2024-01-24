@@ -39,9 +39,9 @@ defineProps({
 </template>
 
 <style>
-td{
- max-width: 6rem;
- overflow: scroll;
- white-space: nowrap;
+td {
+  max-width: 6rem;
+  overflow: scroll;
+  white-space: nowrap;
 }
 </style>

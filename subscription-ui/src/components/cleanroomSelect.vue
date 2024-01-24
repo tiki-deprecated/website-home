@@ -30,7 +30,6 @@ const cleanroomSelected = ref()
       v-for="cleanroom in cleanrooms"
       :value="cleanroom.cleanroomId"
       :key="cleanroom.cleanroomId"
-
     >
       {{ cleanroom.name }}
     </option>
@@ -51,5 +50,7 @@ select {
     0.65em auto,
     100%;
 }
-#cleanroom[data-chosen='chosen'] { color: #505C59}
+#cleanroom[data-chosen='chosen'] {
+  color: #505c59;
+}
 </style>
