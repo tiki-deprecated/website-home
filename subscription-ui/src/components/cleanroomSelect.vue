@@ -21,13 +21,14 @@ const cleanroomSelected = ref()
     name="cleanroom"
     id="cleanroom"
     v-model="cleanroomSelected"
-    class="text-tiki-gray/70"
     @change="$emit('changeCleanroom', cleanroomSelected)"
+    onchange="this.dataset.chosen = 'chosen'"
+    class="text-tiki-gray/70"
   >
     <option value="undefined" disabled>My cleanroom</option>
     <option
-      :value="cleanroom.cleanroomId"
       v-for="cleanroom in cleanrooms"
+      :value="cleanroom.cleanroomId"
       :key="cleanroom.cleanroomId"
     >
       {{ cleanroom.name }}
@@ -48,5 +49,8 @@ select {
   background-size:
     0.65em auto,
     100%;
+}
+#cleanroom[data-chosen='chosen'] {
+  color: #505c59;
 }
 </style>
