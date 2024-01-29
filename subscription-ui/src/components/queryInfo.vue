@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div>
-    <div class="w-full flex flex-col">
+    <div class="w-full flex flex-col text-xs">
       <div>
         <h1 class="text-tiki-gray font-semibold">INITIAL LOAD</h1>
         <div class="flex justify-between">

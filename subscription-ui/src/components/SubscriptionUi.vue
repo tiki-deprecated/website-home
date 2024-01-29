@@ -22,6 +22,7 @@ const subscription = new Subscription()
 const token = sessionStorage.getItem('authToken')
 
 const submit = async (query: string) => {
+  hasError.value = false
   isLoading.value = true
 
   let estimateResponse
@@ -70,7 +71,7 @@ const cancelRequest = () => {
 
 <template>
   <div
-    class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10 gap-1.5 flex flex-col"
+    class="w-3/5 pr-10 border-r border-solid border-tiki-black/10 gap-1.5 flex flex-col"
   >
     <header-title />
     <alert-component
@@ -87,12 +88,15 @@ const cancelRequest = () => {
     />
     <div class="flex relative w-full">
       <div class="w-full">
-        <input-component
+        <div class="mb-8">
+          <input-component
           :title="'CLEANROOM'"
           :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
           :type="'cleanroomSelect'"
           @update-cleanroom="(value) => (cleanroomId = value)"
-        />
+          />
+        </div>
+        <div class="mb-8">
         <input-component
           :title="'TABLE NAME'"
           :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
@@ -100,6 +104,7 @@ const cancelRequest = () => {
           :placeholder="'my_first_table'"
           @update-table-name="(value) => (tableName = value)"
         />
+        </div>
         <input-component
           :title="'CREATE FILTER'"
           :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"

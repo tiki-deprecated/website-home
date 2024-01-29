@@ -21,11 +21,11 @@ const updateTable = (event: any) => {
 </script>
 
 <template>
-  <div class="mt-10 w-full">
-    <h1 class="text-lg text-tiki-gray font-medium">TABLES</h1>
+  <div class="w-full">
+    <h1 class="text-xs text-tiki-gray font-medium mb-4">TABLES</h1>
     <details v-for="table in tables" class="w-full" :id="table" :key="table" @toggle="updateTable">
       <summary
-        class="flex flex-row-reverse py-1.5 cursor-pointer text-tiki-gray font-normal capitalize my-1 w-full"
+        class="flex flex-row-reverse py-1 cursor-pointer text-tiki-gray font-normal capitalize my-1  w-full text-xs"
       >
         {{ table }}
         <span></span>
@@ -75,7 +75,7 @@ details summary span::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.15rem;
+  margin-top: 0.05rem;
 }
 
 details summary::-webkit-details-marker,
