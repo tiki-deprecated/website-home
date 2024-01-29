@@ -44,7 +44,7 @@ const error = ref<string>()
     <header-title />
     <alert-component
       :type="BuilderState.ERROR"
-      :text="'Uh oh! Your purchase failed, try again later or contact us.'"
+      :text="'Uh oh! Your subscription failed, you will not be billed. Please try again or contact support.'"
       v-if="error"
       @cancel="error = undefined"
     />
