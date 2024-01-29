@@ -30,7 +30,7 @@ onMounted(() => {
       enabled: false
     },
     fontFamily: 'SF Mono',
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: '300',
     scrollbar: {
       horizontal: "hidden",

@@ -41,8 +41,8 @@ const error = ref<string>()
       v-if="error"
       @cancel="error = undefined"
     />
-    <h1 class="mt-4 text-tiki-gray font-semibold">API KEY</h1>
-    <label for="" class="text-tiki-gray font-normal mt-1 block">
+    <h1 class="mt-4 text-tiki-gray font-semibold text-xs">API KEY</h1>
+    <label for="" class="text-tiki-gray font-normal mt-1 block text-xs">
       Copy and paste your API Key from
       <a
         class="text-green underline"

@@ -53,14 +53,14 @@ const componentHandler = (type: string) => {
 
 <template>
   <div class="text-tiki-gray font-semibold flex justify-between w-full">
-    <div>
+    <div class="text-xs">
       {{ title }}
     </div>
-    <div v-if="type === 'sampleData'">
+    <div v-if="type === 'sampleData'" class="text-xs">
       {{ info?.total }}
     </div>
   </div>
-  <label for="" class="text-tiki-gray font-normal mt-1 block">
+  <label for="" class="text-tiki-gray font-normal mt-1 block text-xs">
     {{ description }}
   </label>
   <component
