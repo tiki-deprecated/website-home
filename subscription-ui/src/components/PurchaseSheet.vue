@@ -39,7 +39,7 @@ const error = ref<string>()
 
 <template>
   <div
-    class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10 gap-1.5 flex flex-col"
+    class="w-3/5 pr-10 border-r border-solid border-tiki-black/10 gap-1.5 flex flex-col"
   >
     <header-title />
     <alert-component
@@ -57,7 +57,7 @@ const error = ref<string>()
     />
     <text-button :state="ButtonState.OUTLINED" :text="'New Estimate'" @submit="$emit('back')" />
   </div>
-  <div class="w-2/5 flex flex-col px-8 mt-6">
+  <div class="w-2/5 flex flex-col pl-8">
     <input-component
       :title="'ESTIMATE'"
       :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"

@@ -70,7 +70,7 @@ const cancelRequest = () => {
 
 <template>
   <div
-    class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10 gap-1.5 flex flex-col"
+    class="w-3/5 pr-10 border-r border-solid border-tiki-black/10 gap-1.5 flex flex-col"
   >
     <header-title />
     <alert-component

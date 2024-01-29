@@ -33,7 +33,7 @@ const error = ref<string>()
 </script>
 
 <template>
-  <div class="w-3/5 m-5 px-10 py-4 border-r border-solid border-tiki-black/10">
+  <div class="w-3/5 pr-10 border-r border-solid border-tiki-black/10">
     <header-title />
     <alert-component
       :type="BuilderState.ERROR"

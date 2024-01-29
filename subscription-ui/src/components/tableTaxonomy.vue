@@ -21,7 +21,7 @@ const updateTable = (event: any) => {
 </script>
 
 <template>
-  <div class="mt-10 w-full">
+  <div class="w-full">
     <h1 class="text-lg text-tiki-gray font-medium">TABLES</h1>
     <details v-for="table in tables" class="w-full" :id="table" :key="table" @toggle="updateTable">
       <summary
