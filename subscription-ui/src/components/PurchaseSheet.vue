@@ -44,13 +44,13 @@ const error = ref<string>()
     <header-title />
     <alert-component
       :type="BuilderState.ERROR"
-      :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+      :text="'Uh oh! Your purchase failed, try again later or contact us.'"
       v-if="error"
       @cancel="error = undefined"
     />
     <input-component
       :title="'RESULTS'"
-      :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+      :description="'Showing the first 10 matching results.'"
       :type="'sampleData'"
       :sample="estimateInfo.sample"
       :info="estimateInfo"
@@ -60,7 +60,7 @@ const error = ref<string>()
   <div class="w-2/5 flex flex-col px-8 mt-6">
     <input-component
       :title="'ESTIMATE'"
-      :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+      :description="'Actual costs may vary; more data is always being added. '"
       :type="'queryInfo'"
       :info="estimateInfo"
     />

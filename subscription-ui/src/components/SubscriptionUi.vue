@@ -81,7 +81,11 @@ const cancelRequest = () => {
             ? BuilderState.ERROR
             : BuilderState.INITIAL
       "
-      :text="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+      :text="
+        isLoading && !hasError
+          ? 'Calculating... this may take a minute. We have a lot of data.'
+          : 'Uh oh! Your estimate failed, check your query and table name.'
+      "
       v-if="isLoading || hasError"
       @cancel="cancelRequest"
     />
@@ -89,20 +93,20 @@ const cancelRequest = () => {
       <div class="w-full">
         <input-component
           :title="'CLEANROOM'"
-          :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+          :description="'The unique ID for the cleanroom where your data is stored.'"
           :type="'cleanroomSelect'"
           @update-cleanroom="(value) => (cleanroomId = value)"
         />
         <input-component
           :title="'TABLE NAME'"
-          :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+          :description="'The name of the table to be created. Follow SQL conventions: lowercase and underscore.'"
           :type="'input'"
           :placeholder="'my_first_table'"
           @update-table-name="(value) => (tableName = value)"
         />
         <input-component
           :title="'CREATE FILTER'"
-          :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
+          :description="'Define a SQL filter to extract the required data from our system into your table.'"
           :type="'queryEditor'"
           @submit="submit"
         />
