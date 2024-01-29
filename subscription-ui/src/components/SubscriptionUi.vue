@@ -22,6 +22,7 @@ const subscription = new Subscription()
 const token = sessionStorage.getItem('authToken')
 
 const submit = async (query: string) => {
+  hasError.value = false
   isLoading.value = true
 
   let estimateResponse
