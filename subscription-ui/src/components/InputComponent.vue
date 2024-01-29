@@ -52,7 +52,7 @@ const componentHandler = (type: string) => {
 </script>
 
 <template>
-  <div class="mt-4 text-tiki-gray font-semibold flex justify-between w-full">
+  <div class="text-tiki-gray font-semibold flex justify-between w-full">
     <div>
       {{ title }}
     </div>

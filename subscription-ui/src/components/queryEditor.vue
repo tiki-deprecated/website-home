@@ -30,8 +30,13 @@ onMounted(() => {
       enabled: false
     },
     fontFamily: 'SF Mono',
-    fontSize: 18,
-    fontWeight: '300'
+    fontSize: 15,
+    fontWeight: '300',
+    scrollbar: {
+      horizontal: "hidden",
+      vertical: "hidden",
+      verticalScrollbarSize: 0
+    }
   })
 })
 

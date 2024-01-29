@@ -87,12 +87,15 @@ const cancelRequest = () => {
     />
     <div class="flex relative w-full">
       <div class="w-full">
-        <input-component
+        <div class="mb-8">
+          <input-component
           :title="'CLEANROOM'"
           :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
           :type="'cleanroomSelect'"
           @update-cleanroom="(value) => (cleanroomId = value)"
-        />
+          />
+        </div>
+        <div class="mb-8">
         <input-component
           :title="'TABLE NAME'"
           :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
@@ -100,6 +103,7 @@ const cancelRequest = () => {
           :placeholder="'my_first_table'"
           @update-table-name="(value) => (tableName = value)"
         />
+        </div>
         <input-component
           :title="'CREATE FILTER'"
           :description="'Lorem ipsun dolor sit amet, consectur adipisciing elit.'"
