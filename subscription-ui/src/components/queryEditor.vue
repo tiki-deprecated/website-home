@@ -33,8 +33,8 @@ onMounted(() => {
     fontSize: 12,
     fontWeight: '300',
     scrollbar: {
-      horizontal: "hidden",
-      vertical: "hidden",
+      horizontal: 'hidden',
+      vertical: 'hidden',
       verticalScrollbarSize: 0
     }
   })

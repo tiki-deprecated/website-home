@@ -1,5 +1,5 @@
 export enum EstimateState {
-  AUTH,
+  ERROR,
   ESTIMATE,
   SUBSCRIPTION
 }
